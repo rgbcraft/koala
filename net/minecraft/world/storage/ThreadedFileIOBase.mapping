@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/storage/ThreadedFileIOBase
+        FIELD field_75741_a threadedIOInstance Lnet/minecraft/world/storage/ThreadedFileIOBase;
+        FIELD field_75739_b threadedIOQueue Ljava/util/List;
+        FIELD field_75740_c writeQueuedCounter J
+        FIELD field_75737_d savedIOCounter J
+        FIELD field_75738_e isThreadWaiting Z

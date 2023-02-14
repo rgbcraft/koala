@@ -1,0 +1,15 @@
+CLASS net/minecraft/client/renderer/tileentity/TileEntityRenderer
+        FIELD field_76966_m specialRendererMap Ljava/util/Map;
+        FIELD field_76963_a instance Lnet/minecraft/client/renderer/tileentity/TileEntityRenderer;
+        FIELD field_76964_n fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+        FIELD field_76961_b staticPlayerX D
+        FIELD field_76962_c staticPlayerY D
+        FIELD field_76959_d staticPlayerZ D
+        FIELD field_76960_e renderEngine Lnet/minecraft/client/renderer/RenderEngine;
+        FIELD field_76957_f worldObj Lnet/minecraft/world/World;
+        FIELD field_76958_g entityLivingPlayer Lnet/minecraft/entity/EntityLiving;
+        FIELD field_76969_h playerYaw F
+        FIELD field_76970_i playerPitch F
+        FIELD field_76967_j playerX D
+        FIELD field_76968_k playerY D
+        FIELD field_76965_l playerZ D

@@ -1,0 +1,5 @@
+CLASS net/minecraft/network/packet/Packet41EntityEffect
+        FIELD field_73420_a entityId I
+        FIELD field_73418_b effectId B
+        FIELD field_73419_c effectAmplifier B
+        FIELD field_73417_d duration S

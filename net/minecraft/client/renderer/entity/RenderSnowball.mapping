@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/renderer/entity/RenderSnowball
+        FIELD field_77027_a itemIconIndex I

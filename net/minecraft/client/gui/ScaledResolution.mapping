@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/gui/ScaledResolution
+        FIELD field_78333_a scaledWidth I
+        FIELD field_78331_b scaledHeight I
+        FIELD field_78332_c scaledWidthD D
+        FIELD field_78329_d scaledHeightD D
+        FIELD field_78330_e scaleFactor I

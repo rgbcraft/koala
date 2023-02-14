@@ -1,0 +1,13 @@
+CLASS net/minecraft/world/WorldServer
+        FIELD field_73061_a mcServer Lnet/minecraft/server/MinecraftServer;
+        FIELD field_73062_L theEntityTracker Lnet/minecraft/entity/EntityTracker;
+        FIELD field_73063_M thePlayerManager Lnet/minecraft/server/management/PlayerManager;
+        FIELD field_73065_O pendingTickListEntries Ljava/util/TreeSet;
+        FIELD field_73059_b theChunkProviderServer Lnet/minecraft/world/gen/ChunkProviderServer;
+        FIELD field_73058_d canNotSave Z
+        FIELD field_73068_P allPlayersSleeping Z
+        FIELD field_80004_Q updateEntityTick I
+        FIELD field_73067_Q blockEventCache [Lnet/minecraft/world/ServerBlockEventList;
+        FIELD field_73070_R blockEventCacheIndex I
+        FIELD field_73069_S bonusChestContent [Lnet/minecraft/util/WeightedRandomChestContent;
+        FIELD field_73066_T entityIdMap Lnet/minecraft/util/IntHashMap;

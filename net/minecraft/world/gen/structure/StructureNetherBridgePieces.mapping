@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/gen/structure/StructureNetherBridgePieces
+        FIELD field_78742_a primaryComponents [Lnet/minecraft/world/gen/structure/StructureNetherBridgePieceWeight;
+        FIELD field_78741_b secondaryComponents [Lnet/minecraft/world/gen/structure/StructureNetherBridgePieceWeight;

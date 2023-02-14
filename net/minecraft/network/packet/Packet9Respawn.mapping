@@ -1,0 +1,6 @@
+CLASS net/minecraft/network/packet/Packet9Respawn
+        FIELD field_73373_a respawnDimension I
+        FIELD field_73371_b difficulty I
+        FIELD field_73372_c worldHeight I
+        FIELD field_73369_d gameType Lnet/minecraft/world/EnumGameType;
+        FIELD field_73370_e terrainType Lnet/minecraft/world/WorldType;

@@ -1,0 +1,3 @@
+CLASS net/minecraft/command/CommandDebug
+        FIELD field_71551_a startTime J
+        FIELD field_71550_b startTicks I

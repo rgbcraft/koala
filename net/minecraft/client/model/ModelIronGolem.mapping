@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/model/ModelIronGolem
+        FIELD field_78178_a ironGolemHead Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78176_b ironGolemBody Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78177_c ironGolemRightArm Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78174_d ironGolemLeftArm Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78175_e ironGolemLeftLeg Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78173_f ironGolemRightLeg Lnet/minecraft/client/model/ModelRenderer;

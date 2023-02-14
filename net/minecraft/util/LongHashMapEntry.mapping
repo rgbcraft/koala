@@ -1,0 +1,10 @@
+CLASS net/minecraft/util/LongHashMapEntry
+        FIELD field_76150_a key J
+        FIELD field_76148_b value Ljava/lang/Object;
+        FIELD field_76149_c nextEntry Lnet/minecraft/util/LongHashMapEntry;
+        FIELD field_76147_d hash I
+CLASS net/minecraft/util/LongHashMapEntry
+        FIELD field_76150_a key J
+        FIELD field_76148_b value Ljava/lang/Object;
+        FIELD field_76149_c nextEntry Lnet/minecraft/util/LongHashMapEntry;
+        FIELD field_76147_d hash I

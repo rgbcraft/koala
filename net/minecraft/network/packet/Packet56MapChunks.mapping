@@ -1,0 +1,6 @@
+CLASS net/minecraft/network/packet/Packet56MapChunks
+        FIELD field_73589_c chunkPostX [I
+        FIELD field_73586_d chunkPosZ [I
+        FIELD field_73587_e chunkDataBuffer [B
+        FIELD field_73585_g dataLength I
+        FIELD field_73591_h chunkDataNotCompressed [B

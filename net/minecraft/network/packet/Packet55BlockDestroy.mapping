@@ -1,0 +1,6 @@
+CLASS net/minecraft/network/packet/Packet55BlockDestroy
+        FIELD field_73329_a entityId I
+        FIELD field_73327_b posX I
+        FIELD field_73328_c posY I
+        FIELD field_73325_d posZ I
+        FIELD field_73326_e destroyedStage I

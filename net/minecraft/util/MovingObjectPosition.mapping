@@ -1,0 +1,8 @@
+CLASS net/minecraft/util/MovingObjectPosition
+        FIELD field_72313_a typeOfHit Lnet/minecraft/util/EnumMovingObjectType;
+        FIELD field_72311_b blockX I
+        FIELD field_72312_c blockY I
+        FIELD field_72309_d blockZ I
+        FIELD field_72310_e sideHit I
+        FIELD field_72307_f hitVec Lnet/minecraft/util/Vec3;
+        FIELD field_72308_g entityHit Lnet/minecraft/entity/Entity;

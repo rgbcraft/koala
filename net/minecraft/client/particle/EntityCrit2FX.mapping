@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/particle/EntityCrit2FX
+        FIELD field_70557_a theEntity Lnet/minecraft/entity/Entity;
+        FIELD field_70560_aq currentLife I
+        FIELD field_70559_ar maximumLife I
+        FIELD field_70558_as particleName Ljava/lang/String;

@@ -1,0 +1,6 @@
+CLASS net/minecraft/util/Vec3
+        FIELD field_82592_a vec3dPool Lnet/minecraft/util/Vec3Pool;
+        FIELD field_72447_d myVec3LocalPool Lnet/minecraft/util/Vec3Pool;
+        FIELD field_72450_a xCoord D
+        FIELD field_72448_b yCoord D
+        FIELD field_72449_c zCoord D

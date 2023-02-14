@@ -1,0 +1,3 @@
+CLASS net/minecraft/network/packet/Packet42RemoveEntityEffect
+        FIELD field_73375_a entityId I
+        FIELD field_73374_b effectId B

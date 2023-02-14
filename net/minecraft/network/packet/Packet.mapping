@@ -1,0 +1,11 @@
+CLASS net/minecraft/network/packet/Packet
+        FIELD field_73294_l packetIdToClassMap Lnet/minecraft/util/IntHashMap;
+        FIELD field_73291_a packetClassToIdMap Ljava/util/Map;
+        FIELD field_73286_b clientPacketIdList Ljava/util/Set;
+        FIELD field_73288_c serverPacketIdList Ljava/util/Set;
+        FIELD field_73295_m creationTimeMillis J
+        FIELD field_73292_n receivedID J
+        FIELD field_73293_o receivedSize J
+        FIELD field_73290_p sentID J
+        FIELD field_73289_q sentSize J
+        FIELD field_73287_r isChunkDataPacket Z

@@ -1,0 +1,2 @@
+CLASS net/minecraft/item/ItemBucket
+        FIELD field_77876_a isFull I

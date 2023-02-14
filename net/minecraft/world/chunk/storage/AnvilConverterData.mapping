@@ -1,0 +1,13 @@
+CLASS net/minecraft/world/chunk/storage/AnvilConverterData
+        FIELD field_76698_a lastUpdated J
+        FIELD field_76696_b terrainPopulated Z
+        FIELD field_76697_c heightmap [B
+        FIELD field_76694_d blockLight Lnet/minecraft/world/chunk/storage/NibbleArrayReader;
+        FIELD field_76695_e skyLight Lnet/minecraft/world/chunk/storage/NibbleArrayReader;
+        FIELD field_76692_f data Lnet/minecraft/world/chunk/storage/NibbleArrayReader;
+        FIELD field_76693_g blocks [B
+        FIELD field_76702_h entities Lnet/minecraft/nbt/NBTTagList;
+        FIELD field_76703_i tileEntities Lnet/minecraft/nbt/NBTTagList;
+        FIELD field_76700_j tileTicks Lnet/minecraft/nbt/NBTTagList;
+        FIELD field_76701_k x I
+        FIELD field_76699_l z I

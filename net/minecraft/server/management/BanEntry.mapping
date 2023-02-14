@@ -1,0 +1,8 @@
+CLASS net/minecraft/server/management/BanEntry
+        FIELD field_73698_a dateFormat Ljava/text/SimpleDateFormat;
+        FIELD field_73696_b loggerBanEntry Ljava/util/logging/Logger;
+        FIELD field_73697_c username Ljava/lang/String;
+        FIELD field_73694_d banStartDate Ljava/util/Date;
+        FIELD field_73695_e bannedBy Ljava/lang/String;
+        FIELD field_73692_f banEndDate Ljava/util/Date;
+        FIELD field_73693_g reason Ljava/lang/String;

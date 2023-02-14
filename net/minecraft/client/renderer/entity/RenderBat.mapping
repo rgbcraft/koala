@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/renderer/entity/RenderBat
+        FIELD field_82446_a renderedBatSize I

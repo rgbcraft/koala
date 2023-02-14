@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/gui/inventory/GuiBrewingStand
+        FIELD field_74217_o brewingStand Lnet/minecraft/tileentity/TileEntityBrewingStand;

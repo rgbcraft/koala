@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/particle/EntityDropParticleFX
+        FIELD field_70563_a materialType Lnet/minecraft/block/material/Material;
+        FIELD field_70564_aq bobTimer I

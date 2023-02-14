@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/renderer/entity/RenderSlime
+        FIELD field_77092_a scaleAmount Lnet/minecraft/client/model/ModelBase;

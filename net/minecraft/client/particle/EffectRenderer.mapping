@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/particle/EffectRenderer
+        FIELD field_78878_a worldObj Lnet/minecraft/world/World;
+        FIELD field_78876_b fxLayers [Ljava/util/List;
+        FIELD field_78877_c renderer Lnet/minecraft/client/renderer/RenderEngine;
+        FIELD field_78875_d rand Ljava/util/Random;

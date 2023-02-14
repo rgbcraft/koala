@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/gui/GuiVideoSettings
+        FIELD field_74105_b parentGuiScreen Lnet/minecraft/client/gui/GuiScreen;
+        FIELD field_74107_a screenTitle Ljava/lang/String;
+        FIELD field_74106_c guiGameSettings Lnet/minecraft/client/settings/GameSettings;
+        FIELD field_74104_d is64bit Z
+        FIELD field_74108_m videoOptions [Lnet/minecraft/client/settings/EnumOptions;

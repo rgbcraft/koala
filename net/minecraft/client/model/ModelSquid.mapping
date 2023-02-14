@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/model/ModelSquid
+        FIELD field_78202_a squidBody Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78201_b squidTentacles [Lnet/minecraft/client/model/ModelRenderer;

@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/model/ModelGhast
+        FIELD field_78128_a body Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78127_b tentacles [Lnet/minecraft/client/model/ModelRenderer;

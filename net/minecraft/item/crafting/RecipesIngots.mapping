@@ -1,0 +1,2 @@
+CLASS net/minecraft/item/crafting/RecipesIngots
+        FIELD field_77591_a recipeItems [Ljava/lang/Object;

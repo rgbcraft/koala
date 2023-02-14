@@ -1,0 +1,6 @@
+CLASS net/minecraft/entity/ai/EntityAIMate
+        FIELD field_75390_d theAnimal Lnet/minecraft/entity/passive/EntityAnimal;
+        FIELD field_75394_a theWorld Lnet/minecraft/world/World;
+        FIELD field_75391_e targetMate Lnet/minecraft/entity/passive/EntityAnimal;
+        FIELD field_75392_b spawnBabyDelay I
+        FIELD field_75393_c moveSpeed F

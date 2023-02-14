@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/multiplayer/ServerAddress
+        FIELD field_78866_a ipAddress Ljava/lang/String;
+        FIELD field_78865_b serverPort I

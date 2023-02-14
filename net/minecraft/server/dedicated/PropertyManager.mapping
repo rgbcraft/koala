@@ -1,0 +1,4 @@
+CLASS net/minecraft/server/dedicated/PropertyManager
+        FIELD field_73674_a logger Ljava/util/logging/Logger;
+        FIELD field_73672_b properties Ljava/util/Properties;
+        FIELD field_73673_c associatedFile Ljava/io/File;

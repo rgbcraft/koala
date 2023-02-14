@@ -1,0 +1,2 @@
+CLASS net/minecraft/inventory/SlotEnchantment
+        FIELD field_75227_a container Lnet/minecraft/inventory/ContainerEnchantment;

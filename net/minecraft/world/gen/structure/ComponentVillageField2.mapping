@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/structure/ComponentVillageField2
+        FIELD field_74903_a averageGroundLevel I

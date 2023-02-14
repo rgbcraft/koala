@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/gen/structure/ComponentNetherBridgeStartPiece
+        FIELD field_74970_a theNetherBridgePieceWeight Lnet/minecraft/world/gen/structure/StructureNetherBridgePieceWeight;
+        FIELD field_74968_b primaryWeights Ljava/util/List;
+        FIELD field_74969_c secondaryWeights Ljava/util/List;

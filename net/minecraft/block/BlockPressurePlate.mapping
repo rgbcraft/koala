@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockPressurePlate
+        FIELD field_72194_a triggerMobType Lnet/minecraft/block/EnumMobType;

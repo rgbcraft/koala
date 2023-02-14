@@ -1,0 +1,9 @@
+CLASS net/minecraft/village/VillageDoorInfo
+        FIELD field_75481_a posX I
+        FIELD field_75479_b posY I
+        FIELD field_75480_c posZ I
+        FIELD field_75477_d insideDirectionX I
+        FIELD field_75478_e insideDirectionZ I
+        FIELD field_75475_f lastActivityTimestamp I
+        FIELD field_75476_g isDetachedFromVillageFlag Z
+        FIELD field_75482_h doorOpeningRestrictionCounter I

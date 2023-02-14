@@ -1,0 +1,9 @@
+CLASS net/minecraft/client/gui/achievement/GuiStats
+        FIELD field_74152_c renderItem Lnet/minecraft/client/renderer/entity/RenderItem;
+        FIELD field_74154_a parentGui Lnet/minecraft/client/gui/GuiScreen;
+        FIELD field_74151_b statsTitle Ljava/lang/String;
+        FIELD field_74150_d slotGeneral Lnet/minecraft/client/gui/achievement/GuiSlotStatsGeneral;
+        FIELD field_74157_m slotItem Lnet/minecraft/client/gui/achievement/GuiSlotStatsItem;
+        FIELD field_74155_n slotBlock Lnet/minecraft/client/gui/achievement/GuiSlotStatsBlock;
+        FIELD field_74156_o statFileWriter Lnet/minecraft/stats/StatFileWriter;
+        FIELD field_74153_p selectedSlot Lnet/minecraft/client/gui/GuiSlot;

@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/gui/GuiSlider
+        FIELD field_73751_j sliderValue F
+        FIELD field_73752_k dragging Z
+        FIELD field_73750_l idFloat Lnet/minecraft/client/settings/EnumOptions;

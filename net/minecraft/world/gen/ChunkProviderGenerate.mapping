@@ -1,0 +1,26 @@
+CLASS net/minecraft/world/gen/ChunkProviderGenerate
+        FIELD field_73220_k rand Ljava/util/Random;
+        FIELD field_73217_l noiseGen1 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73218_m noiseGen2 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73215_n noiseGen3 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73216_o noiseGen4 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73214_a noiseGen5 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73212_b noiseGen6 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73213_c mobSpawnerNoise Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73230_p worldObj Lnet/minecraft/world/World;
+        FIELD field_73229_q mapFeaturesEnabled Z
+        FIELD field_73228_r noiseArray [D
+        FIELD field_73227_s stoneNoise [D
+        FIELD field_73226_t caveGenerator Lnet/minecraft/world/gen/MapGenBase;
+        FIELD field_73225_u strongholdGenerator Lnet/minecraft/world/gen/structure/MapGenStronghold;
+        FIELD field_73224_v villageGenerator Lnet/minecraft/world/gen/structure/MapGenVillage;
+        FIELD field_73223_w mineshaftGenerator Lnet/minecraft/world/gen/structure/MapGenMineshaft;
+        FIELD field_73233_x scatteredFeatureGenerator Lnet/minecraft/world/gen/feature/MapGenScatteredFeature;
+        FIELD field_73232_y ravineGenerator Lnet/minecraft/world/gen/MapGenBase;
+        FIELD field_73231_z biomesForGeneration [Lnet/minecraft/world/biome/BiomeGenBase;
+        FIELD field_73210_d noise3 [D
+        FIELD field_73211_e noise1 [D
+        FIELD field_73208_f noise2 [D
+        FIELD field_73209_g noise5 [D
+        FIELD field_73221_h noise6 [D
+        FIELD field_73222_i parabolicField [F

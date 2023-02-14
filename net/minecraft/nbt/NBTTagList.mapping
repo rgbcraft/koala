@@ -1,0 +1,3 @@
+CLASS net/minecraft/nbt/NBTTagList
+        FIELD field_74747_a tagList Ljava/util/List;
+        FIELD field_74746_b tagType B

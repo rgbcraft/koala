@@ -1,0 +1,2 @@
+CLASS net/minecraft/inventory/SlotBrewingStandIngredient
+        FIELD field_75226_a brewingStand Lnet/minecraft/inventory/ContainerBrewingStand;

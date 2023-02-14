@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/Teleporter
+        FIELD field_85192_a worldServerInstance Lnet/minecraft/world/WorldServer;
+        FIELD field_77187_a random Ljava/util/Random;

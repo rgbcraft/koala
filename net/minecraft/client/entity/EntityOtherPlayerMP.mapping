@@ -1,0 +1,8 @@
+CLASS net/minecraft/client/entity/EntityOtherPlayerMP
+        FIELD field_71186_a isItemInUse Z
+        FIELD field_71184_b otherPlayerMPPosRotationIncrements I
+        FIELD field_71185_c otherPlayerMPX D
+        FIELD field_71182_d otherPlayerMPY D
+        FIELD field_71183_e otherPlayerMPZ D
+        FIELD field_71180_f otherPlayerMPYaw D
+        FIELD field_71181_g otherPlayerMPPitch D

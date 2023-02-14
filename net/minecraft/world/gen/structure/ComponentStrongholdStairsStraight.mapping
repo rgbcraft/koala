@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/structure/ComponentStrongholdStairsStraight
+        FIELD field_75029_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;

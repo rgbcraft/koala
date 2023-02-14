@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/storage/SaveHandler
+        FIELD field_75772_a logger Ljava/util/logging/Logger;
+        FIELD field_75770_b worldDirectory Ljava/io/File;
+        FIELD field_75771_c playersDirectory Ljava/io/File;
+        FIELD field_75768_d mapDataDir Ljava/io/File;
+        FIELD field_75769_e initializationTime J
+        FIELD field_75767_f saveDirectoryName Ljava/lang/String;

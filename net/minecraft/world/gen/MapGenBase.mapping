@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/gen/MapGenBase
+        FIELD field_75040_a range I
+        FIELD field_75038_b rand Ljava/util/Random;
+        FIELD field_75039_c worldObj Lnet/minecraft/world/World;

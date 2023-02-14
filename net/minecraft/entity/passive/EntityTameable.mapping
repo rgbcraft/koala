@@ -1,0 +1,2 @@
+CLASS net/minecraft/entity/passive/EntityTameable
+        FIELD field_70911_d aiSit Lnet/minecraft/entity/ai/EntityAISit;

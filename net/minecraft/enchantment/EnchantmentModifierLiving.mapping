@@ -1,0 +1,3 @@
+CLASS net/minecraft/enchantment/EnchantmentModifierLiving
+        FIELD field_77495_a livingModifier I
+        FIELD field_77494_b entityLiving Lnet/minecraft/entity/EntityLiving;

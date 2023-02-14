@@ -1,0 +1,3 @@
+CLASS net/minecraft/util/ChatAllowedCharacters
+        FIELD field_71568_a allowedCharacters Ljava/lang/String;
+        FIELD field_71567_b allowedCharactersArray [C

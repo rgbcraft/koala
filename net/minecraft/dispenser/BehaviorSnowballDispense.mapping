@@ -1,0 +1,2 @@
+CLASS net/minecraft/dispenser/BehaviorSnowballDispense
+        FIELD field_73716_a theServer Lnet/minecraft/server/MinecraftServer;

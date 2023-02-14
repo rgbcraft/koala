@@ -1,0 +1,11 @@
+CLASS net/minecraft/entity/projectile/EntityThrowable
+        FIELD field_70189_d xTile I
+        FIELD field_70190_e yTile I
+        FIELD field_70187_f zTile I
+        FIELD field_70188_g inTile I
+        FIELD field_70193_a inGround Z
+        FIELD field_70191_b throwableShake I
+        FIELD field_70192_c thrower Lnet/minecraft/entity/EntityLiving;
+        FIELD field_85053_h throwerName Ljava/lang/String;
+        FIELD field_70194_h ticksInGround I
+        FIELD field_70195_i ticksInAir I

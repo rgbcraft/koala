@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/gen/structure/ComponentVillageStartPiece
+        FIELD field_74929_a worldChunkMngr Lnet/minecraft/world/biome/WorldChunkManager;
+        FIELD field_74927_b inDesert Z
+        FIELD field_74928_c terrainType I
+        FIELD field_74926_d structVillagePieceWeight Lnet/minecraft/world/gen/structure/StructureVillagePieceWeight;
+        FIELD field_74931_h structureVillageWeightedPieceList Ljava/util/ArrayList;

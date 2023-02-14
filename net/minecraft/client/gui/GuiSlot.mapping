@@ -1,0 +1,19 @@
+CLASS net/minecraft/client/gui/GuiSlot
+        FIELD field_77233_a mc Lnet/minecraft/client/Minecraft;
+        FIELD field_77228_g width I
+        FIELD field_77240_h height I
+        FIELD field_77231_b top I
+        FIELD field_77232_c bottom I
+        FIELD field_77241_i right I
+        FIELD field_77238_j left I
+        FIELD field_77229_d slotHeight I
+        FIELD field_77239_k scrollUpButtonID I
+        FIELD field_77236_l scrollDownButtonID I
+        FIELD field_77230_e mouseX I
+        FIELD field_77227_f mouseY I
+        FIELD field_77237_m initialClickY F
+        FIELD field_77234_n scrollMultiplier F
+        FIELD field_77235_o amountScrolled F
+        FIELD field_77246_p selectedElement I
+        FIELD field_77245_q lastClicked J
+        FIELD field_77244_r showSelectionBox Z

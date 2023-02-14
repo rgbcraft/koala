@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/renderer/texturefx/TextureWatchFX
+        FIELD field_76860_g mc Lnet/minecraft/client/Minecraft;
+        FIELD field_76863_h watchIconImageData [I
+        FIELD field_76864_i dialImageData [I

@@ -1,0 +1,4 @@
+CLASS net/minecraft/network/packet/Packet250CustomPayload
+        FIELD field_73630_a channel Ljava/lang/String;
+        FIELD field_73628_b length I
+        FIELD field_73629_c data [B

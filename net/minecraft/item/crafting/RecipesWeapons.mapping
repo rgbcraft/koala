@@ -1,0 +1,3 @@
+CLASS net/minecraft/item/crafting/RecipesWeapons
+        FIELD field_77585_a recipePatterns [Ljava/lang/String;
+        FIELD field_77584_b recipeItems [Ljava/lang/Object;

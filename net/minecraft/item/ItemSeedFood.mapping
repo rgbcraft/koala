@@ -1,0 +1,3 @@
+CLASS net/minecraft/item/ItemSeedFood
+        FIELD field_82808_b cropId I
+        FIELD field_82809_c soilId I

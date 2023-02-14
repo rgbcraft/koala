@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/biome/SpawnListEntry
+        FIELD field_76300_b entityClass Ljava/lang/Class;
+        FIELD field_76301_c minGroupCount I
+        FIELD field_76299_d maxGroupCount I

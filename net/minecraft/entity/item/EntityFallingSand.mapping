@@ -1,0 +1,9 @@
+CLASS net/minecraft/entity/item/EntityFallingSand
+        FIELD field_70287_a blockID I
+        FIELD field_70285_b metadata I
+        FIELD field_70286_c fallTime I
+        FIELD field_70284_d shouldDropItem Z
+        FIELD field_82157_e isBreakingAnvil Z
+        FIELD field_82155_f isAnvil Z
+        FIELD field_82156_g fallHurtMax I
+        FIELD field_82158_h fallHurtAmount F

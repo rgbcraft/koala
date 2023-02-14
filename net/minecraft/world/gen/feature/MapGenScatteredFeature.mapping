@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/gen/feature/MapGenScatteredFeature
+        FIELD field_75061_e biomelist Ljava/util/List;
+        FIELD field_82668_f scatteredFeatureSpawnList Ljava/util/List;
+        FIELD field_82669_g maxDistanceBetweenScatteredFeatures I
+        FIELD field_82670_h minDistanceBetweenScatteredFeatures I

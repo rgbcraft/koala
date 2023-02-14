@@ -1,0 +1,2 @@
+CLASS net/minecraft/stats/StatFileWriter
+        FIELD field_77454_d statsSyncher Lnet/minecraft/stats/StatsSyncher;

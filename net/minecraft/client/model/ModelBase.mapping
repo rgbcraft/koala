@@ -1,0 +1,8 @@
+CLASS net/minecraft/client/model/ModelBase
+        FIELD field_78095_p onGround F
+        FIELD field_78093_q isRiding Z
+        FIELD field_78092_r boxList Ljava/util/List;
+        FIELD field_78091_s isChild Z
+        FIELD field_78094_a modelTextureMap Ljava/util/Map;
+        FIELD field_78090_t textureWidth I
+        FIELD field_78089_u textureHeight I

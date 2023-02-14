@@ -1,0 +1,4 @@
+CLASS net/minecraft/util/EnchantmentNameParts
+        FIELD field_78061_a instance Lnet/minecraft/util/EnchantmentNameParts;
+        FIELD field_78059_b rand Ljava/util/Random;
+        FIELD field_78060_c wordList [Ljava/lang/String;

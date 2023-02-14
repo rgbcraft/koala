@@ -1,0 +1,5 @@
+CLASS net/minecraft/network/packet/Packet17Sleep
+        FIELD field_73625_a entityID I
+        FIELD field_73623_b bedX I
+        FIELD field_73624_c bedY I
+        FIELD field_73621_d bedZ I

@@ -1,0 +1,15 @@
+CLASS net/minecraft/client/particle/EntityFX
+        FIELD field_70550_a particleTextureIndex I
+        FIELD field_70548_b particleTextureJitterX F
+        FIELD field_70549_c particleTextureJitterY F
+        FIELD field_70546_d particleAge I
+        FIELD field_70547_e particleMaxAge I
+        FIELD field_70544_f particleScale F
+        FIELD field_70545_g particleGravity F
+        FIELD field_70552_h particleRed F
+        FIELD field_70553_i particleGreen F
+        FIELD field_70551_j particleBlue F
+        FIELD field_82339_as particleAlpha F
+        FIELD field_70556_an interpPosX D
+        FIELD field_70554_ao interpPosY D
+        FIELD field_70555_ap interpPosZ D

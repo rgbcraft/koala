@@ -1,0 +1,6 @@
+CLASS net/minecraft/network/packet/Packet71Weather
+        FIELD field_73538_a entityID I
+        FIELD field_73536_b posX I
+        FIELD field_73537_c posY I
+        FIELD field_73534_d posZ I
+        FIELD field_73535_e isLightningBolt I

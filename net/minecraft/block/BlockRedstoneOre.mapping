@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockRedstoneOre
+        FIELD field_72178_a glowing Z

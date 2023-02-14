@@ -1,0 +1,4 @@
+CLASS net/minecraft/entity/passive/EntityWolf
+        FIELD field_70925_g isShaking Z
+        FIELD field_70929_i timeWolfIsShaking F
+        FIELD field_70927_j prevTimeWolfIsShaking F

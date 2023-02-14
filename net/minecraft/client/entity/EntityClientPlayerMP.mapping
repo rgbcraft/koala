@@ -1,0 +1,12 @@
+CLASS net/minecraft/client/entity/EntityClientPlayerMP
+        FIELD field_71174_a sendQueue Lnet/minecraft/client/multiplayer/NetClientHandler;
+        FIELD field_71179_j oldPosX D
+        FIELD field_71177_cg oldMinY D
+        FIELD field_71178_ch oldPosY D
+        FIELD field_71175_ci oldPosZ D
+        FIELD field_71176_cj oldRotationYaw F
+        FIELD field_71172_ck oldRotationPitch F
+        FIELD field_71173_cl wasOnGround Z
+        FIELD field_71170_cm shouldStopSneaking Z
+        FIELD field_71171_cn wasSneaking Z
+        FIELD field_71169_cp hasSetHealth Z

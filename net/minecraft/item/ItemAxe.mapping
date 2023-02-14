@@ -1,0 +1,4 @@
+CLASS net/minecraft/item/ItemAxe
+        FIELD field_77868_c blocksEffectiveAgainst [Lnet/minecraft/block/Block;
+CLASS net/minecraft/item/ItemAxe
+        FIELD field_77868_c blocksEffectiveAgainst [Lnet/minecraft/block/Block;

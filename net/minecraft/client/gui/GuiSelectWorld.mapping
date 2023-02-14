@@ -1,0 +1,15 @@
+CLASS net/minecraft/client/gui/GuiSelectWorld
+        FIELD field_74076_c dateFormatter Ljava/text/DateFormat;
+        FIELD field_74077_a parentScreen Lnet/minecraft/client/gui/GuiScreen;
+        FIELD field_74075_b screenTitle Ljava/lang/String;
+        FIELD field_74074_d selected Z
+        FIELD field_74080_m selectedWorld I
+        FIELD field_74078_n saveList Ljava/util/List;
+        FIELD field_74079_o worldSlotContainer Lnet/minecraft/client/gui/GuiWorldSlot;
+        FIELD field_74087_p localizedWorldText Ljava/lang/String;
+        FIELD field_74086_q localizedMustConvertText Ljava/lang/String;
+        FIELD field_74085_r localizedGameModeText [Ljava/lang/String;
+        FIELD field_74084_s deleting Z
+        FIELD field_74083_t buttonRename Lnet/minecraft/client/gui/GuiButton;
+        FIELD field_74082_u buttonSelect Lnet/minecraft/client/gui/GuiButton;
+        FIELD field_74081_v buttonDelete Lnet/minecraft/client/gui/GuiButton;

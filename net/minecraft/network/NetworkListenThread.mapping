@@ -1,0 +1,5 @@
+CLASS net/minecraft/network/NetworkListenThread
+        FIELD field_71751_a logger Ljava/util/logging/Logger;
+        FIELD field_71750_c mcServer Lnet/minecraft/server/MinecraftServer;
+        FIELD field_71748_d connections Ljava/util/List;
+        FIELD field_71749_b isListening Z

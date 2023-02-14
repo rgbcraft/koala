@@ -1,0 +1,7 @@
+CLASS net/minecraft/network/packet/Packet202PlayerAbilities
+        FIELD field_73362_a disableDamage Z
+        FIELD field_73360_b isFlying Z
+        FIELD field_73361_c allowFlying Z
+        FIELD field_73358_d isCreativeMode Z
+        FIELD field_73359_e flySpeed F
+        FIELD field_73357_f walkSpeed F

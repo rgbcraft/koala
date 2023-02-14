@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/storage/SaveFormatComparator
+        FIELD field_75797_a fileName Ljava/lang/String;
+        FIELD field_75795_b displayName Ljava/lang/String;
+        FIELD field_75796_c lastTimePlayed J
+        FIELD field_75793_d sizeOnDisk J
+        FIELD field_75794_e requiresConversion Z
+        FIELD field_75791_f theEnumGameType Lnet/minecraft/world/EnumGameType;
+        FIELD field_75792_g hardcore Z
+        FIELD field_75798_h cheatsEnabled Z

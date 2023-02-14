@@ -1,0 +1,14 @@
+CLASS net/minecraft/entity/projectile/EntityArrow
+        FIELD field_70247_d xTile I
+        FIELD field_70248_e yTile I
+        FIELD field_70245_f zTile I
+        FIELD field_70246_g inTile I
+        FIELD field_70253_h inData I
+        FIELD field_70254_i inGround Z
+        FIELD field_70251_a canBePickedUp I
+        FIELD field_70249_b arrowShake I
+        FIELD field_70250_c shootingEntity Lnet/minecraft/entity/Entity;
+        FIELD field_70252_j ticksInGround I
+        FIELD field_70257_an ticksInAir I
+        FIELD field_70255_ao damage D
+        FIELD field_70256_ap knockbackStrength I

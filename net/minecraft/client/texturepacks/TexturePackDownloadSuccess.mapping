@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/texturepacks/TexturePackDownloadSuccess
+        FIELD field_76171_a texturePacks Lnet/minecraft/client/texturepacks/TexturePackList;

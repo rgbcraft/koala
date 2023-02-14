@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/gen/ChunkProviderServer
+        FIELD field_73248_b chunksToUnload Ljava/util/Set;
+        FIELD field_73249_c defaultEmptyChunk Lnet/minecraft/world/chunk/Chunk;
+        FIELD field_73246_d currentChunkProvider Lnet/minecraft/world/chunk/IChunkProvider;
+        FIELD field_73247_e currentChunkLoader Lnet/minecraft/world/chunk/storage/IChunkLoader;
+        FIELD field_73250_a loadChunkOnProvideRequest Z
+        FIELD field_73244_f loadedChunkHashMap Lnet/minecraft/util/LongHashMap;
+        FIELD field_73245_g loadedChunks Ljava/util/List;
+        FIELD field_73251_h worldObj Lnet/minecraft/world/WorldServer;

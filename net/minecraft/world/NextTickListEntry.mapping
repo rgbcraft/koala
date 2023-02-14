@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/NextTickListEntry
+        FIELD field_77177_f nextTickEntryID J
+        FIELD field_77183_a xCoord I
+        FIELD field_77181_b yCoord I
+        FIELD field_77182_c zCoord I
+        FIELD field_77179_d blockID I
+        FIELD field_77180_e scheduledTime J
+        FIELD field_77178_g tickEntryID J

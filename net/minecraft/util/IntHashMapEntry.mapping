@@ -1,0 +1,5 @@
+CLASS net/minecraft/util/IntHashMapEntry
+        FIELD field_76035_a hashEntry I
+        FIELD field_76033_b valueEntry Ljava/lang/Object;
+        FIELD field_76034_c nextEntry Lnet/minecraft/util/IntHashMapEntry;
+        FIELD field_76032_d slotHash I

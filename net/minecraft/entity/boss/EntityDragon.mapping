@@ -1,0 +1,21 @@
+CLASS net/minecraft/entity/boss/EntityDragon
+        FIELD field_70980_b targetX D
+        FIELD field_70981_c targetY D
+        FIELD field_70978_d targetZ D
+        FIELD field_70979_e ringBuffer [D
+        FIELD field_70976_f ringBufferIndex I
+        FIELD field_70977_g dragonPartArray [Lnet/minecraft/entity/boss/EntityDragonPart;
+        FIELD field_70986_h dragonPartHead Lnet/minecraft/entity/boss/EntityDragonPart;
+        FIELD field_70987_i dragonPartBody Lnet/minecraft/entity/boss/EntityDragonPart;
+        FIELD field_70985_j dragonPartTail1 Lnet/minecraft/entity/boss/EntityDragonPart;
+        FIELD field_70984_by dragonPartTail2 Lnet/minecraft/entity/boss/EntityDragonPart;
+        FIELD field_70982_bz dragonPartTail3 Lnet/minecraft/entity/boss/EntityDragonPart;
+        FIELD field_70983_bA dragonPartWing1 Lnet/minecraft/entity/boss/EntityDragonPart;
+        FIELD field_70990_bB dragonPartWing2 Lnet/minecraft/entity/boss/EntityDragonPart;
+        FIELD field_70991_bC prevAnimTime F
+        FIELD field_70988_bD animTime F
+        FIELD field_70989_bE forceNewTarget Z
+        FIELD field_70994_bF slowed Z
+        FIELD field_70993_bI target Lnet/minecraft/entity/Entity;
+        FIELD field_70995_bG deathTicks I
+        FIELD field_70992_bH healingEnderCrystal Lnet/minecraft/entity/item/EntityEnderCrystal;

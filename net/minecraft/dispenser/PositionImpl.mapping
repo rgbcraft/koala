@@ -1,0 +1,4 @@
+CLASS net/minecraft/dispenser/PositionImpl
+        FIELD field_82630_a x D
+        FIELD field_82628_b y D
+        FIELD field_82629_c z D

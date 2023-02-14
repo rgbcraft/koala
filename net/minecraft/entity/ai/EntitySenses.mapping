@@ -1,0 +1,4 @@
+CLASS net/minecraft/entity/ai/EntitySenses
+        FIELD field_75526_a entityObj Lnet/minecraft/entity/EntityLiving;
+        FIELD field_75524_b seenEntities Ljava/util/List;
+        FIELD field_75525_c unseenEntities Ljava/util/List;

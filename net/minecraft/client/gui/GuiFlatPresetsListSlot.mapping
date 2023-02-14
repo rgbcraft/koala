@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/gui/GuiFlatPresetsListSlot
+        FIELD field_82458_b flatPresetsGui Lnet/minecraft/client/gui/GuiFlatPresets;

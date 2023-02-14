@@ -1,0 +1,4 @@
+CLASS net/minecraft/network/packet/Packet106Transaction
+        FIELD field_73435_a windowId I
+        FIELD field_73433_b shortWindowId S
+        FIELD field_73434_c accepted Z

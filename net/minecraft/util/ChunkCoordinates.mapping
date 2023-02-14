@@ -1,0 +1,4 @@
+CLASS net/minecraft/util/ChunkCoordinates
+        FIELD field_71574_a posX I
+        FIELD field_71572_b posY I
+        FIELD field_71573_c posZ I

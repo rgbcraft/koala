@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/particle/EntitySpellParticleFX
+        FIELD field_70590_a baseSpellTextureIndex I

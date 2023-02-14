@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/biome/WorldChunkManagerHell
+        FIELD field_76947_d biomeGenerator Lnet/minecraft/world/biome/BiomeGenBase;
+        FIELD field_76948_e hellTemperature F
+        FIELD field_76946_f rainfall F

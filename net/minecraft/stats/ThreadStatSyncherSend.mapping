@@ -1,0 +1,2 @@
+CLASS net/minecraft/stats/ThreadStatSyncherSend
+        FIELD field_77482_b syncher Lnet/minecraft/stats/StatsSyncher;

@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/gui/GuiProgress
+        FIELD field_74265_a progressMessage Ljava/lang/String;
+        FIELD field_74263_b workingMessage Ljava/lang/String;
+        FIELD field_74264_c currentProgress I
+        FIELD field_74262_d noMoreProgress Z

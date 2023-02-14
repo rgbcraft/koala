@@ -1,0 +1,6 @@
+CLASS net/minecraft/network/packet/Packet26EntityExpOrb
+        FIELD field_73533_a entityId I
+        FIELD field_73531_b posX I
+        FIELD field_73532_c posY I
+        FIELD field_73529_d posZ I
+        FIELD field_73530_e xpValue I

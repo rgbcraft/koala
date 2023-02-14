@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/chunk/storage/RegionFile
+        FIELD field_76720_a emptySector [B
+        FIELD field_76718_b fileName Ljava/io/File;
+        FIELD field_76719_c dataFile Ljava/io/RandomAccessFile;
+        FIELD field_76716_d offsets [I
+        FIELD field_76717_e chunkTimestamps [I
+        FIELD field_76714_f sectorFree Ljava/util/ArrayList;
+        FIELD field_76715_g sizeDelta I
+        FIELD field_76721_h lastModified J

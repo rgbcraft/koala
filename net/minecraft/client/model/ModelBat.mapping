@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/model/ModelBat
+        FIELD field_82895_a batHead Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_82893_b batBody Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_82894_c batRightWing Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_82891_d batLeftWing Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_82892_e batOuterRightWing Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_82890_f batOuterLeftWing Lnet/minecraft/client/model/ModelRenderer;

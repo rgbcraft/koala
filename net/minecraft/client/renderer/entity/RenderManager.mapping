@@ -1,0 +1,17 @@
+CLASS net/minecraft/client/renderer/entity/RenderManager
+        FIELD field_78729_o entityRenderMap Ljava/util/Map;
+        FIELD field_78727_a instance Lnet/minecraft/client/renderer/entity/RenderManager;
+        FIELD field_78736_p fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+        FIELD field_78725_b renderPosX D
+        FIELD field_78726_c renderPosY D
+        FIELD field_78723_d renderPosZ D
+        FIELD field_78724_e renderEngine Lnet/minecraft/client/renderer/RenderEngine;
+        FIELD field_78721_f itemRenderer Lnet/minecraft/client/renderer/ItemRenderer;
+        FIELD field_78722_g worldObj Lnet/minecraft/world/World;
+        FIELD field_78734_h livingPlayer Lnet/minecraft/entity/EntityLiving;
+        FIELD field_78735_i playerViewY F
+        FIELD field_78732_j playerViewX F
+        FIELD field_78733_k options Lnet/minecraft/client/settings/GameSettings;
+        FIELD field_78730_l viewerPosX D
+        FIELD field_78731_m viewerPosY D
+        FIELD field_78728_n viewerPosZ D

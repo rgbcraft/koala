@@ -1,0 +1,11 @@
+CLASS net/minecraft/network/NetLoginHandler
+        FIELD field_72536_d verifyToken [B
+        FIELD field_72540_a logger Ljava/util/logging/Logger;
+        FIELD field_72537_e rand Ljava/util/Random;
+        FIELD field_72538_b myTCPConnection Lnet/minecraft/network/TcpConnection;
+        FIELD field_72539_c connectionComplete Z
+        FIELD field_72534_f mcServer Lnet/minecraft/server/MinecraftServer;
+        FIELD field_72535_g connectionTimer I
+        FIELD field_72543_h clientUsername Ljava/lang/String;
+        FIELD field_72541_j loginServerId Ljava/lang/String;
+        FIELD field_72542_k sharedKey Ljavax/crypto/SecretKey;

@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/gen/structure/ComponentVillageField
+        FIELD field_74901_a averageGroundLevel I
+        FIELD field_82679_b cropTypeA I
+        FIELD field_82680_c cropTypeB I
+        FIELD field_82678_d cropTypeC I
+        FIELD field_82681_h cropTypeD I

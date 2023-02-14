@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/chunk/NibbleArray
+        FIELD field_76585_a data [B
+        FIELD field_76583_b depthBits I
+        FIELD field_76584_c depthBitsPlusFour I

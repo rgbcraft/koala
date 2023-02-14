@@ -1,0 +1,5 @@
+CLASS net/minecraft/entity/ai/EntityAIBeg
+        FIELD field_75387_a theWolf Lnet/minecraft/entity/passive/EntityWolf;
+        FIELD field_75385_b thePlayer Lnet/minecraft/entity/player/EntityPlayer;
+        FIELD field_75386_c worldObject Lnet/minecraft/world/World;
+        FIELD field_75383_d minPlayerDistance F

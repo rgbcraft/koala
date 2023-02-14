@@ -1,0 +1,7 @@
+CLASS net/minecraft/util/AABBPool
+        FIELD field_72306_a maxNumCleans I
+        FIELD field_72304_b numEntriesToRemove I
+        FIELD field_72305_c listAABB Ljava/util/List;
+        FIELD field_72302_d nextPoolIndex I
+        FIELD field_72303_e maxPoolIndex I
+        FIELD field_72301_f numCleans I

@@ -1,0 +1,11 @@
+CLASS net/minecraft/world/Explosion
+        FIELD field_77286_a isFlaming Z
+        FIELD field_82755_b isSmoking Z
+        FIELD field_77290_i explosionRNG Ljava/util/Random;
+        FIELD field_77287_j worldObj Lnet/minecraft/world/World;
+        FIELD field_77284_b explosionX D
+        FIELD field_77285_c explosionY D
+        FIELD field_77282_d explosionZ D
+        FIELD field_77283_e exploder Lnet/minecraft/entity/Entity;
+        FIELD field_77280_f explosionSize F
+        FIELD field_77281_g affectedBlockPositions Ljava/util/List;

@@ -1,0 +1,4 @@
+CLASS net/minecraft/entity/boss/BossStatus
+        FIELD field_82828_a healthScale F
+        FIELD field_82826_b statusBarLength I
+        FIELD field_82827_c bossName Ljava/lang/String;

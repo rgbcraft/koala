@@ -1,0 +1,5 @@
+CLASS net/minecraft/crash/CrashReport
+        FIELD field_71513_a description Ljava/lang/String;
+        FIELD field_71511_b cause Ljava/lang/Throwable;
+        FIELD field_71512_c crashReportSections Ljava/util/List;
+        FIELD field_71510_d crashReportFile Ljava/io/File;

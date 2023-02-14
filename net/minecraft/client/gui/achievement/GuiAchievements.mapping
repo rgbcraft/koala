@@ -1,0 +1,13 @@
+CLASS net/minecraft/client/gui/achievement/GuiAchievements
+        FIELD field_74122_s guiMapTop I
+        FIELD field_74121_t guiMapLeft I
+        FIELD field_74120_u guiMapBottom I
+        FIELD field_74119_v guiMapRight I
+        FIELD field_74114_a achievementsPaneWidth I
+        FIELD field_74112_b achievementsPaneHeight I
+        FIELD field_74113_c mouseX I
+        FIELD field_74111_d mouseY I
+        FIELD field_74116_o guiMapX D
+        FIELD field_74125_p guiMapY D
+        FIELD field_74118_w isMouseButtonDown I
+        FIELD field_74126_x statFileWriter Lnet/minecraft/stats/StatFileWriter;

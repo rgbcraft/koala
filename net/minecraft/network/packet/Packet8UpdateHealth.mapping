@@ -1,0 +1,4 @@
+CLASS net/minecraft/network/packet/Packet8UpdateHealth
+        FIELD field_73640_a healthMP I
+        FIELD field_73638_b food I
+        FIELD field_73639_c foodSaturation F

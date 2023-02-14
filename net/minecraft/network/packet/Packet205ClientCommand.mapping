@@ -1,0 +1,2 @@
+CLASS net/minecraft/network/packet/Packet205ClientCommand
+        FIELD field_73447_a forceRespawn I

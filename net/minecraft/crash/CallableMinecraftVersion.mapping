@@ -1,0 +1,2 @@
+CLASS net/minecraft/crash/CallableMinecraftVersion
+        FIELD field_71494_a theCrashReport Lnet/minecraft/crash/CrashReport;

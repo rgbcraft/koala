@@ -1,0 +1,10 @@
+CLASS net/minecraft/stats/StatsSyncher
+        FIELD field_77432_a isBusy Z
+        FIELD field_77428_d statFileWriter Lnet/minecraft/stats/StatFileWriter;
+        FIELD field_77429_e unsentDataFile Ljava/io/File;
+        FIELD field_77426_f dataFile Ljava/io/File;
+        FIELD field_77427_g unsentTempFile Ljava/io/File;
+        FIELD field_77437_h tempFile Ljava/io/File;
+        FIELD field_77438_i unsentOldFile Ljava/io/File;
+        FIELD field_77435_j oldFile Ljava/io/File;
+        FIELD field_77436_k theSession Lnet/minecraft/util/Session;

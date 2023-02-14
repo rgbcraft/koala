@@ -1,0 +1,19 @@
+CLASS net/minecraft/creativetab/CreativeTabs
+        FIELD field_78032_a creativeTabArray [Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78030_b tabBlock Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78031_c tabDecorations Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78028_d tabRedstone Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78029_e tabTransport Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78026_f tabMisc Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78027_g tabAllSearch Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78039_h tabFood Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78040_i tabTools Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78037_j tabCombat Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78038_k tabBrewing Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78035_l tabMaterials Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78036_m tabInventory Lnet/minecraft/creativetab/CreativeTabs;
+        FIELD field_78033_n tabIndex I
+        FIELD field_78034_o tabLabel Ljava/lang/String;
+        FIELD field_78043_p backgroundImageName Ljava/lang/String;
+        FIELD field_78042_q hasScrollbar Z
+        FIELD field_78041_r drawTitle Z

@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/gen/structure/ComponentStrongholdStraight
+        FIELD field_75021_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;
+        FIELD field_75019_b expandsX Z
+        FIELD field_75020_c expandsZ Z

@@ -1,0 +1,4 @@
+CLASS net/minecraft/util/WeightedRandomChestContent
+        FIELD field_76297_b theItemId Lnet/minecraft/item/ItemStack;
+        FIELD field_76295_d theMinimumChanceToGenerateItem I
+        FIELD field_76296_e theMaximumChanceToGenerateItem I

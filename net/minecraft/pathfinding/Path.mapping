@@ -1,0 +1,3 @@
+CLASS net/minecraft/pathfinding/Path
+        FIELD field_75852_a pathPoints [Lnet/minecraft/pathfinding/PathPoint;
+        FIELD field_75851_b count I

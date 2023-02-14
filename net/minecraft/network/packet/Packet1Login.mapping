@@ -1,0 +1,9 @@
+CLASS net/minecraft/network/packet/Packet1Login
+        FIELD field_73561_a clientEntityId I
+        FIELD field_73559_b terrainType Lnet/minecraft/world/WorldType;
+        FIELD field_73560_c hardcoreMode Z
+        FIELD field_73557_d gameType Lnet/minecraft/world/EnumGameType;
+        FIELD field_73558_e dimension I
+        FIELD field_73555_f difficultySetting B
+        FIELD field_73556_g worldHeight B
+        FIELD field_73562_h maxPlayers B

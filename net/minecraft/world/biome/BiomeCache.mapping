@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/biome/BiomeCache
+        FIELD field_76844_a chunkManager Lnet/minecraft/world/biome/WorldChunkManager;
+        FIELD field_76842_b lastCleanupTime J
+        FIELD field_76843_c cacheMap Lnet/minecraft/util/LongHashMap;
+        FIELD field_76841_d cache Ljava/util/List;

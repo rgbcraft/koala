@@ -1,0 +1,3 @@
+CLASS net/minecraft/entity/monster/EntityWitch
+        FIELD field_82199_d witchDrops [I
+        FIELD field_82200_e witchAttackTimer I

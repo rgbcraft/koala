@@ -1,0 +1,5 @@
+CLASS net/minecraft/util/MovementInput
+        FIELD field_78902_a moveStrafe F
+        FIELD field_78900_b moveForward F
+        FIELD field_78901_c jump Z
+        FIELD field_78899_d sneak Z

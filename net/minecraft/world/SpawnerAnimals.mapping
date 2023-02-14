@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/SpawnerAnimals
+        FIELD field_77193_b eligibleChunksForSpawning Ljava/util/HashMap;
+        FIELD field_77194_a nightSpawnEntities [Ljava/lang/Class;

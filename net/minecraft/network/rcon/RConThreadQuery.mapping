@@ -1,0 +1,16 @@
+CLASS net/minecraft/network/rcon/RConThreadQuery
+        FIELD field_72629_g lastAuthCheckTime J
+        FIELD field_72636_h queryPort I
+        FIELD field_72637_i serverPort I
+        FIELD field_72634_j maxPlayers I
+        FIELD field_72635_k serverMotd Ljava/lang/String;
+        FIELD field_72632_l worldName Ljava/lang/String;
+        FIELD field_72633_m querySocket Ljava/net/DatagramSocket;
+        FIELD field_72630_n buffer [B
+        FIELD field_72631_o incomingPacket Ljava/net/DatagramPacket;
+        FIELD field_72643_q queryHostname Ljava/lang/String;
+        FIELD field_72642_r serverHostname Ljava/lang/String;
+        FIELD field_72641_s queryClients Ljava/util/Map;
+        FIELD field_72640_t time J
+        FIELD field_72639_u output Lnet/minecraft/network/rcon/RConOutputStream;
+        FIELD field_72638_v lastQueryResponseTime J

@@ -1,0 +1,9 @@
+CLASS net/minecraft/server/ServerListenThread
+        FIELD field_71777_a logger Ljava/util/logging/Logger;
+        FIELD field_71775_b pendingConnections Ljava/util/List;
+        FIELD field_71776_c recentConnections Ljava/util/HashMap;
+        FIELD field_71773_d connectionCounter I
+        FIELD field_71774_e myServerSocket Ljava/net/ServerSocket;
+        FIELD field_71771_f myNetworkListenThread Lnet/minecraft/network/NetworkListenThread;
+        FIELD field_71772_g myServerAddress Ljava/net/InetAddress;
+        FIELD field_71778_h myPort I

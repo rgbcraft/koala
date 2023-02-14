@@ -1,0 +1,5 @@
+CLASS net/minecraft/item/ItemTool
+        FIELD field_77863_c blocksEffectiveAgainst [Lnet/minecraft/block/Block;
+        FIELD field_77864_a efficiencyOnProperMaterial F
+        FIELD field_77865_bY damageVsEntity I
+        FIELD field_77862_b toolMaterial Lnet/minecraft/item/EnumToolMaterial;

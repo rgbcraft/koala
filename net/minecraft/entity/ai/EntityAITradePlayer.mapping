@@ -1,0 +1,2 @@
+CLASS net/minecraft/entity/ai/EntityAITradePlayer
+        FIELD field_75276_a villager Lnet/minecraft/entity/passive/EntityVillager;

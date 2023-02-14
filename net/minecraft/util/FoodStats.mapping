@@ -1,0 +1,6 @@
+CLASS net/minecraft/util/FoodStats
+        FIELD field_75127_a foodLevel I
+        FIELD field_75125_b foodSaturationLevel F
+        FIELD field_75126_c foodExhaustionLevel F
+        FIELD field_75123_d foodTimer I
+        FIELD field_75124_e prevFoodLevel I

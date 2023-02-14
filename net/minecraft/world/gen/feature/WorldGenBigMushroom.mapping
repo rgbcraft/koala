@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/feature/WorldGenBigMushroom
+        FIELD field_76523_a mushroomType I

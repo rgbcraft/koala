@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/gui/inventory/CreativeCrafting
+        FIELD field_82250_a mc Lnet/minecraft/client/Minecraft;

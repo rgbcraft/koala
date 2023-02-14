@@ -1,0 +1,2 @@
+CLASS net/minecraft/util/ReportedException
+        FIELD field_71576_a theReportedExceptionCrashReport Lnet/minecraft/crash/CrashReport;

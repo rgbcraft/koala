@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/MinecraftFakeLauncher
+        FIELD field_74534_a arguments Ljava/util/Map;

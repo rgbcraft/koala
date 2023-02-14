@@ -1,0 +1,8 @@
+CLASS net/minecraft/client/gui/inventory/GuiContainerCreative
+        FIELD field_74242_o inventory Lnet/minecraft/inventory/InventoryBasic;
+        FIELD field_74241_p selectedTabIndex I
+        FIELD field_74240_q currentScroll F
+        FIELD field_74239_r isScrolling Z
+        FIELD field_74238_s wasClicking Z
+        FIELD field_74237_t searchField Lnet/minecraft/client/gui/GuiTextField;
+        FIELD field_74236_u backupContainerSlots Ljava/util/List;

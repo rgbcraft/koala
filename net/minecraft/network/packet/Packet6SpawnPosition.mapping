@@ -1,0 +1,4 @@
+CLASS net/minecraft/network/packet/Packet6SpawnPosition
+        FIELD field_73300_a xPosition I
+        FIELD field_73298_b yPosition I
+        FIELD field_73299_c zPosition I

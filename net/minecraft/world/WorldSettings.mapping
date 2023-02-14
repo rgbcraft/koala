@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/WorldSettings
+        FIELD field_77174_a seed J
+        FIELD field_77172_b theGameType Lnet/minecraft/world/EnumGameType;
+        FIELD field_77173_c mapFeaturesEnabled Z
+        FIELD field_77170_d hardcoreEnabled Z
+        FIELD field_77171_e terrainType Lnet/minecraft/world/WorldType;
+        FIELD field_77168_f commandsAllowed Z
+        FIELD field_77169_g bonusChestEnabled Z

@@ -1,0 +1,13 @@
+CLASS net/minecraft/entity/passive/EntityVillager
+        FIELD field_70955_e randomTickDivider I
+        FIELD field_70952_f isMating Z
+        FIELD field_70953_g isPlaying Z
+        FIELD field_70954_d villageObj Lnet/minecraft/village/Village;
+        FIELD field_70962_h buyingPlayer Lnet/minecraft/entity/player/EntityPlayer;
+        FIELD field_70963_i buyingList Lnet/minecraft/village/MerchantRecipeList;
+        FIELD field_70961_j timeUntilReset I
+        FIELD field_70959_by needsInitilization Z
+        FIELD field_70956_bz wealth I
+        FIELD field_82189_bL lastBuyingPlayer Ljava/lang/String;
+        FIELD field_70958_bB villagerStockList Ljava/util/Map;
+        FIELD field_70960_bC blacksmithSellingList Ljava/util/Map;

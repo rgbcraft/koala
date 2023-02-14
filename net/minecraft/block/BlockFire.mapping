@@ -1,0 +1,3 @@
+CLASS net/minecraft/block/BlockFire
+        FIELD field_72258_a chanceToEncourageFire [I
+        FIELD field_72257_b abilityToCatchFire [I

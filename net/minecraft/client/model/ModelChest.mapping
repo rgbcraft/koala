@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/model/ModelChest
+        FIELD field_78234_a chestLid Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78232_b chestBelow Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78233_c chestKnob Lnet/minecraft/client/model/ModelRenderer;

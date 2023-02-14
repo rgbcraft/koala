@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockSapling
+        FIELD field_72270_a WOOD_TYPES [Ljava/lang/String;

@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockHalfSlab
+        FIELD field_72242_a isDoubleSlab Z

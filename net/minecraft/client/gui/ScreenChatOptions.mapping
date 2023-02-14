@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/gui/ScreenChatOptions
+        FIELD field_73891_a allScreenChatOptions [Lnet/minecraft/client/settings/EnumOptions;
+        FIELD field_82267_b allMultiplayerOptions [Lnet/minecraft/client/settings/EnumOptions;
+        FIELD field_73889_b theGuiScreen Lnet/minecraft/client/gui/GuiScreen;
+        FIELD field_73890_c theSettings Lnet/minecraft/client/settings/GameSettings;
+        FIELD field_73888_d theChatOptions Ljava/lang/String;

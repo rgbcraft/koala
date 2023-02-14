@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/gen/structure/StructureStart
+        FIELD field_75075_a components Ljava/util/LinkedList;
+        FIELD field_75074_b boundingBox Lnet/minecraft/world/gen/structure/StructureBoundingBox;

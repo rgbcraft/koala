@@ -1,0 +1,2 @@
+CLASS net/minecraft/server/dedicated/DedicatedServerCommandThread
+        FIELD field_72428_a server Lnet/minecraft/server/dedicated/DedicatedServer;

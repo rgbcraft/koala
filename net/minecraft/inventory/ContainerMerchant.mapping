@@ -1,0 +1,4 @@
+CLASS net/minecraft/inventory/ContainerMerchant
+        FIELD field_75178_e theMerchant Lnet/minecraft/entity/IMerchant;
+        FIELD field_75176_f merchantInventory Lnet/minecraft/inventory/InventoryMerchant;
+        FIELD field_75177_g theWorld Lnet/minecraft/world/World;

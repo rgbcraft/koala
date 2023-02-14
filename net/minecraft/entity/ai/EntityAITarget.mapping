@@ -1,0 +1,4 @@
+CLASS net/minecraft/entity/ai/EntityAITarget
+        FIELD field_75299_d taskOwner Lnet/minecraft/entity/EntityLiving;
+        FIELD field_75300_e targetDistance F
+        FIELD field_75297_f shouldCheckSight Z

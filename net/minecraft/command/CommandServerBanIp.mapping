@@ -1,0 +1,2 @@
+CLASS net/minecraft/command/CommandServerBanIp
+        FIELD field_71545_a IPv4Pattern Ljava/util/regex/Pattern;

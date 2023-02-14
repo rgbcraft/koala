@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockStep
+        FIELD field_72244_a blockStepTypes [Ljava/lang/String;

@@ -1,0 +1,10 @@
+CLASS net/minecraft/client/gui/GuiIngame
+        FIELD field_73841_b itemRenderer Lnet/minecraft/client/renderer/entity/RenderItem;
+        FIELD field_73842_c rand Ljava/util/Random;
+        FIELD field_73839_d mc Lnet/minecraft/client/Minecraft;
+        FIELD field_73840_e persistantChatGUI Lnet/minecraft/client/gui/GuiNewChat;
+        FIELD field_73837_f updateCounter I
+        FIELD field_73838_g recordPlaying Ljava/lang/String;
+        FIELD field_73845_h recordPlayingUpFor I
+        FIELD field_73844_j recordIsPlaying Z
+        FIELD field_73843_a prevVignetteBrightness F

@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/particle/EntityLavaFX
+        FIELD field_70586_a lavaParticleScale F

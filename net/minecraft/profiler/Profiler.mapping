@@ -1,0 +1,6 @@
+CLASS net/minecraft/profiler/Profiler
+        FIELD field_76325_b sectionList Ljava/util/List;
+        FIELD field_76326_c timestampList Ljava/util/List;
+        FIELD field_76327_a profilingEnabled Z
+        FIELD field_76323_d profilingSection Ljava/lang/String;
+        FIELD field_76324_e profilingMap Ljava/util/Map;

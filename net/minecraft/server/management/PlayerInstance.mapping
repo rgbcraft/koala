@@ -1,0 +1,6 @@
+CLASS net/minecraft/server/management/PlayerInstance
+        FIELD field_73263_b playersInChunk Ljava/util/List;
+        FIELD field_73264_c chunkLocation Lnet/minecraft/world/ChunkCoordIntPair;
+        FIELD field_73261_d locationOfBlockChange [S
+        FIELD field_73262_e numberOfTilesToUpdate I
+        FIELD field_73265_a myManager Lnet/minecraft/server/management/PlayerManager;

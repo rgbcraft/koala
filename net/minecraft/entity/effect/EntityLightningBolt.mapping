@@ -1,0 +1,4 @@
+CLASS net/minecraft/entity/effect/EntityLightningBolt
+        FIELD field_70262_b lightningState I
+        FIELD field_70264_a boltVertex J
+        FIELD field_70263_c boltLivingTime I

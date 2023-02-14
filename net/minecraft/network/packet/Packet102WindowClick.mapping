@@ -1,0 +1,7 @@
+CLASS net/minecraft/network/packet/Packet102WindowClick
+        FIELD field_73444_a window_Id I
+        FIELD field_73442_b inventorySlot I
+        FIELD field_73443_c mouseClick I
+        FIELD field_73440_d action S
+        FIELD field_73441_e itemStack Lnet/minecraft/item/ItemStack;
+        FIELD field_73439_f holdingShift I

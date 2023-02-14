@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/feature/WorldGenLiquids
+        FIELD field_76537_a liquidBlockId I

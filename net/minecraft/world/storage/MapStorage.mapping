@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/storage/MapStorage
+        FIELD field_75751_a saveHandler Lnet/minecraft/world/storage/ISaveHandler;
+        FIELD field_75749_b loadedDataMap Ljava/util/Map;
+        FIELD field_75750_c loadedDataList Ljava/util/List;
+        FIELD field_75748_d idCounts Ljava/util/Map;

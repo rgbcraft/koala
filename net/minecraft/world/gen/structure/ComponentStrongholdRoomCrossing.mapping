@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/gen/structure/ComponentStrongholdRoomCrossing
+        FIELD field_75014_c strongholdRoomCrossingChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
+        FIELD field_75015_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;
+        FIELD field_75013_b roomType I

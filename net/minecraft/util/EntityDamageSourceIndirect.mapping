@@ -1,0 +1,2 @@
+CLASS net/minecraft/util/EntityDamageSourceIndirect
+        FIELD field_76387_p indirectEntity Lnet/minecraft/entity/Entity;

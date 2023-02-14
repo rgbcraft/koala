@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/renderer/entity/RenderItem
+        FIELD field_77022_g itemRenderBlocks Lnet/minecraft/client/renderer/RenderBlocks;
+        FIELD field_77025_h random Ljava/util/Random;
+        FIELD field_77023_b zLevel F

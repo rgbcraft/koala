@@ -1,0 +1,2 @@
+CLASS net/minecraft/entity/item/EntityPainting
+        FIELD field_70522_e art Lnet/minecraft/util/EnumArt;

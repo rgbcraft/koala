@@ -1,0 +1,2 @@
+CLASS net/minecraft/entity/passive/EntityBat
+        FIELD field_82237_a currentFlightTarget Lnet/minecraft/util/ChunkCoordinates;

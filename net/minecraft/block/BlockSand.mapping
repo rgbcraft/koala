@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockSand
+        FIELD field_72192_a fallInstantly Z

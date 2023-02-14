@@ -1,0 +1,14 @@
+CLASS net/minecraft/client/model/ModelDragon
+        FIELD field_78221_a head Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78219_b neck Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78220_c jaw Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78217_d body Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78218_e rearLeg Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78215_f frontLeg Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78216_g rearLegTip Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78226_h frontLegTip Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78227_i rearFoot Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78224_j frontFoot Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78225_k wing Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78222_l wingTip Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78223_m partialTicks F

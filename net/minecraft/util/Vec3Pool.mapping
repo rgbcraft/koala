@@ -1,0 +1,7 @@
+CLASS net/minecraft/util/Vec3Pool
+        FIELD field_72351_a truncateArrayResetThreshold I
+        FIELD field_72349_b minimumSize I
+        FIELD field_72350_c vec3Cache Ljava/util/List;
+        FIELD field_72347_d nextFreeSpace I
+        FIELD field_72348_e maximumSizeSinceLastTruncation I
+        FIELD field_72346_f resetCount I

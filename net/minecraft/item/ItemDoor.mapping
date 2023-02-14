@@ -1,0 +1,4 @@
+CLASS net/minecraft/item/ItemDoor
+        FIELD field_77870_a doorMaterial Lnet/minecraft/block/material/Material;
+CLASS net/minecraft/item/ItemDoor
+        FIELD field_77870_a doorMaterial Lnet/minecraft/block/material/Material;

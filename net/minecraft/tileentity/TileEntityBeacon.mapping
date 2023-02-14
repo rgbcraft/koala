@@ -1,0 +1,6 @@
+CLASS net/minecraft/tileentity/TileEntityBeacon
+        FIELD field_82139_a effectsList [Lnet/minecraft/potion/Potion;
+        FIELD field_82136_e levels I
+        FIELD field_82133_f primaryEffect I
+        FIELD field_82134_g secondaryEffect I
+        FIELD field_82140_h payment Lnet/minecraft/item/ItemStack;

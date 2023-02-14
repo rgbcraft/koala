@@ -1,0 +1,2 @@
+CLASS net/minecraft/crash/CrashReportCategory
+        FIELD field_85075_d stackTrace [Ljava/lang/StackTraceElement;

@@ -1,0 +1,11 @@
+CLASS net/minecraft/pathfinding/PathPoint
+        FIELD field_75839_a xCoord I
+        FIELD field_75837_b yCoord I
+        FIELD field_75838_c zCoord I
+        FIELD field_75840_j hash I
+        FIELD field_75835_d index I
+        FIELD field_75836_e totalPathDistance F
+        FIELD field_75833_f distanceToNext F
+        FIELD field_75834_g distanceToTarget F
+        FIELD field_75841_h previous Lnet/minecraft/pathfinding/PathPoint;
+        FIELD field_75842_i isFirst Z

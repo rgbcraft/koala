@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/gen/structure/StructureComponent
+        FIELD field_74887_e boundingBox Lnet/minecraft/world/gen/structure/StructureBoundingBox;
+        FIELD field_74885_f coordBaseMode I
+        FIELD field_74886_g componentType I

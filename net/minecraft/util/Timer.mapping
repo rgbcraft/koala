@@ -1,0 +1,10 @@
+CLASS net/minecraft/util/Timer
+        FIELD field_74282_a ticksPerSecond F
+        FIELD field_74276_f lastHRTime D
+        FIELD field_74280_b elapsedTicks I
+        FIELD field_74281_c renderPartialTicks F
+        FIELD field_74278_d timerSpeed F
+        FIELD field_74279_e elapsedPartialTicks F
+        FIELD field_74277_g lastSyncSysClock J
+        FIELD field_74284_h lastSyncHRClock J
+        FIELD field_74283_j timeSyncAdjustment D

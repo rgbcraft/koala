@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/gui/inventory/GuiFurnace
+        FIELD field_74204_o furnaceInventory Lnet/minecraft/tileentity/TileEntityFurnace;

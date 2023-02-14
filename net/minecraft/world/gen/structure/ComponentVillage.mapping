@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/gen/structure/ComponentVillage
+        FIELD field_74896_a villagersSpawned I
+        FIELD field_74897_k startPiece Lnet/minecraft/world/gen/structure/ComponentVillageStartPiece;

@@ -1,0 +1,6 @@
+CLASS net/minecraft/entity/ai/EntityAITempt
+        FIELD field_75284_a temptedEntity Lnet/minecraft/entity/EntityCreature;
+        FIELD field_75289_h temptingPlayer Lnet/minecraft/entity/player/EntityPlayer;
+        FIELD field_75290_i delayTemptCounter I
+        FIELD field_75288_k breedingFood I
+        FIELD field_75285_l scaredByPlayerMovement Z

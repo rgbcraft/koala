@@ -1,0 +1,7 @@
+CLASS net/minecraft/inventory/Container
+        FIELD field_75153_a inventoryItemStacks Ljava/util/List;
+        FIELD field_75151_b inventorySlots Ljava/util/List;
+        FIELD field_75152_c windowId I
+        FIELD field_75150_e transactionID S
+        FIELD field_75149_d crafters Ljava/util/List;
+        FIELD field_75148_f playerList Ljava/util/Set;

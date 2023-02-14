@@ -1,0 +1,14 @@
+CLASS net/minecraft/potion/PotionHelper
+        FIELD field_77922_b sugarEffect Ljava/lang/String;
+        FIELD field_77923_c ghastTearEffect Ljava/lang/String;
+        FIELD field_77920_d spiderEyeEffect Ljava/lang/String;
+        FIELD field_77921_e fermentedSpiderEyeEffect Ljava/lang/String;
+        FIELD field_77918_f speckledMelonEffect Ljava/lang/String;
+        FIELD field_77919_g blazePowderEffect Ljava/lang/String;
+        FIELD field_77931_h magmaCreamEffect Ljava/lang/String;
+        FIELD field_77932_i redstoneEffect Ljava/lang/String;
+        FIELD field_77929_j glowstoneEffect Ljava/lang/String;
+        FIELD field_77930_k gunpowderEffect Ljava/lang/String;
+        FIELD field_77927_l potionRequirements Ljava/util/HashMap;
+        FIELD field_77928_m potionAmplifiers Ljava/util/HashMap;
+        FIELD field_77926_o potionPrefixes [Ljava/lang/String;

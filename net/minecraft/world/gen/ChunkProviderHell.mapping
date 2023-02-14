@@ -1,0 +1,21 @@
+CLASS net/minecraft/world/gen/ChunkProviderHell
+        FIELD field_73181_i hellRNG Ljava/util/Random;
+        FIELD field_73178_j netherNoiseGen1 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73179_k netherNoiseGen2 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73176_l netherNoiseGen3 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73177_m slowsandGravelNoiseGen Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73174_n netherrackExculsivityNoiseGen Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73173_a netherNoiseGen6 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73171_b netherNoiseGen7 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73175_o worldObj Lnet/minecraft/world/World;
+        FIELD field_73186_p noiseField [D
+        FIELD field_73172_c genNetherBridge Lnet/minecraft/world/gen/structure/MapGenNetherBridge;
+        FIELD field_73185_q slowsandNoise [D
+        FIELD field_73184_r gravelNoise [D
+        FIELD field_73183_s netherrackExclusivityNoise [D
+        FIELD field_73182_t netherCaveGenerator Lnet/minecraft/world/gen/MapGenBase;
+        FIELD field_73169_d noiseData1 [D
+        FIELD field_73170_e noiseData2 [D
+        FIELD field_73167_f noiseData3 [D
+        FIELD field_73168_g noiseData4 [D
+        FIELD field_73180_h noiseData5 [D

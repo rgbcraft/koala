@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/renderer/tileentity/TileEntitySignRenderer
+        FIELD field_76910_a modelSign Lnet/minecraft/client/model/ModelSign;

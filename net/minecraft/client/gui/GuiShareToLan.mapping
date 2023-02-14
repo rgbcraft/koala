@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/gui/GuiShareToLan
+        FIELD field_74092_a parentScreen Lnet/minecraft/client/gui/GuiScreen;
+        FIELD field_74090_b buttonAllowCommandsToggle Lnet/minecraft/client/gui/GuiButton;
+        FIELD field_74091_c buttonGameMode Lnet/minecraft/client/gui/GuiButton;
+        FIELD field_74089_d gameMode Ljava/lang/String;
+        FIELD field_74093_m allowCommands Z

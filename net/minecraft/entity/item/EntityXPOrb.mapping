@@ -1,0 +1,7 @@
+CLASS net/minecraft/entity/item/EntityXPOrb
+        FIELD field_70533_a xpColor I
+        FIELD field_70531_b xpOrbAge I
+        FIELD field_70529_d xpOrbHealth I
+        FIELD field_70530_e xpValue I
+        FIELD field_80001_f closestPlayer Lnet/minecraft/entity/player/EntityPlayer;
+        FIELD field_80002_g xpTargetColor I

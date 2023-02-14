@@ -1,0 +1,4 @@
+CLASS net/minecraft/tileentity/TileEntitySign
+        FIELD field_70412_a signText [Ljava/lang/String;
+        FIELD field_70410_b lineBeingEdited I
+        FIELD field_70411_c isEditable Z

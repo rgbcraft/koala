@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/CallableLWJGLVersion
+        FIELD field_74503_a mc Lnet/minecraft/client/Minecraft;

@@ -1,0 +1,6 @@
+CLASS net/minecraft/entity/ai/EntityAIMoveTowardsTarget
+        FIELD field_75431_a theEntity Lnet/minecraft/entity/EntityCreature;
+        FIELD field_75429_b targetEntity Lnet/minecraft/entity/EntityLiving;
+        FIELD field_75430_c movePosX D
+        FIELD field_75427_d movePosY D
+        FIELD field_75428_e movePosZ D

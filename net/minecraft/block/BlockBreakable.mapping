@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockBreakable
+        FIELD field_72245_a localFlag Z

@@ -1,0 +1,3 @@
+CLASS net/minecraft/item/ItemDye
+        FIELD field_77860_a dyeColorNames [Ljava/lang/String;
+        FIELD field_77859_b dyeColors [I

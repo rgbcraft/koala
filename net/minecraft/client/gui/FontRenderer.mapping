@@ -1,0 +1,24 @@
+CLASS net/minecraft/client/gui/FontRenderer
+        FIELD field_78286_d charWidth [I
+        FIELD field_78290_a fontTextureName I
+        FIELD field_78288_b FONT_HEIGHT I
+        FIELD field_78289_c fontRandom Ljava/util/Random;
+        FIELD field_78287_e glyphWidth [B
+        FIELD field_78284_f glyphTextureName [I
+        FIELD field_78285_g colorCode [I
+        FIELD field_78297_h boundTextureName I
+        FIELD field_78298_i renderEngine Lnet/minecraft/client/renderer/RenderEngine;
+        FIELD field_78295_j posX F
+        FIELD field_78296_k posY F
+        FIELD field_78293_l unicodeFlag Z
+        FIELD field_78294_m bidiFlag Z
+        FIELD field_78291_n red F
+        FIELD field_78292_o blue F
+        FIELD field_78306_p green F
+        FIELD field_78305_q alpha F
+        FIELD field_78304_r textColor I
+        FIELD field_78303_s randomStyle Z
+        FIELD field_78302_t boldStyle Z
+        FIELD field_78301_u italicStyle Z
+        FIELD field_78300_v underlineStyle Z
+        FIELD field_78299_w strikethroughStyle Z

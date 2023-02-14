@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/feature/WorldGenDeadBush
+        FIELD field_76516_a deadBushID I

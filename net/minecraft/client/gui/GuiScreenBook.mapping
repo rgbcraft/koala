@@ -1,0 +1,19 @@
+CLASS net/minecraft/client/gui/GuiScreenBook
+        FIELD field_74169_a editingPlayer Lnet/minecraft/entity/player/EntityPlayer;
+        FIELD field_74167_b itemstackBook Lnet/minecraft/item/ItemStack;
+        FIELD field_74168_c bookIsUnsigned Z
+        FIELD field_74166_d bookModified Z
+        FIELD field_74172_m editingTitle Z
+        FIELD field_74170_n updateCount I
+        FIELD field_74171_o bookImageWidth I
+        FIELD field_74180_p bookImageHeight I
+        FIELD field_74179_q bookTotalPages I
+        FIELD field_74178_r currPage I
+        FIELD field_74177_s bookPages Lnet/minecraft/nbt/NBTTagList;
+        FIELD field_74176_t bookTitle Ljava/lang/String;
+        FIELD field_74175_u buttonNextPage Lnet/minecraft/client/gui/GuiButtonNextPage;
+        FIELD field_74174_v buttonPreviousPage Lnet/minecraft/client/gui/GuiButtonNextPage;
+        FIELD field_74173_w buttonDone Lnet/minecraft/client/gui/GuiButton;
+        FIELD field_74183_x buttonSign Lnet/minecraft/client/gui/GuiButton;
+        FIELD field_74182_y buttonFinalize Lnet/minecraft/client/gui/GuiButton;
+        FIELD field_74181_z buttonCancel Lnet/minecraft/client/gui/GuiButton;

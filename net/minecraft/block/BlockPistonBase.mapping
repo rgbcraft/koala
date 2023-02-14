@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockPistonBase
+        FIELD field_72119_a isSticky Z

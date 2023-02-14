@@ -1,0 +1,3 @@
+CLASS net/minecraft/village/VillageSiege
+        FIELD field_75537_a worldObj Lnet/minecraft/world/World;
+        FIELD field_75531_f theVillage Lnet/minecraft/village/Village;

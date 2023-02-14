@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/feature/WorldGenerator
+        FIELD field_76488_a doBlockNotify Z

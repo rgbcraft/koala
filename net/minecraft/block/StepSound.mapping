@@ -1,0 +1,4 @@
+CLASS net/minecraft/block/StepSound
+        FIELD field_72681_a stepSoundName Ljava/lang/String;
+        FIELD field_72679_b stepSoundVolume F
+        FIELD field_72680_c stepSoundPitch F

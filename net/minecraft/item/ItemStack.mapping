@@ -1,0 +1,7 @@
+CLASS net/minecraft/item/ItemStack
+        FIELD field_77994_a stackSize I
+        FIELD field_77992_b animationsToGo I
+        FIELD field_77993_c itemID I
+        FIELD field_77990_d stackTagCompound Lnet/minecraft/nbt/NBTTagCompound;
+        FIELD field_77991_e itemDamage I
+        FIELD field_82843_f itemFrame Lnet/minecraft/entity/item/EntityItemFrame;

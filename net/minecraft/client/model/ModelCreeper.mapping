@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/model/ModelCreeper
+        FIELD field_78135_a head Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78134_c body Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78131_d leg1 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78132_e leg2 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78129_f leg3 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78130_g leg4 Lnet/minecraft/client/model/ModelRenderer;

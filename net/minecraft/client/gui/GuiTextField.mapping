@@ -1,0 +1,19 @@
+CLASS net/minecraft/client/gui/GuiTextField
+        FIELD field_73815_a fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+        FIELD field_73813_b xPos I
+        FIELD field_73814_c yPos I
+        FIELD field_73811_d width I
+        FIELD field_73812_e height I
+        FIELD field_73809_f text Ljava/lang/String;
+        FIELD field_73810_g maxStringLength I
+        FIELD field_73822_h cursorCounter I
+        FIELD field_73820_j enableBackgroundDrawing Z
+        FIELD field_73821_k canLoseFocus Z
+        FIELD field_73818_l isFocused Z
+        FIELD field_73819_m isEnabled Z
+        FIELD field_73816_n lineScrollOffset I
+        FIELD field_73817_o cursorPosition I
+        FIELD field_73826_p selectionEnd I
+        FIELD field_73825_q enabledColor I
+        FIELD field_73824_r disabledColor I
+        FIELD field_73823_s visible Z

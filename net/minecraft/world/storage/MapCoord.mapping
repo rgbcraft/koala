@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/storage/MapCoord
+        FIELD field_76216_a iconSize B
+        FIELD field_76214_b centerX B
+        FIELD field_76215_c centerZ B
+        FIELD field_76212_d iconRotation B
+        FIELD field_76213_e data Lnet/minecraft/world/storage/MapData;

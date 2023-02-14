@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockStoneBrick
+        FIELD field_72188_a STONE_BRICK_TYPES [Ljava/lang/String;

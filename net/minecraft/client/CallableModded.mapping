@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/CallableModded
+        FIELD field_74500_a mc Lnet/minecraft/client/Minecraft;

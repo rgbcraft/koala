@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/gen/NoiseGeneratorOctaves
+        FIELD field_76307_a generatorCollection [Lnet/minecraft/world/gen/NoiseGeneratorPerlin;
+        FIELD field_76306_b octaves I

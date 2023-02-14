@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/particle/EntityPickupFX
+        FIELD field_70591_a entityToPickUp Lnet/minecraft/entity/Entity;
+        FIELD field_70595_aq entityPickingUp Lnet/minecraft/entity/Entity;
+        FIELD field_70594_ar age I
+        FIELD field_70593_as maxAge I
+        FIELD field_70592_at yOffs F

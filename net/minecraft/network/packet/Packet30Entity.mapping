@@ -1,0 +1,8 @@
+CLASS net/minecraft/network/packet/Packet30Entity
+        FIELD field_73554_a entityId I
+        FIELD field_73552_b xPosition B
+        FIELD field_73553_c yPosition B
+        FIELD field_73550_d zPosition B
+        FIELD field_73551_e yaw B
+        FIELD field_73548_f pitch B
+        FIELD field_73549_g rotating Z

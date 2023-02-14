@@ -1,0 +1,14 @@
+CLASS net/minecraft/client/gui/inventory/GuiContainer
+        FIELD field_74196_a itemRenderer Lnet/minecraft/client/renderer/entity/RenderItem;
+        FIELD field_74194_b xSize I
+        FIELD field_74195_c ySize I
+        FIELD field_74193_d inventorySlots Lnet/minecraft/inventory/Container;
+        FIELD field_74198_m guiLeft I
+        FIELD field_74197_n guiTop I
+        FIELD field_82320_o theSlot Lnet/minecraft/inventory/Slot;
+        FIELD field_85051_p clickedSlot Lnet/minecraft/inventory/Slot;
+        FIELD field_90018_r isRightMouseClick Z
+        FIELD field_85050_q draggedStack Lnet/minecraft/item/ItemStack;
+        FIELD field_85047_t returningStackDestSlot Lnet/minecraft/inventory/Slot;
+        FIELD field_85046_u returningStackTime J
+        FIELD field_85045_v returningStack Lnet/minecraft/item/ItemStack;

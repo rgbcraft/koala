@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/gui/achievement/GuiSlotStatsGeneral
+        FIELD field_77256_a statsGui Lnet/minecraft/client/gui/achievement/GuiStats;

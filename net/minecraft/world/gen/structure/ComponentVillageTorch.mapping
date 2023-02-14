@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/structure/ComponentVillageTorch
+        FIELD field_74905_a averageGroundLevel I

@@ -1,0 +1,27 @@
+CLASS net/minecraft/enchantment/Enchantment
+        FIELD field_77331_b enchantmentsList [Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77332_c protection Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77329_d fireProtection Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77330_e featherFalling Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77327_f blastProtection Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77328_g projectileProtection Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77340_h respiration Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77341_i aquaAffinity Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77338_j sharpness Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77339_k smite Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77336_l baneOfArthropods Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77337_m knockback Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77334_n fireAspect Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77335_o looting Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77349_p efficiency Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77348_q silkTouch Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77347_r unbreaking Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77346_s fortune Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77345_t power Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77344_u punch Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77343_v flame Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77342_w infinity Lnet/minecraft/enchantment/Enchantment;
+        FIELD field_77352_x effectId I
+        FIELD field_77333_a weight I
+        FIELD field_77351_y type Lnet/minecraft/enchantment/EnumEnchantmentType;
+        FIELD field_77350_z name Ljava/lang/String;

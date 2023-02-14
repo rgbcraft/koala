@@ -1,0 +1,8 @@
+CLASS net/minecraft/entity/player/PlayerCapabilities
+        FIELD field_75102_a disableDamage Z
+        FIELD field_75100_b isFlying Z
+        FIELD field_75101_c allowFlying Z
+        FIELD field_75098_d isCreativeMode Z
+        FIELD field_75099_e allowEdit Z
+        FIELD field_75096_f flySpeed F
+        FIELD field_75097_g walkSpeed F

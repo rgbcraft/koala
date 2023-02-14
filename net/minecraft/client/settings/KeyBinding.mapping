@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/settings/KeyBinding
+        FIELD field_74516_a keybindArray Ljava/util/List;
+        FIELD field_74514_b hash Lnet/minecraft/util/IntHashMap;
+        FIELD field_74515_c keyDescription Ljava/lang/String;
+        FIELD field_74512_d keyCode I
+        FIELD field_74513_e pressed Z
+        FIELD field_74511_f pressTime I

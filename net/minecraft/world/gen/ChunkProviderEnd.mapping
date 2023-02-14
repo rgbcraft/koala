@@ -1,0 +1,15 @@
+CLASS net/minecraft/world/gen/ChunkProviderEnd
+        FIELD field_73204_i endRNG Ljava/util/Random;
+        FIELD field_73201_j noiseGen1 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73202_k noiseGen2 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73199_l noiseGen3 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73196_a noiseGen4 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73194_b noiseGen5 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+        FIELD field_73200_m endWorld Lnet/minecraft/world/World;
+        FIELD field_73197_n densities [D
+        FIELD field_73198_o biomesForGeneration [Lnet/minecraft/world/biome/BiomeGenBase;
+        FIELD field_73195_c noiseData1 [D
+        FIELD field_73192_d noiseData2 [D
+        FIELD field_73193_e noiseData3 [D
+        FIELD field_73190_f noiseData4 [D
+        FIELD field_73191_g noiseData5 [D

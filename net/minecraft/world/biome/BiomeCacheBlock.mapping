@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/biome/BiomeCacheBlock
+        FIELD field_76892_a temperatureValues [F
+        FIELD field_76890_b rainfallValues [F
+        FIELD field_76891_c biomes [Lnet/minecraft/world/biome/BiomeGenBase;
+        FIELD field_76888_d xPosition I
+        FIELD field_76889_e zPosition I
+        FIELD field_76886_f lastAccessTime J
+        FIELD field_76887_g theBiomeCache Lnet/minecraft/world/biome/BiomeCache;

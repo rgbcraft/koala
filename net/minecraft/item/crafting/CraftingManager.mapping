@@ -1,0 +1,3 @@
+CLASS net/minecraft/item/crafting/CraftingManager
+        FIELD field_77598_a instance Lnet/minecraft/item/crafting/CraftingManager;
+        FIELD field_77597_b recipes Ljava/util/List;

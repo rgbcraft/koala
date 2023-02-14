@@ -1,0 +1,7 @@
+CLASS net/minecraft/network/rcon/RConThreadMain
+        FIELD field_72647_g rconPort I
+        FIELD field_72651_h serverPort I
+        FIELD field_72652_i hostname Ljava/lang/String;
+        FIELD field_72649_j serverSocket Ljava/net/ServerSocket;
+        FIELD field_72650_k rconPassword Ljava/lang/String;
+        FIELD field_72648_l clientThreads Ljava/util/Map;

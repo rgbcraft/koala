@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/renderer/tileentity/TileEntityChestRenderer
+        FIELD field_76913_a chestModel Lnet/minecraft/client/model/ModelChest;
+        FIELD field_76912_c largeChestModel Lnet/minecraft/client/model/ModelChest;

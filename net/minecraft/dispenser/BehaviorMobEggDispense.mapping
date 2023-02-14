@@ -1,0 +1,2 @@
+CLASS net/minecraft/dispenser/BehaviorMobEggDispense
+        FIELD field_74270_a mcServer Lnet/minecraft/server/MinecraftServer;

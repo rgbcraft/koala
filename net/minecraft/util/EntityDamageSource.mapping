@@ -1,0 +1,2 @@
+CLASS net/minecraft/util/EntityDamageSource
+        FIELD field_76386_o damageSourceEntity Lnet/minecraft/entity/Entity;

@@ -1,0 +1,2 @@
+CLASS net/minecraft/nbt/NBTTagDouble
+        FIELD field_74755_a data D

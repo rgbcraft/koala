@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/feature/WorldGenHellLava
+        FIELD field_76525_a hellLavaID I

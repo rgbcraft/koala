@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/structure/StructureNetherBridgePieceWeight
+        FIELD field_78828_a weightClass Ljava/lang/Class;

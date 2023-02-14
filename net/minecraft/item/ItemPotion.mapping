@@ -1,0 +1,2 @@
+CLASS net/minecraft/item/ItemPotion
+        FIELD field_77836_a effectCache Ljava/util/HashMap;

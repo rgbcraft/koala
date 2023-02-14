@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/gen/FlatLayerInfo
+        FIELD field_82664_a layerCount I
+        FIELD field_82662_b layerFillBlock I
+        FIELD field_82663_c layerFillBlockMeta I
+        FIELD field_82661_d layerMinimumY I

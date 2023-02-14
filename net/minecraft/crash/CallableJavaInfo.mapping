@@ -1,0 +1,2 @@
+CLASS net/minecraft/crash/CallableJavaInfo
+        FIELD field_71490_a theCrashReport Lnet/minecraft/crash/CrashReport;

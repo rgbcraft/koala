@@ -1,0 +1,3 @@
+CLASS net/minecraft/entity/ai/EntityAIRestrictOpenDoor
+        FIELD field_75275_a entityObj Lnet/minecraft/entity/EntityCreature;
+        FIELD field_75274_b frontDoor Lnet/minecraft/village/VillageDoorInfo;

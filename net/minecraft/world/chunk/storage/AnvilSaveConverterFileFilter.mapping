@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/chunk/storage/AnvilSaveConverterFileFilter
+        FIELD field_76172_a parent Lnet/minecraft/world/chunk/storage/AnvilSaveConverter;

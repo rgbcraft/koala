@@ -1,0 +1,18 @@
+CLASS net/minecraft/block/material/MapColor
+        FIELD field_76281_a mapColorArray [Lnet/minecraft/block/material/MapColor;
+        FIELD field_76279_b airColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76280_c grassColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76277_d sandColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76278_e clothColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76275_f tntColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76276_g iceColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76288_h ironColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76289_i foliageColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76286_j snowColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76287_k clayColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76284_l dirtColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76285_m stoneColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76282_n waterColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76283_o woodColor Lnet/minecraft/block/material/MapColor;
+        FIELD field_76291_p colorValue I
+        FIELD field_76290_q colorIndex I

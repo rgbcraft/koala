@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/gen/feature/WorldGenHugeTrees
+        FIELD field_76522_a baseHeight I
+        FIELD field_76520_b woodMetadata I
+        FIELD field_76521_c leavesMetadata I

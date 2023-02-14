@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/multiplayer/LanServerList
+        FIELD field_77555_b listOfLanServers Ljava/util/ArrayList;
+        FIELD field_77556_a wasUpdated Z

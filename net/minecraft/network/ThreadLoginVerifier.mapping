@@ -1,0 +1,4 @@
+CLASS net/minecraft/network/ThreadLoginVerifier
+        FIELD field_72590_a loginHandler Lnet/minecraft/network/NetLoginHandler;
+CLASS net/minecraft/network/ThreadLoginVerifier
+        FIELD field_72590_a loginHandler Lnet/minecraft/network/NetLoginHandler;

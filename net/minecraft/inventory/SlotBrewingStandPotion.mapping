@@ -1,0 +1,2 @@
+CLASS net/minecraft/inventory/SlotBrewingStandPotion
+        FIELD field_75244_a player Lnet/minecraft/entity/player/EntityPlayer;

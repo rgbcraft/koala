@@ -1,0 +1,3 @@
+CLASS net/minecraft/item/ItemRecord
+        FIELD field_90044_b records Ljava/util/Map;
+        FIELD field_77837_a recordName Ljava/lang/String;

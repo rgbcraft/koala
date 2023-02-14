@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/texturepacks/GuiTexturePacks
+        FIELD field_73967_a guiScreen Lnet/minecraft/client/gui/GuiScreen;
+        FIELD field_73965_b refreshTimer I
+        FIELD field_73966_c fileLocation Ljava/lang/String;
+        FIELD field_73964_d guiTexturePackSlot Lnet/minecraft/client/texturepacks/GuiTexturePackSlot;

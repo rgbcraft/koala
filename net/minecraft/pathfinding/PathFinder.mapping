@@ -1,0 +1,9 @@
+CLASS net/minecraft/pathfinding/PathFinder
+        FIELD field_75868_a worldMap Lnet/minecraft/world/IBlockAccess;
+        FIELD field_75866_b path Lnet/minecraft/pathfinding/Path;
+        FIELD field_75867_c pointMap Lnet/minecraft/util/IntHashMap;
+        FIELD field_75864_d pathOptions [Lnet/minecraft/pathfinding/PathPoint;
+        FIELD field_75865_e isWoddenDoorAllowed Z
+        FIELD field_75862_f isMovementBlockAllowed Z
+        FIELD field_75863_g isPathingInWater Z
+        FIELD field_75869_h canEntityDrown Z

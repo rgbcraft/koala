@@ -1,0 +1,2 @@
+CLASS net/minecraft/crash/CallableCrashMemoryReport
+        FIELD field_83004_a theCrashReport Lnet/minecraft/crash/CrashReport;

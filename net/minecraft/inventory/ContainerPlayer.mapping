@@ -1,0 +1,5 @@
+CLASS net/minecraft/inventory/ContainerPlayer
+        FIELD field_75181_e craftMatrix Lnet/minecraft/inventory/InventoryCrafting;
+        FIELD field_75179_f craftResult Lnet/minecraft/inventory/IInventory;
+        FIELD field_75180_g isLocalWorld Z
+        FIELD field_82862_h thePlayer Lnet/minecraft/entity/player/EntityPlayer;

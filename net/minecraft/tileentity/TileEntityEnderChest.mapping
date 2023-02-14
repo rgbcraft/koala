@@ -1,0 +1,5 @@
+CLASS net/minecraft/tileentity/TileEntityEnderChest
+        FIELD field_70370_a lidAngle F
+        FIELD field_70368_b prevLidAngle F
+        FIELD field_70369_c numUsingPlayers I
+        FIELD field_70367_d ticksSinceSync I

@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/gen/structure/ComponentVillageWoodHut
+        FIELD field_74911_a averageGroundLevel I
+        FIELD field_74909_b isTallHouse Z
+        FIELD field_74910_c tablePosition I

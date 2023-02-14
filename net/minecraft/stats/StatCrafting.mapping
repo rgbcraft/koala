@@ -1,0 +1,2 @@
+CLASS net/minecraft/stats/StatCrafting
+        FIELD field_75983_a itemID I

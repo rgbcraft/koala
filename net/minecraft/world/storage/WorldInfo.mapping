@@ -1,0 +1,25 @@
+CLASS net/minecraft/world/storage/WorldInfo
+        FIELD field_76100_a randomSeed J
+        FIELD field_76098_b terrainType Lnet/minecraft/world/WorldType;
+        FIELD field_82576_c generatorOptions Ljava/lang/String;
+        FIELD field_76099_c spawnX I
+        FIELD field_76096_d spawnY I
+        FIELD field_76097_e spawnZ I
+        FIELD field_82575_g totalTime J
+        FIELD field_76094_f worldTime J
+        FIELD field_76095_g lastTimePlayed J
+        FIELD field_76107_h sizeOnDisk J
+        FIELD field_76108_i playerTag Lnet/minecraft/nbt/NBTTagCompound;
+        FIELD field_76105_j dimension I
+        FIELD field_76106_k levelName Ljava/lang/String;
+        FIELD field_76103_l saveVersion I
+        FIELD field_76104_m raining Z
+        FIELD field_76101_n rainTime I
+        FIELD field_76102_o thundering Z
+        FIELD field_76114_p thunderTime I
+        FIELD field_76113_q theGameType Lnet/minecraft/world/EnumGameType;
+        FIELD field_76112_r mapFeaturesEnabled Z
+        FIELD field_76111_s hardcore Z
+        FIELD field_76110_t allowCommands Z
+        FIELD field_76109_u initialized Z
+        FIELD field_82577_x theGameRules Lnet/minecraft/world/GameRules;

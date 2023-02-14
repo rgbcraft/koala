@@ -1,0 +1,2 @@
+CLASS net/minecraft/server/integrated/IntegratedPlayerList
+        FIELD field_72416_e tagsForLastWrittenPlayer Lnet/minecraft/nbt/NBTTagCompound;

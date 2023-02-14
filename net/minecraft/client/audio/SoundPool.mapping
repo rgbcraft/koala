@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/audio/SoundPool
+        FIELD field_77464_c rand Ljava/util/Random;
+        FIELD field_77461_d nameToSoundPoolEntriesMapping Ljava/util/Map;
+        FIELD field_77462_e allSoundPoolEntries Ljava/util/List;
+        FIELD field_77465_a numberOfSoundPoolEntries I
+        FIELD field_77463_b isGetRandomSound Z

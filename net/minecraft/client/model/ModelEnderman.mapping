@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/model/ModelEnderman
+        FIELD field_78126_a isCarrying Z
+        FIELD field_78125_b isAttacking Z

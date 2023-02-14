@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/chunk/storage/AnvilChunkLoaderPending
+        FIELD field_76548_a chunkCoordinate Lnet/minecraft/world/ChunkCoordIntPair;
+        FIELD field_76547_b nbtTags Lnet/minecraft/nbt/NBTTagCompound;

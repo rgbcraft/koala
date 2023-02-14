@@ -1,0 +1,5 @@
+CLASS net/minecraft/entity/ai/EntityAIOcelotAttack
+        FIELD field_75411_a theWorld Lnet/minecraft/world/World;
+        FIELD field_75409_b theEntity Lnet/minecraft/entity/EntityLiving;
+        FIELD field_75410_c theVictim Lnet/minecraft/entity/EntityLiving;
+        FIELD field_75408_d attackCountdown I

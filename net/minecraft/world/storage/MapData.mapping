@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/storage/MapData
+        FIELD field_76201_a xCenter I
+        FIELD field_76199_b zCenter I
+        FIELD field_76200_c dimension B
+        FIELD field_76197_d scale B
+        FIELD field_76198_e colors [B
+        FIELD field_76196_g playersArrayList Ljava/util/List;
+        FIELD field_76202_j playersHashMap Ljava/util/Map;
+        FIELD field_76203_h playersVisibleOnMap Ljava/util/Map;

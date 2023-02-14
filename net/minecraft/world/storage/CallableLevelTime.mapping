@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/storage/CallableLevelTime
+        FIELD field_85137_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;

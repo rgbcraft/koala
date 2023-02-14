@@ -1,0 +1,8 @@
+CLASS net/minecraft/block/RailLogic
+        FIELD field_73657_b worldObj Lnet/minecraft/world/World;
+        FIELD field_73658_c trackX I
+        FIELD field_73655_d trackY I
+        FIELD field_73656_e trackZ I
+        FIELD field_73653_f isPoweredRail Z
+        FIELD field_73654_g connectedTracks Ljava/util/List;
+        FIELD field_73659_a rail Lnet/minecraft/block/BlockRail;

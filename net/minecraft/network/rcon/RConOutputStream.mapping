@@ -1,0 +1,3 @@
+CLASS net/minecraft/network/rcon/RConOutputStream
+        FIELD field_72674_a byteArrayOutput Ljava/io/ByteArrayOutputStream;
+        FIELD field_72673_b output Ljava/io/DataOutputStream;

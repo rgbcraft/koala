@@ -1,0 +1,5 @@
+CLASS net/minecraft/entity/item/EntityItem
+        FIELD field_70292_b age I
+        FIELD field_70293_c delayBeforeCanPickup I
+        FIELD field_70291_e health I
+        FIELD field_70290_d hoverStart F

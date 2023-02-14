@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockBed
+        FIELD field_72230_a footBlockToHeadBlockMap [I

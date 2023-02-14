@@ -1,0 +1,5 @@
+CLASS net/minecraft/network/packet/Packet28EntityVelocity
+        FIELD field_73390_a entityId I
+        FIELD field_73388_b motionX I
+        FIELD field_73389_c motionY I
+        FIELD field_73387_d motionZ I

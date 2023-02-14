@@ -1,0 +1,3 @@
+CLASS net/minecraft/entity/boss/EntityDragonPart
+        FIELD field_70259_a entityDragonObj Lnet/minecraft/entity/IEntityMultiPart;
+        FIELD field_70258_b name Ljava/lang/String;

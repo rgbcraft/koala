@@ -1,0 +1,5 @@
+CLASS net/minecraft/block/RedstoneUpdateInfo
+        FIELD field_73664_a x I
+        FIELD field_73662_b y I
+        FIELD field_73663_c z I
+        FIELD field_73661_d updateTime J

@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/renderer/texturefx/TextureFX
+        FIELD field_76852_a imageData [B
+        FIELD field_76850_b iconIndex I
+        FIELD field_76851_c anaglyphEnabled Z
+        FIELD field_76848_d textureId I
+        FIELD field_76849_e tileSize I
+        FIELD field_76847_f tileImage I

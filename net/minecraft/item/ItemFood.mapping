@@ -1,0 +1,10 @@
+CLASS net/minecraft/item/ItemFood
+        FIELD field_77855_a itemUseDuration I
+        FIELD field_77853_b healAmount I
+        FIELD field_77854_c saturationModifier F
+        FIELD field_77856_bY isWolfsFavoriteMeat Z
+        FIELD field_77852_bZ alwaysEdible Z
+        FIELD field_77851_ca potionId I
+        FIELD field_77850_cb potionDuration I
+        FIELD field_77857_cc potionAmplifier I
+        FIELD field_77858_cd potionEffectProbability F

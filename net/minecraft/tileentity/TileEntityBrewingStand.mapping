@@ -1,0 +1,5 @@
+CLASS net/minecraft/tileentity/TileEntityBrewingStand
+        FIELD field_70359_a brewingItemStacks [Lnet/minecraft/item/ItemStack;
+        FIELD field_70357_b brewTime I
+        FIELD field_70358_c filledSlots I
+        FIELD field_70356_d ingredientID I

@@ -1,0 +1,4 @@
+CLASS net/minecraft/util/Session
+        FIELD field_74288_a registeredBlocksList Ljava/util/List;
+        FIELD field_74286_b username Ljava/lang/String;
+        FIELD field_74287_c sessionId Ljava/lang/String;

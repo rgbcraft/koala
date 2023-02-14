@@ -1,0 +1,4 @@
+CLASS net/minecraft/entity/passive/EntitySheep
+        FIELD field_70898_d fleeceColorTable [F
+        FIELD field_70899_e sheepTimer I
+        FIELD field_70897_f aiEatGrass Lnet/minecraft/entity/ai/EntityAIEatGrass;

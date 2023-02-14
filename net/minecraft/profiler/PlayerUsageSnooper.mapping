@@ -1,0 +1,9 @@
+CLASS net/minecraft/profiler/PlayerUsageSnooper
+        FIELD field_76482_a dataMap Ljava/util/Map;
+        FIELD field_76480_b uniqueID Ljava/lang/String;
+        FIELD field_76481_c serverUrl Ljava/net/URL;
+        FIELD field_76478_d playerStatsCollector Lnet/minecraft/profiler/IPlayerUsage;
+        FIELD field_76479_e threadTrigger Ljava/util/Timer;
+        FIELD field_76476_f syncLock Ljava/lang/Object;
+        FIELD field_76477_g isRunning Z
+        FIELD field_76483_h selfCounter I

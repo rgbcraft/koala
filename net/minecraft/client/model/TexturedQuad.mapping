@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/model/TexturedQuad
+        FIELD field_78239_a vertexPositions [Lnet/minecraft/client/model/PositionTextureVertex;
+        FIELD field_78237_b nVertices I
+        FIELD field_78238_c invertNormal Z

@@ -1,0 +1,10 @@
+CLASS net/minecraft/network/packet/Packet51MapChunk
+        FIELD field_73601_a xCh I
+        FIELD field_73599_b zCh I
+        FIELD field_73600_c yChMin I
+        FIELD field_73597_d yChMax I
+        FIELD field_73595_f chunkData [B
+        FIELD field_73596_g compressedChunkData [B
+        FIELD field_73598_e includeInitialize Z
+        FIELD field_73602_h tempLength I
+        FIELD field_73603_i temp [B

@@ -1,0 +1,3 @@
+CLASS net/minecraft/dispenser/BehaviorDispenseMinecart
+        FIELD field_82493_c defaultItemDispenseBehavior Lnet/minecraft/dispenser/BehaviorDefaultDispenseItem;
+        FIELD field_82492_b mcServer Lnet/minecraft/server/MinecraftServer;

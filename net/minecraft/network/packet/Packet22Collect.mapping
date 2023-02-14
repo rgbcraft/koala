@@ -1,0 +1,3 @@
+CLASS net/minecraft/network/packet/Packet22Collect
+        FIELD field_73313_a collectedEntityId I
+        FIELD field_73312_b collectorEntityId I

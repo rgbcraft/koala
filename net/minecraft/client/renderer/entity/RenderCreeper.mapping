@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/renderer/entity/RenderCreeper
+        FIELD field_77064_a creeperModel Lnet/minecraft/client/model/ModelBase;

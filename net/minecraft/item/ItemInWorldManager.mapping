@@ -1,0 +1,15 @@
+CLASS net/minecraft/item/ItemInWorldManager
+        FIELD field_73092_a theWorld Lnet/minecraft/world/World;
+        FIELD field_73090_b thisPlayerMP Lnet/minecraft/entity/player/EntityPlayerMP;
+        FIELD field_73091_c gameType Lnet/minecraft/world/EnumGameType;
+        FIELD field_73088_d isDestroyingBlock Z
+        FIELD field_73089_e initialDamage I
+        FIELD field_73086_f partiallyDestroyedBlockX I
+        FIELD field_73087_g partiallyDestroyedBlockY I
+        FIELD field_73099_h partiallyDestroyedBlockZ I
+        FIELD field_73100_i curblockDamage I
+        FIELD field_73097_j receivedFinishDiggingPacket Z
+        FIELD field_73098_k posX I
+        FIELD field_73095_l posY I
+        FIELD field_73096_m posZ I
+        FIELD field_73094_o durabilityRemainingOnBlock I

@@ -1,0 +1,3 @@
+CLASS net/minecraft/util/Tuple
+        FIELD field_76343_a first Ljava/lang/Object;
+        FIELD field_76342_b second Ljava/lang/Object;

@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockWoodSlab
+        FIELD field_72243_a woodType [Ljava/lang/String;

@@ -1,0 +1,13 @@
+CLASS net/minecraft/village/Village
+        FIELD field_75586_a worldObj Lnet/minecraft/world/World;
+        FIELD field_75584_b villageDoorInfoList Ljava/util/List;
+        FIELD field_75585_c centerHelper Lnet/minecraft/util/ChunkCoordinates;
+        FIELD field_75582_d center Lnet/minecraft/util/ChunkCoordinates;
+        FIELD field_75583_e villageRadius I
+        FIELD field_75580_f lastAddDoorTimestamp I
+        FIELD field_75581_g tickCounter I
+        FIELD field_75588_h numVillagers I
+        FIELD field_82694_i noBreedTicks I
+        FIELD field_82693_j playerReputation Ljava/util/TreeMap;
+        FIELD field_75589_i villageAgressors Ljava/util/List;
+        FIELD field_75587_j numIronGolems I

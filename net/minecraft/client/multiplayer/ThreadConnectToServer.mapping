@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/multiplayer/ThreadConnectToServer
+        FIELD field_78821_a ip Ljava/lang/String;
+        FIELD field_78819_b port I
+        FIELD field_78820_c connectingGui Lnet/minecraft/client/multiplayer/GuiConnecting;

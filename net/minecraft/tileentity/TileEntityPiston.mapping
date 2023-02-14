@@ -1,0 +1,9 @@
+CLASS net/minecraft/tileentity/TileEntityPiston
+        FIELD field_70348_a storedBlockID I
+        FIELD field_70346_b storedMetadata I
+        FIELD field_70347_c storedOrientation I
+        FIELD field_70344_d extending Z
+        FIELD field_70345_e shouldHeadBeRendered Z
+        FIELD field_70342_f progress F
+        FIELD field_70343_g lastProgress F
+        FIELD field_70349_h pushedObjects Ljava/util/List;

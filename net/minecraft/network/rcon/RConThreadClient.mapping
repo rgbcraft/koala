@@ -1,0 +1,5 @@
+CLASS net/minecraft/network/rcon/RConThreadClient
+        FIELD field_72657_g loggedIn Z
+        FIELD field_72659_h clientSocket Ljava/net/Socket;
+        FIELD field_72660_i buffer [B
+        FIELD field_72658_j rconPassword Ljava/lang/String;

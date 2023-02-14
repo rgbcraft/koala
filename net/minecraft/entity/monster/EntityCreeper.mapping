@@ -1,0 +1,5 @@
+CLASS net/minecraft/entity/monster/EntityCreeper
+        FIELD field_70834_e lastActiveTime I
+        FIELD field_70833_d timeSinceIgnited I
+        FIELD field_82225_f fuseTime I
+        FIELD field_82226_g explosionRadius I

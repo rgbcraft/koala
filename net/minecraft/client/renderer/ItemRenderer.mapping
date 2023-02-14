@@ -1,0 +1,8 @@
+CLASS net/minecraft/client/renderer/ItemRenderer
+        FIELD field_78455_a mc Lnet/minecraft/client/Minecraft;
+        FIELD field_78453_b itemToRender Lnet/minecraft/item/ItemStack;
+        FIELD field_78454_c equippedProgress F
+        FIELD field_78451_d prevEquippedProgress F
+        FIELD field_78452_e renderBlocksInstance Lnet/minecraft/client/renderer/RenderBlocks;
+        FIELD field_78449_f mapItemRenderer Lnet/minecraft/client/gui/MapItemRenderer;
+        FIELD field_78450_g equippedItemSlot I

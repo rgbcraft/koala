@@ -1,0 +1,2 @@
+CLASS net/minecraft/dispenser/RegistryDefaulted
+        FIELD field_82597_b defaultObject Ljava/lang/Object;

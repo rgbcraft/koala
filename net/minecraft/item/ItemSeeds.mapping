@@ -1,0 +1,3 @@
+CLASS net/minecraft/item/ItemSeeds
+        FIELD field_77839_a blockType I
+        FIELD field_77838_b soilBlockID I

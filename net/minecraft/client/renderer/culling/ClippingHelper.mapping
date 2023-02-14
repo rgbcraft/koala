@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/renderer/culling/ClippingHelper
+        FIELD field_78557_a frustum [F
+        FIELD field_78555_b projectionMatrix [F
+        FIELD field_78556_c modelviewMatrix [F
+        FIELD field_78554_d clippingMatrix [F

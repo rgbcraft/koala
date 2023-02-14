@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/model/TextureOffset
+        FIELD field_78783_a textureOffsetX I
+        FIELD field_78782_b textureOffsetY I

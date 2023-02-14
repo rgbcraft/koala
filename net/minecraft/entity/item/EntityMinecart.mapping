@@ -1,0 +1,17 @@
+CLASS net/minecraft/entity/item/EntityMinecart
+        FIELD field_70501_d cargoItems [Lnet/minecraft/item/ItemStack;
+        FIELD field_70502_e fuel I
+        FIELD field_70499_f isInReverse Z
+        FIELD field_70505_a minecartType I
+        FIELD field_70503_b pushX D
+        FIELD field_70504_c pushZ D
+        FIELD field_70500_g matrix [I
+        FIELD field_70510_h turnProgress I
+        FIELD field_70511_i minecartX D
+        FIELD field_70509_j minecartY D
+        FIELD field_70514_an minecartZ D
+        FIELD field_70512_ao minecartYaw D
+        FIELD field_70513_ap minecartPitch D
+        FIELD field_70508_aq velocityX D
+        FIELD field_70507_ar velocityY D
+        FIELD field_70506_as velocityZ D

@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/layer/GenLayerBiome
+        FIELD field_75914_b allowedBiomes [Lnet/minecraft/world/biome/BiomeGenBase;

@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/particle/EntityFootStepFX
+        FIELD field_70577_ar currentFootSteps Lnet/minecraft/client/renderer/RenderEngine;

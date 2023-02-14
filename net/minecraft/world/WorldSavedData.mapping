@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/WorldSavedData
+        FIELD field_76190_i mapName Ljava/lang/String;
+        FIELD field_76189_a dirty Z

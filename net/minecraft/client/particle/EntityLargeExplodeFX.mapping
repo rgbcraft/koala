@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/particle/EntityLargeExplodeFX
+        FIELD field_70583_ar theRenderEngine Lnet/minecraft/client/renderer/RenderEngine;

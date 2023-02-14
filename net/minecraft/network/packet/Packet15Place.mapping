@@ -1,0 +1,9 @@
+CLASS net/minecraft/network/packet/Packet15Place
+        FIELD field_73415_a xPosition I
+        FIELD field_73413_b yPosition I
+        FIELD field_73414_c zPosition I
+        FIELD field_73411_d direction I
+        FIELD field_73412_e itemStack Lnet/minecraft/item/ItemStack;
+        FIELD field_73409_f xOffset F
+        FIELD field_73410_g yOffset F
+        FIELD field_73416_h zOffset F

@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/renderer/texturefx/TexturePortalFX
+        FIELD field_76853_g portalTickCounter I
+        FIELD field_76854_h portalTextureData [B

@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/renderer/entity/RenderDragon
+        FIELD field_77086_i updateModelState I
+        FIELD field_77084_b modelDragon Lnet/minecraft/client/model/ModelDragon;

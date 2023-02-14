@@ -1,0 +1,2 @@
+CLASS net/minecraft/dispenser/BehaviorDispenseFirework
+        FIELD field_82504_b mcServer Lnet/minecraft/server/MinecraftServer;

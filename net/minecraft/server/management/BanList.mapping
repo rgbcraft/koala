@@ -1,0 +1,4 @@
+CLASS net/minecraft/server/management/BanList
+        FIELD field_73715_a theBanList Lnet/minecraft/server/management/LowerStringMap;
+        FIELD field_73713_b fileName Ljava/io/File;
+        FIELD field_73714_c listActive Z

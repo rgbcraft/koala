@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/gen/structure/ComponentMineshaftCross
+        FIELD field_74953_a corridorDirection I
+        FIELD field_74952_b isMultipleFloors Z

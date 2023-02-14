@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/TileEntityRecordPlayer
+        FIELD field_70417_a record Lnet/minecraft/item/ItemStack;

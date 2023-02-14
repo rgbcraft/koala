@@ -1,0 +1,2 @@
+CLASS net/minecraft/util/StatCollector
+        FIELD field_74839_a localizedName Lnet/minecraft/util/StringTranslate;

@@ -1,0 +1,8 @@
+CLASS net/minecraft/client/gui/GuiMainMenu
+        FIELD field_73976_a rand Ljava/util/Random;
+        FIELD field_73974_b updateCounter F
+        FIELD field_73975_c splashText Ljava/lang/String;
+        FIELD field_73973_d buttonResetDemo Lnet/minecraft/client/gui/GuiButton;
+        FIELD field_73979_m panoramaTimer I
+        FIELD field_73977_n viewportTexture I
+        FIELD field_73978_o titlePanoramaPaths [Ljava/lang/String;

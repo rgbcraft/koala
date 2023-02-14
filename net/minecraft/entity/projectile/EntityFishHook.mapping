@@ -1,0 +1,21 @@
+CLASS net/minecraft/entity/projectile/EntityFishHook
+        FIELD field_70202_d xTile I
+        FIELD field_70203_e yTile I
+        FIELD field_70200_f zTile I
+        FIELD field_70201_g inTile I
+        FIELD field_70214_h inGround Z
+        FIELD field_70206_a shake I
+        FIELD field_70204_b angler Lnet/minecraft/entity/player/EntityPlayer;
+        FIELD field_70216_i ticksInGround I
+        FIELD field_70211_j ticksInAir I
+        FIELD field_70219_an ticksCatchable I
+        FIELD field_70205_c bobber Lnet/minecraft/entity/Entity;
+        FIELD field_70217_ao fishPosRotationIncrements I
+        FIELD field_70218_ap fishX D
+        FIELD field_70210_aq fishY D
+        FIELD field_70209_ar fishZ D
+        FIELD field_70208_as fishYaw D
+        FIELD field_70207_at fishPitch D
+        FIELD field_70215_au velocityX D
+        FIELD field_70213_av velocityY D
+        FIELD field_70212_aw velocityZ D

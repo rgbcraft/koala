@@ -1,0 +1,12 @@
+CLASS net/minecraft/client/model/ModelSpider
+        FIELD field_78209_a spiderHead Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78207_b spiderNeck Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78208_c spiderBody Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78205_d spiderLeg1 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78206_e spiderLeg2 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78203_f spiderLeg3 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78204_g spiderLeg4 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78212_h spiderLeg5 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78213_i spiderLeg6 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78210_j spiderLeg7 Lnet/minecraft/client/model/ModelRenderer;
+        FIELD field_78211_k spiderLeg8 Lnet/minecraft/client/model/ModelRenderer;

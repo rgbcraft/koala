@@ -1,0 +1,2 @@
+CLASS net/minecraft/server/dedicated/ConsoleLogManager
+        FIELD field_73700_a loggerLogManager Ljava/util/logging/Logger;

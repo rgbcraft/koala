@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/gui/GuiLanguage
+        FIELD field_74047_a parentGui Lnet/minecraft/client/gui/GuiScreen;
+        FIELD field_74045_b updateTimer I
+        FIELD field_74046_c languageList Lnet/minecraft/client/gui/GuiSlotLanguage;
+        FIELD field_74044_d theGameSettings Lnet/minecraft/client/settings/GameSettings;
+        FIELD field_74048_m doneButton Lnet/minecraft/client/gui/GuiSmallButton;

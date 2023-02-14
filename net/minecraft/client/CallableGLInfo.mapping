@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/CallableGLInfo
+        FIELD field_79002_a mc Lnet/minecraft/client/Minecraft;

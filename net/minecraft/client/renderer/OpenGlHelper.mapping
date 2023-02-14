@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/renderer/OpenGlHelper
+        FIELD field_77478_a defaultTexUnit I
+        FIELD field_77476_b lightmapTexUnit I
+        FIELD field_77477_c useMultitextureARB Z

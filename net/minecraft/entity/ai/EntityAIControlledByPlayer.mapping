@@ -1,0 +1,7 @@
+CLASS net/minecraft/entity/ai/EntityAIControlledByPlayer
+        FIELD field_82640_a thisEntity Lnet/minecraft/entity/EntityLiving;
+        FIELD field_82638_b maxSpeed F
+        FIELD field_82639_c currentSpeed F
+        FIELD field_82636_d speedBoosted Z
+        FIELD field_82637_e speedBoostTime I
+        FIELD field_82635_f maxSpeedBoostTime I

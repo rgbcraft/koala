@@ -1,0 +1,2 @@
+CLASS net/minecraft/item/ItemPickaxe
+        FIELD field_77867_c blocksEffectiveAgainst [Lnet/minecraft/block/Block;

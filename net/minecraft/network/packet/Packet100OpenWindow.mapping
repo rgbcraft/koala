@@ -1,0 +1,5 @@
+CLASS net/minecraft/network/packet/Packet100OpenWindow
+        FIELD field_73431_a windowId I
+        FIELD field_73429_b inventoryType I
+        FIELD field_73430_c windowTitle Ljava/lang/String;
+        FIELD field_73428_d slotsCount I

@@ -1,0 +1,21 @@
+CLASS net/minecraft/entity/player/EntityPlayerMP
+        FIELD field_71148_cg translator Lnet/minecraft/util/StringTranslate;
+        FIELD field_71135_a playerNetServerHandler Lnet/minecraft/network/NetServerHandler;
+        FIELD field_71133_b mcServer Lnet/minecraft/server/MinecraftServer;
+        FIELD field_71134_c theItemInWorldManager Lnet/minecraft/item/ItemInWorldManager;
+        FIELD field_71131_d managedPosX D
+        FIELD field_71132_e managedPosZ D
+        FIELD field_71129_f loadedChunks Ljava/util/List;
+        FIELD field_71130_g destroyedItemsNetCache Ljava/util/List;
+        FIELD field_71149_ch lastHealth I
+        FIELD field_71146_ci lastFoodLevel I
+        FIELD field_71147_cj wasHungry Z
+        FIELD field_71144_ck lastExperience I
+        FIELD field_71145_cl initialInvulnerability I
+        FIELD field_71142_cm renderDistance I
+        FIELD field_71143_cn chatVisibility I
+        FIELD field_71140_co chatColours Z
+        FIELD field_71139_cq currentWindowId I
+        FIELD field_71137_h playerInventoryBeingManipulated Z
+        FIELD field_71138_i ping I
+        FIELD field_71136_j playerConqueredTheEnd Z

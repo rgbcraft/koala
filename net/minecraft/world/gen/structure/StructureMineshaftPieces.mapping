@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/structure/StructureMineshaftPieces
+        FIELD field_78818_a mineshaftChestContents [Lnet/minecraft/util/WeightedRandomChestContent;

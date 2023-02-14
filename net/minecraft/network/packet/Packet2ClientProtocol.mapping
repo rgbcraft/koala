@@ -1,0 +1,5 @@
+CLASS net/minecraft/network/packet/Packet2ClientProtocol
+        FIELD field_73458_a protocolVersion I
+        FIELD field_73456_b username Ljava/lang/String;
+        FIELD field_73457_c serverHost Ljava/lang/String;
+        FIELD field_73455_d serverPort I

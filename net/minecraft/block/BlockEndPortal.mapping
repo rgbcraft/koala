@@ -1,0 +1,2 @@
+CLASS net/minecraft/block/BlockEndPortal
+        FIELD field_72275_a bossDefeated Z

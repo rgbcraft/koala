@@ -1,0 +1,9 @@
+CLASS net/minecraft/util/Direction
+        FIELD field_71583_a offsetX [I
+        FIELD field_71581_b offsetZ [I
+        FIELD field_82373_c directions [Ljava/lang/String;
+        FIELD field_71582_c headInvisibleFace [I
+        FIELD field_71579_d vineGrowth [I
+        FIELD field_71580_e footInvisibleFaceRemap [I
+        FIELD field_71577_f enderEyeMetaToDirection [I
+        FIELD field_71584_h bedDirection [I

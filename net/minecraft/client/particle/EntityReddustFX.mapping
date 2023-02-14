@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/particle/EntityReddustFX
+        FIELD field_70570_a reddustParticleScale F

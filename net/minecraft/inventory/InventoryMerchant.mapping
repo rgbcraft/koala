@@ -1,0 +1,6 @@
+CLASS net/minecraft/inventory/InventoryMerchant
+        FIELD field_70476_a theMerchant Lnet/minecraft/entity/IMerchant;
+        FIELD field_70474_b theInventory [Lnet/minecraft/item/ItemStack;
+        FIELD field_70475_c thePlayer Lnet/minecraft/entity/player/EntityPlayer;
+        FIELD field_70472_d currentRecipe Lnet/minecraft/village/MerchantRecipe;
+        FIELD field_70473_e currentRecipeIndex I

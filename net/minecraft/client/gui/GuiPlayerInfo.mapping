@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/gui/GuiPlayerInfo
+        FIELD field_78831_a name Ljava/lang/String;
+        FIELD field_78830_c nameinLowerCase Ljava/lang/String;
+        FIELD field_78829_b responseTime I

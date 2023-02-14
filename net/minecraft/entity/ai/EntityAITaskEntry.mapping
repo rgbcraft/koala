@@ -1,0 +1,4 @@
+CLASS net/minecraft/entity/ai/EntityAITaskEntry
+        FIELD field_75733_a action Lnet/minecraft/entity/ai/EntityAIBase;
+        FIELD field_75731_b priority I
+        FIELD field_75732_c tasks Lnet/minecraft/entity/ai/EntityAITasks;

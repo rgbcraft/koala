@@ -1,0 +1,2 @@
+CLASS net/minecraft/server/dedicated/ConsoleLogFormatter
+        FIELD field_74268_a dateFormat Ljava/text/SimpleDateFormat;

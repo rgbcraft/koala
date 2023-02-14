@@ -1,0 +1,2 @@
+CLASS net/minecraft/client/renderer/RenderSorter
+        FIELD field_78945_a baseEntity Lnet/minecraft/entity/EntityLiving;

@@ -1,0 +1,2 @@
+CLASS net/minecraft/world/gen/structure/ComponentStrongholdCrossing
+        FIELD field_74998_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;

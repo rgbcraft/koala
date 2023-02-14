@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/gen/structure/ComponentVillageHouse2
+        FIELD field_74918_a villageBlacksmithChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
+        FIELD field_74916_b averageGroundLevel I
+        FIELD field_74917_c hasMadeChest Z

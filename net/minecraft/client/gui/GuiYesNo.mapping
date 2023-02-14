@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/gui/GuiYesNo
+        FIELD field_73942_a parentScreen Lnet/minecraft/client/gui/GuiScreen;
+        FIELD field_73940_b message1 Ljava/lang/String;
+        FIELD field_73944_m message2 Ljava/lang/String;
+        FIELD field_73941_c buttonText1 Ljava/lang/String;
+        FIELD field_73939_d buttonText2 Ljava/lang/String;
+        FIELD field_73943_n worldNumber I

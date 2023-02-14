@@ -1,0 +1,4 @@
+CLASS net/minecraft/network/packet/Packet131MapData
+        FIELD field_73438_a itemID S
+        FIELD field_73436_b uniqueID S
+        FIELD field_73437_c itemData [B

@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/gen/structure/StructureBoundingBox
+        FIELD field_78897_a minX I
+        FIELD field_78895_b minY I
+        FIELD field_78896_c minZ I
+        FIELD field_78893_d maxX I
+        FIELD field_78894_e maxY I
+        FIELD field_78892_f maxZ I

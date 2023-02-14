@@ -1,0 +1,8 @@
+CLASS net/minecraft/network/MemoryConnection
+        FIELD field_74444_a mySocketAddress Ljava/net/SocketAddress;
+        FIELD field_74442_b readPacketCache Ljava/util/List;
+        FIELD field_74443_c pairedConnection Lnet/minecraft/network/MemoryConnection;
+        FIELD field_74440_d myNetHandler Lnet/minecraft/network/packet/NetHandler;
+        FIELD field_74441_e shuttingDown Z
+        FIELD field_74438_f shutdownReason Ljava/lang/String;
+        FIELD field_74445_h gamePaused Z

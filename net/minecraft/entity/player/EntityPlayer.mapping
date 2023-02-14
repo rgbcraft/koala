@@ -1,0 +1,27 @@
+CLASS net/minecraft/entity/player/EntityPlayer
+        FIELD field_71071_by inventory Lnet/minecraft/entity/player/InventoryPlayer;
+        FIELD field_71078_a theInventoryEnderChest Lnet/minecraft/inventory/InventoryEnderChest;
+        FIELD field_71069_bz inventoryContainer Lnet/minecraft/inventory/Container;
+        FIELD field_71070_bA openContainer Lnet/minecraft/inventory/Container;
+        FIELD field_71100_bB foodStats Lnet/minecraft/util/FoodStats;
+        FIELD field_71101_bC flyToggleTimer I
+        FIELD field_71107_bF prevCameraYaw F
+        FIELD field_71109_bG cameraYaw F
+        FIELD field_71092_bJ username Ljava/lang/String;
+        FIELD field_71084_cw playerCloakUrl Ljava/lang/String;
+        FIELD field_71090_bL xpCooldown I
+        FIELD field_71083_bS sleeping Z
+        FIELD field_71081_bT playerLocation Lnet/minecraft/util/ChunkCoordinates;
+        FIELD field_71076_b sleepTimer I
+        FIELD field_71077_c spawnChunk Lnet/minecraft/util/ChunkCoordinates;
+        FIELD field_82248_d spawnForced Z
+        FIELD field_71073_d startMinecartRidingCoordinate Lnet/minecraft/util/ChunkCoordinates;
+        FIELD field_71075_bZ capabilities Lnet/minecraft/entity/player/PlayerCapabilities;
+        FIELD field_71068_ca experienceLevel I
+        FIELD field_71067_cb experienceTotal I
+        FIELD field_71106_cc experience F
+        FIELD field_71074_e itemInUse Lnet/minecraft/item/ItemStack;
+        FIELD field_71072_f itemInUseCount I
+        FIELD field_71108_cd speedOnGround F
+        FIELD field_71102_ce speedInAir F
+        FIELD field_71104_cf fishEntity Lnet/minecraft/entity/projectile/EntityFishHook;

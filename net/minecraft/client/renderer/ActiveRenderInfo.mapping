@@ -1,0 +1,13 @@
+CLASS net/minecraft/client/renderer/ActiveRenderInfo
+        FIELD field_74592_a objectX F
+        FIELD field_74590_b objectY F
+        FIELD field_74591_c objectZ F
+        FIELD field_74597_i viewport Ljava/nio/IntBuffer;
+        FIELD field_74594_j modelview Ljava/nio/FloatBuffer;
+        FIELD field_74595_k projection Ljava/nio/FloatBuffer;
+        FIELD field_74593_l objectCoords Ljava/nio/FloatBuffer;
+        FIELD field_74588_d rotationX F
+        FIELD field_74589_e rotationXZ F
+        FIELD field_74586_f rotationZ F
+        FIELD field_74587_g rotationYZ F
+        FIELD field_74596_h rotationXY F

@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/gen/feature/WorldGenSand
+        FIELD field_76540_a sandID I
+        FIELD field_76539_b radius I

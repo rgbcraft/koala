@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/particle/EntityPortalFX
+        FIELD field_70571_a portalParticleScale F
+        FIELD field_70574_aq portalPosX D
+        FIELD field_70573_ar portalPosY D
+        FIELD field_70572_as portalPosZ D
