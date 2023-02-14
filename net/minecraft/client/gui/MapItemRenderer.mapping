@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/MapItemRenderer
-        FIELD field_78323_a intArray [I
-        FIELD field_78321_b bufferedImage I
-        FIELD field_78322_c gameSettings Lnet/minecraft/client/settings/GameSettings;
-        FIELD field_78320_d fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+	FIELD field_78323_a intArray [I
+	FIELD field_78321_b bufferedImage I
+	FIELD field_78322_c gameSettings Lnet/minecraft/client/settings/GameSettings;
+	FIELD field_78320_d fontRenderer Lnet/minecraft/client/gui/FontRenderer;

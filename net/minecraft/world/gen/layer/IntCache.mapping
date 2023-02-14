@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/gen/layer/IntCache
-        FIELD field_76451_a intCacheSize I
-        FIELD field_76449_b freeSmallArrays Ljava/util/List;
-        FIELD field_76450_c inUseSmallArrays Ljava/util/List;
-        FIELD field_76447_d freeLargeArrays Ljava/util/List;
-        FIELD field_76448_e inUseLargeArrays Ljava/util/List;
+	FIELD field_76451_a intCacheSize I
+	FIELD field_76449_b freeSmallArrays Ljava/util/List;
+	FIELD field_76450_c inUseSmallArrays Ljava/util/List;
+	FIELD field_76447_d freeLargeArrays Ljava/util/List;
+	FIELD field_76448_e inUseLargeArrays Ljava/util/List;

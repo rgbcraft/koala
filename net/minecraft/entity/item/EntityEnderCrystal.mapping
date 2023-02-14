@@ -1,3 +1,3 @@
 CLASS net/minecraft/entity/item/EntityEnderCrystal
-        FIELD field_70261_a innerRotation I
-        FIELD field_70260_b health I
+	FIELD field_70261_a innerRotation I
+	FIELD field_70260_b health I

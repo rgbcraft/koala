@@ -1,7 +1,7 @@
 CLASS net/minecraft/client/gui/GuiFlatPresets
-        FIELD field_82305_a presetIconRenderer Lnet/minecraft/client/renderer/entity/RenderItem;
-        FIELD field_82301_b presets Ljava/util/List;
-        FIELD field_82302_c createFlatWorldGui Lnet/minecraft/client/gui/GuiCreateFlatWorld;
-        FIELD field_82307_o theFlatPresetsListSlot Lnet/minecraft/client/gui/GuiFlatPresetsListSlot;
-        FIELD field_82304_p theButton Lnet/minecraft/client/gui/GuiButton;
-        FIELD field_82303_q theTextField Lnet/minecraft/client/gui/GuiTextField;
+	FIELD field_82305_a presetIconRenderer Lnet/minecraft/client/renderer/entity/RenderItem;
+	FIELD field_82301_b presets Ljava/util/List;
+	FIELD field_82302_c createFlatWorldGui Lnet/minecraft/client/gui/GuiCreateFlatWorld;
+	FIELD field_82307_o theFlatPresetsListSlot Lnet/minecraft/client/gui/GuiFlatPresetsListSlot;
+	FIELD field_82304_p theButton Lnet/minecraft/client/gui/GuiButton;
+	FIELD field_82303_q theTextField Lnet/minecraft/client/gui/GuiTextField;

@@ -1,9 +1,9 @@
 CLASS net/minecraft/client/model/ModelBox
-        FIELD field_78253_h vertexPositions [Lnet/minecraft/client/model/PositionTextureVertex;
-        FIELD field_78254_i quadList [Lnet/minecraft/client/model/TexturedQuad;
-        FIELD field_78252_a posX1 F
-        FIELD field_78250_b posY1 F
-        FIELD field_78251_c posZ1 F
-        FIELD field_78248_d posX2 F
-        FIELD field_78249_e posY2 F
-        FIELD field_78246_f posZ2 F
+	FIELD field_78253_h vertexPositions [Lnet/minecraft/client/model/PositionTextureVertex;
+	FIELD field_78254_i quadList [Lnet/minecraft/client/model/TexturedQuad;
+	FIELD field_78252_a posX1 F
+	FIELD field_78250_b posY1 F
+	FIELD field_78251_c posZ1 F
+	FIELD field_78248_d posX2 F
+	FIELD field_78249_e posY2 F
+	FIELD field_78246_f posZ2 F

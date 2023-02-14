@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet7UseEntity
-        FIELD field_73606_a playerEntityId I
-        FIELD field_73604_b targetEntity I
-        FIELD field_73605_c isLeftClick I
+	FIELD field_73606_a playerEntityId I
+	FIELD field_73604_b targetEntity I
+	FIELD field_73605_c isLeftClick I

@@ -1,8 +1,8 @@
 CLASS net/minecraft/client/model/ModelBook
-        FIELD field_78102_a coverRight Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78100_b coverLeft Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78101_c pagesRight Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78098_d pagesLeft Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78099_e flippingPageRight Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78096_f flippingPageLeft Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78097_g bookSpine Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78102_a coverRight Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78100_b coverLeft Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78101_c pagesRight Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78098_d pagesLeft Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78099_e flippingPageRight Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78096_f flippingPageLeft Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78097_g bookSpine Lnet/minecraft/client/model/ModelRenderer;

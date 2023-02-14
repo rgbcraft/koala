@@ -1,2 +1,2 @@
 CLASS net/minecraft/item/ItemMultiTextureTile
-        FIELD field_82805_a theBlock Lnet/minecraft/block/Block;
+	FIELD field_82805_a theBlock Lnet/minecraft/block/Block;

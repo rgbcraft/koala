@@ -1,9 +1,9 @@
 CLASS net/minecraft/client/model/ModelOcelot
-        FIELD field_78161_a ocelotBackLeftLeg Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78159_b ocelotBackRightLeg Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78160_c ocelotFrontLeftLeg Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78157_d ocelotFrontRightLeg Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78158_e ocelotTail Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78155_f ocelotTail2 Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78156_g ocelotHead Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78162_h ocelotBody Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78161_a ocelotBackLeftLeg Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78159_b ocelotBackRightLeg Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78160_c ocelotFrontLeftLeg Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78157_d ocelotFrontRightLeg Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78158_e ocelotTail Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78155_f ocelotTail2 Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78156_g ocelotHead Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78162_h ocelotBody Lnet/minecraft/client/model/ModelRenderer;

@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet70GameEvent
-        FIELD field_73620_a clientMessage [Ljava/lang/String;
-        FIELD field_73618_b eventType I
-        FIELD field_73619_c gameMode I
+	FIELD field_73620_a clientMessage [Ljava/lang/String;
+	FIELD field_73618_b eventType I
+	FIELD field_73619_c gameMode I

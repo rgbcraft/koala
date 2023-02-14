@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/biome/WorldChunkManager
-        FIELD field_76944_d genBiomes Lnet/minecraft/world/gen/layer/GenLayer;
-        FIELD field_76945_e biomeIndexLayer Lnet/minecraft/world/gen/layer/GenLayer;
-        FIELD field_76942_f biomeCache Lnet/minecraft/world/biome/BiomeCache;
-        FIELD field_76943_g biomesToSpawnIn Ljava/util/List;
+	FIELD field_76944_d genBiomes Lnet/minecraft/world/gen/layer/GenLayer;
+	FIELD field_76945_e biomeIndexLayer Lnet/minecraft/world/gen/layer/GenLayer;
+	FIELD field_76942_f biomeCache Lnet/minecraft/world/biome/BiomeCache;
+	FIELD field_76943_g biomesToSpawnIn Ljava/util/List;

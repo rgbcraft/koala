@@ -1,2 +1,2 @@
 CLASS net/minecraft/command/CommandBase
-        FIELD field_71533_a theAdmin Lnet/minecraft/command/IAdminCommand;
+	FIELD field_71533_a theAdmin Lnet/minecraft/command/IAdminCommand;

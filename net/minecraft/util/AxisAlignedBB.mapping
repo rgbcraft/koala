@@ -1,8 +1,8 @@
 CLASS net/minecraft/util/AxisAlignedBB
-        FIELD field_72335_g theAABBLocalPool Ljava/lang/ThreadLocal;
-        FIELD field_72340_a minX D
-        FIELD field_72338_b minY D
-        FIELD field_72339_c minZ D
-        FIELD field_72336_d maxX D
-        FIELD field_72337_e maxY D
-        FIELD field_72334_f maxZ D
+	FIELD field_72335_g theAABBLocalPool Ljava/lang/ThreadLocal;
+	FIELD field_72340_a minX D
+	FIELD field_72338_b minY D
+	FIELD field_72339_c minZ D
+	FIELD field_72336_d maxX D
+	FIELD field_72337_e maxY D
+	FIELD field_72334_f maxZ D

@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet201PlayerInfo
-        FIELD field_73365_a playerName Ljava/lang/String;
-        FIELD field_73363_b isConnected Z
-        FIELD field_73364_c ping I
+	FIELD field_73365_a playerName Ljava/lang/String;
+	FIELD field_73363_b isConnected Z
+	FIELD field_73364_c ping I

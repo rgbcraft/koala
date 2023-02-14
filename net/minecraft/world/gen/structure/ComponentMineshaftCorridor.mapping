@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/gen/structure/ComponentMineshaftCorridor
-        FIELD field_74958_a hasRails Z
-        FIELD field_74956_b hasSpiders Z
-        FIELD field_74957_c spawnerPlaced Z
-        FIELD field_74955_d sectionCount I
+	FIELD field_74958_a hasRails Z
+	FIELD field_74956_b hasSpiders Z
+	FIELD field_74957_c spawnerPlaced Z
+	FIELD field_74955_d sectionCount I

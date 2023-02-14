@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/texturepacks/GuiTexturePackSlot
-        FIELD field_77270_a parentTexturePackGui Lnet/minecraft/client/texturepacks/GuiTexturePacks;
+	FIELD field_77270_a parentTexturePackGui Lnet/minecraft/client/texturepacks/GuiTexturePacks;

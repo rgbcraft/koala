@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/particle/EntityHeartFX
-        FIELD field_70575_a particleScaleOverTime F
+	FIELD field_70575_a particleScaleOverTime F

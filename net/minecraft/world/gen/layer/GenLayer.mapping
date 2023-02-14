@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/gen/layer/GenLayer
-        FIELD field_75907_b worldGenSeed J
-        FIELD field_75909_a parent Lnet/minecraft/world/gen/layer/GenLayer;
-        FIELD field_75908_c chunkSeed J
-        FIELD field_75906_d baseSeed J
+	FIELD field_75907_b worldGenSeed J
+	FIELD field_75909_a parent Lnet/minecraft/world/gen/layer/GenLayer;
+	FIELD field_75908_c chunkSeed J
+	FIELD field_75906_d baseSeed J

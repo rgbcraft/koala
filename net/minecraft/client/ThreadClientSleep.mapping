@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/ThreadClientSleep
-        FIELD field_74532_a mc Lnet/minecraft/client/Minecraft;
+	FIELD field_74532_a mc Lnet/minecraft/client/Minecraft;

@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/monster/EntitySlime
-        FIELD field_70810_d slimeJumpDelay I
+	FIELD field_70810_d slimeJumpDelay I

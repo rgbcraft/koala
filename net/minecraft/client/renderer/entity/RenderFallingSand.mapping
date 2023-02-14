@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/entity/RenderFallingSand
-        FIELD field_77004_a sandRenderBlocks Lnet/minecraft/client/renderer/RenderBlocks;
+	FIELD field_77004_a sandRenderBlocks Lnet/minecraft/client/renderer/RenderBlocks;

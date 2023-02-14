@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/GuiMerchant
-        FIELD field_74203_o theIMerchant Lnet/minecraft/entity/IMerchant;
-        FIELD field_74202_p nextRecipeButtonIndex Lnet/minecraft/client/gui/GuiButtonMerchant;
-        FIELD field_74201_q previousRecipeButtonIndex Lnet/minecraft/client/gui/GuiButtonMerchant;
-        FIELD field_74200_r currentRecipeIndex I
+	FIELD field_74203_o theIMerchant Lnet/minecraft/entity/IMerchant;
+	FIELD field_74202_p nextRecipeButtonIndex Lnet/minecraft/client/gui/GuiButtonMerchant;
+	FIELD field_74201_q previousRecipeButtonIndex Lnet/minecraft/client/gui/GuiButtonMerchant;
+	FIELD field_74200_r currentRecipeIndex I

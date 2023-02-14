@@ -1,11 +1,11 @@
 CLASS net/minecraft/tileentity/TileEntityChest
-        FIELD field_70428_i chestContents [Lnet/minecraft/item/ItemStack;
-        FIELD field_70425_a adjacentChestChecked Z
-        FIELD field_70423_b adjacentChestZNeg Lnet/minecraft/tileentity/TileEntityChest;
-        FIELD field_70424_c adjacentChestXPos Lnet/minecraft/tileentity/TileEntityChest;
-        FIELD field_70421_d adjacentChestXNeg Lnet/minecraft/tileentity/TileEntityChest;
-        FIELD field_70422_e adjacentChestZPosition Lnet/minecraft/tileentity/TileEntityChest;
-        FIELD field_70419_f lidAngle F
-        FIELD field_70420_g prevLidAngle F
-        FIELD field_70427_h numUsingPlayers I
-        FIELD field_70426_j ticksSinceSync I
+	FIELD field_70428_i chestContents [Lnet/minecraft/item/ItemStack;
+	FIELD field_70425_a adjacentChestChecked Z
+	FIELD field_70423_b adjacentChestZNeg Lnet/minecraft/tileentity/TileEntityChest;
+	FIELD field_70424_c adjacentChestXPos Lnet/minecraft/tileentity/TileEntityChest;
+	FIELD field_70421_d adjacentChestXNeg Lnet/minecraft/tileentity/TileEntityChest;
+	FIELD field_70422_e adjacentChestZPosition Lnet/minecraft/tileentity/TileEntityChest;
+	FIELD field_70419_f lidAngle F
+	FIELD field_70420_g prevLidAngle F
+	FIELD field_70427_h numUsingPlayers I
+	FIELD field_70426_j ticksSinceSync I

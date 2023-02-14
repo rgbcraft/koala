@@ -1,6 +1,6 @@
 CLASS net/minecraft/potion/PotionEffect
-        FIELD field_76462_a potionID I
-        FIELD field_76460_b duration I
-        FIELD field_76461_c amplifier I
-        FIELD field_82723_d isSplashPotion Z
-        FIELD field_82724_e isAmbient Z
+	FIELD field_76462_a potionID I
+	FIELD field_76460_b duration I
+	FIELD field_76461_c amplifier I
+	FIELD field_82723_d isSplashPotion Z
+	FIELD field_82724_e isAmbient Z

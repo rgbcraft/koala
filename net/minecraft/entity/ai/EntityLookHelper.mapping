@@ -1,8 +1,8 @@
 CLASS net/minecraft/entity/ai/EntityLookHelper
-        FIELD field_75659_a entity Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75657_b deltaLookYaw F
-        FIELD field_75658_c deltaLookPitch F
-        FIELD field_75655_d isLooking Z
-        FIELD field_75656_e posX D
-        FIELD field_75653_f posY D
-        FIELD field_75654_g posZ D
+	FIELD field_75659_a entity Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75657_b deltaLookYaw F
+	FIELD field_75658_c deltaLookPitch F
+	FIELD field_75655_d isLooking Z
+	FIELD field_75656_e posX D
+	FIELD field_75653_f posY D
+	FIELD field_75654_g posZ D

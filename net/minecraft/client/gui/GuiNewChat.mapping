@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/gui/GuiNewChat
-        FIELD field_73772_a mc Lnet/minecraft/client/Minecraft;
-        FIELD field_73770_b sentMessages Ljava/util/List;
-        FIELD field_73771_c chatLines Ljava/util/List;
+	FIELD field_73772_a mc Lnet/minecraft/client/Minecraft;
+	FIELD field_73770_b sentMessages Ljava/util/List;
+	FIELD field_73771_c chatLines Ljava/util/List;

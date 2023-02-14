@@ -1,2 +1,2 @@
 CLASS net/minecraft/command/CommandException
-        FIELD field_74845_a errorObjects [Ljava/lang/Object;
+	FIELD field_74845_a errorObjects [Ljava/lang/Object;

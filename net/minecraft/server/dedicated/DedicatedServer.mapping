@@ -1,9 +1,9 @@
 CLASS net/minecraft/server/dedicated/DedicatedServer
-        FIELD field_71341_l pendingCommandList Ljava/util/List;
-        FIELD field_71342_m theRConThreadQuery Lnet/minecraft/network/rcon/RConThreadQuery;
-        FIELD field_71339_n theRConThreadMain Lnet/minecraft/network/rcon/RConThreadMain;
-        FIELD field_71340_o settings Lnet/minecraft/server/dedicated/PropertyManager;
-        FIELD field_71338_p canSpawnStructures Z
-        FIELD field_71337_q gameType Lnet/minecraft/world/EnumGameType;
-        FIELD field_71336_r networkThread Lnet/minecraft/network/NetworkListenThread;
-        FIELD field_71335_s guiIsEnabled Z
+	FIELD field_71341_l pendingCommandList Ljava/util/List;
+	FIELD field_71342_m theRConThreadQuery Lnet/minecraft/network/rcon/RConThreadQuery;
+	FIELD field_71339_n theRConThreadMain Lnet/minecraft/network/rcon/RConThreadMain;
+	FIELD field_71340_o settings Lnet/minecraft/server/dedicated/PropertyManager;
+	FIELD field_71338_p canSpawnStructures Z
+	FIELD field_71337_q gameType Lnet/minecraft/world/EnumGameType;
+	FIELD field_71336_r networkThread Lnet/minecraft/network/NetworkListenThread;
+	FIELD field_71335_s guiIsEnabled Z

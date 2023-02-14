@@ -1,7 +1,7 @@
 CLASS net/minecraft/entity/ai/EntityAIMoveThroughVillage
-        FIELD field_75420_a theEntity Lnet/minecraft/entity/EntityCreature;
-        FIELD field_75418_b movementSpeed F
-        FIELD field_75419_c entityPathNavigate Lnet/minecraft/pathfinding/PathEntity;
-        FIELD field_75416_d doorInfo Lnet/minecraft/village/VillageDoorInfo;
-        FIELD field_75417_e isNocturnal Z
-        FIELD field_75415_f doorList Ljava/util/List;
+	FIELD field_75420_a theEntity Lnet/minecraft/entity/EntityCreature;
+	FIELD field_75418_b movementSpeed F
+	FIELD field_75419_c entityPathNavigate Lnet/minecraft/pathfinding/PathEntity;
+	FIELD field_75416_d doorInfo Lnet/minecraft/village/VillageDoorInfo;
+	FIELD field_75417_e isNocturnal Z
+	FIELD field_75415_f doorList Ljava/util/List;

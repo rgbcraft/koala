@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/storage/CallableLevelSeed
-        FIELD field_85143_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;
+	FIELD field_85143_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;

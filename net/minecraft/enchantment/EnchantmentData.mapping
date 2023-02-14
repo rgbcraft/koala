@@ -1,3 +1,3 @@
 CLASS net/minecraft/enchantment/EnchantmentData
-        FIELD field_76302_b enchantmentobj Lnet/minecraft/enchantment/Enchantment;
-        FIELD field_76303_c enchantmentLevel I
+	FIELD field_76302_b enchantmentobj Lnet/minecraft/enchantment/Enchantment;
+	FIELD field_76303_c enchantmentLevel I

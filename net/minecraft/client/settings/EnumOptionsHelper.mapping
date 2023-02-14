@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/settings/EnumOptionsHelper
-        FIELD field_74414_a enumOptionsMappingHelperArray [I
+	FIELD field_74414_a enumOptionsMappingHelperArray [I

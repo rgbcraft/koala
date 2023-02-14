@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/particle/EntitySnowShovelFX
-        FIELD field_70588_a snowDigParticleScale F
+	FIELD field_70588_a snowDigParticleScale F

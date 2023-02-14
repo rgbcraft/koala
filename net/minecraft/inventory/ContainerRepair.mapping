@@ -1,8 +1,8 @@
 CLASS net/minecraft/inventory/ContainerRepair
-        FIELD field_82852_f outputSlot Lnet/minecraft/inventory/IInventory;
-        FIELD field_82853_g inputSlots Lnet/minecraft/inventory/IInventory;
-        FIELD field_82860_h theWorld Lnet/minecraft/world/World;
-        FIELD field_82854_e maximumCost I
-        FIELD field_82856_l stackSizeToBeUsedInRepair I
-        FIELD field_82857_m repairedItemName Ljava/lang/String;
-        FIELD field_82855_n thePlayer Lnet/minecraft/entity/player/EntityPlayer;
+	FIELD field_82852_f outputSlot Lnet/minecraft/inventory/IInventory;
+	FIELD field_82853_g inputSlots Lnet/minecraft/inventory/IInventory;
+	FIELD field_82860_h theWorld Lnet/minecraft/world/World;
+	FIELD field_82854_e maximumCost I
+	FIELD field_82856_l stackSizeToBeUsedInRepair I
+	FIELD field_82857_m repairedItemName Ljava/lang/String;
+	FIELD field_82855_n thePlayer Lnet/minecraft/entity/player/EntityPlayer;

@@ -1,3 +1,3 @@
 CLASS net/minecraft/client/renderer/entity/RenderEnderman
-        FIELD field_77078_a endermanModel Lnet/minecraft/client/model/ModelEnderman;
-        FIELD field_77077_b rnd Ljava/util/Random;
+	FIELD field_77078_a endermanModel Lnet/minecraft/client/model/ModelEnderman;
+	FIELD field_77077_b rnd Ljava/util/Random;

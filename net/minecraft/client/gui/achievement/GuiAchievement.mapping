@@ -1,10 +1,10 @@
 CLASS net/minecraft/client/gui/achievement/GuiAchievement
-        FIELD field_73856_a theGame Lnet/minecraft/client/Minecraft;
-        FIELD field_73854_b achievementWindowWidth I
-        FIELD field_73855_c achievementWindowHeight I
-        FIELD field_73852_d achievementGetLocalText Ljava/lang/String;
-        FIELD field_73853_e achievementStatName Ljava/lang/String;
-        FIELD field_73850_f theAchievement Lnet/minecraft/stats/Achievement;
-        FIELD field_73851_g achievementTime J
-        FIELD field_73858_h itemRender Lnet/minecraft/client/renderer/entity/RenderItem;
-        FIELD field_73857_j haveAchiement Z
+	FIELD field_73856_a theGame Lnet/minecraft/client/Minecraft;
+	FIELD field_73854_b achievementWindowWidth I
+	FIELD field_73855_c achievementWindowHeight I
+	FIELD field_73852_d achievementGetLocalText Ljava/lang/String;
+	FIELD field_73853_e achievementStatName Ljava/lang/String;
+	FIELD field_73850_f theAchievement Lnet/minecraft/stats/Achievement;
+	FIELD field_73851_g achievementTime J
+	FIELD field_73858_h itemRender Lnet/minecraft/client/renderer/entity/RenderItem;
+	FIELD field_73857_j haveAchiement Z

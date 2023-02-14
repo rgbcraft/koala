@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/boss/EntityWither
-        FIELD field_82219_bJ attackEntitySelector Lnet/minecraft/command/IEntitySelector;
+	FIELD field_82219_bJ attackEntitySelector Lnet/minecraft/command/IEntitySelector;

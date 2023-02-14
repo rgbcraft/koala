@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet105UpdateProgressbar
-        FIELD field_73634_a windowId I
-        FIELD field_73632_b progressBar I
-        FIELD field_73633_c progressBarValue I
+	FIELD field_73634_a windowId I
+	FIELD field_73632_b progressBar I
+	FIELD field_73633_c progressBarValue I

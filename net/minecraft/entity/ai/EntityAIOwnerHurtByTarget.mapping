@@ -1,3 +1,3 @@
 CLASS net/minecraft/entity/ai/EntityAIOwnerHurtByTarget
-        FIELD field_75316_a theDefendingTameable Lnet/minecraft/entity/passive/EntityTameable;
-        FIELD field_75315_b theOwnerAttacker Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75316_a theDefendingTameable Lnet/minecraft/entity/passive/EntityTameable;
+	FIELD field_75315_b theOwnerAttacker Lnet/minecraft/entity/EntityLiving;

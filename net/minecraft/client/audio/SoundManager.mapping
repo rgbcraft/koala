@@ -1,11 +1,11 @@
 CLASS net/minecraft/client/audio/SoundManager
-        FIELD field_77381_a sndSystem Lpaulscode/sound/SoundSystem;
-        FIELD field_77379_b soundPoolSounds Lnet/minecraft/client/audio/SoundPool;
-        FIELD field_77380_c soundPoolStreaming Lnet/minecraft/client/audio/SoundPool;
-        FIELD field_77377_d soundPoolMusic Lnet/minecraft/client/audio/SoundPool;
-        FIELD field_77378_e latestSoundID I
-        FIELD field_77375_f options Lnet/minecraft/client/settings/GameSettings;
-        FIELD field_82470_g playingSounds Ljava/util/Set;
-        FIELD field_77376_g loaded Z
-        FIELD field_77382_h rand Ljava/util/Random;
-        FIELD field_77383_i ticksBeforeMusic I
+	FIELD field_77381_a sndSystem Lpaulscode/sound/SoundSystem;
+	FIELD field_77379_b soundPoolSounds Lnet/minecraft/client/audio/SoundPool;
+	FIELD field_77380_c soundPoolStreaming Lnet/minecraft/client/audio/SoundPool;
+	FIELD field_77377_d soundPoolMusic Lnet/minecraft/client/audio/SoundPool;
+	FIELD field_77378_e latestSoundID I
+	FIELD field_77375_f options Lnet/minecraft/client/settings/GameSettings;
+	FIELD field_82470_g playingSounds Ljava/util/Set;
+	FIELD field_77376_g loaded Z
+	FIELD field_77382_h rand Ljava/util/Random;
+	FIELD field_77383_i ticksBeforeMusic I

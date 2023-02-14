@@ -1,4 +1,4 @@
 CLASS net/minecraft/block/BlockFurnace
-        FIELD field_72289_a furnaceRand Ljava/util/Random;
-        FIELD field_72287_b isActive Z
-        FIELD field_72288_c keepFurnaceInventory Z
+	FIELD field_72289_a furnaceRand Ljava/util/Random;
+	FIELD field_72287_b isActive Z
+	FIELD field_72288_c keepFurnaceInventory Z

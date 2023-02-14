@@ -1,3 +1,3 @@
 CLASS net/minecraft/world/gen/structure/StructurePieceBlockSelector
-        FIELD field_75066_a selectedBlockId I
-        FIELD field_75065_b selectedBlockMetaData I
+	FIELD field_75066_a selectedBlockId I
+	FIELD field_75065_b selectedBlockMetaData I

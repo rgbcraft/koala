@@ -1,12 +1,12 @@
 CLASS net/minecraft/entity/projectile/EntityFireball
-        FIELD field_70231_e xTile I
-        FIELD field_70228_f yTile I
-        FIELD field_70229_g zTile I
-        FIELD field_70237_h inTile I
-        FIELD field_70238_i inGround Z
-        FIELD field_70235_a shootingEntity Lnet/minecraft/entity/EntityLiving;
-        FIELD field_70236_j ticksAlive I
-        FIELD field_70234_an ticksInAir I
-        FIELD field_70232_b accelerationX D
-        FIELD field_70233_c accelerationY D
-        FIELD field_70230_d accelerationZ D
+	FIELD field_70231_e xTile I
+	FIELD field_70228_f yTile I
+	FIELD field_70229_g zTile I
+	FIELD field_70237_h inTile I
+	FIELD field_70238_i inGround Z
+	FIELD field_70235_a shootingEntity Lnet/minecraft/entity/EntityLiving;
+	FIELD field_70236_j ticksAlive I
+	FIELD field_70234_an ticksInAir I
+	FIELD field_70232_b accelerationX D
+	FIELD field_70233_c accelerationY D
+	FIELD field_70230_d accelerationZ D

@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/multiplayer/CallableMPL2
-        FIELD field_78835_a theWorldClient Lnet/minecraft/client/multiplayer/WorldClient;
+	FIELD field_78835_a theWorldClient Lnet/minecraft/client/multiplayer/WorldClient;

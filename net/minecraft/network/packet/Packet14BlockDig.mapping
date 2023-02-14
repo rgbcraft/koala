@@ -1,6 +1,6 @@
 CLASS net/minecraft/network/packet/Packet14BlockDig
-        FIELD field_73345_a xPosition I
-        FIELD field_73343_b yPosition I
-        FIELD field_73344_c zPosition I
-        FIELD field_73341_d face I
-        FIELD field_73342_e status I
+	FIELD field_73345_a xPosition I
+	FIELD field_73343_b yPosition I
+	FIELD field_73344_c zPosition I
+	FIELD field_73341_d face I
+	FIELD field_73342_e status I

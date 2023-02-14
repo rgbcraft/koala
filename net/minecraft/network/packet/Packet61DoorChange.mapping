@@ -1,6 +1,6 @@
 CLASS net/minecraft/network/packet/Packet61DoorChange
-        FIELD field_73567_a sfxID I
-        FIELD field_73565_b auxData I
-        FIELD field_73566_c posX I
-        FIELD field_73563_d posY I
-        FIELD field_73564_e posZ I
+	FIELD field_73567_a sfxID I
+	FIELD field_73565_b auxData I
+	FIELD field_73566_c posX I
+	FIELD field_73563_d posY I
+	FIELD field_73564_e posZ I

@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/texturefx/TextureWaterFlowFX
-        FIELD field_76882_k tickCounter I
+	FIELD field_76882_k tickCounter I

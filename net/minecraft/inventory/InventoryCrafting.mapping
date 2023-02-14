@@ -1,4 +1,4 @@
 CLASS net/minecraft/inventory/InventoryCrafting
-        FIELD field_70466_a stackList [Lnet/minecraft/item/ItemStack;
-        FIELD field_70464_b inventoryWidth I
-        FIELD field_70465_c eventHandler Lnet/minecraft/inventory/Container;
+	FIELD field_70466_a stackList [Lnet/minecraft/item/ItemStack;
+	FIELD field_70464_b inventoryWidth I
+	FIELD field_70465_c eventHandler Lnet/minecraft/inventory/Container;

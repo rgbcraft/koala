@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/TcpMasterThread
-        FIELD field_74504_a theTcpConnection Lnet/minecraft/network/TcpConnection;
+	FIELD field_74504_a theTcpConnection Lnet/minecraft/network/TcpConnection;

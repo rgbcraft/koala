@@ -1,6 +1,6 @@
 CLASS net/minecraft/village/MerchantRecipe
-        FIELD field_77403_a itemToBuy Lnet/minecraft/item/ItemStack;
-        FIELD field_77401_b secondItemToBuy Lnet/minecraft/item/ItemStack;
-        FIELD field_77402_c itemToSell Lnet/minecraft/item/ItemStack;
-        FIELD field_77400_d toolUses I
-        FIELD field_82786_e maxTradeUses I
+	FIELD field_77403_a itemToBuy Lnet/minecraft/item/ItemStack;
+	FIELD field_77401_b secondItemToBuy Lnet/minecraft/item/ItemStack;
+	FIELD field_77402_c itemToSell Lnet/minecraft/item/ItemStack;
+	FIELD field_77400_d toolUses I
+	FIELD field_82786_e maxTradeUses I

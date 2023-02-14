@@ -1,3 +1,3 @@
 CLASS net/minecraft/entity/monster/EntityEnderman
-        FIELD field_70827_d carriableBlocks [Z
-        FIELD field_70828_e teleportDelay I
+	FIELD field_70827_d carriableBlocks [Z
+	FIELD field_70828_e teleportDelay I

@@ -1,7 +1,7 @@
 CLASS net/minecraft/entity/ai/EntityAIAttackOnCollide
-        FIELD field_75443_a worldObj Lnet/minecraft/world/World;
-        FIELD field_75441_b attacker Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75442_c entityTarget Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75439_d attackTick I
-        FIELD field_75438_g entityPathEntity Lnet/minecraft/pathfinding/PathEntity;
-        FIELD field_75444_h classTarget Ljava/lang/Class;
+	FIELD field_75443_a worldObj Lnet/minecraft/world/World;
+	FIELD field_75441_b attacker Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75442_c entityTarget Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75439_d attackTick I
+	FIELD field_75438_g entityPathEntity Lnet/minecraft/pathfinding/PathEntity;
+	FIELD field_75444_h classTarget Ljava/lang/Class;

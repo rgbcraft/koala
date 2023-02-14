@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/biome/BiomeGenHills
-        FIELD field_82915_S theWorldGenerator Lnet/minecraft/world/gen/feature/WorldGenerator;
+	FIELD field_82915_S theWorldGenerator Lnet/minecraft/world/gen/feature/WorldGenerator;

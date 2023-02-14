@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/model/ModelEnderCrystal
-        FIELD field_78230_a cube Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78228_b glass Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78229_c base Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78230_a cube Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78228_b glass Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78229_c base Lnet/minecraft/client/model/ModelRenderer;

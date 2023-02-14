@@ -1,2 +1,2 @@
 CLASS net/minecraft/inventory/InventoryCraftResult
-        FIELD field_70467_a stackResult [Lnet/minecraft/item/ItemStack;
+	FIELD field_70467_a stackResult [Lnet/minecraft/item/ItemStack;

@@ -1,7 +1,7 @@
 CLASS net/minecraft/server/integrated/IntegratedServer
-        FIELD field_71349_l mc Lnet/minecraft/client/Minecraft;
-        FIELD field_71350_m theWorldSettings Lnet/minecraft/world/WorldSettings;
-        FIELD field_71347_n theServerListeningThread Lnet/minecraft/server/integrated/IntegratedServerListenThread;
-        FIELD field_71348_o isGamePaused Z
-        FIELD field_71346_p isPublic Z
-        FIELD field_71345_q lanServerPing Lnet/minecraft/client/multiplayer/ThreadLanServerPing;
+	FIELD field_71349_l mc Lnet/minecraft/client/Minecraft;
+	FIELD field_71350_m theWorldSettings Lnet/minecraft/world/WorldSettings;
+	FIELD field_71347_n theServerListeningThread Lnet/minecraft/server/integrated/IntegratedServerListenThread;
+	FIELD field_71348_o isGamePaused Z
+	FIELD field_71346_p isPublic Z
+	FIELD field_71345_q lanServerPing Lnet/minecraft/client/multiplayer/ThreadLanServerPing;

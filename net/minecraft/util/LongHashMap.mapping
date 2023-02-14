@@ -1,6 +1,6 @@
 CLASS net/minecraft/util/LongHashMap
-        FIELD field_76169_a hashArray [Lnet/minecraft/util/LongHashMapEntry;
-        FIELD field_76167_b numHashElements I
-        FIELD field_76168_c capacity I
-        FIELD field_76165_d percentUseable F
-        FIELD field_76166_e modCount I
+	FIELD field_76169_a hashArray [Lnet/minecraft/util/LongHashMapEntry;
+	FIELD field_76167_b numHashElements I
+	FIELD field_76168_c capacity I
+	FIELD field_76165_d percentUseable F
+	FIELD field_76166_e modCount I

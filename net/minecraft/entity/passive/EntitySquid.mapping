@@ -1,7 +1,7 @@
 CLASS net/minecraft/entity/passive/EntitySquid
-        FIELD field_70866_j tentacleAngle F
-        FIELD field_70865_by lastTentacleAngle F
-        FIELD field_70863_bz randomMotionSpeed F
-        FIELD field_70872_bC randomMotionVecX F
-        FIELD field_70869_bD randomMotionVecY F
-        FIELD field_70870_bE randomMotionVecZ F
+	FIELD field_70866_j tentacleAngle F
+	FIELD field_70865_by lastTentacleAngle F
+	FIELD field_70863_bz randomMotionSpeed F
+	FIELD field_70872_bC randomMotionVecX F
+	FIELD field_70869_bD randomMotionVecY F
+	FIELD field_70870_bE randomMotionVecZ F

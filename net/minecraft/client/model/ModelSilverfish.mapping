@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/model/ModelSilverfish
-        FIELD field_78171_a silverfishBodyParts [Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78169_b silverfishWings [Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78167_d silverfishBoxLength [I
-        FIELD field_78168_e silverfishTexturePositions [I
+	FIELD field_78171_a silverfishBodyParts [Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78169_b silverfishWings [Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78167_d silverfishBoxLength [I
+	FIELD field_78168_e silverfishTexturePositions [I

@@ -1,2 +1,2 @@
 CLASS net/minecraft/item/ItemSkull
-        FIELD field_82807_a skullTypes [Ljava/lang/String;
+	FIELD field_82807_a skullTypes [Ljava/lang/String;

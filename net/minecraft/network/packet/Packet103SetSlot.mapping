@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet103SetSlot
-        FIELD field_73637_a windowId I
-        FIELD field_73635_b itemSlot I
-        FIELD field_73636_c myItemStack Lnet/minecraft/item/ItemStack;
+	FIELD field_73637_a windowId I
+	FIELD field_73635_b itemSlot I
+	FIELD field_73636_c myItemStack Lnet/minecraft/item/ItemStack;

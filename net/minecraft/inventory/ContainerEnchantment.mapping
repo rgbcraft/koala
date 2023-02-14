@@ -1,9 +1,9 @@
 CLASS net/minecraft/inventory/ContainerEnchantment
-        FIELD field_75168_e tableInventory Lnet/minecraft/inventory/IInventory;
-        FIELD field_75172_h worldPointer Lnet/minecraft/world/World;
-        FIELD field_75173_i posX I
-        FIELD field_75170_j posY I
-        FIELD field_75171_k posZ I
-        FIELD field_75169_l rand Ljava/util/Random;
-        FIELD field_75166_f nameSeed J
-        FIELD field_75167_g enchantLevels [I
+	FIELD field_75168_e tableInventory Lnet/minecraft/inventory/IInventory;
+	FIELD field_75172_h worldPointer Lnet/minecraft/world/World;
+	FIELD field_75173_i posX I
+	FIELD field_75170_j posY I
+	FIELD field_75171_k posZ I
+	FIELD field_75169_l rand Ljava/util/Random;
+	FIELD field_75166_f nameSeed J
+	FIELD field_75167_g enchantLevels [I

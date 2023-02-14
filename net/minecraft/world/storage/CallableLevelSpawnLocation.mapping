@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/storage/CallableLevelSpawnLocation
-        FIELD field_85135_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;
+	FIELD field_85135_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;

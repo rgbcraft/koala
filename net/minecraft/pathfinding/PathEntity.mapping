@@ -1,4 +1,4 @@
 CLASS net/minecraft/pathfinding/PathEntity
-        FIELD field_75884_a points [Lnet/minecraft/pathfinding/PathPoint;
-        FIELD field_75882_b currentPathIndex I
-        FIELD field_75883_c pathLength I
+	FIELD field_75884_a points [Lnet/minecraft/pathfinding/PathPoint;
+	FIELD field_75882_b currentPathIndex I
+	FIELD field_75883_c pathLength I

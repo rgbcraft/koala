@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/gui/inventory/ContainerCreative
-        FIELD field_75185_e itemList Ljava/util/List;
+	FIELD field_75185_e itemList Ljava/util/List;

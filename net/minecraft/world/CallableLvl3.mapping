@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/CallableLvl3
-        FIELD field_77440_a theWorld Lnet/minecraft/world/World;
+	FIELD field_77440_a theWorld Lnet/minecraft/world/World;

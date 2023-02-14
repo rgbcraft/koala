@@ -1,7 +1,7 @@
 CLASS net/minecraft/network/rcon/RConThreadQueryAuth
-        FIELD field_72598_b timestamp J
-        FIELD field_72599_c randomChallenge I
-        FIELD field_72596_d requestId [B
-        FIELD field_72597_e challengeValue [B
-        FIELD field_72595_f requestIdAsString Ljava/lang/String;
-        FIELD field_72600_a queryThread Lnet/minecraft/network/rcon/RConThreadQuery;
+	FIELD field_72598_b timestamp J
+	FIELD field_72599_c randomChallenge I
+	FIELD field_72596_d requestId [B
+	FIELD field_72597_e challengeValue [B
+	FIELD field_72595_f requestIdAsString Ljava/lang/String;
+	FIELD field_72600_a queryThread Lnet/minecraft/network/rcon/RConThreadQuery;

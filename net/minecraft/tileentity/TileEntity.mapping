@@ -1,10 +1,10 @@
 CLASS net/minecraft/tileentity/TileEntity
-        FIELD field_70326_a nameToClassMap Ljava/util/Map;
-        FIELD field_70323_b classToNameMap Ljava/util/Map;
-        FIELD field_70331_k worldObj Lnet/minecraft/world/World;
-        FIELD field_70329_l xCoord I
-        FIELD field_70330_m yCoord I
-        FIELD field_70327_n zCoord I
-        FIELD field_70328_o tileEntityInvalid Z
-        FIELD field_70325_p blockMetadata I
-        FIELD field_70324_q blockType Lnet/minecraft/block/Block;
+	FIELD field_70326_a nameToClassMap Ljava/util/Map;
+	FIELD field_70323_b classToNameMap Ljava/util/Map;
+	FIELD field_70331_k worldObj Lnet/minecraft/world/World;
+	FIELD field_70329_l xCoord I
+	FIELD field_70330_m yCoord I
+	FIELD field_70327_n zCoord I
+	FIELD field_70328_o tileEntityInvalid Z
+	FIELD field_70325_p blockMetadata I
+	FIELD field_70324_q blockType Lnet/minecraft/block/Block;

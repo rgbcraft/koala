@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/model/ModelSkeletonHead
-        FIELD field_82896_a skeletonHead Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_82896_a skeletonHead Lnet/minecraft/client/model/ModelRenderer;

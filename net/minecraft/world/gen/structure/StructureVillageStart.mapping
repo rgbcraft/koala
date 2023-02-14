@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/StructureVillageStart
-        FIELD field_75076_c hasMoreThanTwoComponents Z
+	FIELD field_75076_c hasMoreThanTwoComponents Z

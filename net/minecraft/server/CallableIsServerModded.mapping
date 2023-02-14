@@ -1,2 +1,2 @@
 CLASS net/minecraft/server/CallableIsServerModded
-        FIELD field_82555_a mcServer Lnet/minecraft/server/MinecraftServer;
+	FIELD field_82555_a mcServer Lnet/minecraft/server/MinecraftServer;

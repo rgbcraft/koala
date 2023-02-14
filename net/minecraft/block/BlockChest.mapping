@@ -1,2 +1,2 @@
 CLASS net/minecraft/block/BlockChest
-        FIELD field_72293_a random Ljava/util/Random;
+	FIELD field_72293_a random Ljava/util/Random;

@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/passive/EntityPig
-        FIELD field_82184_d aiControlledByPlayer Lnet/minecraft/entity/ai/EntityAIControlledByPlayer;
+	FIELD field_82184_d aiControlledByPlayer Lnet/minecraft/entity/ai/EntityAIControlledByPlayer;

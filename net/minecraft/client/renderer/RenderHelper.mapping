@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/RenderHelper
-        FIELD field_74522_a colorBuffer Ljava/nio/FloatBuffer;
+	FIELD field_74522_a colorBuffer Ljava/nio/FloatBuffer;

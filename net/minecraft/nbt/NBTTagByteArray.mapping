@@ -1,2 +1,2 @@
 CLASS net/minecraft/nbt/NBTTagByteArray
-        FIELD field_74754_a byteArray [B
+	FIELD field_74754_a byteArray [B

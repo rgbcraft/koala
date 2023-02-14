@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/ComponentStrongholdPortalRoom
-        FIELD field_75005_a hasSpawner Z
+	FIELD field_75005_a hasSpawner Z

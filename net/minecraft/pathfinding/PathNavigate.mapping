@@ -1,14 +1,14 @@
 CLASS net/minecraft/pathfinding/PathNavigate
-        FIELD field_75515_a theEntity Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75513_b worldObj Lnet/minecraft/world/World;
-        FIELD field_75514_c currentPath Lnet/minecraft/pathfinding/PathEntity;
-        FIELD field_75511_d speed F
-        FIELD field_75512_e pathSearchRange F
-        FIELD field_75509_f noSunPathfind Z
-        FIELD field_75510_g totalTicks I
-        FIELD field_75520_h ticksAtLastPos I
-        FIELD field_75521_i lastPosCheck Lnet/minecraft/util/Vec3;
-        FIELD field_75518_j canPassOpenWoodenDoors Z
-        FIELD field_75519_k canPassClosedWoodenDoors Z
-        FIELD field_75516_l avoidsWater Z
-        FIELD field_75517_m canSwim Z
+	FIELD field_75515_a theEntity Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75513_b worldObj Lnet/minecraft/world/World;
+	FIELD field_75514_c currentPath Lnet/minecraft/pathfinding/PathEntity;
+	FIELD field_75511_d speed F
+	FIELD field_75512_e pathSearchRange F
+	FIELD field_75509_f noSunPathfind Z
+	FIELD field_75510_g totalTicks I
+	FIELD field_75520_h ticksAtLastPos I
+	FIELD field_75521_i lastPosCheck Lnet/minecraft/util/Vec3;
+	FIELD field_75518_j canPassOpenWoodenDoors Z
+	FIELD field_75519_k canPassClosedWoodenDoors Z
+	FIELD field_75516_l avoidsWater Z
+	FIELD field_75517_m canSwim Z

@@ -1,13 +1,13 @@
 CLASS net/minecraft/client/multiplayer/PlayerControllerMP
-        FIELD field_78776_a mc Lnet/minecraft/client/Minecraft;
-        FIELD field_78774_b netClientHandler Lnet/minecraft/client/multiplayer/NetClientHandler;
-        FIELD field_78775_c currentBlockX I
-        FIELD field_78772_d currentBlockY I
-        FIELD field_78773_e currentblockZ I
-        FIELD field_78770_f curBlockDamageMP F
-        FIELD field_78771_g prevBlockDamageMP F
-        FIELD field_78780_h stepSoundTickCounter F
-        FIELD field_78781_i blockHitDelay I
-        FIELD field_78778_j isHittingBlock Z
-        FIELD field_78779_k currentGameType Lnet/minecraft/world/EnumGameType;
-        FIELD field_78777_l currentPlayerItem I
+	FIELD field_78776_a mc Lnet/minecraft/client/Minecraft;
+	FIELD field_78774_b netClientHandler Lnet/minecraft/client/multiplayer/NetClientHandler;
+	FIELD field_78775_c currentBlockX I
+	FIELD field_78772_d currentBlockY I
+	FIELD field_78773_e currentblockZ I
+	FIELD field_78770_f curBlockDamageMP F
+	FIELD field_78771_g prevBlockDamageMP F
+	FIELD field_78780_h stepSoundTickCounter F
+	FIELD field_78781_i blockHitDelay I
+	FIELD field_78778_j isHittingBlock Z
+	FIELD field_78779_k currentGameType Lnet/minecraft/world/EnumGameType;
+	FIELD field_78777_l currentPlayerItem I

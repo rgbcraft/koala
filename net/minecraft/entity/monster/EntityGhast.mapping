@@ -1,10 +1,10 @@
 CLASS net/minecraft/entity/monster/EntityGhast
-        FIELD field_70797_a courseChangeCooldown I
-        FIELD field_70795_b waypointX D
-        FIELD field_70796_c waypointY D
-        FIELD field_70793_d waypointZ D
-        FIELD field_70792_g targetedEntity Lnet/minecraft/entity/Entity;
-        FIELD field_70798_h aggroCooldown I
-        FIELD field_70794_e prevAttackCounter I
-        FIELD field_70791_f attackCounter I
-        FIELD field_92014_j explosionStrength I
+	FIELD field_70797_a courseChangeCooldown I
+	FIELD field_70795_b waypointX D
+	FIELD field_70796_c waypointY D
+	FIELD field_70793_d waypointZ D
+	FIELD field_70792_g targetedEntity Lnet/minecraft/entity/Entity;
+	FIELD field_70798_h aggroCooldown I
+	FIELD field_70794_e prevAttackCounter I
+	FIELD field_70791_f attackCounter I
+	FIELD field_92014_j explosionStrength I

@@ -1,8 +1,8 @@
 CLASS net/minecraft/client/texturepacks/TexturePackImplementation
-        FIELD field_77545_e texturePackID Ljava/lang/String;
-        FIELD field_77542_f texturePackFileName Ljava/lang/String;
-        FIELD field_77548_a texturePackFile Ljava/io/File;
-        FIELD field_77546_b firstDescriptionLine Ljava/lang/String;
-        FIELD field_77547_c secondDescriptionLine Ljava/lang/String;
-        FIELD field_77544_d thumbnailImage Ljava/awt/image/BufferedImage;
-        FIELD field_77543_g thumbnailTextureName I
+	FIELD field_77545_e texturePackID Ljava/lang/String;
+	FIELD field_77542_f texturePackFileName Ljava/lang/String;
+	FIELD field_77548_a texturePackFile Ljava/io/File;
+	FIELD field_77546_b firstDescriptionLine Ljava/lang/String;
+	FIELD field_77547_c secondDescriptionLine Ljava/lang/String;
+	FIELD field_77544_d thumbnailImage Ljava/awt/image/BufferedImage;
+	FIELD field_77543_g thumbnailTextureName I

@@ -1,6 +1,6 @@
 CLASS net/minecraft/item/crafting/ShapedRecipes
-        FIELD field_77576_b recipeWidth I
-        FIELD field_77577_c recipeHeight I
-        FIELD field_77574_d recipeItems [Lnet/minecraft/item/ItemStack;
-        FIELD field_77575_e recipeOutput Lnet/minecraft/item/ItemStack;
-        FIELD field_77578_a recipeOutputItemID I
+	FIELD field_77576_b recipeWidth I
+	FIELD field_77577_c recipeHeight I
+	FIELD field_77574_d recipeItems [Lnet/minecraft/item/ItemStack;
+	FIELD field_77575_e recipeOutput Lnet/minecraft/item/ItemStack;
+	FIELD field_77578_a recipeOutputItemID I

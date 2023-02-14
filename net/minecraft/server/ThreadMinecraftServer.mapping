@@ -1,2 +1,2 @@
 CLASS net/minecraft/server/ThreadMinecraftServer
-        FIELD field_82557_a mcServer Lnet/minecraft/server/MinecraftServer;
+	FIELD field_82557_a mcServer Lnet/minecraft/server/MinecraftServer;

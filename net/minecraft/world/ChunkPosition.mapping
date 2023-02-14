@@ -1,4 +1,4 @@
 CLASS net/minecraft/world/ChunkPosition
-        FIELD field_76930_a x I
-        FIELD field_76928_b y I
-        FIELD field_76929_c z I
+	FIELD field_76930_a x I
+	FIELD field_76928_b y I
+	FIELD field_76929_c z I

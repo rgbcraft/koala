@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/multiplayer/LanServer
-        FIELD field_77492_a lanServerMotd Ljava/lang/String;
-        FIELD field_77490_b lanServerIpPort Ljava/lang/String;
-        FIELD field_77491_c timeLastSeen J
+	FIELD field_77492_a lanServerMotd Ljava/lang/String;
+	FIELD field_77490_b lanServerIpPort Ljava/lang/String;
+	FIELD field_77491_c timeLastSeen J

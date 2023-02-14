@@ -1,4 +1,4 @@
 CLASS net/minecraft/block/BlockLeaves
-        FIELD field_72134_cr baseIndexInPNG I
-        FIELD field_72136_a LEAF_TYPES [Ljava/lang/String;
-        FIELD field_72135_b adjacentTreeBlocks [I
+	FIELD field_72134_cr baseIndexInPNG I
+	FIELD field_72136_a LEAF_TYPES [Ljava/lang/String;
+	FIELD field_72135_b adjacentTreeBlocks [I

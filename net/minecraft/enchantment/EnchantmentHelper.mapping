@@ -1,4 +1,4 @@
 CLASS net/minecraft/enchantment/EnchantmentHelper
-        FIELD field_77522_a enchantmentRand Ljava/util/Random;
-        FIELD field_77520_b enchantmentModifierDamage Lnet/minecraft/enchantment/EnchantmentModifierDamage;
-        FIELD field_77521_c enchantmentModifierLiving Lnet/minecraft/enchantment/EnchantmentModifierLiving;
+	FIELD field_77522_a enchantmentRand Ljava/util/Random;
+	FIELD field_77520_b enchantmentModifierDamage Lnet/minecraft/enchantment/EnchantmentModifierDamage;
+	FIELD field_77521_c enchantmentModifierLiving Lnet/minecraft/enchantment/EnchantmentModifierLiving;

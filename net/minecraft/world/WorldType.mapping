@@ -1,11 +1,11 @@
 CLASS net/minecraft/world/WorldType
-        FIELD field_77139_a worldTypes [Lnet/minecraft/world/WorldType;
-        FIELD field_77137_b DEFAULT Lnet/minecraft/world/WorldType;
-        FIELD field_77138_c FLAT Lnet/minecraft/world/WorldType;
-        FIELD field_77135_d LARGE_BIOMES Lnet/minecraft/world/WorldType;
-        FIELD field_77136_e DEFAULT_1_1 Lnet/minecraft/world/WorldType;
-        FIELD field_82748_f worldTypeId I
-        FIELD field_77133_f worldType Ljava/lang/String;
-        FIELD field_77134_g generatorVersion I
-        FIELD field_77140_h canBeCreated Z
-        FIELD field_77141_i isWorldTypeVersioned Z
+	FIELD field_77139_a worldTypes [Lnet/minecraft/world/WorldType;
+	FIELD field_77137_b DEFAULT Lnet/minecraft/world/WorldType;
+	FIELD field_77138_c FLAT Lnet/minecraft/world/WorldType;
+	FIELD field_77135_d LARGE_BIOMES Lnet/minecraft/world/WorldType;
+	FIELD field_77136_e DEFAULT_1_1 Lnet/minecraft/world/WorldType;
+	FIELD field_82748_f worldTypeId I
+	FIELD field_77133_f worldType Ljava/lang/String;
+	FIELD field_77134_g generatorVersion I
+	FIELD field_77140_h canBeCreated Z
+	FIELD field_77141_i isWorldTypeVersioned Z

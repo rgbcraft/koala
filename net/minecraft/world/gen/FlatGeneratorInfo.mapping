@@ -1,3 +1,3 @@
 CLASS net/minecraft/world/gen/FlatGeneratorInfo
-        FIELD field_82655_a flatLayers Ljava/util/List;
-        FIELD field_82653_b worldFeatures Ljava/util/Map;
+	FIELD field_82655_a flatLayers Ljava/util/List;
+	FIELD field_82653_b worldFeatures Ljava/util/Map;

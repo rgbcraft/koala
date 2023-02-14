@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/GuiScreenAddServer
-        FIELD field_73999_a parentGui Lnet/minecraft/client/gui/GuiScreen;
-        FIELD field_73997_b serverAddress Lnet/minecraft/client/gui/GuiTextField;
-        FIELD field_73998_c serverName Lnet/minecraft/client/gui/GuiTextField;
-        FIELD field_73996_d newServerData Lnet/minecraft/client/multiplayer/ServerData;
+	FIELD field_73999_a parentGui Lnet/minecraft/client/gui/GuiScreen;
+	FIELD field_73997_b serverAddress Lnet/minecraft/client/gui/GuiTextField;
+	FIELD field_73998_c serverName Lnet/minecraft/client/gui/GuiTextField;
+	FIELD field_73996_d newServerData Lnet/minecraft/client/multiplayer/ServerData;

@@ -1,11 +1,11 @@
 CLASS net/minecraft/client/multiplayer/NetClientHandler
-        FIELD field_72554_f disconnected Z
-        FIELD field_72555_g netManager Lnet/minecraft/network/INetworkManager;
-        FIELD field_72563_h mc Lnet/minecraft/client/Minecraft;
-        FIELD field_72564_i worldClient Lnet/minecraft/client/multiplayer/WorldClient;
-        FIELD field_72561_j doneLoadingTerrain Z
-        FIELD field_72558_b mapStorage Lnet/minecraft/world/storage/MapStorage;
-        FIELD field_72562_k playerInfoMap Ljava/util/Map;
-        FIELD field_72559_c playerInfoList Ljava/util/List;
-        FIELD field_72556_d currentServerMaxPlayers I
-        FIELD field_72557_e rand Ljava/util/Random;
+	FIELD field_72554_f disconnected Z
+	FIELD field_72555_g netManager Lnet/minecraft/network/INetworkManager;
+	FIELD field_72563_h mc Lnet/minecraft/client/Minecraft;
+	FIELD field_72564_i worldClient Lnet/minecraft/client/multiplayer/WorldClient;
+	FIELD field_72561_j doneLoadingTerrain Z
+	FIELD field_72558_b mapStorage Lnet/minecraft/world/storage/MapStorage;
+	FIELD field_72562_k playerInfoMap Ljava/util/Map;
+	FIELD field_72559_c playerInfoList Ljava/util/List;
+	FIELD field_72556_d currentServerMaxPlayers I
+	FIELD field_72557_e rand Ljava/util/Random;

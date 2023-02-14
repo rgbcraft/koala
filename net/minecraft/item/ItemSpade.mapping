@@ -1,2 +1,2 @@
 CLASS net/minecraft/item/ItemSpade
-        FIELD field_77866_c blocksEffectiveAgainst [Lnet/minecraft/block/Block;
+	FIELD field_77866_c blocksEffectiveAgainst [Lnet/minecraft/block/Block;

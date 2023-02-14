@@ -1,11 +1,11 @@
 CLASS net/minecraft/client/entity/EntityPlayerSP
-        FIELD field_71158_b movementInput Lnet/minecraft/util/MovementInput;
-        FIELD field_71159_c mc Lnet/minecraft/client/Minecraft;
-        FIELD field_71156_d sprintToggleTimer I
-        FIELD field_71157_e sprintingTicksLeft I
-        FIELD field_71154_f renderArmYaw F
-        FIELD field_71155_g renderArmPitch F
-        FIELD field_71163_h prevRenderArmYaw F
-        FIELD field_71164_i prevRenderArmPitch F
-        FIELD field_71086_bY timeInPortal F
-        FIELD field_71080_cy prevTimeInPortal F
+	FIELD field_71158_b movementInput Lnet/minecraft/util/MovementInput;
+	FIELD field_71159_c mc Lnet/minecraft/client/Minecraft;
+	FIELD field_71156_d sprintToggleTimer I
+	FIELD field_71157_e sprintingTicksLeft I
+	FIELD field_71154_f renderArmYaw F
+	FIELD field_71155_g renderArmPitch F
+	FIELD field_71163_h prevRenderArmYaw F
+	FIELD field_71164_i prevRenderArmPitch F
+	FIELD field_71086_bY timeInPortal F
+	FIELD field_71080_cy prevTimeInPortal F

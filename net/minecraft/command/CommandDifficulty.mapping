@@ -1,2 +1,2 @@
 CLASS net/minecraft/command/CommandDifficulty
-        FIELD field_82365_a difficulties [Ljava/lang/String;
+	FIELD field_82365_a difficulties [Ljava/lang/String;

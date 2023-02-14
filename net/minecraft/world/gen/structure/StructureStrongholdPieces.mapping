@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/gen/structure/StructureStrongholdPieces
-        FIELD field_75205_b pieceWeightArray [Lnet/minecraft/world/gen/structure/StructureStrongholdPieceWeight;
-        FIELD field_75206_c structurePieceList Ljava/util/List;
-        FIELD field_75203_d strongComponentType Ljava/lang/Class;
-        FIELD field_75207_a totalWeight I
-        FIELD field_75204_e strongholdStones Lnet/minecraft/world/gen/structure/StructureStrongholdStones;
+	FIELD field_75205_b pieceWeightArray [Lnet/minecraft/world/gen/structure/StructureStrongholdPieceWeight;
+	FIELD field_75206_c structurePieceList Ljava/util/List;
+	FIELD field_75203_d strongComponentType Ljava/lang/Class;
+	FIELD field_75207_a totalWeight I
+	FIELD field_75204_e strongholdStones Lnet/minecraft/world/gen/structure/StructureStrongholdStones;

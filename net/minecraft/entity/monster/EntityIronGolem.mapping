@@ -1,5 +1,5 @@
 CLASS net/minecraft/entity/monster/EntityIronGolem
-        FIELD field_70858_e homeCheckTimer I
-        FIELD field_70857_d villageObj Lnet/minecraft/village/Village;
-        FIELD field_70855_f attackTimer I
-        FIELD field_70856_g holdRoseTick I
+	FIELD field_70858_e homeCheckTimer I
+	FIELD field_70857_d villageObj Lnet/minecraft/village/Village;
+	FIELD field_70855_f attackTimer I
+	FIELD field_70856_g holdRoseTick I

@@ -1,2 +1,2 @@
 CLASS net/minecraft/dispenser/BehaviorExpBottleDispense
-        FIELD field_74274_a mcServer Lnet/minecraft/server/MinecraftServer;
+	FIELD field_74274_a mcServer Lnet/minecraft/server/MinecraftServer;

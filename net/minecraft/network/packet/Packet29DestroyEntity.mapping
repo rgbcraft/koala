@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/packet/Packet29DestroyEntity
-        FIELD field_73368_a entityId [I
+	FIELD field_73368_a entityId [I

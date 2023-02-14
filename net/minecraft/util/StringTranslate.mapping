@@ -1,6 +1,6 @@
 CLASS net/minecraft/util/StringTranslate
-        FIELD field_74817_a instance Lnet/minecraft/util/StringTranslate;
-        FIELD field_74815_b translateTable Ljava/util/Properties;
-        FIELD field_74816_c languageList Ljava/util/TreeMap;
-        FIELD field_74813_d currentLanguage Ljava/lang/String;
-        FIELD field_74814_e isUnicode Z
+	FIELD field_74817_a instance Lnet/minecraft/util/StringTranslate;
+	FIELD field_74815_b translateTable Ljava/util/Properties;
+	FIELD field_74816_c languageList Ljava/util/TreeMap;
+	FIELD field_74813_d currentLanguage Ljava/lang/String;
+	FIELD field_74814_e isUnicode Z

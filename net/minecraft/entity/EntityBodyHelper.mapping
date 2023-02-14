@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/EntityBodyHelper
-        FIELD field_75668_a theLiving Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75668_a theLiving Lnet/minecraft/entity/EntityLiving;

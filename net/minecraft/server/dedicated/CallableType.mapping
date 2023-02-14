@@ -1,2 +1,2 @@
 CLASS net/minecraft/server/dedicated/CallableType
-        FIELD field_71743_a theDecitatedServer Lnet/minecraft/server/dedicated/DedicatedServer;
+	FIELD field_71743_a theDecitatedServer Lnet/minecraft/server/dedicated/DedicatedServer;

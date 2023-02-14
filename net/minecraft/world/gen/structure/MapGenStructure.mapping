@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/MapGenStructure
-        FIELD field_75053_d structureMap Ljava/util/Map;
+	FIELD field_75053_d structureMap Ljava/util/Map;

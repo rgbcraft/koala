@@ -1,3 +1,3 @@
 CLASS net/minecraft/world/gen/feature/WorldGeneratorBonusChest
-        FIELD field_76546_a theBonusChestGenerator [Lnet/minecraft/util/WeightedRandomChestContent;
-        FIELD field_76545_b itemsToGenerateInBonusChest I
+	FIELD field_76546_a theBonusChestGenerator [Lnet/minecraft/util/WeightedRandomChestContent;
+	FIELD field_76545_b itemsToGenerateInBonusChest I

@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/packet/Packet203AutoComplete
-        FIELD field_73474_a text Ljava/lang/String;
+	FIELD field_73474_a text Ljava/lang/String;

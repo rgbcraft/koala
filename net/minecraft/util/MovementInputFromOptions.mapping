@@ -1,4 +1,4 @@
 CLASS net/minecraft/util/MovementInputFromOptions
-        FIELD field_78903_e gameSettings Lnet/minecraft/client/settings/GameSettings;
+	FIELD field_78903_e gameSettings Lnet/minecraft/client/settings/GameSettings;
 CLASS net/minecraft/util/MovementInputFromOptions
-        FIELD field_78903_e gameSettings Lnet/minecraft/client/settings/GameSettings;
+	FIELD field_78903_e gameSettings Lnet/minecraft/client/settings/GameSettings;

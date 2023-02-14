@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/model/ModelSnowMan
-        FIELD field_78196_a body Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78194_b bottomBody Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78195_c head Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78192_d rightHand Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78193_e leftHand Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78196_a body Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78194_b bottomBody Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78195_c head Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78192_d rightHand Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78193_e leftHand Lnet/minecraft/client/model/ModelRenderer;

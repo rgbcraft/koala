@@ -1,10 +1,10 @@
 CLASS net/minecraft/network/packet/Packet20NamedEntitySpawn
-        FIELD field_73516_a entityId I
-        FIELD field_73514_b name Ljava/lang/String;
-        FIELD field_73515_c xPosition I
-        FIELD field_73512_d yPosition I
-        FIELD field_73513_e zPosition I
-        FIELD field_73510_f rotation B
-        FIELD field_73511_g pitch B
-        FIELD field_73518_h currentItem I
-        FIELD field_73519_i metadata Lnet/minecraft/entity/DataWatcher;
+	FIELD field_73516_a entityId I
+	FIELD field_73514_b name Ljava/lang/String;
+	FIELD field_73515_c xPosition I
+	FIELD field_73512_d yPosition I
+	FIELD field_73513_e zPosition I
+	FIELD field_73510_f rotation B
+	FIELD field_73511_g pitch B
+	FIELD field_73518_h currentItem I
+	FIELD field_73519_i metadata Lnet/minecraft/entity/DataWatcher;

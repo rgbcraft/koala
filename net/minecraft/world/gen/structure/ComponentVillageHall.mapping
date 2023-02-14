@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/ComponentVillageHall
-        FIELD field_74907_a averageGroundLevel I
+	FIELD field_74907_a averageGroundLevel I

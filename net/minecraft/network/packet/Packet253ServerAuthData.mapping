@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet253ServerAuthData
-        FIELD field_73381_a serverId Ljava/lang/String;
-        FIELD field_73379_b publicKey Ljava/security/PublicKey;
-        FIELD field_73380_c verifyToken [B
+	FIELD field_73381_a serverId Ljava/lang/String;
+	FIELD field_73379_b publicKey Ljava/security/PublicKey;
+	FIELD field_73380_c verifyToken [B

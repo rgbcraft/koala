@@ -1,2 +1,2 @@
 CLASS net/minecraft/stats/ThreadStatSyncherReceive
-        FIELD field_77486_a syncher Lnet/minecraft/stats/StatsSyncher;
+	FIELD field_77486_a syncher Lnet/minecraft/stats/StatsSyncher;

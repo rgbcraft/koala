@@ -1,7 +1,7 @@
 CLASS net/minecraft/entity/ai/EntityAIFollowOwner
-        FIELD field_75338_d thePet Lnet/minecraft/entity/passive/EntityTameable;
-        FIELD field_75339_e theOwner Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75342_a theWorld Lnet/minecraft/world/World;
-        FIELD field_75337_g petPathfinder Lnet/minecraft/pathfinding/PathNavigate;
-        FIELD field_75340_b maxDist F
-        FIELD field_75341_c minDist F
+	FIELD field_75338_d thePet Lnet/minecraft/entity/passive/EntityTameable;
+	FIELD field_75339_e theOwner Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75342_a theWorld Lnet/minecraft/world/World;
+	FIELD field_75337_g petPathfinder Lnet/minecraft/pathfinding/PathNavigate;
+	FIELD field_75340_b maxDist F
+	FIELD field_75341_c minDist F

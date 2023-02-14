@@ -1,2 +1,2 @@
 CLASS net/minecraft/util/StringUtils
-        FIELD field_76339_a patternControlCode Ljava/util/regex/Pattern;
+	FIELD field_76339_a patternControlCode Ljava/util/regex/Pattern;

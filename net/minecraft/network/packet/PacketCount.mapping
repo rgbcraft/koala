@@ -1,5 +1,5 @@
 CLASS net/minecraft/network/packet/PacketCount
-        FIELD field_76122_a allowCounting Z
-        FIELD field_76120_b packetCountForID Ljava/util/Map;
-        FIELD field_76121_c sizeCountForID Ljava/util/Map;
-        FIELD field_76119_d lock Ljava/lang/Object;
+	FIELD field_76122_a allowCounting Z
+	FIELD field_76120_b packetCountForID Ljava/util/Map;
+	FIELD field_76121_c sizeCountForID Ljava/util/Map;
+	FIELD field_76119_d lock Ljava/lang/Object;

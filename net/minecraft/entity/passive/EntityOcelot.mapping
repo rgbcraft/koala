@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/passive/EntityOcelot
-        FIELD field_70914_e aiTempt Lnet/minecraft/entity/ai/EntityAITempt;
+	FIELD field_70914_e aiTempt Lnet/minecraft/entity/ai/EntityAITempt;

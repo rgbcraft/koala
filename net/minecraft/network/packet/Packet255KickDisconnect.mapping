@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/packet/Packet255KickDisconnect
-        FIELD field_73631_a reason Ljava/lang/String;
+	FIELD field_73631_a reason Ljava/lang/String;

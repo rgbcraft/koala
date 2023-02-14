@@ -1,9 +1,9 @@
 CLASS net/minecraft/world/chunk/storage/ExtendedBlockStorage
-        FIELD field_76684_a yBase I
-        FIELD field_76682_b blockRefCount I
-        FIELD field_76683_c tickRefCount I
-        FIELD field_76680_d blockLSBArray [B
-        FIELD field_76681_e blockMSBArray Lnet/minecraft/world/chunk/NibbleArray;
-        FIELD field_76678_f blockMetadataArray Lnet/minecraft/world/chunk/NibbleArray;
-        FIELD field_76679_g blocklightArray Lnet/minecraft/world/chunk/NibbleArray;
-        FIELD field_76685_h skylightArray Lnet/minecraft/world/chunk/NibbleArray;
+	FIELD field_76684_a yBase I
+	FIELD field_76682_b blockRefCount I
+	FIELD field_76683_c tickRefCount I
+	FIELD field_76680_d blockLSBArray [B
+	FIELD field_76681_e blockMSBArray Lnet/minecraft/world/chunk/NibbleArray;
+	FIELD field_76678_f blockMetadataArray Lnet/minecraft/world/chunk/NibbleArray;
+	FIELD field_76679_g blocklightArray Lnet/minecraft/world/chunk/NibbleArray;
+	FIELD field_76685_h skylightArray Lnet/minecraft/world/chunk/NibbleArray;

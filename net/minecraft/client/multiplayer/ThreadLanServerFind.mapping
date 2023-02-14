@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/multiplayer/ThreadLanServerFind
-        FIELD field_77500_a localServerList Lnet/minecraft/client/multiplayer/LanServerList;
-        FIELD field_77498_b broadcastAddress Ljava/net/InetAddress;
-        FIELD field_77499_c socket Ljava/net/MulticastSocket;
+	FIELD field_77500_a localServerList Lnet/minecraft/client/multiplayer/LanServerList;
+	FIELD field_77498_b broadcastAddress Ljava/net/InetAddress;
+	FIELD field_77499_c socket Ljava/net/MulticastSocket;

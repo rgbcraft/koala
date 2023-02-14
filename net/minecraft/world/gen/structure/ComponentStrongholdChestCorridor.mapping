@@ -1,4 +1,4 @@
 CLASS net/minecraft/world/gen/structure/ComponentStrongholdChestCorridor
-        FIELD field_75003_a strongholdChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
-        FIELD field_75001_b doorType Lnet/minecraft/world/gen/structure/EnumDoor;
-        FIELD field_75002_c hasMadeChest Z
+	FIELD field_75003_a strongholdChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
+	FIELD field_75001_b doorType Lnet/minecraft/world/gen/structure/EnumDoor;
+	FIELD field_75002_c hasMadeChest Z

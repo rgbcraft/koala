@@ -1,7 +1,7 @@
 CLASS net/minecraft/client/model/ModelQuadruped
-        FIELD field_78150_a head Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78148_b body Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78149_c leg1 Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78146_d leg2 Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78147_e leg3 Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78144_f leg4 Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78150_a head Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78148_b body Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78149_c leg1 Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78146_d leg2 Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78147_e leg3 Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78144_f leg4 Lnet/minecraft/client/model/ModelRenderer;

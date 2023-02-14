@@ -1,4 +1,4 @@
 CLASS net/minecraft/world/chunk/storage/RegionFileChunkBuffer
-        FIELD field_76722_b chunkX I
-        FIELD field_76723_c chunkZ I
-        FIELD field_76724_a regionFile Lnet/minecraft/world/chunk/storage/RegionFile;
+	FIELD field_76722_b chunkX I
+	FIELD field_76723_c chunkZ I
+	FIELD field_76724_a regionFile Lnet/minecraft/world/chunk/storage/RegionFile;

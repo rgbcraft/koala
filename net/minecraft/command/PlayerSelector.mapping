@@ -1,4 +1,4 @@
 CLASS net/minecraft/command/PlayerSelector
-        FIELD field_82389_a tokenPattern Ljava/util/regex/Pattern;
-        FIELD field_82387_b intListPattern Ljava/util/regex/Pattern;
-        FIELD field_82388_c keyValueListPattern Ljava/util/regex/Pattern;
+	FIELD field_82389_a tokenPattern Ljava/util/regex/Pattern;
+	FIELD field_82387_b intListPattern Ljava/util/regex/Pattern;
+	FIELD field_82388_c keyValueListPattern Ljava/util/regex/Pattern;

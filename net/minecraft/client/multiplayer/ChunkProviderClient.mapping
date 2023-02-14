@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/multiplayer/ChunkProviderClient
-        FIELD field_73238_a blankChunk Lnet/minecraft/world/chunk/Chunk;
-        FIELD field_73236_b chunkMapping Lnet/minecraft/util/LongHashMap;
-        FIELD field_73237_c chunkListing Ljava/util/List;
-        FIELD field_73235_d worldObj Lnet/minecraft/world/World;
+	FIELD field_73238_a blankChunk Lnet/minecraft/world/chunk/Chunk;
+	FIELD field_73236_b chunkMapping Lnet/minecraft/util/LongHashMap;
+	FIELD field_73237_c chunkListing Ljava/util/List;
+	FIELD field_73235_d worldObj Lnet/minecraft/world/World;

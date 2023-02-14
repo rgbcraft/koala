@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/CanvasMojangLogo
-        FIELD field_74537_a logo Ljava/awt/image/BufferedImage;
+	FIELD field_74537_a logo Ljava/awt/image/BufferedImage;

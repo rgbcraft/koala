@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/gui/GuiSlotLanguage
-        FIELD field_77252_a languageGui Lnet/minecraft/client/gui/GuiLanguage;
+	FIELD field_77252_a languageGui Lnet/minecraft/client/gui/GuiLanguage;

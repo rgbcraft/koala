@@ -1,2 +1,2 @@
 CLASS net/minecraft/util/WeightedRandomItem
-        FIELD field_76292_a itemWeight I
+	FIELD field_76292_a itemWeight I

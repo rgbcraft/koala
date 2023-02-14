@@ -1,5 +1,5 @@
 CLASS net/minecraft/tileentity/TileEntityFurnace
-        FIELD field_70404_d furnaceItemStacks [Lnet/minecraft/item/ItemStack;
-        FIELD field_70407_a furnaceBurnTime I
-        FIELD field_70405_b currentItemBurnTime I
-        FIELD field_70406_c furnaceCookTime I
+	FIELD field_70404_d furnaceItemStacks [Lnet/minecraft/item/ItemStack;
+	FIELD field_70407_a furnaceBurnTime I
+	FIELD field_70405_b currentItemBurnTime I
+	FIELD field_70406_c furnaceCookTime I

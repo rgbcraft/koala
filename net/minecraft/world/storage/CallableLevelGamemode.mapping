@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/storage/CallableLevelGamemode
-        FIELD field_85109_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;
+	FIELD field_85109_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;

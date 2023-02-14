@@ -1,3 +1,3 @@
 CLASS net/minecraft/world/gen/feature/WorldGenClay
-        FIELD field_76518_a clayBlockId I
-        FIELD field_76517_b numberOfBlocks I
+	FIELD field_76518_a clayBlockId I
+	FIELD field_76517_b numberOfBlocks I

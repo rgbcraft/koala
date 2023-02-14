@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/chunk/storage/RegionFileCache
-        FIELD field_76553_a regionsByFilename Ljava/util/Map;
+	FIELD field_76553_a regionsByFilename Ljava/util/Map;

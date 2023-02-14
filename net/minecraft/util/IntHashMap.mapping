@@ -1,7 +1,7 @@
 CLASS net/minecraft/util/IntHashMap
-        FIELD field_76055_a slots [Lnet/minecraft/util/IntHashMapEntry;
-        FIELD field_76053_b count I
-        FIELD field_76054_c threshold I
-        FIELD field_76051_d growFactor F
-        FIELD field_76052_e versionStamp I
-        FIELD field_76050_f keySet Ljava/util/Set;
+	FIELD field_76055_a slots [Lnet/minecraft/util/IntHashMapEntry;
+	FIELD field_76053_b count I
+	FIELD field_76054_c threshold I
+	FIELD field_76051_d growFactor F
+	FIELD field_76052_e versionStamp I
+	FIELD field_76050_f keySet Ljava/util/Set;

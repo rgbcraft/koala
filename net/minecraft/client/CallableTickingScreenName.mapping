@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/CallableTickingScreenName
-        FIELD field_74421_a mc Lnet/minecraft/client/Minecraft;
+	FIELD field_74421_a mc Lnet/minecraft/client/Minecraft;

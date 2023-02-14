@@ -1,9 +1,9 @@
 CLASS net/minecraft/entity/ai/EntityAIAvoidEntity
-        FIELD field_75380_a theEntity Lnet/minecraft/entity/EntityCreature;
-        FIELD field_75378_b farSpeed F
-        FIELD field_75379_c nearSpeed F
-        FIELD field_75376_d closestLivingEntity Lnet/minecraft/entity/Entity;
-        FIELD field_75377_e distanceFromEntity F
-        FIELD field_75374_f entityPathEntity Lnet/minecraft/pathfinding/PathEntity;
-        FIELD field_75375_g entityPathNavigate Lnet/minecraft/pathfinding/PathNavigate;
-        FIELD field_75381_h targetEntityClass Ljava/lang/Class;
+	FIELD field_75380_a theEntity Lnet/minecraft/entity/EntityCreature;
+	FIELD field_75378_b farSpeed F
+	FIELD field_75379_c nearSpeed F
+	FIELD field_75376_d closestLivingEntity Lnet/minecraft/entity/Entity;
+	FIELD field_75377_e distanceFromEntity F
+	FIELD field_75374_f entityPathEntity Lnet/minecraft/pathfinding/PathEntity;
+	FIELD field_75375_g entityPathNavigate Lnet/minecraft/pathfinding/PathNavigate;
+	FIELD field_75381_h targetEntityClass Ljava/lang/Class;

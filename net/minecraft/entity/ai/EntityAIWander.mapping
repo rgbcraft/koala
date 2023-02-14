@@ -1,6 +1,6 @@
 CLASS net/minecraft/entity/ai/EntityAIWander
-        FIELD field_75457_a entity Lnet/minecraft/entity/EntityCreature;
-        FIELD field_75455_b xPosition D
-        FIELD field_75456_c yPosition D
-        FIELD field_75453_d zPosition D
-        FIELD field_75454_e speed F
+	FIELD field_75457_a entity Lnet/minecraft/entity/EntityCreature;
+	FIELD field_75455_b xPosition D
+	FIELD field_75456_c yPosition D
+	FIELD field_75453_d zPosition D
+	FIELD field_75454_e speed F

@@ -1,6 +1,6 @@
 CLASS net/minecraft/enchantment/EnchantmentProtection
-        FIELD field_77354_A protectionName [Ljava/lang/String;
-        FIELD field_77355_B baseEnchantability [I
-        FIELD field_77357_C levelEnchantability [I
-        FIELD field_77353_D thresholdEnchantability [I
-        FIELD field_77356_a protectionType I
+	FIELD field_77354_A protectionName [Ljava/lang/String;
+	FIELD field_77355_B baseEnchantability [I
+	FIELD field_77357_C levelEnchantability [I
+	FIELD field_77353_D thresholdEnchantability [I
+	FIELD field_77356_a protectionType I

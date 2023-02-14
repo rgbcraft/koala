@@ -1,2 +1,2 @@
 CLASS net/minecraft/util/CryptManager
-        FIELD field_75898_a charSet Ljava/nio/charset/Charset;
+	FIELD field_75898_a charSet Ljava/nio/charset/Charset;

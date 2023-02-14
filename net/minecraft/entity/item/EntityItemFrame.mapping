@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/item/EntityItemFrame
-        FIELD field_82337_e itemDropChance F
+	FIELD field_82337_e itemDropChance F

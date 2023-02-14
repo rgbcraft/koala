@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/rcon/RConUtils
-        FIELD field_72666_a hexDigits [C
+	FIELD field_72666_a hexDigits [C

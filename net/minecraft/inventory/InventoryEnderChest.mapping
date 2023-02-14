@@ -1,2 +1,2 @@
 CLASS net/minecraft/inventory/InventoryEnderChest
-        FIELD field_70488_a associatedChest Lnet/minecraft/tileentity/TileEntityEnderChest;
+	FIELD field_70488_a associatedChest Lnet/minecraft/tileentity/TileEntityEnderChest;

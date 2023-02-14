@@ -1,12 +1,12 @@
 CLASS net/minecraft/entity/item/SoundUpdaterMinecart
-        FIELD field_82477_a theSoundManager Lnet/minecraft/client/audio/SoundManager;
-        FIELD field_82475_b theMinecart Lnet/minecraft/entity/item/EntityMinecart;
-        FIELD field_82476_c thePlayer Lnet/minecraft/client/entity/EntityPlayerSP;
-        FIELD field_82473_d playerSPRidingMinecart Z
-        FIELD field_82474_e minecartIsDead Z
-        FIELD field_82471_f minecartIsMoving Z
-        FIELD field_82472_g silent Z
-        FIELD field_82480_h minecartSoundPitch F
-        FIELD field_82481_i minecartMoveSoundVolume F
-        FIELD field_82478_j minecartRideSoundVolume F
-        FIELD field_82479_k minecartSpeed D
+	FIELD field_82477_a theSoundManager Lnet/minecraft/client/audio/SoundManager;
+	FIELD field_82475_b theMinecart Lnet/minecraft/entity/item/EntityMinecart;
+	FIELD field_82476_c thePlayer Lnet/minecraft/client/entity/EntityPlayerSP;
+	FIELD field_82473_d playerSPRidingMinecart Z
+	FIELD field_82474_e minecartIsDead Z
+	FIELD field_82471_f minecartIsMoving Z
+	FIELD field_82472_g silent Z
+	FIELD field_82480_h minecartSoundPitch F
+	FIELD field_82481_i minecartMoveSoundVolume F
+	FIELD field_82478_j minecartRideSoundVolume F
+	FIELD field_82479_k minecartSpeed D

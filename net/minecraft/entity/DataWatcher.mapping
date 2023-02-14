@@ -1,5 +1,5 @@
 CLASS net/minecraft/entity/DataWatcher
-        FIELD field_75697_a dataTypes Ljava/util/HashMap;
-        FIELD field_75695_b watchedObjects Ljava/util/Map;
-        FIELD field_75696_c objectChanged Z
-        FIELD field_75694_d lock Ljava/util/concurrent/locks/ReadWriteLock;
+	FIELD field_75697_a dataTypes Ljava/util/HashMap;
+	FIELD field_75695_b watchedObjects Ljava/util/Map;
+	FIELD field_75696_c objectChanged Z
+	FIELD field_75694_d lock Ljava/util/concurrent/locks/ReadWriteLock;

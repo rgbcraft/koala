@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/renderer/ChestItemRenderHelper
-        FIELD field_78545_a instance Lnet/minecraft/client/renderer/ChestItemRenderHelper;
-        FIELD field_78543_b theChest Lnet/minecraft/tileentity/TileEntityChest;
-        FIELD field_78544_c theEnderChest Lnet/minecraft/tileentity/TileEntityEnderChest;
+	FIELD field_78545_a instance Lnet/minecraft/client/renderer/ChestItemRenderHelper;
+	FIELD field_78543_b theChest Lnet/minecraft/tileentity/TileEntityChest;
+	FIELD field_78544_c theEnderChest Lnet/minecraft/tileentity/TileEntityEnderChest;

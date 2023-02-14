@@ -1,7 +1,7 @@
 CLASS net/minecraft/server/management/PlayerManager
-        FIELD field_72701_a theWorldServer Lnet/minecraft/world/WorldServer;
-        FIELD field_72699_b players Ljava/util/List;
-        FIELD field_72700_c playerInstances Lnet/minecraft/util/LongHashMap;
-        FIELD field_72697_d chunkWatcherWithPlayers Ljava/util/List;
-        FIELD field_72698_e playerViewRadius I
-        FIELD field_72696_f xzDirectionsConst [I
+	FIELD field_72701_a theWorldServer Lnet/minecraft/world/WorldServer;
+	FIELD field_72699_b players Ljava/util/List;
+	FIELD field_72700_c playerInstances Lnet/minecraft/util/LongHashMap;
+	FIELD field_72697_d chunkWatcherWithPlayers Ljava/util/List;
+	FIELD field_72698_e playerViewRadius I
+	FIELD field_72696_f xzDirectionsConst [I

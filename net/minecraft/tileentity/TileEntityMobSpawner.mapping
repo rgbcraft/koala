@@ -1,13 +1,13 @@
 CLASS net/minecraft/tileentity/TileEntityMobSpawner
-        FIELD field_70394_a delay I
-        FIELD field_70390_d mobID Ljava/lang/String;
-        FIELD field_70391_e spawnerTags Lnet/minecraft/tileentity/TileEntityMobSpawnerSpawnData;
-        FIELD field_70392_b yaw D
-        FIELD field_70393_c yaw2 D
-        FIELD field_70388_f minSpawnDelay I
-        FIELD field_70389_g maxSpawnDelay I
-        FIELD field_70395_h spawnCount I
-        FIELD field_70396_i spawnedMob Lnet/minecraft/entity/Entity;
-        FIELD field_82350_j maxNearbyEntities I
-        FIELD field_82349_r requiredPlayerRange I
-        FIELD field_82348_s spawnRange I
+	FIELD field_70394_a delay I
+	FIELD field_70390_d mobID Ljava/lang/String;
+	FIELD field_70391_e spawnerTags Lnet/minecraft/tileentity/TileEntityMobSpawnerSpawnData;
+	FIELD field_70392_b yaw D
+	FIELD field_70393_c yaw2 D
+	FIELD field_70388_f minSpawnDelay I
+	FIELD field_70389_g maxSpawnDelay I
+	FIELD field_70395_h spawnCount I
+	FIELD field_70396_i spawnedMob Lnet/minecraft/entity/Entity;
+	FIELD field_82350_j maxNearbyEntities I
+	FIELD field_82349_r requiredPlayerRange I
+	FIELD field_82348_s spawnRange I

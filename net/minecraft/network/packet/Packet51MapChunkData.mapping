@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet51MapChunkData
-        FIELD field_74582_a compressedData [B
-        FIELD field_74580_b chunkExistFlag I
-        FIELD field_74581_c chunkHasAddSectionFlag I
+	FIELD field_74582_a compressedData [B
+	FIELD field_74580_b chunkExistFlag I
+	FIELD field_74581_c chunkHasAddSectionFlag I

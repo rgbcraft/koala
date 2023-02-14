@@ -1,5 +1,5 @@
 CLASS net/minecraft/entity/WatchableObject
-        FIELD field_75678_a objectType I
-        FIELD field_75676_b dataValueId I
-        FIELD field_75677_c watchedObject Ljava/lang/Object;
-        FIELD field_75675_d watched Z
+	FIELD field_75678_a objectType I
+	FIELD field_75676_b dataValueId I
+	FIELD field_75677_c watchedObject Ljava/lang/Object;
+	FIELD field_75675_d watched Z

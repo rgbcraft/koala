@@ -1,4 +1,4 @@
 CLASS net/minecraft/item/crafting/FurnaceRecipes
-        FIELD field_77606_a smeltingBase Lnet/minecraft/item/crafting/FurnaceRecipes;
-        FIELD field_77604_b smeltingList Ljava/util/Map;
-        FIELD field_77605_c experienceList Ljava/util/Map;
+	FIELD field_77606_a smeltingBase Lnet/minecraft/item/crafting/FurnaceRecipes;
+	FIELD field_77604_b smeltingList Ljava/util/Map;
+	FIELD field_77605_c experienceList Ljava/util/Map;

@@ -1,6 +1,6 @@
 CLASS net/minecraft/inventory/Slot
-        FIELD field_75225_a slotIndex I
-        FIELD field_75224_c inventory Lnet/minecraft/inventory/IInventory;
-        FIELD field_75222_d slotNumber I
-        FIELD field_75223_e xDisplayPosition I
-        FIELD field_75221_f yDisplayPosition I
+	FIELD field_75225_a slotIndex I
+	FIELD field_75224_c inventory Lnet/minecraft/inventory/IInventory;
+	FIELD field_75222_d slotNumber I
+	FIELD field_75223_e xDisplayPosition I
+	FIELD field_75221_f yDisplayPosition I

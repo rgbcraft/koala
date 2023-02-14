@@ -1,10 +1,10 @@
 CLASS net/minecraft/client/gui/GuiScreen
-        FIELD field_90017_e isMacOs Z
-        FIELD field_73882_e mc Lnet/minecraft/client/Minecraft;
-        FIELD field_73880_f width I
-        FIELD field_73881_g height I
-        FIELD field_73887_h controlList Ljava/util/List;
-        FIELD field_73885_j allowUserInput Z
-        FIELD field_73886_k fontRenderer Lnet/minecraft/client/gui/FontRenderer;
-        FIELD field_73884_l guiParticles Lnet/minecraft/client/gui/GuiParticle;
-        FIELD field_73883_a selectedButton Lnet/minecraft/client/gui/GuiButton;
+	FIELD field_90017_e isMacOs Z
+	FIELD field_73882_e mc Lnet/minecraft/client/Minecraft;
+	FIELD field_73880_f width I
+	FIELD field_73881_g height I
+	FIELD field_73887_h controlList Ljava/util/List;
+	FIELD field_73885_j allowUserInput Z
+	FIELD field_73886_k fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+	FIELD field_73884_l guiParticles Lnet/minecraft/client/gui/GuiParticle;
+	FIELD field_73883_a selectedButton Lnet/minecraft/client/gui/GuiButton;

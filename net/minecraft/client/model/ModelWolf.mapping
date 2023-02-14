@@ -1,9 +1,9 @@
 CLASS net/minecraft/client/model/ModelWolf
-        FIELD field_78185_a wolfHeadMain Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78183_b wolfBody Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78184_c wolfLeg1 Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78181_d wolfLeg2 Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78182_e wolfLeg3 Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78179_f wolfLeg4 Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78180_g wolfTail Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78186_h wolfMane Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78185_a wolfHeadMain Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78183_b wolfBody Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78184_c wolfLeg1 Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78181_d wolfLeg2 Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78182_e wolfLeg3 Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78179_f wolfLeg4 Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78180_g wolfTail Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78186_h wolfMane Lnet/minecraft/client/model/ModelRenderer;

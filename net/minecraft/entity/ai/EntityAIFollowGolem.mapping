@@ -1,5 +1,5 @@
 CLASS net/minecraft/entity/ai/EntityAIFollowGolem
-        FIELD field_75294_a theVillager Lnet/minecraft/entity/passive/EntityVillager;
-        FIELD field_75292_b theGolem Lnet/minecraft/entity/monster/EntityIronGolem;
-        FIELD field_75293_c takeGolemRoseTick I
-        FIELD field_75291_d tookGolemRose Z
+	FIELD field_75294_a theVillager Lnet/minecraft/entity/passive/EntityVillager;
+	FIELD field_75292_b theGolem Lnet/minecraft/entity/monster/EntityIronGolem;
+	FIELD field_75293_c takeGolemRoseTick I
+	FIELD field_75291_d tookGolemRose Z

@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/GuiEnchantment
-        FIELD field_74206_w bookModel Lnet/minecraft/client/model/ModelBook;
-        FIELD field_74216_x rand Ljava/util/Random;
-        FIELD field_74215_y containerEnchantment Lnet/minecraft/inventory/ContainerEnchantment;
-        FIELD field_74207_v theItemStack Lnet/minecraft/item/ItemStack;
+	FIELD field_74206_w bookModel Lnet/minecraft/client/model/ModelBook;
+	FIELD field_74216_x rand Ljava/util/Random;
+	FIELD field_74215_y containerEnchantment Lnet/minecraft/inventory/ContainerEnchantment;
+	FIELD field_74207_v theItemStack Lnet/minecraft/item/ItemStack;

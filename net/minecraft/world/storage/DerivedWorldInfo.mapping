@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/storage/DerivedWorldInfo
-        FIELD field_76115_a theWorldInfo Lnet/minecraft/world/storage/WorldInfo;
+	FIELD field_76115_a theWorldInfo Lnet/minecraft/world/storage/WorldInfo;

@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/particle/EntityDiggingFX
-        FIELD field_70597_a blockInstance Lnet/minecraft/block/Block;
+	FIELD field_70597_a blockInstance Lnet/minecraft/block/Block;

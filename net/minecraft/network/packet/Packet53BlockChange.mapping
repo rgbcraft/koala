@@ -1,6 +1,6 @@
 CLASS net/minecraft/network/packet/Packet53BlockChange
-        FIELD field_73425_a xPosition I
-        FIELD field_73423_b yPosition I
-        FIELD field_73424_c zPosition I
-        FIELD field_73421_d type I
-        FIELD field_73422_e metadata I
+	FIELD field_73425_a xPosition I
+	FIELD field_73423_b yPosition I
+	FIELD field_73424_c zPosition I
+	FIELD field_73421_d type I
+	FIELD field_73422_e metadata I

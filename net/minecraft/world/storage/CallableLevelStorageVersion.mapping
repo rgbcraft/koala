@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/storage/CallableLevelStorageVersion
-        FIELD field_85113_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;
+	FIELD field_85113_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;

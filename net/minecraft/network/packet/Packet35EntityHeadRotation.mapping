@@ -1,3 +1,3 @@
 CLASS net/minecraft/network/packet/Packet35EntityHeadRotation
-        FIELD field_73383_a entityId I
-        FIELD field_73382_b headRotationYaw B
+	FIELD field_73383_a entityId I
+	FIELD field_73382_b headRotationYaw B

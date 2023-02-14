@@ -1,2 +1,2 @@
 CLASS net/minecraft/nbt/NBTTagByte
-        FIELD field_74756_a data B
+	FIELD field_74756_a data B

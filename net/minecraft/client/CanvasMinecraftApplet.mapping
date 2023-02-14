@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/CanvasMinecraftApplet
-        FIELD field_74422_a mcApplet Lnet/minecraft/client/MinecraftApplet;
+	FIELD field_74422_a mcApplet Lnet/minecraft/client/MinecraftApplet;

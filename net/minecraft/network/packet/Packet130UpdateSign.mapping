@@ -1,5 +1,5 @@
 CLASS net/minecraft/network/packet/Packet130UpdateSign
-        FIELD field_73311_a xPosition I
-        FIELD field_73309_b yPosition I
-        FIELD field_73310_c zPosition I
-        FIELD field_73308_d signLines [Ljava/lang/String;
+	FIELD field_73311_a xPosition I
+	FIELD field_73309_b yPosition I
+	FIELD field_73310_c zPosition I
+	FIELD field_73308_d signLines [Ljava/lang/String;

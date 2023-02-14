@@ -1,5 +1,5 @@
 CLASS net/minecraft/inventory/ContainerFurnace
-        FIELD field_75158_e furnace Lnet/minecraft/tileentity/TileEntityFurnace;
-        FIELD field_75156_f lastCookTime I
-        FIELD field_75157_g lastBurnTime I
-        FIELD field_75159_h lastItemBurnTime I
+	FIELD field_75158_e furnace Lnet/minecraft/tileentity/TileEntityFurnace;
+	FIELD field_75156_f lastCookTime I
+	FIELD field_75157_g lastBurnTime I
+	FIELD field_75159_h lastItemBurnTime I

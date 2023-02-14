@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/gui/GuiFlatPresetsItem
-        FIELD field_82911_a iconId I
-        FIELD field_82909_b presetName Ljava/lang/String;
-        FIELD field_82910_c presetData Ljava/lang/String;
+	FIELD field_82911_a iconId I
+	FIELD field_82909_b presetName Ljava/lang/String;
+	FIELD field_82910_c presetData Ljava/lang/String;

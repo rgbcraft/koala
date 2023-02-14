@@ -1,8 +1,8 @@
 CLASS net/minecraft/stats/Achievement
-        FIELD field_75993_a displayColumn I
-        FIELD field_75991_b displayRow I
-        FIELD field_75992_c parentAchievement Lnet/minecraft/stats/Achievement;
-        FIELD field_75996_k achievementDescription Ljava/lang/String;
-        FIELD field_75994_l statStringFormatter Lnet/minecraft/stats/IStatStringFormat;
-        FIELD field_75990_d theItemStack Lnet/minecraft/item/ItemStack;
-        FIELD field_75995_m isSpecial Z
+	FIELD field_75993_a displayColumn I
+	FIELD field_75991_b displayRow I
+	FIELD field_75992_c parentAchievement Lnet/minecraft/stats/Achievement;
+	FIELD field_75996_k achievementDescription Ljava/lang/String;
+	FIELD field_75994_l statStringFormatter Lnet/minecraft/stats/IStatStringFormat;
+	FIELD field_75990_d theItemStack Lnet/minecraft/item/ItemStack;
+	FIELD field_75995_m isSpecial Z

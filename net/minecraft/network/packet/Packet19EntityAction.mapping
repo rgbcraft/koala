@@ -1,3 +1,3 @@
 CLASS net/minecraft/network/packet/Packet19EntityAction
-        FIELD field_73367_a entityId I
-        FIELD field_73366_b state I
+	FIELD field_73367_a entityId I
+	FIELD field_73366_b state I

@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntityRendererPiston
-        FIELD field_76904_a blockRenderer Lnet/minecraft/client/renderer/RenderBlocks;
+	FIELD field_76904_a blockRenderer Lnet/minecraft/client/renderer/RenderBlocks;

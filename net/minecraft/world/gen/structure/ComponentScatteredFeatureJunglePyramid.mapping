@@ -1,4 +1,4 @@
 CLASS net/minecraft/world/gen/structure/ComponentScatteredFeatureJunglePyramid
-        FIELD field_74943_l junglePyramidsChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
-        FIELD field_74944_m junglePyramidsDispenserContents [Lnet/minecraft/util/WeightedRandomChestContent;
-        FIELD field_74942_n junglePyramidsRandomScatteredStones Lnet/minecraft/world/gen/structure/StructureScatteredFeatureStones;
+	FIELD field_74943_l junglePyramidsChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
+	FIELD field_74944_m junglePyramidsDispenserContents [Lnet/minecraft/util/WeightedRandomChestContent;
+	FIELD field_74942_n junglePyramidsRandomScatteredStones Lnet/minecraft/world/gen/structure/StructureScatteredFeatureStones;

@@ -1,2 +1,2 @@
 CLASS net/minecraft/nbt/NBTTagCompound
-        FIELD field_74784_a tagMap Ljava/util/Map;
+	FIELD field_74784_a tagMap Ljava/util/Map;

@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/GuiChat
-        FIELD field_73899_c sentHistoryCursor I
-        FIELD field_73902_p clickedURI Ljava/net/URI;
-        FIELD field_73901_a inputField Lnet/minecraft/client/gui/GuiTextField;
-        FIELD field_73900_q defaultInputFieldText Ljava/lang/String;
+	FIELD field_73899_c sentHistoryCursor I
+	FIELD field_73902_p clickedURI Ljava/net/URI;
+	FIELD field_73901_a inputField Lnet/minecraft/client/gui/GuiTextField;
+	FIELD field_73900_q defaultInputFieldText Ljava/lang/String;

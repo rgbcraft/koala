@@ -1,4 +1,4 @@
 CLASS net/minecraft/world/chunk/storage/NibbleArrayReader
-        FIELD field_76689_a data [B
-        FIELD field_76687_b depthBits I
-        FIELD field_76688_c depthBitsPlusFour I
+	FIELD field_76689_a data [B
+	FIELD field_76687_b depthBits I
+	FIELD field_76688_c depthBitsPlusFour I

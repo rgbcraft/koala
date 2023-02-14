@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/renderer/ImageBufferDownload
-        FIELD field_78438_a imageData [I
-        FIELD field_78436_b imageWidth I
-        FIELD field_78437_c imageHeight I
+	FIELD field_78438_a imageData [I
+	FIELD field_78436_b imageWidth I
+	FIELD field_78437_c imageHeight I

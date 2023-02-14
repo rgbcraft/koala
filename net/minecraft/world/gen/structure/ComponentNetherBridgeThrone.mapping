@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/ComponentNetherBridgeThrone
-        FIELD field_74976_a hasSpawner Z
+	FIELD field_74976_a hasSpawner Z

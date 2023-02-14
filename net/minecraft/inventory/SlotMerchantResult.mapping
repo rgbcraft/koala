@@ -1,4 +1,4 @@
 CLASS net/minecraft/inventory/SlotMerchantResult
-        FIELD field_75233_a theMerchantInventory Lnet/minecraft/inventory/InventoryMerchant;
-        FIELD field_75232_b thePlayer Lnet/minecraft/entity/player/EntityPlayer;
-        FIELD field_75234_h theMerchant Lnet/minecraft/entity/IMerchant;
+	FIELD field_75233_a theMerchantInventory Lnet/minecraft/inventory/InventoryMerchant;
+	FIELD field_75232_b thePlayer Lnet/minecraft/entity/player/EntityPlayer;
+	FIELD field_75234_h theMerchant Lnet/minecraft/entity/IMerchant;

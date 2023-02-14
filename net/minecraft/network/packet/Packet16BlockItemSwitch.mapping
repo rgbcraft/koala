@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/packet/Packet16BlockItemSwitch
-        FIELD field_73386_a id I
+	FIELD field_73386_a id I

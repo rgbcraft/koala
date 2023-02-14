@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/renderer/culling/ClippingHelperImpl
-        FIELD field_78563_e instance Lnet/minecraft/client/renderer/culling/ClippingHelperImpl;
-        FIELD field_78561_f projectionMatrixBuffer Ljava/nio/FloatBuffer;
-        FIELD field_78562_g modelviewMatrixBuffer Ljava/nio/FloatBuffer;
+	FIELD field_78563_e instance Lnet/minecraft/client/renderer/culling/ClippingHelperImpl;
+	FIELD field_78561_f projectionMatrixBuffer Ljava/nio/FloatBuffer;
+	FIELD field_78562_g modelviewMatrixBuffer Ljava/nio/FloatBuffer;

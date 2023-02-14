@@ -1,5 +1,5 @@
 CLASS net/minecraft/entity/EntityTracker
-        FIELD field_72795_a theWorld Lnet/minecraft/world/WorldServer;
-        FIELD field_72793_b trackedEntities Ljava/util/Set;
-        FIELD field_72794_c trackedEntityIDs Lnet/minecraft/util/IntHashMap;
-        FIELD field_72792_d entityViewDistance I
+	FIELD field_72795_a theWorld Lnet/minecraft/world/WorldServer;
+	FIELD field_72793_b trackedEntities Ljava/util/Set;
+	FIELD field_72794_c trackedEntityIDs Lnet/minecraft/util/IntHashMap;
+	FIELD field_72792_d entityViewDistance I

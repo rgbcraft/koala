@@ -1,5 +1,5 @@
 CLASS net/minecraft/util/HttpUtilRunnable
-        FIELD field_76178_a feedbackHook Lnet/minecraft/util/IProgressUpdate;
-        FIELD field_76176_b sourceURL Ljava/lang/String;
-        FIELD field_76174_d destinationFile Ljava/io/File;
-        FIELD field_76175_e downloadSuccess Lnet/minecraft/util/IDownloadSuccess;
+	FIELD field_76178_a feedbackHook Lnet/minecraft/util/IProgressUpdate;
+	FIELD field_76176_b sourceURL Ljava/lang/String;
+	FIELD field_76174_d destinationFile Ljava/io/File;
+	FIELD field_76175_e downloadSuccess Lnet/minecraft/util/IDownloadSuccess;

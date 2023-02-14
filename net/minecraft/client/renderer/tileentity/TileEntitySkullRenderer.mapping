@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntitySkullRenderer
-        FIELD field_82397_a skullRenderer Lnet/minecraft/client/renderer/tileentity/TileEntitySkullRenderer;
+	FIELD field_82397_a skullRenderer Lnet/minecraft/client/renderer/tileentity/TileEntitySkullRenderer;

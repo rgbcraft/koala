@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/ComponentScatteredFeatureDesertPyramid
-        FIELD field_74941_i itemsToGenerateInTemple [Lnet/minecraft/util/WeightedRandomChestContent;
+	FIELD field_74941_i itemsToGenerateInTemple [Lnet/minecraft/util/WeightedRandomChestContent;

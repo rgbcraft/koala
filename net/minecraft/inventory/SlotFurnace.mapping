@@ -1,2 +1,2 @@
 CLASS net/minecraft/inventory/SlotFurnace
-        FIELD field_75229_a thePlayer Lnet/minecraft/entity/player/EntityPlayer;
+	FIELD field_75229_a thePlayer Lnet/minecraft/entity/player/EntityPlayer;

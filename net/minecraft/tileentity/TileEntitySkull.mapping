@@ -1,4 +1,4 @@
 CLASS net/minecraft/tileentity/TileEntitySkull
-        FIELD field_82123_a skullType I
-        FIELD field_82121_b skullRotation I
-        FIELD field_82122_c extraType Ljava/lang/String;
+	FIELD field_82123_a skullType I
+	FIELD field_82121_b skullRotation I
+	FIELD field_82122_c extraType Ljava/lang/String;

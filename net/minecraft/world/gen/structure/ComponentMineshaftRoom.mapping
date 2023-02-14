@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/ComponentMineshaftRoom
-        FIELD field_74949_a roomsLinkedToTheRoom Ljava/util/List;
+	FIELD field_74949_a roomsLinkedToTheRoom Ljava/util/List;

@@ -1,13 +1,13 @@
 CLASS net/minecraft/client/renderer/RenderEngine
-        FIELD field_78362_c textureMap Ljava/util/HashMap;
-        FIELD field_78359_d textureContentsMap Ljava/util/HashMap;
-        FIELD field_78360_e textureNameToImageMap Lnet/minecraft/util/IntHashMap;
-        FIELD field_78357_f singleIntBuffer Ljava/nio/IntBuffer;
-        FIELD field_78358_g imageData Ljava/nio/ByteBuffer;
-        FIELD field_78367_h textureList Ljava/util/List;
-        FIELD field_78368_i urlToImageDataMap Ljava/util/Map;
-        FIELD field_78365_j options Lnet/minecraft/client/settings/GameSettings;
-        FIELD field_78363_a clampTexture Z
-        FIELD field_78361_b blurTexture Z
-        FIELD field_78366_k texturePack Lnet/minecraft/client/texturepacks/TexturePackList;
-        FIELD field_78364_l missingTextureImage Ljava/awt/image/BufferedImage;
+	FIELD field_78362_c textureMap Ljava/util/HashMap;
+	FIELD field_78359_d textureContentsMap Ljava/util/HashMap;
+	FIELD field_78360_e textureNameToImageMap Lnet/minecraft/util/IntHashMap;
+	FIELD field_78357_f singleIntBuffer Ljava/nio/IntBuffer;
+	FIELD field_78358_g imageData Ljava/nio/ByteBuffer;
+	FIELD field_78367_h textureList Ljava/util/List;
+	FIELD field_78368_i urlToImageDataMap Ljava/util/Map;
+	FIELD field_78365_j options Lnet/minecraft/client/settings/GameSettings;
+	FIELD field_78363_a clampTexture Z
+	FIELD field_78361_b blurTexture Z
+	FIELD field_78366_k texturePack Lnet/minecraft/client/texturepacks/TexturePackList;
+	FIELD field_78364_l missingTextureImage Ljava/awt/image/BufferedImage;

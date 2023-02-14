@@ -1,7 +1,7 @@
 CLASS net/minecraft/network/packet/Packet62LevelSound
-        FIELD field_73579_a soundName Ljava/lang/String;
-        FIELD field_73577_b effectX I
-        FIELD field_73578_c effectY I
-        FIELD field_73575_d effectZ I
-        FIELD field_73576_e volume F
-        FIELD field_73574_f pitch I
+	FIELD field_73579_a soundName Ljava/lang/String;
+	FIELD field_73577_b effectX I
+	FIELD field_73578_c effectY I
+	FIELD field_73575_d effectZ I
+	FIELD field_73576_e volume F
+	FIELD field_73574_f pitch I

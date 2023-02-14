@@ -1,2 +1,2 @@
 CLASS net/minecraft/item/ItemReed
-        FIELD field_77830_a spawnID I
+	FIELD field_77830_a spawnID I

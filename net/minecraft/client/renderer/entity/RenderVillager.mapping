@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/entity/RenderVillager
-        FIELD field_77056_a villagerModel Lnet/minecraft/client/model/ModelVillager;
+	FIELD field_77056_a villagerModel Lnet/minecraft/client/model/ModelVillager;

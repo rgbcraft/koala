@@ -1,2 +1,2 @@
 CLASS net/minecraft/inventory/InventoryRepair
-        FIELD field_82346_a theContainer Lnet/minecraft/inventory/ContainerRepair;
+	FIELD field_82346_a theContainer Lnet/minecraft/inventory/ContainerRepair;

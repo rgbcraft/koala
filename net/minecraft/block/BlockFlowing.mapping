@@ -1,4 +1,4 @@
 CLASS net/minecraft/block/BlockFlowing
-        FIELD field_72214_a numAdjacentSources I
-        FIELD field_72212_b isOptimalFlowDirection [Z
-        FIELD field_72213_c flowCost [I
+	FIELD field_72214_a numAdjacentSources I
+	FIELD field_72212_b isOptimalFlowDirection [Z
+	FIELD field_72213_c flowCost [I

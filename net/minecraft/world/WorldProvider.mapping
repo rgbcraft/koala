@@ -1,9 +1,9 @@
 CLASS net/minecraft/world/WorldProvider
-        FIELD field_76579_a worldObj Lnet/minecraft/world/World;
-        FIELD field_76577_b terrainType Lnet/minecraft/world/WorldType;
-        FIELD field_76578_c worldChunkMgr Lnet/minecraft/world/biome/WorldChunkManager;
-        FIELD field_76575_d isHellWorld Z
-        FIELD field_76576_e hasNoSky Z
-        FIELD field_76573_f lightBrightnessTable [F
-        FIELD field_76574_g dimensionId I
-        FIELD field_76580_h colorsSunriseSunset [F
+	FIELD field_76579_a worldObj Lnet/minecraft/world/World;
+	FIELD field_76577_b terrainType Lnet/minecraft/world/WorldType;
+	FIELD field_76578_c worldChunkMgr Lnet/minecraft/world/biome/WorldChunkManager;
+	FIELD field_76575_d isHellWorld Z
+	FIELD field_76576_e hasNoSky Z
+	FIELD field_76573_f lightBrightnessTable [F
+	FIELD field_76574_g dimensionId I
+	FIELD field_76580_h colorsSunriseSunset [F

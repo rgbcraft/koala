@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/feature/WorldGenLakes
-        FIELD field_76524_a blockIndex I
+	FIELD field_76524_a blockIndex I

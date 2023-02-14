@@ -1,6 +1,6 @@
 CLASS net/minecraft/entity/item/EntityEnderEye
-        FIELD field_70224_b targetX D
-        FIELD field_70225_c targetY D
-        FIELD field_70222_d targetZ D
-        FIELD field_70223_e despawnTimer I
-        FIELD field_70221_f shatterOrDrop Z
+	FIELD field_70224_b targetX D
+	FIELD field_70225_c targetY D
+	FIELD field_70222_d targetZ D
+	FIELD field_70223_e despawnTimer I
+	FIELD field_70221_f shatterOrDrop Z

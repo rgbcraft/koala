@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/biome/BiomeEndDecorator
-        FIELD field_76835_L spikeGen Lnet/minecraft/world/gen/feature/WorldGenerator;
+	FIELD field_76835_L spikeGen Lnet/minecraft/world/gen/feature/WorldGenerator;

@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/gui/GuiSmallButton
-        FIELD field_73754_j enumOptions Lnet/minecraft/client/settings/EnumOptions;
+	FIELD field_73754_j enumOptions Lnet/minecraft/client/settings/EnumOptions;

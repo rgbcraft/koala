@@ -1,2 +1,2 @@
 CLASS net/minecraft/dispenser/RegistrySimple
-        FIELD field_82596_a registryObjects Ljava/util/Map;
+	FIELD field_82596_a registryObjects Ljava/util/Map;

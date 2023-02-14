@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet252SharedKey
-        FIELD field_73307_a sharedSecret [B
-        FIELD field_73305_b verifyToken [B
-        FIELD field_73306_c sharedKey Ljavax/crypto/SecretKey;
+	FIELD field_73307_a sharedSecret [B
+	FIELD field_73305_b verifyToken [B
+	FIELD field_73306_c sharedKey Ljavax/crypto/SecretKey;

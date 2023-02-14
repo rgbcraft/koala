@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/entity/RenderSnowMan
-        FIELD field_77094_a snowmanModel Lnet/minecraft/client/model/ModelSnowMan;
+	FIELD field_77094_a snowmanModel Lnet/minecraft/client/model/ModelSnowMan;

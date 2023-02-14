@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/tileentity/RenderWitherSkull
-        FIELD field_82401_a skeletonHeadModel Lnet/minecraft/client/model/ModelSkeletonHead;
+	FIELD field_82401_a skeletonHeadModel Lnet/minecraft/client/model/ModelSkeletonHead;

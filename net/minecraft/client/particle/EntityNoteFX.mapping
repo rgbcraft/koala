@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/particle/EntityNoteFX
-        FIELD field_70585_a noteParticleScale F
+	FIELD field_70585_a noteParticleScale F

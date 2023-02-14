@@ -1,3 +1,3 @@
 CLASS net/minecraft/item/ItemSword
-        FIELD field_77827_a weaponDamage I
-        FIELD field_77826_b toolMaterial Lnet/minecraft/item/EnumToolMaterial;
+	FIELD field_77827_a weaponDamage I
+	FIELD field_77826_b toolMaterial Lnet/minecraft/item/EnumToolMaterial;

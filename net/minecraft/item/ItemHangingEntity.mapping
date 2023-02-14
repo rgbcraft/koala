@@ -1,2 +1,2 @@
 CLASS net/minecraft/item/ItemHangingEntity
-        FIELD field_82811_a hangingEntityClass Ljava/lang/Class;
+	FIELD field_82811_a hangingEntityClass Ljava/lang/Class;

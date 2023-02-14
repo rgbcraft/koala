@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/chunk/storage/AnvilChunkLoader
-        FIELD field_75828_a chunksToRemove Ljava/util/List;
-        FIELD field_75826_b pendingAnvilChunksCoordinates Ljava/util/Set;
-        FIELD field_75827_c syncLockObject Ljava/lang/Object;
-        FIELD field_75825_d chunkSaveLocation Ljava/io/File;
+	FIELD field_75828_a chunksToRemove Ljava/util/List;
+	FIELD field_75826_b pendingAnvilChunksCoordinates Ljava/util/Set;
+	FIELD field_75827_c syncLockObject Ljava/lang/Object;
+	FIELD field_75825_d chunkSaveLocation Ljava/io/File;

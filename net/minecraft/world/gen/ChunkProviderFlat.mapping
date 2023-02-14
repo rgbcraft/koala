@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/gen/ChunkProviderFlat
-        FIELD field_73163_a worldObj Lnet/minecraft/world/World;
-        FIELD field_73161_b random Ljava/util/Random;
-        FIELD field_82696_f structureGenerators Ljava/util/List;
-        FIELD field_82703_i waterLakeGenerator Lnet/minecraft/world/gen/feature/WorldGenLakes;
-        FIELD field_82701_j lavaLakeGenerator Lnet/minecraft/world/gen/feature/WorldGenLakes;
+	FIELD field_73163_a worldObj Lnet/minecraft/world/World;
+	FIELD field_73161_b random Ljava/util/Random;
+	FIELD field_82696_f structureGenerators Ljava/util/List;
+	FIELD field_82703_i waterLakeGenerator Lnet/minecraft/world/gen/feature/WorldGenLakes;
+	FIELD field_82701_j lavaLakeGenerator Lnet/minecraft/world/gen/feature/WorldGenLakes;

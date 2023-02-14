@@ -1,4 +1,4 @@
 CLASS net/minecraft/world/gen/structure/MapGenStronghold
-        FIELD field_75058_e allowedBiomeGenBases [Lnet/minecraft/world/biome/BiomeGenBase;
-        FIELD field_75056_f ranBiomeCheck Z
-        FIELD field_75057_g structureCoords [Lnet/minecraft/world/ChunkCoordIntPair;
+	FIELD field_75058_e allowedBiomeGenBases [Lnet/minecraft/world/biome/BiomeGenBase;
+	FIELD field_75056_f ranBiomeCheck Z
+	FIELD field_75057_g structureCoords [Lnet/minecraft/world/ChunkCoordIntPair;

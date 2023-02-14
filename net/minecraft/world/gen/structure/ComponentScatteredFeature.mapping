@@ -1,4 +1,4 @@
 CLASS net/minecraft/world/gen/structure/ComponentScatteredFeature
-        FIELD field_74939_a scatteredFeatureSizeX I
-        FIELD field_74937_b scatteredFeatureSizeY I
-        FIELD field_74938_c scatteredFeatureSizeZ I
+	FIELD field_74939_a scatteredFeatureSizeX I
+	FIELD field_74937_b scatteredFeatureSizeY I
+	FIELD field_74938_c scatteredFeatureSizeZ I

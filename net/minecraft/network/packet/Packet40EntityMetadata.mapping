@@ -1,3 +1,3 @@
 CLASS net/minecraft/network/packet/Packet40EntityMetadata
-        FIELD field_73393_a entityId I
-        FIELD field_73392_b metadata Ljava/util/List;
+	FIELD field_73393_a entityId I
+	FIELD field_73392_b metadata Ljava/util/List;

@@ -1,2 +1,2 @@
 CLASS net/minecraft/server/dedicated/DedicatedServerSleepThread
-        FIELD field_72451_a theDecitatedServer Lnet/minecraft/server/dedicated/DedicatedServer;
+	FIELD field_72451_a theDecitatedServer Lnet/minecraft/server/dedicated/DedicatedServer;

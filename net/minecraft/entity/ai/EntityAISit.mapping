@@ -1,3 +1,3 @@
 CLASS net/minecraft/entity/ai/EntityAISit
-        FIELD field_75272_a theEntity Lnet/minecraft/entity/passive/EntityTameable;
-        FIELD field_75271_b isSitting Z
+	FIELD field_75272_a theEntity Lnet/minecraft/entity/passive/EntityTameable;
+	FIELD field_75271_b isSitting Z

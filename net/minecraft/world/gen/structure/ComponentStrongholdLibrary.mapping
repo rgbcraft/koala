@@ -1,4 +1,4 @@
 CLASS net/minecraft/world/gen/structure/ComponentStrongholdLibrary
-        FIELD field_75007_b strongholdLibraryChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
-        FIELD field_75009_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;
-        FIELD field_75008_c isLargeRoom Z
+	FIELD field_75007_b strongholdLibraryChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
+	FIELD field_75009_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;
+	FIELD field_75008_c isLargeRoom Z

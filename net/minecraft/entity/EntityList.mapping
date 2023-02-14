@@ -1,14 +1,14 @@
 CLASS net/minecraft/entity/EntityList
-        FIELD field_75625_b stringToClassMapping Ljava/util/Map;
-        FIELD field_75626_c classToStringMapping Ljava/util/Map;
-        FIELD field_75623_d IDtoClassMapping Ljava/util/Map;
-        FIELD field_75624_e classToIDMapping Ljava/util/Map;
-        FIELD field_75622_f stringToIDMapping Ljava/util/Map;
-        FIELD field_75627_a entityEggs Ljava/util/HashMap;
+	FIELD field_75625_b stringToClassMapping Ljava/util/Map;
+	FIELD field_75626_c classToStringMapping Ljava/util/Map;
+	FIELD field_75623_d IDtoClassMapping Ljava/util/Map;
+	FIELD field_75624_e classToIDMapping Ljava/util/Map;
+	FIELD field_75622_f stringToIDMapping Ljava/util/Map;
+	FIELD field_75627_a entityEggs Ljava/util/HashMap;
 CLASS net/minecraft/entity/EntityList
-        FIELD field_75625_b stringToClassMapping Ljava/util/Map;
-        FIELD field_75626_c classToStringMapping Ljava/util/Map;
-        FIELD field_75623_d IDtoClassMapping Ljava/util/Map;
-        FIELD field_75624_e classToIDMapping Ljava/util/Map;
-        FIELD field_75622_f stringToIDMapping Ljava/util/Map;
-        FIELD field_75627_a entityEggs Ljava/util/HashMap;
+	FIELD field_75625_b stringToClassMapping Ljava/util/Map;
+	FIELD field_75626_c classToStringMapping Ljava/util/Map;
+	FIELD field_75623_d IDtoClassMapping Ljava/util/Map;
+	FIELD field_75624_e classToIDMapping Ljava/util/Map;
+	FIELD field_75622_f stringToIDMapping Ljava/util/Map;
+	FIELD field_75627_a entityEggs Ljava/util/HashMap;

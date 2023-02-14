@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/storage/CallableLevelDimension
-        FIELD field_85115_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;
+	FIELD field_85115_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;

@@ -1,4 +1,4 @@
 CLASS net/minecraft/util/MouseHelper
-        FIELD field_74376_c windowComponent Ljava/awt/Component;
-        FIELD field_74377_a deltaX I
-        FIELD field_74375_b deltaY I
+	FIELD field_74376_c windowComponent Ljava/awt/Component;
+	FIELD field_74377_a deltaX I
+	FIELD field_74375_b deltaY I

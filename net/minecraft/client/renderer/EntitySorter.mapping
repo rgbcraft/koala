@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/renderer/EntitySorter
-        FIELD field_78949_a entityPosX D
-        FIELD field_78947_b entityPosY D
-        FIELD field_78948_c entityPosZ D
+	FIELD field_78949_a entityPosX D
+	FIELD field_78947_b entityPosY D
+	FIELD field_78948_c entityPosZ D

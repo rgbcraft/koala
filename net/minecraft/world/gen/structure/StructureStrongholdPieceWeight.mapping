@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/gen/structure/StructureStrongholdPieceWeight
-        FIELD field_75194_a pieceClass Ljava/lang/Class;
-        FIELD field_75192_b pieceWeight I
-        FIELD field_75193_c instancesSpawned I
-        FIELD field_75191_d instancesLimit I
+	FIELD field_75194_a pieceClass Ljava/lang/Class;
+	FIELD field_75192_b pieceWeight I
+	FIELD field_75193_c instancesSpawned I
+	FIELD field_75191_d instancesLimit I

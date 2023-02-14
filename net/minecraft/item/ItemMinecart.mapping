@@ -1,2 +1,2 @@
 CLASS net/minecraft/item/ItemMinecart
-        FIELD field_77841_a minecartType I
+	FIELD field_77841_a minecartType I

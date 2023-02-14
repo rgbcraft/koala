@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/entity/RenderMinecart
-        FIELD field_77013_a modelMinecart Lnet/minecraft/client/model/ModelBase;
+	FIELD field_77013_a modelMinecart Lnet/minecraft/client/model/ModelBase;

@@ -1,4 +1,4 @@
 CLASS net/minecraft/inventory/ContainerBrewingStand
-        FIELD field_75188_e tileBrewingStand Lnet/minecraft/tileentity/TileEntityBrewingStand;
-        FIELD field_75186_f theSlot Lnet/minecraft/inventory/Slot;
-        FIELD field_75187_g brewTime I
+	FIELD field_75188_e tileBrewingStand Lnet/minecraft/tileentity/TileEntityBrewingStand;
+	FIELD field_75186_f theSlot Lnet/minecraft/inventory/Slot;
+	FIELD field_75187_g brewTime I

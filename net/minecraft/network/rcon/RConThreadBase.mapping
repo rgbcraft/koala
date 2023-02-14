@@ -1,6 +1,6 @@
 CLASS net/minecraft/network/rcon/RConThreadBase
-        FIELD field_72619_a running Z
-        FIELD field_72617_b server Lnet/minecraft/network/rcon/IServer;
-        FIELD field_72618_c rconThread Ljava/lang/Thread;
-        FIELD field_72616_e socketList Ljava/util/List;
-        FIELD field_72614_f serverSocketList Ljava/util/List;
+	FIELD field_72619_a running Z
+	FIELD field_72617_b server Lnet/minecraft/network/rcon/IServer;
+	FIELD field_72618_c rconThread Ljava/lang/Thread;
+	FIELD field_72616_e socketList Ljava/util/List;
+	FIELD field_72614_f serverSocketList Ljava/util/List;

@@ -1,7 +1,7 @@
 CLASS net/minecraft/entity/ai/EntityMoveHelper
-        FIELD field_75648_a entity Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75646_b posX D
-        FIELD field_75647_c posY D
-        FIELD field_75644_d posZ D
-        FIELD field_75645_e speed F
-        FIELD field_75643_f update Z
+	FIELD field_75648_a entity Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75646_b posX D
+	FIELD field_75647_c posY D
+	FIELD field_75644_d posZ D
+	FIELD field_75645_e speed F
+	FIELD field_75643_f update Z

@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/ComponentVillageChurch
-        FIELD field_74920_a averageGroundLevel I
+	FIELD field_74920_a averageGroundLevel I

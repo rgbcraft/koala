@@ -1,2 +1,2 @@
 CLASS net/minecraft/block/BlockRail
-        FIELD field_72186_a isPowered Z
+	FIELD field_72186_a isPowered Z

@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/TcpMonitorThread
-        FIELD field_74417_a theTcpConnection Lnet/minecraft/network/TcpConnection;
+	FIELD field_74417_a theTcpConnection Lnet/minecraft/network/TcpConnection;

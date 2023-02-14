@@ -1,7 +1,7 @@
 CLASS net/minecraft/network/packet/Packet204ClientInfo
-        FIELD field_73468_a language Ljava/lang/String;
-        FIELD field_73466_b renderDistance I
-        FIELD field_73467_c chatVisisble I
-        FIELD field_73464_d chatColours Z
-        FIELD field_73465_e gameDifficulty I
-        FIELD field_82564_f showCape Z
+	FIELD field_73468_a language Ljava/lang/String;
+	FIELD field_73466_b renderDistance I
+	FIELD field_73467_c chatVisisble I
+	FIELD field_73464_d chatColours Z
+	FIELD field_73465_e gameDifficulty I
+	FIELD field_82564_f showCape Z

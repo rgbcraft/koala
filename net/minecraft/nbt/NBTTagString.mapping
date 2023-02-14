@@ -1,2 +1,2 @@
 CLASS net/minecraft/nbt/NBTTagString
-        FIELD field_74751_a data Ljava/lang/String;
+	FIELD field_74751_a data Ljava/lang/String;

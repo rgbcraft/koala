@@ -1,2 +1,2 @@
 CLASS net/minecraft/nbt/NBTTagLong
-        FIELD field_74753_a data J
+	FIELD field_74753_a data J

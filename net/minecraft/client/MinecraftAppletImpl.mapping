@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/MinecraftAppletImpl
-        FIELD field_71478_O mainFrame Lnet/minecraft/client/MinecraftApplet;
+	FIELD field_71478_O mainFrame Lnet/minecraft/client/MinecraftApplet;

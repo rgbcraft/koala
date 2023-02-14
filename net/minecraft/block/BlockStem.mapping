@@ -1,2 +1,2 @@
 CLASS net/minecraft/block/BlockStem
-        FIELD field_72267_a fruitType Lnet/minecraft/block/Block;
+	FIELD field_72267_a fruitType Lnet/minecraft/block/Block;

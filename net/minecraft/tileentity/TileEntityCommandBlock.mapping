@@ -1,2 +1,2 @@
 CLASS net/minecraft/tileentity/TileEntityCommandBlock
-        FIELD field_82354_a command Ljava/lang/String;
+	FIELD field_82354_a command Ljava/lang/String;

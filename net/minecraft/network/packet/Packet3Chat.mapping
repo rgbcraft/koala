@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet3Chat
-        FIELD field_73478_a maxChatLength I
-        FIELD field_73476_b message Ljava/lang/String;
-        FIELD field_73477_c isServer Z
+	FIELD field_73478_a maxChatLength I
+	FIELD field_73476_b message Ljava/lang/String;
+	FIELD field_73477_c isServer Z

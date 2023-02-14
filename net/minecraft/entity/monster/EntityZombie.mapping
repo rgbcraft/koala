@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/monster/EntityZombie
-        FIELD field_82234_d conversionTime I
+	FIELD field_82234_d conversionTime I

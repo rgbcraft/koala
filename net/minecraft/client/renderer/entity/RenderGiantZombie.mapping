@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/entity/RenderGiantZombie
-        FIELD field_77073_a scale F
+	FIELD field_77073_a scale F

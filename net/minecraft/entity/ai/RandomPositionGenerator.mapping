@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/ai/RandomPositionGenerator
-        FIELD field_75465_a staticVector Lnet/minecraft/util/Vec3;
+	FIELD field_75465_a staticVector Lnet/minecraft/util/Vec3;

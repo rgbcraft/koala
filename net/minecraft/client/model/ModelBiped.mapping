@@ -1,14 +1,14 @@
 CLASS net/minecraft/client/model/ModelBiped
-        FIELD field_78116_c bipedHead Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78114_d bipedHeadwear Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78115_e bipedBody Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78112_f bipedRightArm Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78113_g bipedLeftArm Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78123_h bipedRightLeg Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78124_i bipedLeftLeg Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78121_j bipedEars Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78122_k bipedCloak Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78119_l heldItemLeft I
-        FIELD field_78120_m heldItemRight I
-        FIELD field_78117_n isSneak Z
-        FIELD field_78118_o aimedBow Z
+	FIELD field_78116_c bipedHead Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78114_d bipedHeadwear Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78115_e bipedBody Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78112_f bipedRightArm Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78113_g bipedLeftArm Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78123_h bipedRightLeg Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78124_i bipedLeftLeg Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78121_j bipedEars Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78122_k bipedCloak Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78119_l heldItemLeft I
+	FIELD field_78120_m heldItemRight I
+	FIELD field_78117_n isSneak Z
+	FIELD field_78118_o aimedBow Z

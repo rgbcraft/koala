@@ -1,9 +1,9 @@
 CLASS net/minecraft/client/gui/GuiButton
-        FIELD field_73747_a width I
-        FIELD field_73745_b height I
-        FIELD field_73746_c xPosition I
-        FIELD field_73743_d yPosition I
-        FIELD field_73744_e displayString Ljava/lang/String;
-        FIELD field_73741_f id I
-        FIELD field_73742_g enabled Z
-        FIELD field_73748_h drawButton Z
+	FIELD field_73747_a width I
+	FIELD field_73745_b height I
+	FIELD field_73746_c xPosition I
+	FIELD field_73743_d yPosition I
+	FIELD field_73744_e displayString Ljava/lang/String;
+	FIELD field_73741_f id I
+	FIELD field_73742_g enabled Z
+	FIELD field_73748_h drawButton Z

@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/MinecraftApplet
-        FIELD field_71483_a mcCanvas Ljava/awt/Canvas;
-        FIELD field_71481_b mc Lnet/minecraft/client/Minecraft;
-        FIELD field_71482_c mcThread Ljava/lang/Thread;
+	FIELD field_71483_a mcCanvas Ljava/awt/Canvas;
+	FIELD field_71481_b mc Lnet/minecraft/client/Minecraft;
+	FIELD field_71482_c mcThread Ljava/lang/Thread;

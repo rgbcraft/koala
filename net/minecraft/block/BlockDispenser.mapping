@@ -1,3 +1,3 @@
 CLASS net/minecraft/block/BlockDispenser
-        FIELD field_82527_a dispenseBehaviorRegistry Lnet/minecraft/dispenser/IRegistry;
-        FIELD field_72284_a random Ljava/util/Random;
+	FIELD field_82527_a dispenseBehaviorRegistry Lnet/minecraft/dispenser/IRegistry;
+	FIELD field_72284_a random Ljava/util/Random;

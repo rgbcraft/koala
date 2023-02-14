@@ -1,7 +1,7 @@
 CLASS net/minecraft/inventory/ContainerWorkbench
-        FIELD field_75162_e craftMatrix Lnet/minecraft/inventory/InventoryCrafting;
-        FIELD field_75160_f craftResult Lnet/minecraft/inventory/IInventory;
-        FIELD field_75161_g worldObj Lnet/minecraft/world/World;
-        FIELD field_75164_h posX I
-        FIELD field_75165_i posY I
-        FIELD field_75163_j posZ I
+	FIELD field_75162_e craftMatrix Lnet/minecraft/inventory/InventoryCrafting;
+	FIELD field_75160_f craftResult Lnet/minecraft/inventory/IInventory;
+	FIELD field_75161_g worldObj Lnet/minecraft/world/World;
+	FIELD field_75164_h posX I
+	FIELD field_75165_i posY I
+	FIELD field_75163_j posZ I

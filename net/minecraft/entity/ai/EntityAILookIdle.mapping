@@ -1,5 +1,5 @@
 CLASS net/minecraft/entity/ai/EntityAILookIdle
-        FIELD field_75258_a idleEntity Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75256_b lookX D
-        FIELD field_75257_c lookZ D
-        FIELD field_75255_d idleTime I
+	FIELD field_75258_a idleEntity Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75256_b lookX D
+	FIELD field_75257_c lookZ D
+	FIELD field_75255_d idleTime I

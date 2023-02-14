@@ -1,2 +1,2 @@
 CLASS net/minecraft/server/management/LowerStringMap
-        FIELD field_76117_a internalMap Ljava/util/Map;
+	FIELD field_76117_a internalMap Ljava/util/Map;

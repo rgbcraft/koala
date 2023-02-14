@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/ColorizerFoliage
-        FIELD field_77471_a foliageBuffer [I
+	FIELD field_77471_a foliageBuffer [I

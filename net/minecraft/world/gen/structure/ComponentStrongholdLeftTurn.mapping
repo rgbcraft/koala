@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/ComponentStrongholdLeftTurn
-        FIELD field_75011_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;
+	FIELD field_75011_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;

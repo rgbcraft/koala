@@ -1,4 +1,4 @@
 CLASS net/minecraft/util/ThreadDownloadResources
-        FIELD field_74579_a resourcesFolder Ljava/io/File;
-        FIELD field_74577_b mc Lnet/minecraft/client/Minecraft;
-        FIELD field_74578_c closing Z
+	FIELD field_74579_a resourcesFolder Ljava/io/File;
+	FIELD field_74577_b mc Lnet/minecraft/client/Minecraft;
+	FIELD field_74578_c closing Z

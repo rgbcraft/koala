@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/particle/EntitySmokeFX
-        FIELD field_70587_a smokeParticleScale F
+	FIELD field_70587_a smokeParticleScale F

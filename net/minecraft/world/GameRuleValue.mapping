@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/GameRuleValue
-        FIELD field_82762_a valueString Ljava/lang/String;
-        FIELD field_82760_b valueBoolean Z
-        FIELD field_82761_c valueInteger I
-        FIELD field_82759_d valueDouble D
+	FIELD field_82762_a valueString Ljava/lang/String;
+	FIELD field_82760_b valueBoolean Z
+	FIELD field_82761_c valueInteger I
+	FIELD field_82759_d valueDouble D

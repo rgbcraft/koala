@@ -1,4 +1,4 @@
 CLASS net/minecraft/village/VillageAgressor
-        FIELD field_75592_a agressor Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75590_b agressionTime I
-        FIELD field_75591_c villageObj Lnet/minecraft/village/Village;
+	FIELD field_75592_a agressor Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75590_b agressionTime I
+	FIELD field_75591_c villageObj Lnet/minecraft/village/Village;

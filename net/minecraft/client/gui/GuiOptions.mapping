@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/GuiOptions
-        FIELD field_74052_b relevantOptions [Lnet/minecraft/client/settings/EnumOptions;
-        FIELD field_74053_c parentScreen Lnet/minecraft/client/gui/GuiScreen;
-        FIELD field_74051_d options Lnet/minecraft/client/settings/GameSettings;
-        FIELD field_74054_a screenTitle Ljava/lang/String;
+	FIELD field_74052_b relevantOptions [Lnet/minecraft/client/settings/EnumOptions;
+	FIELD field_74053_c parentScreen Lnet/minecraft/client/gui/GuiScreen;
+	FIELD field_74051_d options Lnet/minecraft/client/settings/GameSettings;
+	FIELD field_74054_a screenTitle Ljava/lang/String;

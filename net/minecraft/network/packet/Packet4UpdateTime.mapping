@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/packet/Packet4UpdateTime
-        FIELD field_73301_a time J
+	FIELD field_73301_a time J

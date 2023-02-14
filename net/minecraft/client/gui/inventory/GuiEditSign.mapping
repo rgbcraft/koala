@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/gui/inventory/GuiEditSign
-        FIELD field_73981_b allowedCharacters Ljava/lang/String;
-        FIELD field_73983_a screenTitle Ljava/lang/String;
-        FIELD field_73982_c entitySign Lnet/minecraft/tileentity/TileEntitySign;
-        FIELD field_73980_d updateCounter I
-        FIELD field_73984_m editLine I
+	FIELD field_73981_b allowedCharacters Ljava/lang/String;
+	FIELD field_73983_a screenTitle Ljava/lang/String;
+	FIELD field_73982_c entitySign Lnet/minecraft/tileentity/TileEntitySign;
+	FIELD field_73980_d updateCounter I
+	FIELD field_73984_m editLine I

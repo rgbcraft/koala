@@ -1,14 +1,14 @@
 CLASS net/minecraft/network/packet/Packet24MobSpawn
-        FIELD field_73496_a entityId I
-        FIELD field_73494_b type I
-        FIELD field_73495_c xPosition I
-        FIELD field_73492_d yPosition I
-        FIELD field_73493_e zPosition I
-        FIELD field_73490_f velocityX I
-        FIELD field_73491_g velocityY I
-        FIELD field_73499_h velocityZ I
-        FIELD field_73500_i yaw B
-        FIELD field_73497_j pitch B
-        FIELD field_73498_k headYaw B
-        FIELD field_73502_s metaData Lnet/minecraft/entity/DataWatcher;
-        FIELD field_73501_t metadata Ljava/util/List;
+	FIELD field_73496_a entityId I
+	FIELD field_73494_b type I
+	FIELD field_73495_c xPosition I
+	FIELD field_73492_d yPosition I
+	FIELD field_73493_e zPosition I
+	FIELD field_73490_f velocityX I
+	FIELD field_73491_g velocityY I
+	FIELD field_73499_h velocityZ I
+	FIELD field_73500_i yaw B
+	FIELD field_73497_j pitch B
+	FIELD field_73498_k headYaw B
+	FIELD field_73502_s metaData Lnet/minecraft/entity/DataWatcher;
+	FIELD field_73501_t metadata Ljava/util/List;

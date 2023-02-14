@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/packet/Packet101CloseWindow
-        FIELD field_73432_a windowId I
+	FIELD field_73432_a windowId I

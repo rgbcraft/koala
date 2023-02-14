@@ -1,2 +1,2 @@
 CLASS net/minecraft/util/MathHelper
-        FIELD field_76144_a SIN_TABLE [F
+	FIELD field_76144_a SIN_TABLE [F

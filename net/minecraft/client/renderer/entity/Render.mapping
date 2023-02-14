@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/renderer/entity/Render
-        FIELD field_76990_c renderManager Lnet/minecraft/client/renderer/entity/RenderManager;
-        FIELD field_76991_a modelBase Lnet/minecraft/client/model/ModelBase;
-        FIELD field_76988_d renderBlocks Lnet/minecraft/client/renderer/RenderBlocks;
-        FIELD field_76989_e shadowSize F
-        FIELD field_76987_f shadowOpaque F
+	FIELD field_76990_c renderManager Lnet/minecraft/client/renderer/entity/RenderManager;
+	FIELD field_76991_a modelBase Lnet/minecraft/client/model/ModelBase;
+	FIELD field_76988_d renderBlocks Lnet/minecraft/client/renderer/RenderBlocks;
+	FIELD field_76989_e shadowSize F
+	FIELD field_76987_f shadowOpaque F

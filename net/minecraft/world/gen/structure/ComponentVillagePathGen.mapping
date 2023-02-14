@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/ComponentVillagePathGen
-        FIELD field_74934_a averageGroundLevel I
+	FIELD field_74934_a averageGroundLevel I

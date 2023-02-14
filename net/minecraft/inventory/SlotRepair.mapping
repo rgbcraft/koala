@@ -1,6 +1,6 @@
 CLASS net/minecraft/inventory/SlotRepair
-        FIELD field_82875_a theWorld Lnet/minecraft/world/World;
-        FIELD field_82873_b blockPosX I
-        FIELD field_82874_c blockPosY I
-        FIELD field_82871_d blockPosZ I
-        FIELD field_82872_e anvil Lnet/minecraft/inventory/ContainerRepair;
+	FIELD field_82875_a theWorld Lnet/minecraft/world/World;
+	FIELD field_82873_b blockPosX I
+	FIELD field_82874_c blockPosY I
+	FIELD field_82871_d blockPosZ I
+	FIELD field_82872_e anvil Lnet/minecraft/inventory/ContainerRepair;

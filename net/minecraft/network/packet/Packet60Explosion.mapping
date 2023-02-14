@@ -1,6 +1,6 @@
 CLASS net/minecraft/network/packet/Packet60Explosion
-        FIELD field_73616_a explosionX D
-        FIELD field_73614_b explosionY D
-        FIELD field_73615_c explosionZ D
-        FIELD field_73612_d explosionSize F
-        FIELD field_73613_e chunkPositionRecords Ljava/util/List;
+	FIELD field_73616_a explosionX D
+	FIELD field_73614_b explosionY D
+	FIELD field_73615_c explosionZ D
+	FIELD field_73612_d explosionSize F
+	FIELD field_73613_e chunkPositionRecords Ljava/util/List;

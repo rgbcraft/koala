@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/gui/GuiRenameWorld
-        FIELD field_74057_a parentGuiScreen Lnet/minecraft/client/gui/GuiScreen;
-        FIELD field_74055_b theGuiTextField Lnet/minecraft/client/gui/GuiTextField;
-        FIELD field_74056_c worldName Ljava/lang/String;
+	FIELD field_74057_a parentGuiScreen Lnet/minecraft/client/gui/GuiScreen;
+	FIELD field_74055_b theGuiTextField Lnet/minecraft/client/gui/GuiTextField;
+	FIELD field_74056_c worldName Ljava/lang/String;

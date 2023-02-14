@@ -1,2 +1,2 @@
 CLASS net/minecraft/server/management/PlayerPositionComparator
-        FIELD field_82548_a theChunkCoordinates Lnet/minecraft/util/ChunkCoordinates;
+	FIELD field_82548_a theChunkCoordinates Lnet/minecraft/util/ChunkCoordinates;

@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/tileentity/RenderItemFrame
-        FIELD field_82405_a renderBlocksInstance Lnet/minecraft/client/renderer/RenderBlocks;
+	FIELD field_82405_a renderBlocksInstance Lnet/minecraft/client/renderer/RenderBlocks;

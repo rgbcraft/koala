@@ -1,7 +1,7 @@
 CLASS net/minecraft/entity/ai/EntityAIOcelotSit
-        FIELD field_75406_a theOcelot Lnet/minecraft/entity/passive/EntityOcelot;
-        FIELD field_75405_c currentTick I
-        FIELD field_75403_e maxSittingTicks I
-        FIELD field_75400_f sitableBlockX I
-        FIELD field_75401_g sitableBlockY I
-        FIELD field_75407_h sitableBlockZ I
+	FIELD field_75406_a theOcelot Lnet/minecraft/entity/passive/EntityOcelot;
+	FIELD field_75405_c currentTick I
+	FIELD field_75403_e maxSittingTicks I
+	FIELD field_75400_f sitableBlockX I
+	FIELD field_75401_g sitableBlockY I
+	FIELD field_75407_h sitableBlockZ I

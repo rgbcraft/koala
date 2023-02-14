@@ -1,11 +1,11 @@
 CLASS net/minecraft/client/gui/GuiCreateFlatWorld
-        FIELD field_82282_a theRenderItem Lnet/minecraft/client/renderer/entity/RenderItem;
-        FIELD field_82277_b createWorldGui Lnet/minecraft/client/gui/GuiCreateWorld;
-        FIELD field_82279_c theFlatGeneratorInfo Lnet/minecraft/world/gen/FlatGeneratorInfo;
-        FIELD field_82276_d customizationTitle Ljava/lang/String;
-        FIELD field_82285_m layerMaterialLabel Ljava/lang/String;
-        FIELD field_82283_n heightLabel Ljava/lang/String;
-        FIELD field_82284_o createFlatWorldListSlotGui Lnet/minecraft/client/gui/GuiCreateFlatWorldListSlot;
-        FIELD field_82281_p buttonAddLayer Lnet/minecraft/client/gui/GuiButton;
-        FIELD field_82280_q buttonEditLayer Lnet/minecraft/client/gui/GuiButton;
-        FIELD field_82278_r buttonRemoveLayer Lnet/minecraft/client/gui/GuiButton;
+	FIELD field_82282_a theRenderItem Lnet/minecraft/client/renderer/entity/RenderItem;
+	FIELD field_82277_b createWorldGui Lnet/minecraft/client/gui/GuiCreateWorld;
+	FIELD field_82279_c theFlatGeneratorInfo Lnet/minecraft/world/gen/FlatGeneratorInfo;
+	FIELD field_82276_d customizationTitle Ljava/lang/String;
+	FIELD field_82285_m layerMaterialLabel Ljava/lang/String;
+	FIELD field_82283_n heightLabel Ljava/lang/String;
+	FIELD field_82284_o createFlatWorldListSlotGui Lnet/minecraft/client/gui/GuiCreateFlatWorldListSlot;
+	FIELD field_82281_p buttonAddLayer Lnet/minecraft/client/gui/GuiButton;
+	FIELD field_82280_q buttonEditLayer Lnet/minecraft/client/gui/GuiButton;
+	FIELD field_82278_r buttonRemoveLayer Lnet/minecraft/client/gui/GuiButton;

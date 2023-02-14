@@ -1,7 +1,7 @@
 CLASS net/minecraft/network/packet/Packet54PlayNoteBlock
-        FIELD field_73340_a xLocation I
-        FIELD field_73338_b yLocation I
-        FIELD field_73339_c zLocation I
-        FIELD field_73336_d instrumentType I
-        FIELD field_73337_e pitch I
-        FIELD field_73335_f blockId I
+	FIELD field_73340_a xLocation I
+	FIELD field_73338_b yLocation I
+	FIELD field_73339_c zLocation I
+	FIELD field_73336_d instrumentType I
+	FIELD field_73337_e pitch I
+	FIELD field_73335_f blockId I

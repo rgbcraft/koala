@@ -1,3 +1,3 @@
 CLASS net/minecraft/tileentity/TileEntityDispenser
-        FIELD field_70363_a dispenserContents [Lnet/minecraft/item/ItemStack;
-        FIELD field_70362_b dispenserRandom Ljava/util/Random;
+	FIELD field_70363_a dispenserContents [Lnet/minecraft/item/ItemStack;
+	FIELD field_70362_b dispenserRandom Ljava/util/Random;

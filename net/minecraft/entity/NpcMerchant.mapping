@@ -1,4 +1,4 @@
 CLASS net/minecraft/entity/NpcMerchant
-        FIELD field_70937_a theMerchantInventory Lnet/minecraft/inventory/InventoryMerchant;
-        FIELD field_70935_b customer Lnet/minecraft/entity/player/EntityPlayer;
-        FIELD field_70936_c recipeList Lnet/minecraft/village/MerchantRecipeList;
+	FIELD field_70937_a theMerchantInventory Lnet/minecraft/inventory/InventoryMerchant;
+	FIELD field_70935_b customer Lnet/minecraft/entity/player/EntityPlayer;
+	FIELD field_70936_c recipeList Lnet/minecraft/village/MerchantRecipeList;

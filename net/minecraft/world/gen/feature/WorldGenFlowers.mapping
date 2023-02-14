@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/feature/WorldGenFlowers
-        FIELD field_76528_a plantBlockId I
+	FIELD field_76528_a plantBlockId I

@@ -1,4 +1,4 @@
 CLASS net/minecraft/entity/ai/EntityAILeapAtTarget
-        FIELD field_75328_a leaper Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75326_b leapTarget Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75327_c leapMotionY F
+	FIELD field_75328_a leaper Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75326_b leapTarget Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75327_c leapMotionY F

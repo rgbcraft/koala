@@ -1,4 +1,4 @@
 CLASS net/minecraft/inventory/InventoryLargeChest
-        FIELD field_70479_a name Ljava/lang/String;
-        FIELD field_70477_b upperChest Lnet/minecraft/inventory/IInventory;
-        FIELD field_70478_c lowerChest Lnet/minecraft/inventory/IInventory;
+	FIELD field_70479_a name Ljava/lang/String;
+	FIELD field_70477_b upperChest Lnet/minecraft/inventory/IInventory;
+	FIELD field_70478_c lowerChest Lnet/minecraft/inventory/IInventory;

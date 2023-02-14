@@ -1,5 +1,5 @@
 CLASS net/minecraft/network/packet/Packet52MultiBlockChange
-        FIELD field_73452_a xPosition I
-        FIELD field_73450_b zPosition I
-        FIELD field_73451_c metadataArray [B
-        FIELD field_73448_d size I
+	FIELD field_73452_a xPosition I
+	FIELD field_73450_b zPosition I
+	FIELD field_73451_c metadataArray [B
+	FIELD field_73448_d size I

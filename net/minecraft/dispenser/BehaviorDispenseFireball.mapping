@@ -1,2 +1,2 @@
 CLASS net/minecraft/dispenser/BehaviorDispenseFireball
-        FIELD field_82490_b mcServer Lnet/minecraft/server/MinecraftServer;
+	FIELD field_82490_b mcServer Lnet/minecraft/server/MinecraftServer;

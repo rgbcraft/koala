@@ -1,7 +1,7 @@
 CLASS net/minecraft/client/renderer/DestroyBlockProgress
-        FIELD field_73115_a miningPlayerEntId I
-        FIELD field_73113_b partialBlockX I
-        FIELD field_73114_c partialBlockY I
-        FIELD field_73111_d partialBlockZ I
-        FIELD field_73112_e partialBlockProgress I
-        FIELD field_82745_f createdAtCloudUpdateTick I
+	FIELD field_73115_a miningPlayerEntId I
+	FIELD field_73113_b partialBlockX I
+	FIELD field_73114_c partialBlockY I
+	FIELD field_73111_d partialBlockZ I
+	FIELD field_73112_e partialBlockProgress I
+	FIELD field_82745_f createdAtCloudUpdateTick I

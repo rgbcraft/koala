@@ -1,5 +1,5 @@
 CLASS net/minecraft/entity/EntityCreature
-        FIELD field_70786_d pathToEntity Lnet/minecraft/pathfinding/PathEntity;
-        FIELD field_70789_a entityToAttack Lnet/minecraft/entity/Entity;
-        FIELD field_70787_b hasAttacked Z
-        FIELD field_70788_c fleeingTick I
+	FIELD field_70786_d pathToEntity Lnet/minecraft/pathfinding/PathEntity;
+	FIELD field_70789_a entityToAttack Lnet/minecraft/entity/Entity;
+	FIELD field_70787_b hasAttacked Z
+	FIELD field_70788_c fleeingTick I

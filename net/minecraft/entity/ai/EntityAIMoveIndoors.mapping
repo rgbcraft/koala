@@ -1,5 +1,5 @@
 CLASS net/minecraft/entity/ai/EntityAIMoveIndoors
-        FIELD field_75424_a entityObj Lnet/minecraft/entity/EntityCreature;
-        FIELD field_75422_b doorInfo Lnet/minecraft/village/VillageDoorInfo;
-        FIELD field_75423_c insidePosX I
-        FIELD field_75421_d insidePosZ I
+	FIELD field_75424_a entityObj Lnet/minecraft/entity/EntityCreature;
+	FIELD field_75422_b doorInfo Lnet/minecraft/village/VillageDoorInfo;
+	FIELD field_75423_c insidePosX I
+	FIELD field_75421_d insidePosZ I

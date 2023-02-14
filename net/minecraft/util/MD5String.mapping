@@ -1,2 +1,2 @@
 CLASS net/minecraft/util/MD5String
-        FIELD field_75900_a salt Ljava/lang/String;
+	FIELD field_75900_a salt Ljava/lang/String;

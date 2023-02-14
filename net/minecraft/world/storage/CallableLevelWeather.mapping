@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/storage/CallableLevelWeather
-        FIELD field_85111_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;
+	FIELD field_85111_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;

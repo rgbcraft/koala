@@ -1,6 +1,6 @@
 CLASS net/minecraft/item/ItemArmor
-        FIELD field_77882_bY maxDamageArray [I
-        FIELD field_77881_a armorType I
-        FIELD field_77879_b damageReduceAmount I
-        FIELD field_77880_c renderIndex I
-        FIELD field_77878_bZ material Lnet/minecraft/item/EnumArmorMaterial;
+	FIELD field_77882_bY maxDamageArray [I
+	FIELD field_77881_a armorType I
+	FIELD field_77879_b damageReduceAmount I
+	FIELD field_77880_c renderIndex I
+	FIELD field_77878_bZ material Lnet/minecraft/item/EnumArmorMaterial;

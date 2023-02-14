@@ -1,2 +1,2 @@
 CLASS net/minecraft/block/BlockMushroomCap
-        FIELD field_72197_a mushroomType I
+	FIELD field_72197_a mushroomType I

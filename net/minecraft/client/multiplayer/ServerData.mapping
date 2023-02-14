@@ -1,9 +1,9 @@
 CLASS net/minecraft/client/multiplayer/ServerData
-        FIELD field_78847_a serverName Ljava/lang/String;
-        FIELD field_78845_b serverIP Ljava/lang/String;
-        FIELD field_78846_c populationInfo Ljava/lang/String;
-        FIELD field_78843_d serverMOTD Ljava/lang/String;
-        FIELD field_78844_e pingToServer J
-        FIELD field_82822_g gameVersion Ljava/lang/String;
-        FIELD field_78848_h acceptsTextures Z
-        FIELD field_82823_k hideAddress Z
+	FIELD field_78847_a serverName Ljava/lang/String;
+	FIELD field_78845_b serverIP Ljava/lang/String;
+	FIELD field_78846_c populationInfo Ljava/lang/String;
+	FIELD field_78843_d serverMOTD Ljava/lang/String;
+	FIELD field_78844_e pingToServer J
+	FIELD field_82822_g gameVersion Ljava/lang/String;
+	FIELD field_78848_h acceptsTextures Z
+	FIELD field_82823_k hideAddress Z

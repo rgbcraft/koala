@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/gui/inventory/GuiChest
-        FIELD field_74220_o upperChestInventory Lnet/minecraft/inventory/IInventory;
-        FIELD field_74219_p lowerChestInventory Lnet/minecraft/inventory/IInventory;
-        FIELD field_74218_q inventoryRows I
+	FIELD field_74220_o upperChestInventory Lnet/minecraft/inventory/IInventory;
+	FIELD field_74219_p lowerChestInventory Lnet/minecraft/inventory/IInventory;
+	FIELD field_74218_q inventoryRows I

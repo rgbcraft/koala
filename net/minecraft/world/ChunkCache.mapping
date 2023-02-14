@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/ChunkCache
-        FIELD field_72818_a chunkX I
-        FIELD field_72816_b chunkZ I
-        FIELD field_72817_c chunkArray [Lnet/minecraft/world/chunk/Chunk;
-        FIELD field_72814_d hasExtendedLevels Z
-        FIELD field_72815_e worldObj Lnet/minecraft/world/World;
+	FIELD field_72818_a chunkX I
+	FIELD field_72816_b chunkZ I
+	FIELD field_72817_c chunkArray [Lnet/minecraft/world/chunk/Chunk;
+	FIELD field_72814_d hasExtendedLevels Z
+	FIELD field_72815_e worldObj Lnet/minecraft/world/World;

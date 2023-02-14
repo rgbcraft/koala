@@ -1,4 +1,4 @@
 CLASS net/minecraft/inventory/SlotCrafting
-        FIELD field_75239_a craftMatrix Lnet/minecraft/inventory/IInventory;
-        FIELD field_75238_b thePlayer Lnet/minecraft/entity/player/EntityPlayer;
-        FIELD field_75237_g amountCrafted I
+	FIELD field_75239_a craftMatrix Lnet/minecraft/inventory/IInventory;
+	FIELD field_75238_b thePlayer Lnet/minecraft/entity/player/EntityPlayer;
+	FIELD field_75237_g amountCrafted I

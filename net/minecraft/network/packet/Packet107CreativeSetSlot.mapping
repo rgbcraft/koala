@@ -1,3 +1,3 @@
 CLASS net/minecraft/network/packet/Packet107CreativeSetSlot
-        FIELD field_73385_a slot I
-        FIELD field_73384_b itemStack Lnet/minecraft/item/ItemStack;
+	FIELD field_73385_a slot I
+	FIELD field_73384_b itemStack Lnet/minecraft/item/ItemStack;

@@ -1,6 +1,6 @@
 CLASS net/minecraft/network/packet/Packet132TileEntityData
-        FIELD field_73334_a xPosition I
-        FIELD field_73332_b yPosition I
-        FIELD field_73333_c zPosition I
-        FIELD field_73330_d actionType I
-        FIELD field_73331_e customParam1 Lnet/minecraft/nbt/NBTTagCompound;
+	FIELD field_73334_a xPosition I
+	FIELD field_73332_b yPosition I
+	FIELD field_73333_c zPosition I
+	FIELD field_73330_d actionType I
+	FIELD field_73331_e customParam1 Lnet/minecraft/nbt/NBTTagCompound;

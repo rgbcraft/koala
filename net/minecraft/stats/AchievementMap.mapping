@@ -1,3 +1,3 @@
 CLASS net/minecraft/stats/AchievementMap
-        FIELD field_75964_a instance Lnet/minecraft/stats/AchievementMap;
-        FIELD field_75963_b guidMap Ljava/util/Map;
+	FIELD field_75964_a instance Lnet/minecraft/stats/AchievementMap;
+	FIELD field_75963_b guidMap Ljava/util/Map;

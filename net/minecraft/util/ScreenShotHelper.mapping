@@ -1,2 +1,2 @@
 CLASS net/minecraft/util/ScreenShotHelper
-        FIELD field_74295_a dateFormat Ljava/text/DateFormat;
+	FIELD field_74295_a dateFormat Ljava/text/DateFormat;

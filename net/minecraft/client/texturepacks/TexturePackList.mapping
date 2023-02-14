@@ -1,9 +1,9 @@
 CLASS net/minecraft/client/texturepacks/TexturePackList
-        FIELD field_77314_a defaultTexturePack Lnet/minecraft/client/texturepacks/ITexturePack;
-        FIELD field_77312_b mc Lnet/minecraft/client/Minecraft;
-        FIELD field_77313_c texturePackDir Ljava/io/File;
-        FIELD field_77310_d mpTexturePackFolder Ljava/io/File;
-        FIELD field_77311_e availableTexturePacks Ljava/util/List;
-        FIELD field_77308_f texturePackCache Ljava/util/Map;
-        FIELD field_77309_g selectedTexturePack Lnet/minecraft/client/texturepacks/ITexturePack;
-        FIELD field_77315_h isDownloading Z
+	FIELD field_77314_a defaultTexturePack Lnet/minecraft/client/texturepacks/ITexturePack;
+	FIELD field_77312_b mc Lnet/minecraft/client/Minecraft;
+	FIELD field_77313_c texturePackDir Ljava/io/File;
+	FIELD field_77310_d mpTexturePackFolder Ljava/io/File;
+	FIELD field_77311_e availableTexturePacks Ljava/util/List;
+	FIELD field_77308_f texturePackCache Ljava/util/Map;
+	FIELD field_77309_g selectedTexturePack Lnet/minecraft/client/texturepacks/ITexturePack;
+	FIELD field_77315_h isDownloading Z

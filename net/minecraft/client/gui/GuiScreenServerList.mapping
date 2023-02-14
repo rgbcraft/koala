@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/GuiScreenServerList
-        FIELD field_73994_a lastServerName Ljava/lang/String;
-        FIELD field_73992_b guiScreen Lnet/minecraft/client/gui/GuiScreen;
-        FIELD field_73993_c theServerData Lnet/minecraft/client/multiplayer/ServerData;
-        FIELD field_73991_d serverTextField Lnet/minecraft/client/gui/GuiTextField;
+	FIELD field_73994_a lastServerName Ljava/lang/String;
+	FIELD field_73992_b guiScreen Lnet/minecraft/client/gui/GuiScreen;
+	FIELD field_73993_c theServerData Lnet/minecraft/client/multiplayer/ServerData;
+	FIELD field_73991_d serverTextField Lnet/minecraft/client/gui/GuiTextField;

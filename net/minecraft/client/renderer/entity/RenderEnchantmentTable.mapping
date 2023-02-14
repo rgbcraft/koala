@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/entity/RenderEnchantmentTable
-        FIELD field_76902_a enchantmentBook Lnet/minecraft/client/model/ModelBook;
+	FIELD field_76902_a enchantmentBook Lnet/minecraft/client/model/ModelBook;

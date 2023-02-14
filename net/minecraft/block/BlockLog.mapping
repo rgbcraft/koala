@@ -1,2 +1,2 @@
 CLASS net/minecraft/block/BlockLog
-        FIELD field_72142_a woodType [Ljava/lang/String;
+	FIELD field_72142_a woodType [Ljava/lang/String;

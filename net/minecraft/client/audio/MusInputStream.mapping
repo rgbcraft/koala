@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/audio/MusInputStream
-        FIELD field_77388_c hash I
-        FIELD field_77386_d inputStream Ljava/io/InputStream;
-        FIELD field_77389_a buffer [B
-        FIELD field_77387_b codec Lnet/minecraft/client/audio/CodecMus;
+	FIELD field_77388_c hash I
+	FIELD field_77386_d inputStream Ljava/io/InputStream;
+	FIELD field_77389_a buffer [B
+	FIELD field_77387_b codec Lnet/minecraft/client/audio/CodecMus;

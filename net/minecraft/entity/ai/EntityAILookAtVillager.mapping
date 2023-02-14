@@ -1,4 +1,4 @@
 CLASS net/minecraft/entity/ai/EntityAILookAtVillager
-        FIELD field_75397_a theGolem Lnet/minecraft/entity/monster/EntityIronGolem;
-        FIELD field_75395_b theVillager Lnet/minecraft/entity/passive/EntityVillager;
-        FIELD field_75396_c lookTime I
+	FIELD field_75397_a theGolem Lnet/minecraft/entity/monster/EntityIronGolem;
+	FIELD field_75395_b theVillager Lnet/minecraft/entity/passive/EntityVillager;
+	FIELD field_75396_c lookTime I

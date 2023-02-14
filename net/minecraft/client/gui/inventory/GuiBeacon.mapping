@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/gui/inventory/GuiBeacon
-        FIELD field_82323_o beacon Lnet/minecraft/tileentity/TileEntityBeacon;
-        FIELD field_82322_p beaconConfirmButton Lnet/minecraft/client/gui/inventory/GuiBeaconButtonConfirm;
-        FIELD field_82321_q buttonsNotDrawn Z
+	FIELD field_82323_o beacon Lnet/minecraft/tileentity/TileEntityBeacon;
+	FIELD field_82322_p beaconConfirmButton Lnet/minecraft/client/gui/inventory/GuiBeaconButtonConfirm;
+	FIELD field_82321_q buttonsNotDrawn Z

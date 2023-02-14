@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/item/EntityTNTPrimed
-        FIELD field_70516_a fuse I
+	FIELD field_70516_a fuse I

@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/gui/GuiButtonMerchant
-        FIELD field_73749_j mirrored Z
+	FIELD field_73749_j mirrored Z

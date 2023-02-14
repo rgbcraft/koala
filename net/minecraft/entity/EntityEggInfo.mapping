@@ -1,4 +1,4 @@
 CLASS net/minecraft/entity/EntityEggInfo
-        FIELD field_75613_a spawnedID I
-        FIELD field_75611_b primaryColor I
-        FIELD field_75612_c secondaryColor I
+	FIELD field_75613_a spawnedID I
+	FIELD field_75611_b primaryColor I
+	FIELD field_75612_c secondaryColor I

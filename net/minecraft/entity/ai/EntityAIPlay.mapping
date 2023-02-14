@@ -1,4 +1,4 @@
 CLASS net/minecraft/entity/ai/EntityAIPlay
-        FIELD field_75262_a villagerObj Lnet/minecraft/entity/passive/EntityVillager;
-        FIELD field_75260_b targetVillager Lnet/minecraft/entity/EntityLiving;
-        FIELD field_75259_d playTime I
+	FIELD field_75262_a villagerObj Lnet/minecraft/entity/passive/EntityVillager;
+	FIELD field_75260_b targetVillager Lnet/minecraft/entity/EntityLiving;
+	FIELD field_75259_d playTime I

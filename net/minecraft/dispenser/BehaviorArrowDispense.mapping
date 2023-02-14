@@ -1,2 +1,2 @@
 CLASS net/minecraft/dispenser/BehaviorArrowDispense
-        FIELD field_74267_a mcServer Lnet/minecraft/server/MinecraftServer;
+	FIELD field_74267_a mcServer Lnet/minecraft/server/MinecraftServer;

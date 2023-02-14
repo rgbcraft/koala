@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/ai/EntityAILookAtTradePlayer
-        FIELD field_75335_b theMerchant Lnet/minecraft/entity/passive/EntityVillager;
+	FIELD field_75335_b theMerchant Lnet/minecraft/entity/passive/EntityVillager;

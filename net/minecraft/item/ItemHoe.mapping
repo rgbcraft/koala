@@ -1,2 +1,2 @@
 CLASS net/minecraft/item/ItemHoe
-        FIELD field_77843_a theToolMaterial Lnet/minecraft/item/EnumToolMaterial;
+	FIELD field_77843_a theToolMaterial Lnet/minecraft/item/EnumToolMaterial;

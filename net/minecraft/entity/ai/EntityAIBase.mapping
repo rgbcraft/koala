@@ -1,2 +1,2 @@
 CLASS net/minecraft/entity/ai/EntityAIBase
-        FIELD field_75254_a mutexBits I
+	FIELD field_75254_a mutexBits I

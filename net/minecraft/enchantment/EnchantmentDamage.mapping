@@ -1,6 +1,6 @@
 CLASS net/minecraft/enchantment/EnchantmentDamage
-        FIELD field_77359_A protectionName [Ljava/lang/String;
-        FIELD field_77360_B baseEnchantability [I
-        FIELD field_77362_C levelEnchantability [I
-        FIELD field_77358_D thresholdEnchantability [I
-        FIELD field_77361_a damageType I
+	FIELD field_77359_A protectionName [Ljava/lang/String;
+	FIELD field_77360_B baseEnchantability [I
+	FIELD field_77362_C levelEnchantability [I
+	FIELD field_77358_D thresholdEnchantability [I
+	FIELD field_77361_a damageType I

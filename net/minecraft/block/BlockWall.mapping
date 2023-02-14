@@ -1,2 +1,2 @@
 CLASS net/minecraft/block/BlockWall
-        FIELD field_82539_a types [Ljava/lang/String;
+	FIELD field_82539_a types [Ljava/lang/String;

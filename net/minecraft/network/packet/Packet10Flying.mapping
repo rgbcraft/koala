@@ -1,10 +1,10 @@
 CLASS net/minecraft/network/packet/Packet10Flying
-        FIELD field_73545_a xPosition D
-        FIELD field_73543_b yPosition D
-        FIELD field_73544_c zPosition D
-        FIELD field_73541_d stance D
-        FIELD field_73542_e yaw F
-        FIELD field_73539_f pitch F
-        FIELD field_73540_g onGround Z
-        FIELD field_73546_h moving Z
-        FIELD field_73547_i rotating Z
+	FIELD field_73545_a xPosition D
+	FIELD field_73543_b yPosition D
+	FIELD field_73544_c zPosition D
+	FIELD field_73541_d stance D
+	FIELD field_73542_e yaw F
+	FIELD field_73539_f pitch F
+	FIELD field_73540_g onGround Z
+	FIELD field_73546_h moving Z
+	FIELD field_73547_i rotating Z

@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/gen/structure/ComponentNetherBridgeEnd
-        FIELD field_74972_a fillSeed I
+	FIELD field_74972_a fillSeed I

@@ -1,3 +1,3 @@
 CLASS net/minecraft/nbt/NBTBase
-        FIELD field_82578_b NBTTypes [Ljava/lang/String;
-        FIELD field_74741_a name Ljava/lang/String;
+	FIELD field_82578_b NBTTypes [Ljava/lang/String;
+	FIELD field_74741_a name Ljava/lang/String;

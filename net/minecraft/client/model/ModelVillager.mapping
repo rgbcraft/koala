@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/model/ModelVillager
-        FIELD field_78191_a villagerHead Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78189_b villagerBody Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78190_c villagerArms Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78187_d rightVillagerLeg Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78188_e leftVillagerLeg Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78191_a villagerHead Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78189_b villagerBody Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78190_c villagerArms Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78187_d rightVillagerLeg Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78188_e leftVillagerLeg Lnet/minecraft/client/model/ModelRenderer;

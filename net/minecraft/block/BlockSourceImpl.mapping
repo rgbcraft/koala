@@ -1,5 +1,5 @@
 CLASS net/minecraft/block/BlockSourceImpl
-        FIELD field_82627_a worldObj Lnet/minecraft/world/World;
-        FIELD field_82625_b xPos I
-        FIELD field_82626_c yPos I
-        FIELD field_82624_d zPos I
+	FIELD field_82627_a worldObj Lnet/minecraft/world/World;
+	FIELD field_82625_b xPos I
+	FIELD field_82626_c yPos I
+	FIELD field_82624_d zPos I

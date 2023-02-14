@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/model/ModelSlime
-        FIELD field_78200_a slimeBodies Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78198_b slimeRightEye Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78199_c slimeLeftEye Lnet/minecraft/client/model/ModelRenderer;
-        FIELD field_78197_d slimeMouth Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78200_a slimeBodies Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78198_b slimeRightEye Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78199_c slimeLeftEye Lnet/minecraft/client/model/ModelRenderer;
+	FIELD field_78197_d slimeMouth Lnet/minecraft/client/model/ModelRenderer;

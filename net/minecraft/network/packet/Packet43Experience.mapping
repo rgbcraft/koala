@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet43Experience
-        FIELD field_73396_a experience F
-        FIELD field_73394_b experienceTotal I
-        FIELD field_73395_c experienceLevel I
+	FIELD field_73396_a experience F
+	FIELD field_73394_b experienceTotal I
+	FIELD field_73395_c experienceLevel I

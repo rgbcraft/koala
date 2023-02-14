@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/particle/EntityFlameFX
-        FIELD field_70562_a flameScale F
+	FIELD field_70562_a flameScale F

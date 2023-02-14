@@ -1,4 +1,4 @@
 CLASS net/minecraft/network/packet/Packet5PlayerInventory
-        FIELD field_73400_a entityID I
-        FIELD field_73398_b slot I
-        FIELD field_73399_c itemSlot Lnet/minecraft/item/ItemStack;
+	FIELD field_73400_a entityID I
+	FIELD field_73398_b slot I
+	FIELD field_73399_c itemSlot Lnet/minecraft/item/ItemStack;

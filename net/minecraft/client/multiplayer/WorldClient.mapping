@@ -1,8 +1,8 @@
 CLASS net/minecraft/client/multiplayer/WorldClient
-        FIELD field_73035_a sendQueue Lnet/minecraft/client/multiplayer/NetClientHandler;
-        FIELD field_73033_b clientChunkProvider Lnet/minecraft/client/multiplayer/ChunkProviderClient;
-        FIELD field_73034_c entityHashSet Lnet/minecraft/util/IntHashMap;
-        FIELD field_73032_d entityList Ljava/util/Set;
-        FIELD field_73036_L entitySpawnQueue Ljava/util/Set;
-        FIELD field_73037_M mc Lnet/minecraft/client/Minecraft;
-        FIELD field_73038_N previousActiveChunkSet Ljava/util/Set;
+	FIELD field_73035_a sendQueue Lnet/minecraft/client/multiplayer/NetClientHandler;
+	FIELD field_73033_b clientChunkProvider Lnet/minecraft/client/multiplayer/ChunkProviderClient;
+	FIELD field_73034_c entityHashSet Lnet/minecraft/util/IntHashMap;
+	FIELD field_73032_d entityList Ljava/util/Set;
+	FIELD field_73036_L entitySpawnQueue Ljava/util/Set;
+	FIELD field_73037_M mc Lnet/minecraft/client/Minecraft;
+	FIELD field_73038_N previousActiveChunkSet Ljava/util/Set;

@@ -1,4 +1,4 @@
 CLASS net/minecraft/client/model/PositionTextureVertex
-        FIELD field_78243_a vector3D Lnet/minecraft/util/Vec3;
-        FIELD field_78241_b texturePositionX F
-        FIELD field_78242_c texturePositionY F
+	FIELD field_78243_a vector3D Lnet/minecraft/util/Vec3;
+	FIELD field_78241_b texturePositionX F
+	FIELD field_78242_c texturePositionY F

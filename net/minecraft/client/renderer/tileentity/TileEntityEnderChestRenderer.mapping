@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntityEnderChestRenderer
-        FIELD field_76900_a theEnderChestModel Lnet/minecraft/client/model/ModelChest;
+	FIELD field_76900_a theEnderChestModel Lnet/minecraft/client/model/ModelChest;

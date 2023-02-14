@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/gen/structure/StructureVillagePieceWeight
-        FIELD field_75090_a villagePieceClass Ljava/lang/Class;
-        FIELD field_75088_b villagePieceWeight I
-        FIELD field_75089_c villagePiecesSpawned I
-        FIELD field_75087_d villagePiecesLimit I
+	FIELD field_75090_a villagePieceClass Ljava/lang/Class;
+	FIELD field_75088_b villagePieceWeight I
+	FIELD field_75089_c villagePiecesSpawned I
+	FIELD field_75087_d villagePiecesLimit I

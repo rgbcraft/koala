@@ -1,3 +1,3 @@
 CLASS net/minecraft/block/BlockRedstoneWire
-        FIELD field_72175_a wiresProvidePower Z
-        FIELD field_72174_b blocksNeedingUpdate Ljava/util/Set;
+	FIELD field_72175_a wiresProvidePower Z
+	FIELD field_72174_b blocksNeedingUpdate Ljava/util/Set;

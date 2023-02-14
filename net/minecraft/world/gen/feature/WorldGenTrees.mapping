@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/gen/feature/WorldGenTrees
-        FIELD field_76533_a minTreeHeight I
-        FIELD field_76531_b vinesGrow Z
-        FIELD field_76532_c metaWood I
-        FIELD field_76530_d metaLeaves I
+	FIELD field_76533_a minTreeHeight I
+	FIELD field_76531_b vinesGrow Z
+	FIELD field_76532_c metaWood I
+	FIELD field_76530_d metaLeaves I

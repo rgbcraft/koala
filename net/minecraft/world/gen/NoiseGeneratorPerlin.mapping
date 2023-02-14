@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/gen/NoiseGeneratorPerlin
-        FIELD field_76312_d permutations [I
-        FIELD field_76315_a xCoord D
-        FIELD field_76313_b yCoord D
-        FIELD field_76314_c zCoord D
+	FIELD field_76312_d permutations [I
+	FIELD field_76315_a xCoord D
+	FIELD field_76313_b yCoord D
+	FIELD field_76314_c zCoord D

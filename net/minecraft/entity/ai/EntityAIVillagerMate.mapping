@@ -1,6 +1,6 @@
 CLASS net/minecraft/entity/ai/EntityAIVillagerMate
-        FIELD field_75450_b villagerObj Lnet/minecraft/entity/passive/EntityVillager;
-        FIELD field_75451_c mate Lnet/minecraft/entity/passive/EntityVillager;
-        FIELD field_75448_d worldObj Lnet/minecraft/world/World;
-        FIELD field_75449_e matingTimeout I
-        FIELD field_75452_a villageObj Lnet/minecraft/village/Village;
+	FIELD field_75450_b villagerObj Lnet/minecraft/entity/passive/EntityVillager;
+	FIELD field_75451_c mate Lnet/minecraft/entity/passive/EntityVillager;
+	FIELD field_75448_d worldObj Lnet/minecraft/world/World;
+	FIELD field_75449_e matingTimeout I
+	FIELD field_75452_a villageObj Lnet/minecraft/village/Village;

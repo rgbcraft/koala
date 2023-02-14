@@ -1,2 +1,2 @@
 CLASS net/minecraft/network/packet/Packet0KeepAlive
-        FIELD field_73592_a randomId I
+	FIELD field_73592_a randomId I

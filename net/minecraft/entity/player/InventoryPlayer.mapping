@@ -1,8 +1,8 @@
 CLASS net/minecraft/entity/player/InventoryPlayer
-        FIELD field_70462_a mainInventory [Lnet/minecraft/item/ItemStack;
-        FIELD field_70460_b armorInventory [Lnet/minecraft/item/ItemStack;
-        FIELD field_70461_c currentItem I
-        FIELD field_70456_f currentItemStack Lnet/minecraft/item/ItemStack;
-        FIELD field_70458_d player Lnet/minecraft/entity/player/EntityPlayer;
-        FIELD field_70457_g itemStack Lnet/minecraft/item/ItemStack;
-        FIELD field_70459_e inventoryChanged Z
+	FIELD field_70462_a mainInventory [Lnet/minecraft/item/ItemStack;
+	FIELD field_70460_b armorInventory [Lnet/minecraft/item/ItemStack;
+	FIELD field_70461_c currentItem I
+	FIELD field_70456_f currentItemStack Lnet/minecraft/item/ItemStack;
+	FIELD field_70458_d player Lnet/minecraft/entity/player/EntityPlayer;
+	FIELD field_70457_g itemStack Lnet/minecraft/item/ItemStack;
+	FIELD field_70459_e inventoryChanged Z

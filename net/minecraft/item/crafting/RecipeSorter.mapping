@@ -1,2 +1,2 @@
 CLASS net/minecraft/item/crafting/RecipeSorter
-        FIELD field_77582_a craftingManager Lnet/minecraft/item/crafting/CraftingManager;
+	FIELD field_77582_a craftingManager Lnet/minecraft/item/crafting/CraftingManager;

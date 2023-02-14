@@ -1,2 +1,2 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer
-        FIELD field_76898_b tileEntityRenderer Lnet/minecraft/client/renderer/tileentity/TileEntityRenderer;
+	FIELD field_76898_b tileEntityRenderer Lnet/minecraft/client/renderer/tileentity/TileEntityRenderer;

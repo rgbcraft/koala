@@ -1,7 +1,7 @@
 CLASS net/minecraft/block/BlockEventData
-        FIELD field_76927_a coordX I
-        FIELD field_76925_b coordY I
-        FIELD field_76926_c coordZ I
-        FIELD field_76923_d blockID I
-        FIELD field_76924_e eventID I
-        FIELD field_76922_f eventParameter I
+	FIELD field_76927_a coordX I
+	FIELD field_76925_b coordY I
+	FIELD field_76926_c coordZ I
+	FIELD field_76923_d blockID I
+	FIELD field_76924_e eventID I
+	FIELD field_76922_f eventParameter I

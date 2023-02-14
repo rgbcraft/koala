@@ -1,2 +1,2 @@
 CLASS net/minecraft/inventory/ContainerDispenser
-        FIELD field_75182_e tileEntityDispenser Lnet/minecraft/tileentity/TileEntityDispenser;
+	FIELD field_75182_e tileEntityDispenser Lnet/minecraft/tileentity/TileEntityDispenser;

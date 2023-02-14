@@ -1,2 +1,2 @@
 CLASS net/minecraft/nbt/CallableTagCompound1
-        FIELD field_82584_b theNBTTagCompound Lnet/minecraft/nbt/NBTTagCompound;
+	FIELD field_82584_b theNBTTagCompound Lnet/minecraft/nbt/NBTTagCompound;

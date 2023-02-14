@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/storage/CallableLevelGeneratorOptions
-        FIELD field_85141_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;
+	FIELD field_85141_a worldInfoInstance Lnet/minecraft/world/storage/WorldInfo;

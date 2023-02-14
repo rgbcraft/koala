@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/multiplayer/ThreadLanServerPing
-        FIELD field_77530_a logger Ljava/util/logging/Logger;
-        FIELD field_77528_b motd Ljava/lang/String;
-        FIELD field_77529_c socket Ljava/net/DatagramSocket;
-        FIELD field_77526_d isStopping Z
-        FIELD field_77527_e address Ljava/lang/String;
+	FIELD field_77530_a logger Ljava/util/logging/Logger;
+	FIELD field_77528_b motd Ljava/lang/String;
+	FIELD field_77529_c socket Ljava/net/DatagramSocket;
+	FIELD field_77526_d isStopping Z
+	FIELD field_77527_e address Ljava/lang/String;

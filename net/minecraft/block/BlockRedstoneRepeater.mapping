@@ -1,4 +1,4 @@
 CLASS net/minecraft/block/BlockRedstoneRepeater
-        FIELD field_72223_a repeaterTorchOffset [D
-        FIELD field_72221_b repeaterState [I
-        FIELD field_72222_c isRepeaterPowered Z
+	FIELD field_72223_a repeaterTorchOffset [D
+	FIELD field_72221_b repeaterState [I
+	FIELD field_72222_c isRepeaterPowered Z

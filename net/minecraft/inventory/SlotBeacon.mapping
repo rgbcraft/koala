@@ -1,2 +1,2 @@
 CLASS net/minecraft/inventory/SlotBeacon
-        FIELD field_82876_a beacon Lnet/minecraft/inventory/ContainerBeacon;
+	FIELD field_82876_a beacon Lnet/minecraft/inventory/ContainerBeacon;

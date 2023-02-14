@@ -1,11 +1,11 @@
 CLASS net/minecraft/stats/StatBase
-        FIELD field_75975_e statId I
-        FIELD field_75978_a statName Ljava/lang/String;
-        FIELD field_75972_f isIndependent Z
-        FIELD field_75973_g statGuid Ljava/lang/String;
-        FIELD field_75976_b type Lnet/minecraft/stats/IStatType;
-        FIELD field_75977_c numberFormat Ljava/text/NumberFormat;
-        FIELD field_75980_h simpleStatType Lnet/minecraft/stats/IStatType;
-        FIELD field_75974_d decimalFormat Ljava/text/DecimalFormat;
-        FIELD field_75981_i timeStatType Lnet/minecraft/stats/IStatType;
-        FIELD field_75979_j distanceStatType Lnet/minecraft/stats/IStatType;
+	FIELD field_75975_e statId I
+	FIELD field_75978_a statName Ljava/lang/String;
+	FIELD field_75972_f isIndependent Z
+	FIELD field_75973_g statGuid Ljava/lang/String;
+	FIELD field_75976_b type Lnet/minecraft/stats/IStatType;
+	FIELD field_75977_c numberFormat Ljava/text/NumberFormat;
+	FIELD field_75980_h simpleStatType Lnet/minecraft/stats/IStatType;
+	FIELD field_75974_d decimalFormat Ljava/text/DecimalFormat;
+	FIELD field_75981_i timeStatType Lnet/minecraft/stats/IStatType;
+	FIELD field_75979_j distanceStatType Lnet/minecraft/stats/IStatType;

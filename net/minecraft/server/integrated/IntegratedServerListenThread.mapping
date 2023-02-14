@@ -1,4 +1,4 @@
 CLASS net/minecraft/server/integrated/IntegratedServerListenThread
-        FIELD field_71760_c netMemoryConnection Lnet/minecraft/network/MemoryConnection;
-        FIELD field_71758_d theMemoryConnection Lnet/minecraft/network/MemoryConnection;
-        FIELD field_71757_g myServerListenThread Lnet/minecraft/server/ServerListenThread;
+	FIELD field_71760_c netMemoryConnection Lnet/minecraft/network/MemoryConnection;
+	FIELD field_71758_d theMemoryConnection Lnet/minecraft/network/MemoryConnection;
+	FIELD field_71757_g myServerListenThread Lnet/minecraft/server/ServerListenThread;

@@ -1,10 +1,10 @@
 CLASS net/minecraft/network/packet/Packet23VehicleSpawn
-        FIELD field_73526_a entityId I
-        FIELD field_73524_b xPosition I
-        FIELD field_73525_c yPosition I
-        FIELD field_73522_d zPosition I
-        FIELD field_73523_e speedX I
-        FIELD field_73520_f speedY I
-        FIELD field_73521_g speedZ I
-        FIELD field_73527_h type I
-        FIELD field_73528_i throwerEntityId I
+	FIELD field_73526_a entityId I
+	FIELD field_73524_b xPosition I
+	FIELD field_73525_c yPosition I
+	FIELD field_73522_d zPosition I
+	FIELD field_73523_e speedX I
+	FIELD field_73520_f speedY I
+	FIELD field_73521_g speedZ I
+	FIELD field_73527_h type I
+	FIELD field_73528_i throwerEntityId I

@@ -1,4 +1,4 @@
 CLASS net/minecraft/item/ItemSlab
-        FIELD field_77891_a isFullBlock Z
-        FIELD field_77889_b theHalfSlab Lnet/minecraft/block/BlockHalfSlab;
-        FIELD field_77890_c theHalfSlab2 Lnet/minecraft/block/BlockHalfSlab;
+	FIELD field_77891_a isFullBlock Z
+	FIELD field_77889_b theHalfSlab Lnet/minecraft/block/BlockHalfSlab;
+	FIELD field_77890_c theHalfSlab2 Lnet/minecraft/block/BlockHalfSlab;

@@ -1,10 +1,10 @@
 CLASS net/minecraft/entity/item/EntityBoat
-        FIELD field_70277_c boatPosRotationIncrements I
-        FIELD field_70274_d boatX D
-        FIELD field_70275_e boatY D
-        FIELD field_70272_f boatZ D
-        FIELD field_70273_g boatYaw D
-        FIELD field_70281_h boatPitch D
-        FIELD field_70282_i velocityX D
-        FIELD field_70280_j velocityY D
-        FIELD field_70278_an velocityZ D
+	FIELD field_70277_c boatPosRotationIncrements I
+	FIELD field_70274_d boatX D
+	FIELD field_70275_e boatY D
+	FIELD field_70272_f boatZ D
+	FIELD field_70273_g boatYaw D
+	FIELD field_70281_h boatPitch D
+	FIELD field_70282_i velocityX D
+	FIELD field_70280_j velocityY D
+	FIELD field_70278_an velocityZ D

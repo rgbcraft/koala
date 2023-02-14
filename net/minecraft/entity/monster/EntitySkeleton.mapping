@@ -1,3 +1,3 @@
 CLASS net/minecraft/entity/monster/EntitySkeleton
-        FIELD field_85037_d aiArrowAttack Lnet/minecraft/entity/ai/EntityAIArrowAttack;
-        FIELD field_85038_e aiAttackOnCollide Lnet/minecraft/entity/ai/EntityAIAttackOnCollide;
+	FIELD field_85037_d aiArrowAttack Lnet/minecraft/entity/ai/EntityAIArrowAttack;
+	FIELD field_85038_e aiAttackOnCollide Lnet/minecraft/entity/ai/EntityAIAttackOnCollide;

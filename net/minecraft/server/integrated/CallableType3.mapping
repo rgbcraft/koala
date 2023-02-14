@@ -1,2 +1,2 @@
 CLASS net/minecraft/server/integrated/CallableType3
-        FIELD field_76974_a theIntegratedServer Lnet/minecraft/server/integrated/IntegratedServer;
+	FIELD field_76974_a theIntegratedServer Lnet/minecraft/server/integrated/IntegratedServer;
