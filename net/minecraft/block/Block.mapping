@@ -1,0 +1,5 @@
+CLASS net/minecraft/block/Block
+	FIELD field_71989_cb blockHardness F
+	FIELD field_71990_ca blockID I
+	FIELD field_72029_cc blockResistance F
+	FIELD field_72059_bZ blockIndexInTexture I
