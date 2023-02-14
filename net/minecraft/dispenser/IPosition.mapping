@@ -1,1 +1,4 @@
 CLASS net/minecraft/dispenser/IPosition
+	METHOD func_82615_a getX ()D
+	METHOD func_82617_b getY ()D
+	METHOD func_82616_c getZ ()D

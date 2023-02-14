@@ -1,1 +1,12 @@
 CLASS net/minecraft/client/renderer/entity/RenderOcelot
+	METHOD func_77117_a renderLivingOcelot (Lnet/minecraft/entity/passive/EntityOcelot;DDDFF)V
+		ARG 0 par1EntityOcelot
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77116_a preRenderOcelot (Lnet/minecraft/entity/passive/EntityOcelot;F)V
+		COMMENT Pre-Renders the Ocelot.
+		ARG 0 par1EntityOcelot
+		ARG 1 par2

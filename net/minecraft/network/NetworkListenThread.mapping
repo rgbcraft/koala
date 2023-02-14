@@ -1,5 +1,15 @@
 CLASS net/minecraft/network/NetworkListenThread
 	FIELD field_71751_a logger Ljava/util/logging/Logger;
+		COMMENT Reference to the logger.
 	FIELD field_71750_c mcServer Lnet/minecraft/server/MinecraftServer;
+		COMMENT Reference to the MinecraftServer object.
 	FIELD field_71748_d connections Ljava/util/List;
 	FIELD field_71749_b isListening Z
+		COMMENT Whether the network listener object is listening.
+	METHOD func_71745_a addPlayer (Lnet/minecraft/network/NetServerHandler;)V
+		COMMENT adds this connection to the list of currently connected players
+		ARG 0 par1NetServerHandler
+	METHOD func_71744_a stopListening ()V
+	METHOD func_71747_b networkTick ()V
+		COMMENT processes packets and pending connections
+	METHOD func_71746_d getServer ()Lnet/minecraft/server/MinecraftServer;

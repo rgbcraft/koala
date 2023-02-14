@@ -1,1 +1,10 @@
 CLASS net/minecraft/item/ItemSaddle
+	METHOD func_77646_a itemInteractionForEntity (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/EntityLiving;)Z
+		COMMENT Called when a player right clicks an entity with an item.
+		ARG 0 par1ItemStack
+		ARG 1 par2EntityLiving
+	METHOD func_77644_a hitEntity (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/entity/EntityLiving;)Z
+		COMMENT Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
+		ARG 0 par1ItemStack
+		ARG 1 par2EntityLiving
+		ARG 2 par3EntityLiving

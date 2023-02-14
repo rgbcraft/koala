@@ -1,1 +1,32 @@
 CLASS net/minecraft/block/BlockStationary
+	METHOD func_71918_c getBlocksMovement (Lnet/minecraft/world/IBlockAccess;III)Z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72215_l setNotStationary (Lnet/minecraft/world/World;III)V
+		COMMENT Changes the block ID to that of an updating fluid.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_72216_n isFlammable (Lnet/minecraft/world/World;III)Z
+		COMMENT Checks to see if the block is flammable.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

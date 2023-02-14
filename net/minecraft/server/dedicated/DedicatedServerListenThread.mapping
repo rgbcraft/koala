@@ -1,2 +1,8 @@
 CLASS net/minecraft/server/dedicated/DedicatedServerListenThread
 	FIELD field_71763_c theServerListenThread Lnet/minecraft/server/ServerListenThread;
+		COMMENT Instance of ServerListenThread.
+	METHOD func_71744_a stopListening ()V
+	METHOD func_71747_b networkTick ()V
+		COMMENT processes packets and pending connections
+	METHOD func_71762_c getDedicatedServer ()Lnet/minecraft/server/dedicated/DedicatedServer;
+	METHOD func_71746_d getServer ()Lnet/minecraft/server/MinecraftServer;

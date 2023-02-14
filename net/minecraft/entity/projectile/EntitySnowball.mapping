@@ -1,1 +1,4 @@
 CLASS net/minecraft/entity/projectile/EntitySnowball
+	METHOD func_70184_a onImpact (Lnet/minecraft/util/MovingObjectPosition;)V
+		COMMENT Called when this EntityThrowable hits a block or entity.
+		ARG 0 par1MovingObjectPosition

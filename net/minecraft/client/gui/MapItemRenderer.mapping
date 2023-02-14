@@ -3,3 +3,7 @@ CLASS net/minecraft/client/gui/MapItemRenderer
 	FIELD field_78321_b bufferedImage I
 	FIELD field_78322_c gameSettings Lnet/minecraft/client/settings/GameSettings;
 	FIELD field_78320_d fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+	METHOD func_78319_a renderMap (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/client/renderer/RenderEngine;Lnet/minecraft/world/storage/MapData;)V
+		ARG 0 par1EntityPlayer
+		ARG 1 par2RenderEngine
+		ARG 2 par3MapData

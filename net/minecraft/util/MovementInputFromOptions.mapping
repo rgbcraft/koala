@@ -1,4 +1,6 @@
 CLASS net/minecraft/util/MovementInputFromOptions
 	FIELD field_78903_e gameSettings Lnet/minecraft/client/settings/GameSettings;
+	METHOD func_78898_a updatePlayerMoveState ()V
 CLASS net/minecraft/util/MovementInputFromOptions
 	FIELD field_78903_e gameSettings Lnet/minecraft/client/settings/GameSettings;
+	METHOD func_78898_a updatePlayerMoveState ()V

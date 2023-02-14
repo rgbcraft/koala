@@ -1,7 +1,18 @@
 CLASS net/minecraft/network/rcon/RConThreadMain
 	FIELD field_72647_g rconPort I
+		COMMENT Port RCon is running on
 	FIELD field_72651_h serverPort I
+		COMMENT Port the server is running on
 	FIELD field_72652_i hostname Ljava/lang/String;
+		COMMENT Hostname RCon is running on
 	FIELD field_72649_j serverSocket Ljava/net/ServerSocket;
+		COMMENT The RCon ServerSocket.
 	FIELD field_72650_k rconPassword Ljava/lang/String;
+		COMMENT The RCon password
 	FIELD field_72648_l clientThreads Ljava/util/Map;
+		COMMENT A map of client addresses to their running Threads
+	METHOD func_72646_f initClientThreadList ()V
+	METHOD func_72645_g cleanClientThreadsMap ()V
+		COMMENT Cleans up the clientThreads map by removing client Threads that are not running
+	METHOD func_72602_a startThread ()V
+		COMMENT Creates a new Thread object from this class and starts running

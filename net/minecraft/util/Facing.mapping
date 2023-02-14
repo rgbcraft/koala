@@ -1,6 +1,10 @@
 CLASS net/minecraft/util/Facing
 	FIELD field_71588_a faceToSide [I
+		COMMENT Converts a face to a side.
 	FIELD field_71586_b offsetsXForSide [I
+		COMMENT gives the offset required for this axis to get the block at that side.
 	FIELD field_71587_c offsetsYForSide [I
+		COMMENT gives the offset required for this axis to get the block at that side.
 	FIELD field_71585_d offsetsZForSide [I
+		COMMENT gives the offset required for this axis to get the block at that side.
 	FIELD field_82374_e facings [Ljava/lang/String;

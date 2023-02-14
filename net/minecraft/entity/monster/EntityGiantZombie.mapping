@@ -1,1 +1,10 @@
 CLASS net/minecraft/entity/monster/EntityGiantZombie
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70783_a getBlockPathWeight (III)F
+		COMMENT Takes a coordinate in and returns a weight to determine how likely this creature will try to path to the block. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_82193_c getAttackStrength (Lnet/minecraft/entity/Entity;)I
+		COMMENT Returns the amount of damage a mob should deal.
+		ARG 0 par1Entity

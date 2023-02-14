@@ -1,5 +1,22 @@
 CLASS net/minecraft/network/rcon/RConThreadClient
 	FIELD field_72657_g loggedIn Z
+		COMMENT True if the client has succefssfully logged into the RCon, otherwise false
 	FIELD field_72659_h clientSocket Ljava/net/Socket;
+		COMMENT The client's Socket connection
 	FIELD field_72660_i buffer [B
+		COMMENT A buffer for incoming Socket data
 	FIELD field_72658_j rconPassword Ljava/lang/String;
+		COMMENT The RCon password
+	METHOD func_72654_a sendResponse (IILjava/lang/String;)V
+		COMMENT Sends the given response message to the client
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3Str
+	METHOD func_72656_f sendLoginFailedResponse ()V
+		COMMENT Sends the standard RCon 'authorization failed' response packet
+	METHOD func_72655_a sendMultipacketResponse (ILjava/lang/String;)V
+		COMMENT Splits the response message into individual packets and sends each one
+		ARG 0 par1
+		ARG 1 par2Str
+	METHOD func_72653_g closeSocket ()V
+		COMMENT Closes the client socket

@@ -3,5 +3,9 @@ CLASS net/minecraft/client/renderer/texturefx/TextureFX
 	FIELD field_76850_b iconIndex I
 	FIELD field_76851_c anaglyphEnabled Z
 	FIELD field_76848_d textureId I
+		COMMENT Texture ID
 	FIELD field_76849_e tileSize I
 	FIELD field_76847_f tileImage I
+	METHOD func_76846_a onTick ()V
+	METHOD func_76845_a bindImage (Lnet/minecraft/client/renderer/RenderEngine;)V
+		ARG 0 par1RenderEngine

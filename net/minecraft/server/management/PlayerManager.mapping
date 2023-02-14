@@ -1,7 +1,49 @@
 CLASS net/minecraft/server/management/PlayerManager
 	FIELD field_72701_a theWorldServer Lnet/minecraft/world/WorldServer;
 	FIELD field_72699_b players Ljava/util/List;
+		COMMENT players in the current instance
 	FIELD field_72700_c playerInstances Lnet/minecraft/util/LongHashMap;
+		COMMENT A map of chunk position (two ints concatenated into a long) to PlayerInstance
 	FIELD field_72697_d chunkWatcherWithPlayers Ljava/util/List;
+		COMMENT contains a PlayerInstance for every chunk they can see. the "player instance" cotains a list of all players who can also that chunk
 	FIELD field_72698_e playerViewRadius I
+		COMMENT Number of chunks the server sends to the client. Valid 3<=x<=15. In server.properties.
 	FIELD field_72696_f xzDirectionsConst [I
+		COMMENT x, z direction vectors: east, south, west, north
+	METHOD func_72688_a getWorldServer ()Lnet/minecraft/world/WorldServer;
+	METHOD func_72693_b updatePlayerInstances ()V
+		COMMENT updates all the player instances that need to be updated
+	METHOD func_72690_a getOrCreateChunkWatcher (IIZ)Lnet/minecraft/server/management/PlayerInstance;
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72687_a flagChunkForUpdate (III)V
+		COMMENT the "PlayerInstance"/ chunkWatcher will send this chunk to all players who are in line of sight
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72683_a addPlayer (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT Adds an EntityPlayerMP to the PlayerManager.
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72691_b filterChunkLoadQueue (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT Removes all chunks from the given player's chunk load queue that are not in viewing range of the player.
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72695_c removePlayer (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT Removes an EntityPlayerMP from the PlayerManager.
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72685_d updateMountedMovingPlayer (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT update chunks around a player being moved by server logic (e.g. cart, boat)
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72694_a isPlayerWatchingChunk (Lnet/minecraft/entity/player/EntityPlayerMP;II)Z
+		ARG 0 par1EntityPlayerMP
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72686_a getFurthestViewableBlock (I)I
+		COMMENT Get the furthest viewable block given player's view distance
+		ARG 0 par0
+	METHOD func_72692_a getWorldServer (Lnet/minecraft/server/management/PlayerManager;)Lnet/minecraft/world/WorldServer;
+		ARG 0 par0PlayerManager
+	METHOD func_72689_b getChunkWatchers (Lnet/minecraft/server/management/PlayerManager;)Lnet/minecraft/util/LongHashMap;
+		ARG 0 par0PlayerManager
+	METHOD func_72682_c getChunkWatchersWithPlayers (Lnet/minecraft/server/management/PlayerManager;)Ljava/util/List;
+		ARG 0 par0PlayerManager

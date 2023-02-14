@@ -1,8 +1,39 @@
 CLASS net/minecraft/inventory/ContainerRepair
 	FIELD field_82852_f outputSlot Lnet/minecraft/inventory/IInventory;
+		COMMENT Here comes out item you merged and/or renamed.
 	FIELD field_82853_g inputSlots Lnet/minecraft/inventory/IInventory;
+		COMMENT The 2slots where you put your items in that you want to merge and/or rename.
 	FIELD field_82860_h theWorld Lnet/minecraft/world/World;
 	FIELD field_82854_e maximumCost I
+		COMMENT The maximum cost of repairing/renaming in the anvil.
 	FIELD field_82856_l stackSizeToBeUsedInRepair I
+		COMMENT determined by damage of input item and stackSize of repair materials
 	FIELD field_82857_m repairedItemName Ljava/lang/String;
 	FIELD field_82855_n thePlayer Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT The player that has this container open.
+	METHOD func_75130_a onCraftMatrixChanged (Lnet/minecraft/inventory/IInventory;)V
+		COMMENT Callback for when the crafting matrix is changed.
+		ARG 0 par1IInventory
+	METHOD func_82848_d updateRepairOutput ()V
+		COMMENT called when the Anvil Input Slot changes, calculates the new result and puts it in the output slot
+	METHOD func_75132_a addCraftingToCrafters (Lnet/minecraft/inventory/ICrafting;)V
+		ARG 0 par1ICrafting
+	METHOD func_75137_b updateProgressBar (II)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75134_a onCraftGuiClosed (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Callback for when the crafting gui is closed.
+		ARG 0 par1EntityPlayer
+	METHOD func_75145_c canInteractWith (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 par1EntityPlayer
+	METHOD func_82846_b transferStackInSlot (Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;
+		COMMENT Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_82850_a updateItemName (Ljava/lang/String;)V
+		COMMENT used by the Anvil GUI to update the Item Name being typed by the player
+		ARG 0 par1Str
+	METHOD func_82851_a getRepairInputInventory (Lnet/minecraft/inventory/ContainerRepair;)Lnet/minecraft/inventory/IInventory;
+		ARG 0 par0ContainerRepair
+	METHOD func_82849_b getStackSizeUsedInRepair (Lnet/minecraft/inventory/ContainerRepair;)I
+		ARG 0 par0ContainerRepair

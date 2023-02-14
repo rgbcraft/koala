@@ -1,7 +1,50 @@
 CLASS net/minecraft/world/storage/SaveHandler
 	FIELD field_75772_a logger Ljava/util/logging/Logger;
+		COMMENT Reference to the logger.
 	FIELD field_75770_b worldDirectory Ljava/io/File;
+		COMMENT The directory in which to save world data.
 	FIELD field_75771_c playersDirectory Ljava/io/File;
+		COMMENT The directory in which to save player data.
 	FIELD field_75768_d mapDataDir Ljava/io/File;
 	FIELD field_75769_e initializationTime J
+		COMMENT The time in milliseconds when this field was initialized. Stored in the session lock file.
 	FIELD field_75767_f saveDirectoryName Ljava/lang/String;
+		COMMENT The directory name of the world
+	METHOD func_75766_h setSessionLock ()V
+		COMMENT Creates a session lock file for this process
+	METHOD func_75765_b getSaveDirectory ()Ljava/io/File;
+		COMMENT gets the File object corresponding to the base directory of this save (saves/404 for a save called 404 etc)
+	METHOD func_75762_c checkSessionLock ()V
+		COMMENT Checks the session lock to prevent save collisions
+	METHOD func_75763_a getChunkLoader (Lnet/minecraft/world/WorldProvider;)Lnet/minecraft/world/chunk/storage/IChunkLoader;
+		COMMENT Returns the chunk loader with the provided world provider
+		ARG 0 par1WorldProvider
+	METHOD func_75757_d loadWorldInfo ()Lnet/minecraft/world/storage/WorldInfo;
+		COMMENT Loads and returns the world info
+	METHOD func_75755_a saveWorldInfoWithPlayer (Lnet/minecraft/world/storage/WorldInfo;Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Saves the given World Info with the given NBTTagCompound as the Player.
+		ARG 0 par1WorldInfo
+		ARG 1 par2NBTTagCompound
+	METHOD func_75761_a saveWorldInfo (Lnet/minecraft/world/storage/WorldInfo;)V
+		COMMENT Saves the passed in world info.
+		ARG 0 par1WorldInfo
+	METHOD func_75753_a writePlayerData (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Writes the player data to disk from the specified PlayerEntityMP.
+		ARG 0 par1EntityPlayer
+	METHOD func_75752_b readPlayerData (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Reads the player data from disk into the specified PlayerEntityMP.
+		ARG 0 par1EntityPlayer
+	METHOD func_75764_a getPlayerData (Ljava/lang/String;)Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Gets the player data for the given playername as a NBTTagCompound.
+		ARG 0 par1Str
+	METHOD func_75756_e getSaveHandler ()Lnet/minecraft/world/storage/IPlayerFileData;
+		COMMENT returns null if no saveHandler is relevent (eg. SMP)
+	METHOD func_75754_f getAvailablePlayerDat ()[Ljava/lang/String;
+		COMMENT Returns an array of usernames for which player.dat exists for.
+	METHOD func_75759_a flush ()V
+		COMMENT Called to flush all changes to disk, waiting for them to complete.
+	METHOD func_75758_b getMapFileFromName (Ljava/lang/String;)Ljava/io/File;
+		COMMENT Gets the file location of the given map
+		ARG 0 par1Str
+	METHOD func_75760_g getSaveDirectoryName ()Ljava/lang/String;
+		COMMENT Returns the name of the directory where world information is saved.

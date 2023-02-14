@@ -1,5 +1,18 @@
 CLASS net/minecraft/client/model/ModelSlime
 	FIELD field_78200_a slimeBodies Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The slime's bodies, both the inside box and the outside box
 	FIELD field_78198_b slimeRightEye Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The slime's right eye
 	FIELD field_78199_c slimeLeftEye Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The slime's left eye
 	FIELD field_78197_d slimeMouth Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The slime's mouth
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7

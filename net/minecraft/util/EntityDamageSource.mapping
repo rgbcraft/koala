@@ -1,2 +1,8 @@
 CLASS net/minecraft/util/EntityDamageSource
 	FIELD field_76386_o damageSourceEntity Lnet/minecraft/entity/Entity;
+	METHOD func_76346_g getEntity ()Lnet/minecraft/entity/Entity;
+	METHOD func_76360_b getDeathMessage (Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;
+		COMMENT Returns the message to be displayed on player death.
+		ARG 0 par1EntityPlayer
+	METHOD func_76350_n isDifficultyScaled ()Z
+		COMMENT Return whether this damage source will have its damage amount scaled based on the current difficulty.

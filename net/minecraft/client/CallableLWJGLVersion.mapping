@@ -1,2 +1,4 @@
 CLASS net/minecraft/client/CallableLWJGLVersion
 	FIELD field_74503_a mc Lnet/minecraft/client/Minecraft;
+		COMMENT Reference to the Minecraft object.
+	METHOD func_74502_a getType ()Ljava/lang/String;

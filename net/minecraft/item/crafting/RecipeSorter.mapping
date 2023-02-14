@@ -1,2 +1,5 @@
 CLASS net/minecraft/item/crafting/RecipeSorter
 	FIELD field_77582_a craftingManager Lnet/minecraft/item/crafting/CraftingManager;
+	METHOD func_77581_a compareRecipes (Lnet/minecraft/item/crafting/IRecipe;Lnet/minecraft/item/crafting/IRecipe;)I
+		ARG 0 par1IRecipe
+		ARG 1 par2IRecipe

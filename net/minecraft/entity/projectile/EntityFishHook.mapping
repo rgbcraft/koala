@@ -1,7 +1,10 @@
 CLASS net/minecraft/entity/projectile/EntityFishHook
 	FIELD field_70202_d xTile I
+		COMMENT The tile this entity is on, X position
 	FIELD field_70203_e yTile I
+		COMMENT The tile this entity is on, Y position
 	FIELD field_70200_f zTile I
+		COMMENT The tile this entity is on, Z position
 	FIELD field_70201_g inTile I
 	FIELD field_70214_h inGround Z
 	FIELD field_70206_a shake I
@@ -9,7 +12,9 @@ CLASS net/minecraft/entity/projectile/EntityFishHook
 	FIELD field_70216_i ticksInGround I
 	FIELD field_70211_j ticksInAir I
 	FIELD field_70219_an ticksCatchable I
+		COMMENT the number of ticks remaining until this fish can no longer be caught
 	FIELD field_70205_c bobber Lnet/minecraft/entity/Entity;
+		COMMENT The entity that the fishing rod is connected to, if any. When you right click on the fishing rod and the hook falls on to an entity, this it that entity.
 	FIELD field_70217_ao fishPosRotationIncrements I
 	FIELD field_70218_ap fishX D
 	FIELD field_70210_aq fishY D
@@ -19,3 +24,38 @@ CLASS net/minecraft/entity/projectile/EntityFishHook
 	FIELD field_70215_au velocityX D
 	FIELD field_70213_av velocityY D
 	FIELD field_70212_aw velocityZ D
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70112_a isInRangeToRenderDist (D)Z
+		COMMENT Checks if the entity is in range to render by using the past in distance and comparing it to its average edge length * 64 * renderDistanceWeight Args: distance
+		ARG 0 par1
+	METHOD func_70199_c calculateVelocity (DDDFF)V
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+	METHOD func_70056_a setPositionAndRotation2 (DDDFFI)V
+		COMMENT Sets the position and rotation. Only difference from the other one is no bounding on the rotation. Args: posX, posY, posZ, yaw, pitch
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_70016_h setVelocity (DDD)V
+		COMMENT Sets the velocity to the args. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_70198_d catchFish ()I
+	METHOD func_70106_y setDead ()V
+		COMMENT Will get destroyed next tick.

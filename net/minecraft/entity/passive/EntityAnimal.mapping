@@ -1,3 +1,53 @@
 CLASS net/minecraft/entity/passive/EntityAnimal
 	FIELD field_70881_d inLove I
 	FIELD field_70882_e breeding I
+		COMMENT This is representation of a counter for reproduction progress. (Note that this is different from the inLove which represent being in Love-Mode)
+	METHOD func_70629_bd updateAITick ()V
+		COMMENT main AI tick function, replaces updateEntityActionState
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70785_a attackEntity (Lnet/minecraft/entity/Entity;F)V
+		COMMENT Basic mob attack. Default to touch of death in EntityCreature. Overridden by each mob to define their attack.
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_70876_c procreate (Lnet/minecraft/entity/passive/EntityAnimal;)V
+		COMMENT Creates a baby animal according to the animal type of the target at the actual position and spawns 'love' particles.
+		ARG 0 par1EntityAnimal
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70783_a getBlockPathWeight (III)F
+		COMMENT Takes a coordinate in and returns a weight to determine how likely this creature will try to path to the block. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70782_k findPlayerToAttack ()Lnet/minecraft/entity/Entity;
+		COMMENT Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking (Animals, Spiders at day, peaceful PigZombies).
+	METHOD func_70601_bi getCanSpawnHere ()Z
+		COMMENT Checks if the entity's current position is a valid location to spawn this entity.
+	METHOD func_70627_aG getTalkInterval ()I
+		COMMENT Get number of ticks, at least during which the living entity will be silent.
+	METHOD func_70692_ba canDespawn ()Z
+		COMMENT Determines if an entity can be despawned, used on idle far away entities
+	METHOD func_70693_a getExperiencePoints (Lnet/minecraft/entity/player/EntityPlayer;)I
+		COMMENT Get the experience points the entity currently has.
+		ARG 0 par1EntityPlayer
+	METHOD func_70877_b isBreedingItem (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on the animal type)
+		ARG 0 par1ItemStack
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer
+	METHOD func_70880_s isInLove ()Z
+		COMMENT Returns if the entity is currently in 'love mode'.
+	METHOD func_70875_t resetInLove ()V
+	METHOD func_70878_b canMateWith (Lnet/minecraft/entity/passive/EntityAnimal;)Z
+		COMMENT Returns true if the mob is currently able to mate with the specified mob.
+		ARG 0 par1EntityAnimal

@@ -1,4 +1,7 @@
 CLASS net/minecraft/client/multiplayer/ThreadConnectToServer
 	FIELD field_78821_a ip Ljava/lang/String;
+		COMMENT The IP address or domain used to connect.
 	FIELD field_78819_b port I
+		COMMENT The port used to connect.
 	FIELD field_78820_c connectingGui Lnet/minecraft/client/multiplayer/GuiConnecting;
+		COMMENT A reference to the GuiConnecting object.

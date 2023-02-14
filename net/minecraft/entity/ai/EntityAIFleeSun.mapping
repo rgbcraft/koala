@@ -5,3 +5,10 @@ CLASS net/minecraft/entity/ai/EntityAIFleeSun
 	FIELD field_75368_d shelterZ D
 	FIELD field_75369_e movementSpeed F
 	FIELD field_75367_f theWorld Lnet/minecraft/world/World;
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75366_f findPossibleShelter ()Lnet/minecraft/util/Vec3;

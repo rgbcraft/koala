@@ -1,6 +1,27 @@
 CLASS net/minecraft/item/crafting/ShapedRecipes
 	FIELD field_77576_b recipeWidth I
+		COMMENT How many horizontal slots this recipe is wide.
 	FIELD field_77577_c recipeHeight I
+		COMMENT How many vertical slots this recipe uses.
 	FIELD field_77574_d recipeItems [Lnet/minecraft/item/ItemStack;
+		COMMENT Is a array of ItemStack that composes the recipe.
 	FIELD field_77575_e recipeOutput Lnet/minecraft/item/ItemStack;
+		COMMENT Is the ItemStack that you get when craft the recipe.
 	FIELD field_77578_a recipeOutputItemID I
+		COMMENT Is the itemID of the output item that you get when craft the recipe.
+	METHOD func_77571_b getRecipeOutput ()Lnet/minecraft/item/ItemStack;
+	METHOD func_77569_a matches (Lnet/minecraft/inventory/InventoryCrafting;Lnet/minecraft/world/World;)Z
+		COMMENT Used to check if a recipe matches current crafting inventory
+		ARG 0 par1InventoryCrafting
+		ARG 1 par2World
+	METHOD func_77573_a checkMatch (Lnet/minecraft/inventory/InventoryCrafting;IIZ)Z
+		COMMENT Checks if the region of a crafting inventory is match for the recipe.
+		ARG 0 par1InventoryCrafting
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_77572_b getCraftingResult (Lnet/minecraft/inventory/InventoryCrafting;)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns an Item that is the result of this recipe
+		ARG 0 par1InventoryCrafting
+	METHOD func_77570_a getRecipeSize ()I
+		COMMENT Returns the size of the recipe area

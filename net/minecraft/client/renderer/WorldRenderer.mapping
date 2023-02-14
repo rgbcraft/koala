@@ -1,5 +1,6 @@
 CLASS net/minecraft/client/renderer/WorldRenderer
 	FIELD field_78924_a worldObj Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
 	FIELD field_78942_y glRenderList I
 	FIELD field_78941_z tessellator Lnet/minecraft/client/renderer/Tessellator;
 	FIELD field_78922_b chunksUpdated I
@@ -7,24 +8,68 @@ CLASS net/minecraft/client/renderer/WorldRenderer
 	FIELD field_78920_d posY I
 	FIELD field_78921_e posZ I
 	FIELD field_78918_f posXMinus I
+		COMMENT Pos X minus
 	FIELD field_78919_g posYMinus I
+		COMMENT Pos Y minus
 	FIELD field_78931_h posZMinus I
+		COMMENT Pos Z minus
 	FIELD field_78932_i posXClip I
+		COMMENT Pos X clipped
 	FIELD field_78929_j posYClip I
+		COMMENT Pos Y clipped
 	FIELD field_78930_k posZClip I
+		COMMENT Pos Z clipped
 	FIELD field_78927_l isInFrustum Z
 	FIELD field_78928_m skipRenderPass [Z
+		COMMENT Should this renderer skip this render pass
 	FIELD field_78925_n posXPlus I
+		COMMENT Pos X plus
 	FIELD field_78926_o posYPlus I
+		COMMENT Pos Y plus
 	FIELD field_78940_p posZPlus I
+		COMMENT Pos Z plus
 	FIELD field_78939_q needsUpdate Z
+		COMMENT Boolean for whether this renderer needs to be updated or not
 	FIELD field_78938_r rendererBoundingBox Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Axis aligned bounding box
 	FIELD field_78937_s chunkIndex I
+		COMMENT Chunk index
 	FIELD field_78936_t isVisible Z
+		COMMENT Is this renderer visible according to the occlusion query
 	FIELD field_78935_u isWaitingOnOcclusionQuery Z
+		COMMENT Is this renderer waiting on the result of the occlusion query
 	FIELD field_78934_v glOcclusionQuery I
+		COMMENT OpenGL occlusion query
 	FIELD field_78933_w isChunkLit Z
+		COMMENT Is the chunk lit
 	FIELD field_78915_A isInitialized Z
 	FIELD field_78943_x tileEntityRenderers Ljava/util/List;
+		COMMENT All the tile entities that have special rendering code for this chunk
 	FIELD field_78916_B tileEntities Ljava/util/List;
 	FIELD field_78917_C bytesDrawn I
+		COMMENT Bytes sent to the GPU
+	METHOD func_78913_a setPosition (III)V
+		COMMENT Sets a new position for the renderer and setting it up so it can be reloaded with the new data for that position
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_78905_g setupGLTranslation ()V
+	METHOD func_78907_a updateRenderer ()V
+		COMMENT Will update this chunk renderer
+	METHOD func_78912_a distanceToEntitySquared (Lnet/minecraft/entity/Entity;)F
+		COMMENT Returns the distance of this chunk renderer to the entity without performing the final normalizing square root, for performance reasons.
+		ARG 0 par1Entity
+	METHOD func_78910_b setDontDraw ()V
+		COMMENT When called this renderer won't draw anymore until its gets initialized again
+	METHOD func_78911_c stopRendering ()V
+	METHOD func_78909_a getGLCallListForPass (I)I
+		COMMENT Takes in the pass the call list is being requested for. Args: renderPass
+		ARG 0 par1
+	METHOD func_78908_a updateInFrustum (Lnet/minecraft/client/renderer/culling/ICamera;)V
+		ARG 0 par1ICamera
+	METHOD func_78904_d callOcclusionQueryList ()V
+		COMMENT Renders the occlusion query GL List
+	METHOD func_78906_e skipAllRenderPasses ()Z
+		COMMENT Checks if all render passes are to be skipped. Returns false if the renderer is not initialized
+	METHOD func_78914_f markDirty ()V
+		COMMENT Marks the current renderer data as dirty and needing to be updated.

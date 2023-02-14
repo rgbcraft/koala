@@ -1,8 +1,46 @@
 CLASS net/minecraft/block/RailLogic
 	FIELD field_73657_b worldObj Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
 	FIELD field_73658_c trackX I
 	FIELD field_73655_d trackY I
 	FIELD field_73656_e trackZ I
 	FIELD field_73653_f isPoweredRail Z
+		COMMENT A boolean value that is true if the rail is powered, and false if its not.
 	FIELD field_73654_g connectedTracks Ljava/util/List;
 	FIELD field_73659_a rail Lnet/minecraft/block/BlockRail;
+	METHOD func_73645_a setConnections (I)V
+		ARG 0 par1
+	METHOD func_73644_a refreshConnectedTracks ()V
+		COMMENT Neighboring tracks have potentially been broken, so prune the connected track list
+	METHOD func_73642_a isMinecartTrack (III)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73648_a getMinecartTrackLogic (Lnet/minecraft/world/ChunkPosition;)Lnet/minecraft/block/RailLogic;
+		ARG 0 par1ChunkPosition
+	METHOD func_73647_b isConnectedTo (Lnet/minecraft/block/RailLogic;)Z
+		ARG 0 par1RailLogic
+	METHOD func_73649_b isInTrack (III)Z
+		COMMENT Returns true if the specified block is in the same railway.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73651_b getAdjacentTracks ()I
+	METHOD func_73646_c canConnectTo (Lnet/minecraft/block/RailLogic;)Z
+		COMMENT Determines whether or not the track can bend to meet the specified rail
+		ARG 0 par1RailLogic
+	METHOD func_73641_d connectToNeighbor (Lnet/minecraft/block/RailLogic;)V
+		COMMENT The specified neighbor has just formed a new connection, so update accordingly
+		ARG 0 par1RailLogic
+	METHOD func_73643_c canConnectFrom (III)Z
+		COMMENT Determines whether or not the target rail can connect to this rail
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73652_a refreshTrackShape (ZZ)V
+		COMMENT Completely recalculates the track shape based on neighboring tracks and power state
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73650_a getAdjacentTrackCount (Lnet/minecraft/block/RailLogic;)I
+		COMMENT Get the number of adjacent tracks.
+		ARG 0 par0RailLogic

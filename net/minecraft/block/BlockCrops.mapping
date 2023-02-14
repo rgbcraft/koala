@@ -1,1 +1,56 @@
 CLASS net/minecraft/block/BlockCrops
+	METHOD func_72263_d_ canThisPlantGrowOnThisBlockID (I)Z
+		COMMENT Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
+		ARG 0 par1
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_72272_c_ fertilize (Lnet/minecraft/world/World;III)V
+		COMMENT Apply bonemeal to the crops.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72273_l getGrowthRate (Lnet/minecraft/world/World;III)F
+		COMMENT Gets the growth rate for the crop. Setup to encourage rows by halving growth rate if there is diagonals, crops on different sides that aren't opposing, and by adding growth for every crop next to this one (and for crop below this one). Args: x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_82532_h getSeedItem ()I
+		COMMENT Generate a seed ItemStack for this crop.
+	METHOD func_82533_j getCropItem ()I
+		COMMENT Generate a crop produce ItemStack for this crop.
+	METHOD func_71914_a dropBlockAsItemWithChance (Lnet/minecraft/world/World;IIIIFI)V
+		COMMENT Drops the block items with a specified chance of dropping the specified items
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_71922_a idPicked (Lnet/minecraft/world/World;III)I
+		COMMENT only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

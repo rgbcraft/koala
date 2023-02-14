@@ -1,2 +1,50 @@
 CLASS net/minecraft/util/CryptManager
 	FIELD field_75898_a charSet Ljava/nio/charset/Charset;
+		COMMENT ISO_8859_1
+	METHOD func_75890_a createNewSharedKey ()Ljavax/crypto/SecretKey;
+		COMMENT Generate a new shared secret AES key from a secure random source
+	METHOD func_75891_b createNewKeyPair ()Ljava/security/KeyPair;
+	METHOD func_75895_a getServerIdHash (Ljava/lang/String;Ljava/security/PublicKey;Ljavax/crypto/SecretKey;)[B
+		COMMENT Compute a serverId hash for use by sendSessionRequest()
+		ARG 0 par0Str
+		ARG 1 par1PublicKey
+		ARG 2 par2SecretKey
+	METHOD func_75893_a digestOperation (Ljava/lang/String;[B)[B
+		COMMENT Compute a message digest on arbitrary byte[] data
+		ARG 0 par0Str
+		ARG 1 par1ArrayOfByte
+	METHOD func_75896_a decodePublicKey ([B)Ljava/security/PublicKey;
+		COMMENT Create a new PublicKey from encoded X.509 data
+		ARG 0 par0ArrayOfByte
+	METHOD func_75887_a decryptSharedKey (Ljava/security/PrivateKey;[B)Ljavax/crypto/SecretKey;
+		COMMENT Decrypt shared secret AES key using RSA private key
+		ARG 0 par0PrivateKey
+		ARG 1 par1ArrayOfByte
+	METHOD func_75894_a encryptData (Ljava/security/Key;[B)[B
+		COMMENT Encrypt byte[] data with RSA public key
+		ARG 0 par0Key
+		ARG 1 par1ArrayOfByte
+	METHOD func_75889_b decryptData (Ljava/security/Key;[B)[B
+		COMMENT Decrypt byte[] data with RSA private key
+		ARG 0 par0Key
+		ARG 1 par1ArrayOfByte
+	METHOD func_75885_a cipherOperation (ILjava/security/Key;[B)[B
+		COMMENT Encrypt or decrypt byte[] data using the specified key
+		ARG 0 par0
+		ARG 1 par1Key
+		ARG 2 par2ArrayOfByte
+	METHOD func_75886_a createTheCipherInstance (ILjava/lang/String;Ljava/security/Key;)Ljavax/crypto/Cipher;
+		COMMENT Creates the Cipher Instance.
+		ARG 0 par0
+		ARG 1 par1Str
+		ARG 2 par2Key
+	METHOD func_75892_a createBufferedBlockCipher (ZLjava/security/Key;)Lorg/bouncycastle/crypto/BufferedBlockCipher;
+		COMMENT Create a new BufferedBlockCipher instance
+		ARG 0 par0
+		ARG 1 par1Key
+	METHOD func_75897_a encryptOuputStream (Ljavax/crypto/SecretKey;Ljava/io/OutputStream;)Ljava/io/OutputStream;
+		ARG 0 par0SecretKey
+		ARG 1 par1OutputStream
+	METHOD func_75888_a decryptInputStream (Ljavax/crypto/SecretKey;Ljava/io/InputStream;)Ljava/io/InputStream;
+		ARG 0 par0SecretKey
+		ARG 1 par1InputStream

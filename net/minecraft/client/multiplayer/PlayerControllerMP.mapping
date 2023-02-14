@@ -1,13 +1,108 @@
 CLASS net/minecraft/client/multiplayer/PlayerControllerMP
 	FIELD field_78776_a mc Lnet/minecraft/client/Minecraft;
+		COMMENT The Minecraft instance.
 	FIELD field_78774_b netClientHandler Lnet/minecraft/client/multiplayer/NetClientHandler;
 	FIELD field_78775_c currentBlockX I
+		COMMENT PosX of the current block being destroyed
 	FIELD field_78772_d currentBlockY I
+		COMMENT PosY of the current block being destroyed
 	FIELD field_78773_e currentblockZ I
+		COMMENT PosZ of the current block being destroyed
 	FIELD field_78770_f curBlockDamageMP F
+		COMMENT Current block damage (MP)
 	FIELD field_78771_g prevBlockDamageMP F
+		COMMENT Previous block damage (MP)
 	FIELD field_78780_h stepSoundTickCounter F
+		COMMENT Tick counter, when it hits 4 it resets back to 0 and plays the step sound
 	FIELD field_78781_i blockHitDelay I
+		COMMENT Delays the first damage on the block after the first click on the block
 	FIELD field_78778_j isHittingBlock Z
+		COMMENT Tells if the player is hitting a block
 	FIELD field_78779_k currentGameType Lnet/minecraft/world/EnumGameType;
+		COMMENT Current game type for the player
 	FIELD field_78777_l currentPlayerItem I
+		COMMENT Index of the current item held by the player in the inventory hotbar
+	METHOD func_78744_a clickBlockCreative (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/PlayerControllerMP;IIII)V
+		COMMENT Block dig operation in creative mode (instantly digs the block).
+		ARG 0 par0Minecraft
+		ARG 1 par1PlayerControllerMP
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+	METHOD func_78748_a setPlayerCapabilities (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Sets player capabilities depending on current gametype. params: player
+		ARG 0 par1EntityPlayer
+	METHOD func_78746_a setGameType (Lnet/minecraft/world/EnumGameType;)V
+		COMMENT Sets the game type for the player.
+		ARG 0 par1EnumGameType
+	METHOD func_78745_b flipPlayer (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Flips the player around. Args: player
+		ARG 0 par1EntityPlayer
+	METHOD func_78755_b shouldDrawHUD ()Z
+	METHOD func_78751_a onPlayerDestroyBlock (IIII)Z
+		COMMENT Called when a player completes the destruction of a block
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78743_b clickBlock (IIII)V
+		COMMENT Called by Minecraft class when the player is hitting a block with an item. Args: x, y, z, side
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78767_c resetBlockRemoving ()V
+		COMMENT Resets current block damage and field_78778_j
+	METHOD func_78759_c onPlayerDamageBlock (IIII)V
+		COMMENT Called when a player damages a block and updates damage counters
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78757_d getBlockReachDistance ()F
+		COMMENT player reach distance = 4F
+	METHOD func_78765_e updateController ()V
+	METHOD func_78750_j syncCurrentPlayItem ()V
+		COMMENT Syncs the current player item with the server
+	METHOD func_78760_a onPlayerRightClick (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;IIIILnet/minecraft/util/Vec3;)Z
+		COMMENT Handles a players right click. Args: player, world, x, y, z, side, hitVec
+		ARG 0 par1EntityPlayer
+		ARG 1 par2World
+		ARG 2 par3ItemStack
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8Vec3
+	METHOD func_78769_a sendUseItem (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Notifies the server of things like consuming food, etc...
+		ARG 0 par1EntityPlayer
+		ARG 1 par2World
+		ARG 2 par3ItemStack
+	METHOD func_78764_a attackEntity (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/entity/Entity;)V
+		COMMENT Attacks an entity
+		ARG 0 par1EntityPlayer
+		ARG 1 par2Entity
+	METHOD func_78753_a windowClick (IIIILnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityPlayer
+	METHOD func_78756_a sendEnchantPacket (II)V
+		COMMENT GuiEnchantment uses this during multiplayer to tell PlayerControllerMP to send a packet indicating the enchantment action the player has taken.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_78761_a sendSlotPacket (Lnet/minecraft/item/ItemStack;I)V
+		COMMENT Used in PlayerControllerMP to update the server with an ItemStack in a slot.
+		ARG 0 par1ItemStack
+		ARG 1 par2
+	METHOD func_78766_c onStoppedUsingItem (Lnet/minecraft/entity/player/EntityPlayer;)V
+		ARG 0 par1EntityPlayer
+	METHOD func_78762_g isNotCreative ()Z
+		COMMENT Checks if the player is not creative, used for checking if it should break a block instantly
+	METHOD func_78758_h isInCreativeMode ()Z
+		COMMENT returns true if player is in creative mode
+	METHOD func_78749_i extendedReach ()Z
+		COMMENT true for hitting entities far away.

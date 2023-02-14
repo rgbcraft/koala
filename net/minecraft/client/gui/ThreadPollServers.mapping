@@ -1,3 +1,5 @@
 CLASS net/minecraft/client/gui/ThreadPollServers
 	FIELD field_78318_a pollServersServerData Lnet/minecraft/client/multiplayer/ServerData;
+		COMMENT An Instnace of ServerData.
 	FIELD field_78317_b serverSlotContainer Lnet/minecraft/client/gui/GuiSlotServer;
+		COMMENT Slot container for the server list

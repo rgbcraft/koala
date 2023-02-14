@@ -1,1 +1,126 @@
 CLASS net/minecraft/world/chunk/EmptyChunk
+	METHOD func_76600_a isAtLocation (II)Z
+		COMMENT Checks whether the chunk is at the X/Z location specified
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76611_b getHeightValue (II)I
+		COMMENT Returns the value in the height map at this x, z coordinate in the chunk
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76590_a generateHeightMap ()V
+		COMMENT Generates the height map for a chunk from scratch
+	METHOD func_76603_b generateSkylightMap ()V
+		COMMENT Generates the initial skylight map for the chunk upon generation or load.
+	METHOD func_76610_a getBlockID (III)I
+		COMMENT Return the ID of a block in the chunk.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76596_b getBlockLightOpacity (III)I
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76592_a setBlockIDWithMetadata (IIIII)Z
+		COMMENT Sets a blockID of a position within a chunk with metadata. Args: x, y, z, blockID, metadata
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76598_a setBlockID (IIII)Z
+		COMMENT Sets a blockID for a position in the chunk. Args: x, y, z, blockID
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76628_c getBlockMetadata (III)I
+		COMMENT Return the metadata corresponding to the given coordinates inside a chunk.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76589_b setBlockMetadata (IIII)Z
+		COMMENT Set the metadata of a block in the chunk
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76614_a getSavedLightValue (Lnet/minecraft/world/EnumSkyBlock;III)I
+		COMMENT Gets the amount of light saved in this block (doesn't adjust for daylight)
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76633_a setLightValue (Lnet/minecraft/world/EnumSkyBlock;IIII)V
+		COMMENT Sets the light value at the coordinate. If enumskyblock is set to sky it sets it in the skylightmap and if its a block then into the blocklightmap. Args enumSkyBlock, x, y, z, lightValue
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76629_c getBlockLightValue (IIII)I
+		COMMENT Gets the amount of light on a block taking into account sunlight
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76612_a addEntity (Lnet/minecraft/entity/Entity;)V
+		COMMENT Adds an entity to the chunk. Args: entity
+		ARG 0 par1Entity
+	METHOD func_76622_b removeEntity (Lnet/minecraft/entity/Entity;)V
+		COMMENT removes entity using its y chunk coordinate as its index
+		ARG 0 par1Entity
+	METHOD func_76608_a removeEntityAtIndex (Lnet/minecraft/entity/Entity;I)V
+		COMMENT Removes entity at the specified index from the entity array.
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_76619_d canBlockSeeTheSky (III)Z
+		COMMENT Returns whether is not a block above this one blocking sight to the sky (done via checking against the heightmap)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76597_e getChunkBlockTileEntity (III)Lnet/minecraft/tileentity/TileEntity;
+		COMMENT Gets the TileEntity for a given block in this chunk
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76620_a addTileEntity (Lnet/minecraft/tileentity/TileEntity;)V
+		COMMENT Adds a TileEntity to a chunk
+		ARG 0 par1TileEntity
+	METHOD func_76604_a setChunkBlockTileEntity (IIILnet/minecraft/tileentity/TileEntity;)V
+		COMMENT Sets the TileEntity for a given block in this chunk
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4TileEntity
+	METHOD func_76627_f removeChunkBlockTileEntity (III)V
+		COMMENT Removes the TileEntity for a given block in this chunk
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76631_c onChunkLoad ()V
+		COMMENT Called when this Chunk is loaded by the ChunkProvider
+	METHOD func_76623_d onChunkUnload ()V
+		COMMENT Called when this Chunk is unloaded by the ChunkProvider
+	METHOD func_76630_e setChunkModified ()V
+		COMMENT Sets the isModified flag for this Chunk
+	METHOD func_76588_a getEntitiesWithinAABBForEntity (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;Ljava/util/List;)V
+		COMMENT Fills the given list of all entities that intersect within the given bounding box that aren't the passed entity Args: entity, aabb, listToFill
+		ARG 0 par1Entity
+		ARG 1 par2AxisAlignedBB
+		ARG 2 par3List
+	METHOD func_76618_a getEntitiesOfTypeWithinAAAB (Ljava/lang/Class;Lnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/command/IEntitySelector;)V
+		COMMENT Gets all entities that can be assigned to the specified class. Args: entityClass, aabb, listToFill
+		ARG 0 par1Class
+		ARG 1 par2AxisAlignedBB
+		ARG 2 par3List
+		ARG 3 par4IEntitySelector
+	METHOD func_76601_a needsSaving (Z)Z
+		COMMENT Returns true if this Chunk needs to be saved
+		ARG 0 par1
+	METHOD func_76617_a getRandomWithSeed (J)Ljava/util/Random;
+		ARG 0 par1
+	METHOD func_76621_g isEmpty ()Z
+	METHOD func_76606_c getAreLevelsEmpty (II)Z
+		COMMENT Returns whether the ExtendedBlockStorages containing levels (in blocks) from arg 1 to arg 2 are fully empty (true) or not (false).
+		ARG 0 par1
+		ARG 1 par2

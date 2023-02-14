@@ -2,3 +2,23 @@ CLASS net/minecraft/client/renderer/ImageBufferDownload
 	FIELD field_78438_a imageData [I
 	FIELD field_78436_b imageWidth I
 	FIELD field_78437_c imageHeight I
+	METHOD func_78432_a parseUserSkin (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
+		ARG 0 par1BufferedImage
+	METHOD func_78434_a setAreaTransparent (IIII)V
+		COMMENT Makes the given area of the image transparent if it was previously completely opaque (used to remove the outer layer of a skin around the head if it was saved all opaque; this would be redundant so it's assumed that the skin maker is just using an image editor without an alpha channel)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78433_b setAreaOpaque (IIII)V
+		COMMENT Makes the given area of the image opaque
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78435_c hasTransparency (IIII)Z
+		COMMENT Returns true if the given area of the image contains transparent pixels
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

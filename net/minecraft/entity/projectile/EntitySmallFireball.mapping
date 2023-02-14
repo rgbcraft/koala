@@ -1,1 +1,10 @@
 CLASS net/minecraft/entity/projectile/EntitySmallFireball
+	METHOD func_70227_a onImpact (Lnet/minecraft/util/MovingObjectPosition;)V
+		COMMENT Called when this EntityFireball hits a block or entity.
+		ARG 0 par1MovingObjectPosition
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2

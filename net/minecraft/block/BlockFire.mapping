@@ -1,3 +1,97 @@
 CLASS net/minecraft/block/BlockFire
 	FIELD field_72258_a chanceToEncourageFire [I
+		COMMENT The chance this block will encourage nearby blocks to catch on fire
 	FIELD field_72257_b abilityToCatchFire [I
+		COMMENT This is an array indexed by block ID the larger the number in the array the more likely a block type will catch fires
+	METHOD func_71928_r_ initializeBlock ()V
+		COMMENT This method is called on a block after all other blocks gets already created. You can use it to reference and configure something on the block that needs the others ones.
+	METHOD func_72253_a setBurnRate (III)V
+		COMMENT Sets the burn rate for a block. The larger abilityToCatchFire the more easily it will catch. The larger chanceToEncourageFire the faster it will burn and spread to other blocks. Args: blockID, chanceToEncourageFire, abilityToCatchFire
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_71859_p_ tickRate ()I
+		COMMENT How many world ticks before ticking
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_72255_a tryToCatchBlockOnFire (Lnet/minecraft/world/World;IIIILjava/util/Random;I)V
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6Random
+		ARG 6 par7
+	METHOD func_72251_l canNeighborBurn (Lnet/minecraft/world/World;III)Z
+		COMMENT Returns true if at least one block next to this one can burn.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72254_n getChanceOfNeighborsEncouragingFire (Lnet/minecraft/world/World;III)I
+		COMMENT Gets the highest chance of a neighbor block encouraging this block to catch fire
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71935_l isCollidable ()Z
+		COMMENT Returns if this block is collidable (only used by Fire). Args: x, y, z
+	METHOD func_72256_d canBlockCatchFire (Lnet/minecraft/world/IBlockAccess;III)Z
+		COMMENT Checks the specified block coordinate to see if it can catch fire.  Args: blockAccess, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72252_e getChanceToEncourageFire (Lnet/minecraft/world/World;IIII)I
+		COMMENT Retrieves a specified block's chance to encourage their neighbors to burn and if the number is greater than the current number passed in it will return its number instead of the passed in one.  Args: world, x, y, z, curChanceToEncourageFire
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71930_b canPlaceBlockAt (Lnet/minecraft/world/World;III)Z
+		COMMENT Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71861_g onBlockAdded (Lnet/minecraft/world/World;III)V
+		COMMENT Called whenever the block is added into the world. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71862_a randomDisplayTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT A randomly called display update to be able to add particles or other items for display
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random

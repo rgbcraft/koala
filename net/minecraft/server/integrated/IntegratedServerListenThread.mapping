@@ -2,3 +2,10 @@ CLASS net/minecraft/server/integrated/IntegratedServerListenThread
 	FIELD field_71760_c netMemoryConnection Lnet/minecraft/network/MemoryConnection;
 	FIELD field_71758_d theMemoryConnection Lnet/minecraft/network/MemoryConnection;
 	FIELD field_71757_g myServerListenThread Lnet/minecraft/server/ServerListenThread;
+	METHOD func_71744_a stopListening ()V
+	METHOD func_71747_b networkTick ()V
+		COMMENT processes packets and pending connections
+	METHOD func_71753_e getIntergatedServerMinecraftServerInstance ()Lnet/minecraft/server/integrated/IntegratedServer;
+		COMMENT Gets MinecraftServer instance.
+	METHOD func_71752_f isGamePaused ()Z
+	METHOD func_71746_d getServer ()Lnet/minecraft/server/MinecraftServer;

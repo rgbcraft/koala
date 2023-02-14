@@ -1,13 +1,38 @@
 CLASS net/minecraft/client/renderer/ActiveRenderInfo
 	FIELD field_74592_a objectX F
+		COMMENT The calculated view object X coordinate
 	FIELD field_74590_b objectY F
+		COMMENT The calculated view object Y coordinate
 	FIELD field_74591_c objectZ F
+		COMMENT The calculated view object Z coordinate
 	FIELD field_74597_i viewport Ljava/nio/IntBuffer;
+		COMMENT The current GL viewport
 	FIELD field_74594_j modelview Ljava/nio/FloatBuffer;
+		COMMENT The current GL modelview matrix
 	FIELD field_74595_k projection Ljava/nio/FloatBuffer;
+		COMMENT The current GL projection matrix
 	FIELD field_74593_l objectCoords Ljava/nio/FloatBuffer;
+		COMMENT The computed view object coordinates
 	FIELD field_74588_d rotationX F
+		COMMENT The X component of the entity's yaw rotation
 	FIELD field_74589_e rotationXZ F
+		COMMENT The combined X and Z components of the entity's pitch rotation
 	FIELD field_74586_f rotationZ F
+		COMMENT The Z component of the entity's yaw rotation
 	FIELD field_74587_g rotationYZ F
+		COMMENT The Y component (scaled along the Z axis) of the entity's pitch rotation
 	FIELD field_74596_h rotationXY F
+		COMMENT The Y component (scaled along the X axis) of the entity's pitch rotation
+	METHOD func_74583_a updateRenderInfo (Lnet/minecraft/entity/player/EntityPlayer;Z)V
+		COMMENT Updates the current render info and camera location based on entity look angles and 1st/3rd person view mode
+		ARG 0 par0EntityPlayer
+		ARG 1 par1
+	METHOD func_74585_b projectViewFromEntity (Lnet/minecraft/entity/EntityLiving;D)Lnet/minecraft/util/Vec3;
+		COMMENT Returns a vector representing the projection along the given entity's view for the given distance
+		ARG 0 par0EntityLiving
+		ARG 1 par1
+	METHOD func_74584_a getBlockIdAtEntityViewpoint (Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLiving;F)I
+		COMMENT Returns the block ID at the current camera location (either air or fluid), taking into account the height of fluid blocks
+		ARG 0 par0World
+		ARG 1 par1EntityLiving
+		ARG 2 par2

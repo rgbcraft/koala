@@ -1,1 +1,3 @@
 CLASS net/minecraft/client/renderer/IImageBuffer
+	METHOD func_78432_a parseUserSkin (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
+		ARG 0 par1BufferedImage

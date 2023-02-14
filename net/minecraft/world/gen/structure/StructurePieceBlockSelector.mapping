@@ -1,3 +1,12 @@
 CLASS net/minecraft/world/gen/structure/StructurePieceBlockSelector
 	FIELD field_75066_a selectedBlockId I
 	FIELD field_75065_b selectedBlockMetaData I
+	METHOD func_75062_a selectBlocks (Ljava/util/Random;IIIZ)V
+		COMMENT picks Block Ids and Metadata (Silverfish)
+		ARG 0 par1Random
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_75063_a getSelectedBlockId ()I
+	METHOD func_75064_b getSelectedBlockMetaData ()I

@@ -1,1 +1,8 @@
 CLASS net/minecraft/client/renderer/entity/RenderWitch
+	METHOD func_77041_b preRenderCallback (Lnet/minecraft/entity/EntityLiving;F)V
+		COMMENT Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args: entityLiving, partialTickTime
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_77029_c renderEquippedItems (Lnet/minecraft/entity/EntityLiving;F)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2

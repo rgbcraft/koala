@@ -1,33 +1,66 @@
 CLASS net/minecraft/stats/AchievementList
 	FIELD field_76010_a minDisplayColumn I
+		COMMENT Is the smallest column used to display a achievement on the GUI.
 	FIELD field_76008_b minDisplayRow I
+		COMMENT Is the smallest row used to display a achievement on the GUI.
 	FIELD field_76009_c maxDisplayColumn I
+		COMMENT Is the biggest column used to display a achievement on the GUI.
 	FIELD field_76006_d maxDisplayRow I
+		COMMENT Is the biggest row used to display a achievement on the GUI.
 	FIELD field_76007_e achievementList Ljava/util/List;
+		COMMENT Holds a list of all registered achievements.
 	FIELD field_76004_f openInventory Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'open inventory' achievement.
 	FIELD field_76005_g mineWood Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'getting wood' achievement.
 	FIELD field_76017_h buildWorkBench Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'benchmarking' achievement.
 	FIELD field_76018_i buildPickaxe Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'time to mine' achievement.
 	FIELD field_76015_j buildFurnace Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'hot topic' achievement.
 	FIELD field_76016_k acquireIron Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'acquire hardware' achievement.
 	FIELD field_76013_l buildHoe Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'time to farm' achievement.
 	FIELD field_76014_m makeBread Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'bake bread' achievement.
 	FIELD field_76011_n bakeCake Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'the lie' achievement.
 	FIELD field_76012_o buildBetterPickaxe Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'getting a upgrade' achievement.
 	FIELD field_76026_p cookFish Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'delicious fish' achievement.
 	FIELD field_76025_q onARail Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'on a rail' achievement
 	FIELD field_76024_r buildSword Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'time to strike' achievement.
 	FIELD field_76023_s killEnemy Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'monster hunter' achievement.
 	FIELD field_76022_t killCow Lnet/minecraft/stats/Achievement;
+		COMMENT is the 'cow tipper' achievement.
 	FIELD field_76021_u flyPig Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'when pig fly' achievement.
 	FIELD field_76020_v snipeSkeleton Lnet/minecraft/stats/Achievement;
+		COMMENT The achievement for killing a Skeleton from 50 meters aways.
 	FIELD field_76019_w diamonds Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'DIAMONDS!' achievement
 	FIELD field_76029_x portal Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'We Need to Go Deeper' achievement
 	FIELD field_76028_y ghast Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'Return to Sender' achievement
 	FIELD field_76027_z blazeRod Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'Into Fire' achievement
 	FIELD field_76001_A potion Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'Local Brewery' achievement
 	FIELD field_76002_B theEnd Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'The End?' achievement
 	FIELD field_76003_C theEnd2 Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'The End.' achievement
 	FIELD field_75998_D enchantments Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'Enchanter' achievement
 	FIELD field_75999_E overkill Lnet/minecraft/stats/Achievement;
 	FIELD field_76000_F bookcase Lnet/minecraft/stats/Achievement;
+		COMMENT Is the 'Librarian' achievement
+	METHOD func_75997_a init ()V
+		COMMENT A stub functions called to make the static initializer for this class run.

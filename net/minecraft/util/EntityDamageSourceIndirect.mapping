@@ -1,2 +1,7 @@
 CLASS net/minecraft/util/EntityDamageSourceIndirect
 	FIELD field_76387_p indirectEntity Lnet/minecraft/entity/Entity;
+	METHOD func_76364_f getSourceOfDamage ()Lnet/minecraft/entity/Entity;
+	METHOD func_76346_g getEntity ()Lnet/minecraft/entity/Entity;
+	METHOD func_76360_b getDeathMessage (Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;
+		COMMENT Returns the message to be displayed on player death.
+		ARG 0 par1EntityPlayer

@@ -1,4 +1,18 @@
 CLASS net/minecraft/world/gen/structure/ComponentStrongholdLibrary
 	FIELD field_75007_b strongholdLibraryChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
+		COMMENT List of items that Stronghold Library chests can contain.
 	FIELD field_75009_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;
 	FIELD field_75008_c isLargeRoom Z
+	METHOD func_75006_a findValidPlacement (Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/ComponentStrongholdLibrary;
+		ARG 0 par0List
+		ARG 1 par1Random
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+	METHOD func_74875_a addComponentParts (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3StructureBoundingBox

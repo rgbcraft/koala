@@ -1,6 +1,7 @@
 CLASS net/minecraft/block/material/Material
 	FIELD field_76249_a air Lnet/minecraft/block/material/Material;
 	FIELD field_76247_b grass Lnet/minecraft/block/material/Material;
+		COMMENT The material used by BlockGrass.
 	FIELD field_76248_c ground Lnet/minecraft/block/material/Material;
 	FIELD field_76245_d wood Lnet/minecraft/block/material/Material;
 	FIELD field_76246_e rock Lnet/minecraft/block/material/Material;
@@ -23,17 +24,58 @@ CLASS net/minecraft/block/material/Material
 	FIELD field_76260_u ice Lnet/minecraft/block/material/Material;
 	FIELD field_76259_v snow Lnet/minecraft/block/material/Material;
 	FIELD field_76258_w craftedSnow Lnet/minecraft/block/material/Material;
+		COMMENT The material for crafted snow.
 	FIELD field_76268_x cactus Lnet/minecraft/block/material/Material;
 	FIELD field_76267_y clay Lnet/minecraft/block/material/Material;
 	FIELD field_76266_z pumpkin Lnet/minecraft/block/material/Material;
+		COMMENT pumpkin
 	FIELD field_76236_A dragonEgg Lnet/minecraft/block/material/Material;
 	FIELD field_76237_B portal Lnet/minecraft/block/material/Material;
+		COMMENT Material used for portals
 	FIELD field_76238_C cake Lnet/minecraft/block/material/Material;
+		COMMENT Cake's material, see BlockCake
 	FIELD field_76232_D web Lnet/minecraft/block/material/Material;
+		COMMENT Web's material.
 	FIELD field_76233_E piston Lnet/minecraft/block/material/Material;
+		COMMENT Pistons' material.
 	FIELD field_76235_G canBurn Z
+		COMMENT Bool defining if the block can burn or not.
 	FIELD field_76239_H replaceable Z
+		COMMENT Determines whether blocks with this material can be "overwritten" by other blocks when placed - eg snow, vines and tall grass.
 	FIELD field_76240_I isTranslucent Z
+		COMMENT Indicates if the material is translucent
 	FIELD field_76234_F materialMapColor Lnet/minecraft/block/material/MapColor;
+		COMMENT The color index used to draw the blocks of this material on maps.
 	FIELD field_76241_J requiresNoTool Z
+		COMMENT Determines if the material can be harvested without a tool (or with the wrong tool)
 	FIELD field_76242_K mobilityFlag I
+		COMMENT Mobility information flag. 0 indicates that this block is normal, 1 indicates that it can't push other blocks, 2 indicates that it can't be pushed.
+	METHOD func_76224_d isLiquid ()Z
+		COMMENT Returns if blocks of these materials are liquids.
+	METHOD func_76220_a isSolid ()Z
+	METHOD func_76228_b getCanBlockGrass ()Z
+		COMMENT Will prevent grass from growing on dirt underneath and kill any grass below it if it returns true
+	METHOD func_76230_c blocksMovement ()Z
+		COMMENT Returns if this material is considered solid or not
+	METHOD func_76223_p setTranslucent ()Lnet/minecraft/block/material/Material;
+		COMMENT Marks the material as translucent
+	METHOD func_76221_f setRequiresTool ()Lnet/minecraft/block/material/Material;
+		COMMENT Makes blocks with this material require the correct tool to be harvested.
+	METHOD func_76226_g setBurning ()Lnet/minecraft/block/material/Material;
+		COMMENT Set the canBurn bool to True and return the current object.
+	METHOD func_76217_h getCanBurn ()Z
+		COMMENT Returns if the block can burn or not.
+	METHOD func_76231_i setReplaceable ()Lnet/minecraft/block/material/Material;
+		COMMENT Sets {@link #replaceable} to true.
+	METHOD func_76222_j isReplaceable ()Z
+		COMMENT Returns whether the material can be replaced by other blocks when placed - eg snow, vines and tall grass.
+	METHOD func_76218_k isOpaque ()Z
+		COMMENT Indicate if the material is opaque
+	METHOD func_76229_l isToolNotRequired ()Z
+		COMMENT Returns true if the material can be harvested without a tool (or with the wrong tool)
+	METHOD func_76227_m getMaterialMobility ()I
+		COMMENT Returns the mobility information of the material, 0 = free, 1 = can't push but can move over, 2 = total immobility and stop pistons.
+	METHOD func_76219_n setNoPushMobility ()Lnet/minecraft/block/material/Material;
+		COMMENT This type of material can't be pushed, but pistons can move over it.
+	METHOD func_76225_o setImmovableMobility ()Lnet/minecraft/block/material/Material;
+		COMMENT This type of material can't be pushed, and pistons are blocked to move.

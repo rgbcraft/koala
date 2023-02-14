@@ -1,3 +1,19 @@
 CLASS net/minecraft/tileentity/TileEntityNote
 	FIELD field_70416_a note B
+		COMMENT Note to play
 	FIELD field_70415_b previousRedstoneState Z
+		COMMENT stores the latest redstone state
+	METHOD func_70310_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes a tile entity to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70307_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads a tile entity from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70413_a changePitch ()V
+		COMMENT change pitch by -> (currentPitch + 1) % 25
+	METHOD func_70414_a triggerNote (Lnet/minecraft/world/World;III)V
+		COMMENT plays the stored note
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

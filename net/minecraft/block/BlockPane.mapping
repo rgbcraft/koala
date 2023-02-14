@@ -1,3 +1,50 @@
 CLASS net/minecraft/block/BlockPane
 	FIELD field_72164_a sideTextureIndex I
+		COMMENT Holds the texture index of the side of the pane (the thin lateral side)
 	FIELD field_72163_b canDropItself Z
+		COMMENT If this field is true, the pane block drops itself when destroyed (like the iron fences), otherwise, it's just destroyed (like glass panes)
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71877_c shouldSideBeRendered (Lnet/minecraft/world/IBlockAccess;IIII)Z
+		COMMENT Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71871_a addCollidingBlockToList (Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V
+		COMMENT if the specified block is in the given AABB, add its collision bounding box to the given list
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5AxisAlignedBB
+		ARG 5 par6List
+		ARG 6 par7Entity
+	METHOD func_71919_f setBlockBoundsForItemRender ()V
+		COMMENT Sets the block's bounds for rendering it as an item
+	METHOD func_71902_a setBlockBoundsBasedOnState (Lnet/minecraft/world/IBlockAccess;III)V
+		COMMENT Updates the blocks bounds based on its current state. Args: world, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72162_n getSideTextureIndex ()I
+		COMMENT Returns the texture index of the thin side of the pane.
+	METHOD func_72161_e canThisPaneConnectToThisBlockID (I)Z
+		COMMENT Gets passed in the blockID of the block adjacent and supposed to return true if its allowed to connect to the type of blockID passed in. Args: blockID
+		ARG 0 par1
+	METHOD func_71906_q_ canSilkHarvest ()Z
+		COMMENT Return true if a player with Silk Touch can harvest this block directly, and not its normal drops.
+	METHOD func_71880_c_ createStackedBlock (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null.
+		ARG 0 par1

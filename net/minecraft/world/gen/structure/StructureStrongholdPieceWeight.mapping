@@ -1,5 +1,10 @@
 CLASS net/minecraft/world/gen/structure/StructureStrongholdPieceWeight
 	FIELD field_75194_a pieceClass Ljava/lang/Class;
 	FIELD field_75192_b pieceWeight I
+		COMMENT This basically keeps track of the 'epicness' of a structure. Epic structure components have a higher 'weight', and Structures may only grow up to a certain 'weight' before generation is stopped
 	FIELD field_75193_c instancesSpawned I
 	FIELD field_75191_d instancesLimit I
+		COMMENT How many Structure Pieces of this type may spawn in a structure
+	METHOD func_75189_a canSpawnMoreStructuresOfType (I)Z
+		ARG 0 par1
+	METHOD func_75190_a canSpawnMoreStructures ()Z

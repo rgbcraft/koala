@@ -6,6 +6,38 @@ CLASS net/minecraft/entity/projectile/EntityThrowable
 	FIELD field_70193_a inGround Z
 	FIELD field_70191_b throwableShake I
 	FIELD field_70192_c thrower Lnet/minecraft/entity/EntityLiving;
+		COMMENT Is the entity that throws this 'thing' (snowball, ender pearl, eye of ender or potion)
 	FIELD field_85053_h throwerName Ljava/lang/String;
 	FIELD field_70194_h ticksInGround I
 	FIELD field_70195_i ticksInAir I
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70112_a isInRangeToRenderDist (D)Z
+		COMMENT Checks if the entity is in range to render by using the past in distance and comparing it to its average edge length * 64 * renderDistanceWeight Args: distance
+		ARG 0 par1
+	METHOD func_70186_c setThrowableHeading (DDDFF)V
+		COMMENT Similar to setArrowHeading, it's point the throwable entity to a x, y, z direction.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+	METHOD func_70016_h setVelocity (DDD)V
+		COMMENT Sets the velocity to the args. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70185_h getGravityVelocity ()F
+		COMMENT Gets the amount of gravity to apply to the thrown entity with each tick.
+	METHOD func_70184_a onImpact (Lnet/minecraft/util/MovingObjectPosition;)V
+		COMMENT Called when this EntityThrowable hits a block or entity.
+		ARG 0 par1MovingObjectPosition
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_85052_h getThrower ()Lnet/minecraft/entity/EntityLiving;

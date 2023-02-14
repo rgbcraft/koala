@@ -2,3 +2,15 @@ CLASS net/minecraft/entity/ai/EntityAIEatGrass
 	FIELD field_75363_b theEntity Lnet/minecraft/entity/EntityLiving;
 	FIELD field_75364_c theWorld Lnet/minecraft/world/World;
 	FIELD field_75365_a eatGrassTick I
+		COMMENT A decrementing tick used for the sheep's head offset and animation.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75362_f getEatGrassTick ()I
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task

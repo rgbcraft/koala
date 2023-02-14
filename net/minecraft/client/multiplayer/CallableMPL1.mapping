@@ -1,2 +1,5 @@
 CLASS net/minecraft/client/multiplayer/CallableMPL1
 	FIELD field_78833_a theWorldClient Lnet/minecraft/client/multiplayer/WorldClient;
+		COMMENT Reference to the WorldClient object.
+	METHOD func_78832_a getEntityCountAndList ()Ljava/lang/String;
+		COMMENT Returns the size and contents of the entity list.

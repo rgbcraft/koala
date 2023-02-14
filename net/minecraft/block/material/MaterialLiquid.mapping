@@ -1,1 +1,6 @@
 CLASS net/minecraft/block/material/MaterialLiquid
+	METHOD func_76224_d isLiquid ()Z
+		COMMENT Returns if blocks of these materials are liquids.
+	METHOD func_76230_c blocksMovement ()Z
+		COMMENT Returns if this material is considered solid or not
+	METHOD func_76220_a isSolid ()Z

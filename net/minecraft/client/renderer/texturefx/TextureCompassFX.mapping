@@ -1,4 +1,7 @@
 CLASS net/minecraft/client/renderer/texturefx/TextureCompassFX
 	FIELD field_76865_g mc Lnet/minecraft/client/Minecraft;
+		COMMENT A reference to the Minecraft object.
 	FIELD field_76867_h compassIconImageData [I
+		COMMENT Holds the image of the compass from items.png in rgb format.
 	FIELD field_82391_c instance Lnet/minecraft/client/renderer/texturefx/TextureCompassFX;
+	METHOD func_76846_a onTick ()V

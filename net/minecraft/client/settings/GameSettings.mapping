@@ -2,9 +2,11 @@ CLASS net/minecraft/client/settings/GameSettings
 	FIELD field_74360_ac RENDER_DISTANCES [Ljava/lang/String;
 	FIELD field_74361_ad DIFFICULTIES [Ljava/lang/String;
 	FIELD field_74367_ae GUISCALES [Ljava/lang/String;
+		COMMENT GUI scale values
 	FIELD field_74369_af CHAT_VISIBILITIES [Ljava/lang/String;
 	FIELD field_74364_ag PARTICLES [Ljava/lang/String;
 	FIELD field_74365_ah LIMIT_FRAMERATES [Ljava/lang/String;
+		COMMENT Limit framerate labels
 	FIELD field_74342_a musicVolume F
 	FIELD field_74340_b soundVolume F
 	FIELD field_74341_c mouseSensitivity F
@@ -13,11 +15,15 @@ CLASS net/minecraft/client/settings/GameSettings
 	FIELD field_74336_f viewBobbing Z
 	FIELD field_74337_g anaglyph Z
 	FIELD field_74349_h advancedOpengl Z
+		COMMENT Advanced OpenGL
 	FIELD field_74350_i limitFramerate I
 	FIELD field_74347_j fancyGraphics Z
 	FIELD field_74348_k ambientOcclusion Z
+		COMMENT Smooth Lighting
 	FIELD field_74345_l clouds Z
+		COMMENT Clouds flag
 	FIELD field_74346_m skin Ljava/lang/String;
+		COMMENT The name of the selected texture pack.
 	FIELD field_74343_n chatVisibility I
 	FIELD field_74344_o chatColours Z
 	FIELD field_74359_p chatLinks Z
@@ -29,8 +35,11 @@ CLASS net/minecraft/client/settings/GameSettings
 	FIELD field_74352_v enableVsync Z
 	FIELD field_80005_w hideServerAddress Z
 	FIELD field_82882_x advancedItemTooltips Z
+		COMMENT Whether to show advanced information on item tooltips, toggled by F3+H
 	FIELD field_82881_y pauseOnLostFocus Z
+		COMMENT Whether to pause when the game loses focus, toggled by F3+P
 	FIELD field_82880_z showCape Z
+		COMMENT Whether to show your cape
 	FIELD field_85185_A touchscreen Z
 	FIELD field_74351_w keyBindForward Lnet/minecraft/client/settings/KeyBinding;
 	FIELD field_74370_x keyBindLeft Lnet/minecraft/client/settings/KeyBinding;
@@ -53,25 +62,78 @@ CLASS net/minecraft/client/settings/GameSettings
 	FIELD field_74319_N hideGUI Z
 	FIELD field_74320_O thirdPersonView I
 	FIELD field_74330_P showDebugInfo Z
+		COMMENT true if debug info should be displayed instead of version
 	FIELD field_74329_Q showDebugProfilerChart Z
 	FIELD field_74332_R lastServer Ljava/lang/String;
+		COMMENT The lastServer string.
 	FIELD field_74331_S noclip Z
+		COMMENT No clipping for singleplayer
 	FIELD field_74326_T smoothCamera Z
+		COMMENT Smooth Camera Toggle
 	FIELD field_74325_U debugCamEnable Z
 	FIELD field_74328_V noclipRate F
+		COMMENT No clipping movement rate
 	FIELD field_74327_W debugCamRate F
+		COMMENT Change rate for debug camera
 	FIELD field_74334_X fovSetting F
 	FIELD field_74333_Y gammaSetting F
 	FIELD field_74335_Z guiScale I
+		COMMENT GUI scale
 	FIELD field_74362_aa particleSetting I
+		COMMENT Determines amount of particles. 0 = All, 1 = Decreased, 2 = Minimal
 	FIELD field_74363_ab language Ljava/lang/String;
+		COMMENT Game settings language
+	METHOD func_74302_a getKeyBindingDescription (I)Ljava/lang/String;
+		ARG 0 par1
+	METHOD func_74301_b getOptionDisplayString (I)Ljava/lang/String;
+		COMMENT The string that appears inside the button/slider in the options menu.
+		ARG 0 par1
+	METHOD func_74298_c getKeyDisplayString (I)Ljava/lang/String;
+		COMMENT Represents a key or mouse button as a string. Args: key
+		ARG 0 par0
+	METHOD func_74307_a setKeyBinding (II)V
+		COMMENT Sets a key binding.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74304_a setOptionFloatValue (Lnet/minecraft/client/settings/EnumOptions;F)V
+		COMMENT If the specified option is controlled by a slider (float value), this will set the float value.
+		ARG 0 par1EnumOptions
+		ARG 1 par2
+	METHOD func_74306_a setOptionValue (Lnet/minecraft/client/settings/EnumOptions;I)V
+		COMMENT For non-float options. Toggles the option on/off, or cycles through the list i.e. render distances.
+		ARG 0 par1EnumOptions
+		ARG 1 par2
+	METHOD func_74296_a getOptionFloatValue (Lnet/minecraft/client/settings/EnumOptions;)F
+		ARG 0 par1EnumOptions
+	METHOD func_74308_b getOptionOrdinalValue (Lnet/minecraft/client/settings/EnumOptions;)Z
+		ARG 0 par1EnumOptions
+	METHOD func_74299_a getTranslation ([Ljava/lang/String;I)Ljava/lang/String;
+		COMMENT Returns the translation of the given index in the given String array. If the index is smaller than 0 or greater than/equal to the length of the String array, it is changed to 0.
+		ARG 0 par0ArrayOfStr
+		ARG 1 par1
+	METHOD func_74297_c getKeyBinding (Lnet/minecraft/client/settings/EnumOptions;)Ljava/lang/String;
+		COMMENT Gets a key binding.
+		ARG 0 par1EnumOptions
+	METHOD func_74300_a loadOptions ()V
+		COMMENT Loads the options from the options file. It appears that this has replaced the previous 'loadOptions'
+	METHOD func_74305_a parseFloat (Ljava/lang/String;)F
+		COMMENT Parses a string into a float.
+		ARG 0 par1Str
+	METHOD func_74303_b saveOptions ()V
+		COMMENT Saves the options to the options file.
+	METHOD func_82879_c sendSettingsToServer ()V
+		COMMENT Send a client info packet with settings information to the server
+	METHOD func_74309_c shouldRenderClouds ()Z
+		COMMENT Should render clouds
 CLASS net/minecraft/client/settings/GameSettings
 	FIELD field_74360_ac RENDER_DISTANCES [Ljava/lang/String;
 	FIELD field_74361_ad DIFFICULTIES [Ljava/lang/String;
 	FIELD field_74367_ae GUISCALES [Ljava/lang/String;
+		COMMENT GUI scale values
 	FIELD field_74369_af CHAT_VISIBILITIES [Ljava/lang/String;
 	FIELD field_74364_ag PARTICLES [Ljava/lang/String;
 	FIELD field_74365_ah LIMIT_FRAMERATES [Ljava/lang/String;
+		COMMENT Limit framerate labels
 	FIELD field_74342_a musicVolume F
 	FIELD field_74340_b soundVolume F
 	FIELD field_74341_c mouseSensitivity F
@@ -80,11 +142,15 @@ CLASS net/minecraft/client/settings/GameSettings
 	FIELD field_74336_f viewBobbing Z
 	FIELD field_74337_g anaglyph Z
 	FIELD field_74349_h advancedOpengl Z
+		COMMENT Advanced OpenGL
 	FIELD field_74350_i limitFramerate I
 	FIELD field_74347_j fancyGraphics Z
 	FIELD field_74348_k ambientOcclusion Z
+		COMMENT Smooth Lighting
 	FIELD field_74345_l clouds Z
+		COMMENT Clouds flag
 	FIELD field_74346_m skin Ljava/lang/String;
+		COMMENT The name of the selected texture pack.
 	FIELD field_74343_n chatVisibility I
 	FIELD field_74344_o chatColours Z
 	FIELD field_74359_p chatLinks Z
@@ -96,8 +162,11 @@ CLASS net/minecraft/client/settings/GameSettings
 	FIELD field_74352_v enableVsync Z
 	FIELD field_80005_w hideServerAddress Z
 	FIELD field_82882_x advancedItemTooltips Z
+		COMMENT Whether to show advanced information on item tooltips, toggled by F3+H
 	FIELD field_82881_y pauseOnLostFocus Z
+		COMMENT Whether to pause when the game loses focus, toggled by F3+P
 	FIELD field_82880_z showCape Z
+		COMMENT Whether to show your cape
 	FIELD field_85185_A touchscreen Z
 	FIELD field_74351_w keyBindForward Lnet/minecraft/client/settings/KeyBinding;
 	FIELD field_74370_x keyBindLeft Lnet/minecraft/client/settings/KeyBinding;
@@ -120,15 +189,66 @@ CLASS net/minecraft/client/settings/GameSettings
 	FIELD field_74319_N hideGUI Z
 	FIELD field_74320_O thirdPersonView I
 	FIELD field_74330_P showDebugInfo Z
+		COMMENT true if debug info should be displayed instead of version
 	FIELD field_74329_Q showDebugProfilerChart Z
 	FIELD field_74332_R lastServer Ljava/lang/String;
+		COMMENT The lastServer string.
 	FIELD field_74331_S noclip Z
+		COMMENT No clipping for singleplayer
 	FIELD field_74326_T smoothCamera Z
+		COMMENT Smooth Camera Toggle
 	FIELD field_74325_U debugCamEnable Z
 	FIELD field_74328_V noclipRate F
+		COMMENT No clipping movement rate
 	FIELD field_74327_W debugCamRate F
+		COMMENT Change rate for debug camera
 	FIELD field_74334_X fovSetting F
 	FIELD field_74333_Y gammaSetting F
 	FIELD field_74335_Z guiScale I
+		COMMENT GUI scale
 	FIELD field_74362_aa particleSetting I
+		COMMENT Determines amount of particles. 0 = All, 1 = Decreased, 2 = Minimal
 	FIELD field_74363_ab language Ljava/lang/String;
+		COMMENT Game settings language
+	METHOD func_74302_a getKeyBindingDescription (I)Ljava/lang/String;
+		ARG 0 par1
+	METHOD func_74301_b getOptionDisplayString (I)Ljava/lang/String;
+		COMMENT The string that appears inside the button/slider in the options menu.
+		ARG 0 par1
+	METHOD func_74298_c getKeyDisplayString (I)Ljava/lang/String;
+		COMMENT Represents a key or mouse button as a string. Args: key
+		ARG 0 par0
+	METHOD func_74307_a setKeyBinding (II)V
+		COMMENT Sets a key binding.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74304_a setOptionFloatValue (Lnet/minecraft/client/settings/EnumOptions;F)V
+		COMMENT If the specified option is controlled by a slider (float value), this will set the float value.
+		ARG 0 par1EnumOptions
+		ARG 1 par2
+	METHOD func_74306_a setOptionValue (Lnet/minecraft/client/settings/EnumOptions;I)V
+		COMMENT For non-float options. Toggles the option on/off, or cycles through the list i.e. render distances.
+		ARG 0 par1EnumOptions
+		ARG 1 par2
+	METHOD func_74296_a getOptionFloatValue (Lnet/minecraft/client/settings/EnumOptions;)F
+		ARG 0 par1EnumOptions
+	METHOD func_74308_b getOptionOrdinalValue (Lnet/minecraft/client/settings/EnumOptions;)Z
+		ARG 0 par1EnumOptions
+	METHOD func_74299_a getTranslation ([Ljava/lang/String;I)Ljava/lang/String;
+		COMMENT Returns the translation of the given index in the given String array. If the index is smaller than 0 or greater than/equal to the length of the String array, it is changed to 0.
+		ARG 0 par0ArrayOfStr
+		ARG 1 par1
+	METHOD func_74297_c getKeyBinding (Lnet/minecraft/client/settings/EnumOptions;)Ljava/lang/String;
+		COMMENT Gets a key binding.
+		ARG 0 par1EnumOptions
+	METHOD func_74300_a loadOptions ()V
+		COMMENT Loads the options from the options file. It appears that this has replaced the previous 'loadOptions'
+	METHOD func_74305_a parseFloat (Ljava/lang/String;)F
+		COMMENT Parses a string into a float.
+		ARG 0 par1Str
+	METHOD func_74303_b saveOptions ()V
+		COMMENT Saves the options to the options file.
+	METHOD func_82879_c sendSettingsToServer ()V
+		COMMENT Send a client info packet with settings information to the server
+	METHOD func_74309_c shouldRenderClouds ()Z
+		COMMENT Should render clouds

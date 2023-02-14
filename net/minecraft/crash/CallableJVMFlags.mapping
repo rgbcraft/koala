@@ -1,2 +1,5 @@
 CLASS net/minecraft/crash/CallableJVMFlags
 	FIELD field_71488_a theCrashReport Lnet/minecraft/crash/CrashReport;
+		COMMENT Reference to the CrashReport object.
+	METHOD func_71487_a getJVMFlagsAsString ()Ljava/lang/String;
+		COMMENT Returns the number of JVM Flags along with the passed JVM Flags.

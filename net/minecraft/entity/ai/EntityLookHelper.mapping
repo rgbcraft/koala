@@ -1,8 +1,29 @@
 CLASS net/minecraft/entity/ai/EntityLookHelper
 	FIELD field_75659_a entity Lnet/minecraft/entity/EntityLiving;
 	FIELD field_75657_b deltaLookYaw F
+		COMMENT The amount of change that is made each update for an entity facing a direction.
 	FIELD field_75658_c deltaLookPitch F
+		COMMENT The amount of change that is made each update for an entity facing a direction.
 	FIELD field_75655_d isLooking Z
+		COMMENT Whether or not the entity is trying to look at something.
 	FIELD field_75656_e posX D
 	FIELD field_75653_f posY D
 	FIELD field_75654_g posZ D
+	METHOD func_75651_a setLookPositionWithEntity (Lnet/minecraft/entity/Entity;FF)V
+		COMMENT Sets position to look at using entity
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75650_a setLookPosition (DDDFF)V
+		COMMENT Sets position to look at
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+	METHOD func_75649_a onUpdateLook ()V
+		COMMENT Updates look
+	METHOD func_75652_a updateRotation (FFF)F
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

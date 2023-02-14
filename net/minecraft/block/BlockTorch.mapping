@@ -1,1 +1,77 @@
 CLASS net/minecraft/block/BlockTorch
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_72125_l canPlaceTorchOn (Lnet/minecraft/world/World;III)Z
+		COMMENT Gets if we can place a torch on a block.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71930_b canPlaceBlockAt (Lnet/minecraft/world/World;III)Z
+		COMMENT Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_85104_a onBlockPlaced (Lnet/minecraft/world/World;IIIIFFFI)I
+		COMMENT Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_71861_g onBlockAdded (Lnet/minecraft/world/World;III)V
+		COMMENT Called whenever the block is added into the world. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72126_n dropTorchIfCantStay (Lnet/minecraft/world/World;III)Z
+		COMMENT Tests if the block can remain at its current location and will drop as an item if it is unable to stay. Returns True if it can stay and False if it drops. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71878_a collisionRayTrace (Lnet/minecraft/world/World;IIILnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/MovingObjectPosition;
+		COMMENT Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Vec3
+		ARG 5 par6Vec3
+	METHOD func_71862_a randomDisplayTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT A randomly called display update to be able to add particles or other items for display
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random

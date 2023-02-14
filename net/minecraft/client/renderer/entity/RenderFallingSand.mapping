@@ -1,2 +1,10 @@
 CLASS net/minecraft/client/renderer/entity/RenderFallingSand
 	FIELD field_77004_a sandRenderBlocks Lnet/minecraft/client/renderer/RenderBlocks;
+	METHOD func_77003_a doRenderFallingSand (Lnet/minecraft/entity/item/EntityFallingSand;DDDFF)V
+		COMMENT The actual render method that is used in doRender
+		ARG 0 par1EntityFallingSand
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9

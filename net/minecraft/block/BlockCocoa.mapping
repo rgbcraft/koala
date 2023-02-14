@@ -1,1 +1,84 @@
 CLASS net/minecraft/block/BlockCocoa
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_71854_d canBlockStay (Lnet/minecraft/world/World;III)Z
+		COMMENT Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71911_a_ getSelectedBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns the bounding box of the wired rectangular prism to render.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71902_a setBlockBoundsBasedOnState (Lnet/minecraft/world/IBlockAccess;III)V
+		COMMENT Updates the blocks bounds based on its current state. Args: world, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71860_a onBlockPlacedBy (Lnet/minecraft/world/World;IIILnet/minecraft/entity/EntityLiving;)V
+		COMMENT Called when the block is placed in the world.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityLiving
+	METHOD func_85104_a onBlockPlaced (Lnet/minecraft/world/World;IIIIFFFI)I
+		COMMENT Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71914_a dropBlockAsItemWithChance (Lnet/minecraft/world/World;IIIIFI)V
+		COMMENT Drops the block items with a specified chance of dropping the specified items
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_71922_a idPicked (Lnet/minecraft/world/World;III)I
+		COMMENT only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71873_h getDamageValue (Lnet/minecraft/world/World;III)I
+		COMMENT Get the block's damage value (for use with pick block).
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

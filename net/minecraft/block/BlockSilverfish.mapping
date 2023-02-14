@@ -1,2 +1,37 @@
 CLASS net/minecraft/block/BlockSilverfish
 	FIELD field_72155_a silverfishStoneTypes [Ljava/lang/String;
+		COMMENT Block names that can be a silverfish stone.
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71898_d onBlockDestroyedByPlayer (Lnet/minecraft/world/World;IIII)V
+		COMMENT Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_72154_e getPosingIdByMetadata (I)Z
+		COMMENT Gets the blockID of the block this block is pretending to be according to this block's metadata.
+		ARG 0 par0
+	METHOD func_72153_f getMetadataForBlockType (I)I
+		COMMENT Returns the metadata to use when a Silverfish hides in the block. Sets the block to BlockSilverfish with this metadata. It changes the displayed texture client side to look like a normal block.
+		ARG 0 par0
+	METHOD func_71880_c_ createStackedBlock (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null.
+		ARG 0 par1
+	METHOD func_71873_h getDamageValue (Lnet/minecraft/world/World;III)I
+		COMMENT Get the block's damage value (for use with pick block).
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71879_a getSubBlocks (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V
+		COMMENT returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+		ARG 0 par1
+		ARG 1 par2CreativeTabs
+		ARG 2 par3List

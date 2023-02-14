@@ -1,2 +1,10 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntityEnderChestRenderer
 	FIELD field_76900_a theEnderChestModel Lnet/minecraft/client/model/ModelChest;
+		COMMENT The Ender Chest Chest's model.
+	METHOD func_76899_a renderEnderChest (Lnet/minecraft/tileentity/TileEntityEnderChest;DDDF)V
+		COMMENT Helps to render Ender Chest.
+		ARG 0 par1TileEntityEnderChest
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8

@@ -1,2 +1,3 @@
 CLASS net/minecraft/profiler/PlayerUsageSnooperThread
 	FIELD field_76344_a snooper Lnet/minecraft/profiler/PlayerUsageSnooper;
+		COMMENT The PlayerUsageSnooper object.

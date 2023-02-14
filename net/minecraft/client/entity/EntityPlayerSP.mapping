@@ -2,10 +2,118 @@ CLASS net/minecraft/client/entity/EntityPlayerSP
 	FIELD field_71158_b movementInput Lnet/minecraft/util/MovementInput;
 	FIELD field_71159_c mc Lnet/minecraft/client/Minecraft;
 	FIELD field_71156_d sprintToggleTimer I
+		COMMENT Used to tell if the player pressed forward twice. If this is at 0 and it's pressed (And they are allowed to sprint, aka enough food on the ground etc) it sets this to 7. If it's pressed and it's greater than 0 enable sprinting.
 	FIELD field_71157_e sprintingTicksLeft I
+		COMMENT Ticks left before sprinting is disabled.
 	FIELD field_71154_f renderArmYaw F
 	FIELD field_71155_g renderArmPitch F
 	FIELD field_71163_h prevRenderArmYaw F
 	FIELD field_71164_i prevRenderArmPitch F
 	FIELD field_71086_bY timeInPortal F
+		COMMENT The amount of time an entity has been in a Portal
 	FIELD field_71080_cy prevTimeInPortal F
+		COMMENT The amount of time an entity has been in a Portal the previous tick
+	METHOD func_70091_d moveEntity (DDD)V
+		COMMENT Tries to moves the entity by the passed in displacement. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70626_be updateEntityActionState ()V
+	METHOD func_70613_aW isClientWorld ()Z
+		COMMENT Returns whether the entity is in a local (client) world
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_71151_f getFOVMultiplier ()F
+		COMMENT Gets the player's field of view multiplier. (ex. when flying)
+	METHOD func_70059_ac updateCloak ()V
+	METHOD func_71053_j closeScreen ()V
+		COMMENT sets current screen to null (used on escape buttons of GUIs)
+	METHOD func_71014_a displayGUIEditSign (Lnet/minecraft/tileentity/TileEntity;)V
+		COMMENT Displays the GUI for editing a sign. Args: tileEntitySign
+		ARG 0 par1TileEntity
+	METHOD func_71048_c displayGUIBook (Lnet/minecraft/item/ItemStack;)V
+		COMMENT Displays the GUI for interacting with a book.
+		ARG 0 par1ItemStack
+	METHOD func_71007_a displayGUIChest (Lnet/minecraft/inventory/IInventory;)V
+		COMMENT Displays the GUI for interacting with a chest inventory. Args: chestInventory
+		ARG 0 par1IInventory
+	METHOD func_71058_b displayGUIWorkbench (III)V
+		COMMENT Displays the crafting GUI for a workbench.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_71002_c displayGUIEnchantment (III)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_82244_d displayGUIAnvil (III)V
+		COMMENT Displays the GUI for interacting with an anvil.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_71042_a displayGUIFurnace (Lnet/minecraft/tileentity/TileEntityFurnace;)V
+		COMMENT Displays the furnace GUI for the passed in furnace entity. Args: tileEntityFurnace
+		ARG 0 par1TileEntityFurnace
+	METHOD func_71017_a displayGUIBrewingStand (Lnet/minecraft/tileentity/TileEntityBrewingStand;)V
+		COMMENT Displays the GUI for interacting with a brewing stand.
+		ARG 0 par1TileEntityBrewingStand
+	METHOD func_82240_a displayGUIBeacon (Lnet/minecraft/tileentity/TileEntityBeacon;)V
+		COMMENT Displays the GUI for interacting with a beacon.
+		ARG 0 par1TileEntityBeacon
+	METHOD func_71006_a displayGUIDispenser (Lnet/minecraft/tileentity/TileEntityDispenser;)V
+		COMMENT Displays the dipsenser GUI for the passed in dispenser entity. Args: TileEntityDispenser
+		ARG 0 par1TileEntityDispenser
+	METHOD func_71030_a displayGUIMerchant (Lnet/minecraft/entity/IMerchant;)V
+		ARG 0 par1IMerchant
+	METHOD func_71009_b onCriticalHit (Lnet/minecraft/entity/Entity;)V
+		COMMENT Called when the player performs a critical hit on the Entity. Args: entity that was hit critically
+		ARG 0 par1Entity
+	METHOD func_71047_c onEnchantmentCritical (Lnet/minecraft/entity/Entity;)V
+		ARG 0 par1Entity
+	METHOD func_71001_a onItemPickup (Lnet/minecraft/entity/Entity;I)V
+		COMMENT Called whenever an item is picked up from walking over it. Args: pickedUpEntity, stackSize
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_70093_af isSneaking ()Z
+		COMMENT Returns if this entity is sneaking.
+	METHOD func_71150_b setHealth (I)V
+		COMMENT Updates health locally.
+		ARG 0 par1
+	METHOD func_71035_c addChatMessage (Ljava/lang/String;)V
+		COMMENT Add a chat message to the player
+		ARG 0 par1Str
+	METHOD func_71064_a addStat (Lnet/minecraft/stats/StatBase;I)V
+		COMMENT Adds a value to a statistic field.
+		ARG 0 par1StatBase
+		ARG 1 par2
+	METHOD func_71153_f isBlockTranslucent (III)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70048_i pushOutOfBlocks (DDD)Z
+		COMMENT Adds velocity to push the entity out of blocks at the specified x, y, z position Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70031_b setSprinting (Z)V
+		COMMENT Set sprinting switch for Entity.
+		ARG 0 par1
+	METHOD func_71152_a setXPStats (FII)V
+		COMMENT Sets the current XP, total XP, and level number.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70006_a sendChatToPlayer (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_70003_b canCommandSenderUseCommand (ILjava/lang/String;)Z
+		COMMENT Returns true if the command sender is allowed to use the given command.
+		ARG 0 par1
+		ARG 1 par2Str
+	METHOD func_82114_b getPlayerCoordinates ()Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT Return the position for this command sender.
+	METHOD func_70694_bm getHeldItem ()Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the item that this EntityLiving is holding, if any.
+	METHOD func_85030_a playSound (Ljava/lang/String;FF)V
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3

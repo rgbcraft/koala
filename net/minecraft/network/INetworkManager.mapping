@@ -1,1 +1,22 @@
 CLASS net/minecraft/network/INetworkManager
+	METHOD func_74425_a setNetHandler (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Sets the NetHandler for this NetworkManager. Server-only.
+		ARG 0 par1NetHandler
+	METHOD func_74429_a addToSendQueue (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT Adds the packet to the correct send queue (chunk data packets go to a separate queue).
+		ARG 0 par1Packet
+	METHOD func_74427_a wakeThreads ()V
+		COMMENT Wakes reader and writer threads
+	METHOD func_74428_b processReadPackets ()V
+		COMMENT Checks timeouts and processes all pending read packets.
+	METHOD func_74430_c getSocketAddress ()Ljava/net/SocketAddress;
+		COMMENT Return the InetSocketAddress of the remote endpoint
+	METHOD func_74423_d serverShutdown ()V
+		COMMENT Shuts down the server. (Only actually used on the server)
+	METHOD func_74426_e packetSize ()I
+		COMMENT returns 0 for memoryConnections
+	METHOD func_74424_a networkShutdown (Ljava/lang/String;Ljava/lang/Object;)V
+		COMMENT Shuts down the network with the specified reason. Closes all streams and sockets, spawns NetworkMasterThread to stop reading and writing threads.
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfObj
+	METHOD func_74431_f closeConnections ()V

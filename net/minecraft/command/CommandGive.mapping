@@ -1,1 +1,17 @@
 CLASS net/minecraft/command/CommandGive
+	METHOD func_71517_b getCommandName ()Ljava/lang/String;
+	METHOD func_82362_a getRequiredPermissionLevel ()I
+		COMMENT Return the required permission level for this command.
+	METHOD func_71518_a getCommandUsage (Lnet/minecraft/command/ICommandSender;)Ljava/lang/String;
+		ARG 0 par1ICommandSender
+	METHOD func_71515_b processCommand (Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V
+		ARG 0 par1ICommandSender
+		ARG 1 par2ArrayOfStr
+	METHOD func_71516_a addTabCompletionOptions (Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;
+		COMMENT Adds the strings available in this command to the given list of tab completion options.
+		ARG 0 par1ICommandSender
+		ARG 1 par2ArrayOfStr
+	METHOD func_71536_c getPlayers ()[Ljava/lang/String;
+	METHOD func_82358_a isUsernameIndex (I)Z
+		COMMENT Return whether the specified command parameter index is a username parameter.
+		ARG 0 par1

@@ -4,5 +4,37 @@ CLASS net/minecraft/network/MemoryConnection
 	FIELD field_74443_c pairedConnection Lnet/minecraft/network/MemoryConnection;
 	FIELD field_74440_d myNetHandler Lnet/minecraft/network/packet/NetHandler;
 	FIELD field_74441_e shuttingDown Z
+		COMMENT set to true by {server,network}Shutdown
 	FIELD field_74438_f shutdownReason Ljava/lang/String;
 	FIELD field_74445_h gamePaused Z
+	METHOD func_74425_a setNetHandler (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Sets the NetHandler for this NetworkManager. Server-only.
+		ARG 0 par1NetHandler
+	METHOD func_74429_a addToSendQueue (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT Adds the packet to the correct send queue (chunk data packets go to a separate queue).
+		ARG 0 par1Packet
+	METHOD func_74431_f closeConnections ()V
+	METHOD func_74435_g isConnectionActive ()Z
+	METHOD func_74427_a wakeThreads ()V
+		COMMENT Wakes reader and writer threads
+	METHOD func_74428_b processReadPackets ()V
+		COMMENT Checks timeouts and processes all pending read packets.
+	METHOD func_74430_c getSocketAddress ()Ljava/net/SocketAddress;
+		COMMENT Return the InetSocketAddress of the remote endpoint
+	METHOD func_74423_d serverShutdown ()V
+		COMMENT Shuts down the server. (Only actually used on the server)
+	METHOD func_74424_a networkShutdown (Ljava/lang/String;Ljava/lang/Object;)V
+		COMMENT Shuts down the network with the specified reason. Closes all streams and sockets, spawns NetworkMasterThread to stop reading and writing threads.
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfObj
+	METHOD func_74426_e packetSize ()I
+		COMMENT returns 0 for memoryConnections
+	METHOD func_74434_a pairWith (Lnet/minecraft/network/MemoryConnection;)V
+		ARG 0 par1MemoryConnection
+	METHOD func_74433_h isGamePaused ()Z
+	METHOD func_74437_a setGamePaused (Z)V
+		ARG 0 par1
+	METHOD func_74432_i getPairedConnection ()Lnet/minecraft/network/MemoryConnection;
+	METHOD func_74436_b processOrCachePacket (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT acts immiditally if isWritePacket, otherwise adds it to the readCache to be processed next tick
+		ARG 0 par1Packet

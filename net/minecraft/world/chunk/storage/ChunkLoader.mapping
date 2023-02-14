@@ -1,1 +1,7 @@
 CLASS net/minecraft/world/chunk/storage/ChunkLoader
+	METHOD func_76691_a load (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/world/chunk/storage/AnvilConverterData;
+		ARG 0 par0NBTTagCompound
+	METHOD func_76690_a convertToAnvilFormat (Lnet/minecraft/world/chunk/storage/AnvilConverterData;Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/biome/WorldChunkManager;)V
+		ARG 0 par0AnvilConverterData
+		ARG 1 par1NBTTagCompound
+		ARG 2 par2WorldChunkManager

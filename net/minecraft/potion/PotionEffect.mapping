@@ -1,6 +1,35 @@
 CLASS net/minecraft/potion/PotionEffect
 	FIELD field_76462_a potionID I
+		COMMENT ID value of the potion this effect matches.
 	FIELD field_76460_b duration I
+		COMMENT The duration of the potion effect
 	FIELD field_76461_c amplifier I
+		COMMENT The amplifier of the potion effect
 	FIELD field_82723_d isSplashPotion Z
+		COMMENT Whether the potion is a splash potion
 	FIELD field_82724_e isAmbient Z
+		COMMENT Whether the potion effect came from a beacon
+	METHOD func_76452_a combine (Lnet/minecraft/potion/PotionEffect;)V
+		COMMENT merges the input PotionEffect into this one if this.amplifier <= tomerge.amplifier. The duration in the supplied potion effect is assumed to be greater.
+		ARG 0 par1PotionEffect
+	METHOD func_76456_a getPotionID ()I
+		COMMENT Retrieve the ID of the potion this effect matches.
+	METHOD func_76459_b getDuration ()I
+	METHOD func_76458_c getAmplifier ()I
+	METHOD func_82721_a setSplashPotion (Z)V
+		COMMENT Set whether this potion is a splash potion.
+		ARG 0 par1
+	METHOD func_82720_e getIsAmbient ()Z
+		COMMENT Gets whether this potion effect originated from a beacon
+	METHOD func_76455_a onUpdate (Lnet/minecraft/entity/EntityLiving;)Z
+		ARG 0 par1EntityLiving
+	METHOD func_76454_e deincrementDuration ()I
+	METHOD func_76457_b performEffect (Lnet/minecraft/entity/EntityLiving;)V
+		ARG 0 par1EntityLiving
+	METHOD func_76453_d getEffectName ()Ljava/lang/String;
+	METHOD func_82719_a writeCustomPotionEffectToNBT (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Write a custom potion effect to a potion item's NBT data.
+		ARG 0 par1NBTTagCompound
+	METHOD func_82722_b readCustomPotionEffectFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/potion/PotionEffect;
+		COMMENT Read a custom potion effect from a potion item's NBT data.
+		ARG 0 par0NBTTagCompound

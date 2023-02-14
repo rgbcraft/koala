@@ -1,2 +1,24 @@
 CLASS net/minecraft/client/renderer/entity/RenderIronGolem
 	FIELD field_77050_a ironGolemModel Lnet/minecraft/client/model/ModelIronGolem;
+		COMMENT Iron Golem's Model.
+	METHOD func_77049_a doRenderIronGolem (Lnet/minecraft/entity/monster/EntityIronGolem;DDDFF)V
+		COMMENT Renders the Iron Golem.
+		ARG 0 par1EntityIronGolem
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77048_a rotateIronGolemCorpse (Lnet/minecraft/entity/monster/EntityIronGolem;FFF)V
+		COMMENT Rotates Iron Golem corpse.
+		ARG 0 par1EntityIronGolem
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_77047_a renderIronGolemEquippedItems (Lnet/minecraft/entity/monster/EntityIronGolem;F)V
+		COMMENT Renders Iron Golem Equipped items.
+		ARG 0 par1EntityIronGolem
+		ARG 1 par2
+	METHOD func_77029_c renderEquippedItems (Lnet/minecraft/entity/EntityLiving;F)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2

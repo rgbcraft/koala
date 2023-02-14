@@ -6,4 +6,48 @@ CLASS net/minecraft/world/chunk/storage/RegionFile
 	FIELD field_76717_e chunkTimestamps [I
 	FIELD field_76714_f sectorFree Ljava/util/ArrayList;
 	FIELD field_76715_g sizeDelta I
+		COMMENT McRegion sizeDelta
 	FIELD field_76721_h lastModified J
+	METHOD func_76704_a getChunkDataInputStream (II)Ljava/io/DataInputStream;
+		COMMENT args: x, y - get uncompressed chunk stream from the region file
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76710_b getChunkDataOutputStream (II)Ljava/io/DataOutputStream;
+		COMMENT args: x, z - get an output stream used to write chunk data, data is on disk when the returned stream is closed
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76706_a write (II[BI)V
+		COMMENT args: x, z, data, length - write chunk data at (x, z) to disk
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3ArrayOfByte
+		ARG 3 par4
+	METHOD func_76712_a write (I[BI)V
+		COMMENT args: sectorNumber, data, length - write the chunk data to this RegionFile
+		ARG 0 par1
+		ARG 1 par2ArrayOfByte
+		ARG 2 par3
+	METHOD func_76705_d outOfBounds (II)Z
+		COMMENT args: x, z - check region bounds
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76707_e getOffset (II)I
+		COMMENT args: x, y - get chunk's offset in region file
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76709_c isChunkSaved (II)Z
+		COMMENT args: x, z, - true if chunk has been saved / converted
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76711_a setOffset (III)V
+		COMMENT args: x, z, offset - sets the chunk's offset in the region file
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76713_b setChunkTimestamp (III)V
+		COMMENT args: x, z, timestamp - sets the chunk's write timestamp
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76708_c close ()V
+		COMMENT close this RegionFile and prevent further writes

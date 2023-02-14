@@ -1,5 +1,47 @@
 CLASS net/minecraft/entity/monster/EntityCreeper
 	FIELD field_70834_e lastActiveTime I
+		COMMENT Time when this creeper was last in an active state (Messed up code here, probably causes creeper animation to go weird)
 	FIELD field_70833_d timeSinceIgnited I
+		COMMENT The amount of time since the creeper was close enough to the player to ignite
 	FIELD field_82225_f fuseTime I
 	FIELD field_82226_g explosionRadius I
+		COMMENT Explosion radius for this creeper.
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70645_a onDeath (Lnet/minecraft/util/DamageSource;)V
+		COMMENT Called when the mob's health reaches 0.
+		ARG 0 par1DamageSource
+	METHOD func_70652_k attackEntityAsMob (Lnet/minecraft/entity/Entity;)Z
+		ARG 0 par1Entity
+	METHOD func_70830_n getPowered ()Z
+		COMMENT Returns true if the creeper is powered by a lightning bolt.
+	METHOD func_70831_j getCreeperFlashIntensity (F)F
+		COMMENT Params: (Float)Render tick. Returns the intensity of the creeper's flash when it is ignited.
+		ARG 0 par1
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70832_p getCreeperState ()I
+		COMMENT Returns the current state of creeper, -1 is idle, 1 is 'in fuse'
+	METHOD func_70829_a setCreeperState (I)V
+		COMMENT Sets the state of creeper, -1 to idle and 1 to be 'in fuse'
+		ARG 0 par1
+	METHOD func_70077_a onStruckByLightning (Lnet/minecraft/entity/effect/EntityLightningBolt;)V
+		COMMENT Called when a lightning bolt hits the entity.
+		ARG 0 par1EntityLightningBolt

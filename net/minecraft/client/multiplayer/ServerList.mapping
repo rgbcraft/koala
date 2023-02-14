@@ -1,3 +1,28 @@
 CLASS net/minecraft/client/multiplayer/ServerList
 	FIELD field_78859_a mc Lnet/minecraft/client/Minecraft;
+		COMMENT The Minecraft instance.
 	FIELD field_78858_b servers Ljava/util/List;
+		COMMENT List of ServerData instances.
+	METHOD func_78853_a loadServerList ()V
+		COMMENT Loads a list of servers from servers.dat, by running ServerData.getServerDataFromNBTCompound on each NBT compound found in the "servers" tag list.
+	METHOD func_78855_b saveServerList ()V
+		COMMENT Runs getNBTCompound on each ServerData instance, puts everything into a "servers" NBT list and writes it to servers.dat.
+	METHOD func_78850_a getServerData (I)Lnet/minecraft/client/multiplayer/ServerData;
+		COMMENT Gets the ServerData instance stored for the given index in the list.
+		ARG 0 par1
+	METHOD func_78851_b removeServerData (I)V
+		COMMENT Removes the ServerData instance stored for the given index in the list.
+		ARG 0 par1
+	METHOD func_78849_a addServerData (Lnet/minecraft/client/multiplayer/ServerData;)V
+		COMMENT Adds the given ServerData instance to the list.
+		ARG 0 par1ServerData
+	METHOD func_78856_c countServers ()I
+		COMMENT Counts the number of ServerData instances in the list.
+	METHOD func_78857_a swapServers (II)V
+		COMMENT Takes two list indexes, and swaps their order around.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_78854_a setServer (ILnet/minecraft/client/multiplayer/ServerData;)V
+		COMMENT Sets the given index in the list to the given ServerData instance.
+		ARG 0 par1
+		ARG 1 par2ServerData

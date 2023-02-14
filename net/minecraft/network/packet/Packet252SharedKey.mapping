@@ -2,3 +2,23 @@ CLASS net/minecraft/network/packet/Packet252SharedKey
 	FIELD field_73307_a sharedSecret [B
 	FIELD field_73305_b verifyToken [B
 	FIELD field_73306_c sharedKey Ljavax/crypto/SecretKey;
+		COMMENT Secret AES key decrypted from sharedSecret via the server's private RSA key
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).
+	METHOD func_73303_a getSharedKey (Ljava/security/PrivateKey;)Ljavax/crypto/SecretKey;
+		COMMENT Return secretKey, decrypting it from the sharedSecret byte array if needed
+		ARG 0 par1PrivateKey
+	METHOD func_73304_d getSharedKey ()Ljavax/crypto/SecretKey;
+		COMMENT Return the secret AES sharedKey (used by client only)
+	METHOD func_73302_b getVerifyToken (Ljava/security/PrivateKey;)[B
+		COMMENT Return verifyToken
+		ARG 0 par1PrivateKey

@@ -1,3 +1,54 @@
 CLASS net/minecraft/block/BlockSign
 	FIELD field_72279_a signEntityClass Ljava/lang/Class;
 	FIELD field_72278_b isFreestanding Z
+		COMMENT Whether this is a freestanding sign or a wall-mounted sign
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71911_a_ getSelectedBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns the bounding box of the wired rectangular prism to render.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71902_a setBlockBoundsBasedOnState (Lnet/minecraft/world/IBlockAccess;III)V
+		COMMENT Updates the blocks bounds based on its current state. Args: world, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71918_c getBlocksMovement (Lnet/minecraft/world/IBlockAccess;III)Z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_72274_a createNewTileEntity (Lnet/minecraft/world/World;)Lnet/minecraft/tileentity/TileEntity;
+		COMMENT Returns a new instance of a block's tile entity class. Called on placing the block.
+		ARG 0 par1World
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71922_a idPicked (Lnet/minecraft/world/World;III)I
+		COMMENT only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

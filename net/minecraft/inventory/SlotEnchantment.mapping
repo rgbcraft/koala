@@ -1,2 +1,6 @@
 CLASS net/minecraft/inventory/SlotEnchantment
 	FIELD field_75227_a container Lnet/minecraft/inventory/ContainerEnchantment;
+		COMMENT The brewing stand this slot belongs to.
+	METHOD func_75214_a isItemValid (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Check if the stack is a valid item for this slot. Always true beside for the armor slots.
+		ARG 0 par1ItemStack

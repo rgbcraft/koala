@@ -1,2 +1,19 @@
 CLASS net/minecraft/client/gui/inventory/ContainerCreative
 	FIELD field_75185_e itemList Ljava/util/List;
+		COMMENT the list of items in this container
+	METHOD func_75145_c canInteractWith (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 par1EntityPlayer
+	METHOD func_75183_a scrollTo (F)V
+		COMMENT Updates the gui slots ItemStack's based on scroll position.
+		ARG 0 par1
+	METHOD func_75184_d hasMoreThan1PageOfItemsInList ()Z
+		COMMENT theCreativeContainer seems to be hard coded to 9x5 items
+	METHOD func_75133_b retrySlotClick (IIZLnet/minecraft/entity/player/EntityPlayer;)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4EntityPlayer
+	METHOD func_82846_b transferStackInSlot (Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;
+		COMMENT Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2

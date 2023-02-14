@@ -1,3 +1,13 @@
 CLASS net/minecraft/entity/ai/EntityAISit
 	FIELD field_75272_a theEntity Lnet/minecraft/entity/passive/EntityTameable;
 	FIELD field_75271_b isSitting Z
+		COMMENT If the EntityTameable is sitting.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75270_a setSitting (Z)V
+		COMMENT Sets the sitting flag.
+		ARG 0 par1

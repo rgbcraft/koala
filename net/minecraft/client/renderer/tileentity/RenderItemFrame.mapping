@@ -1,2 +1,5 @@
 CLASS net/minecraft/client/renderer/tileentity/RenderItemFrame
 	FIELD field_82405_a renderBlocksInstance Lnet/minecraft/client/renderer/RenderBlocks;
+	METHOD func_82403_a renderFrameItemAsBlock (Lnet/minecraft/entity/item/EntityItemFrame;)V
+		COMMENT Render the item frame's item as a block.
+		ARG 0 par1EntityItemFrame

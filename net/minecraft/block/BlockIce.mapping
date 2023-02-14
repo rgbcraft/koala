@@ -1,1 +1,30 @@
 CLASS net/minecraft/block/BlockIce
+	METHOD func_71856_s_ getRenderBlockPass ()I
+		COMMENT Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
+	METHOD func_71877_c shouldSideBeRendered (Lnet/minecraft/world/IBlockAccess;IIII)Z
+		COMMENT Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71893_a harvestBlock (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;IIII)V
+		COMMENT Called when the player destroys a block with an item that can harvest it. (i, j, k) are the coordinates of the block and l is the block's subtype/damage.
+		ARG 0 par1World
+		ARG 1 par2EntityPlayer
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_71915_e getMobilityFlag ()I
+		COMMENT Returns the mobility information of the block, 0 = free, 1 = can't push but can move over, 2 = total immobility and stop pistons

@@ -1,5 +1,69 @@
 CLASS net/minecraft/world/biome/WorldChunkManager
 	FIELD field_76944_d genBiomes Lnet/minecraft/world/gen/layer/GenLayer;
 	FIELD field_76945_e biomeIndexLayer Lnet/minecraft/world/gen/layer/GenLayer;
+		COMMENT A GenLayer containing the indices into BiomeGenBase.biomeList[]
 	FIELD field_76942_f biomeCache Lnet/minecraft/world/biome/BiomeCache;
+		COMMENT The BiomeCache object for this world.
 	FIELD field_76943_g biomesToSpawnIn Ljava/util/List;
+		COMMENT A list of biomes that the player can spawn in.
+	METHOD func_76932_a getBiomesToSpawnIn ()Ljava/util/List;
+		COMMENT Gets the list of valid biomes for the player to spawn in.
+	METHOD func_76935_a getBiomeGenAt (II)Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Returns the BiomeGenBase related to the x, z position on the world.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76936_a getRainfall ([FIIII)[F
+		COMMENT Returns a list of rainfall values for the specified blocks. Args: listToReuse, x, z, width, length.
+		ARG 0 par1ArrayOfFloat
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76939_a getTemperatureAtHeight (FI)F
+		COMMENT Return an adjusted version of a given temperature based on the y height
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76934_b getTemperatures ([FIIII)[F
+		COMMENT Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length
+		ARG 0 par1ArrayOfFloat
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76937_a getBiomesForGeneration ([Lnet/minecraft/world/biome/BiomeGenBase;IIII)[Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Returns an array of biomes for the location input.
+		ARG 0 par1ArrayOfBiomeGenBase
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76933_b loadBlockGeneratorData ([Lnet/minecraft/world/biome/BiomeGenBase;IIII)[Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth
+		ARG 0 par1ArrayOfBiomeGenBase
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76931_a getBiomeGenAt ([Lnet/minecraft/world/biome/BiomeGenBase;IIIIZ)[Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Return a list of biomes for the specified blocks. Args: listToReuse, x, y, width, length, cacheFlag (if false, don't check biomeCache to avoid infinite loop in BiomeCacheBlock)
+		ARG 0 par1ArrayOfBiomeGenBase
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_76940_a areBiomesViable (IIILjava/util/List;)Z
+		COMMENT checks given Chunk's Biomes against List of allowed ones
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4List
+	METHOD func_76941_a findBiomePosition (IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/world/ChunkPosition;
+		COMMENT Finds a valid position within a range, that is in one of the listed biomes. Searches {par1,par2} +-par3 blocks. Strongly favors positive y positions.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4List
+		ARG 4 par5Random
+	METHOD func_76938_b cleanupCache ()V
+		COMMENT Calls the WorldChunkManager's biomeCache.cleanupCache()

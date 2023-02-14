@@ -1,1 +1,7 @@
 CLASS net/minecraft/dispenser/IBlockSource
+	METHOD func_82615_a getX ()D
+	METHOD func_82617_b getY ()D
+	METHOD func_82616_c getZ ()D
+	METHOD func_82623_d getXInt ()I
+	METHOD func_82622_e getYInt ()I
+	METHOD func_82621_f getZInt ()I

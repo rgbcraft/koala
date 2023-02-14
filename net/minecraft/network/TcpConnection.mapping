@@ -1,21 +1,97 @@
 CLASS net/minecraft/network/TcpConnection
 	FIELD field_74478_h sendQueueLock Ljava/lang/Object;
+		COMMENT The object used for synchronization on the send queue.
 	FIELD field_74479_i networkSocket Ljava/net/Socket;
+		COMMENT The socket used by this network manager.
 	FIELD field_74476_j remoteSocketAddress Ljava/net/SocketAddress;
+		COMMENT The InetSocketAddress of the remote endpoint
 	FIELD field_74477_k socketInputStream Ljava/io/DataInputStream;
+		COMMENT The input stream connected to the socket.
 	FIELD field_74474_l socketOutputStream Ljava/io/DataOutputStream;
+		COMMENT The output stream connected to the socket.
 	FIELD field_74475_m isRunning Z
+		COMMENT Whether the network is currently operational.
 	FIELD field_74472_n isTerminating Z
+		COMMENT Whether this network manager is currently terminating (and should ignore further errors).
 	FIELD field_74473_o readPackets Ljava/util/List;
+		COMMENT Linked list of packets that have been read and are awaiting processing.
 	FIELD field_74487_p dataPackets Ljava/util/List;
+		COMMENT Linked list of packets awaiting sending.
 	FIELD field_74486_q chunkDataPackets Ljava/util/List;
+		COMMENT Linked list of packets with chunk data that are awaiting sending.
 	FIELD field_74485_r theNetHandler Lnet/minecraft/network/packet/NetHandler;
+		COMMENT A reference to the NetHandler object.
 	FIELD field_74484_s isServerTerminating Z
+		COMMENT Whether this server is currently terminating. If this is a client, this is always false.
 	FIELD field_74483_t writeThread Ljava/lang/Thread;
+		COMMENT The thread used for writing.
 	FIELD field_74482_u readThread Ljava/lang/Thread;
+		COMMENT The thread used for reading.
 	FIELD field_74481_v terminationReason Ljava/lang/String;
+		COMMENT A String indicating why the network has shutdown.
 	FIELD field_74489_y sendQueueByteLength I
+		COMMENT The length in bytes of the packets in both send queues (data and chunkData).
 	FIELD field_74465_f isInputBeingDecrypted Z
 	FIELD field_74466_g isOutputEncrypted Z
 	FIELD field_74488_z sharedKeyForEncryption Ljavax/crypto/SecretKey;
 	FIELD field_74464_B chunkDataPacketsDelay I
+		COMMENT Delay for sending pending chunk data packets (as opposed to pending non-chunk data packets)
+	METHOD func_74431_f closeConnections ()V
+	METHOD func_74425_a setNetHandler (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Sets the NetHandler for this NetworkManager. Server-only.
+		ARG 0 par1NetHandler
+	METHOD func_74429_a addToSendQueue (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT Adds the packet to the correct send queue (chunk data packets go to a separate queue).
+		ARG 0 par1Packet
+	METHOD func_74459_h sendPacket ()Z
+		COMMENT Sends a data packet if there is one to send, or sends a chunk data packet if there is one and the counter is up, or does nothing.
+	METHOD func_74427_a wakeThreads ()V
+		COMMENT Wakes reader and writer threads
+	METHOD func_74447_i readPacket ()Z
+		COMMENT Reads a single packet from the input stream and adds it to the read queue. If no packet is read, it shuts down the network.
+	METHOD func_74455_a onNetworkError (Ljava/lang/Exception;)V
+		COMMENT Used to report network errors and causes a network shutdown.
+		ARG 0 par1Exception
+	METHOD func_74424_a networkShutdown (Ljava/lang/String;Ljava/lang/Object;)V
+		COMMENT Shuts down the network with the specified reason. Closes all streams and sockets, spawns NetworkMasterThread to stop reading and writing threads.
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfObj
+	METHOD func_74428_b processReadPackets ()V
+		COMMENT Checks timeouts and processes all pending read packets.
+	METHOD func_74430_c getSocketAddress ()Ljava/net/SocketAddress;
+		COMMENT Return the InetSocketAddress of the remote endpoint
+	METHOD func_74423_d serverShutdown ()V
+		COMMENT Shuts down the server. (Only actually used on the server)
+	METHOD func_74448_j decryptInputStream ()V
+	METHOD func_74446_k encryptOuputStream ()V
+		COMMENT flushes the stream and replaces it with an encryptedOutputStream
+	METHOD func_74426_e packetSize ()I
+		COMMENT returns 0 for memoryConnections
+	METHOD func_74452_g getSocket ()Ljava/net/Socket;
+	METHOD func_74462_a isRunning (Lnet/minecraft/network/TcpConnection;)Z
+		COMMENT Whether the network is operational.
+		ARG 0 par0TcpConnection
+	METHOD func_74449_b isServerTerminating (Lnet/minecraft/network/TcpConnection;)Z
+		COMMENT Is the server terminating? Client side aways returns false.
+		ARG 0 par0TcpConnection
+	METHOD func_74450_c readNetworkPacket (Lnet/minecraft/network/TcpConnection;)Z
+		COMMENT Static accessor to readPacket.
+		ARG 0 par0TcpConnection
+	METHOD func_74451_d sendNetworkPacket (Lnet/minecraft/network/TcpConnection;)Z
+		COMMENT Static accessor to sendPacket.
+		ARG 0 par0TcpConnection
+	METHOD func_74453_e getOutputStream (Lnet/minecraft/network/TcpConnection;)Ljava/io/DataOutputStream;
+		ARG 0 par0TcpConnection
+	METHOD func_74456_f isTerminating (Lnet/minecraft/network/TcpConnection;)Z
+		COMMENT Gets whether the Network manager is terminating.
+		ARG 0 par0TcpConnection
+	METHOD func_74458_a sendError (Lnet/minecraft/network/TcpConnection;Ljava/lang/Exception;)V
+		COMMENT Sends the network manager an error
+		ARG 0 par0TcpConnection
+		ARG 1 par1Exception
+	METHOD func_74457_g getReadThread (Lnet/minecraft/network/TcpConnection;)Ljava/lang/Thread;
+		COMMENT Returns the read thread.
+		ARG 0 par0TcpConnection
+	METHOD func_74461_h getWriteThread (Lnet/minecraft/network/TcpConnection;)Ljava/lang/Thread;
+		COMMENT Returns the write thread.
+		ARG 0 par0TcpConnection

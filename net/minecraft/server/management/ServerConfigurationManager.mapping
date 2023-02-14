@@ -1,16 +1,170 @@
 CLASS net/minecraft/server/management/ServerConfigurationManager
 	FIELD field_72403_e dateFormat Ljava/text/SimpleDateFormat;
 	FIELD field_72406_a logger Ljava/util/logging/Logger;
+		COMMENT Reference to the logger.
 	FIELD field_72400_f mcServer Lnet/minecraft/server/MinecraftServer;
+		COMMENT Reference to the MinecraftServer object.
 	FIELD field_72404_b playerEntityList Ljava/util/List;
+		COMMENT A list of player entities that exist on this server.
 	FIELD field_72401_g bannedPlayers Lnet/minecraft/server/management/BanList;
 	FIELD field_72413_h bannedIPs Lnet/minecraft/server/management/BanList;
 	FIELD field_72414_i ops Ljava/util/Set;
+		COMMENT A set containing the OPs.
 	FIELD field_72411_j whiteListedPlayers Ljava/util/Set;
+		COMMENT The Set of all whitelisted players.
 	FIELD field_72412_k playerNBTManagerObj Lnet/minecraft/world/storage/IPlayerFileData;
+		COMMENT Reference to the PlayerNBTManager object.
 	FIELD field_72409_l whiteListEnforced Z
+		COMMENT Server setting to only allow OPs and whitelisted players to join the server.
 	FIELD field_72405_c maxPlayers I
+		COMMENT The maximum number of players that can be connected at a time.
 	FIELD field_72402_d viewDistance I
 	FIELD field_72410_m gameType Lnet/minecraft/world/EnumGameType;
 	FIELD field_72407_n commandsAllowedForAll Z
+		COMMENT True if all players are allowed to use commands (cheats).
 	FIELD field_72408_o playerPingIndex I
+		COMMENT index into playerEntities of player to ping, updated every tick; currently hardcoded to max at 200 players
+	METHOD func_72355_a initializeConnectionToPlayer (Lnet/minecraft/network/INetworkManager;Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		ARG 0 par1INetworkManager
+		ARG 1 par2EntityPlayerMP
+	METHOD func_72364_a setPlayerManager ([Lnet/minecraft/world/WorldServer;)V
+		COMMENT Sets the NBT manager to the one for the WorldServer given.
+		ARG 0 par1ArrayOfWorldServer
+	METHOD func_72372_a getEntityViewDistance ()I
+	METHOD func_72380_a readPlayerDataFromFile (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT called during player login. reads the player information from disk.
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72391_b writePlayerData (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT also stores the NBTTags if this is an intergratedPlayerList
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72377_c playerLoggedIn (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT Called when a player successfully logs in. Reads player data from disk and inserts the player into the world.
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72358_d serverUpdateMountedMovingPlayer (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT using player's dimension, update their movement when in a vehicle (e.g. cart, boat)
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72367_e playerLoggedOut (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT Called when a player disconnects from the game. Writes player data to disk and removes them from the world.
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72399_a allowUserToConnect (Ljava/net/SocketAddress;Ljava/lang/String;)Ljava/lang/String;
+		COMMENT checks ban-lists, then white-lists, then space for the server. Returns null on success, or an error message
+		ARG 0 par1SocketAddress
+		ARG 1 par2Str
+	METHOD func_72366_a createPlayerForUser (Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayerMP;
+		COMMENT also checks for multiple logins
+		ARG 0 par1Str
+	METHOD func_72368_a respawnPlayer (Lnet/minecraft/entity/player/EntityPlayerMP;IZ)Lnet/minecraft/entity/player/EntityPlayerMP;
+		COMMENT creates and returns a respawned player based on the provided PlayerEntity. Args are the PlayerEntityMP to respawn, an INT for the dimension to respawn into (usually 0), and a boolean value that is true if the player beat the game rather than dying
+		ARG 0 par1EntityPlayerMP
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72356_a transferPlayerToDimension (Lnet/minecraft/entity/player/EntityPlayerMP;I)V
+		ARG 0 par1EntityPlayerMP
+		ARG 1 par2
+	METHOD func_82448_a transferEntityToWorld (Lnet/minecraft/entity/Entity;ILnet/minecraft/world/WorldServer;Lnet/minecraft/world/WorldServer;)V
+		COMMENT Transfers an entity from a world to another world.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3WorldServer
+		ARG 3 par4WorldServer
+	METHOD func_72374_b sendPlayerInfoToAllPlayers ()V
+		COMMENT sends 1 player per tick, but only sends a player once every 600 ticks
+	METHOD func_72384_a sendPacketToAllPlayers (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT sends a packet to all players
+		ARG 0 par1Packet
+	METHOD func_72396_a sendPacketToAllPlayersInDimension (Lnet/minecraft/network/packet/Packet;I)V
+		COMMENT Sends a packet to all players in the specified Dimension
+		ARG 0 par1Packet
+		ARG 1 par2
+	METHOD func_72398_c getPlayerListAsString ()Ljava/lang/String;
+		COMMENT returns a string containing a comma-seperated list of player names
+	METHOD func_72369_d getAllUsernames ()[Ljava/lang/String;
+		COMMENT Returns an array of the usernames of all the connected players.
+	METHOD func_72390_e getBannedPlayers ()Lnet/minecraft/server/management/BanList;
+	METHOD func_72363_f getBannedIPs ()Lnet/minecraft/server/management/BanList;
+	METHOD func_72386_b addOp (Ljava/lang/String;)V
+		COMMENT This adds a username to the ops list, then saves the op list
+		ARG 0 par1Str
+	METHOD func_72360_c removeOp (Ljava/lang/String;)V
+		COMMENT This removes a username from the ops list, then saves the op list
+		ARG 0 par1Str
+	METHOD func_72370_d isAllowedToLogin (Ljava/lang/String;)Z
+		COMMENT Determine if the player is allowed to connect based on current server settings.
+		ARG 0 par1Str
+	METHOD func_72353_e areCommandsAllowed (Ljava/lang/String;)Z
+		COMMENT Returns true if the specific player is allowed to use commands.
+		ARG 0 par1Str
+	METHOD func_72361_f getPlayerForUsername (Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayerMP;
+		ARG 0 par1Str
+	METHOD func_82449_a findPlayers (Lnet/minecraft/util/ChunkCoordinates;IIIIII)Ljava/util/List;
+		COMMENT Find all players in a specified range and narrowing down by other parameters
+		ARG 0 par1ChunkCoordinates
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_72393_a sendToAllNear (DDDDILnet/minecraft/network/packet/Packet;)V
+		COMMENT params: x,y,z,d,dimension. The packet is sent to all players within d distance of x,y,z (d^2<x^2+y^2+z^2)
+		ARG 0 par10Packet
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+		ARG 5 par9
+	METHOD func_72397_a sendToAllNearExcept (Lnet/minecraft/entity/player/EntityPlayer;DDDDILnet/minecraft/network/packet/Packet;)V
+		COMMENT params: srcPlayer,x,y,z,d,dimension. The packet is not sent to the srcPlayer, but all other players where dx*dx+dy*dy+dz*dz<d*d
+		ARG 0 par10
+		ARG 1 par11Packet
+		ARG 2 par1EntityPlayer
+		ARG 3 par2
+		ARG 4 par4
+		ARG 5 par6
+		ARG 6 par8
+	METHOD func_72389_g saveAllPlayerData ()V
+		COMMENT Saves all of the players' current states.
+	METHOD func_72359_h addToWhiteList (Ljava/lang/String;)V
+		COMMENT Add the specified player to the white list.
+		ARG 0 par1Str
+	METHOD func_72379_i removeFromWhitelist (Ljava/lang/String;)V
+		COMMENT Remove the specified player from the whitelist.
+		ARG 0 par1Str
+	METHOD func_72388_h getWhiteListedPlayers ()Ljava/util/Set;
+		COMMENT Returns the whitelisted players.
+	METHOD func_72376_i getOps ()Ljava/util/Set;
+	METHOD func_72362_j loadWhiteList ()V
+		COMMENT Either does nothing, or calls readWhiteList.
+	METHOD func_72354_b updateTimeAndWeatherForPlayer (Lnet/minecraft/entity/player/EntityPlayerMP;Lnet/minecraft/world/WorldServer;)V
+		COMMENT Updates the time and weather for the given player to those of the given world
+		ARG 0 par1EntityPlayerMP
+		ARG 1 par2WorldServer
+	METHOD func_72385_f syncPlayerInventory (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT sends the players inventory to himself
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72394_k getCurrentPlayerCount ()I
+		COMMENT Returns the number of players currently on the server.
+	METHOD func_72352_l getMaxPlayers ()I
+		COMMENT Returns the maximum number of players allowed on the server.
+	METHOD func_72373_m getAvailablePlayerDat ()[Ljava/lang/String;
+		COMMENT Returns an array of usernames for which player.dat exists for.
+	METHOD func_72383_n isWhiteListEnabled ()Z
+	METHOD func_72371_a setWhiteListEnabled (Z)V
+		ARG 0 par1
+	METHOD func_72382_j getPlayerList (Ljava/lang/String;)Ljava/util/List;
+		ARG 0 par1Str
+	METHOD func_72395_o getViewDistance ()I
+		COMMENT Gets the View Distance.
+	METHOD func_72365_p getServerInstance ()Lnet/minecraft/server/MinecraftServer;
+	METHOD func_72378_q getTagsFromLastWrite ()Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT gets the tags created in the last writePlayerData call
+	METHOD func_72357_a setGameType (Lnet/minecraft/world/EnumGameType;)V
+		ARG 0 par1EnumGameType
+	METHOD func_72387_b setCommandsAllowedForAll (Z)V
+		COMMENT Sets whether all players are allowed to use commands (cheats) on the server.
+		ARG 0 par1
+	METHOD func_72392_r removeAllPlayers ()V
+		COMMENT Kicks everyone with "Server closed" as reason.
+	METHOD func_92062_k sendChatMsg (Ljava/lang/String;)V
+		COMMENT Sends the given string to every player as chat message.
+		ARG 0 par1Str

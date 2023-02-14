@@ -1,6 +1,14 @@
 CLASS net/minecraft/world/gen/layer/IntCache
 	FIELD field_76451_a intCacheSize I
 	FIELD field_76449_b freeSmallArrays Ljava/util/List;
+		COMMENT A list of pre-allocated int[256] arrays that are currently unused and can be returned by getIntCache()
 	FIELD field_76450_c inUseSmallArrays Ljava/util/List;
+		COMMENT A list of pre-allocated int[256] arrays that were previously returned by getIntCache() and which will not be re-used again until resetIntCache() is called.
 	FIELD field_76447_d freeLargeArrays Ljava/util/List;
+		COMMENT A list of pre-allocated int[cacheSize] arrays that are currently unused and can be returned by getIntCache()
 	FIELD field_76448_e inUseLargeArrays Ljava/util/List;
+		COMMENT A list of pre-allocated int[cacheSize] arrays that were previously returned by getIntCache() and which will not be re-used again until resetIntCache() is called.
+	METHOD func_76445_a getIntCache (I)[I
+		ARG 0 par0
+	METHOD func_76446_a resetIntCache ()V
+		COMMENT Mark all pre-allocated arrays as available for re-use by moving them to the appropriate free lists.

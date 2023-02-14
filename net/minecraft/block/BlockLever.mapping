@@ -1,1 +1,101 @@
 CLASS net/minecraft/block/BlockLever
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71850_a_ canPlaceBlockOnSide (Lnet/minecraft/world/World;IIII)Z
+		COMMENT checks to see if you can place this block can be placed on that side of a block: BlockLever overrides
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71930_b canPlaceBlockAt (Lnet/minecraft/world/World;III)Z
+		COMMENT Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_85104_a onBlockPlaced (Lnet/minecraft/world/World;IIIIFFFI)I
+		COMMENT Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_72196_d invertMetadata (I)I
+		COMMENT only used in ComponentScatteredFeatureJunglePyramid.addComponentParts"
+		ARG 0 par0
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72195_l checkIfAttachedToBlock (Lnet/minecraft/world/World;III)Z
+		COMMENT Checks if the block is attached to another block. If it is not, it returns false and drops the block as an item. If it is it returns true.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71902_a setBlockBoundsBasedOnState (Lnet/minecraft/world/IBlockAccess;III)V
+		COMMENT Updates the blocks bounds based on its current state. Args: world, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71921_a onBlockClicked (Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Called when the block is clicked by a player. Args: x, y, z, entityPlayer
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityPlayer
+	METHOD func_71903_a onBlockActivated (Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;IFFF)Z
+		COMMENT Called upon block activation (right click on the block.)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityPlayer
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_71852_a breakBlock (Lnet/minecraft/world/World;IIIII)V
+		COMMENT ejects contained items into the world, and notifies neighbours of an update, as appropriate
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_71865_a isProvidingWeakPower (Lnet/minecraft/world/IBlockAccess;IIII)Z
+		COMMENT Returns true if the block is emitting indirect/weak redstone power on the specified side. If isBlockNormalCube returns true, standard redstone propagation rules will apply instead and this will not be called. Args: World, X, Y, Z, side. Note that the side is reversed - eg it is 1 (up) when checking the bottom of the block.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71855_c isProvidingStrongPower (Lnet/minecraft/world/IBlockAccess;IIII)Z
+		COMMENT Returns true if the block is emitting direct/strong redstone power on the specified side. Args: World, X, Y, Z, side. Note that the side is reversed - eg it is 1 (up) when checking the bottom of the block.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71853_i canProvidePower ()Z
+		COMMENT Can this block provide power. Only wire currently seems to have this change based on its state.

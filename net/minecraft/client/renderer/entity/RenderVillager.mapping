@@ -1,2 +1,40 @@
 CLASS net/minecraft/client/renderer/entity/RenderVillager
 	FIELD field_77056_a villagerModel Lnet/minecraft/client/model/ModelVillager;
+		COMMENT Model of the villager.
+	METHOD func_77053_a shouldVillagerRenderPass (Lnet/minecraft/entity/passive/EntityVillager;IF)I
+		COMMENT Determines wether Villager Render pass or not.
+		ARG 0 par1EntityVillager
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77054_a renderVillager (Lnet/minecraft/entity/passive/EntityVillager;DDDFF)V
+		ARG 0 par1EntityVillager
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77055_a passVillagerSpecialRender (Lnet/minecraft/entity/passive/EntityVillager;DDD)V
+		COMMENT Passes the Villager special render.
+		ARG 0 par1EntityVillager
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+	METHOD func_77051_a renderVillagerEquipedItems (Lnet/minecraft/entity/passive/EntityVillager;F)V
+		ARG 0 par1EntityVillager
+		ARG 1 par2
+	METHOD func_77052_b preRenderVillager (Lnet/minecraft/entity/passive/EntityVillager;F)V
+		ARG 0 par1EntityVillager
+		ARG 1 par2
+	METHOD func_77033_b passSpecialRender (Lnet/minecraft/entity/EntityLiving;DDD)V
+		COMMENT Passes the specialRender and renders it
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+	METHOD func_77041_b preRenderCallback (Lnet/minecraft/entity/EntityLiving;F)V
+		COMMENT Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args: entityLiving, partialTickTime
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_77029_c renderEquippedItems (Lnet/minecraft/entity/EntityLiving;F)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2

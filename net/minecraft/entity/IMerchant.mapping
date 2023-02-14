@@ -1,1 +1,10 @@
 CLASS net/minecraft/entity/IMerchant
+	METHOD func_70932_a_ setCustomer (Lnet/minecraft/entity/player/EntityPlayer;)V
+		ARG 0 par1EntityPlayer
+	METHOD func_70931_l_ getCustomer ()Lnet/minecraft/entity/player/EntityPlayer;
+	METHOD func_70934_b getRecipes (Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/village/MerchantRecipeList;
+		ARG 0 par1EntityPlayer
+	METHOD func_70930_a setRecipes (Lnet/minecraft/village/MerchantRecipeList;)V
+		ARG 0 par1MerchantRecipeList
+	METHOD func_70933_a useRecipe (Lnet/minecraft/village/MerchantRecipe;)V
+		ARG 0 par1MerchantRecipe

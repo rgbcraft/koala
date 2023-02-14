@@ -4,6 +4,32 @@ CLASS net/minecraft/world/storage/MapData
 	FIELD field_76200_c dimension B
 	FIELD field_76197_d scale B
 	FIELD field_76198_e colors [B
+		COMMENT colours
 	FIELD field_76196_g playersArrayList Ljava/util/List;
+		COMMENT Holds a reference to the MapInfo of the players who own a copy of the map
 	FIELD field_76202_j playersHashMap Ljava/util/Map;
+		COMMENT Holds a reference to the players who own a copy of the map and a reference to their MapInfo
 	FIELD field_76203_h playersVisibleOnMap Ljava/util/Map;
+	METHOD func_76184_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT reads in data from the NBTTagCompound into this MapDataBase
+		ARG 0 par1NBTTagCompound
+	METHOD func_76187_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT write data to NBTTagCompound from this MapDataBase, similar to Entities and TileEntities
+		ARG 0 par1NBTTagCompound
+	METHOD func_76191_a updateVisiblePlayers (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;)V
+		COMMENT Adds the player passed to the list of visible players and checks to see which players are visible
+		ARG 0 par1EntityPlayer
+		ARG 1 par2ItemStack
+	METHOD func_76193_a getUpdatePacketData (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)[B
+		COMMENT Get byte array of packet data to send to players on map for updating map data
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer
+	METHOD func_76194_a setColumnDirty (III)V
+		COMMENT Marks a vertical range of pixels as being modified so they will be resent to clients. Parameters: X, lowest Y, highest Y
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76192_a updateMPMapData ([B)V
+		COMMENT Updates the client's map with information from other players in MP
+		ARG 0 par1ArrayOfByte

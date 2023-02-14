@@ -1,2 +1,7 @@
 CLASS net/minecraft/util/ScreenShotHelper
 	FIELD field_74295_a dateFormat Ljava/text/DateFormat;
+	METHOD func_74291_a saveScreenshot (Ljava/io/File;II)Ljava/lang/String;
+		COMMENT Takes a screenshot and saves it to the screenshots directory. Returns the filename of the screenshot.
+		ARG 0 par0File
+		ARG 1 par1
+		ARG 2 par2

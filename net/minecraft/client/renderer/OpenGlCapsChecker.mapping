@@ -1,1 +1,3 @@
 CLASS net/minecraft/client/renderer/OpenGlCapsChecker
+	METHOD func_74371_a checkARBOcclusion ()Z
+		COMMENT Checks if we support OpenGL occlusion.

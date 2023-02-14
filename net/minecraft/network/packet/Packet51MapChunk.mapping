@@ -1,10 +1,34 @@
 CLASS net/minecraft/network/packet/Packet51MapChunk
 	FIELD field_73601_a xCh I
+		COMMENT The x-position of the transmitted chunk, in chunk coordinates.
 	FIELD field_73599_b zCh I
+		COMMENT The z-position of the transmitted chunk, in chunk coordinates.
 	FIELD field_73600_c yChMin I
+		COMMENT The y-position of the lowest chunk Section in the transmitted chunk, in chunk coordinates.
 	FIELD field_73597_d yChMax I
+		COMMENT The y-position of the highest chunk Section in the transmitted chunk, in chunk coordinates.
 	FIELD field_73595_f chunkData [B
+		COMMENT The transmitted chunk data, decompressed.
 	FIELD field_73596_g compressedChunkData [B
+		COMMENT The compressed chunk data
 	FIELD field_73598_e includeInitialize Z
+		COMMENT Whether to initialize the Chunk before applying the effect of the Packet51MapChunk.
 	FIELD field_73602_h tempLength I
+		COMMENT The length of the compressed chunk data byte array.
 	FIELD field_73603_i temp [B
+		COMMENT A temporary storage for the compressed chunk data byte array.
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).
+	METHOD func_73594_a getMapChunkData (Lnet/minecraft/world/chunk/Chunk;ZI)Lnet/minecraft/network/packet/Packet51MapChunkData;
+		ARG 0 par0Chunk
+		ARG 1 par1
+		ARG 2 par2

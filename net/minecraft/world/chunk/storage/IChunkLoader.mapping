@@ -1,1 +1,17 @@
 CLASS net/minecraft/world/chunk/storage/IChunkLoader
+	METHOD func_75815_a loadChunk (Lnet/minecraft/world/World;II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT Loads the specified(XZ) chunk into the specified world.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75816_a saveChunk (Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V
+		ARG 0 par1World
+		ARG 1 par2Chunk
+	METHOD func_75819_b saveExtraChunkData (Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V
+		COMMENT Save extra data associated with this Chunk not normally saved during autosave, only during chunk unload.  Currently unused.
+		ARG 0 par1World
+		ARG 1 par2Chunk
+	METHOD func_75817_a chunkTick ()V
+		COMMENT Called every World.tick()
+	METHOD func_75818_b saveExtraData ()V
+		COMMENT Save extra data not associated with any Chunk.  Not saved during autosave, only during world unload.  Currently unused.

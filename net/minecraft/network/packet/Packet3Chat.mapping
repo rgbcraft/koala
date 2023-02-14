@@ -1,4 +1,21 @@
 CLASS net/minecraft/network/packet/Packet3Chat
 	FIELD field_73478_a maxChatLength I
+		COMMENT Maximum number of characters allowed in chat string in each packet.
 	FIELD field_73476_b message Ljava/lang/String;
+		COMMENT The message being sent.
 	FIELD field_73477_c isServer Z
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).
+	METHOD func_73475_d getIsServer ()Z
+		COMMENT Get whether this is a server
+	METHOD func_73277_a_ canProcessAsync ()Z
+		COMMENT If this returns true, the packet may be processed on any thread; otherwise it is queued for the main thread to handle.

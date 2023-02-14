@@ -1,1 +1,9 @@
 CLASS net/minecraft/client/renderer/entity/RenderXPOrb
+	METHOD func_77005_a renderTheXPOrb (Lnet/minecraft/entity/item/EntityXPOrb;DDDFF)V
+		COMMENT Renders the XP Orb.
+		ARG 0 par1EntityXPOrb
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9

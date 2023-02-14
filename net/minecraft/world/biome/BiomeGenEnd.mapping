@@ -1,1 +1,4 @@
 CLASS net/minecraft/world/biome/BiomeGenEnd
+	METHOD func_76731_a getSkyColorByTemp (F)I
+		COMMENT takes temperature, returns color
+		ARG 0 par1

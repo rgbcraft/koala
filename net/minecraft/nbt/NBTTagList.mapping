@@ -1,3 +1,26 @@
 CLASS net/minecraft/nbt/NBTTagList
 	FIELD field_74747_a tagList Ljava/util/List;
+		COMMENT The array list containing the tags encapsulated in this list.
 	FIELD field_74746_b tagType B
+		COMMENT The type byte for the tags in the list - they must all be of the same type.
+	METHOD func_74734_a write (Ljava/io/DataOutput;)V
+		COMMENT Write the actual data contents of the tag, implemented in NBT extension classes
+		ARG 0 par1DataOutput
+	METHOD func_74735_a load (Ljava/io/DataInput;)V
+		COMMENT Read the actual data contents of the tag, implemented in NBT extension classes
+		ARG 0 par1DataInput
+	METHOD func_74732_a getId ()B
+		COMMENT Gets the type byte for the tag.
+	METHOD func_74742_a appendTag (Lnet/minecraft/nbt/NBTBase;)V
+		COMMENT Adds the provided tag to the end of the list. There is no check to verify this tag is of the same type as any previous tag.
+		ARG 0 par1NBTBase
+	METHOD func_74744_a removeTag (I)Lnet/minecraft/nbt/NBTBase;
+		COMMENT Removes a tag at the given index.
+		ARG 0 par1
+	METHOD func_74743_b tagAt (I)Lnet/minecraft/nbt/NBTBase;
+		COMMENT Retrieves the tag at the specified index from the list.
+		ARG 0 par1
+	METHOD func_74745_c tagCount ()I
+		COMMENT Returns the number of tags in the list.
+	METHOD func_74737_b copy ()Lnet/minecraft/nbt/NBTBase;
+		COMMENT Creates a clone of the tag.

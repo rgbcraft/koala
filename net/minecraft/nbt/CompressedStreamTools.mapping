@@ -1,1 +1,26 @@
 CLASS net/minecraft/nbt/CompressedStreamTools
+	METHOD func_74796_a readCompressed (Ljava/io/InputStream;)Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Load the gzipped compound from the inputstream.
+		ARG 0 par0InputStream
+	METHOD func_74799_a writeCompressed (Lnet/minecraft/nbt/NBTTagCompound;Ljava/io/OutputStream;)V
+		COMMENT Write the compound, gzipped, to the outputstream.
+		ARG 0 par0NBTTagCompound
+		ARG 1 par1OutputStream
+	METHOD func_74792_a decompress ([B)Lnet/minecraft/nbt/NBTTagCompound;
+		ARG 0 par0ArrayOfByte
+	METHOD func_74798_a compress (Lnet/minecraft/nbt/NBTTagCompound;)[B
+		ARG 0 par0NBTTagCompound
+	METHOD func_74793_a safeWrite (Lnet/minecraft/nbt/NBTTagCompound;Ljava/io/File;)V
+		ARG 0 par0NBTTagCompound
+		ARG 1 par1File
+	METHOD func_74795_b write (Lnet/minecraft/nbt/NBTTagCompound;Ljava/io/File;)V
+		ARG 0 par0NBTTagCompound
+		ARG 1 par1File
+	METHOD func_74797_a read (Ljava/io/File;)Lnet/minecraft/nbt/NBTTagCompound;
+		ARG 0 par0File
+	METHOD func_74794_a read (Ljava/io/DataInput;)Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Reads from a CompressedStream.
+		ARG 0 par0DataInput
+	METHOD func_74800_a write (Lnet/minecraft/nbt/NBTTagCompound;Ljava/io/DataOutput;)V
+		ARG 0 par0NBTTagCompound
+		ARG 1 par1DataOutput

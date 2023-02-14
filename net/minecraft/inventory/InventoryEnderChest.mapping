@@ -1,2 +1,12 @@
 CLASS net/minecraft/inventory/InventoryEnderChest
 	FIELD field_70488_a associatedChest Lnet/minecraft/tileentity/TileEntityEnderChest;
+	METHOD func_70485_a setAssociatedChest (Lnet/minecraft/tileentity/TileEntityEnderChest;)V
+		ARG 0 par1TileEntityEnderChest
+	METHOD func_70486_a loadInventoryFromNBT (Lnet/minecraft/nbt/NBTTagList;)V
+		ARG 0 par1NBTTagList
+	METHOD func_70487_g saveInventoryToNBT ()Lnet/minecraft/nbt/NBTTagList;
+	METHOD func_70300_a isUseableByPlayer (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Do not make give this method the name canInteractWith because it clashes with Container
+		ARG 0 par1EntityPlayer
+	METHOD func_70295_k_ openChest ()V
+	METHOD func_70305_f closeChest ()V

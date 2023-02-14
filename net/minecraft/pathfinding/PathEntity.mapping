@@ -1,4 +1,35 @@
 CLASS net/minecraft/pathfinding/PathEntity
 	FIELD field_75884_a points [Lnet/minecraft/pathfinding/PathPoint;
+		COMMENT The actual points in the path
 	FIELD field_75882_b currentPathIndex I
+		COMMENT PathEntity Array Index the Entity is currently targeting
 	FIELD field_75883_c pathLength I
+		COMMENT The total length of the path
+	METHOD func_75875_a incrementPathIndex ()V
+		COMMENT Directs this path to the next point in its array
+	METHOD func_75879_b isFinished ()Z
+		COMMENT Returns true if this path has reached the end
+	METHOD func_75870_c getFinalPathPoint ()Lnet/minecraft/pathfinding/PathPoint;
+		COMMENT returns the last PathPoint of the Array
+	METHOD func_75877_a getPathPointFromIndex (I)Lnet/minecraft/pathfinding/PathPoint;
+		COMMENT return the PathPoint located at the specified PathIndex, usually the current one
+		ARG 0 par1
+	METHOD func_75874_d getCurrentPathLength ()I
+	METHOD func_75871_b setCurrentPathLength (I)V
+		ARG 0 par1
+	METHOD func_75873_e getCurrentPathIndex ()I
+	METHOD func_75872_c setCurrentPathIndex (I)V
+		ARG 0 par1
+	METHOD func_75881_a getVectorFromIndex (Lnet/minecraft/entity/Entity;I)Lnet/minecraft/util/Vec3;
+		COMMENT Gets the vector of the PathPoint associated with the given index.
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_75878_a getPosition (Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/Vec3;
+		COMMENT returns the current PathEntity target node as Vec3D
+		ARG 0 par1Entity
+	METHOD func_75876_a isSamePath (Lnet/minecraft/pathfinding/PathEntity;)Z
+		COMMENT Returns true if the EntityPath are the same. Non instance related equals.
+		ARG 0 par1PathEntity
+	METHOD func_75880_b isDestinationSame (Lnet/minecraft/util/Vec3;)Z
+		COMMENT Returns true if the final PathPoint in the PathEntity is equal to Vec3D coords.
+		ARG 0 par1Vec3

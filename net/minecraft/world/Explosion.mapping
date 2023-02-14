@@ -1,6 +1,8 @@
 CLASS net/minecraft/world/Explosion
 	FIELD field_77286_a isFlaming Z
+		COMMENT whether or not the explosion sets fire to blocks around it
 	FIELD field_82755_b isSmoking Z
+		COMMENT whether or not this explosion spawns smoke particles
 	FIELD field_77290_i explosionRNG Ljava/util/Random;
 	FIELD field_77287_j worldObj Lnet/minecraft/world/World;
 	FIELD field_77284_b explosionX D
@@ -9,3 +11,9 @@ CLASS net/minecraft/world/Explosion
 	FIELD field_77283_e exploder Lnet/minecraft/entity/Entity;
 	FIELD field_77280_f explosionSize F
 	FIELD field_77281_g affectedBlockPositions Ljava/util/List;
+		COMMENT A list of ChunkPositions of blocks affected by this explosion
+	METHOD func_77278_a doExplosionA ()V
+		COMMENT Does the first part of the explosion (destroy blocks)
+	METHOD func_77279_a doExplosionB (Z)V
+		COMMENT Does the second part of the explosion (sound, particles, drop spawn)
+		ARG 0 par1

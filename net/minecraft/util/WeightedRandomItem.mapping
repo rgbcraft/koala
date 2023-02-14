@@ -1,2 +1,3 @@
 CLASS net/minecraft/util/WeightedRandomItem
 	FIELD field_76292_a itemWeight I
+		COMMENT The Weight is how often the item is chosen(higher number is higher chance(lower is lower))

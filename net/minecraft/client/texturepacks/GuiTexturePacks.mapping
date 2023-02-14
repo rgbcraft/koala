@@ -2,4 +2,28 @@ CLASS net/minecraft/client/texturepacks/GuiTexturePacks
 	FIELD field_73967_a guiScreen Lnet/minecraft/client/gui/GuiScreen;
 	FIELD field_73965_b refreshTimer I
 	FIELD field_73966_c fileLocation Ljava/lang/String;
+		COMMENT the absolute location of this texture pack
 	FIELD field_73964_d guiTexturePackSlot Lnet/minecraft/client/texturepacks/GuiTexturePackSlot;
+		COMMENT the GuiTexturePackSlot that contains all the texture packs and their descriptions
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73864_a mouseClicked (III)V
+		COMMENT Called when the mouse is clicked.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73879_b mouseMovedOrUp (III)V
+		COMMENT Called when the mouse is moved or a mouse button is released.  Signature: (mouseX, mouseY, which) which==-1 is mouseMove, which==0 or which==1 is mouseUp
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.

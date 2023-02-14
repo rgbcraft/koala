@@ -1,10 +1,20 @@
 CLASS net/minecraft/util/LongHashMapEntry
 	FIELD field_76150_a key J
+		COMMENT the key as a long (for playerInstances it is the x in the most significant 32 bits and then y)
 	FIELD field_76148_b value Ljava/lang/Object;
+		COMMENT the value held by the hash at the specified key
 	FIELD field_76149_c nextEntry Lnet/minecraft/util/LongHashMapEntry;
+		COMMENT the next hashentry in the table
 	FIELD field_76147_d hash I
+	METHOD func_76146_a getKey ()J
+	METHOD func_76145_b getValue ()Ljava/lang/Object;
 CLASS net/minecraft/util/LongHashMapEntry
 	FIELD field_76150_a key J
+		COMMENT the key as a long (for playerInstances it is the x in the most significant 32 bits and then y)
 	FIELD field_76148_b value Ljava/lang/Object;
+		COMMENT the value held by the hash at the specified key
 	FIELD field_76149_c nextEntry Lnet/minecraft/util/LongHashMapEntry;
+		COMMENT the next hashentry in the table
 	FIELD field_76147_d hash I
+	METHOD func_76146_a getKey ()J
+	METHOD func_76145_b getValue ()Ljava/lang/Object;

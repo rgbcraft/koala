@@ -1,6 +1,13 @@
 CLASS net/minecraft/world/storage/MapInfo
 	FIELD field_76211_a entityplayerObj Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT Reference for EntityPlayer object in MapInfo
 	FIELD field_76208_e currentRandomNumber I
+		COMMENT updated by x = mod(x*11,128) +1  x-1 is used to index field_76209_b and field_76210_c
 	FIELD field_76205_f ticksUntilPlayerLocationMapUpdate I
 	FIELD field_76206_g lastPlayerLocationOnMap [B
+		COMMENT a cache of the result from getPlayersOnMap so that it is not resent when nothing changes
 	FIELD field_76207_d mapDataObj Lnet/minecraft/world/storage/MapData;
+		COMMENT reference in MapInfo to MapData object
+	METHOD func_76204_a getPlayersOnMap (Lnet/minecraft/item/ItemStack;)[B
+		COMMENT returns a 1+players*3 array, of x,y, and color . the name of this function may be partially wrong, as there is a second branch to the code here
+		ARG 0 par1ItemStack

@@ -1,2 +1,50 @@
 CLASS net/minecraft/entity/monster/EntitySlime
 	FIELD field_70810_d slimeJumpDelay I
+		COMMENT the time between each jump of the slime
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70799_a setSlimeSize (I)V
+		ARG 0 par1
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70809_q getSlimeSize ()I
+		COMMENT Returns the size of the slime.
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70801_i getSlimeParticle ()Ljava/lang/String;
+		COMMENT Returns the name of a particle effect that may be randomly created by EntitySlime.onUpdate()
+	METHOD func_70803_o getJumpSound ()Ljava/lang/String;
+		COMMENT Returns the name of the sound played when the slime jumps.
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70626_be updateEntityActionState ()V
+	METHOD func_70806_k getJumpDelay ()I
+		COMMENT Gets the amount of time the slime needs to wait between jumps.
+	METHOD func_70802_j createInstance ()Lnet/minecraft/entity/monster/EntitySlime;
+	METHOD func_70106_y setDead ()V
+		COMMENT Will get destroyed next tick.
+	METHOD func_70100_b_ onCollideWithPlayer (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Called by a player entity when they collide with an entity
+		ARG 0 par1EntityPlayer
+	METHOD func_70800_m canDamagePlayer ()Z
+		COMMENT Indicates weather the slime is able to damage the player (based upon the slime's size)
+	METHOD func_70805_n getAttackStrength ()I
+		COMMENT Gets the amount of damage dealt to the player when "attacked" by the slime.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70601_bi getCanSpawnHere ()Z
+		COMMENT Checks if the entity's current position is a valid location to spawn this entity.
+	METHOD func_70599_aP getSoundVolume ()F
+		COMMENT Returns the volume for the sounds this mob makes.
+	METHOD func_70646_bf getVerticalFaceSpeed ()I
+		COMMENT The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
+	METHOD func_70807_r makesSoundOnJump ()Z
+		COMMENT Returns true if the slime makes a sound when it jumps (based upon the slime's size)
+	METHOD func_70804_p makesSoundOnLand ()Z
+		COMMENT Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)

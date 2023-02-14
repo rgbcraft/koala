@@ -1,4 +1,51 @@
 CLASS net/minecraft/client/renderer/entity/RenderItem
 	FIELD field_77022_g itemRenderBlocks Lnet/minecraft/client/renderer/RenderBlocks;
 	FIELD field_77025_h random Ljava/util/Random;
+		COMMENT The RNG used in RenderItem (for bobbing itemstacks on the ground)
 	FIELD field_77023_b zLevel F
+		COMMENT Defines the zLevel of rendering of item on GUI.
+	METHOD func_77014_a doRenderItem (Lnet/minecraft/entity/item/EntityItem;DDDFF)V
+		COMMENT Renders the item
+		ARG 0 par1EntityItem
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77015_a renderItemIntoGUI (Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/client/renderer/RenderEngine;Lnet/minecraft/item/ItemStack;II)V
+		COMMENT Renders the item's icon or block into the UI at the specified position.
+		ARG 0 par1FontRenderer
+		ARG 1 par2RenderEngine
+		ARG 2 par3ItemStack
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_82406_b renderItemAndEffectIntoGUI (Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/client/renderer/RenderEngine;Lnet/minecraft/item/ItemStack;II)V
+		COMMENT Render the item's icon or block into the GUI, including the glint effect.
+		ARG 0 par1FontRenderer
+		ARG 1 par2RenderEngine
+		ARG 2 par3ItemStack
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_77021_b renderItemOverlayIntoGUI (Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/client/renderer/RenderEngine;Lnet/minecraft/item/ItemStack;II)V
+		COMMENT Renders the item's overlay information. Examples being stack count or damage on top of the item's image at the specified position.
+		ARG 0 par1FontRenderer
+		ARG 1 par2RenderEngine
+		ARG 2 par3ItemStack
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_77017_a renderQuad (Lnet/minecraft/client/renderer/Tessellator;IIIII)V
+		COMMENT Adds a quad to the tesselator at the specified position with the set width and height and color.  Args: tessellator, x, y, width, height, color
+		ARG 0 par1Tessellator
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_77016_a renderTexturedQuad (IIIIII)V
+		COMMENT Adds a textured quad to the tesselator at the specified position with the specified texture coords, width and height.  Args: x, y, u, v, width, height
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6

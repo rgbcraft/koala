@@ -1,3 +1,7 @@
 CLASS net/minecraft/client/model/ModelSign
 	FIELD field_78166_a signBoard Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The board on a sign that has the writing on it.
 	FIELD field_78165_b signStick Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The stick a sign stands on.
+	METHOD func_78164_a renderSign ()V
+		COMMENT Renders the sign model through TileEntitySignRenderer

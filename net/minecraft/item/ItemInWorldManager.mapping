@@ -1,15 +1,73 @@
 CLASS net/minecraft/item/ItemInWorldManager
 	FIELD field_73092_a theWorld Lnet/minecraft/world/World;
+		COMMENT The world object that this object is connected to.
 	FIELD field_73090_b thisPlayerMP Lnet/minecraft/entity/player/EntityPlayerMP;
+		COMMENT The EntityPlayerMP object that this object is connected to.
 	FIELD field_73091_c gameType Lnet/minecraft/world/EnumGameType;
 	FIELD field_73088_d isDestroyingBlock Z
+		COMMENT True if the player is destroying a block
 	FIELD field_73089_e initialDamage I
 	FIELD field_73086_f partiallyDestroyedBlockX I
 	FIELD field_73087_g partiallyDestroyedBlockY I
 	FIELD field_73099_h partiallyDestroyedBlockZ I
 	FIELD field_73100_i curblockDamage I
 	FIELD field_73097_j receivedFinishDiggingPacket Z
+		COMMENT Set to true when the "finished destroying block" packet is received but the block wasn't fully damaged yet. The block will not be destroyed while this is false.
 	FIELD field_73098_k posX I
 	FIELD field_73095_l posY I
 	FIELD field_73096_m posZ I
 	FIELD field_73094_o durabilityRemainingOnBlock I
+	METHOD func_73076_a setGameType (Lnet/minecraft/world/EnumGameType;)V
+		ARG 0 par1EnumGameType
+	METHOD func_73081_b getGameType ()Lnet/minecraft/world/EnumGameType;
+	METHOD func_73083_d isCreative ()Z
+		COMMENT Get if we are in creative game mode.
+	METHOD func_73077_b initializeGameType (Lnet/minecraft/world/EnumGameType;)V
+		COMMENT if the gameType is currently NOT_SET then change it to par1
+		ARG 0 par1EnumGameType
+	METHOD func_73075_a updateBlockRemoving ()V
+	METHOD func_73074_a onBlockClicked (IIII)V
+		COMMENT if not creative, it calls destroyBlockInWorldPartially untill the block is broken first. par4 is the specific side. tryHarvestBlock can also be the result of this call
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73082_a uncheckedTryHarvestBlock (III)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73073_c cancelDestroyingBlock (III)V
+		COMMENT note: this ignores the pars passed in and continues to destroy the onClickedBlock
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73079_d removeBlock (III)Z
+		COMMENT Removes a block and triggers the appropriate events
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73084_b tryHarvestBlock (III)Z
+		COMMENT Attempts to harvest a block at the given coordinate
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73085_a tryUseItem (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Attempts to right-click use an item by the given EntityPlayer in the given World
+		ARG 0 par1EntityPlayer
+		ARG 1 par2World
+		ARG 2 par3ItemStack
+	METHOD func_73078_a activateBlockOrUseItem (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;IIIIFFF)Z
+		COMMENT Activate the clicked on block, otherwise use the held item. Args: player, world, itemStack, x, y, z, side, xOffset, yOffset, zOffset
+		ARG 0 par10
+		ARG 1 par1EntityPlayer
+		ARG 2 par2World
+		ARG 3 par3ItemStack
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+		ARG 8 par8
+		ARG 9 par9
+	METHOD func_73080_a setWorld (Lnet/minecraft/world/WorldServer;)V
+		COMMENT Sets the world instance.
+		ARG 0 par1WorldServer

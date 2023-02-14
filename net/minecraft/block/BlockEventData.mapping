@@ -4,4 +4,18 @@ CLASS net/minecraft/block/BlockEventData
 	FIELD field_76926_c coordZ I
 	FIELD field_76923_d blockID I
 	FIELD field_76924_e eventID I
+		COMMENT Different for each blockID
 	FIELD field_76922_f eventParameter I
+		COMMENT Different for each blockID, eventID
+	METHOD func_76919_a getX ()I
+		COMMENT Get the X coordinate.
+	METHOD func_76921_b getY ()I
+		COMMENT Get the Y coordinate.
+	METHOD func_76920_c getZ ()I
+		COMMENT Get the Z coordinate.
+	METHOD func_76918_d getEventID ()I
+		COMMENT Get the Event ID (different for each BlockID)
+	METHOD func_76917_e getEventParameter ()I
+		COMMENT Get the Event Parameter (different for each BlockID,EventID)
+	METHOD func_76916_f getBlockID ()I
+		COMMENT Gets the BlockID for this BlockEventData

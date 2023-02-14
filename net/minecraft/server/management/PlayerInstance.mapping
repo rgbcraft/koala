@@ -1,6 +1,25 @@
 CLASS net/minecraft/server/management/PlayerInstance
 	FIELD field_73263_b playersInChunk Ljava/util/List;
 	FIELD field_73264_c chunkLocation Lnet/minecraft/world/ChunkCoordIntPair;
+		COMMENT note: this is final
 	FIELD field_73261_d locationOfBlockChange [S
 	FIELD field_73262_e numberOfTilesToUpdate I
 	FIELD field_73265_a myManager Lnet/minecraft/server/management/PlayerManager;
+	METHOD func_73255_a addPlayerToChunkWatchingList (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT called for all chunks within the visible radius of the player
+		ARG 0 par1EntityPlayerMP
+	METHOD func_73252_b sendThisChunkToPlayer (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		ARG 0 par1EntityPlayerMP
+	METHOD func_73259_a flagChunkForUpdate (III)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73256_a sendToAllPlayersWatchingChunk (Lnet/minecraft/network/packet/Packet;)V
+		ARG 0 par1Packet
+	METHOD func_73254_a sendChunkUpdate ()V
+	METHOD func_73257_a sendTileToAllPlayersWatchingChunk (Lnet/minecraft/tileentity/TileEntity;)V
+		ARG 0 par1TileEntity
+	METHOD func_73253_a getChunkLocation (Lnet/minecraft/server/management/PlayerInstance;)Lnet/minecraft/world/ChunkCoordIntPair;
+		ARG 0 par0PlayerInstance
+	METHOD func_73258_b getPlayersInChunk (Lnet/minecraft/server/management/PlayerInstance;)Ljava/util/List;
+		ARG 0 par0PlayerInstance

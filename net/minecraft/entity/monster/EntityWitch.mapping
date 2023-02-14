@@ -1,3 +1,37 @@
 CLASS net/minecraft/entity/monster/EntityWitch
 	FIELD field_82199_d witchDrops [I
+		COMMENT List of items a witch should drop on death.
 	FIELD field_82200_e witchAttackTimer I
+		COMMENT Timer used as interval for a witch's attack, decremented every tick if aggressive and when reaches zero the witch will throw a potion at the target entity.
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_82197_f setAggressive (Z)V
+		COMMENT Set whether this witch is aggressive at an entity.
+		ARG 0 par1
+	METHOD func_82198_m getAggressive ()Z
+		COMMENT Return whether this witch is aggressive at an entity.
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70103_a handleHealthUpdate (B)V
+		ARG 0 par1
+	METHOD func_70672_c applyPotionDamageCalculations (Lnet/minecraft/util/DamageSource;I)I
+		COMMENT Reduces damage, depending on potions
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70616_bs getSpeedModifier ()F
+		COMMENT This method returns a value to be applied directly to entity speed, this factor is less than 1 when a slowdown potion effect is applied, more than 1 when a haste potion effect is applied and 2 for fleeing entities.
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_82196_d attackEntityWithRangedAttack (Lnet/minecraft/entity/EntityLiving;)V
+		COMMENT Attack the specified entity using a ranged attack.
+		ARG 0 par1EntityLiving

@@ -1,10 +1,13 @@
 CLASS net/minecraft/client/gui/GuiScreenBook
 	FIELD field_74169_a editingPlayer Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT The player editing the book
 	FIELD field_74167_b itemstackBook Lnet/minecraft/item/ItemStack;
 	FIELD field_74168_c bookIsUnsigned Z
+		COMMENT Whether the book is signed or can still be edited
 	FIELD field_74166_d bookModified Z
 	FIELD field_74172_m editingTitle Z
 	FIELD field_74170_n updateCount I
+		COMMENT Update ticks since the gui was opened
 	FIELD field_74171_o bookImageWidth I
 	FIELD field_74180_p bookImageHeight I
 	FIELD field_74179_q bookTotalPages I
@@ -15,5 +18,32 @@ CLASS net/minecraft/client/gui/GuiScreenBook
 	FIELD field_74174_v buttonPreviousPage Lnet/minecraft/client/gui/GuiButtonNextPage;
 	FIELD field_74173_w buttonDone Lnet/minecraft/client/gui/GuiButton;
 	FIELD field_74183_x buttonSign Lnet/minecraft/client/gui/GuiButton;
+		COMMENT The GuiButton to sign this book.
 	FIELD field_74182_y buttonFinalize Lnet/minecraft/client/gui/GuiButton;
 	FIELD field_74181_z buttonCancel Lnet/minecraft/client/gui/GuiButton;
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73874_b onGuiClosed ()V
+		COMMENT Called when the screen is unloaded. Used to disable keyboard repeat events
+	METHOD func_74161_g updateButtons ()V
+	METHOD func_74163_a sendBookToServer (Z)V
+		ARG 0 par1
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_74165_h addNewPage ()V
+	METHOD func_73869_a keyTyped (CI)V
+		COMMENT Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74164_b keyTypedInBook (CI)V
+		COMMENT Processes keystrokes when editing the text of a book
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

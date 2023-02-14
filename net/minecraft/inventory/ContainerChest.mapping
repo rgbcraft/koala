@@ -1,3 +1,14 @@
 CLASS net/minecraft/inventory/ContainerChest
 	FIELD field_75155_e lowerChestInventory Lnet/minecraft/inventory/IInventory;
 	FIELD field_75154_f numRows I
+	METHOD func_75145_c canInteractWith (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 par1EntityPlayer
+	METHOD func_82846_b transferStackInSlot (Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;
+		COMMENT Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_75134_a onCraftGuiClosed (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Callback for when the crafting gui is closed.
+		ARG 0 par1EntityPlayer
+	METHOD func_85151_d getLowerChestInventory ()Lnet/minecraft/inventory/IInventory;
+		COMMENT Return this chest container's lower chest inventory.

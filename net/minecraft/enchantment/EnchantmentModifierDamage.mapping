@@ -1,3 +1,9 @@
 CLASS net/minecraft/enchantment/EnchantmentModifierDamage
 	FIELD field_77497_a damageModifier I
+		COMMENT Used to calculate the damage modifier (extra armor) on enchantments that the player have on equipped armors.
 	FIELD field_77496_b source Lnet/minecraft/util/DamageSource;
+		COMMENT Used as parameter to calculate the damage modifier (extra armor) on enchantments that the player have on equipped armors.
+	METHOD func_77493_a calculateModifier (Lnet/minecraft/enchantment/Enchantment;I)V
+		COMMENT Generic method use to calculate modifiers of offensive or defensive enchantment values.
+		ARG 0 par1Enchantment
+		ARG 1 par2

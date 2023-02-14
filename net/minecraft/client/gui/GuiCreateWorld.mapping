@@ -4,23 +4,64 @@ CLASS net/minecraft/client/gui/GuiCreateWorld
 	FIELD field_73921_c textboxSeed Lnet/minecraft/client/gui/GuiTextField;
 	FIELD field_73918_d folderName Ljava/lang/String;
 	FIELD field_73927_m gameMode Ljava/lang/String;
+		COMMENT hardcore', 'creative' or 'survival
 	FIELD field_73925_n generateStructures Z
 	FIELD field_73926_o commandsAllowed Z
 	FIELD field_73935_p commandsToggled Z
+		COMMENT True iif player has clicked buttonAllowCommands at least once
 	FIELD field_73934_q bonusItems Z
+		COMMENT toggles when GUIButton 7 is pressed
 	FIELD field_73933_r isHardcore Z
+		COMMENT True if and only if gameMode.equals("hardcore")
 	FIELD field_73932_s createClicked Z
 	FIELD field_73931_t moreOptions Z
+		COMMENT True if the extra options (Seed box, structure toggle button, world type button, etc.) are being shown
 	FIELD field_73930_u buttonGameMode Lnet/minecraft/client/gui/GuiButton;
+		COMMENT The GUIButton that you click to change game modes.
 	FIELD field_73929_v moreWorldOptions Lnet/minecraft/client/gui/GuiButton;
+		COMMENT The GUIButton that you click to get to options like the seed when creating a world.
 	FIELD field_73928_w buttonGenerateStructures Lnet/minecraft/client/gui/GuiButton;
+		COMMENT The GuiButton in the 'More World Options' screen. Toggles ON/OFF
 	FIELD field_73938_x buttonBonusItems Lnet/minecraft/client/gui/GuiButton;
 	FIELD field_73937_y buttonWorldType Lnet/minecraft/client/gui/GuiButton;
+		COMMENT The GuiButton in the more world options screen.
 	FIELD field_73936_z buttonAllowCommands Lnet/minecraft/client/gui/GuiButton;
 	FIELD field_82289_B buttonCustomize Lnet/minecraft/client/gui/GuiButton;
+		COMMENT GuiButton in the more world options screen.
 	FIELD field_73920_A gameModeDescriptionLine1 Ljava/lang/String;
+		COMMENT The first line of text describing the currently selected game mode.
 	FIELD field_73922_B gameModeDescriptionLine2 Ljava/lang/String;
+		COMMENT The second line of text describing the currently selected game mode.
 	FIELD field_73923_C seed Ljava/lang/String;
+		COMMENT The current textboxSeed text
 	FIELD field_73915_D localizedNewWorldText Ljava/lang/String;
+		COMMENT E.g. New World, Neue Welt, Nieuwe wereld, Neuvo Mundo
 	FIELD field_73916_E worldTypeId I
 	FIELD field_73917_F ILLEGAL_WORLD_NAMES [Ljava/lang/String;
+		COMMENT If the world name is one of these, it'll be surrounded with underscores.
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73912_g makeUseableName ()V
+		COMMENT Makes a the name for a world save folder based on your world name, replacing specific characters for _s and appending -s to the end until a free name is available.
+	METHOD func_73914_h updateButtonText ()V
+	METHOD func_73874_b onGuiClosed ()V
+		COMMENT Called when the screen is unloaded. Used to disable keyboard repeat events
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73869_a keyTyped (CI)V
+		COMMENT Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73864_a mouseClicked (III)V
+		COMMENT Called when the mouse is clicked.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

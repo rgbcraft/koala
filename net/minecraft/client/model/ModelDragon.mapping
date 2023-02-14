@@ -1,14 +1,44 @@
 CLASS net/minecraft/client/model/ModelDragon
 	FIELD field_78221_a head Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The head Model renderer of the dragon
 	FIELD field_78219_b neck Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The neck Model renderer of the dragon
 	FIELD field_78220_c jaw Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The jaw Model renderer of the dragon
 	FIELD field_78217_d body Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The body Model renderer of the dragon
 	FIELD field_78218_e rearLeg Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The rear leg Model renderer of the dragon
 	FIELD field_78215_f frontLeg Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The front leg Model renderer of the dragon
 	FIELD field_78216_g rearLegTip Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The rear leg tip Model renderer of the dragon
 	FIELD field_78226_h frontLegTip Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The front leg tip Model renderer of the dragon
 	FIELD field_78227_i rearFoot Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The rear foot Model renderer of the dragon
 	FIELD field_78224_j frontFoot Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The front foot Model renderer of the dragon
 	FIELD field_78225_k wing Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The wing Model renderer of the dragon
 	FIELD field_78222_l wingTip Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The wing tip Model renderer of the dragon
 	FIELD field_78223_m partialTicks F
+	METHOD func_78086_a setLivingAnimations (Lnet/minecraft/entity/EntityLiving;FFF)V
+		COMMENT Used for easily adding entity-dependent animations. The second and third float params here are the same second and third as in the setRotationAngles method.
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78214_a updateRotations (D)F
+		COMMENT Updates the rotations in the parameters for rotations greater than 180 degrees or less than -180 degrees. It adds or subtracts 360 degrees, so that the appearance is the same, although the numbers are then simplified to range -180 to 180
+		ARG 0 par1

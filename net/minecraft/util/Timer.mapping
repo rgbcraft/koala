@@ -1,10 +1,21 @@
 CLASS net/minecraft/util/Timer
 	FIELD field_74282_a ticksPerSecond F
+		COMMENT The number of timer ticks per second of real time
 	FIELD field_74276_f lastHRTime D
+		COMMENT The time reported by the high-resolution clock at the last call of updateTimer(), in seconds
 	FIELD field_74280_b elapsedTicks I
+		COMMENT How many full ticks have turned over since the last call to updateTimer(), capped at 10.
 	FIELD field_74281_c renderPartialTicks F
+		COMMENT How much time has elapsed since the last tick, in ticks, for use by display rendering routines (range: 0.0 - 1.0).  This field is frozen if the display is paused to eliminate jitter.
 	FIELD field_74278_d timerSpeed F
+		COMMENT A multiplier to make the timer (and therefore the game) go faster or slower.  0.5 makes the game run at half-speed.
 	FIELD field_74279_e elapsedPartialTicks F
+		COMMENT How much time has elapsed since the last tick, in ticks (range: 0.0 - 1.0).
 	FIELD field_74277_g lastSyncSysClock J
+		COMMENT The time reported by the system clock at the last sync, in milliseconds
 	FIELD field_74284_h lastSyncHRClock J
+		COMMENT The time reported by the high-resolution clock at the last sync, in milliseconds
 	FIELD field_74283_j timeSyncAdjustment D
+		COMMENT A ratio used to sync the high-resolution clock to the system clock, updated once per second
+	METHOD func_74275_a updateTimer ()V
+		COMMENT Updates all fields of the Timer using the current time

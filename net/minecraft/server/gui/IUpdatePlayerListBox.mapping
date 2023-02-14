@@ -1,1 +1,3 @@
 CLASS net/minecraft/server/gui/IUpdatePlayerListBox
+	METHOD func_73660_a update ()V
+		COMMENT Updates the JList with a new model.

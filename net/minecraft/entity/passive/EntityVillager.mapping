@@ -4,10 +4,98 @@ CLASS net/minecraft/entity/passive/EntityVillager
 	FIELD field_70953_g isPlaying Z
 	FIELD field_70954_d villageObj Lnet/minecraft/village/Village;
 	FIELD field_70962_h buyingPlayer Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT This villager's current customer.
 	FIELD field_70963_i buyingList Lnet/minecraft/village/MerchantRecipeList;
+		COMMENT Initialises the MerchantRecipeList.java
 	FIELD field_70961_j timeUntilReset I
 	FIELD field_70959_by needsInitilization Z
+		COMMENT addDefaultEquipmentAndRecipies is called if this is true
 	FIELD field_70956_bz wealth I
 	FIELD field_82189_bL lastBuyingPlayer Ljava/lang/String;
+		COMMENT Last player to trade with this villager, used for aggressivity.
 	FIELD field_70958_bB villagerStockList Ljava/util/Map;
+		COMMENT a villagers recipe list is intialized off this list ; the 2 params are min/max amount they will trade for 1 emerald
 	FIELD field_70960_bC blacksmithSellingList Ljava/util/Map;
+		COMMENT Selling list of Blacksmith items. negative numbers mean 1 emerald for n items, positive numbers are n emeralds for 1 item
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70629_bd updateAITick ()V
+		COMMENT main AI tick function, replaces updateEntityActionState
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70073_O getTexture ()Ljava/lang/String;
+		COMMENT Returns the texture's file path as a String.
+	METHOD func_70692_ba canDespawn ()Z
+		COMMENT Determines if an entity can be despawned, used on idle far away entities
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70938_b setProfession (I)V
+		ARG 0 par1
+	METHOD func_70946_n getProfession ()I
+	METHOD func_70941_o isMating ()Z
+	METHOD func_70947_e setMating (Z)V
+		ARG 0 par1
+	METHOD func_70939_f setPlaying (Z)V
+		ARG 0 par1
+	METHOD func_70945_p isPlaying ()Z
+	METHOD func_70604_c setRevengeTarget (Lnet/minecraft/entity/EntityLiving;)V
+		ARG 0 par1EntityLiving
+	METHOD func_70645_a onDeath (Lnet/minecraft/util/DamageSource;)V
+		COMMENT Called when the mob's health reaches 0.
+		ARG 0 par1DamageSource
+	METHOD func_70932_a_ setCustomer (Lnet/minecraft/entity/player/EntityPlayer;)V
+		ARG 0 par1EntityPlayer
+	METHOD func_70931_l_ getCustomer ()Lnet/minecraft/entity/player/EntityPlayer;
+	METHOD func_70940_q isTrading ()Z
+	METHOD func_70933_a useRecipe (Lnet/minecraft/village/MerchantRecipe;)V
+		ARG 0 par1MerchantRecipe
+	METHOD func_70934_b getRecipes (Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/village/MerchantRecipeList;
+		ARG 0 par1EntityPlayer
+	METHOD func_70950_c addDefaultEquipmentAndRecipies (I)V
+		COMMENT based on the villagers profession add items, equipment, and recipies adds par1 random items to the list of things that the villager wants to buy. (at most 1 of each wanted type is added)
+		ARG 0 par1
+	METHOD func_70930_a setRecipes (Lnet/minecraft/village/MerchantRecipeList;)V
+		ARG 0 par1MerchantRecipeList
+	METHOD func_70948_a addMerchantItem (Lnet/minecraft/village/MerchantRecipeList;ILjava/util/Random;F)V
+		COMMENT each recipie takes a random stack from villagerStockList and offers it for 1 emerald
+		ARG 0 par0MerchantRecipeList
+		ARG 1 par1
+		ARG 2 par2Random
+		ARG 3 par3
+	METHOD func_70951_a getRandomSizedStack (ILjava/util/Random;)Lnet/minecraft/item/ItemStack;
+		ARG 0 par0
+		ARG 1 par1Random
+	METHOD func_70944_b getRandomCountForItem (ILjava/util/Random;)I
+		COMMENT default to 1, and villagerStockList contains a min/max amount for each index
+		ARG 0 par0
+		ARG 1 par1Random
+	METHOD func_70949_b addBlacksmithItem (Lnet/minecraft/village/MerchantRecipeList;ILjava/util/Random;F)V
+		ARG 0 par0MerchantRecipeList
+		ARG 1 par1
+		ARG 2 par2Random
+		ARG 3 par3
+	METHOD func_70943_c getRandomCountForBlacksmithItem (ILjava/util/Random;)I
+		ARG 0 par0
+		ARG 1 par1Random
+	METHOD func_70103_a handleHealthUpdate (B)V
+		ARG 0 par1
+	METHOD func_70942_a generateRandomParticles (Ljava/lang/String;)V
+		COMMENT par1 is the particleName
+		ARG 0 par1Str
+	METHOD func_82163_bD initCreature ()V
+		COMMENT Initialize this creature.
+	METHOD func_90011_a createChild (Lnet/minecraft/entity/EntityAgeable;)Lnet/minecraft/entity/EntityAgeable;
+		ARG 0 par1EntityAgeable

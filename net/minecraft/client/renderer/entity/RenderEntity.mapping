@@ -1,1 +1,9 @@
 CLASS net/minecraft/client/renderer/entity/RenderEntity
+	METHOD func_76986_a doRender (Lnet/minecraft/entity/Entity;DDDFF)V
+		COMMENT Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9

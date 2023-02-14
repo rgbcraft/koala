@@ -1,2 +1,52 @@
 CLASS net/minecraft/entity/passive/EntityBat
 	FIELD field_82237_a currentFlightTarget Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT randomly selected ChunkCoordinates in a 7x6x7 box around the bat (y offset -2 to 4) towards which it will fly. upon getting close a new target will be selected
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70599_aP getSoundVolume ()F
+		COMMENT Returns the volume for the sounds this mob makes.
+	METHOD func_70647_i getSoundPitch ()F
+		COMMENT Gets the pitch of living sounds in living entities.
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70104_M canBePushed ()Z
+		COMMENT Returns true if this entity should push and be pushed by other entities when colliding.
+	METHOD func_82167_n collideWithEntity (Lnet/minecraft/entity/Entity;)V
+		ARG 0 par1Entity
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_82235_h getIsBatHanging ()Z
+	METHOD func_82236_f setIsBatHanging (Z)V
+		ARG 0 par1
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70619_bc updateAITasks ()V
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70064_a updateFallState (DZ)V
+		COMMENT Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround
+		ARG 0 par1
+		ARG 1 par3
+	METHOD func_82144_au doesEntityNotTriggerPressurePlate ()Z
+		COMMENT Return whether this entity should NOT trigger a pressure plate or a tripwire.
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70601_bi getCanSpawnHere ()Z
+		COMMENT Checks if the entity's current position is a valid location to spawn this entity.
+	METHOD func_82163_bD initCreature ()V
+		COMMENT Initialize this creature.

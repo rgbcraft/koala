@@ -1,35 +1,96 @@
 CLASS net/minecraft/stats/StatList
 	FIELD field_75942_a oneShotStats Ljava/util/Map;
+		COMMENT Tracks one-off stats.
 	FIELD field_75940_b allStats Ljava/util/List;
 	FIELD field_75941_c generalStats Ljava/util/List;
 	FIELD field_75938_d itemStats Ljava/util/List;
 	FIELD field_75939_e objectMineStats Ljava/util/List;
+		COMMENT Tracks the number of times a given block or item has been mined.
 	FIELD field_75936_f startGameStat Lnet/minecraft/stats/StatBase;
+		COMMENT times the game has been started
 	FIELD field_75937_g createWorldStat Lnet/minecraft/stats/StatBase;
+		COMMENT times a world has been created
 	FIELD field_75949_h loadWorldStat Lnet/minecraft/stats/StatBase;
+		COMMENT the number of times you have loaded a world
 	FIELD field_75950_i joinMultiplayerStat Lnet/minecraft/stats/StatBase;
+		COMMENT number of times you've joined a multiplayer world
 	FIELD field_75947_j leaveGameStat Lnet/minecraft/stats/StatBase;
+		COMMENT number of times you've left a game
 	FIELD field_75948_k minutesPlayedStat Lnet/minecraft/stats/StatBase;
+		COMMENT number of minutes you have played
 	FIELD field_75945_l distanceWalkedStat Lnet/minecraft/stats/StatBase;
+		COMMENT distance you've walked
 	FIELD field_75946_m distanceSwumStat Lnet/minecraft/stats/StatBase;
+		COMMENT distance you have swam
 	FIELD field_75943_n distanceFallenStat Lnet/minecraft/stats/StatBase;
+		COMMENT the distance you have fallen
 	FIELD field_75944_o distanceClimbedStat Lnet/minecraft/stats/StatBase;
+		COMMENT the distance you've climbed
 	FIELD field_75958_p distanceFlownStat Lnet/minecraft/stats/StatBase;
+		COMMENT the distance you've flown
 	FIELD field_75957_q distanceDoveStat Lnet/minecraft/stats/StatBase;
+		COMMENT the distance you've dived
 	FIELD field_75956_r distanceByMinecartStat Lnet/minecraft/stats/StatBase;
+		COMMENT the distance you've traveled by minecart
 	FIELD field_75955_s distanceByBoatStat Lnet/minecraft/stats/StatBase;
+		COMMENT the distance you've traveled by boat
 	FIELD field_75954_t distanceByPigStat Lnet/minecraft/stats/StatBase;
+		COMMENT the distance you've traveled by pig
 	FIELD field_75953_u jumpStat Lnet/minecraft/stats/StatBase;
+		COMMENT the times you've jumped
 	FIELD field_75952_v dropStat Lnet/minecraft/stats/StatBase;
+		COMMENT the distance you've dropped (or times you've fallen?)
 	FIELD field_75951_w damageDealtStat Lnet/minecraft/stats/StatBase;
+		COMMENT the amount of damage you've dealt
 	FIELD field_75961_x damageTakenStat Lnet/minecraft/stats/StatBase;
+		COMMENT the amount of damage you have taken
 	FIELD field_75960_y deathsStat Lnet/minecraft/stats/StatBase;
+		COMMENT the number of times you have died
 	FIELD field_75959_z mobKillsStat Lnet/minecraft/stats/StatBase;
+		COMMENT the number of mobs you have killed
 	FIELD field_75932_A playerKillsStat Lnet/minecraft/stats/StatBase;
+		COMMENT counts the number of times you've killed a player
 	FIELD field_75933_B fishCaughtStat Lnet/minecraft/stats/StatBase;
 	FIELD field_75934_C mineBlockStatArray [Lnet/minecraft/stats/StatBase;
 	FIELD field_75928_D objectCraftStats [Lnet/minecraft/stats/StatBase;
+		COMMENT Tracks the number of items a given block or item has been crafted.
 	FIELD field_75929_E objectUseStats [Lnet/minecraft/stats/StatBase;
+		COMMENT Tracks the number of times a given block or item has been used.
 	FIELD field_75930_F objectBreakStats [Lnet/minecraft/stats/StatBase;
+		COMMENT Tracks the number of times a given block or item has been broken.
 	FIELD field_75931_G blockStatsInitialized Z
 	FIELD field_75935_H itemStatsInitialized Z
+	METHOD func_75919_a nopInit ()V
+		COMMENT This method simply NOPs. It is presumably used to call the static constructors on server start.
+	METHOD func_75922_b initBreakableStats ()V
+		COMMENT Initializes statistic fields related to breakable items and blocks.
+	METHOD func_75925_c initStats ()V
+	METHOD func_75918_d initCraftableStats ()V
+		COMMENT Initializes statistics related to craftable items. Is only called after both block and item stats have been initialized.
+	METHOD func_75921_a initMinableStats (Ljava/lang/String;I)[Lnet/minecraft/stats/StatBase;
+		COMMENT Initializes statistic fields related to minable items and blocks.
+		ARG 0 par0Str
+		ARG 1 par1
+	METHOD func_75920_a initUsableStats ([Lnet/minecraft/stats/StatBase;Ljava/lang/String;III)[Lnet/minecraft/stats/StatBase;
+		COMMENT Initializes statistic fields related to usable items and blocks.
+		ARG 0 par0ArrayOfStatBase
+		ARG 1 par1Str
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_75926_b initBreakStats ([Lnet/minecraft/stats/StatBase;Ljava/lang/String;III)[Lnet/minecraft/stats/StatBase;
+		ARG 0 par0ArrayOfStatBase
+		ARG 1 par1Str
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_75924_a replaceAllSimilarBlocks ([Lnet/minecraft/stats/StatBase;)V
+		COMMENT Forces all dual blocks to count for each other on the stats list
+		ARG 0 par0ArrayOfStatBase
+	METHOD func_75927_a replaceSimilarBlocks ([Lnet/minecraft/stats/StatBase;II)V
+		COMMENT Forces stats for one block to add to another block, such as idle and active furnaces
+		ARG 0 par0ArrayOfStatBase
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_75923_a getOneShotStat (I)Lnet/minecraft/stats/StatBase;
+		ARG 0 par0

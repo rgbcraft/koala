@@ -1,17 +1,56 @@
 CLASS net/minecraft/client/renderer/entity/RenderManager
 	FIELD field_78729_o entityRenderMap Ljava/util/Map;
+		COMMENT A map of entity classes and the associated renderer.
 	FIELD field_78727_a instance Lnet/minecraft/client/renderer/entity/RenderManager;
+		COMMENT The static instance of RenderManager.
 	FIELD field_78736_p fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT Renders fonts
 	FIELD field_78725_b renderPosX D
 	FIELD field_78726_c renderPosY D
 	FIELD field_78723_d renderPosZ D
 	FIELD field_78724_e renderEngine Lnet/minecraft/client/renderer/RenderEngine;
 	FIELD field_78721_f itemRenderer Lnet/minecraft/client/renderer/ItemRenderer;
 	FIELD field_78722_g worldObj Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
 	FIELD field_78734_h livingPlayer Lnet/minecraft/entity/EntityLiving;
+		COMMENT Rendermanager's variable for the player
 	FIELD field_78735_i playerViewY F
 	FIELD field_78732_j playerViewX F
 	FIELD field_78733_k options Lnet/minecraft/client/settings/GameSettings;
+		COMMENT Reference to the GameSettings object.
 	FIELD field_78730_l viewerPosX D
 	FIELD field_78731_m viewerPosY D
 	FIELD field_78728_n viewerPosZ D
+	METHOD func_78715_a getEntityClassRenderObject (Ljava/lang/Class;)Lnet/minecraft/client/renderer/entity/Render;
+		ARG 0 par1Class
+	METHOD func_78713_a getEntityRenderObject (Lnet/minecraft/entity/Entity;)Lnet/minecraft/client/renderer/entity/Render;
+		ARG 0 par1Entity
+	METHOD func_78718_a cacheActiveRenderInfo (Lnet/minecraft/world/World;Lnet/minecraft/client/renderer/RenderEngine;Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/client/settings/GameSettings;F)V
+		COMMENT Caches the current frame's active render info, including the current World, RenderEngine, GameSettings and FontRenderer settings, as well as interpolated player position, pitch and yaw.
+		ARG 0 par1World
+		ARG 1 par2RenderEngine
+		ARG 2 par3FontRenderer
+		ARG 3 par4EntityLiving
+		ARG 4 par5GameSettings
+		ARG 5 par6
+	METHOD func_78720_a renderEntity (Lnet/minecraft/entity/Entity;F)V
+		COMMENT Will render the specified entity at the specified partial tick time. Args: entity, partialTickTime
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_78719_a renderEntityWithPosYaw (Lnet/minecraft/entity/Entity;DDDFF)V
+		COMMENT Renders the specified entity with the passed in position, yaw, and partialTickTime. Args: entity, x, y, z, yaw, partialTickTime
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_78717_a set (Lnet/minecraft/world/World;)V
+		COMMENT World sets this RenderManager's worldObj to the world provided
+		ARG 0 par1World
+	METHOD func_78714_a getDistanceToCamera (DDD)D
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_78716_a getFontRenderer ()Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT Returns the font renderer

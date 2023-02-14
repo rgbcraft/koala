@@ -1,3 +1,61 @@
 CLASS net/minecraft/entity/monster/EntityEnderman
 	FIELD field_70827_d carriableBlocks [Z
 	FIELD field_70828_e teleportDelay I
+		COMMENT Counter to delay the teleportation of an enderman towards the currently attacked target
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70782_k findPlayerToAttack ()Lnet/minecraft/entity/Entity;
+		COMMENT Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking (Animals, Spiders at day, peaceful PigZombies).
+	METHOD func_70821_d shouldAttackPlayer (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Checks to see if this enderman should be attacking this player
+		ARG 0 par1EntityPlayer
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70820_n teleportRandomly ()Z
+		COMMENT Teleport the enderman to a random nearby position
+	METHOD func_70816_c teleportToEntity (Lnet/minecraft/entity/Entity;)Z
+		COMMENT Teleport the enderman to another entity
+		ARG 0 par1Entity
+	METHOD func_70825_j teleportTo (DDD)Z
+		COMMENT Teleport the enderman
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70818_a setCarried (I)V
+		COMMENT Set the id of the block an enderman carries
+		ARG 0 par1
+	METHOD func_70822_p getCarried ()I
+		COMMENT Get the id of the block an enderman carries
+	METHOD func_70817_b setCarryingData (I)V
+		COMMENT Set the metadata of the block an enderman carries
+		ARG 0 par1
+	METHOD func_70824_q getCarryingData ()I
+		COMMENT Get the metadata of the block an enderman carries
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70823_r isScreaming ()Z
+	METHOD func_70819_e setScreaming (Z)V
+		ARG 0 par1
+	METHOD func_82193_c getAttackStrength (Lnet/minecraft/entity/Entity;)I
+		COMMENT Returns the amount of damage a mob should deal.
+		ARG 0 par1Entity

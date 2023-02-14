@@ -1,3 +1,12 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntityChestRenderer
 	FIELD field_76913_a chestModel Lnet/minecraft/client/model/ModelChest;
+		COMMENT The normal small chest model.
 	FIELD field_76912_c largeChestModel Lnet/minecraft/client/model/ModelChest;
+		COMMENT The large double chest model.
+	METHOD func_76911_a renderTileEntityChestAt (Lnet/minecraft/tileentity/TileEntityChest;DDDF)V
+		COMMENT Renders the TileEntity for the chest at a position.
+		ARG 0 par1TileEntityChest
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8

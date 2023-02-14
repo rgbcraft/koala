@@ -1,1 +1,4 @@
 CLASS net/minecraft/entity/monster/FilterIMob
+	METHOD func_82704_a isEntityApplicable (Lnet/minecraft/entity/Entity;)Z
+		COMMENT Return whether the specified entity is applicable to this filter.
+		ARG 0 par1Entity

@@ -1,1 +1,6 @@
 CLASS net/minecraft/creativetab/CreativeTabMisc
+	METHOD func_78012_e getTabIconItemIndex ()I
+		COMMENT the itemID for the item to be displayed on the tab
+	METHOD func_78018_a displayAllReleventItems (Ljava/util/List;)V
+		COMMENT only shows items which have tabToDisplayOn == this
+		ARG 0 par1List

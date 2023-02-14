@@ -1,3 +1,6 @@
 CLASS net/minecraft/entity/ai/EntityJumpHelper
 	FIELD field_75663_a entity Lnet/minecraft/entity/EntityLiving;
 	FIELD field_75662_b isJumping Z
+	METHOD func_75660_a setJumping ()V
+	METHOD func_75661_b doJump ()V
+		COMMENT Called to actually make the entity jump if isJumping is true.

@@ -1,5 +1,21 @@
 CLASS net/minecraft/tileentity/TileEntityEnderChest
 	FIELD field_70370_a lidAngle F
+		COMMENT The current angle of the chest lid (between 0 and 1)
 	FIELD field_70368_b prevLidAngle F
+		COMMENT The angle of the chest lid last tick
 	FIELD field_70369_c numUsingPlayers I
+		COMMENT The number of players currently using this ender chest.
 	FIELD field_70367_d ticksSinceSync I
+		COMMENT Server sync counter (once per 20 ticks)
+	METHOD func_70316_g updateEntity ()V
+		COMMENT Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
+	METHOD func_70315_b receiveClientEvent (II)V
+		COMMENT Called when a client event is received with the event number and argument, see World.sendClientEvent
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70313_j invalidate ()V
+		COMMENT invalidates a tile entity
+	METHOD func_70364_a openChest ()V
+	METHOD func_70366_b closeChest ()V
+	METHOD func_70365_a isUseableByPlayer (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 par1EntityPlayer

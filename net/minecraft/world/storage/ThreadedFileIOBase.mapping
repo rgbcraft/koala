@@ -1,6 +1,13 @@
 CLASS net/minecraft/world/storage/ThreadedFileIOBase
 	FIELD field_75741_a threadedIOInstance Lnet/minecraft/world/storage/ThreadedFileIOBase;
+		COMMENT Instance of ThreadedFileIOBase
 	FIELD field_75739_b threadedIOQueue Ljava/util/List;
 	FIELD field_75740_c writeQueuedCounter J
 	FIELD field_75737_d savedIOCounter J
 	FIELD field_75738_e isThreadWaiting Z
+	METHOD func_75736_b processQueue ()V
+		COMMENT Process the items that are in the queue
+	METHOD func_75735_a queueIO (Lnet/minecraft/world/storage/IThreadedFileIO;)V
+		COMMENT threaded io
+		ARG 0 par1IThreadedFileIO
+	METHOD func_75734_a waitForFinish ()V

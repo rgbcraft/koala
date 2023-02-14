@@ -1,27 +1,357 @@
 CLASS net/minecraft/entity/player/EntityPlayer
 	FIELD field_71071_by inventory Lnet/minecraft/entity/player/InventoryPlayer;
+		COMMENT Inventory of the player
 	FIELD field_71078_a theInventoryEnderChest Lnet/minecraft/inventory/InventoryEnderChest;
 	FIELD field_71069_bz inventoryContainer Lnet/minecraft/inventory/Container;
+		COMMENT The Container for the player's inventory (which opens when they press E)
 	FIELD field_71070_bA openContainer Lnet/minecraft/inventory/Container;
+		COMMENT The Container the player has open.
 	FIELD field_71100_bB foodStats Lnet/minecraft/util/FoodStats;
+		COMMENT The player's food stats. (See class FoodStats)
 	FIELD field_71101_bC flyToggleTimer I
+		COMMENT Used to tell if the player pressed jump twice. If this is at 0 and it's pressed (And they are allowed to fly, as defined in the player's movementInput) it sets this to 7. If it's pressed and it's greater than 0 enable fly.
 	FIELD field_71107_bF prevCameraYaw F
 	FIELD field_71109_bG cameraYaw F
 	FIELD field_71092_bJ username Ljava/lang/String;
 	FIELD field_71084_cw playerCloakUrl Ljava/lang/String;
 	FIELD field_71090_bL xpCooldown I
+		COMMENT Used by EntityPlayer to prevent too many xp orbs from getting absorbed at once.
 	FIELD field_71083_bS sleeping Z
+		COMMENT Boolean value indicating weather a player is sleeping or not
 	FIELD field_71081_bT playerLocation Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT The chunk coordinates of the bed the player is in (null if player isn't in a bed).
 	FIELD field_71076_b sleepTimer I
 	FIELD field_71077_c spawnChunk Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT Holds the last coordinate to spawn based on last bed that the player sleep.
 	FIELD field_82248_d spawnForced Z
+		COMMENT Whether this player's spawn point is forced, preventing execution of bed checks.
 	FIELD field_71073_d startMinecartRidingCoordinate Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT Holds the coordinate of the player when enter a minecraft to ride.
 	FIELD field_71075_bZ capabilities Lnet/minecraft/entity/player/PlayerCapabilities;
+		COMMENT The player's capabilities. (See class PlayerCapabilities)
 	FIELD field_71068_ca experienceLevel I
+		COMMENT The current experience level the player is on.
 	FIELD field_71067_cb experienceTotal I
+		COMMENT The total amount of experience the player has. This also includes the amount of experience within their Experience Bar.
 	FIELD field_71106_cc experience F
+		COMMENT The current amount of experience the player has within their Experience Bar.
 	FIELD field_71074_e itemInUse Lnet/minecraft/item/ItemStack;
+		COMMENT This is the item that is in use when the player is holding down the useItemButton (e.g., bow, food, sword)
 	FIELD field_71072_f itemInUseCount I
+		COMMENT This field starts off equal to getMaxItemUseDuration and is decremented on each tick
 	FIELD field_71108_cd speedOnGround F
 	FIELD field_71102_ce speedInAir F
 	FIELD field_71104_cf fishEntity Lnet/minecraft/entity/projectile/EntityFishHook;
+		COMMENT An instance of a fishing rod's hook. If this isn't null, the icon image of the fishing rod is slightly different
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70088_a entityInit ()V
+	METHOD func_71011_bu getItemInUse ()Lnet/minecraft/item/ItemStack;
+		COMMENT returns the ItemStack containing the itemInUse
+	METHOD func_71052_bv getItemInUseCount ()I
+		COMMENT Returns the item in use count
+	METHOD func_71039_bw isUsingItem ()Z
+		COMMENT Checks if the entity is currently using an item (e.g., bow, food, sword) by holding down the useItemButton
+	METHOD func_71057_bx getItemInUseDuration ()I
+		COMMENT gets the duration for how long the current itemInUse has been in use
+	METHOD func_71034_by stopUsingItem ()V
+	METHOD func_71041_bz clearItemInUse ()V
+	METHOD func_70632_aY isBlocking ()Z
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_82145_z getMaxInPortalTime ()I
+		COMMENT Return the amount of time this entity should stay in a portal before being transported.
+	METHOD func_82147_ab getPortalCooldown ()I
+		COMMENT Return the amount of cooldown before this entity can use a portal again.
+	METHOD func_85030_a playSound (Ljava/lang/String;FF)V
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_71010_c updateItemUse (Lnet/minecraft/item/ItemStack;I)V
+		COMMENT Plays sounds and makes particles for item in use state
+		ARG 0 par1ItemStack
+		ARG 1 par2
+	METHOD func_71036_o onItemUseFinish ()V
+		COMMENT Used for when item use count runs out, ie: eating completed
+	METHOD func_70103_a handleHealthUpdate (B)V
+		ARG 0 par1
+	METHOD func_70610_aX isMovementBlocked ()Z
+		COMMENT Dead and sleeping entities cannot move
+	METHOD func_71053_j closeScreen ()V
+		COMMENT sets current screen to null (used on escape buttons of GUIs)
+	METHOD func_70098_U updateRidden ()V
+		COMMENT Handles updating while being ridden by an entity
+	METHOD func_70065_x preparePlayerToSpawn ()V
+		COMMENT Keeps moving the entity up so it isn't colliding with blocks and other requirements for this entity to be spawned (only actually used on players though its also on Entity)
+	METHOD func_70626_be updateEntityActionState ()V
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_71044_o collideWithPlayer (Lnet/minecraft/entity/Entity;)V
+		ARG 0 par1Entity
+	METHOD func_71037_bA getScore ()I
+	METHOD func_85040_s setScore (I)V
+		COMMENT Set player's score
+		ARG 0 par1
+	METHOD func_85039_t addScore (I)V
+		COMMENT Add to player's score
+		ARG 0 par1
+	METHOD func_70645_a onDeath (Lnet/minecraft/util/DamageSource;)V
+		COMMENT Called when the mob's health reaches 0.
+		ARG 0 par1DamageSource
+	METHOD func_70084_c addToPlayerScore (Lnet/minecraft/entity/Entity;I)V
+		COMMENT Adds a value to the player score. Currently not actually used and the entity passed in does nothing. Args: entity, scoreToAdd
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_71040_bB dropOneItem (Z)Lnet/minecraft/entity/item/EntityItem;
+		COMMENT Called when player presses the drop item key
+		ARG 0 par1
+	METHOD func_71021_b dropPlayerItem (Lnet/minecraft/item/ItemStack;)Lnet/minecraft/entity/item/EntityItem;
+		COMMENT Args: itemstack - called when player drops an item stack that's not in his inventory (like items still placed in a workbench while the workbench'es GUI gets closed)
+		ARG 0 par1ItemStack
+	METHOD func_71019_a dropPlayerItemWithRandomChoice (Lnet/minecraft/item/ItemStack;Z)Lnet/minecraft/entity/item/EntityItem;
+		COMMENT Args: itemstack, flag
+		ARG 0 par1ItemStack
+		ARG 1 par2
+	METHOD func_71012_a joinEntityItemWithWorld (Lnet/minecraft/entity/item/EntityItem;)V
+		COMMENT Joins the passed in entity item with the world. Args: entityItem
+		ARG 0 par1EntityItem
+	METHOD func_71055_a getCurrentPlayerStrVsBlock (Lnet/minecraft/block/Block;)F
+		COMMENT Returns how strong the player is against the specified block at this moment
+		ARG 0 par1Block
+	METHOD func_71062_b canHarvestBlock (Lnet/minecraft/block/Block;)Z
+		COMMENT Checks if the player has the ability to harvest a block (checks current inventory item for a tool if necessary)
+		ARG 0 par1Block
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_71007_a displayGUIChest (Lnet/minecraft/inventory/IInventory;)V
+		COMMENT Displays the GUI for interacting with a chest inventory. Args: chestInventory
+		ARG 0 par1IInventory
+	METHOD func_71002_c displayGUIEnchantment (III)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_82244_d displayGUIAnvil (III)V
+		COMMENT Displays the GUI for interacting with an anvil.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_71058_b displayGUIWorkbench (III)V
+		COMMENT Displays the crafting GUI for a workbench.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70047_e getEyeHeight ()F
+	METHOD func_71061_d_ resetHeight ()V
+		COMMENT sets the players height back to normal after doing things like sleeping and dieing
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70672_c applyPotionDamageCalculations (Lnet/minecraft/util/DamageSource;I)I
+		COMMENT Reduces damage, depending on potions
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_71003_h isPVPEnabled ()Z
+		COMMENT returns if pvp is enabled or not
+	METHOD func_71022_a alertWolves (Lnet/minecraft/entity/EntityLiving;Z)V
+		COMMENT Called when the player attack or gets attacked, it's alert all wolves in the area that are owned by the player to join the attack or defend the player.
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_70675_k damageArmor (I)V
+		ARG 0 par1
+	METHOD func_70658_aO getTotalArmorValue ()I
+		COMMENT Returns the current armor value as determined by a call to InventoryPlayer.getTotalArmorValue
+	METHOD func_70665_d damageEntity (Lnet/minecraft/util/DamageSource;I)V
+		COMMENT Deals damage to the entity. If its a EntityPlayer then will take damage from the armor first and then health second with the reduced value. Args: damageAmount
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_71042_a displayGUIFurnace (Lnet/minecraft/tileentity/TileEntityFurnace;)V
+		COMMENT Displays the furnace GUI for the passed in furnace entity. Args: tileEntityFurnace
+		ARG 0 par1TileEntityFurnace
+	METHOD func_71006_a displayGUIDispenser (Lnet/minecraft/tileentity/TileEntityDispenser;)V
+		COMMENT Displays the dipsenser GUI for the passed in dispenser entity. Args: TileEntityDispenser
+		ARG 0 par1TileEntityDispenser
+	METHOD func_71014_a displayGUIEditSign (Lnet/minecraft/tileentity/TileEntity;)V
+		COMMENT Displays the GUI for editing a sign. Args: tileEntitySign
+		ARG 0 par1TileEntity
+	METHOD func_71017_a displayGUIBrewingStand (Lnet/minecraft/tileentity/TileEntityBrewingStand;)V
+		COMMENT Displays the GUI for interacting with a brewing stand.
+		ARG 0 par1TileEntityBrewingStand
+	METHOD func_82240_a displayGUIBeacon (Lnet/minecraft/tileentity/TileEntityBeacon;)V
+		COMMENT Displays the GUI for interacting with a beacon.
+		ARG 0 par1TileEntityBeacon
+	METHOD func_71030_a displayGUIMerchant (Lnet/minecraft/entity/IMerchant;)V
+		ARG 0 par1IMerchant
+	METHOD func_71048_c displayGUIBook (Lnet/minecraft/item/ItemStack;)V
+		COMMENT Displays the GUI for interacting with a book.
+		ARG 0 par1ItemStack
+	METHOD func_70998_m interactWith (Lnet/minecraft/entity/Entity;)Z
+		ARG 0 par1Entity
+	METHOD func_71045_bC getCurrentEquippedItem ()Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the currently being used item by the player.
+	METHOD func_71028_bD destroyCurrentEquippedItem ()V
+		COMMENT Destroys the currently equipped item from the player's inventory.
+	METHOD func_70033_W getYOffset ()D
+		COMMENT Returns the Y Offset of this entity.
+	METHOD func_71059_n attackTargetEntityWithCurrentItem (Lnet/minecraft/entity/Entity;)V
+		COMMENT Attacks for the player the targeted entity with the currently equipped item.  The equipped item has hitEntity called on it. Args: targetEntity
+		ARG 0 par1Entity
+	METHOD func_71009_b onCriticalHit (Lnet/minecraft/entity/Entity;)V
+		COMMENT Called when the player performs a critical hit on the Entity. Args: entity that was hit critically
+		ARG 0 par1Entity
+	METHOD func_71047_c onEnchantmentCritical (Lnet/minecraft/entity/Entity;)V
+		ARG 0 par1Entity
+	METHOD func_71004_bE respawnPlayer ()V
+	METHOD func_70106_y setDead ()V
+		COMMENT Will get destroyed next tick.
+	METHOD func_70094_T isEntityInsideOpaqueBlock ()Z
+		COMMENT Checks if this entity is inside of an opaque block
+	METHOD func_71018_a sleepInBedAt (III)Lnet/minecraft/entity/player/EnumStatus;
+		COMMENT Attempts to have the player sleep in a bed at the specified location.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70999_a wakeUpPlayer (ZZZ)V
+		COMMENT Wake up the player if they're sleeping.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_71065_l isInBed ()Z
+		COMMENT Checks if the player is currently in a bed
+	METHOD func_71056_a verifyRespawnCoordinates (Lnet/minecraft/world/World;Lnet/minecraft/util/ChunkCoordinates;Z)Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT Ensure that a block enabling respawning exists at the specified coordinates and find an empty space nearby to spawn.
+		ARG 0 par0World
+		ARG 1 par1ChunkCoordinates
+		ARG 2 par2
+	METHOD func_71051_bG getBedOrientationInDegrees ()F
+		COMMENT Returns the orientation of the bed in degrees.
+	METHOD func_70608_bn isPlayerSleeping ()Z
+		COMMENT Returns whether player is sleeping or not
+	METHOD func_71026_bH isPlayerFullyAsleep ()Z
+		COMMENT Returns whether or not the player is asleep and the screen has fully faded.
+	METHOD func_71060_bI getSleepTimer ()I
+	METHOD func_82241_s getHideCape (I)Z
+		ARG 0 par1
+	METHOD func_82239_b setHideCape (IZ)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71035_c addChatMessage (Ljava/lang/String;)V
+		COMMENT Add a chat message to the player
+		ARG 0 par1Str
+	METHOD func_70997_bJ getBedLocation ()Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT Returns the location of the bed the player will respawn at, or null if the player has not slept in a bed.
+	METHOD func_82245_bX isSpawnForced ()Z
+	METHOD func_71063_a setSpawnChunk (Lnet/minecraft/util/ChunkCoordinates;Z)V
+		COMMENT Defines a spawn coordinate to player spawn. Used by bed after the player sleep on it.
+		ARG 0 par1ChunkCoordinates
+		ARG 1 par2
+	METHOD func_71029_a triggerAchievement (Lnet/minecraft/stats/StatBase;)V
+		COMMENT Will trigger the specified trigger.
+		ARG 0 par1StatBase
+	METHOD func_71064_a addStat (Lnet/minecraft/stats/StatBase;I)V
+		COMMENT Adds a value to a statistic field.
+		ARG 0 par1StatBase
+		ARG 1 par2
+	METHOD func_70664_aZ jump ()V
+		COMMENT Causes this entity to do an upwards motion (jumping).
+	METHOD func_70612_e moveEntityWithHeading (FF)V
+		COMMENT Moves the entity based on the specified heading.  Args: strafe, forward
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71000_j addMovementStat (DDD)V
+		COMMENT Adds a value to a movement statistic field - like run, walk, swin or climb.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_71015_k addMountedMovementStat (DDD)V
+		COMMENT Adds a value to a mounted movement statistic field - by minecart, boat, or pig.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70074_a onKillEntity (Lnet/minecraft/entity/EntityLiving;)V
+		COMMENT This method gets called when the entity kills another one.
+		ARG 0 par1EntityLiving
+	METHOD func_70110_aj setInWeb ()V
+		COMMENT Sets the Entity inside a web block.
+	METHOD func_70620_b getItemIcon (Lnet/minecraft/item/ItemStack;I)I
+		COMMENT Gets the Icon Index of the item currently held
+		ARG 0 par1ItemStack
+		ARG 1 par2
+	METHOD func_82169_q getCurrentArmor (I)Lnet/minecraft/item/ItemStack;
+		ARG 0 par1
+	METHOD func_71023_q addExperience (I)V
+		COMMENT This method increases the player's current amount of experience.
+		ARG 0 par1
+	METHOD func_82242_a addExperienceLevel (I)V
+		COMMENT Add experience levels to this player.
+		ARG 0 par1
+	METHOD func_71050_bK xpBarCap ()I
+		COMMENT This method returns the cap amount of experience that the experience bar can hold. With each level, the experience cap on the player's experience bar is raised by 10.
+	METHOD func_71020_j addExhaustion (F)V
+		COMMENT increases exhaustion level by supplied amount
+		ARG 0 par1
+	METHOD func_71024_bL getFoodStats ()Lnet/minecraft/util/FoodStats;
+		COMMENT Returns the player's FoodStats object.
+	METHOD func_71043_e canEat (Z)Z
+		ARG 0 par1
+	METHOD func_70996_bM shouldHeal ()Z
+		COMMENT Checks if the player's health is not full and not zero.
+	METHOD func_71008_a setItemInUse (Lnet/minecraft/item/ItemStack;I)V
+		COMMENT sets the itemInUse when the use item button is clicked. Args: itemstack, int maxItemUseDuration
+		ARG 0 par1ItemStack
+		ARG 1 par2
+	METHOD func_82246_f canCurrentToolHarvestBlock (III)Z
+		COMMENT Returns true if the item the player is holding can harvest the block at the given coords. Args: x, y, z.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_82247_a canPlayerEdit (IIIILnet/minecraft/item/ItemStack;)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5ItemStack
+	METHOD func_70693_a getExperiencePoints (Lnet/minecraft/entity/player/EntityPlayer;)I
+		COMMENT Get the experience points the entity currently has.
+		ARG 0 par1EntityPlayer
+	METHOD func_70684_aJ isPlayer ()Z
+		COMMENT Only use is to identify if class is an instance of player for experience dropping
+	METHOD func_70023_ak getEntityName ()Ljava/lang/String;
+		COMMENT Gets the username of the entity.
+	METHOD func_71049_a clonePlayer (Lnet/minecraft/entity/player/EntityPlayer;Z)V
+		COMMENT Copies the values from the given player into this player if boolean par2 is true. Always clones Ender Chest Inventory.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_71016_p sendPlayerAbilities ()V
+		COMMENT Sends the player's abilities to the server (if there is one).
+	METHOD func_71033_a setGameType (Lnet/minecraft/world/EnumGameType;)V
+		COMMENT Sets the player's game mode and sends it to them.
+		ARG 0 par1EnumGameType
+	METHOD func_70005_c_ getCommandSenderName ()Ljava/lang/String;
+		COMMENT Gets the name of this command sender (usually username, but possibly "Rcon")
+	METHOD func_71025_t getTranslator ()Lnet/minecraft/util/StringTranslate;
+	METHOD func_70004_a translateString (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+		COMMENT Translates and formats the given string key with the given arguments.
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfObj
+	METHOD func_71005_bN getInventoryEnderChest ()Lnet/minecraft/inventory/InventoryEnderChest;
+		COMMENT Returns the InventoryEnderChest of this player.
+	METHOD func_71124_b getCurrentItemOrArmor (I)Lnet/minecraft/item/ItemStack;
+		COMMENT 0 = item, 1-n is armor
+		ARG 0 par1
+	METHOD func_70694_bm getHeldItem ()Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the item that this EntityLiving is holding, if any.
+	METHOD func_70062_b setCurrentItemOrArmor (ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sets the held item, or an armor slot. Slot 0 is held item. Slot 1-4 is armor. Params: Item, slot
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_70035_c getLastActiveItems ()[Lnet/minecraft/item/ItemStack;
+	METHOD func_82238_cc getHideCape ()Z

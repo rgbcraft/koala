@@ -1,17 +1,29 @@
 CLASS net/minecraft/client/renderer/RenderBlocks
 	FIELD field_78669_a blockAccess Lnet/minecraft/world/IBlockAccess;
+		COMMENT The IBlockAccess used by this instance of RenderBlocks
 	FIELD field_78664_d overrideBlockTexture I
+		COMMENT If set to >=0, all block faces will be rendered using this texture index
 	FIELD field_78666_e flipTexture Z
+		COMMENT Set to true if the texture should be flipped horizontally during render*Face
 	FIELD field_78661_f renderAllFaces Z
+		COMMENT If true, renders all faces on all blocks rather than using the logic in Block.shouldSideBeRendered.  Unused.
 	FIELD field_78667_b fancyGrass Z
+		COMMENT Fancy grass side matching biome
 	FIELD field_78668_c useInventoryTint Z
 	FIELD field_83021_g renderMinX D
+		COMMENT The minimum X value for rendering (default 0.0).
 	FIELD field_83026_h renderMaxX D
+		COMMENT The maximum X value for rendering (default 1.0).
 	FIELD field_83027_i renderMinY D
+		COMMENT The minimum Y value for rendering (default 0.0).
 	FIELD field_83024_j renderMaxY D
+		COMMENT The maximum Y value for rendering (default 1.0).
 	FIELD field_83025_k renderMinZ D
+		COMMENT The minimum Z value for rendering (default 0.0).
 	FIELD field_83022_l renderMaxZ D
+		COMMENT The maximum Z value for rendering (default 1.0).
 	FIELD field_83023_m lockBlockBounds Z
+		COMMENT Set by overrideBlockBounds, to keep this class from changing the visual bounding box.
 	FIELD field_78662_g uvRotateEast I
 	FIELD field_78683_h uvRotateWest I
 	FIELD field_78685_i uvRotateSouth I
@@ -19,79 +31,618 @@ CLASS net/minecraft/client/renderer/RenderBlocks
 	FIELD field_78681_k uvRotateTop I
 	FIELD field_78675_l uvRotateBottom I
 	FIELD field_78677_m enableAO Z
+		COMMENT Whether ambient occlusion is enabled or not
 	FIELD field_78671_n lightValueOwn F
+		COMMENT Light value of the block itself
 	FIELD field_78673_o aoLightValueXNeg F
+		COMMENT Light value one block less in x axis
 	FIELD field_78701_p aoLightValueYNeg F
+		COMMENT Light value one block more in y axis
 	FIELD field_78699_q aoLightValueZNeg F
+		COMMENT Light value one block more in z axis
 	FIELD field_78697_r aoLightValueXPos F
+		COMMENT Light value one block more in x axis
 	FIELD field_78695_s aoLightValueYPos F
+		COMMENT Light value one block more in y axis
 	FIELD field_78693_t aoLightValueZPos F
+		COMMENT Light value one block more in z axis
 	FIELD field_78691_u aoLightValueScratchXYZNNN F
+		COMMENT Used as a scratch variable for ambient occlusion on the north/bottom/east corner.
 	FIELD field_78689_v aoLightValueScratchXYNN F
+		COMMENT Used as a scratch variable for ambient occlusion between the bottom face and the north face.
 	FIELD field_78687_w aoLightValueScratchXYZNNP F
+		COMMENT Used as a scratch variable for ambient occlusion on the north/bottom/west corner.
 	FIELD field_78712_x aoLightValueScratchYZNN F
+		COMMENT Used as a scratch variable for ambient occlusion between the bottom face and the east face.
 	FIELD field_78710_y aoLightValueScratchYZNP F
+		COMMENT Used as a scratch variable for ambient occlusion between the bottom face and the west face.
 	FIELD field_78708_z aoLightValueScratchXYZPNN F
+		COMMENT Used as a scratch variable for ambient occlusion on the south/bottom/east corner.
 	FIELD field_78628_A aoLightValueScratchXYPN F
+		COMMENT Used as a scratch variable for ambient occlusion between the bottom face and the south face.
 	FIELD field_78629_B aoLightValueScratchXYZPNP F
+		COMMENT Used as a scratch variable for ambient occlusion on the south/bottom/west corner.
 	FIELD field_78630_C aoLightValueScratchXYZNPN F
+		COMMENT Used as a scratch variable for ambient occlusion on the north/top/east corner.
 	FIELD field_78624_D aoLightValueScratchXYNP F
+		COMMENT Used as a scratch variable for ambient occlusion between the top face and the north face.
 	FIELD field_78625_E aoLightValueScratchXYZNPP F
+		COMMENT Used as a scratch variable for ambient occlusion on the north/top/west corner.
 	FIELD field_78626_F aoLightValueScratchYZPN F
+		COMMENT Used as a scratch variable for ambient occlusion between the top face and the east face.
 	FIELD field_78627_G aoLightValueScratchXYZPPN F
+		COMMENT Used as a scratch variable for ambient occlusion on the south/top/east corner.
 	FIELD field_78634_H aoLightValueScratchXYPP F
+		COMMENT Used as a scratch variable for ambient occlusion between the top face and the south face.
 	FIELD field_78635_I aoLightValueScratchYZPP F
+		COMMENT Used as a scratch variable for ambient occlusion between the top face and the west face.
 	FIELD field_78636_J aoLightValueScratchXYZPPP F
+		COMMENT Used as a scratch variable for ambient occlusion on the south/top/west corner.
 	FIELD field_78637_K aoLightValueScratchXZNN F
+		COMMENT Used as a scratch variable for ambient occlusion between the north face and the east face.
 	FIELD field_78631_L aoLightValueScratchXZPN F
+		COMMENT Used as a scratch variable for ambient occlusion between the south face and the east face.
 	FIELD field_78632_M aoLightValueScratchXZNP F
+		COMMENT Used as a scratch variable for ambient occlusion between the north face and the west face.
 	FIELD field_78633_N aoLightValueScratchXZPP F
+		COMMENT Used as a scratch variable for ambient occlusion between the south face and the west face.
 	FIELD field_78649_S aoBrightnessXYZNNN I
+		COMMENT Ambient occlusion brightness XYZNNN
 	FIELD field_78641_T aoBrightnessXYNN I
+		COMMENT Ambient occlusion brightness XYNN
 	FIELD field_78639_U aoBrightnessXYZNNP I
+		COMMENT Ambient occlusion brightness XYZNNP
 	FIELD field_78645_V aoBrightnessYZNN I
+		COMMENT Ambient occlusion brightness YZNN
 	FIELD field_78643_W aoBrightnessYZNP I
+		COMMENT Ambient occlusion brightness YZNP
 	FIELD field_78657_X aoBrightnessXYZPNN I
+		COMMENT Ambient occlusion brightness XYZPNN
 	FIELD field_78655_Y aoBrightnessXYPN I
+		COMMENT Ambient occlusion brightness XYPN
 	FIELD field_78660_Z aoBrightnessXYZPNP I
+		COMMENT Ambient occlusion brightness XYZPNP
 	FIELD field_78704_aa aoBrightnessXYZNPN I
+		COMMENT Ambient occlusion brightness XYZNPN
 	FIELD field_78705_ab aoBrightnessXYNP I
+		COMMENT Ambient occlusion brightness XYNP
 	FIELD field_78702_ac aoBrightnessXYZNPP I
+		COMMENT Ambient occlusion brightness XYZNPP
 	FIELD field_78703_ad aoBrightnessYZPN I
+		COMMENT Ambient occlusion brightness YZPN
 	FIELD field_78709_ae aoBrightnessXYZPPN I
+		COMMENT Ambient occlusion brightness XYZPPN
 	FIELD field_78711_af aoBrightnessXYPP I
+		COMMENT Ambient occlusion brightness XYPP
 	FIELD field_78706_ag aoBrightnessYZPP I
+		COMMENT Ambient occlusion brightness YZPP
 	FIELD field_78707_ah aoBrightnessXYZPPP I
+		COMMENT Ambient occlusion brightness XYZPPP
 	FIELD field_78690_ai aoBrightnessXZNN I
+		COMMENT Ambient occlusion brightness XZNN
 	FIELD field_78692_aj aoBrightnessXZPN I
+		COMMENT Ambient occlusion brightness XZPN
 	FIELD field_78686_ak aoBrightnessXZNP I
+		COMMENT Ambient occlusion brightness XZNP
 	FIELD field_78688_al aoBrightnessXZPP I
+		COMMENT Ambient occlusion brightness XZPP
 	FIELD field_78698_am aoType I
+		COMMENT Ambient occlusion type (0=simple, 1=complex)
 	FIELD field_78700_an brightnessTopLeft I
+		COMMENT Brightness top left
 	FIELD field_78694_ao brightnessBottomLeft I
+		COMMENT Brightness bottom left
 	FIELD field_78696_ap brightnessBottomRight I
+		COMMENT Brightness bottom right
 	FIELD field_78676_aq brightnessTopRight I
+		COMMENT Brightness top right
 	FIELD field_78674_ar colorRedTopLeft F
+		COMMENT Red color value for the top left corner
 	FIELD field_78672_as colorRedBottomLeft F
+		COMMENT Red color value for the bottom left corner
 	FIELD field_78670_at colorRedBottomRight F
+		COMMENT Red color value for the bottom right corner
 	FIELD field_78684_au colorRedTopRight F
+		COMMENT Red color value for the top right corner
 	FIELD field_78682_av colorGreenTopLeft F
+		COMMENT Green color value for the top left corner
 	FIELD field_78680_aw colorGreenBottomLeft F
+		COMMENT Green color value for the bottom left corner
 	FIELD field_78678_ax colorGreenBottomRight F
+		COMMENT Green color value for the bottom right corner
 	FIELD field_78665_ay colorGreenTopRight F
+		COMMENT Green color value for the top right corner
 	FIELD field_78663_az colorBlueTopLeft F
+		COMMENT Blue color value for the top left corner
 	FIELD field_78650_aA colorBlueBottomLeft F
+		COMMENT Blue color value for the bottom left corner
 	FIELD field_78651_aB colorBlueBottomRight F
+		COMMENT Blue color value for the bottom right corner
 	FIELD field_78652_aC colorBlueTopRight F
+		COMMENT Blue color value for the top right corner
 	FIELD field_78653_aD aoGrassXYZCPN Z
+		COMMENT Grass flag for ambient occlusion on Center X, Positive Y, and Negative Z
 	FIELD field_78654_aE aoGrassXYZPPC Z
+		COMMENT Grass flag for ambient occlusion on Positive X, Positive Y, and Center Z
 	FIELD field_78656_aF aoGrassXYZNPC Z
+		COMMENT Grass flag for ambient occlusion on Negative X, Positive Y, and Center Z
 	FIELD field_78658_aG aoGrassXYZCPP Z
+		COMMENT Grass flag for ambient occlusion on Center X, Positive Y, and Positive Z
 	FIELD field_78659_aH aoGrassXYZNCN Z
+		COMMENT Grass flag for ambient occlusion on Negative X, Center Y, and Negative Z
 	FIELD field_78638_aI aoGrassXYZPCP Z
+		COMMENT Grass flag for ambient occlusion on Positive X, Center Y, and Positive Z
 	FIELD field_78640_aJ aoGrassXYZNCP Z
+		COMMENT Grass flag for ambient occlusion on Negative X, Center Y, and Positive Z
 	FIELD field_78642_aK aoGrassXYZPCN Z
+		COMMENT Grass flag for ambient occlusion on Positive X, Center Y, and Negative Z
 	FIELD field_78644_aL aoGrassXYZCNN Z
+		COMMENT Grass flag for ambient occlusion on Center X, Negative Y, and Negative Z
 	FIELD field_78646_aM aoGrassXYZPNC Z
+		COMMENT Grass flag for ambient occlusion on Positive X, Negative Y, and Center Z
 	FIELD field_78647_aN aoGrassXYZNNC Z
+		COMMENT Grass flag for ambient occlusion on Negative X, Negative Y, and center Z
 	FIELD field_78648_aO aoGrassXYZCNP Z
+		COMMENT Grass flag for ambient occlusion on Center X, Negative Y, and Positive Z
+	METHOD func_82774_a setOverrideBlockTexture (I)V
+		COMMENT Sets overrideBlockTexture
+		ARG 0 par1
+	METHOD func_78595_a clearOverrideBlockTexture ()V
+		COMMENT Clear override block texture
+	METHOD func_83020_a setRenderBounds (DDDDDD)V
+		COMMENT Sets the bounding box for the block to draw in, e.g. 0.25-0.75 on all axes for a half-size, centered block.
+		ARG 0 par11
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+		ARG 5 par9
+	METHOD func_83018_a setRenderBoundsFromBlock (Lnet/minecraft/block/Block;)V
+		COMMENT Like setRenderBounds, but automatically pulling the bounds from the given Block.
+		ARG 0 par1Block
+	METHOD func_83019_b overrideBlockBounds (DDDDDD)V
+		COMMENT Like setRenderBounds, but locks the values so that RenderBlocks won't change them.  If you use this, you must call unlockBlockBounds after you finish rendering!
+		ARG 0 par11
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+		ARG 5 par9
+	METHOD func_83017_b unlockBlockBounds ()V
+		COMMENT Unlocks the visual bounding box so that RenderBlocks can change it again.
+	METHOD func_78604_a renderBlockUsingTexture (Lnet/minecraft/block/Block;IIII)V
+		COMMENT Renders a block using the given texture instead of the block's own default texture
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_78583_a renderBlockAllFaces (Lnet/minecraft/block/Block;III)V
+		COMMENT Render all faces of a block
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78612_b renderBlockByRenderType (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders the block at the given coordinates using the block's rendering type
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78567_v renderBlockEndPortalFrame (Lnet/minecraft/block/Block;III)Z
+		COMMENT Render BlockEndPortalFrame
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78574_w renderBlockBed (Lnet/minecraft/block/Block;III)Z
+		COMMENT render a bed at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78585_a renderBlockBrewingStand (Lnet/minecraft/block/BlockBrewingStand;III)Z
+		COMMENT Render BlockBrewingStand
+		ARG 0 par1BlockBrewingStand
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78615_a renderBlockCauldron (Lnet/minecraft/block/BlockCauldron;III)Z
+		COMMENT Render block cauldron
+		ARG 0 par1BlockCauldron
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_82780_a renderBlockFlowerpot (Lnet/minecraft/block/BlockFlowerPot;III)Z
+		COMMENT Renders flower pot
+		ARG 0 par1BlockFlowerPot
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_82775_a renderBlockAnvil (Lnet/minecraft/block/BlockAnvil;III)Z
+		COMMENT Renders anvil
+		ARG 0 par1BlockAnvil
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_85096_a renderBlockAnvilMetadata (Lnet/minecraft/block/BlockAnvil;IIII)Z
+		COMMENT Renders anvil block with metadata
+		ARG 0 par1BlockAnvil
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_82776_a renderBlockAnvilOrient (Lnet/minecraft/block/BlockAnvil;IIIIZ)Z
+		COMMENT Renders anvil block with orientation
+		ARG 0 par1BlockAnvil
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_82777_a renderBlockAnvilRotate (Lnet/minecraft/block/BlockAnvil;IIIIFFFFZZI)F
+		COMMENT Renders anvil block with rotation
+		ARG 0 par10
+		ARG 1 par11
+		ARG 2 par12
+		ARG 3 par1BlockAnvil
+		ARG 4 par2
+		ARG 5 par3
+		ARG 6 par4
+		ARG 7 par5
+		ARG 8 par6
+		ARG 9 par7
+		ARG 10 par8
+		ARG 11 par9
+	METHOD func_78572_c renderBlockTorch (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a torch block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78610_x renderBlockRepeater (Lnet/minecraft/block/Block;III)Z
+		COMMENT render a redstone repeater at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78568_d renderPistonBaseAllFaces (Lnet/minecraft/block/Block;III)V
+		COMMENT Render all faces of the piston base
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78593_b renderPistonBase (Lnet/minecraft/block/Block;IIIZ)Z
+		COMMENT renders a block as a piston base
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_78591_a renderPistonRodUD (DDDDDDFD)V
+		COMMENT Render piston rod up/down
+		ARG 0 par11
+		ARG 1 par13
+		ARG 2 par14
+		ARG 3 par1
+		ARG 4 par3
+		ARG 5 par5
+		ARG 6 par7
+		ARG 7 par9
+	METHOD func_78607_b renderPistonRodSN (DDDDDDFD)V
+		COMMENT Render piston rod south/north
+		ARG 0 par11
+		ARG 1 par13
+		ARG 2 par14
+		ARG 3 par1
+		ARG 4 par3
+		ARG 5 par5
+		ARG 6 par7
+		ARG 7 par9
+	METHOD func_78571_c renderPistonRodEW (DDDDDDFD)V
+		COMMENT Render piston rod east/west
+		ARG 0 par11
+		ARG 1 par13
+		ARG 2 par14
+		ARG 3 par1
+		ARG 4 par3
+		ARG 5 par5
+		ARG 6 par7
+		ARG 7 par9
+	METHOD func_78587_a renderPistonExtensionAllFaces (Lnet/minecraft/block/Block;IIIZ)V
+		COMMENT Render all faces of the piston extension
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_78608_c renderPistonExtension (Lnet/minecraft/block/Block;IIIZ)Z
+		COMMENT renders the pushing part of a piston
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_78594_e renderBlockLever (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a lever block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78577_f renderBlockTripWireSource (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a trip wire source block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78619_g renderBlockTripWire (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a trip wire block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78590_h renderBlockFire (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a fire block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78589_i renderBlockRedstoneWire (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a redstone wire block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78586_a renderBlockMinecartTrack (Lnet/minecraft/block/BlockRail;III)Z
+		COMMENT Renders a minecart track block at the given coordinates
+		ARG 0 par1BlockRail
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78576_j renderBlockLadder (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a ladder block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78598_k renderBlockVine (Lnet/minecraft/block/Block;III)Z
+		COMMENT Render block vine
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78592_a renderBlockPane (Lnet/minecraft/block/BlockPane;III)Z
+		ARG 0 par1BlockPane
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78620_l renderCrossedSquares (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders any block requiring croseed squares such as reeds, flowers, and mushrooms
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78603_m renderBlockStem (Lnet/minecraft/block/Block;III)Z
+		COMMENT Render block stem
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78614_n renderBlockCrops (Lnet/minecraft/block/Block;III)Z
+		COMMENT Render block crops
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78623_a renderTorchAtAngle (Lnet/minecraft/block/Block;DDDDD)V
+		COMMENT Renders a torch at the given coordinates, with the base slanting at the given delta
+		ARG 0 par10
+		ARG 1 par1Block
+		ARG 2 par2
+		ARG 3 par4
+		ARG 4 par6
+		ARG 5 par8
+	METHOD func_78599_a drawCrossedSquares (Lnet/minecraft/block/Block;IDDDF)V
+		COMMENT Utility function to draw crossed swuares
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+		ARG 5 par9
+	METHOD func_78575_a renderBlockStemSmall (Lnet/minecraft/block/Block;IDDDD)V
+		COMMENT Render block stem small
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+		ARG 5 par9
+	METHOD func_78566_o renderBlockLilyPad (Lnet/minecraft/block/Block;III)Z
+		COMMENT Render BlockLilyPad
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78606_a renderBlockStemBig (Lnet/minecraft/block/Block;IIDDDD)V
+		COMMENT Render block stem big
+		ARG 0 par10
+		ARG 1 par1Block
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par6
+		ARG 6 par8
+	METHOD func_78579_b renderBlockCropsImpl (Lnet/minecraft/block/Block;IDDD)V
+		COMMENT Render block crops implementation
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+	METHOD func_78621_p renderBlockFluids (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a block based on the BlockFluids class at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78596_a getFluidHeight (IIILnet/minecraft/block/material/Material;)F
+		COMMENT Get fluid height
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4Material
+	METHOD func_78588_a renderBlockSandFalling (Lnet/minecraft/block/Block;Lnet/minecraft/world/World;IIII)V
+		COMMENT Renders a falling sand block
+		ARG 0 par1Block
+		ARG 1 par2World
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_78570_q renderStandardBlock (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a standard cube block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78581_r renderBlockLog (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a log block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78578_a renderStandardBlockWithAmbientOcclusion (Lnet/minecraft/block/Block;IIIFFF)Z
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78602_a getAoBrightness (IIII)I
+		COMMENT Get ambient occlusion brightness
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78609_c renderStandardBlockWithColorMultiplier (Lnet/minecraft/block/Block;IIIFFF)Z
+		COMMENT Renders a standard cube block at the given coordinates, with a given color ratio.  Args: block, x, y, z, r, g, b
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78616_a renderBlockCocoa (Lnet/minecraft/block/BlockCocoa;III)Z
+		COMMENT Renders a Cocoa block at the given coordinates
+		ARG 0 par1BlockCocoa
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_82778_a renderBlockBeacon (Lnet/minecraft/block/BlockBeacon;III)Z
+		COMMENT Renders beacon block
+		ARG 0 par1BlockBeacon
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78584_s renderBlockCactus (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a cactus block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78569_d renderBlockCactusImpl (Lnet/minecraft/block/Block;IIIFFF)Z
+		COMMENT Render block cactus implementation
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78582_a renderBlockFence (Lnet/minecraft/block/BlockFence;III)Z
+		ARG 0 par1BlockFence
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_82779_a renderBlockWall (Lnet/minecraft/block/BlockWall;III)Z
+		COMMENT Renders wall block
+		ARG 0 par1BlockWall
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78618_a renderBlockDragonEgg (Lnet/minecraft/block/BlockDragonEgg;III)Z
+		ARG 0 par1BlockDragonEgg
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78580_a renderBlockFenceGate (Lnet/minecraft/block/BlockFenceGate;III)Z
+		COMMENT Render block fence gate
+		ARG 0 par1BlockFenceGate
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78565_t renderBlockStairs (Lnet/minecraft/block/BlockStairs;III)Z
+		COMMENT Renders a stair block at the given coordinates
+		ARG 0 par1BlockStairs
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78601_u renderBlockDoor (Lnet/minecraft/block/Block;III)Z
+		COMMENT Renders a door block at the given coordinates
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78613_a renderBottomFace (Lnet/minecraft/block/Block;DDDI)V
+		COMMENT Renders the given texture to the bottom face of the block. Args: block, x, y, z, texture
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_78617_b renderTopFace (Lnet/minecraft/block/Block;DDDI)V
+		COMMENT Renders the given texture to the top face of the block. Args: block, x, y, z, texture
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_78611_c renderEastFace (Lnet/minecraft/block/Block;DDDI)V
+		COMMENT Renders the given texture to the east (z-negative) face of the block.  Args: block, x, y, z, texture
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_78622_d renderWestFace (Lnet/minecraft/block/Block;DDDI)V
+		COMMENT Renders the given texture to the west (z-positive) face of the block.  Args: block, x, y, z, texture
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_78573_e renderNorthFace (Lnet/minecraft/block/Block;DDDI)V
+		COMMENT Renders the given texture to the north (x-negative) face of the block.  Args: block, x, y, z, texture
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_78605_f renderSouthFace (Lnet/minecraft/block/Block;DDDI)V
+		COMMENT Renders the given texture to the south (x-positive) face of the block.  Args: block, x, y, z, texture
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_78600_a renderBlockAsItem (Lnet/minecraft/block/Block;IF)V
+		COMMENT Is called to render the image of a block on an inventory, as a held item, or as a an item on the ground
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_78597_b renderItemIn3d (I)Z
+		COMMENT Checks to see if the item's render type indicates that it should be rendered as a regular block or not.
+		ARG 0 par0

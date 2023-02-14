@@ -1,2 +1,12 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntityRendererPiston
 	FIELD field_76904_a blockRenderer Lnet/minecraft/client/renderer/RenderBlocks;
+		COMMENT instance of RenderBlocks used to draw the piston base and extension.
+	METHOD func_76903_a renderPiston (Lnet/minecraft/tileentity/TileEntityPiston;DDDF)V
+		ARG 0 par1TileEntityPiston
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_76896_a onWorldChange (Lnet/minecraft/world/World;)V
+		COMMENT Called when the ingame world being rendered changes (e.g. on world -> nether travel) due to using one renderer per tile entity type, rather than instance
+		ARG 0 par1World

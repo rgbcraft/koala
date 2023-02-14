@@ -1,1 +1,3 @@
 CLASS net/minecraft/util/IDownloadSuccess
+	METHOD func_76170_a onSuccess (Ljava/io/File;)V
+		ARG 0 par1File

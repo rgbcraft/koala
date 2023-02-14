@@ -7,9 +7,53 @@ CLASS net/minecraft/client/particle/EntityFX
 	FIELD field_70544_f particleScale F
 	FIELD field_70545_g particleGravity F
 	FIELD field_70552_h particleRed F
+		COMMENT The red amount of color. Used as a percentage, 1.0 = 255 and 0.0 = 0.
 	FIELD field_70553_i particleGreen F
+		COMMENT The green amount of color. Used as a percentage, 1.0 = 255 and 0.0 = 0.
 	FIELD field_70551_j particleBlue F
+		COMMENT The blue amount of color. Used as a percentage, 1.0 = 255 and 0.0 = 0.
 	FIELD field_82339_as particleAlpha F
+		COMMENT Particle alpha
 	FIELD field_70556_an interpPosX D
 	FIELD field_70554_ao interpPosY D
 	FIELD field_70555_ap interpPosZ D
+	METHOD func_70543_e multiplyVelocity (F)Lnet/minecraft/client/particle/EntityFX;
+		ARG 0 par1
+	METHOD func_70541_f multipleParticleScaleBy (F)Lnet/minecraft/client/particle/EntityFX;
+		ARG 0 par1
+	METHOD func_70538_b setRBGColorF (FFF)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_82338_g setAlphaF (F)V
+		COMMENT Sets the particle alpha (float)
+		ARG 0 par1
+	METHOD func_70534_d getRedColorF ()F
+	METHOD func_70542_f getGreenColorF ()F
+	METHOD func_70535_g getBlueColorF ()F
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70539_a renderParticle (Lnet/minecraft/client/renderer/Tessellator;FFFFFF)V
+		ARG 0 par1Tessellator
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_70537_b getFXLayer ()I
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70536_a setParticleTextureIndex (I)V
+		COMMENT Public method to set private field particleTextureIndex.
+		ARG 0 par1
+	METHOD func_70540_h getParticleTextureIndex ()I
+	METHOD func_70075_an canAttackWithItem ()Z
+		COMMENT If returns false, the item will not inflict any damage against entities.

@@ -1,1 +1,14 @@
 CLASS net/minecraft/command/CommandHelp
+	METHOD func_71517_b getCommandName ()Ljava/lang/String;
+	METHOD func_82362_a getRequiredPermissionLevel ()I
+		COMMENT Return the required permission level for this command.
+	METHOD func_71518_a getCommandUsage (Lnet/minecraft/command/ICommandSender;)Ljava/lang/String;
+		ARG 0 par1ICommandSender
+	METHOD func_71514_a getCommandAliases ()Ljava/util/List;
+	METHOD func_71515_b processCommand (Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V
+		ARG 0 par1ICommandSender
+		ARG 1 par2ArrayOfStr
+	METHOD func_71534_d getSortedPossibleCommands (Lnet/minecraft/command/ICommandSender;)Ljava/util/List;
+		COMMENT Returns a sorted list of all possible commands for the given ICommandSender.
+		ARG 0 par1ICommandSender
+	METHOD func_71535_c getCommands ()Ljava/util/Map;

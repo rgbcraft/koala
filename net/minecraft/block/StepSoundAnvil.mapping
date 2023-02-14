@@ -1,1 +1,5 @@
 CLASS net/minecraft/block/StepSoundAnvil
+	METHOD func_72676_a getBreakSound ()Ljava/lang/String;
+		COMMENT Used when a block breaks, EXA: Player break, Shep eating grass, etc..
+	METHOD func_82593_b getPlaceSound ()Ljava/lang/String;
+		COMMENT Used when a player places a block.

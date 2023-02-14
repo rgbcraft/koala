@@ -1,4 +1,9 @@
 CLASS net/minecraft/client/model/ModelChest
 	FIELD field_78234_a chestLid Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The chest lid in the chest's model.
 	FIELD field_78232_b chestBelow Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The model of the bottom of the chest.
 	FIELD field_78233_c chestKnob Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The chest's knob in the chest model.
+	METHOD func_78231_a renderAll ()V
+		COMMENT This method renders out all parts of the chest model.

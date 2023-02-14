@@ -1,5 +1,38 @@
 CLASS net/minecraft/item/ItemTool
 	FIELD field_77863_c blocksEffectiveAgainst [Lnet/minecraft/block/Block;
+		COMMENT Array of blocks the tool has extra effect against.
 	FIELD field_77864_a efficiencyOnProperMaterial F
 	FIELD field_77865_bY damageVsEntity I
+		COMMENT Damage versus entities.
 	FIELD field_77862_b toolMaterial Lnet/minecraft/item/EnumToolMaterial;
+		COMMENT The material this tool is made from.
+	METHOD func_77638_a getStrVsBlock (Lnet/minecraft/item/ItemStack;Lnet/minecraft/block/Block;)F
+		COMMENT Returns the strength of the stack against a given block. 1.0F base, (Quality+1)*2 if correct blocktype, 1.5F if sword
+		ARG 0 par1ItemStack
+		ARG 1 par2Block
+	METHOD func_77644_a hitEntity (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/entity/EntityLiving;)Z
+		COMMENT Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
+		ARG 0 par1ItemStack
+		ARG 1 par2EntityLiving
+		ARG 2 par3EntityLiving
+	METHOD func_77660_a onBlockDestroyed (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;IIIILnet/minecraft/entity/EntityLiving;)Z
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7EntityLiving
+	METHOD func_77649_a getDamageVsEntity (Lnet/minecraft/entity/Entity;)I
+		COMMENT Returns the damage against a given entity.
+		ARG 0 par1Entity
+	METHOD func_77662_d isFull3D ()Z
+		COMMENT Returns True is the item is renderer in full 3D when hold.
+	METHOD func_77619_b getItemEnchantability ()I
+		COMMENT Return the enchantability factor of the item, most of the time is based on material.
+	METHOD func_77861_e getToolMaterialName ()Ljava/lang/String;
+		COMMENT Return the name for this tool's material.
+	METHOD func_82789_a getIsRepairable (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Return whether this item is repairable in an anvil.
+		ARG 0 par1ItemStack
+		ARG 1 par2ItemStack

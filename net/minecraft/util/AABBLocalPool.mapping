@@ -1,1 +1,2 @@
 CLASS net/minecraft/util/AABBLocalPool
+	METHOD func_72341_a createNewDefaultPool ()Lnet/minecraft/util/AABBPool;

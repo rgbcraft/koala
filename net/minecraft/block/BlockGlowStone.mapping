@@ -1,1 +1,13 @@
 CLASS net/minecraft/block/BlockGlowStone
+	METHOD func_71910_a quantityDroppedWithBonus (ILjava/util/Random;)I
+		COMMENT Returns the usual quantity dropped by the block plus a bonus of 1 to 'i' (inclusive).
+		ARG 0 par1
+		ARG 1 par2Random
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3

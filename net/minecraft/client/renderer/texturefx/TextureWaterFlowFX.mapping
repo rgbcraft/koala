@@ -1,2 +1,3 @@
 CLASS net/minecraft/client/renderer/texturefx/TextureWaterFlowFX
 	FIELD field_76882_k tickCounter I
+	METHOD func_76846_a onTick ()V

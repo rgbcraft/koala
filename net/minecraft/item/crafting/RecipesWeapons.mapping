@@ -1,3 +1,6 @@
 CLASS net/minecraft/item/crafting/RecipesWeapons
 	FIELD field_77585_a recipePatterns [Ljava/lang/String;
 	FIELD field_77584_b recipeItems [Ljava/lang/Object;
+	METHOD func_77583_a addRecipes (Lnet/minecraft/item/crafting/CraftingManager;)V
+		COMMENT Adds the weapon recipes to the CraftingManager.
+		ARG 0 par1CraftingManager

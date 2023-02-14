@@ -1,4 +1,10 @@
 CLASS net/minecraft/client/MinecraftApplet
 	FIELD field_71483_a mcCanvas Ljava/awt/Canvas;
+		COMMENT Reference to the applet canvas.
 	FIELD field_71481_b mc Lnet/minecraft/client/Minecraft;
+		COMMENT Reference to the Minecraft object.
 	FIELD field_71482_c mcThread Ljava/lang/Thread;
+		COMMENT Reference to the Minecraft main thread.
+	METHOD func_71479_a startMainThread ()V
+	METHOD func_71480_b shutdown ()V
+		COMMENT Called when the applet window is closed.

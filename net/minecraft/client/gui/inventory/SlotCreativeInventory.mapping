@@ -1,3 +1,29 @@
 CLASS net/minecraft/client/gui/inventory/SlotCreativeInventory
 	FIELD field_75241_b theSlot Lnet/minecraft/inventory/Slot;
 	FIELD field_75242_a theCreativeInventory Lnet/minecraft/client/gui/inventory/GuiContainerCreative;
+	METHOD func_82870_a onPickupFromSlot (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;)V
+		ARG 0 par1EntityPlayer
+		ARG 1 par2ItemStack
+	METHOD func_75214_a isItemValid (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Check if the stack is a valid item for this slot. Always true beside for the armor slots.
+		ARG 0 par1ItemStack
+	METHOD func_75211_c getStack ()Lnet/minecraft/item/ItemStack;
+		COMMENT Helper fnct to get the stack in the slot.
+	METHOD func_75216_d getHasStack ()Z
+		COMMENT Returns if this slot contains a stack.
+	METHOD func_75215_d putStack (Lnet/minecraft/item/ItemStack;)V
+		COMMENT Helper method to put a stack in the slot.
+		ARG 0 par1ItemStack
+	METHOD func_75218_e onSlotChanged ()V
+		COMMENT Called when the stack in a Slot changes
+	METHOD func_75219_a getSlotStackLimit ()I
+		COMMENT Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(), but 1 in the case of armor slots)
+	METHOD func_75212_b getBackgroundIconIndex ()I
+		COMMENT Returns the icon index on items.png that is used as background image of the slot.
+	METHOD func_75209_a decrStackSize (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Decrease the size of the stack in slot (first int arg) by the amount of the second int arg. Returns the new stack.
+		ARG 0 par1
+	METHOD func_75217_a isSlotInInventory (Lnet/minecraft/inventory/IInventory;I)Z
+		COMMENT returns true if this slot is in par2 of par1
+		ARG 0 par1IInventory
+		ARG 1 par2

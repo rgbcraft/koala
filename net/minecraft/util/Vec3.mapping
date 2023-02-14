@@ -2,5 +2,67 @@ CLASS net/minecraft/util/Vec3
 	FIELD field_82592_a vec3dPool Lnet/minecraft/util/Vec3Pool;
 	FIELD field_72447_d myVec3LocalPool Lnet/minecraft/util/Vec3Pool;
 	FIELD field_72450_a xCoord D
+		COMMENT X coordinate of Vec3D
 	FIELD field_72448_b yCoord D
+		COMMENT Y coordinate of Vec3D
 	FIELD field_72449_c zCoord D
+		COMMENT Z coordinate of Vec3D
+	METHOD func_72443_a createVectorHelper (DDD)Lnet/minecraft/util/Vec3;
+		COMMENT Static method for creating a new Vec3D given the three x,y,z values. This is only called from the other static method which creates and places it in the list.
+		ARG 0 par0
+		ARG 1 par2
+		ARG 2 par4
+	METHOD func_72439_b setComponents (DDD)Lnet/minecraft/util/Vec3;
+		COMMENT Sets the x,y,z components of the vector as specified.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_72444_a subtract (Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/Vec3;
+		COMMENT Returns a new vector with the result of the specified vector minus this.
+		ARG 0 par1Vec3
+	METHOD func_72432_b normalize ()Lnet/minecraft/util/Vec3;
+		COMMENT Normalizes the vector to a length of 1 (except if it is the zero vector)
+	METHOD func_72430_b dotProduct (Lnet/minecraft/util/Vec3;)D
+		ARG 0 par1Vec3
+	METHOD func_72431_c crossProduct (Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/Vec3;
+		COMMENT Returns a new vector with the result of this vector x the specified vector.
+		ARG 0 par1Vec3
+	METHOD func_72441_c addVector (DDD)Lnet/minecraft/util/Vec3;
+		COMMENT Adds the specified x,y,z vector components to this vector and returns the resulting vector. Does not change this vector.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_72438_d distanceTo (Lnet/minecraft/util/Vec3;)D
+		COMMENT Euclidean distance between this and the specified vector, returned as double.
+		ARG 0 par1Vec3
+	METHOD func_72436_e squareDistanceTo (Lnet/minecraft/util/Vec3;)D
+		COMMENT The square of the Euclidean distance between this and the specified vector.
+		ARG 0 par1Vec3
+	METHOD func_72445_d squareDistanceTo (DDD)D
+		COMMENT The square of the Euclidean distance between this and the vector of x,y,z components passed in.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_72433_c lengthVector ()D
+		COMMENT Returns the length of the vector.
+	METHOD func_72429_b getIntermediateWithXValue (Lnet/minecraft/util/Vec3;D)Lnet/minecraft/util/Vec3;
+		COMMENT Returns a new vector with x value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+		ARG 0 par1Vec3
+		ARG 1 par2
+	METHOD func_72435_c getIntermediateWithYValue (Lnet/minecraft/util/Vec3;D)Lnet/minecraft/util/Vec3;
+		COMMENT Returns a new vector with y value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+		ARG 0 par1Vec3
+		ARG 1 par2
+	METHOD func_72434_d getIntermediateWithZValue (Lnet/minecraft/util/Vec3;D)Lnet/minecraft/util/Vec3;
+		COMMENT Returns a new vector with z value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+		ARG 0 par1Vec3
+		ARG 1 par2
+	METHOD func_72440_a rotateAroundX (F)V
+		COMMENT Rotates the vector around the x axis by the specified angle.
+		ARG 0 par1
+	METHOD func_72442_b rotateAroundY (F)V
+		COMMENT Rotates the vector around the y axis by the specified angle.
+		ARG 0 par1
+	METHOD func_72446_c rotateAroundZ (F)V
+		COMMENT Rotates the vector around the z axis by the specified angle.
+		ARG 0 par1

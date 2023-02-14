@@ -1,1 +1,14 @@
 CLASS net/minecraft/world/gen/feature/WorldGenSwamp
+	METHOD func_76484_a generate (Lnet/minecraft/world/World;Ljava/util/Random;III)Z
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76536_b generateVines (Lnet/minecraft/world/World;IIII)V
+		COMMENT Generates vines at the given position until it hits a block.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

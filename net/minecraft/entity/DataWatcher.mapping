@@ -2,4 +2,49 @@ CLASS net/minecraft/entity/DataWatcher
 	FIELD field_75697_a dataTypes Ljava/util/HashMap;
 	FIELD field_75695_b watchedObjects Ljava/util/Map;
 	FIELD field_75696_c objectChanged Z
+		COMMENT true if one or more object was changed
 	FIELD field_75694_d lock Ljava/util/concurrent/locks/ReadWriteLock;
+	METHOD func_75682_a addObject (ILjava/lang/Object;)V
+		COMMENT adds a new object to dataWatcher to watch, to update an already existing object see updateObject. Arguments: data Value Id, Object to add
+		ARG 0 par1
+		ARG 1 par2Obj
+	METHOD func_82709_a addObjectByDataType (II)V
+		COMMENT Add a new object for the DataWatcher to watch, using the specified data type.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75683_a getWatchableObjectByte (I)B
+		COMMENT gets the bytevalue of a watchable object
+		ARG 0 par1
+	METHOD func_75693_b getWatchableObjectShort (I)S
+		ARG 0 par1
+	METHOD func_75679_c getWatchableObjectInt (I)I
+		COMMENT gets a watchable object and returns it as a Integer
+		ARG 0 par1
+	METHOD func_75681_e getWatchableObjectString (I)Ljava/lang/String;
+		COMMENT gets a watchable object and returns it as a String
+		ARG 0 par1
+	METHOD func_82710_f getWatchableObjectItemStack (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Get a watchable object as an ItemStack.
+		ARG 0 par1
+	METHOD func_75691_i getWatchedObject (I)Lnet/minecraft/entity/WatchableObject;
+		COMMENT is threadsafe, unless it throws an exception, then
+		ARG 0 par1
+	METHOD func_75692_b updateObject (ILjava/lang/Object;)V
+		COMMENT updates an already existing object
+		ARG 0 par1
+		ARG 1 par2Obj
+	METHOD func_75684_a hasChanges ()Z
+	METHOD func_75680_a writeObjectsInListToStream (Ljava/util/List;Ljava/io/DataOutputStream;)V
+		COMMENT writes every object in passed list to dataoutputstream, terminated by 0x7F
+		ARG 0 par0List
+		ARG 1 par1DataOutputStream
+	METHOD func_75688_b unwatchAndReturnAllWatched ()Ljava/util/List;
+	METHOD func_75689_a writeWatchableObjects (Ljava/io/DataOutputStream;)V
+		ARG 0 par1DataOutputStream
+	METHOD func_75690_a writeWatchableObject (Ljava/io/DataOutputStream;Lnet/minecraft/entity/WatchableObject;)V
+		ARG 0 par0DataOutputStream
+		ARG 1 par1WatchableObject
+	METHOD func_75686_a readWatchableObjects (Ljava/io/DataInputStream;)Ljava/util/List;
+		ARG 0 par0DataInputStream
+	METHOD func_75687_a updateWatchedObjectsFromList (Ljava/util/List;)V
+		ARG 0 par1List

@@ -1,3 +1,24 @@
 CLASS net/minecraft/client/renderer/entity/RenderEnderman
 	FIELD field_77078_a endermanModel Lnet/minecraft/client/model/ModelEnderman;
+		COMMENT The model of the enderman
 	FIELD field_77077_b rnd Ljava/util/Random;
+	METHOD func_77075_a renderEnderman (Lnet/minecraft/entity/monster/EntityEnderman;DDDFF)V
+		COMMENT Renders the enderman
+		ARG 0 par1EntityEnderman
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77076_a renderCarrying (Lnet/minecraft/entity/monster/EntityEnderman;F)V
+		COMMENT Render the block an enderman is carrying
+		ARG 0 par1EntityEnderman
+		ARG 1 par2
+	METHOD func_77074_a renderEyes (Lnet/minecraft/entity/monster/EntityEnderman;IF)I
+		COMMENT Render the endermans eyes
+		ARG 0 par1EntityEnderman
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77029_c renderEquippedItems (Lnet/minecraft/entity/EntityLiving;F)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2

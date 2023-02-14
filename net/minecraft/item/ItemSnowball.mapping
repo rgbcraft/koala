@@ -1,1 +1,6 @@
 CLASS net/minecraft/item/ItemSnowball
+	METHOD func_77659_a onItemRightClick (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		COMMENT Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer

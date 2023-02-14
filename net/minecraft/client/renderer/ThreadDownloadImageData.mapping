@@ -1,5 +1,9 @@
 CLASS net/minecraft/client/renderer/ThreadDownloadImageData
 	FIELD field_78462_a image Ljava/awt/image/BufferedImage;
+		COMMENT The image data.
 	FIELD field_78460_b referenceCount I
+		COMMENT Number of open references to this ThreadDownloadImageData
 	FIELD field_78461_c textureName I
+		COMMENT The GL texture name associated with this image, or -1 if the texture has not been allocated
 	FIELD field_78459_d textureSetupComplete Z
+		COMMENT True if the texture has been allocated and the image copied to the texture.  This is reset if global rendering settings change, so that setupTexture will be called again.

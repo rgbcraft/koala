@@ -1,5 +1,51 @@
 CLASS net/minecraft/tileentity/TileEntityBrewingStand
 	FIELD field_70359_a brewingItemStacks [Lnet/minecraft/item/ItemStack;
+		COMMENT The itemstacks currently placed in the slots of the brewing stand
 	FIELD field_70357_b brewTime I
 	FIELD field_70358_c filledSlots I
+		COMMENT an integer with each bit specifying whether that slot of the stand contains a potion
 	FIELD field_70356_d ingredientID I
+	METHOD func_70303_b getInvName ()Ljava/lang/String;
+		COMMENT Returns the name of the inventory.
+	METHOD func_70302_i_ getSizeInventory ()I
+		COMMENT Returns the number of slots in the inventory.
+	METHOD func_70316_g updateEntity ()V
+		COMMENT Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
+	METHOD func_70355_t_ getBrewTime ()I
+	METHOD func_70350_k canBrew ()Z
+	METHOD func_70353_r brewPotions ()V
+	METHOD func_70352_b getPotionResult (ILnet/minecraft/item/ItemStack;)I
+		COMMENT The result of brewing a potion of the specified damage value with an ingredient itemstack.
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_70307_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads a tile entity from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70310_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes a tile entity to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70301_a getStackInSlot (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the stack in slot i
+		ARG 0 par1
+	METHOD func_70298_a decrStackSize (II)Lnet/minecraft/item/ItemStack;
+		COMMENT Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a new stack.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70304_b getStackInSlotOnClosing (I)Lnet/minecraft/item/ItemStack;
+		COMMENT When some containers are closed they call this on each slot, then drop whatever it returns as an EntityItem - like when you close a workbench GUI.
+		ARG 0 par1
+	METHOD func_70299_a setInventorySlotContents (ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_70297_j_ getInventoryStackLimit ()I
+		COMMENT Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't this more of a set than a get?*
+	METHOD func_70300_a isUseableByPlayer (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Do not make give this method the name canInteractWith because it clashes with Container
+		ARG 0 par1EntityPlayer
+	METHOD func_70295_k_ openChest ()V
+	METHOD func_70305_f closeChest ()V
+	METHOD func_70354_c setBrewTime (I)V
+		ARG 0 par1
+	METHOD func_70351_i getFilledSlots ()I
+		COMMENT returns an integer with each bit specifying wether that slot of the stand contains a potion

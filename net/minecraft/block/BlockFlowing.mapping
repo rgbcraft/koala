@@ -1,4 +1,71 @@
 CLASS net/minecraft/block/BlockFlowing
 	FIELD field_72214_a numAdjacentSources I
+		COMMENT Number of horizontally adjacent liquid source blocks. Diagonal doesn't count. Only source blocks of the same liquid as the block using the field are counted.
 	FIELD field_72212_b isOptimalFlowDirection [Z
+		COMMENT Indicates whether the flow direction is optimal. Each array index corresponds to one of the four cardinal directions.
 	FIELD field_72213_c flowCost [I
+		COMMENT The estimated cost to flow in a given direction from the current point. Each array index corresponds to one of the four cardinal directions.
+	METHOD func_72205_l updateFlow (Lnet/minecraft/world/World;III)V
+		COMMENT Updates the flow for the BlockFlowing object.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71918_c getBlocksMovement (Lnet/minecraft/world/IBlockAccess;III)Z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_72210_i flowIntoBlock (Lnet/minecraft/world/World;IIII)V
+		COMMENT flowIntoBlock(World world, int x, int y, int z, int newFlowDecay) - Flows into the block at the coordinates and changes the block type to the liquid.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72209_d calculateFlowCost (Lnet/minecraft/world/World;IIIII)I
+		COMMENT calculateFlowCost(World world, int x, int y, int z, int accumulatedCost, int previousDirectionOfFlow) - Used to determine the path of least resistance, this method returns the lowest possible flow cost for the direction of flow indicated. Each necessary horizontal flow adds to the flow cost.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72206_n getOptimalFlowDirections (Lnet/minecraft/world/World;III)[Z
+		COMMENT Returns a boolean array indicating which flow directions are optimal based on each direction's calculated flow cost. Each array index corresponds to one of the four cardinal directions. A value of true indicates the direction is optimal.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72208_o blockBlocksFlow (Lnet/minecraft/world/World;III)Z
+		COMMENT Returns true if block at coords blocks fluids
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72211_e getSmallestFlowDecay (Lnet/minecraft/world/World;IIII)I
+		COMMENT getSmallestFlowDecay(World world, intx, int y, int z, int currentSmallestFlowDecay) - Looks up the flow decay at the coordinates given and returns the smaller of this value or the provided currentSmallestFlowDecay. If one value is valid and the other isn't, the valid value will be returned. Valid values are >= 0. Flow decay is the amount that a liquid has dissipated. 0 indicates a source block.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72207_p liquidCanDisplaceBlock (Lnet/minecraft/world/World;III)Z
+		COMMENT Returns true if the block at the coordinates can be displaced by the liquid.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71861_g onBlockAdded (Lnet/minecraft/world/World;III)V
+		COMMENT Called whenever the block is added into the world. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

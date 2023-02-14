@@ -1,2 +1,25 @@
 CLASS net/minecraft/entity/item/EntityItemFrame
 	FIELD field_82337_e itemDropChance F
+		COMMENT Chance for this item frame's item to drop from the frame.
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70112_a isInRangeToRenderDist (D)Z
+		COMMENT Checks if the entity is in range to render by using the past in distance and comparing it to its average edge length * 64 * renderDistanceWeight Args: distance
+		ARG 0 par1
+	METHOD func_82331_h dropItemStack ()V
+		COMMENT Drop the item currently on this item frame.
+	METHOD func_82335_i getDisplayedItem ()Lnet/minecraft/item/ItemStack;
+	METHOD func_82334_a setDisplayedItem (Lnet/minecraft/item/ItemStack;)V
+		ARG 0 par1ItemStack
+	METHOD func_82333_j getRotation ()I
+		COMMENT Return the rotation of the item currently on this frame.
+	METHOD func_82336_g setItemRotation (I)V
+		ARG 0 par1
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer

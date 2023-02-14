@@ -1,1 +1,9 @@
 CLASS net/minecraft/client/renderer/entity/RenderLightningBolt
+	METHOD func_77028_a doRenderLightningBolt (Lnet/minecraft/entity/effect/EntityLightningBolt;DDDFF)V
+		COMMENT Actually renders the lightning bolt. This method is called through the doRender method.
+		ARG 0 par1EntityLightningBolt
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9

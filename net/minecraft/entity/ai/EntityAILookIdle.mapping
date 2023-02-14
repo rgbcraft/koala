@@ -1,5 +1,17 @@
 CLASS net/minecraft/entity/ai/EntityAILookIdle
 	FIELD field_75258_a idleEntity Lnet/minecraft/entity/EntityLiving;
+		COMMENT The entity that is looking idle.
 	FIELD field_75256_b lookX D
+		COMMENT X offset to look at
 	FIELD field_75257_c lookZ D
+		COMMENT Z offset to look at
 	FIELD field_75255_d idleTime I
+		COMMENT A decrementing tick that stops the entity from being idle once it reaches 0.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task

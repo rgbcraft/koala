@@ -3,3 +3,9 @@ CLASS net/minecraft/client/gui/ChatClickData
 	FIELD field_78314_b fontR Lnet/minecraft/client/gui/FontRenderer;
 	FIELD field_78315_c line Lnet/minecraft/client/gui/ChatLine;
 	FIELD field_78311_g clickedUrl Ljava/lang/String;
+		COMMENT The URL which was clicked on.
+	METHOD func_78309_f getClickedUrl ()Ljava/lang/String;
+		COMMENT Gets the URL which was clicked on.
+	METHOD func_78308_g getURI ()Ljava/net/URI;
+		COMMENT computes the URI from the clicked chat data object
+	METHOD func_78307_h findClickedUrl ()Ljava/lang/String;

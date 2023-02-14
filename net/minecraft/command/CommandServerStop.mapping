@@ -1,1 +1,7 @@
 CLASS net/minecraft/command/CommandServerStop
+	METHOD func_71517_b getCommandName ()Ljava/lang/String;
+	METHOD func_82362_a getRequiredPermissionLevel ()I
+		COMMENT Return the required permission level for this command.
+	METHOD func_71515_b processCommand (Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V
+		ARG 0 par1ICommandSender
+		ARG 1 par2ArrayOfStr

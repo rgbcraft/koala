@@ -1,6 +1,49 @@
 CLASS net/minecraft/village/VillageCollection
 	FIELD field_75556_a worldObj Lnet/minecraft/world/World;
 	FIELD field_75554_b villagerPositionsList Ljava/util/List;
+		COMMENT This is a black hole. You can add data to this list through a public interface, but you can't query that information in any way and it's not used internally either.
 	FIELD field_75555_c newDoors Ljava/util/List;
 	FIELD field_75552_d villageList Ljava/util/List;
 	FIELD field_75553_e tickCounter I
+	METHOD func_75551_a addVillagerPosition (III)V
+		COMMENT This is a black hole. You can add data to this list through a public interface, but you can't query that information in any way and it's not used internally either.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75544_a tick ()V
+		COMMENT Runs a single tick for the village collection
+	METHOD func_75549_c removeAnnihilatedVillages ()V
+	METHOD func_75540_b getVillageList ()Ljava/util/List;
+		COMMENT Get a list of villages.
+	METHOD func_75550_a findNearestVillage (IIII)Lnet/minecraft/village/Village;
+		COMMENT Finds the nearest village, but only the given coordinates are withing it's bounding box plus the given the distance.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_75543_d dropOldestVillagerPosition ()V
+	METHOD func_75545_e addNewDoorsToVillageOrCreateVillage ()V
+	METHOD func_75546_a addUnassignedWoodenDoorsAroundToNewDoorsList (Lnet/minecraft/util/ChunkCoordinates;)V
+		ARG 0 par1ChunkCoordinates
+	METHOD func_75547_b getVillageDoorAt (III)Lnet/minecraft/village/VillageDoorInfo;
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75542_c addDoorToNewListIfAppropriate (III)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75548_d isVillagerPositionPresent (III)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75541_e isWoodenDoorAt (III)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76184_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT reads in data from the NBTTagCompound into this MapDataBase
+		ARG 0 par1NBTTagCompound
+	METHOD func_76187_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT write data to NBTTagCompound from this MapDataBase, similar to Entities and TileEntities
+		ARG 0 par1NBTTagCompound

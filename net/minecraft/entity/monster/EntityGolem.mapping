@@ -1,1 +1,14 @@
 CLASS net/minecraft/entity/monster/EntityGolem
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70627_aG getTalkInterval ()I
+		COMMENT Get number of ticks, at least during which the living entity will be silent.
+	METHOD func_70692_ba canDespawn ()Z
+		COMMENT Determines if an entity can be despawned, used on idle far away entities

@@ -1,1 +1,31 @@
 CLASS net/minecraft/block/BlockMycelium
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71895_b getBlockTexture (Lnet/minecraft/world/IBlockAccess;IIII)I
+		COMMENT Retrieves the block texture to use based on the display side. Args: iBlockAccess, x, y, z, side
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_71862_a randomDisplayTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT A randomly called display update to be able to add particles or other items for display
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3

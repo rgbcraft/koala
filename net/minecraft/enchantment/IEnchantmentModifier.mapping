@@ -1,1 +1,5 @@
 CLASS net/minecraft/enchantment/IEnchantmentModifier
+	METHOD func_77493_a calculateModifier (Lnet/minecraft/enchantment/Enchantment;I)V
+		COMMENT Generic method use to calculate modifiers of offensive or defensive enchantment values.
+		ARG 0 par1Enchantment
+		ARG 1 par2

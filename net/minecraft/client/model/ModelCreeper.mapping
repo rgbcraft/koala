@@ -5,3 +5,21 @@ CLASS net/minecraft/client/model/ModelCreeper
 	FIELD field_78132_e leg2 Lnet/minecraft/client/model/ModelRenderer;
 	FIELD field_78129_f leg3 Lnet/minecraft/client/model/ModelRenderer;
 	FIELD field_78130_g leg4 Lnet/minecraft/client/model/ModelRenderer;
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78087_a setRotationAngles (FFFFFFLnet/minecraft/entity/Entity;)V
+		COMMENT Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs can swing at most.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7Entity

@@ -1,4 +1,11 @@
 CLASS net/minecraft/util/MouseHelper
 	FIELD field_74376_c windowComponent Ljava/awt/Component;
 	FIELD field_74377_a deltaX I
+		COMMENT Mouse delta X this frame
 	FIELD field_74375_b deltaY I
+		COMMENT Mouse delta Y this frame
+	METHOD func_74372_a grabMouseCursor ()V
+		COMMENT Grabs the mouse cursor it doesn't move and isn't seen.
+	METHOD func_74373_b ungrabMouseCursor ()V
+		COMMENT Ungrabs the mouse cursor so it can be moved and set it to the center of the screen
+	METHOD func_74374_c mouseXYChange ()V

@@ -1,8 +1,34 @@
 CLASS net/minecraft/world/WorldSettings
 	FIELD field_77174_a seed J
+		COMMENT The seed for the map.
 	FIELD field_77172_b theGameType Lnet/minecraft/world/EnumGameType;
+		COMMENT The EnumGameType.
 	FIELD field_77173_c mapFeaturesEnabled Z
+		COMMENT Switch for the map features. 'true' for enabled, 'false' for disabled.
 	FIELD field_77170_d hardcoreEnabled Z
+		COMMENT True if hardcore mode is enabled
 	FIELD field_77171_e terrainType Lnet/minecraft/world/WorldType;
 	FIELD field_77168_f commandsAllowed Z
+		COMMENT True if Commands (cheats) are allowed.
 	FIELD field_77169_g bonusChestEnabled Z
+		COMMENT True if the Bonus Chest is enabled.
+	METHOD func_77159_a enableBonusChest ()Lnet/minecraft/world/WorldSettings;
+		COMMENT Enables the bonus chest.
+	METHOD func_77166_b enableCommands ()Lnet/minecraft/world/WorldSettings;
+		COMMENT Enables Commands (cheats).
+	METHOD func_77167_c isBonusChestEnabled ()Z
+		COMMENT Returns true if the Bonus Chest is enabled.
+	METHOD func_77160_d getSeed ()J
+		COMMENT Returns the seed for the world.
+	METHOD func_77162_e getGameType ()Lnet/minecraft/world/EnumGameType;
+		COMMENT Gets the game type.
+	METHOD func_77158_f getHardcoreEnabled ()Z
+		COMMENT Returns true if hardcore mode is enabled, otherwise false
+	METHOD func_77164_g isMapFeaturesEnabled ()Z
+		COMMENT Get whether the map features (e.g. strongholds) generation is enabled or disabled.
+	METHOD func_77165_h getTerrainType ()Lnet/minecraft/world/WorldType;
+	METHOD func_77163_i areCommandsAllowed ()Z
+		COMMENT Returns true if Commands (cheats) are allowed.
+	METHOD func_77161_a getGameTypeById (I)Lnet/minecraft/world/EnumGameType;
+		COMMENT Gets the GameType by ID
+		ARG 0 par0

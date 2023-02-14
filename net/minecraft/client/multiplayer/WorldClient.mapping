@@ -1,8 +1,80 @@
 CLASS net/minecraft/client/multiplayer/WorldClient
 	FIELD field_73035_a sendQueue Lnet/minecraft/client/multiplayer/NetClientHandler;
+		COMMENT The packets that need to be sent to the server.
 	FIELD field_73033_b clientChunkProvider Lnet/minecraft/client/multiplayer/ChunkProviderClient;
+		COMMENT The ChunkProviderClient instance
 	FIELD field_73034_c entityHashSet Lnet/minecraft/util/IntHashMap;
+		COMMENT The hash set of entities handled by this client. Uses the entity's ID as the hash set's key.
 	FIELD field_73032_d entityList Ljava/util/Set;
+		COMMENT Contains all entities for this client, both spawned and non-spawned.
 	FIELD field_73036_L entitySpawnQueue Ljava/util/Set;
+		COMMENT Contains all entities for this client that were not spawned due to a non-present chunk. The game will attempt to spawn up to 10 pending entities with each subsequent tick until the spawn queue is empty.
 	FIELD field_73037_M mc Lnet/minecraft/client/Minecraft;
 	FIELD field_73038_N previousActiveChunkSet Ljava/util/Set;
+	METHOD func_72835_b tick ()V
+		COMMENT Runs a single tick for the world
+	METHOD func_73031_a invalidateBlockReceiveRegion (IIIIII)V
+		COMMENT Invalidates an AABB region of blocks from the receive queue, in the event that the block has been modified client-side in the intervening 80 receive ticks.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72970_h createChunkProvider ()Lnet/minecraft/world/chunk/IChunkProvider;
+		COMMENT Creates the chunk provider for this world. Called in the constructor. Retrieves provider from worldProvider?
+	METHOD func_72893_g tickBlocksAndAmbiance ()V
+		COMMENT plays random cave ambient sounds and runs updateTick on random blocks within each chunk in the vacinity of a player
+	METHOD func_73025_a doPreChunk (IIZ)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72838_d spawnEntityInWorld (Lnet/minecraft/entity/Entity;)Z
+		COMMENT Called to place all entities as part of a world
+		ARG 0 par1Entity
+	METHOD func_72900_e removeEntity (Lnet/minecraft/entity/Entity;)V
+		COMMENT Schedule the entity for removal during the next tick. Marks the entity dead in anticipation.
+		ARG 0 par1Entity
+	METHOD func_72923_a obtainEntitySkin (Lnet/minecraft/entity/Entity;)V
+		COMMENT Start the skin for this entity downloading, if necessary, and increment its reference counter
+		ARG 0 par1Entity
+	METHOD func_72847_b releaseEntitySkin (Lnet/minecraft/entity/Entity;)V
+		COMMENT Decrement the reference counter for this entity's skin image data
+		ARG 0 par1Entity
+	METHOD func_73027_a addEntityToWorld (ILnet/minecraft/entity/Entity;)V
+		COMMENT Add an ID to Entity mapping to entityHashSet
+		ARG 0 par1
+		ARG 1 par2Entity
+	METHOD func_73045_a getEntityByID (I)Lnet/minecraft/entity/Entity;
+		COMMENT Returns the Entity with the given ID, or null if it doesn't exist in this World.
+		ARG 0 par1
+	METHOD func_73028_b removeEntityFromWorld (I)Lnet/minecraft/entity/Entity;
+		ARG 0 par1
+	METHOD func_73023_g setBlockAndMetadataAndInvalidate (IIIII)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72882_A sendQuittingDisconnectingPacket ()V
+		COMMENT If on MP, sends a quitting packet.
+	METHOD func_72979_l updateWeather ()V
+		COMMENT Updates all weather states.
+	METHOD func_73022_a removeAllEntities ()V
+		COMMENT also releases skins.
+	METHOD func_72914_a addWorldInfoToCrashReport (Lnet/minecraft/crash/CrashReport;)Lnet/minecraft/crash/CrashReportCategory;
+		COMMENT Adds some basic stats of the world to the given crash report.
+		ARG 0 par1CrashReport
+	METHOD func_72980_b playSound (DDDLjava/lang/String;FFZ)V
+		COMMENT par8 is loudness, all pars passed to minecraftInstance.sndManager.playSound
+		ARG 0 par10
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7Str
+		ARG 5 par8
+		ARG 6 par9
+	METHOD func_73026_a getEntityList (Lnet/minecraft/client/multiplayer/WorldClient;)Ljava/util/Set;
+		ARG 0 par0WorldClient
+	METHOD func_73030_b getEntitySpawnQueue (Lnet/minecraft/client/multiplayer/WorldClient;)Ljava/util/Set;
+		ARG 0 par0WorldClient

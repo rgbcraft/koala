@@ -1,3 +1,19 @@
 CLASS net/minecraft/client/renderer/entity/RenderBiped
 	FIELD field_77071_a modelBipedMain Lnet/minecraft/client/model/ModelBiped;
 	FIELD field_82424_k bipedArmorFilenamePrefix [Ljava/lang/String;
+		COMMENT List of armor texture filenames.
+	METHOD func_77032_a shouldRenderPass (Lnet/minecraft/entity/EntityLiving;IF)I
+		COMMENT Queries whether should render the specified pass or not.
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77031_a doRenderLiving (Lnet/minecraft/entity/EntityLiving;DDDFF)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77029_c renderEquippedItems (Lnet/minecraft/entity/EntityLiving;F)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2

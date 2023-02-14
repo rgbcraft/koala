@@ -1,2 +1,9 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntitySignRenderer
 	FIELD field_76910_a modelSign Lnet/minecraft/client/model/ModelSign;
+		COMMENT The ModelSign instance used by the TileEntitySignRenderer
+	METHOD func_76909_a renderTileEntitySignAt (Lnet/minecraft/tileentity/TileEntitySign;DDDF)V
+		ARG 0 par1TileEntitySign
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8

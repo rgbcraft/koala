@@ -1,2 +1,9 @@
 CLASS net/minecraft/world/gen/structure/MapGenNetherBridge
 	FIELD field_75060_e spawnList Ljava/util/List;
+	METHOD func_75059_a getSpawnList ()Ljava/util/List;
+	METHOD func_75047_a canSpawnStructureAtCoords (II)Z
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75049_b getStructureStart (II)Lnet/minecraft/world/gen/structure/StructureStart;
+		ARG 0 par1
+		ARG 1 par2

@@ -1,11 +1,30 @@
 CLASS net/minecraft/pathfinding/PathPoint
 	FIELD field_75839_a xCoord I
+		COMMENT The x coordinate of this point
 	FIELD field_75837_b yCoord I
+		COMMENT The y coordinate of this point
 	FIELD field_75838_c zCoord I
+		COMMENT The z coordinate of this point
 	FIELD field_75840_j hash I
+		COMMENT A hash of the coordinates used to identify this point
 	FIELD field_75835_d index I
+		COMMENT The index of this point in its assigned path
 	FIELD field_75836_e totalPathDistance F
+		COMMENT The distance along the path to this point
 	FIELD field_75833_f distanceToNext F
+		COMMENT The linear distance to the next point
 	FIELD field_75834_g distanceToTarget F
+		COMMENT The distance to the target
 	FIELD field_75841_h previous Lnet/minecraft/pathfinding/PathPoint;
+		COMMENT The point preceding this in its assigned path
 	FIELD field_75842_i isFirst Z
+		COMMENT Indicates this is the origin
+	METHOD func_75830_a makeHash (III)I
+		ARG 0 par0
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_75829_a distanceTo (Lnet/minecraft/pathfinding/PathPoint;)F
+		COMMENT Returns the linear distance to another path point
+		ARG 0 par1PathPoint
+	METHOD func_75831_a isAssigned ()Z
+		COMMENT Returns true if this point has already been assigned to a path

@@ -1,3 +1,8 @@
 CLASS net/minecraft/entity/ai/EntityAIDefendVillage
 	FIELD field_75305_a irongolem Lnet/minecraft/entity/monster/EntityIronGolem;
 	FIELD field_75304_b villageAgressorTarget Lnet/minecraft/entity/EntityLiving;
+		COMMENT The aggressor of the iron golem's village which is now the golem's attack target.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task

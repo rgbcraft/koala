@@ -1,8 +1,41 @@
 CLASS net/minecraft/client/texturepacks/TexturePackImplementation
 	FIELD field_77545_e texturePackID Ljava/lang/String;
+		COMMENT Texture pack ID as returnd by generateTexturePackID(). Used only internally and not visible to the user.
 	FIELD field_77542_f texturePackFileName Ljava/lang/String;
+		COMMENT The name of the texture pack's zip file/directory or "Default" for the builtin texture pack. Shown in the GUI.
 	FIELD field_77548_a texturePackFile Ljava/io/File;
+		COMMENT File object for the texture pack's zip file in TexturePackCustom or the directory in TexturePackFolder.
 	FIELD field_77546_b firstDescriptionLine Ljava/lang/String;
+		COMMENT First line of texture pack description (from /pack.txt) displayed in the GUI
 	FIELD field_77547_c secondDescriptionLine Ljava/lang/String;
+		COMMENT Second line of texture pack description (from /pack.txt) displayed in the GUI
 	FIELD field_77544_d thumbnailImage Ljava/awt/image/BufferedImage;
+		COMMENT The texture pack's thumbnail image loaded from the /pack.png file.
 	FIELD field_77543_g thumbnailTextureName I
+		COMMENT The texture id for this pcak's thumbnail image.
+	METHOD func_77541_b trimStringToGUIWidth (Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Truncate strings to at most 34 characters. Truncates description lines
+		ARG 0 par0Str
+	METHOD func_77539_g loadThumbnailImage ()V
+		COMMENT Load and initialize thumbnailImage from the the /pack.png file.
+	METHOD func_77540_a loadDescription ()V
+		COMMENT Load texture pack description from /pack.txt file in the texture pack
+	METHOD func_77533_a deleteTexturePack (Lnet/minecraft/client/renderer/RenderEngine;)V
+		COMMENT Delete the OpenGL texture id of the pack's thumbnail image, and close the zip file in case of TexturePackCustom.
+		ARG 0 par1RenderEngine
+	METHOD func_77535_b bindThumbnailTexture (Lnet/minecraft/client/renderer/RenderEngine;)V
+		COMMENT Bind the texture id of the pack's thumbnail image, loading it if necessary.
+		ARG 0 par1RenderEngine
+	METHOD func_77532_a getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+		COMMENT Gives a texture resource as InputStream.
+		ARG 0 par1Str
+	METHOD func_77536_b getTexturePackID ()Ljava/lang/String;
+		COMMENT Get the texture pack ID
+	METHOD func_77538_c getTexturePackFileName ()Ljava/lang/String;
+		COMMENT Get the file name of the texture pack, or Default if not from a custom texture pack
+	METHOD func_77531_d getFirstDescriptionLine ()Ljava/lang/String;
+		COMMENT Get the first line of the texture pack description (read from the pack.txt file)
+	METHOD func_77537_e getSecondDescriptionLine ()Ljava/lang/String;
+		COMMENT Get the second line of the texture pack description (read from the pack.txt file)
+	METHOD func_77534_f getTexturePackResolution ()I
+		COMMENT Return the texture pack's resolution (16 by default). Used only by PlayerUsageSnooper. Presumably meant to be overriden by HD texture mods.

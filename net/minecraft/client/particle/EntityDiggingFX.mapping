@@ -1,2 +1,14 @@
 CLASS net/minecraft/client/particle/EntityDiggingFX
 	FIELD field_70597_a blockInstance Lnet/minecraft/block/Block;
+	METHOD func_90019_g applyRenderColor (I)Lnet/minecraft/client/particle/EntityDiggingFX;
+		COMMENT Creates a new EntityDiggingFX with the block render color applied to the base particle color
+		ARG 0 par1
+	METHOD func_70537_b getFXLayer ()I
+	METHOD func_70539_a renderParticle (Lnet/minecraft/client/renderer/Tessellator;FFFFFF)V
+		ARG 0 par1Tessellator
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7

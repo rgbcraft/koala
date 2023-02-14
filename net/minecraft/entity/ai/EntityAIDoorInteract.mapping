@@ -5,5 +5,19 @@ CLASS net/minecraft/entity/ai/EntityAIDoorInteract
 	FIELD field_75352_d entityPosZ I
 	FIELD field_75353_e targetDoor Lnet/minecraft/block/BlockDoor;
 	FIELD field_75350_f hasStoppedDoorInteraction Z
+		COMMENT If is true then the Entity has stopped Door Interaction and compoleted the task.
 	FIELD field_75351_g entityPositionX F
 	FIELD field_75357_h entityPositionZ F
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task
+	METHOD func_75349_a findUsableDoor (III)Lnet/minecraft/block/BlockDoor;
+		COMMENT Determines if a door can be broken with AI.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

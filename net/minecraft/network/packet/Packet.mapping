@@ -1,11 +1,85 @@
 CLASS net/minecraft/network/packet/Packet
 	FIELD field_73294_l packetIdToClassMap Lnet/minecraft/util/IntHashMap;
+		COMMENT Maps packet id to packet class
 	FIELD field_73291_a packetClassToIdMap Ljava/util/Map;
+		COMMENT Maps packet class to packet id
 	FIELD field_73286_b clientPacketIdList Ljava/util/Set;
+		COMMENT List of the client's packet IDs.
 	FIELD field_73288_c serverPacketIdList Ljava/util/Set;
+		COMMENT List of the server's packet IDs.
 	FIELD field_73295_m creationTimeMillis J
+		COMMENT the system time in milliseconds when this packet was created.
 	FIELD field_73292_n receivedID J
 	FIELD field_73293_o receivedSize J
 	FIELD field_73290_p sentID J
+		COMMENT Assumed to be sequential by the profiler.
 	FIELD field_73289_q sentSize J
 	FIELD field_73287_r isChunkDataPacket Z
+		COMMENT Only true for Packet51MapChunk, Packet52MultiBlockChange, Packet53BlockChange and Packet59ComplexEntity. Used to separate them into a different send queue.
+	METHOD func_73285_a addIdClassMapping (IZZLjava/lang/Class;)V
+		COMMENT Adds a two way mapping between the packet ID and packet class.
+		ARG 0 par0
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3Class
+	METHOD func_73269_d getNewPacket (I)Lnet/minecraft/network/packet/Packet;
+		COMMENT Returns a new instance of the specified Packet class.
+		ARG 0 par0
+	METHOD func_73274_a writeByteArray (Ljava/io/DataOutputStream;[B)V
+		COMMENT Writes a byte array to the DataOutputStream
+		ARG 0 par0DataOutputStream
+		ARG 1 par1ArrayOfByte
+	METHOD func_73280_b readBytesFromStream (Ljava/io/DataInputStream;)[B
+		COMMENT the first short in the stream indicates the number of bytes to read
+		ARG 0 par0DataInputStream
+	METHOD func_73281_k getPacketId ()I
+		COMMENT Returns the ID of this packet.
+	METHOD func_73272_a readPacket (Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/network/packet/Packet;
+		COMMENT Read a packet, prefixed by its ID, from the data stream.
+		ARG 0 par0DataInputStream
+		ARG 1 par1
+		ARG 2 par2Socket
+	METHOD func_73266_a writePacket (Lnet/minecraft/network/packet/Packet;Ljava/io/DataOutputStream;)V
+		COMMENT Writes a packet, prefixed by its ID, to the data stream.
+		ARG 0 par0Packet
+		ARG 1 par1DataOutputStream
+	METHOD func_73271_a writeString (Ljava/lang/String;Ljava/io/DataOutputStream;)V
+		COMMENT Writes a String to the DataOutputStream
+		ARG 0 par0Str
+		ARG 1 par1DataOutputStream
+	METHOD func_73282_a readString (Ljava/io/DataInputStream;I)Ljava/lang/String;
+		COMMENT Reads a string from a packet
+		ARG 0 par0DataInputStream
+		ARG 1 par1
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).
+	METHOD func_73278_e isRealPacket ()Z
+		COMMENT only false for the abstract Packet class, all real packets return true
+	METHOD func_73268_a containsSameEntityIDAs (Lnet/minecraft/network/packet/Packet;)Z
+		COMMENT eg return packet30entity.entityId == entityId; WARNING : will throw if you compare a packet to a different packet class
+		ARG 0 par1Packet
+	METHOD func_73277_a_ canProcessAsync ()Z
+		COMMENT If this returns true, the packet may be processed on any thread; otherwise it is queued for the main thread to handle.
+	METHOD func_73276_c readItemStack (Ljava/io/DataInputStream;)Lnet/minecraft/item/ItemStack;
+		COMMENT Reads a ItemStack from the InputStream
+		ARG 0 par0DataInputStream
+	METHOD func_73270_a writeItemStack (Lnet/minecraft/item/ItemStack;Ljava/io/DataOutputStream;)V
+		COMMENT Writes the ItemStack's ID (short), then size (byte), then damage. (short)
+		ARG 0 par0ItemStack
+		ARG 1 par1DataOutputStream
+	METHOD func_73283_d readNBTTagCompound (Ljava/io/DataInputStream;)Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Reads a compressed NBTTagCompound from the InputStream
+		ARG 0 par0DataInputStream
+	METHOD func_73275_a writeNBTTagCompound (Lnet/minecraft/nbt/NBTTagCompound;Ljava/io/DataOutputStream;)V
+		COMMENT Writes a compressed NBTTagCompound to the OutputStream
+		ARG 0 par0NBTTagCompound
+		ARG 1 par1DataOutputStream

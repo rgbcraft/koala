@@ -1,5 +1,19 @@
 CLASS net/minecraft/client/gui/GuiOptions
 	FIELD field_74052_b relevantOptions [Lnet/minecraft/client/settings/EnumOptions;
+		COMMENT An array of options that can be changed directly from the options GUI.
 	FIELD field_74053_c parentScreen Lnet/minecraft/client/gui/GuiScreen;
+		COMMENT A reference to the screen object that created this. Used for navigating between screens.
 	FIELD field_74051_d options Lnet/minecraft/client/settings/GameSettings;
+		COMMENT Reference to the GameSettings object.
 	FIELD field_74054_a screenTitle Ljava/lang/String;
+		COMMENT The title string that is displayed in the top-center of the screen.
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

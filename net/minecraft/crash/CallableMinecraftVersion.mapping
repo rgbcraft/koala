@@ -1,2 +1,5 @@
 CLASS net/minecraft/crash/CallableMinecraftVersion
 	FIELD field_71494_a theCrashReport Lnet/minecraft/crash/CrashReport;
+		COMMENT Reference to the CrashReport object.
+	METHOD func_71493_a minecraftVersion ()Ljava/lang/String;
+		COMMENT The current version of Minecraft

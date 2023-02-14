@@ -1,2 +1,3 @@
 CLASS net/minecraft/dispenser/RegistryDefaulted
 	FIELD field_82597_b defaultObject Ljava/lang/Object;
+		COMMENT Default object for this registry, returned when an object is not found.

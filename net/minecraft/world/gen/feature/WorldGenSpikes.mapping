@@ -1,2 +1,9 @@
 CLASS net/minecraft/world/gen/feature/WorldGenSpikes
 	FIELD field_76538_a replaceID I
+		COMMENT The Block ID that the generator is allowed to replace while generating the terrain.
+	METHOD func_76484_a generate (Lnet/minecraft/world/World;Ljava/util/Random;III)Z
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

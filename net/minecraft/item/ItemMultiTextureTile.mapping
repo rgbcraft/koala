@@ -1,2 +1,10 @@
 CLASS net/minecraft/item/ItemMultiTextureTile
 	FIELD field_82805_a theBlock Lnet/minecraft/block/Block;
+	METHOD func_77617_a getIconFromDamage (I)I
+		COMMENT Gets an icon index based on an item's damage value
+		ARG 0 par1
+	METHOD func_77647_b getMetadata (I)I
+		COMMENT Returns the metadata of the block which this Item (ItemBlock) can place
+		ARG 0 par1
+	METHOD func_77667_c getItemNameIS (Lnet/minecraft/item/ItemStack;)Ljava/lang/String;
+		ARG 0 par1ItemStack

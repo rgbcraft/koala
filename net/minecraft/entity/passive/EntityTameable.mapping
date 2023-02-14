@@ -1,2 +1,24 @@
 CLASS net/minecraft/entity/passive/EntityTameable
 	FIELD field_70911_d aiSit Lnet/minecraft/entity/ai/EntityAISit;
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70908_e playTameEffect (Z)V
+		COMMENT Play the taming effect, will either be hearts or smoke depending on status
+		ARG 0 par1
+	METHOD func_70103_a handleHealthUpdate (B)V
+		ARG 0 par1
+	METHOD func_70909_n isTamed ()Z
+	METHOD func_70903_f setTamed (Z)V
+		ARG 0 par1
+	METHOD func_70906_o isSitting ()Z
+	METHOD func_70904_g setSitting (Z)V
+		ARG 0 par1
+	METHOD func_70905_p getOwnerName ()Ljava/lang/String;
+	METHOD func_70910_a setOwner (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_70902_q getOwner ()Lnet/minecraft/entity/EntityLiving;

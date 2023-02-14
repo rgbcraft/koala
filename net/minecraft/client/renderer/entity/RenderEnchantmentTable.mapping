@@ -1,2 +1,8 @@
 CLASS net/minecraft/client/renderer/entity/RenderEnchantmentTable
 	FIELD field_76902_a enchantmentBook Lnet/minecraft/client/model/ModelBook;
+	METHOD func_76901_a renderTileEntityEnchantmentTableAt (Lnet/minecraft/tileentity/TileEntityEnchantmentTable;DDDF)V
+		ARG 0 par1TileEntityEnchantmentTable
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8

@@ -1,25 +1,146 @@
 CLASS net/minecraft/world/storage/WorldInfo
 	FIELD field_76100_a randomSeed J
+		COMMENT Holds the seed of the currently world.
 	FIELD field_76098_b terrainType Lnet/minecraft/world/WorldType;
 	FIELD field_82576_c generatorOptions Ljava/lang/String;
 	FIELD field_76099_c spawnX I
+		COMMENT The spawn zone position X coordinate.
 	FIELD field_76096_d spawnY I
+		COMMENT The spawn zone position Y coordinate.
 	FIELD field_76097_e spawnZ I
+		COMMENT The spawn zone position Z coordinate.
 	FIELD field_82575_g totalTime J
+		COMMENT Total time for this world.
 	FIELD field_76094_f worldTime J
+		COMMENT The current world time in ticks, ranging from 0 to 23999.
 	FIELD field_76095_g lastTimePlayed J
+		COMMENT The last time the player was in this world.
 	FIELD field_76107_h sizeOnDisk J
+		COMMENT The size of entire save of current world on the disk, isn't exactly.
 	FIELD field_76108_i playerTag Lnet/minecraft/nbt/NBTTagCompound;
 	FIELD field_76105_j dimension I
 	FIELD field_76106_k levelName Ljava/lang/String;
+		COMMENT The name of the save defined at world creation.
 	FIELD field_76103_l saveVersion I
+		COMMENT Introduced in beta 1.3, is the save version for future control.
 	FIELD field_76104_m raining Z
+		COMMENT True if it's raining, false otherwise.
 	FIELD field_76101_n rainTime I
+		COMMENT Number of ticks until next rain.
 	FIELD field_76102_o thundering Z
+		COMMENT Is thunderbolts failing now?
 	FIELD field_76114_p thunderTime I
+		COMMENT Number of ticks untils next thunderbolt.
 	FIELD field_76113_q theGameType Lnet/minecraft/world/EnumGameType;
+		COMMENT The Game Type.
 	FIELD field_76112_r mapFeaturesEnabled Z
+		COMMENT Whether the map features (e.g. strongholds) generation is enabled or disabled.
 	FIELD field_76111_s hardcore Z
+		COMMENT Hardcore mode flag
 	FIELD field_76110_t allowCommands Z
 	FIELD field_76109_u initialized Z
 	FIELD field_82577_x theGameRules Lnet/minecraft/world/GameRules;
+	METHOD func_76066_a getNBTTagCompound ()Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Gets the NBTTagCompound for the worldInfo
+	METHOD func_76082_a cloneNBTCompound (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Creates a new NBTTagCompound for the world, with the given NBTTag as the "Player"
+		ARG 0 par1NBTTagCompound
+	METHOD func_76064_a updateTagCompound (Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/nbt/NBTTagCompound;)V
+		ARG 0 par1NBTTagCompound
+		ARG 1 par2NBTTagCompound
+	METHOD func_76063_b getSeed ()J
+		COMMENT Returns the seed of current world.
+	METHOD func_76079_c getSpawnX ()I
+		COMMENT Returns the x spawn position
+	METHOD func_76075_d getSpawnY ()I
+		COMMENT Return the Y axis spawning point of the player.
+	METHOD func_76074_e getSpawnZ ()I
+		COMMENT Returns the z spawn position
+	METHOD func_82573_f getWorldTotalTime ()J
+	METHOD func_76073_f getWorldTime ()J
+		COMMENT Get current world time
+	METHOD func_76092_g getSizeOnDisk ()J
+	METHOD func_76072_h getPlayerNBTTagCompound ()Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Returns the player's NBTTagCompound to be loaded
+	METHOD func_76076_i getDimension ()I
+	METHOD func_76058_a setSpawnX (I)V
+		COMMENT Set the x spawn position to the passed in value
+		ARG 0 par1
+	METHOD func_76056_b setSpawnY (I)V
+		COMMENT Sets the y spawn position
+		ARG 0 par1
+	METHOD func_76087_c setSpawnZ (I)V
+		COMMENT Set the z spawn position to the passed in value
+		ARG 0 par1
+	METHOD func_82572_b incrementTotalWorldTime (J)V
+		ARG 0 par1
+	METHOD func_76068_b setWorldTime (J)V
+		COMMENT Set current world time
+		ARG 0 par1
+	METHOD func_76081_a setSpawnPosition (III)V
+		COMMENT Sets the spawn zone position. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76065_j getWorldName ()Ljava/lang/String;
+		COMMENT Get current world name
+	METHOD func_76062_a setWorldName (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_76088_k getSaveVersion ()I
+		COMMENT Returns the save version of this world
+	METHOD func_76078_e setSaveVersion (I)V
+		COMMENT Sets the save version of the world
+		ARG 0 par1
+	METHOD func_76057_l getLastTimePlayed ()J
+		COMMENT Return the last time the player was in this world.
+	METHOD func_76061_m isThundering ()Z
+		COMMENT Returns true if it is thundering, false otherwise.
+	METHOD func_76069_a setThundering (Z)V
+		COMMENT Sets whether it is thundering or not.
+		ARG 0 par1
+	METHOD func_76071_n getThunderTime ()I
+		COMMENT Returns the number of ticks until next thunderbolt.
+	METHOD func_76090_f setThunderTime (I)V
+		COMMENT Defines the number of ticks until next thunderbolt.
+		ARG 0 par1
+	METHOD func_76059_o isRaining ()Z
+		COMMENT Returns true if it is raining, false otherwise.
+	METHOD func_76084_b setRaining (Z)V
+		COMMENT Sets whether it is raining or not.
+		ARG 0 par1
+	METHOD func_76083_p getRainTime ()I
+		COMMENT Return the number of ticks until rain.
+	METHOD func_76080_g setRainTime (I)V
+		COMMENT Sets the number of ticks until rain.
+		ARG 0 par1
+	METHOD func_76077_q getGameType ()Lnet/minecraft/world/EnumGameType;
+		COMMENT Gets the GameType.
+	METHOD func_76089_r isMapFeaturesEnabled ()Z
+		COMMENT Get whether the map features (e.g. strongholds) generation is enabled or disabled.
+	METHOD func_76060_a setGameType (Lnet/minecraft/world/EnumGameType;)V
+		COMMENT Sets the GameType.
+		ARG 0 par1EnumGameType
+	METHOD func_76093_s isHardcoreModeEnabled ()Z
+		COMMENT Returns true if hardcore mode is enabled, otherwise false
+	METHOD func_76067_t getTerrainType ()Lnet/minecraft/world/WorldType;
+	METHOD func_76085_a setTerrainType (Lnet/minecraft/world/WorldType;)V
+		ARG 0 par1WorldType
+	METHOD func_82571_y getGeneratorOptions ()Ljava/lang/String;
+	METHOD func_76086_u areCommandsAllowed ()Z
+		COMMENT Returns true if commands are allowed on this World.
+	METHOD func_76070_v isInitialized ()Z
+		COMMENT Returns true if the World is initialized.
+	METHOD func_76091_d setServerInitialized (Z)V
+		COMMENT Sets the initialization status of the World.
+		ARG 0 par1
+	METHOD func_82574_x getGameRulesInstance ()Lnet/minecraft/world/GameRules;
+		COMMENT Gets the GameRules class Instance.
+	METHOD func_85118_a addToCrashReport (Lnet/minecraft/crash/CrashReportCategory;)V
+		COMMENT Adds this WorldInfo instance to the crash report.
+		ARG 0 par1CrashReportCategory
+	METHOD func_85132_a getTerrainTypeOfWorld (Lnet/minecraft/world/storage/WorldInfo;)Lnet/minecraft/world/WorldType;
+		COMMENT Return the terrain type of a world
+		ARG 0 par0WorldInfo
+	METHOD func_85128_b getMapFeaturesEnabled (Lnet/minecraft/world/storage/WorldInfo;)Z
+		COMMENT Return the map feautures enabled of a world
+		ARG 0 par0WorldInfo

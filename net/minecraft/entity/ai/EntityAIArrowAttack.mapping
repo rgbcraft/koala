@@ -1,7 +1,19 @@
 CLASS net/minecraft/entity/ai/EntityAIArrowAttack
 	FIELD field_75322_b entityHost Lnet/minecraft/entity/EntityLiving;
+		COMMENT The entity the AI instance has been applied to
 	FIELD field_82641_b rangedAttackEntityHost Lnet/minecraft/entity/IRangedAttackMob;
+		COMMENT The entity (as a RangedAttackMob) the AI instance has been applied to.
 	FIELD field_75323_c attackTarget Lnet/minecraft/entity/EntityLiving;
 	FIELD field_75320_d rangedAttackTime I
+		COMMENT A decrementing tick that spawns a ranged attack once this value reaches 0. It is then set back to the maxRangedAttackTime.
 	FIELD field_75321_e entityMoveSpeed F
 	FIELD field_75325_h maxRangedAttackTime I
+		COMMENT The maximum time the AI has to wait before peforming another ranged attack.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task

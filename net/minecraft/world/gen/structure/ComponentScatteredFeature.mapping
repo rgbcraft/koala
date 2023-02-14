@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/gen/structure/ComponentScatteredFeature
 	FIELD field_74939_a scatteredFeatureSizeX I
+		COMMENT The size of the bounding box for this feature in the X axis
 	FIELD field_74937_b scatteredFeatureSizeY I
+		COMMENT The size of the bounding box for this feature in the Y axis
 	FIELD field_74938_c scatteredFeatureSizeZ I
+		COMMENT The size of the bounding box for this feature in the Z axis

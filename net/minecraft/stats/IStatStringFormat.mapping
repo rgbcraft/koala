@@ -1,1 +1,4 @@
 CLASS net/minecraft/stats/IStatStringFormat
+	METHOD func_74535_a formatString (Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Formats the strings based on 'IStatStringFormat' interface.
+		ARG 0 par1Str

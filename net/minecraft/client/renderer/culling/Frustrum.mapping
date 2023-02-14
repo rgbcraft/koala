@@ -3,3 +3,18 @@ CLASS net/minecraft/client/renderer/culling/Frustrum
 	FIELD field_78550_b xPosition D
 	FIELD field_78551_c yPosition D
 	FIELD field_78549_d zPosition D
+	METHOD func_78547_a setPosition (DDD)V
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_78548_b isBoxInFrustum (DDDDDD)Z
+		COMMENT Calls the clipping helper. Returns true if the box is inside all 6 clipping planes, otherwise returns false.
+		ARG 0 par11
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+		ARG 5 par9
+	METHOD func_78546_a isBoundingBoxInFrustum (Lnet/minecraft/util/AxisAlignedBB;)Z
+		COMMENT Returns true if the bounding box is inside all 6 clipping planes, otherwise returns false.
+		ARG 0 par1AxisAlignedBB

@@ -1,1 +1,22 @@
 CLASS net/minecraft/client/renderer/entity/RenderSquid
+	METHOD func_77123_a renderLivingSquid (Lnet/minecraft/entity/passive/EntitySquid;DDDFF)V
+		COMMENT Renders the Living Squid.
+		ARG 0 par1EntitySquid
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77122_a rotateSquidsCorpse (Lnet/minecraft/entity/passive/EntitySquid;FFF)V
+		COMMENT Rotates the Squid's corpse.
+		ARG 0 par1EntitySquid
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_77121_a handleRotationFloat (Lnet/minecraft/entity/passive/EntitySquid;F)F
+		ARG 0 par1EntitySquid
+		ARG 1 par2
+	METHOD func_77044_a handleRotationFloat (Lnet/minecraft/entity/EntityLiving;F)F
+		COMMENT Defines what float the third param in setRotationAngles of ModelBase is
+		ARG 0 par1EntityLiving
+		ARG 1 par2

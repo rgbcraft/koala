@@ -1,4 +1,18 @@
 CLASS net/minecraft/item/crafting/FurnaceRecipes
 	FIELD field_77606_a smeltingBase Lnet/minecraft/item/crafting/FurnaceRecipes;
 	FIELD field_77604_b smeltingList Ljava/util/Map;
+		COMMENT The list of smelting results.
 	FIELD field_77605_c experienceList Ljava/util/Map;
+	METHOD func_77602_a smelting ()Lnet/minecraft/item/crafting/FurnaceRecipes;
+		COMMENT Used to call methods addSmelting and getSmeltingResult.
+	METHOD func_77600_a addSmelting (ILnet/minecraft/item/ItemStack;F)V
+		COMMENT Adds a smelting recipe.
+		ARG 0 par1
+		ARG 1 par2ItemStack
+		ARG 2 par3
+	METHOD func_77603_b getSmeltingResult (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the smelting result of an item.
+		ARG 0 par1
+	METHOD func_77599_b getSmeltingList ()Ljava/util/Map;
+	METHOD func_77601_c getExperience (I)F
+		ARG 0 par1

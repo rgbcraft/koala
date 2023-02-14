@@ -1,1 +1,3 @@
 CLASS net/minecraft/client/particle/EntitySuspendFX
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.

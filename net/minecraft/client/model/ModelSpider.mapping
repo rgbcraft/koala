@@ -1,12 +1,41 @@
 CLASS net/minecraft/client/model/ModelSpider
 	FIELD field_78209_a spiderHead Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The spider's head box
 	FIELD field_78207_b spiderNeck Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The spider's neck box
 	FIELD field_78208_c spiderBody Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The spider's body box
 	FIELD field_78205_d spiderLeg1 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Spider's first leg
 	FIELD field_78206_e spiderLeg2 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Spider's second leg
 	FIELD field_78203_f spiderLeg3 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Spider's third leg
 	FIELD field_78204_g spiderLeg4 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Spider's fourth leg
 	FIELD field_78212_h spiderLeg5 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Spider's fifth leg
 	FIELD field_78213_i spiderLeg6 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Spider's sixth leg
 	FIELD field_78210_j spiderLeg7 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Spider's seventh leg
 	FIELD field_78211_k spiderLeg8 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Spider's eight leg
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78087_a setRotationAngles (FFFFFFLnet/minecraft/entity/Entity;)V
+		COMMENT Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs can swing at most.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7Entity

@@ -1,4 +1,15 @@
 CLASS net/minecraft/entity/ai/EntityAITasks
 	FIELD field_75782_a taskEntries Ljava/util/List;
+		COMMENT A list of EntityAITaskEntrys in EntityAITasks.
 	FIELD field_75780_b executingTaskEntries Ljava/util/List;
+		COMMENT A list of EntityAITaskEntrys that are currently being executed.
 	FIELD field_75781_c theProfiler Lnet/minecraft/profiler/Profiler;
+		COMMENT Instance of Profiler.
+	METHOD func_75776_a addTask (ILnet/minecraft/entity/ai/EntityAIBase;)V
+		ARG 0 par1
+		ARG 1 par2EntityAIBase
+	METHOD func_75774_a onUpdateTasks ()V
+	METHOD func_75777_a areTasksCompatible (Lnet/minecraft/entity/ai/EntityAITaskEntry;Lnet/minecraft/entity/ai/EntityAITaskEntry;)Z
+		COMMENT Returns whether two EntityAITaskEntries can be executed concurrently
+		ARG 0 par1EntityAITaskEntry
+		ARG 1 par2EntityAITaskEntry

@@ -3,3 +3,28 @@ CLASS net/minecraft/entity/EntityTracker
 	FIELD field_72793_b trackedEntities Ljava/util/Set;
 	FIELD field_72794_c trackedEntityIDs Lnet/minecraft/util/IntHashMap;
 	FIELD field_72792_d entityViewDistance I
+	METHOD func_72786_a addEntityToTracker (Lnet/minecraft/entity/Entity;)V
+		COMMENT if entity is a player sends all tracked events to the player, otherwise, adds with a visibility and update arate based on the class type
+		ARG 0 par1Entity
+	METHOD func_72791_a addEntityToTracker (Lnet/minecraft/entity/Entity;II)V
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72785_a addEntityToTracker (Lnet/minecraft/entity/Entity;IIZ)V
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72790_b removeEntityFromAllTrackingPlayers (Lnet/minecraft/entity/Entity;)V
+		ARG 0 par1Entity
+	METHOD func_72788_a updateTrackedEntities ()V
+	METHOD func_72784_a sendPacketToAllPlayersTrackingEntity (Lnet/minecraft/entity/Entity;Lnet/minecraft/network/packet/Packet;)V
+		COMMENT does not send the packet to the entity if the entity is a player
+		ARG 0 par1Entity
+		ARG 1 par2Packet
+	METHOD func_72789_b sendPacketToAllAssociatedPlayers (Lnet/minecraft/entity/Entity;Lnet/minecraft/network/packet/Packet;)V
+		COMMENT sends to the entity if the entity is a player
+		ARG 0 par1Entity
+		ARG 1 par2Packet
+	METHOD func_72787_a removeAllTrackingPlayers (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		ARG 0 par1EntityPlayerMP

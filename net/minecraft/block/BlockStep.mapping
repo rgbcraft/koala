@@ -1,2 +1,26 @@
 CLASS net/minecraft/block/BlockStep
 	FIELD field_72244_a blockStepTypes [Ljava/lang/String;
+		COMMENT The list of the types of step blocks.
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71851_a getBlockTextureFromSide (I)I
+		COMMENT Returns the block texture based on the side being looked at.  Args: side
+		ARG 0 par1
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_71880_c_ createStackedBlock (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null.
+		ARG 0 par1
+	METHOD func_72240_d getFullSlabName (I)Ljava/lang/String;
+		COMMENT Returns the slab block name with step type.
+		ARG 0 par1
+	METHOD func_71879_a getSubBlocks (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V
+		COMMENT returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+		ARG 0 par1
+		ARG 1 par2CreativeTabs
+		ARG 2 par3List

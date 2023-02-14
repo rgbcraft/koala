@@ -1,3 +1,40 @@
 CLASS net/minecraft/client/renderer/entity/RenderDragon
 	FIELD field_77086_i updateModelState I
+		COMMENT Reloads the dragon model if not equal to 4. Presumably a leftover debugging field.
 	FIELD field_77084_b modelDragon Lnet/minecraft/client/model/ModelDragon;
+		COMMENT An instance of the dragon model in RenderDragon
+	METHOD func_77083_a rotateDragonBody (Lnet/minecraft/entity/boss/EntityDragon;FFF)V
+		COMMENT Used to rotate the dragon as a whole in RenderDragon. It's called in the rotateCorpse method.
+		ARG 0 par1EntityDragon
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_77081_a renderDragonModel (Lnet/minecraft/entity/boss/EntityDragon;FFFFFF)V
+		COMMENT Renders the dragon model. Called by renderModel.
+		ARG 0 par1EntityDragon
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_77079_a renderDragon (Lnet/minecraft/entity/boss/EntityDragon;DDDFF)V
+		COMMENT Renders the dragon, along with its dying animation
+		ARG 0 par1EntityDragon
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77080_a renderDragonDying (Lnet/minecraft/entity/boss/EntityDragon;F)V
+		COMMENT Renders the animation for when an enderdragon dies
+		ARG 0 par1EntityDragon
+		ARG 1 par2
+	METHOD func_77082_a renderGlow (Lnet/minecraft/entity/boss/EntityDragon;IF)I
+		COMMENT Renders the overlay for glowing eyes and the mouth. Called by shouldRenderPass.
+		ARG 0 par1EntityDragon
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77029_c renderEquippedItems (Lnet/minecraft/entity/EntityLiving;F)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2

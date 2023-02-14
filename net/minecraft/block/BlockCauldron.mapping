@@ -1,1 +1,50 @@
 CLASS net/minecraft/block/BlockCauldron
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71871_a addCollidingBlockToList (Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V
+		COMMENT if the specified block is in the given AABB, add its collision bounding box to the given list
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5AxisAlignedBB
+		ARG 5 par6List
+		ARG 6 par7Entity
+	METHOD func_71919_f setBlockBoundsForItemRender ()V
+		COMMENT Sets the block's bounds for rendering it as an item
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71903_a onBlockActivated (Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;IFFF)Z
+		COMMENT Called upon block activation (right click on the block.)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityPlayer
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_71892_f fillWithRain (Lnet/minecraft/world/World;III)V
+		COMMENT currently only used by BlockCauldron to incrament meta-data during rain
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_71922_a idPicked (Lnet/minecraft/world/World;III)I
+		COMMENT only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

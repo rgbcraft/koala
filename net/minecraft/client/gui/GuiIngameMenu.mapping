@@ -1,3 +1,17 @@
 CLASS net/minecraft/client/gui/GuiIngameMenu
 	FIELD field_74050_a updateCounter2 I
+		COMMENT Also counts the number of updates, not certain as to why yet.
 	FIELD field_74049_b updateCounter I
+		COMMENT Counts the number of screen updates.
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

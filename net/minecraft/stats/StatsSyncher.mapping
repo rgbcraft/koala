@@ -1,10 +1,34 @@
 CLASS net/minecraft/stats/StatsSyncher
 	FIELD field_77432_a isBusy Z
 	FIELD field_77428_d statFileWriter Lnet/minecraft/stats/StatFileWriter;
+		COMMENT The StatFileWriter object, presumably used to write to the statistics files
 	FIELD field_77429_e unsentDataFile Ljava/io/File;
+		COMMENT A file named 'stats_' [lower case username] '_unsent.dat'
 	FIELD field_77426_f dataFile Ljava/io/File;
+		COMMENT A file named 'stats_' [lower case username] '.dat'
 	FIELD field_77427_g unsentTempFile Ljava/io/File;
+		COMMENT A file named 'stats_' [lower case username] '_unsent.tmp'
 	FIELD field_77437_h tempFile Ljava/io/File;
+		COMMENT A file named 'stats_' [lower case username] '.tmp'
 	FIELD field_77438_i unsentOldFile Ljava/io/File;
+		COMMENT A file named 'stats_' [lower case username] '_unsent.old'
 	FIELD field_77435_j oldFile Ljava/io/File;
+		COMMENT A file named 'stats_' [lower case username] '.old'
 	FIELD field_77436_k theSession Lnet/minecraft/util/Session;
+		COMMENT The Session object
+	METHOD func_77423_b beginReceiveStats ()V
+		COMMENT Attempts to begin receiving stats from the server. Will throw an IllegalStateException if the syncher is already busy.
+	METHOD func_77418_a beginSendStats (Ljava/util/Map;)V
+		COMMENT Attempts to begin sending stats to the server. Will throw an IllegalStateException if the syncher is already busy.
+		ARG 0 par1Map
+	METHOD func_77420_c syncStatsFileWithMap (Ljava/util/Map;)V
+		ARG 0 par1Map
+	METHOD func_77406_a setBusy (Lnet/minecraft/stats/StatsSyncher;Z)Z
+		ARG 0 par0StatsSyncher
+		ARG 1 par1
+	METHOD func_77409_e getUnsentDataFile (Lnet/minecraft/stats/StatsSyncher;)Ljava/io/File;
+		ARG 0 par0StatsSyncher
+	METHOD func_77415_f getUnsentTempFile (Lnet/minecraft/stats/StatsSyncher;)Ljava/io/File;
+		ARG 0 par0StatsSyncher
+	METHOD func_77424_g getUnsentOldFile (Lnet/minecraft/stats/StatsSyncher;)Ljava/io/File;
+		ARG 0 par0StatsSyncher

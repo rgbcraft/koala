@@ -9,6 +9,33 @@ CLASS net/minecraft/client/model/ModelBiped
 	FIELD field_78121_j bipedEars Lnet/minecraft/client/model/ModelRenderer;
 	FIELD field_78122_k bipedCloak Lnet/minecraft/client/model/ModelRenderer;
 	FIELD field_78119_l heldItemLeft I
+		COMMENT Records whether the model should be rendered holding an item in the left hand, and if that item is a block.
 	FIELD field_78120_m heldItemRight I
+		COMMENT Records whether the model should be rendered holding an item in the right hand, and if that item is a block.
 	FIELD field_78117_n isSneak Z
 	FIELD field_78118_o aimedBow Z
+		COMMENT Records whether the model should be rendered aiming a bow.
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78087_a setRotationAngles (FFFFFFLnet/minecraft/entity/Entity;)V
+		COMMENT Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs can swing at most.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7Entity
+	METHOD func_78110_b renderEars (F)V
+		COMMENT renders the ears (specifically, deadmau5's)
+		ARG 0 par1
+	METHOD func_78111_c renderCloak (F)V
+		COMMENT Renders the cloak of the current biped (in most cases, it's a player)
+		ARG 0 par1

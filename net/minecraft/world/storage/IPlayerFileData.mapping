@@ -1,1 +1,9 @@
 CLASS net/minecraft/world/storage/IPlayerFileData
+	METHOD func_75753_a writePlayerData (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Writes the player data to disk from the specified PlayerEntityMP.
+		ARG 0 par1EntityPlayer
+	METHOD func_75752_b readPlayerData (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Reads the player data from disk into the specified PlayerEntityMP.
+		ARG 0 par1EntityPlayer
+	METHOD func_75754_f getAvailablePlayerDat ()[Ljava/lang/String;
+		COMMENT Returns an array of usernames for which player.dat exists for.

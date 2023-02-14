@@ -1,5 +1,43 @@
 CLASS net/minecraft/entity/item/EntityItem
 	FIELD field_70292_b age I
+		COMMENT The age of this EntityItem (used to animate it up and down as well as expire it)
 	FIELD field_70293_c delayBeforeCanPickup I
 	FIELD field_70291_e health I
+		COMMENT The health of this EntityItem. (For example, damage for tools)
 	FIELD field_70290_d hoverStart F
+		COMMENT The EntityItem's random initial float height.
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70289_a combineItems (Lnet/minecraft/entity/item/EntityItem;)Z
+		COMMENT Tries to merge this item with the item passed as the parameter. Returns true if successful. Either this item or the other item will  be removed from the world.
+		ARG 0 par1EntityItem
+	METHOD func_70072_I handleWaterMovement ()Z
+		COMMENT Returns if this entity is in water and will end up adding the waters velocity to the entity
+	METHOD func_70081_e dealFireDamage (I)V
+		COMMENT Will deal the specified amount of damage to the entity if the entity isn't immune to fire damage. Args: amountDamage
+		ARG 0 par1
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70100_b_ onCollideWithPlayer (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Called by a player entity when they collide with an entity
+		ARG 0 par1EntityPlayer
+	METHOD func_70023_ak getEntityName ()Ljava/lang/String;
+		COMMENT Gets the username of the entity.
+	METHOD func_70075_an canAttackWithItem ()Z
+		COMMENT If returns false, the item will not inflict any damage against entities.
+	METHOD func_71027_c travelToDimension (I)V
+		COMMENT Teleports the entity to another dimension. Params: Dimension number to teleport to
+		ARG 0 par1
+	METHOD func_92059_d getEntityItem ()Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the ItemStack corresponding to the Entity (Note: if no item exists, will log an error but still return an ItemStack containing Block.stone)

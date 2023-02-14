@@ -1,3 +1,18 @@
 CLASS net/minecraft/item/crafting/CraftingManager
 	FIELD field_77598_a instance Lnet/minecraft/item/crafting/CraftingManager;
+		COMMENT The static instance of this class
 	FIELD field_77597_b recipes Ljava/util/List;
+		COMMENT A list of all the recipes added
+	METHOD func_77594_a getInstance ()Lnet/minecraft/item/crafting/CraftingManager;
+		COMMENT Returns the static instance of this class
+	METHOD func_92103_a addRecipe (Lnet/minecraft/item/ItemStack;Ljava/lang/Object;)Lnet/minecraft/item/crafting/ShapedRecipes;
+		ARG 0 par1ItemStack
+		ARG 1 par2ArrayOfObj
+	METHOD func_77596_b addShapelessRecipe (Lnet/minecraft/item/ItemStack;Ljava/lang/Object;)V
+		ARG 0 par1ItemStack
+		ARG 1 par2ArrayOfObj
+	METHOD func_82787_a findMatchingRecipe (Lnet/minecraft/inventory/InventoryCrafting;Lnet/minecraft/world/World;)Lnet/minecraft/item/ItemStack;
+		ARG 0 par1InventoryCrafting
+		ARG 1 par2World
+	METHOD func_77592_b getRecipeList ()Ljava/util/List;
+		COMMENT returns the List<> of all recipes

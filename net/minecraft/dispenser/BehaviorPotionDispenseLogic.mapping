@@ -1,3 +1,8 @@
 CLASS net/minecraft/dispenser/BehaviorPotionDispenseLogic
 	FIELD field_82501_b potionStackToDispense Lnet/minecraft/item/ItemStack;
 	FIELD field_82502_c potionDispenseBehavior Lnet/minecraft/dispenser/BehaviorPotionDispense;
+		COMMENT Reference to the BehaviorPotionDispense object.
+	METHOD func_82499_a getProjectileEntity (Lnet/minecraft/world/World;Lnet/minecraft/dispenser/IPosition;)Lnet/minecraft/entity/IProjectile;
+		COMMENT Return the projectile entity spawned by this dispense behavior.
+		ARG 0 par1World
+		ARG 1 par2IPosition

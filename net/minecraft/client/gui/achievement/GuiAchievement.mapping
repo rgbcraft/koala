@@ -1,10 +1,25 @@
 CLASS net/minecraft/client/gui/achievement/GuiAchievement
 	FIELD field_73856_a theGame Lnet/minecraft/client/Minecraft;
+		COMMENT Holds the instance of the game (Minecraft)
 	FIELD field_73854_b achievementWindowWidth I
+		COMMENT Holds the latest width scaled to fit the game window.
 	FIELD field_73855_c achievementWindowHeight I
+		COMMENT Holds the latest height scaled to fit the game window.
 	FIELD field_73852_d achievementGetLocalText Ljava/lang/String;
 	FIELD field_73853_e achievementStatName Ljava/lang/String;
 	FIELD field_73850_f theAchievement Lnet/minecraft/stats/Achievement;
+		COMMENT Holds the achievement that will be displayed on the GUI.
 	FIELD field_73851_g achievementTime J
 	FIELD field_73858_h itemRender Lnet/minecraft/client/renderer/entity/RenderItem;
+		COMMENT Holds a instance of RenderItem, used to draw the achievement icons on screen (is based on ItemStack)
 	FIELD field_73857_j haveAchiement Z
+	METHOD func_73846_a queueTakenAchievement (Lnet/minecraft/stats/Achievement;)V
+		COMMENT Queue a taken achievement to be displayed.
+		ARG 0 par1Achievement
+	METHOD func_73848_b queueAchievementInformation (Lnet/minecraft/stats/Achievement;)V
+		COMMENT Queue a information about a achievement to be displayed.
+		ARG 0 par1Achievement
+	METHOD func_73849_b updateAchievementWindowScale ()V
+		COMMENT Update the display of the achievement window to match the game window.
+	METHOD func_73847_a updateAchievementWindow ()V
+		COMMENT Updates the small achievement tooltip window, showing a queued achievement if is needed.

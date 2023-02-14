@@ -1,1 +1,13 @@
 CLASS net/minecraft/entity/passive/EntityWaterMob
+	METHOD func_70648_aU canBreatheUnderwater ()Z
+	METHOD func_70601_bi getCanSpawnHere ()Z
+		COMMENT Checks if the entity's current position is a valid location to spawn this entity.
+	METHOD func_70627_aG getTalkInterval ()I
+		COMMENT Get number of ticks, at least during which the living entity will be silent.
+	METHOD func_70692_ba canDespawn ()Z
+		COMMENT Determines if an entity can be despawned, used on idle far away entities
+	METHOD func_70693_a getExperiencePoints (Lnet/minecraft/entity/player/EntityPlayer;)I
+		COMMENT Get the experience points the entity currently has.
+		ARG 0 par1EntityPlayer
+	METHOD func_70030_z onEntityUpdate ()V
+		COMMENT Gets called every tick from main Entity class

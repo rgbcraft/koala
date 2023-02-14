@@ -1,1 +1,54 @@
 CLASS net/minecraft/block/BlockTNT
+	METHOD func_71851_a getBlockTextureFromSide (I)I
+		COMMENT Returns the block texture based on the side being looked at.  Args: side
+		ARG 0 par1
+	METHOD func_71861_g onBlockAdded (Lnet/minecraft/world/World;III)V
+		COMMENT Called whenever the block is added into the world. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_71867_k onBlockDestroyedByExplosion (Lnet/minecraft/world/World;III)V
+		COMMENT Called upon the block being destroyed by an explosion
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71898_d onBlockDestroyedByPlayer (Lnet/minecraft/world/World;IIII)V
+		COMMENT Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71903_a onBlockActivated (Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;IFFF)Z
+		COMMENT Called upon block activation (right click on the block.)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityPlayer
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_71869_a onEntityCollidedWithBlock (Lnet/minecraft/world/World;IIILnet/minecraft/entity/Entity;)V
+		COMMENT Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Entity
+	METHOD func_85103_a canDropFromExplosion (Lnet/minecraft/world/Explosion;)Z
+		COMMENT Return whether this block can drop from an explosion.
+		ARG 0 par1Explosion

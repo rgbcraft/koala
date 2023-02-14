@@ -1,1 +1,4 @@
 CLASS net/minecraft/stats/StatTypeTime
+	METHOD func_75843_a format (I)Ljava/lang/String;
+		COMMENT Formats a given stat for human consumption.
+		ARG 0 par1

@@ -1,2 +1,14 @@
 CLASS net/minecraft/crash/CrashReportCategory
 	FIELD field_85075_d stackTrace [Ljava/lang/StackTraceElement;
+	METHOD func_71500_a addCrashSectionCallable (Ljava/lang/String;Ljava/util/concurrent/Callable;)V
+		COMMENT Adds a Crashreport section with the given name with the value set to the result of the given Callable;
+		ARG 0 par1Str
+		ARG 1 par2Callable
+	METHOD func_71507_a addCrashSection (Ljava/lang/String;Ljava/lang/Object;)V
+		COMMENT Adds a Crashreport section with the given name with the given value (convered .toString())
+		ARG 0 par1Str
+		ARG 1 par2Obj
+	METHOD func_71499_a addCrashSectionThrowable (Ljava/lang/String;Ljava/lang/Throwable;)V
+		COMMENT Adds a Crashreport section with the given name with the given Throwable
+		ARG 0 par1Str
+		ARG 1 par2Throwable

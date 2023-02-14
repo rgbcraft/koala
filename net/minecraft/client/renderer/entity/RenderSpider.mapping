@@ -1,1 +1,11 @@
 CLASS net/minecraft/client/renderer/entity/RenderSpider
+	METHOD func_77095_a setSpiderDeathMaxRotation (Lnet/minecraft/entity/monster/EntitySpider;)F
+		ARG 0 par1EntitySpider
+	METHOD func_77097_a setSpiderEyeBrightness (Lnet/minecraft/entity/monster/EntitySpider;IF)I
+		COMMENT Sets the spider's glowing eyes
+		ARG 0 par1EntitySpider
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77096_a scaleSpider (Lnet/minecraft/entity/monster/EntitySpider;F)V
+		ARG 0 par1EntitySpider
+		ARG 1 par2

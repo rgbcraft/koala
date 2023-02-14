@@ -1,2 +1,11 @@
 CLASS net/minecraft/client/model/ModelBoat
 	FIELD field_78103_a boatSides [Lnet/minecraft/client/model/ModelRenderer;
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7

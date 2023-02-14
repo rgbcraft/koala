@@ -3,3 +3,25 @@ CLASS net/minecraft/world/gen/NoiseGeneratorPerlin
 	FIELD field_76315_a xCoord D
 	FIELD field_76313_b yCoord D
 	FIELD field_76314_c zCoord D
+	METHOD func_76311_b lerp (DDD)D
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_76310_a grad (IDDD)D
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+	METHOD func_76308_a populateNoiseArray ([DDDDIIIDDDD)V
+		COMMENT pars: noiseArray , xOffset , yOffset , zOffset , xSize , ySize , zSize , xScale, yScale , zScale , noiseScale.  noiseArray should be xSize*ySize*zSize in size
+		ARG 0 par10
+		ARG 1 par11
+		ARG 2 par13
+		ARG 3 par15
+		ARG 4 par17
+		ARG 5 par1ArrayOfDouble
+		ARG 6 par2
+		ARG 7 par4
+		ARG 8 par6
+		ARG 9 par8
+		ARG 10 par9

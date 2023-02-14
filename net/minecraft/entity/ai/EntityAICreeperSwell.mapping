@@ -1,3 +1,13 @@
 CLASS net/minecraft/entity/ai/EntityAICreeperSwell
 	FIELD field_75269_a swellingCreeper Lnet/minecraft/entity/monster/EntityCreeper;
+		COMMENT The creeper that is swelling.
 	FIELD field_75268_b creeperAttackTarget Lnet/minecraft/entity/EntityLiving;
+		COMMENT The creeper's attack target. This is used for the changing of the creeper's state.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task

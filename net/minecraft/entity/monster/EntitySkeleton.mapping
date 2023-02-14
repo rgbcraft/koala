@@ -1,3 +1,61 @@
 CLASS net/minecraft/entity/monster/EntitySkeleton
 	FIELD field_85037_d aiArrowAttack Lnet/minecraft/entity/ai/EntityAIArrowAttack;
 	FIELD field_85038_e aiAttackOnCollide Lnet/minecraft/entity/ai/EntityAIAttackOnCollide;
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70036_a playStepSound (IIII)V
+		COMMENT Plays step sound at given x, y, z for the entity
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_70652_k attackEntityAsMob (Lnet/minecraft/entity/Entity;)Z
+		ARG 0 par1Entity
+	METHOD func_82193_c getAttackStrength (Lnet/minecraft/entity/Entity;)I
+		COMMENT Returns the amount of damage a mob should deal.
+		ARG 0 par1Entity
+	METHOD func_70668_bt getCreatureAttribute ()Lnet/minecraft/entity/EnumCreatureAttribute;
+		COMMENT Get this Entity's EnumCreatureAttribute
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70645_a onDeath (Lnet/minecraft/util/DamageSource;)V
+		COMMENT Called when the mob's health reaches 0.
+		ARG 0 par1DamageSource
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70600_l dropRareDrop (I)V
+		ARG 0 par1
+	METHOD func_70073_O getTexture ()Ljava/lang/String;
+		COMMENT Returns the texture's file path as a String.
+	METHOD func_82163_bD initCreature ()V
+		COMMENT Initialize this creature.
+	METHOD func_82196_d attackEntityWithRangedAttack (Lnet/minecraft/entity/EntityLiving;)V
+		COMMENT Attack the specified entity using a ranged attack.
+		ARG 0 par1EntityLiving
+	METHOD func_82202_m getSkeletonType ()I
+		COMMENT Return this skeleton's type.
+	METHOD func_82201_a setSkeletonType (I)V
+		COMMENT Set this skeleton's type.
+		ARG 0 par1
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70062_b setCurrentItemOrArmor (ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sets the held item, or an armor slot. Slot 0 is held item. Slot 1-4 is armor. Params: Item, slot
+		ARG 0 par1
+		ARG 1 par2ItemStack

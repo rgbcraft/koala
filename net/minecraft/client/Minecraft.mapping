@@ -1,67 +1,249 @@
 CLASS net/minecraft/client/Minecraft
 	FIELD field_71444_a memoryReserve [B
+		COMMENT A 10MiB preallocation to ensure the heap is reasonably sized.
 	FIELD field_71422_O currentServerData Lnet/minecraft/client/multiplayer/ServerData;
 	FIELD field_71432_P theMinecraft Lnet/minecraft/client/Minecraft;
+		COMMENT Set to 'this' in Minecraft constructor; used by some settings get methods
 	FIELD field_71442_b playerController Lnet/minecraft/client/multiplayer/PlayerControllerMP;
 	FIELD field_71431_Q fullscreen Z
 	FIELD field_71434_R hasCrashed Z
 	FIELD field_71433_S crashReporter Lnet/minecraft/crash/CrashReport;
+		COMMENT Instance of CrashReport.
 	FIELD field_71443_c displayWidth I
 	FIELD field_71440_d displayHeight I
 	FIELD field_71428_T timer Lnet/minecraft/util/Timer;
 	FIELD field_71427_U usageSnooper Lnet/minecraft/profiler/PlayerUsageSnooper;
+		COMMENT Instance of PlayerUsageSnooper.
 	FIELD field_71441_e theWorld Lnet/minecraft/client/multiplayer/WorldClient;
 	FIELD field_71438_f renderGlobal Lnet/minecraft/client/renderer/RenderGlobal;
 	FIELD field_71439_g thePlayer Lnet/minecraft/client/entity/EntityClientPlayerMP;
 	FIELD field_71451_h renderViewEntity Lnet/minecraft/entity/EntityLiving;
+		COMMENT The Entity from which the renderer determines the render viewpoint. Currently is always the parent Minecraft class's 'thePlayer' instance. Modification of its location, rotation, or other settings at render time will modify the camera likewise, with the caveat of triggering chunk rebuilds as it moves, making it unsuitable for changing the viewpoint mid-render.
 	FIELD field_71452_i effectRenderer Lnet/minecraft/client/particle/EffectRenderer;
 	FIELD field_71449_j session Lnet/minecraft/util/Session;
 	FIELD field_71450_k minecraftUri Ljava/lang/String;
 	FIELD field_71447_l mcCanvas Ljava/awt/Canvas;
 	FIELD field_71448_m hideQuitButton Z
+		COMMENT a boolean to hide a Quit button from the main menu
 	FIELD field_71445_n isGamePaused Z
 	FIELD field_71446_o renderEngine Lnet/minecraft/client/renderer/RenderEngine;
+		COMMENT The RenderEngine instance used by Minecraft
 	FIELD field_71466_p fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT The font renderer used for displaying and measuring text.
 	FIELD field_71464_q standardGalacticFontRenderer Lnet/minecraft/client/gui/FontRenderer;
 	FIELD field_71462_r currentScreen Lnet/minecraft/client/gui/GuiScreen;
+		COMMENT The GuiScreen that's being displayed at the moment.
 	FIELD field_71461_s loadingScreen Lnet/minecraft/client/gui/LoadingScreenRenderer;
 	FIELD field_71460_t entityRenderer Lnet/minecraft/client/renderer/EntityRenderer;
 	FIELD field_71430_V downloadResourcesThread Lnet/minecraft/util/ThreadDownloadResources;
+		COMMENT Reference to the download resources thread.
 	FIELD field_71429_W leftClickCounter I
+		COMMENT Mouse left click counter
 	FIELD field_71436_X tempDisplayWidth I
+		COMMENT Display width
 	FIELD field_71435_Y tempDisplayHeight I
+		COMMENT Display height
 	FIELD field_71437_Z theIntegratedServer Lnet/minecraft/server/integrated/IntegratedServer;
+		COMMENT Instance of IntegratedServer.
 	FIELD field_71458_u guiAchievement Lnet/minecraft/client/gui/achievement/GuiAchievement;
+		COMMENT Gui achievement
 	FIELD field_71456_v ingameGUI Lnet/minecraft/client/gui/GuiIngame;
 	FIELD field_71454_w skipRenderWorld Z
+		COMMENT Skip render world
 	FIELD field_71476_x objectMouseOver Lnet/minecraft/util/MovingObjectPosition;
+		COMMENT The ray trace hit that the mouse is over.
 	FIELD field_71474_y gameSettings Lnet/minecraft/client/settings/GameSettings;
+		COMMENT The game settings that currently hold effect.
 	FIELD field_71473_z mcApplet Lnet/minecraft/client/MinecraftApplet;
 	FIELD field_71416_A sndManager Lnet/minecraft/client/audio/SoundManager;
 	FIELD field_71417_B mouseHelper Lnet/minecraft/util/MouseHelper;
+		COMMENT Mouse helper instance.
 	FIELD field_71418_C texturePackList Lnet/minecraft/client/texturepacks/TexturePackList;
+		COMMENT The TexturePackLister used by this instance of Minecraft...
 	FIELD field_71412_D mcDataDir Ljava/io/File;
 	FIELD field_71469_aa saveLoader Lnet/minecraft/world/storage/ISaveFormat;
 	FIELD field_71470_ab debugFPS I
+		COMMENT This is set to fpsCounter every debug screen update, and is shown on the debug screen. It's also sent as part of the usage snooping.
 	FIELD field_71467_ac rightClickDelayTimer I
+		COMMENT When you place a block, it's set to 6, decremented once per tick, when it's 0, you can place another block.
 	FIELD field_71468_ad refreshTexturePacksScheduled Z
+		COMMENT Checked in Minecraft's while(running) loop, if true it's set to false and the textures refreshed.
 	FIELD field_71413_E statFileWriter Lnet/minecraft/stats/StatFileWriter;
+		COMMENT Stat file writer
 	FIELD field_71475_ae serverName Ljava/lang/String;
 	FIELD field_71477_af serverPort I
 	FIELD field_71471_ag textureWaterFX Lnet/minecraft/client/renderer/texturefx/TextureWaterFX;
 	FIELD field_71472_ah textureLavaFX Lnet/minecraft/client/renderer/texturefx/TextureLavaFX;
 	FIELD field_71414_F isTakingScreenshot Z
+		COMMENT Makes sure it doesn't keep taking screenshots when both buttons are down.
 	FIELD field_71415_G inGameHasFocus Z
+		COMMENT Does the actual gameplay have focus. If so then mouse and keys will effect the player instead of menus.
 	FIELD field_71423_H systemTime J
 	FIELD field_71457_ai joinPlayerCounter I
+		COMMENT Join player counter
 	FIELD field_71459_aj isDemo Z
 	FIELD field_71453_ak myNetworkManager Lnet/minecraft/network/INetworkManager;
 	FIELD field_71455_al integratedServerIsRunning Z
 	FIELD field_71424_I mcProfiler Lnet/minecraft/profiler/Profiler;
+		COMMENT The profiler instance
 	FIELD field_71463_am minecraftDir Ljava/io/File;
+		COMMENT The working dir (OS specific) for minecraft
 	FIELD field_71425_J running Z
+		COMMENT Set to true to keep the game loop running. Set to false by shutdown() to allow the game loop to exit cleanly.
 	FIELD field_71426_K debug Ljava/lang/String;
+		COMMENT String that shows the debug information
 	FIELD field_71419_L debugUpdateTime J
+		COMMENT Approximate time (in ms) of last update to debug string
 	FIELD field_71420_M fpsCounter I
+		COMMENT holds the current fps
 	FIELD field_71421_N prevFrameTime J
 	FIELD field_71465_an debugProfilerName Ljava/lang/String;
+		COMMENT Profiler currently displayed in the debug screen pie chart
+	METHOD func_71389_H startTimerHackThread ()V
+	METHOD func_71404_a crashed (Lnet/minecraft/crash/CrashReport;)V
+		ARG 0 par1CrashReport
+	METHOD func_71377_b displayCrashReport (Lnet/minecraft/crash/CrashReport;)V
+		COMMENT Wrapper around displayCrashReportInternal
+		ARG 0 par1CrashReport
+	METHOD func_71406_c displayCrashReportInternal (Lnet/minecraft/crash/CrashReport;)V
+		ARG 0 par1CrashReport
+	METHOD func_71367_a setServer (Ljava/lang/String;I)V
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_71384_a startGame ()V
+		COMMENT Starts the game: initializes the canvas, the title, the settings, etcetera.
+	METHOD func_71357_I loadScreen ()V
+		COMMENT Displays a new screen.
+	METHOD func_71392_a scaledTessellator (IIIIII)V
+		COMMENT Loads Tessellator with a scaled resolution
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_71380_b getMinecraftDir ()Ljava/io/File;
+		COMMENT gets the working dir (OS specific) for minecraft
+	METHOD func_71394_a getAppDir (Ljava/lang/String;)Ljava/io/File;
+		COMMENT gets the working dir (OS specific) for the specific application (which is always minecraft)
+		ARG 0 par0Str
+	METHOD func_71376_c getOs ()Lnet/minecraft/util/EnumOS;
+	METHOD func_71359_d getSaveLoader ()Lnet/minecraft/world/storage/ISaveFormat;
+		COMMENT Returns the save loader that is currently being used
+	METHOD func_71373_a displayGuiScreen (Lnet/minecraft/client/gui/GuiScreen;)V
+		COMMENT Sets the argument GuiScreen as the main (topmost visible) screen.
+		ARG 0 par1GuiScreen
+	METHOD func_71361_d checkGLError (Ljava/lang/String;)V
+		COMMENT Checks for an OpenGL error. If there is one, prints the error ID and error string.
+		ARG 0 par1Str
+	METHOD func_71405_e shutdownMinecraftApplet ()V
+		COMMENT Shuts down the minecraft applet by stopping the resource downloads, and clearing up GL stuff; called when the application (or web page) is exited.
+	METHOD func_71411_J runGameLoop ()V
+		COMMENT Called repeatedly from run()
+	METHOD func_71398_f freeMemory ()V
+	METHOD func_71365_K screenshotListener ()V
+		COMMENT checks if keys are down
+	METHOD func_71383_b updateDebugProfilerName (I)V
+		COMMENT Update debugProfilerName in response to number keys in debug screen
+		ARG 0 par1
+	METHOD func_71366_a displayDebugInfo (J)V
+		ARG 0 par1
+	METHOD func_71400_g shutdown ()V
+		COMMENT Called when the window is closing. Sets 'running' to false which allows the game loop to exit cleanly.
+	METHOD func_71381_h setIngameFocus ()V
+		COMMENT Will set the focus to ingame if the Minecraft window is the active with focus. Also clears any GUI screen currently displayed
+	METHOD func_71364_i setIngameNotInFocus ()V
+		COMMENT Resets the player keystate, disables the ingame focus, and ungrabs the mouse cursor.
+	METHOD func_71385_j displayInGameMenu ()V
+		COMMENT Displays the ingame menu
+	METHOD func_71399_a sendClickBlockToController (IZ)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71402_c clickMouse (I)V
+		COMMENT Called whenever the mouse is clicked. Button clicked is 0 for left clicking and 1 for right clicking. Args: buttonClicked
+		ARG 0 par1
+	METHOD func_71352_k toggleFullscreen ()V
+		COMMENT Toggles fullscreen mode.
+	METHOD func_71370_a resize (II)V
+		COMMENT Called to resize the current screen.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71407_l runTick ()V
+		COMMENT Runs the current tick.
+	METHOD func_71358_L forceReload ()V
+		COMMENT Forces a reload of the sound manager and all the resources. Called in game by holding 'F3' and pressing 'S'.
+	METHOD func_71371_a launchIntegratedServer (Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/WorldSettings;)V
+		COMMENT Arguments: World foldername,  World ingame name, WorldSettings
+		ARG 0 par1Str
+		ARG 1 par2Str
+		ARG 2 par3WorldSettings
+	METHOD func_71403_a loadWorld (Lnet/minecraft/client/multiplayer/WorldClient;)V
+		COMMENT unloads the current world first
+		ARG 0 par1WorldClient
+	METHOD func_71353_a loadWorld (Lnet/minecraft/client/multiplayer/WorldClient;Ljava/lang/String;)V
+		COMMENT par2Str is displayed on the loading screen to the user unloads the current world first
+		ARG 0 par1WorldClient
+		ARG 1 par2Str
+	METHOD func_71360_a installResource (Ljava/lang/String;Ljava/io/File;)V
+		COMMENT Installs a resource. Currently only sounds are download so this method just adds them to the SoundManager.
+		ARG 0 par1Str
+		ARG 1 par2File
+	METHOD func_71393_m debugInfoRenders ()Ljava/lang/String;
+		COMMENT A String of renderGlobal.getDebugInfoRenders
+	METHOD func_71408_n getEntityDebug ()Ljava/lang/String;
+		COMMENT Gets the information in the F3 menu about how many entities are infront/around you
+	METHOD func_71388_o getWorldProviderName ()Ljava/lang/String;
+		COMMENT Gets the name of the world's current chunk provider
+	METHOD func_71374_p debugInfoEntities ()Ljava/lang/String;
+		COMMENT A String of how many entities are in the world
+	METHOD func_71354_a setDimensionAndSpawnPlayer (I)V
+		ARG 0 par1
+	METHOD func_71390_a setDemo (Z)V
+		COMMENT Sets whether this is a demo or not.
+		ARG 0 par1
+	METHOD func_71355_q isDemo ()Z
+		COMMENT Gets whether this is a demo or not.
+	METHOD func_71391_r getSendQueue ()Lnet/minecraft/client/multiplayer/NetClientHandler;
+		COMMENT get the client packet send queue
+	METHOD func_71382_s isGuiEnabled ()Z
+	METHOD func_71375_t isFancyGraphicsEnabled ()Z
+	METHOD func_71379_u isAmbientOcclusionEnabled ()Z
+		COMMENT Returns if ambient occlusion is enabled
+	METHOD func_71368_v isDebugInfoEnabled ()Z
+	METHOD func_71409_c handleClientCommand (Ljava/lang/String;)Z
+		COMMENT Returns true if the message is a client command and should not be sent to the server. However there are no such commands at this point in time.
+		ARG 0 par1Str
+	METHOD func_71397_M clickMiddleMouseButton ()V
+		COMMENT Called when the middle mouse button gets clicked
+	METHOD func_71396_d addGraphicsAndWorldToCrashReport (Lnet/minecraft/crash/CrashReport;)Lnet/minecraft/crash/CrashReport;
+		COMMENT adds core server Info (GL version , Texture pack, isModded, type), and the worldInfo to the crash report
+		ARG 0 par1CrashReport
+	METHOD func_71410_x getMinecraft ()Lnet/minecraft/client/Minecraft;
+		COMMENT Return the singleton Minecraft instance for the game
+	METHOD func_71395_y scheduleTexturePackRefresh ()V
+		COMMENT Sets refreshTexturePacksScheduled to true, triggering a texture pack refresh next time the while(running) loop is run
+	METHOD func_70000_a addServerStatsToSnooper (Lnet/minecraft/profiler/PlayerUsageSnooper;)V
+		ARG 0 par1PlayerUsageSnooper
+	METHOD func_70001_b addServerTypeToSnooper (Lnet/minecraft/profiler/PlayerUsageSnooper;)V
+		ARG 0 par1PlayerUsageSnooper
+	METHOD func_71369_N getGLMaximumTextureSize ()I
+		COMMENT Used in the usage snooper.
+	METHOD func_70002_Q isSnooperEnabled ()Z
+		COMMENT Returns whether snooping is enabled or not.
+	METHOD func_71351_a setServerData (Lnet/minecraft/client/multiplayer/ServerData;)V
+		COMMENT Set the current ServerData instance.
+		ARG 0 par1ServerData
+	METHOD func_71362_z getServerData ()Lnet/minecraft/client/multiplayer/ServerData;
+		COMMENT Get the current ServerData instance.
+	METHOD func_71387_A isIntegratedServerRunning ()Z
+	METHOD func_71356_B isSingleplayer ()Z
+		COMMENT Returns true if there is only one player playing, and the current server is the integrated one.
+	METHOD func_71401_C getIntegratedServer ()Lnet/minecraft/server/integrated/IntegratedServer;
+		COMMENT Returns the currently running integrated server
+	METHOD func_71363_D stopIntegratedServer ()V
+	METHOD func_71378_E getPlayerUsageSnooper ()Lnet/minecraft/profiler/PlayerUsageSnooper;
+		COMMENT Returns the PlayerUsageSnooper instance.
+	METHOD func_71386_F getSystemTime ()J
+		COMMENT Gets the system time in milliseconds.
+	METHOD func_71372_G isFullScreen ()Z
+		COMMENT Returns whether we're in full screen or not.

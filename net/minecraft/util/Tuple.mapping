@@ -1,3 +1,9 @@
 CLASS net/minecraft/util/Tuple
 	FIELD field_76343_a first Ljava/lang/Object;
+		COMMENT First Object in the Tuple
 	FIELD field_76342_b second Ljava/lang/Object;
+		COMMENT Second Object in the Tuple
+	METHOD func_76341_a getFirst ()Ljava/lang/Object;
+		COMMENT Get the first Object in the Tuple
+	METHOD func_76340_b getSecond ()Ljava/lang/Object;
+		COMMENT Get the second Object in the Tuple

@@ -1,2 +1,20 @@
 CLASS net/minecraft/entity/ai/EntityAIBase
 	FIELD field_75254_a mutexBits I
+		COMMENT A bitmask telling which other tasks may not run concurrently. The test is a simple bitwise AND - if it yields zero, the two tasks may run concurrently, if not - they must run exclusively from each other.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75252_g isContinuous ()Z
+		COMMENT Returns whether the task requires multiple updates or not
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task
+	METHOD func_75248_a setMutexBits (I)V
+		COMMENT Sets a bitmask telling which other tasks may not run concurrently. The test is a simple bitwise AND - if it yields zero, the two tasks may run concurrently, if not - they must run exclusively from each other.
+		ARG 0 par1
+	METHOD func_75247_h getMutexBits ()I
+		COMMENT Get a bitmask telling which other tasks may not run concurrently. The test is a simple bitwise AND - if it yields zero, the two tasks may run concurrently, if not - they must run exclusively from each other.

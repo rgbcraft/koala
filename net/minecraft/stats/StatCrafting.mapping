@@ -1,2 +1,3 @@
 CLASS net/minecraft/stats/StatCrafting
 	FIELD field_75983_a itemID I
+	METHOD func_75982_a getItemID ()I

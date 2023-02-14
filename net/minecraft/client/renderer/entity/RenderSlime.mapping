@@ -1,2 +1,11 @@
 CLASS net/minecraft/client/renderer/entity/RenderSlime
 	FIELD field_77092_a scaleAmount Lnet/minecraft/client/model/ModelBase;
+	METHOD func_77090_a shouldSlimeRenderPass (Lnet/minecraft/entity/monster/EntitySlime;IF)I
+		COMMENT Determines whether Slime Render should pass or not.
+		ARG 0 par1EntitySlime
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77091_a scaleSlime (Lnet/minecraft/entity/monster/EntitySlime;F)V
+		COMMENT sets the scale for the slime based on getSlimeSize in EntitySlime
+		ARG 0 par1EntitySlime
+		ARG 1 par2

@@ -1,4 +1,16 @@
 CLASS net/minecraft/entity/ai/EntityAITarget
 	FIELD field_75299_d taskOwner Lnet/minecraft/entity/EntityLiving;
+		COMMENT The entity that this task belongs to
 	FIELD field_75300_e targetDistance F
 	FIELD field_75297_f shouldCheckSight Z
+		COMMENT If true, EntityAI targets must be able to be seen (cannot be blocked by walls) to be suitable targets.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75296_a isSuitableTarget (Lnet/minecraft/entity/EntityLiving;Z)Z
+		COMMENT A method used to see if an entity is a suitable target through a number of checks.
+		ARG 0 par1EntityLiving
+		ARG 1 par2

@@ -1,2 +1,5 @@
 CLASS net/minecraft/server/dedicated/ConsoleLogManager
 	FIELD field_73700_a loggerLogManager Ljava/util/logging/Logger;
+		COMMENT Log manager of Minecraft.
+	METHOD func_73699_a init ()V
+		COMMENT Initialises the console logger.

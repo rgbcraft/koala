@@ -1,4 +1,18 @@
 CLASS net/minecraft/tileentity/TileEntitySign
 	FIELD field_70412_a signText [Ljava/lang/String;
+		COMMENT An array of four strings storing the lines of text on the sign.
 	FIELD field_70410_b lineBeingEdited I
+		COMMENT The index of the line currently being edited. Only used on client side, but defined on both. Note this is only really used when the > < are going to be visible.
 	FIELD field_70411_c isEditable Z
+	METHOD func_70310_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes a tile entity to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70307_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads a tile entity from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70319_e getDescriptionPacket ()Lnet/minecraft/network/packet/Packet;
+		COMMENT Overriden in a sign to provide the text.
+	METHOD func_70409_a isEditable ()Z
+	METHOD func_70408_a setEditable (Z)V
+		COMMENT Sets the sign's isEditable flag to the specified parameter.
+		ARG 0 par1

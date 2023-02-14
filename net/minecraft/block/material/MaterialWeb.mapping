@@ -1,1 +1,3 @@
 CLASS net/minecraft/block/material/MaterialWeb
+	METHOD func_76230_c blocksMovement ()Z
+		COMMENT Returns if this material is considered solid or not

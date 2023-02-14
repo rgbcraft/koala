@@ -1,7 +1,169 @@
 CLASS net/minecraft/item/ItemStack
 	FIELD field_77994_a stackSize I
+		COMMENT Size of the stack.
 	FIELD field_77992_b animationsToGo I
+		COMMENT Number of animation frames to go when receiving an item (by walking into it, for example).
 	FIELD field_77993_c itemID I
+		COMMENT ID of the item.
 	FIELD field_77990_d stackTagCompound Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT A NBTTagMap containing data about an ItemStack. Can only be used for non stackable items
 	FIELD field_77991_e itemDamage I
+		COMMENT Damage dealt to the item or number of use. Raise when using items.
 	FIELD field_82843_f itemFrame Lnet/minecraft/entity/item/EntityItemFrame;
+		COMMENT Item frame this stack is on, or null if not on an item frame.
+	METHOD func_77949_a loadItemStackFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/item/ItemStack;
+		ARG 0 par0NBTTagCompound
+	METHOD func_77979_a splitStack (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Remove the argument from the stack size. Return a new stack object with argument size.
+		ARG 0 par1
+	METHOD func_77973_b getItem ()Lnet/minecraft/item/Item;
+		COMMENT Returns the object corresponding to the stack.
+	METHOD func_77954_c getIconIndex ()I
+		COMMENT Returns the icon index of the current stack.
+	METHOD func_77943_a tryPlaceItemIntoWorld (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z
+		ARG 0 par1EntityPlayer
+		ARG 1 par2World
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_77967_a getStrVsBlock (Lnet/minecraft/block/Block;)F
+		COMMENT Returns the strength of the stack against a given block.
+		ARG 0 par1Block
+	METHOD func_77957_a useItemRightClick (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		COMMENT Called whenever this item stack is equipped and right clicked. Returns the new item stack to put in the position where this item is. Args: world, player
+		ARG 0 par1World
+		ARG 1 par2EntityPlayer
+	METHOD func_77950_b onFoodEaten (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		ARG 0 par1World
+		ARG 1 par2EntityPlayer
+	METHOD func_77955_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Write the stack fields to a NBT object. Return the new NBT object.
+		ARG 0 par1NBTTagCompound
+	METHOD func_77963_c readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Read the stack fields from a NBT object.
+		ARG 0 par1NBTTagCompound
+	METHOD func_77976_d getMaxStackSize ()I
+		COMMENT Returns maximum size of the stack.
+	METHOD func_77985_e isStackable ()Z
+		COMMENT Returns true if the ItemStack can hold 2 or more units of the item.
+	METHOD func_77984_f isItemStackDamageable ()Z
+		COMMENT true if this itemStack is damageable
+	METHOD func_77981_g getHasSubtypes ()Z
+	METHOD func_77951_h isItemDamaged ()Z
+		COMMENT returns true when a damageable item is damaged
+	METHOD func_77952_i getItemDamageForDisplay ()I
+		COMMENT gets the damage of an itemstack, for displaying purposes
+	METHOD func_77960_j getItemDamage ()I
+		COMMENT gets the damage of an itemstack
+	METHOD func_77964_b setItemDamage (I)V
+		COMMENT Sets the item damage of the ItemStack.
+		ARG 0 par1
+	METHOD func_77958_k getMaxDamage ()I
+		COMMENT Returns the max damage an item in the stack can take.
+	METHOD func_77972_a damageItem (ILnet/minecraft/entity/EntityLiving;)V
+		COMMENT Damages the item in the ItemStack
+		ARG 0 par1
+		ARG 1 par2EntityLiving
+	METHOD func_77961_a hitEntity (Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Calls the corresponding fct in di
+		ARG 0 par1EntityLiving
+		ARG 1 par2EntityPlayer
+	METHOD func_77941_a onBlockDestroyed (Lnet/minecraft/world/World;IIIILnet/minecraft/entity/player/EntityPlayer;)V
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6EntityPlayer
+	METHOD func_77971_a getDamageVsEntity (Lnet/minecraft/entity/Entity;)I
+		COMMENT Returns the damage against a given entity.
+		ARG 0 par1Entity
+	METHOD func_77987_b canHarvestBlock (Lnet/minecraft/block/Block;)Z
+		COMMENT Checks if the itemStack object can harvest a specified block
+		ARG 0 par1Block
+	METHOD func_77947_a interactWith (Lnet/minecraft/entity/EntityLiving;)Z
+		ARG 0 par1EntityLiving
+	METHOD func_77946_l copy ()Lnet/minecraft/item/ItemStack;
+		COMMENT Returns a new stack with the same properties.
+	METHOD func_77970_a areItemStackTagsEqual (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z
+		ARG 0 par0ItemStack
+		ARG 1 par1ItemStack
+	METHOD func_77989_b areItemStacksEqual (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z
+		COMMENT compares ItemStack argument1 with ItemStack argument2; returns true if both ItemStacks are equal
+		ARG 0 par0ItemStack
+		ARG 1 par1ItemStack
+	METHOD func_77959_d isItemStackEqual (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT compares ItemStack argument to the instance ItemStack; returns true if both ItemStacks are equal
+		ARG 0 par1ItemStack
+	METHOD func_77969_a isItemEqual (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT compares ItemStack argument to the instance ItemStack; returns true if the Items contained in both ItemStacks are equal
+		ARG 0 par1ItemStack
+	METHOD func_77977_a getItemName ()Ljava/lang/String;
+	METHOD func_77944_b copyItemStack (Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;
+		COMMENT Creates a copy of a ItemStack, a null parameters will return a null.
+		ARG 0 par0ItemStack
+	METHOD func_77945_a updateAnimation (Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;IZ)V
+		COMMENT Called each tick as long the ItemStack in on player inventory. Used to progress the pickup animation and update maps.
+		ARG 0 par1World
+		ARG 1 par2Entity
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_77980_a onCrafting (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;I)V
+		ARG 0 par1World
+		ARG 1 par2EntityPlayer
+		ARG 2 par3
+	METHOD func_77988_m getMaxItemUseDuration ()I
+	METHOD func_77975_n getItemUseAction ()Lnet/minecraft/item/EnumAction;
+	METHOD func_77974_b onPlayerStoppedUsing (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;I)V
+		COMMENT Called when the player releases the use item button. Args: world, entityplayer, itemInUseCount
+		ARG 0 par1World
+		ARG 1 par2EntityPlayer
+		ARG 2 par3
+	METHOD func_77942_o hasTagCompound ()Z
+		COMMENT Returns true if the ItemStack has an NBTTagCompound. Currently used to store enchantments.
+	METHOD func_77978_p getTagCompound ()Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Returns the NBTTagCompound of the ItemStack.
+	METHOD func_77986_q getEnchantmentTagList ()Lnet/minecraft/nbt/NBTTagList;
+	METHOD func_77982_d setTagCompound (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Assigns a NBTTagCompound to the ItemStack, minecraft validates that only non-stackable items can have it.
+		ARG 0 par1NBTTagCompound
+	METHOD func_82833_r getDisplayName ()Ljava/lang/String;
+		COMMENT returns the display name of the itemstack
+	METHOD func_82834_c setItemName (Ljava/lang/String;)V
+		COMMENT Sets the item's name (used by anvil to rename the items).
+		ARG 0 par1Str
+	METHOD func_82837_s hasDisplayName ()Z
+		COMMENT Returns true if the itemstack has a display name
+	METHOD func_82840_a getTooltip (Lnet/minecraft/entity/player/EntityPlayer;Z)Ljava/util/List;
+		COMMENT Return a list of strings containing information about the item
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_77962_s hasEffect ()Z
+	METHOD func_77953_t getRarity ()Lnet/minecraft/item/EnumRarity;
+	METHOD func_77956_u isItemEnchantable ()Z
+		COMMENT True if it is a tool and has no enchantments to begin with
+	METHOD func_77966_a addEnchantment (Lnet/minecraft/enchantment/Enchantment;I)V
+		COMMENT Adds an enchantment with a desired level on the ItemStack.
+		ARG 0 par1Enchantment
+		ARG 1 par2
+	METHOD func_77948_v isItemEnchanted ()Z
+		COMMENT True if the item has enchantment data
+	METHOD func_77983_a setTagInfo (Ljava/lang/String;Lnet/minecraft/nbt/NBTBase;)V
+		ARG 0 par1Str
+		ARG 1 par2NBTBase
+	METHOD func_82839_y isOnItemFrame ()Z
+		COMMENT Return whether this stack is on an item frame.
+	METHOD func_82842_a setItemFrame (Lnet/minecraft/entity/item/EntityItemFrame;)V
+		COMMENT Set the item frame this stack is on.
+		ARG 0 par1EntityItemFrame
+	METHOD func_82836_z getItemFrame ()Lnet/minecraft/entity/item/EntityItemFrame;
+		COMMENT Return the item frame this stack is on. Returns null if not on an item frame.
+	METHOD func_82838_A getRepairCost ()I
+		COMMENT Get this stack's repair cost, or 0 if no repair cost is defined.
+	METHOD func_82841_c setRepairCost (I)V
+		COMMENT Set this stack's repair cost.
+		ARG 0 par1

@@ -1,2 +1,4 @@
 CLASS net/minecraft/server/integrated/CallableType3
 	FIELD field_76974_a theIntegratedServer Lnet/minecraft/server/integrated/IntegratedServer;
+		COMMENT Reference to the IntegratedServer object.
+	METHOD func_76973_a getType ()Ljava/lang/String;

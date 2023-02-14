@@ -1,2 +1,5 @@
 CLASS net/minecraft/crash/CallableJavaInfo2
 	FIELD field_71492_a theCrashReport Lnet/minecraft/crash/CrashReport;
+		COMMENT Reference to the CrashReport object.
+	METHOD func_71491_a getJavaVMInfoAsString ()Ljava/lang/String;
+		COMMENT Retuns the Java VM Information as a String.  Includes the VM Name, VM Info and VM Vendor.

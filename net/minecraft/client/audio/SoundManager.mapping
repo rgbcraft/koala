@@ -1,11 +1,99 @@
 CLASS net/minecraft/client/audio/SoundManager
 	FIELD field_77381_a sndSystem Lpaulscode/sound/SoundSystem;
+		COMMENT A reference to the sound system.
 	FIELD field_77379_b soundPoolSounds Lnet/minecraft/client/audio/SoundPool;
+		COMMENT Sound pool containing sounds.
 	FIELD field_77380_c soundPoolStreaming Lnet/minecraft/client/audio/SoundPool;
+		COMMENT Sound pool containing streaming audio.
 	FIELD field_77377_d soundPoolMusic Lnet/minecraft/client/audio/SoundPool;
+		COMMENT Sound pool containing music.
 	FIELD field_77378_e latestSoundID I
+		COMMENT The last ID used when a sound is played, passed into SoundSystem to give active sounds a unique ID
 	FIELD field_77375_f options Lnet/minecraft/client/settings/GameSettings;
+		COMMENT A reference to the game settings.
 	FIELD field_82470_g playingSounds Ljava/util/Set;
+		COMMENT Identifiers of all currently playing sounds. Type: HashSet<String>
 	FIELD field_77376_g loaded Z
+		COMMENT Set to true when the SoundManager has been initialised.
 	FIELD field_77382_h rand Ljava/util/Random;
+		COMMENT RNG.
 	FIELD field_77383_i ticksBeforeMusic I
+	METHOD func_77373_a loadSoundSettings (Lnet/minecraft/client/settings/GameSettings;)V
+		COMMENT Used for loading sound settings from GameSettings
+		ARG 0 par1GameSettings
+	METHOD func_77363_d tryToSetLibraryAndCodecs ()V
+		COMMENT Tries to add the paulscode library and the relevant codecs. If it fails, the volumes (sound and music) will be set to zero in the options file.
+	METHOD func_77367_a onSoundOptionsChanged ()V
+		COMMENT Called when one of the sound level options has changed.
+	METHOD func_77370_b closeMinecraft ()V
+		COMMENT Called when Minecraft is closing down.
+	METHOD func_77372_a addSound (Ljava/lang/String;Ljava/io/File;)V
+		COMMENT Adds a sounds with the name from the file. Args: name, file
+		ARG 0 par1Str
+		ARG 1 par2File
+	METHOD func_77374_b addStreaming (Ljava/lang/String;Ljava/io/File;)V
+		COMMENT Adds an audio file to the streaming SoundPool.
+		ARG 0 par1Str
+		ARG 1 par2File
+	METHOD func_77365_c addMusic (Ljava/lang/String;Ljava/io/File;)V
+		COMMENT Adds an audio file to the music SoundPool.
+		ARG 0 par1Str
+		ARG 1 par2File
+	METHOD func_77371_c playRandomMusicIfReady ()V
+		COMMENT If its time to play new music it starts it up.
+	METHOD func_77369_a setListener (Lnet/minecraft/entity/EntityLiving;F)V
+		COMMENT Sets the listener of sounds
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_82464_d stopAllSounds ()V
+		COMMENT Stops all currently playing sounds
+	METHOD func_77368_a playStreaming (Ljava/lang/String;FFF)V
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_82460_a updateSoundLocation (Lnet/minecraft/entity/Entity;)V
+		COMMENT Updates the sound associated with the entity with that entity's position and velocity. Args: the entity
+		ARG 0 par1Entity
+	METHOD func_82462_a updateSoundLocation (Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;)V
+		COMMENT Updates the sound associated with soundEntity with the position and velocity of trackEntity. Args: soundEntity, trackEntity
+		ARG 0 par1Entity
+		ARG 1 par2Entity
+	METHOD func_82465_b isEntitySoundPlaying (Lnet/minecraft/entity/Entity;)Z
+		COMMENT Returns true if a sound is currently associated with the given entity, or false otherwise.
+		ARG 0 par1Entity
+	METHOD func_82469_c stopEntitySound (Lnet/minecraft/entity/Entity;)V
+		COMMENT Stops playing the sound associated with the given entity
+		ARG 0 par1Entity
+	METHOD func_82468_a setEntitySoundVolume (Lnet/minecraft/entity/Entity;F)V
+		COMMENT Sets the volume of the sound associated with the given entity, if one is playing. The volume is scaled by the global sound volume. Args: the entity, the volume (from 0 to 1)
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_82463_b setEntitySoundPitch (Lnet/minecraft/entity/Entity;F)V
+		COMMENT Sets the pitch of the sound associated with the given entity, if one is playing. Args: the entity, the pitch
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_82467_a playEntitySound (Ljava/lang/String;Lnet/minecraft/entity/Entity;FFZ)V
+		COMMENT If a sound is already playing from the given entity, update the position and velocity of that sound to match the entity. Otherwise, start playing a sound from that entity. Args: The sound name, the entity, the volume, the pitch, unknown flag
+		ARG 0 par1Str
+		ARG 1 par2Entity
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_77364_b playSound (Ljava/lang/String;FFFFF)V
+		COMMENT Plays a sound. Args: soundName, x, y, z, volume, pitch
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_77366_a playSoundFX (Ljava/lang/String;FF)V
+		COMMENT Plays a sound effect with the volume and pitch of the parameters passed. The sound isn't affected by position of the player (full volume and center balanced)
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_82466_e pauseAllSounds ()V
+		COMMENT Pauses all currently playing sounds
+	METHOD func_82461_f resumeAllSounds ()V
+		COMMENT Resumes playing all currently playing sounds (after pauseAllSounds)

@@ -1,3 +1,4 @@
 CLASS net/minecraft/command/ServerCommand
 	FIELD field_73702_a command Ljava/lang/String;
+		COMMENT The command string.
 	FIELD field_73701_b sender Lnet/minecraft/command/ICommandSender;

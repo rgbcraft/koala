@@ -1,4 +1,59 @@
 CLASS net/minecraft/world/biome/WorldChunkManagerHell
 	FIELD field_76947_d biomeGenerator Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT The biome generator object.
 	FIELD field_76948_e hellTemperature F
 	FIELD field_76946_f rainfall F
+		COMMENT The rainfall in the world
+	METHOD func_76935_a getBiomeGenAt (II)Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Returns the BiomeGenBase related to the x, z position on the world.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76937_a getBiomesForGeneration ([Lnet/minecraft/world/biome/BiomeGenBase;IIII)[Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Returns an array of biomes for the location input.
+		ARG 0 par1ArrayOfBiomeGenBase
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76934_b getTemperatures ([FIIII)[F
+		COMMENT Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length
+		ARG 0 par1ArrayOfFloat
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76936_a getRainfall ([FIIII)[F
+		COMMENT Returns a list of rainfall values for the specified blocks. Args: listToReuse, x, z, width, length.
+		ARG 0 par1ArrayOfFloat
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76933_b loadBlockGeneratorData ([Lnet/minecraft/world/biome/BiomeGenBase;IIII)[Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth
+		ARG 0 par1ArrayOfBiomeGenBase
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76931_a getBiomeGenAt ([Lnet/minecraft/world/biome/BiomeGenBase;IIIIZ)[Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Return a list of biomes for the specified blocks. Args: listToReuse, x, y, width, length, cacheFlag (if false, don't check biomeCache to avoid infinite loop in BiomeCacheBlock)
+		ARG 0 par1ArrayOfBiomeGenBase
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_76941_a findBiomePosition (IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/world/ChunkPosition;
+		COMMENT Finds a valid position within a range, that is in one of the listed biomes. Searches {par1,par2} +-par3 blocks. Strongly favors positive y positions.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4List
+		ARG 4 par5Random
+	METHOD func_76940_a areBiomesViable (IIILjava/util/List;)Z
+		COMMENT checks given Chunk's Biomes against List of allowed ones
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4List

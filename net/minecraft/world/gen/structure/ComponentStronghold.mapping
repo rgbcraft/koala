@@ -1,1 +1,36 @@
 CLASS net/minecraft/world/gen/structure/ComponentStronghold
+	METHOD func_74990_a placeDoor (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Lnet/minecraft/world/gen/structure/EnumDoor;III)V
+		COMMENT builds a door of the enumerated types (empty opening is a door)
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3StructureBoundingBox
+		ARG 3 par4EnumDoor
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_74988_a getRandomDoor (Ljava/util/Random;)Lnet/minecraft/world/gen/structure/EnumDoor;
+		ARG 0 par1Random
+	METHOD func_74986_a getNextComponentNormal (Lnet/minecraft/world/gen/structure/ComponentStrongholdStairs2;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Gets the next component in any cardinal direction
+		ARG 0 par1ComponentStrongholdStairs2
+		ARG 1 par2List
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_74989_b getNextComponentX (Lnet/minecraft/world/gen/structure/ComponentStrongholdStairs2;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Gets the next component in the +/- X direction
+		ARG 0 par1ComponentStrongholdStairs2
+		ARG 1 par2List
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_74987_c getNextComponentZ (Lnet/minecraft/world/gen/structure/ComponentStrongholdStairs2;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Gets the next component in the +/- Z direction
+		ARG 0 par1ComponentStrongholdStairs2
+		ARG 1 par2List
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_74991_a canStrongholdGoDeeper (Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT returns false if the Structure Bounding Box goes below 10
+		ARG 0 par0StructureBoundingBox

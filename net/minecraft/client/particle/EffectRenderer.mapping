@@ -1,5 +1,32 @@
 CLASS net/minecraft/client/particle/EffectRenderer
 	FIELD field_78878_a worldObj Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
 	FIELD field_78876_b fxLayers [Ljava/util/List;
 	FIELD field_78877_c renderer Lnet/minecraft/client/renderer/RenderEngine;
 	FIELD field_78875_d rand Ljava/util/Random;
+		COMMENT RNG.
+	METHOD func_78873_a addEffect (Lnet/minecraft/client/particle/EntityFX;)V
+		ARG 0 par1EntityFX
+	METHOD func_78868_a updateEffects ()V
+	METHOD func_78874_a renderParticles (Lnet/minecraft/entity/Entity;F)V
+		COMMENT Renders all current particles. Args player, partialTickTime
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_78872_b renderLitParticles (Lnet/minecraft/entity/Entity;F)V
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_78870_a clearEffects (Lnet/minecraft/world/World;)V
+		ARG 0 par1World
+	METHOD func_78871_a addBlockDestroyEffects (IIIII)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_78867_a addBlockHitEffects (IIII)V
+		COMMENT Adds block hit particles for the specified block. Args: x, y, z, sideHit
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78869_b getStatistics ()Ljava/lang/String;

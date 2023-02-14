@@ -4,3 +4,9 @@ CLASS net/minecraft/entity/ai/EntityAIMoveTwardsRestriction
 	FIELD field_75435_c movePosY D
 	FIELD field_75432_d movePosZ D
 	FIELD field_75433_e movementSpeed F
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task

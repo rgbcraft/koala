@@ -1,4 +1,189 @@
 CLASS net/minecraft/world/gen/structure/StructureComponent
 	FIELD field_74887_e boundingBox Lnet/minecraft/world/gen/structure/StructureBoundingBox;
 	FIELD field_74885_f coordBaseMode I
+		COMMENT switches the Coordinate System base off the Bounding Box
 	FIELD field_74886_g componentType I
+		COMMENT The type ID of this component.
+	METHOD func_74861_a buildComponent (Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V
+		COMMENT Initiates construction of the Structure Component picked, at the current Location of StructGen
+		ARG 0 par1StructureComponent
+		ARG 1 par2List
+		ARG 2 par3Random
+	METHOD func_74875_a addComponentParts (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3StructureBoundingBox
+	METHOD func_74874_b getBoundingBox ()Lnet/minecraft/world/gen/structure/StructureBoundingBox;
+	METHOD func_74877_c getComponentType ()I
+		COMMENT Returns the component type ID of this component.
+	METHOD func_74883_a findIntersecting (Ljava/util/List;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Discover if bounding box can fit within the current bounding box object.
+		ARG 0 par0List
+		ARG 1 par1StructureBoundingBox
+	METHOD func_74868_a getCenter ()Lnet/minecraft/world/ChunkPosition;
+	METHOD func_74860_a isLiquidInStructureBoundingBox (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT checks the entire StructureBoundingBox for Liquids
+		ARG 0 par1World
+		ARG 1 par2StructureBoundingBox
+	METHOD func_74865_a getXWithOffset (II)I
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74862_a getYWithOffset (I)I
+		ARG 0 par1
+	METHOD func_74873_b getZWithOffset (II)I
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74863_c getMetadataWithOffset (II)I
+		COMMENT Returns the direction-shifted metadata for blocks that require orientation, e.g. doors, stairs, ladders. Parameters: block ID, original metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74864_a placeBlockAtCurrentPosition (Lnet/minecraft/world/World;IIIIILnet/minecraft/world/gen/structure/StructureBoundingBox;)V
+		COMMENT current Position depends on currently set Coordinates mode, is computed here
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7StructureBoundingBox
+	METHOD func_74866_a getBlockIdAtCurrentPosition (Lnet/minecraft/world/World;IIILnet/minecraft/world/gen/structure/StructureBoundingBox;)I
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5StructureBoundingBox
+	METHOD func_74878_a fillWithAir (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIII)V
+		COMMENT arguments: (World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ)
+		ARG 0 par1World
+		ARG 1 par2StructureBoundingBox
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+	METHOD func_74884_a fillWithBlocks (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIIIIIZ)V
+		COMMENT arguments: (World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, int placeBlockId, int replaceBlockId, boolean alwaysreplace)
+		ARG 0 par10
+		ARG 1 par11
+		ARG 2 par1World
+		ARG 3 par2StructureBoundingBox
+		ARG 4 par3
+		ARG 5 par4
+		ARG 6 par5
+		ARG 7 par6
+		ARG 8 par7
+		ARG 9 par8
+		ARG 10 par9
+	METHOD func_74872_a fillWithMetadataBlocks (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIIIIIIIZ)V
+		COMMENT arguments: (World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, int placeBlockId, int placeBlockMetadata, int replaceBlockId, int replaceBlockMetadata, boolean alwaysreplace)
+		ARG 0 par10
+		ARG 1 par11
+		ARG 2 par12
+		ARG 3 par13
+		ARG 4 par1World
+		ARG 5 par2StructureBoundingBox
+		ARG 6 par3
+		ARG 7 par4
+		ARG 8 par5
+		ARG 9 par6
+		ARG 10 par7
+		ARG 11 par8
+		ARG 12 par9
+	METHOD func_74882_a fillWithRandomizedBlocks (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIIIZLjava/util/Random;Lnet/minecraft/world/gen/structure/StructurePieceBlockSelector;)V
+		COMMENT arguments: World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, boolean alwaysreplace, Random rand, StructurePieceBlockSelector blockselector
+		ARG 0 par10Random
+		ARG 1 par11StructurePieceBlockSelector
+		ARG 2 par1World
+		ARG 3 par2StructureBoundingBox
+		ARG 4 par3
+		ARG 5 par4
+		ARG 6 par5
+		ARG 7 par6
+		ARG 8 par7
+		ARG 9 par8
+		ARG 10 par9
+	METHOD func_74880_a randomlyFillWithBlocks (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;FIIIIIIIIZ)V
+		COMMENT arguments: World worldObj, StructureBoundingBox structBB, Random rand, float randLimit, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, int olaceBlockId, int replaceBlockId, boolean alwaysreplace
+		ARG 0 par10
+		ARG 1 par11
+		ARG 2 par12
+		ARG 3 par13
+		ARG 4 par1World
+		ARG 5 par2StructureBoundingBox
+		ARG 6 par3Random
+		ARG 7 par4
+		ARG 8 par5
+		ARG 9 par6
+		ARG 10 par7
+		ARG 11 par8
+		ARG 12 par9
+	METHOD func_74876_a randomlyPlaceBlock (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;FIIIII)V
+		COMMENT Randomly decides if placing or not. Used for Decoration such as Torches and Spiderwebs
+		ARG 0 par1World
+		ARG 1 par2StructureBoundingBox
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_74867_a randomlyRareFillWithBlocks (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIIIIZ)V
+		COMMENT arguments: World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, int placeBlockId, boolean alwaysreplace
+		ARG 0 par10
+		ARG 1 par1World
+		ARG 2 par2StructureBoundingBox
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+		ARG 8 par8
+		ARG 9 par9
+	METHOD func_74871_b clearCurrentPositionBlocksUpwards (Lnet/minecraft/world/World;IIILnet/minecraft/world/gen/structure/StructureBoundingBox;)V
+		COMMENT Deletes all continuous blocks from selected position upwards. Stops at hitting air.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5StructureBoundingBox
+	METHOD func_74870_b fillCurrentPositionBlocksDownwards (Lnet/minecraft/world/World;IIIIILnet/minecraft/world/gen/structure/StructureBoundingBox;)V
+		COMMENT Overwrites air and liquids from selected position downwards, stops at hitting anything else.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7StructureBoundingBox
+	METHOD func_74879_a generateStructureChestContents (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;III[Lnet/minecraft/util/WeightedRandomChestContent;I)Z
+		COMMENT Used to generate chests with items in it. ex: Temple Chests, Village Blacksmith Chests, Mineshaft Chests.
+		ARG 0 par1World
+		ARG 1 par2StructureBoundingBox
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7ArrayOfWeightedRandomChestContent
+		ARG 7 par8
+	METHOD func_74869_a generateStructureDispenserContents (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;IIII[Lnet/minecraft/util/WeightedRandomChestContent;I)Z
+		COMMENT Used to generate dispenser contents for structures. ex: Jungle Temples.
+		ARG 0 par1World
+		ARG 1 par2StructureBoundingBox
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8ArrayOfWeightedRandomChestContent
+		ARG 8 par9
+	METHOD func_74881_a placeDoorAtCurrentPosition (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;IIII)V
+		ARG 0 par1World
+		ARG 1 par2StructureBoundingBox
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7

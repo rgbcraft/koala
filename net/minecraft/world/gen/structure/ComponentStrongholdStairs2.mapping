@@ -1,3 +1,4 @@
 CLASS net/minecraft/world/gen/structure/ComponentStrongholdStairs2
 	FIELD field_75027_a strongholdPieceWeight Lnet/minecraft/world/gen/structure/StructureStrongholdPieceWeight;
 	FIELD field_75025_b strongholdPortalRoom Lnet/minecraft/world/gen/structure/ComponentStrongholdPortalRoom;
+	METHOD func_74868_a getCenter ()Lnet/minecraft/world/ChunkPosition;

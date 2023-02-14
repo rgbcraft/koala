@@ -1,32 +1,134 @@
 CLASS net/minecraft/client/renderer/Tessellator
 	FIELD field_78396_b convertQuadsToTriangles Z
+		COMMENT Boolean used to check whether quads should be drawn as two triangles. Initialized to false and never changed.
 	FIELD field_78397_c tryVBO Z
+		COMMENT Boolean used to check if we should use vertex buffers. Initialized to false and never changed.
 	FIELD field_78394_d byteBuffer Ljava/nio/ByteBuffer;
+		COMMENT The byte buffer used for GL allocation.
 	FIELD field_78395_e intBuffer Ljava/nio/IntBuffer;
+		COMMENT The same memory as byteBuffer, but referenced as an integer buffer.
 	FIELD field_78392_f floatBuffer Ljava/nio/FloatBuffer;
+		COMMENT The same memory as byteBuffer, but referenced as an float buffer.
 	FIELD field_78393_g shortBuffer Ljava/nio/ShortBuffer;
+		COMMENT Short buffer
 	FIELD field_78405_h rawBuffer [I
+		COMMENT Raw integer array.
 	FIELD field_78406_i vertexCount I
+		COMMENT The number of vertices to be drawn in the next draw call. Reset to 0 between draw calls.
 	FIELD field_78403_j textureU D
+		COMMENT The first coordinate to be used for the texture.
 	FIELD field_78404_k textureV D
+		COMMENT The second coordinate to be used for the texture.
 	FIELD field_78401_l brightness I
 	FIELD field_78402_m color I
+		COMMENT The color (RGBA) value to be used for the following draw call.
 	FIELD field_78399_n hasColor Z
+		COMMENT Whether the current draw object for this tessellator has color values.
 	FIELD field_78400_o hasTexture Z
+		COMMENT Whether the current draw object for this tessellator has texture coordinates.
 	FIELD field_78414_p hasBrightness Z
 	FIELD field_78413_q hasNormals Z
+		COMMENT Whether the current draw object for this tessellator has normal values.
 	FIELD field_78412_r rawBufferIndex I
+		COMMENT The index into the raw buffer to be used for the next data.
 	FIELD field_78411_s addedVertices I
+		COMMENT The number of vertices manually added to the given draw call. This differs from vertexCount because it adds extra vertices when converting quads to triangles.
 	FIELD field_78410_t isColorDisabled Z
+		COMMENT Disables all color information for the following draw call.
 	FIELD field_78409_u drawMode I
+		COMMENT The draw mode currently being used by the tessellator.
 	FIELD field_78408_v xOffset D
+		COMMENT An offset to be applied along the x-axis for all vertices in this draw call.
 	FIELD field_78407_w yOffset D
+		COMMENT An offset to be applied along the y-axis for all vertices in this draw call.
 	FIELD field_78417_x zOffset D
+		COMMENT An offset to be applied along the z-axis for all vertices in this draw call.
 	FIELD field_78416_y normal I
+		COMMENT The normal to be applied to the face being drawn.
 	FIELD field_78398_a instance Lnet/minecraft/client/renderer/Tessellator;
+		COMMENT The static instance of the Tessellator.
 	FIELD field_78415_z isDrawing Z
+		COMMENT Whether this tessellator is currently in draw mode.
 	FIELD field_78389_A useVBO Z
+		COMMENT Whether we are currently using VBO or not.
 	FIELD field_78390_B vertexBuffers Ljava/nio/IntBuffer;
+		COMMENT An IntBuffer used to store the indices of vertex buffer objects.
 	FIELD field_78391_C vboIndex I
+		COMMENT The index of the last VBO used. This is used in round-robin fashion, sequentially, through the vboCount vertex buffers.
 	FIELD field_78387_D vboCount I
+		COMMENT Number of vertex buffer objects allocated for use.
 	FIELD field_78388_E bufferSize I
+		COMMENT The size of the buffers used (in integers).
+	METHOD func_78381_a draw ()I
+		COMMENT Draws the data set up in this tessellator and resets the state to prepare for new drawing.
+	METHOD func_78379_d reset ()V
+		COMMENT Clears the tessellator state in preparation for new drawing.
+	METHOD func_78382_b startDrawingQuads ()V
+		COMMENT Sets draw mode in the tessellator to draw quads.
+	METHOD func_78371_b startDrawing (I)V
+		COMMENT Resets tessellator state and prepares for drawing (with the specified draw mode).
+		ARG 0 par1
+	METHOD func_78385_a setTextureUV (DD)V
+		COMMENT Sets the texture coordinates.
+		ARG 0 par1
+		ARG 1 par3
+	METHOD func_78380_c setBrightness (I)V
+		ARG 0 par1
+	METHOD func_78386_a setColorOpaque_F (FFF)V
+		COMMENT Sets the RGB values as specified, converting from floats between 0 and 1 to integers from 0-255.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_78369_a setColorRGBA_F (FFFF)V
+		COMMENT Sets the RGBA values for the color, converting from floats between 0 and 1 to integers from 0-255.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78376_a setColorOpaque (III)V
+		COMMENT Sets the RGB values as specified, and sets alpha to opaque.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_78370_a setColorRGBA (IIII)V
+		COMMENT Sets the RGBA values for the color. Also clamps them to 0-255.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78374_a addVertexWithUV (DDDDD)V
+		COMMENT Adds a vertex specifying both x,y,z and the texture u,v for it.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par9
+	METHOD func_78377_a addVertex (DDD)V
+		COMMENT Adds a vertex with the specified x,y,z to the current draw call. It will trigger a draw() if the buffer gets full.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_78378_d setColorOpaque_I (I)V
+		COMMENT Sets the color to the given opaque value (stored as byte values packed in an integer).
+		ARG 0 par1
+	METHOD func_78384_a setColorRGBA_I (II)V
+		COMMENT Sets the color to the given color (packed as bytes in integer) and alpha values.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_78383_c disableColor ()V
+		COMMENT Disables colors for the current draw call.
+	METHOD func_78375_b setNormal (FFF)V
+		COMMENT Sets the normal for the current draw call.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_78373_b setTranslation (DDD)V
+		COMMENT Sets the translation for all vertices in the current draw call.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_78372_c addTranslation (FFF)V
+		COMMENT Offsets the translation for all vertices in the current draw call.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

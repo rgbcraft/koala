@@ -1,8 +1,12 @@
 CLASS net/minecraft/client/model/ModelRenderer
 	FIELD field_78801_a textureWidth F
+		COMMENT The size of the texture file's width in pixels.
 	FIELD field_78799_b textureHeight F
+		COMMENT The size of the texture file's height in pixels.
 	FIELD field_78803_o textureOffsetX I
+		COMMENT The X offset into the texture used for displaying this model
 	FIELD field_78813_p textureOffsetY I
+		COMMENT The Y offset into the texture used for displaying this model
 	FIELD field_78800_c rotationPointX F
 	FIELD field_78797_d rotationPointY F
 	FIELD field_78798_e rotationPointZ F
@@ -11,10 +15,60 @@ CLASS net/minecraft/client/model/ModelRenderer
 	FIELD field_78808_h rotateAngleZ F
 	FIELD field_78812_q compiled Z
 	FIELD field_78811_r displayList I
+		COMMENT The GL display list rendered by the Tessellator for this model
 	FIELD field_78809_i mirror Z
 	FIELD field_78806_j showModel Z
 	FIELD field_78807_k isHidden Z
+		COMMENT Hides the model.
 	FIELD field_78804_l cubeList Ljava/util/List;
 	FIELD field_78805_m childModels Ljava/util/List;
 	FIELD field_78802_n boxName Ljava/lang/String;
 	FIELD field_78810_s baseModel Lnet/minecraft/client/model/ModelBase;
+	METHOD func_78792_a addChild (Lnet/minecraft/client/model/ModelRenderer;)V
+		COMMENT Sets the current box's rotation points and rotation angles to another box.
+		ARG 0 par1ModelRenderer
+	METHOD func_78784_a setTextureOffset (II)Lnet/minecraft/client/model/ModelRenderer;
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_78786_a addBox (Ljava/lang/String;FFFIII)Lnet/minecraft/client/model/ModelRenderer;
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78789_a addBox (FFFIII)Lnet/minecraft/client/model/ModelRenderer;
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_78790_a addBox (FFFIIIF)V
+		COMMENT Creates a textured box. Args: originX, originY, originZ, width, height, depth, scaleFactor.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78793_a setRotationPoint (FFF)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_78785_a render (F)V
+		ARG 0 par1
+	METHOD func_78791_b renderWithRotation (F)V
+		ARG 0 par1
+	METHOD func_78794_c postRender (F)V
+		COMMENT Allows the changing of Angles after a box has been rendered
+		ARG 0 par1
+	METHOD func_78788_d compileDisplayList (F)V
+		COMMENT Compiles a GL display list for this model
+		ARG 0 par1
+	METHOD func_78787_b setTextureSize (II)Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Returns the model renderer with the new texture parameters.
+		ARG 0 par1
+		ARG 1 par2

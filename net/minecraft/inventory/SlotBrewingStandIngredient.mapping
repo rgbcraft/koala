@@ -1,2 +1,8 @@
 CLASS net/minecraft/inventory/SlotBrewingStandIngredient
 	FIELD field_75226_a brewingStand Lnet/minecraft/inventory/ContainerBrewingStand;
+		COMMENT The brewing stand this slot belongs to.
+	METHOD func_75214_a isItemValid (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Check if the stack is a valid item for this slot. Always true beside for the armor slots.
+		ARG 0 par1ItemStack
+	METHOD func_75219_a getSlotStackLimit ()I
+		COMMENT Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(), but 1 in the case of armor slots)

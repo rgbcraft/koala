@@ -1,10 +1,46 @@
 CLASS net/minecraft/item/ItemFood
 	FIELD field_77855_a itemUseDuration I
+		COMMENT Number of ticks to run while 'EnumAction'ing until result.
 	FIELD field_77853_b healAmount I
+		COMMENT The amount this food item heals the player.
 	FIELD field_77854_c saturationModifier F
 	FIELD field_77856_bY isWolfsFavoriteMeat Z
+		COMMENT Whether wolves like this food (true for raw and cooked porkchop).
 	FIELD field_77852_bZ alwaysEdible Z
+		COMMENT If this field is true, the food can be consumed even if the player don't need to eat.
 	FIELD field_77851_ca potionId I
+		COMMENT represents the potion effect that will occurr upon eating this food. Set by setPotionEffect
 	FIELD field_77850_cb potionDuration I
+		COMMENT set by setPotionEffect
 	FIELD field_77857_cc potionAmplifier I
+		COMMENT set by setPotionEffect
 	FIELD field_77858_cd potionEffectProbability F
+		COMMENT probably of the set potion effect occurring
+	METHOD func_77654_b onFoodEaten (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer
+	METHOD func_77626_a getMaxItemUseDuration (Lnet/minecraft/item/ItemStack;)I
+		COMMENT How long it takes to use or consume an item
+		ARG 0 par1ItemStack
+	METHOD func_77661_b getItemUseAction (Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumAction;
+		COMMENT returns the action that specifies what animation to play when the items is being used
+		ARG 0 par1ItemStack
+	METHOD func_77659_a onItemRightClick (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		COMMENT Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer
+	METHOD func_77847_f getHealAmount ()I
+	METHOD func_77846_g getSaturationModifier ()F
+		COMMENT gets the saturationModifier of the ItemFood
+	METHOD func_77845_h isWolfsFavoriteMeat ()Z
+		COMMENT Whether wolves like this food (true for raw and cooked porkchop).
+	METHOD func_77844_a setPotionEffect (IIIF)Lnet/minecraft/item/ItemFood;
+		COMMENT sets a potion effect on the item. Args: int potionId, int duration (will be multiplied by 20), int amplifier, float probability of effect happening
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_77848_i setAlwaysEdible ()Lnet/minecraft/item/ItemFood;
+		COMMENT Set the field 'alwaysEdible' to true, and make the food edible even if the player don't need to eat.

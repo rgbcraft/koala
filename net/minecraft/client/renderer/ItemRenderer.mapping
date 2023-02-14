@@ -1,8 +1,46 @@
 CLASS net/minecraft/client/renderer/ItemRenderer
 	FIELD field_78455_a mc Lnet/minecraft/client/Minecraft;
+		COMMENT A reference to the Minecraft object.
 	FIELD field_78453_b itemToRender Lnet/minecraft/item/ItemStack;
 	FIELD field_78454_c equippedProgress F
+		COMMENT How far the current item has been equipped (0 disequipped and 1 fully up)
 	FIELD field_78451_d prevEquippedProgress F
 	FIELD field_78452_e renderBlocksInstance Lnet/minecraft/client/renderer/RenderBlocks;
+		COMMENT Instance of RenderBlocks.
 	FIELD field_78449_f mapItemRenderer Lnet/minecraft/client/gui/MapItemRenderer;
 	FIELD field_78450_g equippedItemSlot I
+		COMMENT The index of the currently held item (0-8, or -1 if not yet updated)
+	METHOD func_78443_a renderItem (Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/item/ItemStack;I)V
+		COMMENT Renders the item stack for being in an entity's hand Args: itemStack
+		ARG 0 par1EntityLiving
+		ARG 1 par2ItemStack
+		ARG 2 par3
+	METHOD func_78439_a renderItemIn2D (Lnet/minecraft/client/renderer/Tessellator;FFFFF)V
+		COMMENT Renders an item held in hand as a 2D texture with thickness
+		ARG 0 par0Tessellator
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+	METHOD func_78440_a renderItemInFirstPerson (F)V
+		COMMENT Renders the active item in the player's hand when in first person mode. Args: partialTickTime
+		ARG 0 par1
+	METHOD func_78447_b renderOverlays (F)V
+		COMMENT Renders all the overlays that are in first person mode. Args: partialTickTime
+		ARG 0 par1
+	METHOD func_78446_a renderInsideOfBlock (FI)V
+		COMMENT Renders the texture of the block the player is inside as an overlay. Args: partialTickTime, blockTextureIndex
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_78448_c renderWarpedTextureOverlay (F)V
+		COMMENT Renders a texture that warps around based on the direction the player is looking. Texture needs to be bound before being called. Used for the water overlay. Args: parialTickTime
+		ARG 0 par1
+	METHOD func_78442_d renderFireInFirstPerson (F)V
+		COMMENT Renders the fire on the screen for first person mode. Arg: partialTickTime
+		ARG 0 par1
+	METHOD func_78441_a updateEquippedItem ()V
+	METHOD func_78444_b resetEquippedProgress ()V
+		COMMENT Resets equippedProgress
+	METHOD func_78445_c resetEquippedProgress2 ()V
+		COMMENT Resets equippedProgress

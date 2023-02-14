@@ -1,1 +1,8 @@
 CLASS net/minecraft/item/crafting/RecipesMapExtending
+	METHOD func_77569_a matches (Lnet/minecraft/inventory/InventoryCrafting;Lnet/minecraft/world/World;)Z
+		COMMENT Used to check if a recipe matches current crafting inventory
+		ARG 0 par1InventoryCrafting
+		ARG 1 par2World
+	METHOD func_77572_b getCraftingResult (Lnet/minecraft/inventory/InventoryCrafting;)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns an Item that is the result of this recipe
+		ARG 0 par1InventoryCrafting

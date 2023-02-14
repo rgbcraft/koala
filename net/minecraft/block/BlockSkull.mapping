@@ -1,1 +1,81 @@
 CLASS net/minecraft/block/BlockSkull
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71902_a setBlockBoundsBasedOnState (Lnet/minecraft/world/IBlockAccess;III)V
+		COMMENT Updates the blocks bounds based on its current state. Args: world, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71860_a onBlockPlacedBy (Lnet/minecraft/world/World;IIILnet/minecraft/entity/EntityLiving;)V
+		COMMENT Called when the block is placed in the world.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityLiving
+	METHOD func_72274_a createNewTileEntity (Lnet/minecraft/world/World;)Lnet/minecraft/tileentity/TileEntity;
+		COMMENT Returns a new instance of a block's tile entity class. Called on placing the block.
+		ARG 0 par1World
+	METHOD func_71922_a idPicked (Lnet/minecraft/world/World;III)I
+		COMMENT only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71873_h getDamageValue (Lnet/minecraft/world/World;III)I
+		COMMENT Get the block's damage value (for use with pick block).
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71899_b damageDropped (I)I
+		COMMENT Determines the damage on the item the block drops. Used in cloth and wood.
+		ARG 0 par1
+	METHOD func_71914_a dropBlockAsItemWithChance (Lnet/minecraft/world/World;IIIIFI)V
+		COMMENT Drops the block items with a specified chance of dropping the specified items
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_71846_a onBlockHarvested (Lnet/minecraft/world/World;IIIILnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Called when the block is attempted to be harvested
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6EntityPlayer
+	METHOD func_71852_a breakBlock (Lnet/minecraft/world/World;IIIII)V
+		COMMENT ejects contained items into the world, and notifies neighbours of an update, as appropriate
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_82529_a makeWither (Lnet/minecraft/world/World;IIILnet/minecraft/tileentity/TileEntitySkull;)V
+		COMMENT This method attempts to create a wither at the given location and skull
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5TileEntitySkull

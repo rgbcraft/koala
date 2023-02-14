@@ -1,2 +1,9 @@
 CLASS net/minecraft/util/StatCollector
 	FIELD field_74839_a localizedName Lnet/minecraft/util/StringTranslate;
+	METHOD func_74838_a translateToLocal (Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Translates a Stat name
+		ARG 0 par0Str
+	METHOD func_74837_a translateToLocalFormatted (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+		COMMENT Translates a Stat name with format args
+		ARG 0 par0Str
+		ARG 1 par1ArrayOfObj

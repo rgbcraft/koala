@@ -1,2 +1,5 @@
 CLASS net/minecraft/world/gen/structure/StructureVillageStart
 	FIELD field_75076_c hasMoreThanTwoComponents Z
+		COMMENT well ... thats what it does
+	METHOD func_75069_d isSizeableStructure ()Z
+		COMMENT currently only defined for Villages, returns true if Village has more than 2 non-road components

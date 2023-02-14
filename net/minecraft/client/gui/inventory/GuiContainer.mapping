@@ -1,14 +1,101 @@
 CLASS net/minecraft/client/gui/inventory/GuiContainer
 	FIELD field_74196_a itemRenderer Lnet/minecraft/client/renderer/entity/RenderItem;
+		COMMENT Stacks renderer. Icons, stack size, health, etc...
 	FIELD field_74194_b xSize I
+		COMMENT The X size of the inventory window in pixels.
 	FIELD field_74195_c ySize I
+		COMMENT The Y size of the inventory window in pixels.
 	FIELD field_74193_d inventorySlots Lnet/minecraft/inventory/Container;
+		COMMENT A list of the players inventory slots.
 	FIELD field_74198_m guiLeft I
+		COMMENT Starting X position for the Gui. Inconsistent use for Gui backgrounds.
 	FIELD field_74197_n guiTop I
+		COMMENT Starting Y position for the Gui. Inconsistent use for Gui backgrounds.
 	FIELD field_82320_o theSlot Lnet/minecraft/inventory/Slot;
 	FIELD field_85051_p clickedSlot Lnet/minecraft/inventory/Slot;
+		COMMENT Used when touchscreen is enabled
 	FIELD field_90018_r isRightMouseClick Z
+		COMMENT Used when touchscreen is enabled
 	FIELD field_85050_q draggedStack Lnet/minecraft/item/ItemStack;
+		COMMENT Used when touchscreen is enabled
 	FIELD field_85047_t returningStackDestSlot Lnet/minecraft/inventory/Slot;
 	FIELD field_85046_u returningStackTime J
 	FIELD field_85045_v returningStack Lnet/minecraft/item/ItemStack;
+		COMMENT Used when touchscreen is enabled
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_85044_b drawItemStack (Lnet/minecraft/item/ItemStack;II)V
+		ARG 0 par1ItemStack
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74184_a drawItemStackTooltip (Lnet/minecraft/item/ItemStack;II)V
+		ARG 0 par1ItemStack
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74190_a drawCreativeTabHoveringText (Ljava/lang/String;II)V
+		COMMENT Draws the text when mouse is over creative inventory tab. Params: current creative tab to be checked, current mouse x position, current mouse y position.
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74189_g drawGuiContainerForegroundLayer (II)V
+		COMMENT Draw the foreground layer for the GuiContainer (everything in front of the items)
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74185_a drawGuiContainerBackgroundLayer (FII)V
+		COMMENT Draw the background layer for the GuiContainer (everything behind the items)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74192_a drawSlotInventory (Lnet/minecraft/inventory/Slot;)V
+		COMMENT Draws an inventory slot
+		ARG 0 par1Slot
+	METHOD func_74187_b getSlotAtPosition (II)Lnet/minecraft/inventory/Slot;
+		COMMENT Returns the slot at the given coordinates or null if there is none.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73864_a mouseClicked (III)V
+		COMMENT Called when the mouse is clicked.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73879_b mouseMovedOrUp (III)V
+		COMMENT Called when the mouse is moved or a mouse button is released.  Signature: (mouseX, mouseY, which) which==-1 is mouseMove, which==0 or which==1 is mouseUp
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74186_a isMouseOverSlot (Lnet/minecraft/inventory/Slot;II)Z
+		COMMENT Returns if the passed mouse position is over the specified slot.
+		ARG 0 par1Slot
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74188_c isPointInRegion (IIIIII)Z
+		COMMENT Args: left, top, width, height, pointX, pointY. Note: left, top are local to Gui, pointX, pointY are local to screen
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_74191_a handleMouseClick (Lnet/minecraft/inventory/Slot;III)V
+		ARG 0 par1Slot
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73869_a keyTyped (CI)V
+		COMMENT Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_82319_a checkHotbarKeys (I)Z
+		COMMENT This function is what controls the hotbar shortcut check when you press a number key when hovering a stack.
+		ARG 0 par1
+	METHOD func_73874_b onGuiClosed ()V
+		COMMENT Called when the screen is unloaded. Used to disable keyboard repeat events
+	METHOD func_73868_f doesGuiPauseGame ()Z
+		COMMENT Returns true if this GUI should pause the game when it is displayed in single-player
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.

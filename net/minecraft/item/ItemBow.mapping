@@ -1,1 +1,24 @@
 CLASS net/minecraft/item/ItemBow
+	METHOD func_77615_a onPlayerStoppedUsing (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;I)V
+		COMMENT called when the player releases the use item button. Args: itemstack, world, entityplayer, itemInUseCount
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer
+		ARG 3 par4
+	METHOD func_77654_b onFoodEaten (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer
+	METHOD func_77626_a getMaxItemUseDuration (Lnet/minecraft/item/ItemStack;)I
+		COMMENT How long it takes to use or consume an item
+		ARG 0 par1ItemStack
+	METHOD func_77661_b getItemUseAction (Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumAction;
+		COMMENT returns the action that specifies what animation to play when the items is being used
+		ARG 0 par1ItemStack
+	METHOD func_77659_a onItemRightClick (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		COMMENT Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer
+	METHOD func_77619_b getItemEnchantability ()I
+		COMMENT Return the enchantability factor of the item, most of the time is based on material.

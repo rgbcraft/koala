@@ -1,6 +1,40 @@
 CLASS net/minecraft/util/FoodStats
 	FIELD field_75127_a foodLevel I
+		COMMENT The player's food level.
 	FIELD field_75125_b foodSaturationLevel F
+		COMMENT The player's food saturation.
 	FIELD field_75126_c foodExhaustionLevel F
+		COMMENT The player's food exhaustion.
 	FIELD field_75123_d foodTimer I
+		COMMENT The player's food timer value.
 	FIELD field_75124_e prevFoodLevel I
+	METHOD func_75122_a addStats (IF)V
+		COMMENT Args: int foodLevel, float foodSaturationModifier
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75111_a addStats (Lnet/minecraft/item/ItemFood;)V
+		COMMENT Eat some food.
+		ARG 0 par1ItemFood
+	METHOD func_75118_a onUpdate (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Handles the food game logic.
+		ARG 0 par1EntityPlayer
+	METHOD func_75112_a readNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads food stats from an NBT object.
+		ARG 0 par1NBTTagCompound
+	METHOD func_75117_b writeNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes food stats to an NBT object.
+		ARG 0 par1NBTTagCompound
+	METHOD func_75116_a getFoodLevel ()I
+		COMMENT Get the player's food level.
+	METHOD func_75120_b getPrevFoodLevel ()I
+	METHOD func_75121_c needFood ()Z
+		COMMENT If foodLevel is not max.
+	METHOD func_75113_a addExhaustion (F)V
+		COMMENT adds input to foodExhaustionLevel to a max of 40
+		ARG 0 par1
+	METHOD func_75115_e getSaturationLevel ()F
+		COMMENT Get the player's food saturation level.
+	METHOD func_75114_a setFoodLevel (I)V
+		ARG 0 par1
+	METHOD func_75119_b setFoodSaturationLevel (F)V
+		ARG 0 par1

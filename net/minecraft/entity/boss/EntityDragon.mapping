@@ -3,19 +3,81 @@ CLASS net/minecraft/entity/boss/EntityDragon
 	FIELD field_70981_c targetY D
 	FIELD field_70978_d targetZ D
 	FIELD field_70979_e ringBuffer [D
+		COMMENT Ring buffer array for the last 64 Y-positions and yaw rotations. Used to calculate offsets for the animations.
 	FIELD field_70976_f ringBufferIndex I
+		COMMENT Index into the ring buffer. Incremented once per tick and restarts at 0 once it reaches the end of the buffer.
 	FIELD field_70977_g dragonPartArray [Lnet/minecraft/entity/boss/EntityDragonPart;
+		COMMENT An array containing all body parts of this dragon
 	FIELD field_70986_h dragonPartHead Lnet/minecraft/entity/boss/EntityDragonPart;
+		COMMENT The head bounding box of a dragon
 	FIELD field_70987_i dragonPartBody Lnet/minecraft/entity/boss/EntityDragonPart;
+		COMMENT The body bounding box of a dragon
 	FIELD field_70985_j dragonPartTail1 Lnet/minecraft/entity/boss/EntityDragonPart;
 	FIELD field_70984_by dragonPartTail2 Lnet/minecraft/entity/boss/EntityDragonPart;
 	FIELD field_70982_bz dragonPartTail3 Lnet/minecraft/entity/boss/EntityDragonPart;
 	FIELD field_70983_bA dragonPartWing1 Lnet/minecraft/entity/boss/EntityDragonPart;
 	FIELD field_70990_bB dragonPartWing2 Lnet/minecraft/entity/boss/EntityDragonPart;
 	FIELD field_70991_bC prevAnimTime F
+		COMMENT Animation time at previous tick.
 	FIELD field_70988_bD animTime F
+		COMMENT Animation time, used to control the speed of the animation cycles (wings flapping, jaw opening, etc.)
 	FIELD field_70989_bE forceNewTarget Z
+		COMMENT Force selecting a new flight target at next tick if set to true.
 	FIELD field_70994_bF slowed Z
+		COMMENT Activated if the dragon is flying though obsidian, white stone or bedrock. Slows movement and animation speed.
 	FIELD field_70993_bI target Lnet/minecraft/entity/Entity;
 	FIELD field_70995_bG deathTicks I
 	FIELD field_70992_bH healingEnderCrystal Lnet/minecraft/entity/item/EntityEnderCrystal;
+		COMMENT The current endercrystal that is healing this dragon
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70974_a getMovementOffsets (IF)[D
+		COMMENT Returns a double[3] array with movement offsets, used to calculate trailing tail/neck positions. [0] = yaw offset, [1] = y offset, [2] = unused, always 0. Parameters: buffer index offset, partial ticks.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70969_j updateDragonEnderCrystal ()V
+		COMMENT Updates the state of the enderdragon's current endercrystal.
+	METHOD func_70970_a collideWithEntities (Ljava/util/List;)V
+		COMMENT Pushes all entities inside the list away from the enderdragon.
+		ARG 0 par1List
+	METHOD func_70971_b attackEntitiesInList (Ljava/util/List;)V
+		COMMENT Attacks all entities inside this list, dealing 5 hearts of damage.
+		ARG 0 par1List
+	METHOD func_70967_k setNewTarget ()V
+		COMMENT Sets a new target for the flight AI. It can be a random coordinate or a nearby player.
+	METHOD func_70973_b simplifyAngle (D)F
+		COMMENT Simplifies the value of a number by adding/subtracting 180 to the point that the number is between -180 and 180.
+		ARG 0 par1
+	METHOD func_70972_a destroyBlocksInAABB (Lnet/minecraft/util/AxisAlignedBB;)Z
+		COMMENT Destroys all blocks that aren't associated with 'The End' inside the given bounding box.
+		ARG 0 par1AxisAlignedBB
+	METHOD func_70965_a attackEntityFromPart (Lnet/minecraft/entity/boss/EntityDragonPart;Lnet/minecraft/util/DamageSource;I)Z
+		ARG 0 par1EntityDragonPart
+		ARG 1 par2DamageSource
+		ARG 2 par3
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70609_aI onDeathUpdate ()V
+		COMMENT handles entity death timer, experience orb and particle creation
+	METHOD func_70975_a createEnderPortal (II)V
+		COMMENT Creates the ender portal leading back to the normal world after defeating the enderdragon.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70623_bb despawnEntity ()V
+		COMMENT Makes the entity despawn if requirements are reached
+	METHOD func_70021_al getParts ()[Lnet/minecraft/entity/Entity;
+		COMMENT Return the Entity parts making up this Entity (currently only for dragons)
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70968_i getDragonHealth ()I
+		COMMENT Returns the health points of the dragon.
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70599_aP getSoundVolume ()F
+		COMMENT Returns the volume for the sounds this mob makes.

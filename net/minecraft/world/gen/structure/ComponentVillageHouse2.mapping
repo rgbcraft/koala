@@ -1,4 +1,13 @@
 CLASS net/minecraft/world/gen/structure/ComponentVillageHouse2
 	FIELD field_74918_a villageBlacksmithChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
+		COMMENT List of items that Village's Blacksmith chest can contain.
 	FIELD field_74916_b averageGroundLevel I
 	FIELD field_74917_c hasMadeChest Z
+	METHOD func_74875_a addComponentParts (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3StructureBoundingBox
+	METHOD func_74888_b getVillagerType (I)I
+		COMMENT Returns the villager type to spawn in this component, based on the number of villagers already spawned.
+		ARG 0 par1

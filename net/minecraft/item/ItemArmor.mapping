@@ -1,6 +1,38 @@
 CLASS net/minecraft/item/ItemArmor
 	FIELD field_77882_bY maxDamageArray [I
+		COMMENT Holds the 'base' maxDamage that each armorType have.
 	FIELD field_77881_a armorType I
+		COMMENT Stores the armor type: 0 is helmet, 1 is plate, 2 is legs and 3 is boots
 	FIELD field_77879_b damageReduceAmount I
+		COMMENT Holds the amount of damage that the armor reduces at full durability.
 	FIELD field_77880_c renderIndex I
+		COMMENT Used on RenderPlayer to select the correspondent armor to be rendered on the player: 0 is cloth, 1 is chain, 2 is iron, 3 is diamond and 4 is gold.
 	FIELD field_77878_bZ material Lnet/minecraft/item/EnumArmorMaterial;
+		COMMENT The EnumArmorMaterial used for this ItemArmor
+	METHOD func_82790_a getColorFromItemStack (Lnet/minecraft/item/ItemStack;I)I
+		ARG 0 par1ItemStack
+		ARG 1 par2
+	METHOD func_77623_v requiresMultipleRenderPasses ()Z
+	METHOD func_77619_b getItemEnchantability ()I
+		COMMENT Return the enchantability factor of the item, most of the time is based on material.
+	METHOD func_82812_d getArmorMaterial ()Lnet/minecraft/item/EnumArmorMaterial;
+		COMMENT Return the armor material for this armor item.
+	METHOD func_82816_b_ hasColor (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Return whether the specified armor ItemStack has a color.
+		ARG 0 par1ItemStack
+	METHOD func_82814_b getColor (Lnet/minecraft/item/ItemStack;)I
+		COMMENT Return the color for the specified armor ItemStack.
+		ARG 0 par1ItemStack
+	METHOD func_77618_c getIconFromDamageForRenderPass (II)I
+		COMMENT Gets an icon index based on an item's damage value and the given render pass
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_82815_c removeColor (Lnet/minecraft/item/ItemStack;)V
+		COMMENT Remove the color from the specified armor ItemStack.
+		ARG 0 par1ItemStack
+	METHOD func_82789_a getIsRepairable (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Return whether this item is repairable in an anvil.
+		ARG 0 par1ItemStack
+		ARG 1 par2ItemStack
+	METHOD func_77877_c getMaxDamageArray ()[I
+		COMMENT Returns the 'max damage' factor array for the armor, each piece of armor have a durability factor (that gets multiplied by armor material factor)

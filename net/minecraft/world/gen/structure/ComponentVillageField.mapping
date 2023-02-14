@@ -1,6 +1,18 @@
 CLASS net/minecraft/world/gen/structure/ComponentVillageField
 	FIELD field_74901_a averageGroundLevel I
 	FIELD field_82679_b cropTypeA I
+		COMMENT First crop type for this field.
 	FIELD field_82680_c cropTypeB I
+		COMMENT Second crop type for this field.
 	FIELD field_82678_d cropTypeC I
+		COMMENT Third crop type for this field.
 	FIELD field_82681_h cropTypeD I
+		COMMENT Fourth crop type for this field.
+	METHOD func_82677_a getRandomCrop (Ljava/util/Random;)I
+		COMMENT Returns a crop type to be planted on this field.
+		ARG 0 par1Random
+	METHOD func_74875_a addComponentParts (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3StructureBoundingBox

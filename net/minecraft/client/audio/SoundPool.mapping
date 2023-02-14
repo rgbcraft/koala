@@ -1,6 +1,19 @@
 CLASS net/minecraft/client/audio/SoundPool
 	FIELD field_77464_c rand Ljava/util/Random;
+		COMMENT The RNG used by SoundPool.
 	FIELD field_77461_d nameToSoundPoolEntriesMapping Ljava/util/Map;
+		COMMENT Maps a name (can be sound/newsound/streaming/music/newmusic) to a list of SoundPoolEntry's.
 	FIELD field_77462_e allSoundPoolEntries Ljava/util/List;
+		COMMENT A list of all SoundPoolEntries that have been loaded.
 	FIELD field_77465_a numberOfSoundPoolEntries I
+		COMMENT The number of soundPoolEntry's. This value is computed but never used (should be equal to allSoundPoolEntries.size()).
 	FIELD field_77463_b isGetRandomSound Z
+	METHOD func_77459_a addSound (Ljava/lang/String;Ljava/io/File;)Lnet/minecraft/client/audio/SoundPoolEntry;
+		COMMENT Adds a sound to this sound pool.
+		ARG 0 par1Str
+		ARG 1 par2File
+	METHOD func_77458_a getRandomSoundFromSoundPool (Ljava/lang/String;)Lnet/minecraft/client/audio/SoundPoolEntry;
+		COMMENT gets a random sound from the specified (by name, can be sound/newsound/streaming/music/newmusic) sound pool.
+		ARG 0 par1Str
+	METHOD func_77460_a getRandomSound ()Lnet/minecraft/client/audio/SoundPoolEntry;
+		COMMENT Gets a random SoundPoolEntry.

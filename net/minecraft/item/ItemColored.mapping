@@ -1,3 +1,17 @@
 CLASS net/minecraft/item/ItemColored
 	FIELD field_77896_a blockRef Lnet/minecraft/block/Block;
 	FIELD field_77895_b blockNames [Ljava/lang/String;
+	METHOD func_82790_a getColorFromItemStack (Lnet/minecraft/item/ItemStack;I)I
+		ARG 0 par1ItemStack
+		ARG 1 par2
+	METHOD func_77617_a getIconFromDamage (I)I
+		COMMENT Gets an icon index based on an item's damage value
+		ARG 0 par1
+	METHOD func_77647_b getMetadata (I)I
+		COMMENT Returns the metadata of the block which this Item (ItemBlock) can place
+		ARG 0 par1
+	METHOD func_77894_a setBlockNames ([Ljava/lang/String;)Lnet/minecraft/item/ItemColored;
+		COMMENT Sets the array of strings to be used for name lookups from item damage to metadata
+		ARG 0 par1ArrayOfStr
+	METHOD func_77667_c getItemNameIS (Lnet/minecraft/item/ItemStack;)Ljava/lang/String;
+		ARG 0 par1ItemStack

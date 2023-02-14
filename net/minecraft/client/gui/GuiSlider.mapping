@@ -1,4 +1,24 @@
 CLASS net/minecraft/client/gui/GuiSlider
 	FIELD field_73751_j sliderValue F
+		COMMENT The value of this slider control.
 	FIELD field_73752_k dragging Z
+		COMMENT Is this slider control being dragged.
 	FIELD field_73750_l idFloat Lnet/minecraft/client/settings/EnumOptions;
+		COMMENT Additional ID for this slider control.
+	METHOD func_73738_a getHoverState (Z)I
+		COMMENT Returns 0 if the button is disabled, 1 if the mouse is NOT hovering over this button and 2 if it IS hovering over this button.
+		ARG 0 par1
+	METHOD func_73739_b mouseDragged (Lnet/minecraft/client/Minecraft;II)V
+		COMMENT Fired when the mouse button is dragged. Equivalent of MouseListener.mouseDragged(MouseEvent e).
+		ARG 0 par1Minecraft
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73736_c mousePressed (Lnet/minecraft/client/Minecraft;II)Z
+		COMMENT Returns true if the mouse has been pressed on this control. Equivalent of MouseListener.mousePressed(MouseEvent e).
+		ARG 0 par1Minecraft
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73740_a mouseReleased (II)V
+		COMMENT Fired when the mouse button is released. Equivalent of MouseListener.mouseReleased(MouseEvent e).
+		ARG 0 par1
+		ARG 1 par2

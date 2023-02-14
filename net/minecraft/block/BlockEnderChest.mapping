@@ -1,1 +1,45 @@
 CLASS net/minecraft/block/BlockEnderChest
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_71906_q_ canSilkHarvest ()Z
+		COMMENT Return true if a player with Silk Touch can harvest this block directly, and not its normal drops.
+	METHOD func_71860_a onBlockPlacedBy (Lnet/minecraft/world/World;IIILnet/minecraft/entity/EntityLiving;)V
+		COMMENT Called when the block is placed in the world.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityLiving
+	METHOD func_71903_a onBlockActivated (Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;IFFF)Z
+		COMMENT Called upon block activation (right click on the block.)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityPlayer
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_72274_a createNewTileEntity (Lnet/minecraft/world/World;)Lnet/minecraft/tileentity/TileEntity;
+		COMMENT Returns a new instance of a block's tile entity class. Called on placing the block.
+		ARG 0 par1World
+	METHOD func_71862_a randomDisplayTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT A randomly called display update to be able to add particles or other items for display
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random

@@ -1,2 +1,32 @@
 CLASS net/minecraft/world/storage/SaveFormatOld
 	FIELD field_75808_a savesDirectory Ljava/io/File;
+		COMMENT Reference to the File object representing the directory for the world saves
+	METHOD func_75799_b getSaveList ()Ljava/util/List;
+	METHOD func_75800_d flushCache ()V
+	METHOD func_75803_c getWorldInfo (Ljava/lang/String;)Lnet/minecraft/world/storage/WorldInfo;
+		COMMENT gets the world info
+		ARG 0 par1Str
+	METHOD func_75806_a renameWorld (Ljava/lang/String;Ljava/lang/String;)V
+		COMMENT @args: Takes two arguments - first the name of the directory containing the world and second the new name for that world. @desc: Renames the world by storing the new name in level.dat. It does *not* rename the directory containing the world data.
+		ARG 0 par1Str
+		ARG 1 par2Str
+	METHOD func_75802_e deleteWorldDirectory (Ljava/lang/String;)Z
+		COMMENT @args: Takes one argument - the name of the directory of the world to delete. @desc: Delete the world by deleting the associated directory recursively.
+		ARG 0 par1Str
+	METHOD func_75807_a deleteFiles ([Ljava/io/File;)Z
+		COMMENT @args: Takes one argument - the list of files and directories to delete. @desc: Deletes the files and directory listed in the list recursively.
+		ARG 0 par0ArrayOfFile
+	METHOD func_75804_a getSaveLoader (Ljava/lang/String;Z)Lnet/minecraft/world/storage/ISaveHandler;
+		COMMENT Returns back a loader for the specified save directory
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_75801_b isOldMapFormat (Ljava/lang/String;)Z
+		COMMENT Checks if the save directory uses the old map format
+		ARG 0 par1Str
+	METHOD func_75805_a convertMapFormat (Ljava/lang/String;Lnet/minecraft/util/IProgressUpdate;)Z
+		COMMENT Converts the specified map to the new map format. Args: worldName, loadingScreen
+		ARG 0 par1Str
+		ARG 1 par2IProgressUpdate
+	METHOD func_90033_f canLoadWorld (Ljava/lang/String;)Z
+		COMMENT Return whether the given world can be loaded.
+		ARG 0 par1Str

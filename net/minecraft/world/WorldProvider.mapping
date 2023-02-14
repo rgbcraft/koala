@@ -1,9 +1,66 @@
 CLASS net/minecraft/world/WorldProvider
 	FIELD field_76579_a worldObj Lnet/minecraft/world/World;
+		COMMENT world object being used
 	FIELD field_76577_b terrainType Lnet/minecraft/world/WorldType;
 	FIELD field_76578_c worldChunkMgr Lnet/minecraft/world/biome/WorldChunkManager;
+		COMMENT World chunk manager being used to generate chunks
 	FIELD field_76575_d isHellWorld Z
+		COMMENT States whether the Hell world provider is used(true) or if the normal world provider is used(false)
 	FIELD field_76576_e hasNoSky Z
+		COMMENT A boolean that tells if a world does not have a sky. Used in calculating weather and skylight
 	FIELD field_76573_f lightBrightnessTable [F
+		COMMENT Light to brightness conversion table
 	FIELD field_76574_g dimensionId I
+		COMMENT The id for the dimension (ex. -1: Nether, 0: Overworld, 1: The End)
 	FIELD field_76580_h colorsSunriseSunset [F
+		COMMENT Array for sunrise/sunset colors (RGBA)
+	METHOD func_76558_a registerWorld (Lnet/minecraft/world/World;)V
+		COMMENT associate an existing world with a World provider, and setup its lightbrightness table
+		ARG 0 par1World
+	METHOD func_76556_a generateLightBrightnessTable ()V
+		COMMENT Creates the light to brightness table
+	METHOD func_76572_b registerWorldChunkManager ()V
+		COMMENT creates a new world chunk manager for WorldProvider
+	METHOD func_76555_c createChunkGenerator ()Lnet/minecraft/world/chunk/IChunkProvider;
+		COMMENT Returns a new chunk provider which generates chunks for this world
+	METHOD func_76566_a canCoordinateBeSpawn (II)Z
+		COMMENT Will check if the x, z position specified is alright to be set as the map spawn point
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76563_a calculateCelestialAngle (JF)F
+		COMMENT Calculates the angle of sun and moon in the sky relative to a specified time (usually worldTime)
+		ARG 0 par1
+		ARG 1 par3
+	METHOD func_76559_b getMoonPhase (JF)I
+		ARG 0 par1
+		ARG 1 par3
+	METHOD func_76569_d isSurfaceWorld ()Z
+		COMMENT Returns 'true' if in the "main surface world", but 'false' if in the Nether or End dimensions.
+	METHOD func_76560_a calcSunriseSunsetColors (FF)[F
+		COMMENT Returns array with sunrise/sunset colors
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76562_b getFogColor (FF)Lnet/minecraft/util/Vec3;
+		COMMENT Return Vec3D with biome specific fog color
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76567_e canRespawnHere ()Z
+		COMMENT True if the player can respawn in this dimension (true = overworld, false = nether).
+	METHOD func_76570_a getProviderForDimension (I)Lnet/minecraft/world/WorldProvider;
+		ARG 0 par0
+	METHOD func_76571_f getCloudHeight ()F
+		COMMENT the y level at which clouds are rendered.
+	METHOD func_76561_g isSkyColored ()Z
+	METHOD func_76554_h getEntrancePortalLocation ()Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT Gets the hard-coded portal location to use when entering this dimension.
+	METHOD func_76557_i getAverageGroundLevel ()I
+	METHOD func_76564_j getWorldHasVoidParticles ()Z
+		COMMENT returns true if this dimension is supposed to display void particles and pull in the far plane based on the user's Y offset.
+	METHOD func_76565_k getVoidFogYFactor ()D
+		COMMENT Returns a double value representing the Y value relative to the top of the map at which void fog is at its maximum. The default factor of 0.03125 relative to 256, for example, means the void fog will be at its maximum at (256*0.03125), or 8.
+	METHOD func_76568_b doesXZShowFog (II)Z
+		COMMENT Returns true if the given X,Z coordinate should show environmental fog.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_80007_l getDimensionName ()Ljava/lang/String;
+		COMMENT Returns the dimension's name, e.g. "The End", "Nether", or "Overworld".

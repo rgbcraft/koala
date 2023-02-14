@@ -1,5 +1,27 @@
 CLASS net/minecraft/client/model/ModelSilverfish
 	FIELD field_78171_a silverfishBodyParts [Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The body parts of the silverfish's model.
 	FIELD field_78169_b silverfishWings [Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The wings (dust-looking sprites) on the silverfish's model.
 	FIELD field_78167_d silverfishBoxLength [I
+		COMMENT The widths, heights, and lengths for the silverfish model boxes.
 	FIELD field_78168_e silverfishTexturePositions [I
+		COMMENT The texture positions for the silverfish's model's boxes.
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78087_a setRotationAngles (FFFFFFLnet/minecraft/entity/Entity;)V
+		COMMENT Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs can swing at most.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7Entity

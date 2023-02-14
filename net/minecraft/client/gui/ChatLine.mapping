@@ -1,4 +1,9 @@
 CLASS net/minecraft/client/gui/ChatLine
 	FIELD field_74543_a updateCounterCreated I
+		COMMENT GUI Update Counter value this Line was created at
 	FIELD field_74541_b lineString Ljava/lang/String;
 	FIELD field_74542_c chatLineID I
+		COMMENT int value to refer to existing Chat Lines, can be 0 which means unreferrable
+	METHOD func_74538_a getChatLineString ()Ljava/lang/String;
+	METHOD func_74540_b getUpdatedCounter ()I
+	METHOD func_74539_c getChatLineID ()I

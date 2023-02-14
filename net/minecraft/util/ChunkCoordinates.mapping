@@ -1,4 +1,21 @@
 CLASS net/minecraft/util/ChunkCoordinates
 	FIELD field_71574_a posX I
 	FIELD field_71572_b posY I
+		COMMENT the y coordinate
 	FIELD field_71573_c posZ I
+		COMMENT the z coordinate
+	METHOD func_71570_a compareChunkCoordinate (Lnet/minecraft/util/ChunkCoordinates;)I
+		COMMENT Compare the coordinate with another coordinate
+		ARG 0 par1ChunkCoordinates
+	METHOD func_71571_b set (III)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_71569_e getDistanceSquared (III)F
+		COMMENT Returns the squared distance between this coordinates and the coordinates given as argument.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_82371_e getDistanceSquaredToChunkCoordinates (Lnet/minecraft/util/ChunkCoordinates;)F
+		COMMENT Return the squared distance between this coordinates and the ChunkCoordinates given as argument.
+		ARG 0 par1ChunkCoordinates

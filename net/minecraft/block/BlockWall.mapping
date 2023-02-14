@@ -1,2 +1,51 @@
 CLASS net/minecraft/block/BlockWall
 	FIELD field_82539_a types [Ljava/lang/String;
+		COMMENT The types of the wall.
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71918_c getBlocksMovement (Lnet/minecraft/world/IBlockAccess;III)Z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71902_a setBlockBoundsBasedOnState (Lnet/minecraft/world/IBlockAccess;III)V
+		COMMENT Updates the blocks bounds based on its current state. Args: world, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_82538_d canConnectWallTo (Lnet/minecraft/world/IBlockAccess;III)Z
+		COMMENT Return whether an adjacent block can connect to a wall.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71879_a getSubBlocks (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V
+		COMMENT returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+		ARG 0 par1
+		ARG 1 par2CreativeTabs
+		ARG 2 par3List
+	METHOD func_71899_b damageDropped (I)I
+		COMMENT Determines the damage on the item the block drops. Used in cloth and wood.
+		ARG 0 par1
+	METHOD func_71877_c shouldSideBeRendered (Lnet/minecraft/world/IBlockAccess;IIII)Z
+		COMMENT Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

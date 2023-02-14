@@ -1,5 +1,16 @@
 CLASS net/minecraft/world/gen/feature/MapGenScatteredFeature
 	FIELD field_75061_e biomelist Ljava/util/List;
 	FIELD field_82668_f scatteredFeatureSpawnList Ljava/util/List;
+		COMMENT contains possible spawns for scattered features
 	FIELD field_82669_g maxDistanceBetweenScatteredFeatures I
+		COMMENT the maximum distance between scattered features
 	FIELD field_82670_h minDistanceBetweenScatteredFeatures I
+		COMMENT the minimum distance between scattered features
+	METHOD func_75047_a canSpawnStructureAtCoords (II)Z
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75049_b getStructureStart (II)Lnet/minecraft/world/gen/structure/StructureStart;
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_82667_a getScatteredFeatureSpawnList ()Ljava/util/List;
+		COMMENT returns possible spawns for scattered features

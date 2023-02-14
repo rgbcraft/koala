@@ -1,9 +1,53 @@
 CLASS net/minecraft/client/texturepacks/TexturePackList
 	FIELD field_77314_a defaultTexturePack Lnet/minecraft/client/texturepacks/ITexturePack;
+		COMMENT An instance of TexturePackDefault for the always available builtin texture pack.
 	FIELD field_77312_b mc Lnet/minecraft/client/Minecraft;
+		COMMENT The Minecraft instance.
 	FIELD field_77313_c texturePackDir Ljava/io/File;
+		COMMENT The directory the texture packs will be loaded from.
 	FIELD field_77310_d mpTexturePackFolder Ljava/io/File;
+		COMMENT Folder for the multi-player texturepacks. Returns File.
 	FIELD field_77311_e availableTexturePacks Ljava/util/List;
+		COMMENT The list of the available texture packs.
 	FIELD field_77308_f texturePackCache Ljava/util/Map;
+		COMMENT A mapping of texture IDs to TexturePackBase objects used by updateAvaliableTexturePacks() to avoid reloading texture packs that haven't changed on disk.
 	FIELD field_77309_g selectedTexturePack Lnet/minecraft/client/texturepacks/ITexturePack;
+		COMMENT The TexturePack that will be used.
 	FIELD field_77315_h isDownloading Z
+		COMMENT True if a texture pack is downloading in the background.
+	METHOD func_77307_h createTexturePackDirs ()V
+		COMMENT Create the "texturepacks" and "texturepacks-mp-cache" directories if they don't already exist.
+	METHOD func_77294_a setTexturePack (Lnet/minecraft/client/texturepacks/ITexturePack;)Z
+		COMMENT Sets the new TexturePack to be used, returning true if it has actually changed, false if nothing changed.
+		ARG 0 par1ITexturePack
+	METHOD func_77296_a requestDownloadOfTexture (Ljava/lang/String;)V
+		COMMENT filename must end in .zip
+		ARG 0 par1Str
+	METHOD func_77297_a downloadTexture (Ljava/lang/String;Ljava/io/File;)V
+		ARG 0 par1Str
+		ARG 1 par2File
+	METHOD func_77295_a getIsDownloading ()Z
+		COMMENT Return true if a texture pack is downloading in the background.
+	METHOD func_77304_b onDownloadFinished ()V
+		COMMENT Called from Minecraft.loadWorld() if getIsDownloading() returned true to prepare the downloaded texture for usage.
+	METHOD func_77305_c updateAvaliableTexturePacks ()V
+		COMMENT check the texture packs the client has installed
+	METHOD func_77302_a generateTexturePackID (Ljava/io/File;)Ljava/lang/String;
+		COMMENT Generate an internal texture pack ID from the file/directory name, last modification time, and file size. Returns null if the file/directory is not a texture pack.
+		ARG 0 par1File
+	METHOD func_77299_i getTexturePackDirContents ()Ljava/util/List;
+		COMMENT Return a List<File> of file/directories in the texture pack directory.
+	METHOD func_77293_d availableTexturePacks ()Ljava/util/List;
+		COMMENT Returns a list of the available texture packs.
+	METHOD func_77292_e getSelectedTexturePack ()Lnet/minecraft/client/texturepacks/ITexturePack;
+	METHOD func_77298_g getAcceptsTextures ()Z
+	METHOD func_77303_a setSelectedTexturePack (Lnet/minecraft/client/texturepacks/TexturePackList;Lnet/minecraft/client/texturepacks/ITexturePack;)Lnet/minecraft/client/texturepacks/ITexturePack;
+		COMMENT Set the selectedTexturePack field (Inner class static accessor method).
+		ARG 0 par0TexturePackList
+		ARG 1 par1ITexturePack
+	METHOD func_77291_a generateTexturePackID (Lnet/minecraft/client/texturepacks/TexturePackList;Ljava/io/File;)Ljava/lang/String;
+		COMMENT Generate an internal texture pack ID from the file/directory name, last modification time, and file size. Returns null if the file/directory is not a texture pack. (Inner class static accessor method).
+		ARG 0 par0TexturePackList
+		ARG 1 par1File
+	METHOD func_77306_b getMinecraft (Lnet/minecraft/client/texturepacks/TexturePackList;)Lnet/minecraft/client/Minecraft;
+		ARG 0 par0TexturePackList

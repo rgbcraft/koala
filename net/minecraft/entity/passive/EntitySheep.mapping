@@ -1,4 +1,60 @@
 CLASS net/minecraft/entity/passive/EntitySheep
 	FIELD field_70898_d fleeceColorTable [F
+		COMMENT Holds the RGB table of the sheep colors - in OpenGL glColor3f values - used to render the sheep colored fleece.
 	FIELD field_70899_e sheepTimer I
+		COMMENT Used to control movement as well as wool regrowth. Set to 40 on handleHealthUpdate and counts down with each tick.
 	FIELD field_70897_f aiEatGrass Lnet/minecraft/entity/ai/EntityAIEatGrass;
+		COMMENT The eat grass AI task for this mob.
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70619_bc updateAITasks ()V
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70103_a handleHealthUpdate (B)V
+		ARG 0 par1
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70036_a playStepSound (IIII)V
+		COMMENT Plays step sound at given x, y, z for the entity
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_70896_n getFleeceColor ()I
+	METHOD func_70891_b setFleeceColor (I)V
+		ARG 0 par1
+	METHOD func_70892_o getSheared ()Z
+		COMMENT returns true if a sheeps wool has been sheared
+	METHOD func_70893_e setSheared (Z)V
+		COMMENT make a sheep sheared if set to true
+		ARG 0 par1
+	METHOD func_70895_a getRandomFleeceColor (Ljava/util/Random;)I
+		COMMENT This method is called when a sheep spawns in the world to select the color of sheep fleece.
+		ARG 0 par0Random
+	METHOD func_70615_aA eatGrassBonus ()V
+		COMMENT This function applies the benefits of growing back wool and faster growing up to the acting entity. (This function is used in the AIEatGrass)
+	METHOD func_82163_bD initCreature ()V
+		COMMENT Initialize this creature.
+	METHOD func_90011_a createChild (Lnet/minecraft/entity/EntityAgeable;)Lnet/minecraft/entity/EntityAgeable;
+		ARG 0 par1EntityAgeable

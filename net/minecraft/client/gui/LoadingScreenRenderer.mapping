@@ -1,3 +1,19 @@
 CLASS net/minecraft/client/gui/LoadingScreenRenderer
 	FIELD field_73725_b mc Lnet/minecraft/client/Minecraft;
+		COMMENT A reference to the Minecraft object.
 	FIELD field_73726_c currentlyDisplayedText Ljava/lang/String;
+		COMMENT The text currently displayed (i.e. the argument to the last call to printText or func_73722_d)
+	METHOD func_73721_b resetProgressAndMessage (Ljava/lang/String;)V
+		COMMENT this string, followed by "working..." and then the "% complete" are the 3 lines shown. This resets progress to 0, and the WorkingString to "working...".
+		ARG 0 par1Str
+	METHOD func_73720_a displayProgressMessage (Ljava/lang/String;)V
+		COMMENT "Saving level", or the loading,or downloading equivelent
+		ARG 0 par1Str
+	METHOD func_73719_c resetProgresAndWorkingMessage (Ljava/lang/String;)V
+		COMMENT This is called with "Working..." by resetProgressAndMessage
+		ARG 0 par1Str
+	METHOD func_73718_a setLoadingProgress (I)V
+		COMMENT Updates the progress bar on the loading screen to the specified amount. Args: loadProgress
+		ARG 0 par1
+	METHOD func_73717_a onNoMoreProgress ()V
+		COMMENT called when there is no more progress to be had, both on completion and failure

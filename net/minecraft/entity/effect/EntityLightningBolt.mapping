@@ -1,4 +1,19 @@
 CLASS net/minecraft/entity/effect/EntityLightningBolt
 	FIELD field_70262_b lightningState I
+		COMMENT Declares which state the lightning bolt is in. Whether it's in the air, hit the ground, etc.
 	FIELD field_70264_a boltVertex J
+		COMMENT A random long that is used to change the vertex of the lightning rendered in RenderLightningBolt
 	FIELD field_70263_c boltLivingTime I
+		COMMENT Determines the time before the EntityLightningBolt is destroyed. It is a random integer decremented over time.
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70102_a isInRangeToRenderVec3D (Lnet/minecraft/util/Vec3;)Z
+		COMMENT Checks using a Vec3d to determine if this entity is within range of that vector to be rendered. Args: vec3D
+		ARG 0 par1Vec3

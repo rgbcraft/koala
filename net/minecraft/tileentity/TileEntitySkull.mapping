@@ -1,4 +1,26 @@
 CLASS net/minecraft/tileentity/TileEntitySkull
 	FIELD field_82123_a skullType I
+		COMMENT Entity type for this skull.
 	FIELD field_82121_b skullRotation I
+		COMMENT The skull's rotation.
 	FIELD field_82122_c extraType Ljava/lang/String;
+		COMMENT Extra data for this skull, used as player username by player heads
+	METHOD func_70310_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes a tile entity to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70307_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads a tile entity from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70319_e getDescriptionPacket ()Lnet/minecraft/network/packet/Packet;
+		COMMENT Overriden in a sign to provide the text.
+	METHOD func_82118_a setSkullType (ILjava/lang/String;)V
+		COMMENT Set the entity type for the skull
+		ARG 0 par1
+		ARG 1 par2Str
+	METHOD func_82117_a getSkullType ()I
+		COMMENT Get the entity type for the skull
+	METHOD func_82116_a setSkullRotation (I)V
+		COMMENT Set the skull's rotation
+		ARG 0 par1
+	METHOD func_82120_c getExtraType ()Ljava/lang/String;
+		COMMENT Get the extra data foor this skull, used as player username by player heads

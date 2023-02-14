@@ -1,1 +1,5 @@
 CLASS net/minecraft/client/renderer/entity/RenderSheep
+	METHOD func_77113_a setWoolColorAndRender (Lnet/minecraft/entity/passive/EntitySheep;IF)I
+		ARG 0 par1EntitySheep
+		ARG 1 par2
+		ARG 2 par3

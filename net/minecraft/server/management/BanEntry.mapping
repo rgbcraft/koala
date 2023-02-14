@@ -1,8 +1,27 @@
 CLASS net/minecraft/server/management/BanEntry
 	FIELD field_73698_a dateFormat Ljava/text/SimpleDateFormat;
 	FIELD field_73696_b loggerBanEntry Ljava/util/logging/Logger;
+		COMMENT Creates Ban Entry in the logger.
 	FIELD field_73697_c username Ljava/lang/String;
 	FIELD field_73694_d banStartDate Ljava/util/Date;
 	FIELD field_73695_e bannedBy Ljava/lang/String;
 	FIELD field_73692_f banEndDate Ljava/util/Date;
 	FIELD field_73693_g reason Ljava/lang/String;
+	METHOD func_73684_a getBannedUsername ()Ljava/lang/String;
+	METHOD func_73683_b getBanStartDate ()Ljava/util/Date;
+	METHOD func_73681_a setBanStartDate (Ljava/util/Date;)V
+		COMMENT null == start ban now
+		ARG 0 par1Date
+	METHOD func_73690_c getBannedBy ()Ljava/lang/String;
+	METHOD func_73687_a setBannedBy (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_73680_d getBanEndDate ()Ljava/util/Date;
+	METHOD func_73691_b setBanEndDate (Ljava/util/Date;)V
+		ARG 0 par1Date
+	METHOD func_73682_e hasBanExpired ()Z
+	METHOD func_73686_f getBanReason ()Ljava/lang/String;
+	METHOD func_73689_b setBanReason (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_73685_g buildBanString ()Ljava/lang/String;
+	METHOD func_73688_c parse (Ljava/lang/String;)Lnet/minecraft/server/management/BanEntry;
+		ARG 0 par0Str

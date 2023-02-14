@@ -1,1 +1,3 @@
 CLASS net/minecraft/world/WorldServerMulti
+	METHOD func_73042_a saveLevel ()V
+		COMMENT Saves the chunks to disk.

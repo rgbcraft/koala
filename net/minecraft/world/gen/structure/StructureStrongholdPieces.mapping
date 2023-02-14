@@ -4,3 +4,46 @@ CLASS net/minecraft/world/gen/structure/StructureStrongholdPieces
 	FIELD field_75203_d strongComponentType Ljava/lang/Class;
 	FIELD field_75207_a totalWeight I
 	FIELD field_75204_e strongholdStones Lnet/minecraft/world/gen/structure/StructureStrongholdStones;
+	METHOD func_75198_a prepareStructurePieces ()V
+		COMMENT sets up Arrays with the Structure pieces and their weights
+	METHOD func_75202_c canAddStructurePieces ()Z
+	METHOD func_75200_a getStrongholdComponentFromWeightedPiece (Ljava/lang/Class;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/ComponentStronghold;
+		COMMENT translates the PieceWeight class to the Component class
+		ARG 0 par0Class
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_75201_b getNextComponent (Lnet/minecraft/world/gen/structure/ComponentStrongholdStairs2;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/ComponentStronghold;
+		ARG 0 par0ComponentStrongholdStairs2
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_75196_c getNextValidComponent (Lnet/minecraft/world/gen/structure/ComponentStrongholdStairs2;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;
+		ARG 0 par0ComponentStrongholdStairs2
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_75195_a getNextValidComponentAccess (Lnet/minecraft/world/gen/structure/ComponentStrongholdStairs2;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;
+		ARG 0 par0ComponentStrongholdStairs2
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_75199_a setComponentType (Ljava/lang/Class;)Ljava/lang/Class;
+		ARG 0 par0Class
+	METHOD func_75197_b getStrongholdStones ()Lnet/minecraft/world/gen/structure/StructureStrongholdStones;

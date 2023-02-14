@@ -3,3 +3,8 @@ CLASS net/minecraft/entity/ai/EntityAINearestAttackableTarget
 	FIELD field_75307_b targetClass Ljava/lang/Class;
 	FIELD field_75308_c targetChance I
 	FIELD field_75306_g theNearestAttackableTargetSorter Lnet/minecraft/entity/ai/EntityAINearestAttackableTargetSorter;
+		COMMENT Instance of EntityAINearestAttackableTargetSorter.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task

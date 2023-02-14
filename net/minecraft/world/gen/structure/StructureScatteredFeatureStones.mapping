@@ -1,1 +1,8 @@
 CLASS net/minecraft/world/gen/structure/StructureScatteredFeatureStones
+	METHOD func_75062_a selectBlocks (Ljava/util/Random;IIIZ)V
+		COMMENT picks Block Ids and Metadata (Silverfish)
+		ARG 0 par1Random
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

@@ -1,20 +1,221 @@
 CLASS net/minecraft/world/chunk/Chunk
 	FIELD field_76640_a isLit Z
+		COMMENT Determines if the chunk is lit or not at a light value greater than 0.
 	FIELD field_76652_q storageArrays [Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;
+		COMMENT Used to store block IDs, block MSBs, Sky-light maps, Block-light maps, and metadata. Each entry corresponds to a logical segment of 16x16x16 blocks, stacked vertically.
 	FIELD field_76651_r blockBiomeArray [B
+		COMMENT Contains a 16x16 mapping on the X/Z plane of the biome ID to which each colum belongs.
 	FIELD field_76638_b precipitationHeightMap [I
+		COMMENT A map, similar to heightMap, that tracks how far down precipitation can fall.
 	FIELD field_76639_c updateSkylightColumns [Z
+		COMMENT Which columns need their skylightMaps updated.
 	FIELD field_76636_d isChunkLoaded Z
+		COMMENT Whether or not this Chunk is currently loaded into the World
 	FIELD field_76637_e worldObj Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
 	FIELD field_76634_f heightMap [I
 	FIELD field_76635_g xPosition I
+		COMMENT The x coordinate of the chunk.
 	FIELD field_76647_h zPosition I
+		COMMENT The z coordinate of the chunk.
 	FIELD field_76650_s isGapLightingUpdated Z
 	FIELD field_76648_i chunkTileEntityMap Ljava/util/Map;
+		COMMENT A Map of ChunkPositions to TileEntities in this chunk
 	FIELD field_76645_j entityLists [Ljava/util/List;
+		COMMENT Array of Lists containing the entities in this Chunk. Each List represents a 16 block subchunk.
 	FIELD field_76646_k isTerrainPopulated Z
+		COMMENT Boolean value indicating if the terrain is populated.
 	FIELD field_76643_l isModified Z
+		COMMENT Set to true if the chunk has been modified and needs to be updated internally.
 	FIELD field_76644_m hasEntities Z
+		COMMENT Whether this Chunk has any Entities and thus requires saving on every tick
 	FIELD field_76641_n lastSaveTime J
+		COMMENT The time according to World.worldTime when this chunk was last saved
 	FIELD field_76642_o deferRender Z
 	FIELD field_76649_t queuedLightChecks I
+		COMMENT Contains the current round-robin relight check index, and is implied as the relight check location as well.
+	METHOD func_76600_a isAtLocation (II)Z
+		COMMENT Checks whether the chunk is at the X/Z location specified
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76611_b getHeightValue (II)I
+		COMMENT Returns the value in the height map at this x, z coordinate in the chunk
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76625_h getTopFilledSegment ()I
+		COMMENT Returns the topmost ExtendedBlockStorage instance for this Chunk that actually contains a block.
+	METHOD func_76587_i getBlockStorageArray ()[Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;
+		COMMENT Returns the ExtendedBlockStorage array for this Chunk.
+	METHOD func_76590_a generateHeightMap ()V
+		COMMENT Generates the height map for a chunk from scratch
+	METHOD func_76603_b generateSkylightMap ()V
+		COMMENT Generates the initial skylight map for the chunk upon generation or load.
+	METHOD func_76595_e propagateSkylightOcclusion (II)V
+		COMMENT Propagates a given sky-visible block's light value downward and upward to neighboring blocks as necessary.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76593_q updateSkylight_do ()V
+		COMMENT Runs delayed skylight updates.
+	METHOD func_76599_g checkSkylightNeighborHeight (III)V
+		COMMENT Checks the height of a block next to a sky-visible block and schedules a lighting update as necessary.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76609_d updateSkylightNeighborHeight (IIII)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76615_h relightBlock (III)V
+		COMMENT Initiates the recalculation of both the block-light and sky-light for a given block inside a chunk.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76596_b getBlockLightOpacity (III)I
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76610_a getBlockID (III)I
+		COMMENT Return the ID of a block in the chunk.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76628_c getBlockMetadata (III)I
+		COMMENT Return the metadata corresponding to the given coordinates inside a chunk.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76598_a setBlockID (IIII)Z
+		COMMENT Sets a blockID for a position in the chunk. Args: x, y, z, blockID
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76592_a setBlockIDWithMetadata (IIIII)Z
+		COMMENT Sets a blockID of a position within a chunk with metadata. Args: x, y, z, blockID, metadata
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76589_b setBlockMetadata (IIII)Z
+		COMMENT Set the metadata of a block in the chunk
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76614_a getSavedLightValue (Lnet/minecraft/world/EnumSkyBlock;III)I
+		COMMENT Gets the amount of light saved in this block (doesn't adjust for daylight)
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76633_a setLightValue (Lnet/minecraft/world/EnumSkyBlock;IIII)V
+		COMMENT Sets the light value at the coordinate. If enumskyblock is set to sky it sets it in the skylightmap and if its a block then into the blocklightmap. Args enumSkyBlock, x, y, z, lightValue
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76629_c getBlockLightValue (IIII)I
+		COMMENT Gets the amount of light on a block taking into account sunlight
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76612_a addEntity (Lnet/minecraft/entity/Entity;)V
+		COMMENT Adds an entity to the chunk. Args: entity
+		ARG 0 par1Entity
+	METHOD func_76622_b removeEntity (Lnet/minecraft/entity/Entity;)V
+		COMMENT removes entity using its y chunk coordinate as its index
+		ARG 0 par1Entity
+	METHOD func_76608_a removeEntityAtIndex (Lnet/minecraft/entity/Entity;I)V
+		COMMENT Removes entity at the specified index from the entity array.
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_76619_d canBlockSeeTheSky (III)Z
+		COMMENT Returns whether is not a block above this one blocking sight to the sky (done via checking against the heightmap)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76597_e getChunkBlockTileEntity (III)Lnet/minecraft/tileentity/TileEntity;
+		COMMENT Gets the TileEntity for a given block in this chunk
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76620_a addTileEntity (Lnet/minecraft/tileentity/TileEntity;)V
+		COMMENT Adds a TileEntity to a chunk
+		ARG 0 par1TileEntity
+	METHOD func_76604_a setChunkBlockTileEntity (IIILnet/minecraft/tileentity/TileEntity;)V
+		COMMENT Sets the TileEntity for a given block in this chunk
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4TileEntity
+	METHOD func_76627_f removeChunkBlockTileEntity (III)V
+		COMMENT Removes the TileEntity for a given block in this chunk
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76631_c onChunkLoad ()V
+		COMMENT Called when this Chunk is loaded by the ChunkProvider
+	METHOD func_76623_d onChunkUnload ()V
+		COMMENT Called when this Chunk is unloaded by the ChunkProvider
+	METHOD func_76630_e setChunkModified ()V
+		COMMENT Sets the isModified flag for this Chunk
+	METHOD func_76588_a getEntitiesWithinAABBForEntity (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;Ljava/util/List;)V
+		COMMENT Fills the given list of all entities that intersect within the given bounding box that aren't the passed entity Args: entity, aabb, listToFill
+		ARG 0 par1Entity
+		ARG 1 par2AxisAlignedBB
+		ARG 2 par3List
+	METHOD func_76618_a getEntitiesOfTypeWithinAAAB (Ljava/lang/Class;Lnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/command/IEntitySelector;)V
+		COMMENT Gets all entities that can be assigned to the specified class. Args: entityClass, aabb, listToFill
+		ARG 0 par1Class
+		ARG 1 par2AxisAlignedBB
+		ARG 2 par3List
+		ARG 3 par4IEntitySelector
+	METHOD func_76601_a needsSaving (Z)Z
+		COMMENT Returns true if this Chunk needs to be saved
+		ARG 0 par1
+	METHOD func_76617_a getRandomWithSeed (J)Ljava/util/Random;
+		ARG 0 par1
+	METHOD func_76621_g isEmpty ()Z
+	METHOD func_76624_a populateChunk (Lnet/minecraft/world/chunk/IChunkProvider;Lnet/minecraft/world/chunk/IChunkProvider;II)V
+		ARG 0 par1IChunkProvider
+		ARG 1 par2IChunkProvider
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76626_d getPrecipitationHeight (II)I
+		COMMENT Gets the height to which rain/snow will fall. Calculates it if not already stored.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76586_k updateSkylight ()V
+		COMMENT Checks whether skylight needs updated; if it does, calls updateSkylight_do
+	METHOD func_76632_l getChunkCoordIntPair ()Lnet/minecraft/world/ChunkCoordIntPair;
+		COMMENT Gets a ChunkCoordIntPair representing the Chunk's position.
+	METHOD func_76606_c getAreLevelsEmpty (II)Z
+		COMMENT Returns whether the ExtendedBlockStorages containing levels (in blocks) from arg 1 to arg 2 are fully empty (true) or not (false).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76602_a setStorageArrays ([Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;)V
+		ARG 0 par1ArrayOfExtendedBlockStorage
+	METHOD func_76607_a fillChunk ([BIIZ)V
+		COMMENT Initialise this chunk with new binary data
+		ARG 0 par1ArrayOfByte
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76591_a getBiomeGenForWorldCoords (IILnet/minecraft/world/biome/WorldChunkManager;)Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT This method retrieves the biome at a set of coordinates
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3WorldChunkManager
+	METHOD func_76605_m getBiomeArray ()[B
+		COMMENT Returns an array containing a 16x16 mapping on the X/Z of block positions in this Chunk to biome IDs.
+	METHOD func_76616_a setBiomeArray ([B)V
+		COMMENT Accepts a 256-entry array that contains a 16x16 mapping on the X/Z plane of block positions in this Chunk to biome IDs.
+		ARG 0 par1ArrayOfByte
+	METHOD func_76613_n resetRelightChecks ()V
+		COMMENT Resets the relight check index to 0 for this Chunk.
+	METHOD func_76594_o enqueueRelightChecks ()V
+		COMMENT Called once-per-chunk-per-tick, and advances the round-robin relight check index per-storage-block by up to 8 blocks at a time. In a worst-case scenario, can potentially take up to 1.6 seconds, calculated via (4096/(8*16))/20, to re-check all blocks in a chunk, which could explain both lagging light updates in certain cases as well as Nether relight

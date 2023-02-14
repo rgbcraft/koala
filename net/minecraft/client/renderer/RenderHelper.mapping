@@ -1,2 +1,21 @@
 CLASS net/minecraft/client/renderer/RenderHelper
 	FIELD field_74522_a colorBuffer Ljava/nio/FloatBuffer;
+		COMMENT Float buffer used to set OpenGL material colors
+	METHOD func_74518_a disableStandardItemLighting ()V
+		COMMENT Disables the OpenGL lighting properties enabled by enableStandardItemLighting
+	METHOD func_74519_b enableStandardItemLighting ()V
+		COMMENT Sets the OpenGL lighting properties to the values used when rendering blocks as items
+	METHOD func_74517_a setColorBuffer (DDDD)Ljava/nio/FloatBuffer;
+		COMMENT Update and return colorBuffer with the RGBA values passed as arguments
+		ARG 0 par0
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+	METHOD func_74521_a setColorBuffer (FFFF)Ljava/nio/FloatBuffer;
+		COMMENT Update and return colorBuffer with the RGBA values passed as arguments
+		ARG 0 par0
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+	METHOD func_74520_c enableGUIStandardItemLighting ()V
+		COMMENT Sets OpenGL lighting for rendering blocks as items inside GUI screens (such as containers).

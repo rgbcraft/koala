@@ -1,2 +1,73 @@
 CLASS net/minecraft/entity/monster/EntityZombie
 	FIELD field_82234_d conversionTime I
+		COMMENT Ticker used to determine the time remaining for this zombie to convert into a villager when cured.
+	METHOD func_70616_bs getSpeedModifier ()F
+		COMMENT This method returns a value to be applied directly to entity speed, this factor is less than 1 when a slowdown potion effect is applied, more than 1 when a haste potion effect is applied and 2 for fleeing entities.
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70073_O getTexture ()Ljava/lang/String;
+		COMMENT Returns the texture's file path as a String.
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70658_aO getTotalArmorValue ()I
+		COMMENT Returns the current armor value as determined by a call to InventoryPlayer.getTotalArmorValue
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70631_g_ isChild ()Z
+		COMMENT If Animal, checks if the age timer is negative
+	METHOD func_82227_f setChild (Z)V
+		COMMENT Set whether this zombie is a child.
+		ARG 0 par1
+	METHOD func_82231_m isVillager ()Z
+		COMMENT Return whether this zombie is a villager.
+	METHOD func_82229_g setVillager (Z)V
+		COMMENT Set whether this zombie is a villager.
+		ARG 0 par1
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_82193_c getAttackStrength (Lnet/minecraft/entity/Entity;)I
+		COMMENT Returns the amount of damage a mob should deal.
+		ARG 0 par1Entity
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70036_a playStepSound (IIII)V
+		COMMENT Plays step sound at given x, y, z for the entity
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70668_bt getCreatureAttribute ()Lnet/minecraft/entity/EnumCreatureAttribute;
+		COMMENT Get this Entity's EnumCreatureAttribute
+	METHOD func_70600_l dropRareDrop (I)V
+		ARG 0 par1
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70074_a onKillEntity (Lnet/minecraft/entity/EntityLiving;)V
+		COMMENT This method gets called when the entity kills another one.
+		ARG 0 par1EntityLiving
+	METHOD func_82163_bD initCreature ()V
+		COMMENT Initialize this creature.
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer
+	METHOD func_82228_a startConversion (I)V
+		COMMENT Starts converting this zombie into a villager. The zombie converts into a villager after the specified time in ticks.
+		ARG 0 par1
+	METHOD func_70103_a handleHealthUpdate (B)V
+		ARG 0 par1
+	METHOD func_82230_o isConverting ()Z
+		COMMENT Returns whether this zombie is in the process of converting to a villager
+	METHOD func_82232_p convertToVillager ()V
+		COMMENT Convert this zombie into a villager.
+	METHOD func_82233_q getConversionTimeBoost ()I
+		COMMENT Return the amount of time decremented from conversionTime every tick.

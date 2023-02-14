@@ -1,2 +1,125 @@
 CLASS net/minecraft/block/BlockPistonBase
 	FIELD field_72119_a isSticky Z
+		COMMENT This pistons is the sticky one?
+	METHOD func_72118_n getPistonExtensionTexture ()I
+		COMMENT Return the either 106 or 107 as the texture index depending on the isSticky flag. This will actually never get called by TileEntityRendererPiston.renderPiston() because TileEntityPiston.func_70338_f() will always return false.
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71903_a onBlockActivated (Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;IFFF)Z
+		COMMENT Called upon block activation (right click on the block.)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityPlayer
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_71860_a onBlockPlacedBy (Lnet/minecraft/world/World;IIILnet/minecraft/entity/EntityLiving;)V
+		COMMENT Called when the block is placed in the world.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityLiving
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71861_g onBlockAdded (Lnet/minecraft/world/World;III)V
+		COMMENT Called whenever the block is added into the world. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72110_l updatePistonState (Lnet/minecraft/world/World;III)V
+		COMMENT handles attempts to extend or retract the piston.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72113_e isIndirectlyPowered (Lnet/minecraft/world/World;IIII)Z
+		COMMENT checks the block to that side to see if it is indirectly powered.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71883_b onBlockEventReceived (Lnet/minecraft/world/World;IIIII)V
+		COMMENT Called when the block receives a BlockEvent - see World.addBlockEvent. By default, passes it on to the tile entity at this location. Args: world, x, y, z, blockID, EventID, event parameter
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_71902_a setBlockBoundsBasedOnState (Lnet/minecraft/world/IBlockAccess;III)V
+		COMMENT Updates the blocks bounds based on its current state. Args: world, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71919_f setBlockBoundsForItemRender ()V
+		COMMENT Sets the block's bounds for rendering it as an item
+	METHOD func_71871_a addCollidingBlockToList (Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V
+		COMMENT if the specified block is in the given AABB, add its collision bounding box to the given list
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5AxisAlignedBB
+		ARG 5 par6List
+		ARG 6 par7Entity
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_72117_e getOrientation (I)I
+		COMMENT returns an int which describes the direction the piston faces
+		ARG 0 par0
+	METHOD func_72114_f isExtended (I)Z
+		COMMENT Determine if the metadata is related to something powered.
+		ARG 0 par0
+	METHOD func_72116_b determineOrientation (Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;)I
+		COMMENT gets the way this piston should face for that entity that placed it.
+		ARG 0 par0World
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4EntityPlayer
+	METHOD func_72111_a canPushBlock (ILnet/minecraft/world/World;IIIZ)Z
+		COMMENT returns true if the piston can push the specified block
+		ARG 0 par0
+		ARG 1 par1World
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+	METHOD func_72112_i canExtend (Lnet/minecraft/world/World;IIII)Z
+		COMMENT checks to see if this piston could push the blocks in front of it.
+		ARG 0 par0World
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_72115_j tryExtend (Lnet/minecraft/world/World;IIII)Z
+		COMMENT attempts to extend the piston. returns false if impossible.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

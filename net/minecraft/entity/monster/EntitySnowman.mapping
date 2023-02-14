@@ -1,1 +1,15 @@
 CLASS net/minecraft/entity/monster/EntitySnowman
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_82196_d attackEntityWithRangedAttack (Lnet/minecraft/entity/EntityLiving;)V
+		COMMENT Attack the specified entity using a ranged attack.
+		ARG 0 par1EntityLiving

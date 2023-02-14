@@ -1,1 +1,8 @@
 CLASS net/minecraft/world/biome/BiomeGenSwamp
+	METHOD func_76740_a getRandomWorldGenForTrees (Ljava/util/Random;)Lnet/minecraft/world/gen/feature/WorldGenerator;
+		COMMENT Gets a WorldGen appropriate for this biome.
+		ARG 0 par1Random
+	METHOD func_76737_k getBiomeGrassColor ()I
+		COMMENT Provides the basic grass color based on the biome temperature and rainfall
+	METHOD func_76726_l getBiomeFoliageColor ()I
+		COMMENT Provides the basic foliage color based on the biome temperature and rainfall

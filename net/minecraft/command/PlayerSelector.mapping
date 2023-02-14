@@ -1,4 +1,47 @@
 CLASS net/minecraft/command/PlayerSelector
 	FIELD field_82389_a tokenPattern Ljava/util/regex/Pattern;
+		COMMENT This matches the at-tokens introduced for command blocks, including their arguments, if any.
 	FIELD field_82387_b intListPattern Ljava/util/regex/Pattern;
+		COMMENT This matches things like "-1,,4", and is used for getting x,y,z,range from the token's argument list.
 	FIELD field_82388_c keyValueListPattern Ljava/util/regex/Pattern;
+		COMMENT This matches things like "rm=4,c=2" and is used for handling named token arguments.
+	METHOD func_82386_a matchOnePlayer (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayerMP;
+		COMMENT Returns the one player that matches the given at-token.  Returns null if more than one player matches.
+		ARG 0 par0ICommandSender
+		ARG 1 par1Str
+	METHOD func_82385_b matchPlayersAsString (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Returns a nicely-formatted string listing the matching players.
+		ARG 0 par0ICommandSender
+		ARG 1 par1Str
+	METHOD func_82380_c matchPlayers (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)[Lnet/minecraft/entity/player/EntityPlayerMP;
+		COMMENT Returns an array of all players matched by the given at-token.
+		ARG 0 par0ICommandSender
+		ARG 1 par1Str
+	METHOD func_82377_a matchesMultiplePlayers (Ljava/lang/String;)Z
+		COMMENT Returns whether the given pattern can match more than one player.
+		ARG 0 par0Str
+	METHOD func_82383_a hasTheseArguments (Ljava/lang/String;Ljava/lang/String;)Z
+		COMMENT Returns whether the given token (parameter 1) has exactly the given arguments (parameter 2).
+		ARG 0 par0Str
+		ARG 1 par1Str
+	METHOD func_82378_b hasArguments (Ljava/lang/String;)Z
+		COMMENT Returns whether the given token has any arguments set.
+		ARG 0 par0Str
+	METHOD func_82384_c getDefaultMinimumRange (Ljava/lang/String;)I
+		COMMENT Gets the default minimum range (argument rm).
+		ARG 0 par0Str
+	METHOD func_82379_d getDefaultMaximumRange (Ljava/lang/String;)I
+		COMMENT Gets the default maximum range (argument r).
+		ARG 0 par0Str
+	METHOD func_82376_e getDefaultMaximumLevel (Ljava/lang/String;)I
+		COMMENT Gets the default maximum experience level (argument l)
+		ARG 0 par0Str
+	METHOD func_82375_f getDefaultMinimumLevel (Ljava/lang/String;)I
+		COMMENT Gets the default minimum experience level (argument lm)
+		ARG 0 par0Str
+	METHOD func_82382_g getDefaultCount (Ljava/lang/String;)I
+		COMMENT Gets the default number of players to return (argument c, 0 for infinite)
+		ARG 0 par0Str
+	METHOD func_82381_h getArgumentMap (Ljava/lang/String;)Ljava/util/Map;
+		COMMENT Parses the given argument string, turning it into a HashMap&lt;String, String&gt; of name-&gt;value.
+		ARG 0 par0Str

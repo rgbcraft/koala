@@ -1,1 +1,7 @@
 CLASS net/minecraft/profiler/IPlayerUsage
+	METHOD func_70000_a addServerStatsToSnooper (Lnet/minecraft/profiler/PlayerUsageSnooper;)V
+		ARG 0 par1PlayerUsageSnooper
+	METHOD func_70001_b addServerTypeToSnooper (Lnet/minecraft/profiler/PlayerUsageSnooper;)V
+		ARG 0 par1PlayerUsageSnooper
+	METHOD func_70002_Q isSnooperEnabled ()Z
+		COMMENT Returns whether snooping is enabled or not.

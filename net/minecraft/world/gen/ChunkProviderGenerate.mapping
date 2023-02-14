@@ -1,26 +1,111 @@
 CLASS net/minecraft/world/gen/ChunkProviderGenerate
 	FIELD field_73220_k rand Ljava/util/Random;
+		COMMENT RNG.
 	FIELD field_73217_l noiseGen1 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+		COMMENT A NoiseGeneratorOctaves used in generating terrain
 	FIELD field_73218_m noiseGen2 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+		COMMENT A NoiseGeneratorOctaves used in generating terrain
 	FIELD field_73215_n noiseGen3 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+		COMMENT A NoiseGeneratorOctaves used in generating terrain
 	FIELD field_73216_o noiseGen4 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+		COMMENT A NoiseGeneratorOctaves used in generating terrain
 	FIELD field_73214_a noiseGen5 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+		COMMENT A NoiseGeneratorOctaves used in generating terrain
 	FIELD field_73212_b noiseGen6 Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
+		COMMENT A NoiseGeneratorOctaves used in generating terrain
 	FIELD field_73213_c mobSpawnerNoise Lnet/minecraft/world/gen/NoiseGeneratorOctaves;
 	FIELD field_73230_p worldObj Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
 	FIELD field_73229_q mapFeaturesEnabled Z
+		COMMENT are map structures going to be generated (e.g. strongholds)
 	FIELD field_73228_r noiseArray [D
+		COMMENT Holds the overall noise array used in chunk generation
 	FIELD field_73227_s stoneNoise [D
 	FIELD field_73226_t caveGenerator Lnet/minecraft/world/gen/MapGenBase;
 	FIELD field_73225_u strongholdGenerator Lnet/minecraft/world/gen/structure/MapGenStronghold;
+		COMMENT Holds Stronghold Generator
 	FIELD field_73224_v villageGenerator Lnet/minecraft/world/gen/structure/MapGenVillage;
+		COMMENT Holds Village Generator
 	FIELD field_73223_w mineshaftGenerator Lnet/minecraft/world/gen/structure/MapGenMineshaft;
+		COMMENT Holds Mineshaft Generator
 	FIELD field_73233_x scatteredFeatureGenerator Lnet/minecraft/world/gen/feature/MapGenScatteredFeature;
 	FIELD field_73232_y ravineGenerator Lnet/minecraft/world/gen/MapGenBase;
+		COMMENT Holds ravine generator
 	FIELD field_73231_z biomesForGeneration [Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT The biomes that are used to generate the chunk
 	FIELD field_73210_d noise3 [D
+		COMMENT A double array that hold terrain noise from noiseGen3
 	FIELD field_73211_e noise1 [D
+		COMMENT A double array that hold terrain noise
 	FIELD field_73208_f noise2 [D
+		COMMENT A double array that hold terrain noise from noiseGen2
 	FIELD field_73209_g noise5 [D
+		COMMENT A double array that hold terrain noise from noiseGen5
 	FIELD field_73221_h noise6 [D
+		COMMENT A double array that holds terrain noise from noiseGen6
 	FIELD field_73222_i parabolicField [F
+		COMMENT Used to store the 5x5 parabolic field that is used during terrain generation.
+	METHOD func_73206_a generateTerrain (II[B)V
+		COMMENT Generates the shape of the terrain for the chunk though its all stone though the water is frozen if the temperature is low enough
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3ArrayOfByte
+	METHOD func_73207_a replaceBlocksForBiome (II[B[Lnet/minecraft/world/biome/BiomeGenBase;)V
+		COMMENT Replaces the stone that was placed in with blocks that match the biome
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3ArrayOfByte
+		ARG 3 par4ArrayOfBiomeGenBase
+	METHOD func_73158_c loadChunk (II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT loads or generates the chunk at the chunk location specified
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73154_d provideChunk (II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT Will return back a chunk, if it doesn't exist and its not a MP client it will generates all the blocks for the specified chunk from the map seed and chunk seed
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73205_a initializeNoiseField ([DIIIIII)[D
+		COMMENT generates a subset of the level's terrain data. Takes 7 arguments: the [empty] noise array, the position, and the size.
+		ARG 0 par1ArrayOfDouble
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_73149_a chunkExists (II)Z
+		COMMENT Checks to see if a chunk exists at x, y
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73153_a populate (Lnet/minecraft/world/chunk/IChunkProvider;II)V
+		COMMENT Populates chunk with ores etc etc
+		ARG 0 par1IChunkProvider
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73151_a saveChunks (ZLnet/minecraft/util/IProgressUpdate;)Z
+		COMMENT Two modes of operation: if passed true, save all Chunks in one go.  If passed false, save up to two chunks.  Return true if all chunks have been saved.
+		ARG 0 par1
+		ARG 1 par2IProgressUpdate
+	METHOD func_73156_b unload100OldestChunks ()Z
+		COMMENT Unloads the 100 oldest chunks from memory, due to a bug with chunkSet.add() never being called it thinks the list is always empty and will not remove any chunks.
+	METHOD func_73157_c canSave ()Z
+		COMMENT Returns if the IChunkProvider supports saving.
+	METHOD func_73148_d makeString ()Ljava/lang/String;
+		COMMENT Converts the instance data to a readable string.
+	METHOD func_73155_a getPossibleCreatures (Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;
+		COMMENT Returns a list of creatures of the specified type that can spawn at the given location.
+		ARG 0 par1EnumCreatureType
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73150_a findClosestStructure (Lnet/minecraft/world/World;Ljava/lang/String;III)Lnet/minecraft/world/ChunkPosition;
+		COMMENT Returns the location of the closest structure of the specified type. If not found returns null.
+		ARG 0 par1World
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_73152_e getLoadedChunkCount ()I
+	METHOD func_82695_e recreateStructures (II)V
+		ARG 0 par1
+		ARG 1 par2

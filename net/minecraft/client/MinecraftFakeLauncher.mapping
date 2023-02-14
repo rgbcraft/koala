@@ -1,2 +1,3 @@
 CLASS net/minecraft/client/MinecraftFakeLauncher
 	FIELD field_74534_a arguments Ljava/util/Map;
+		COMMENT Arguments that were passed to Minecraft.jar (username, sessionid etc)

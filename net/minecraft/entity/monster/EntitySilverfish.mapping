@@ -1,2 +1,47 @@
 CLASS net/minecraft/entity/monster/EntitySilverfish
 	FIELD field_70843_d allySummonCooldown I
+		COMMENT A cooldown before this entity will search for another Silverfish to join them in battle.
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_70782_k findPlayerToAttack ()Lnet/minecraft/entity/Entity;
+		COMMENT Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking (Animals, Spiders at day, peaceful PigZombies).
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70785_a attackEntity (Lnet/minecraft/entity/Entity;F)V
+		COMMENT Basic mob attack. Default to touch of death in EntityCreature. Overridden by each mob to define their attack.
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_70036_a playStepSound (IIII)V
+		COMMENT Plays step sound at given x, y, z for the entity
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70626_be updateEntityActionState ()V
+	METHOD func_70783_a getBlockPathWeight (III)F
+		COMMENT Takes a coordinate in and returns a weight to determine how likely this creature will try to path to the block. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70814_o isValidLightLevel ()Z
+		COMMENT Checks to make sure the light is not too bright where the mob is spawning
+	METHOD func_70601_bi getCanSpawnHere ()Z
+		COMMENT Checks if the entity's current position is a valid location to spawn this entity.
+	METHOD func_82193_c getAttackStrength (Lnet/minecraft/entity/Entity;)I
+		COMMENT Returns the amount of damage a mob should deal.
+		ARG 0 par1Entity
+	METHOD func_70668_bt getCreatureAttribute ()Lnet/minecraft/entity/EnumCreatureAttribute;
+		COMMENT Get this Entity's EnumCreatureAttribute

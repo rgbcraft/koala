@@ -1,2 +1,3 @@
 CLASS net/minecraft/server/ThreadMinecraftServer
 	FIELD field_82557_a mcServer Lnet/minecraft/server/MinecraftServer;
+		COMMENT Reference to the MinecraftServer object.

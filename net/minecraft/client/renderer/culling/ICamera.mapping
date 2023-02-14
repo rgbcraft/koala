@@ -1,1 +1,8 @@
 CLASS net/minecraft/client/renderer/culling/ICamera
+	METHOD func_78546_a isBoundingBoxInFrustum (Lnet/minecraft/util/AxisAlignedBB;)Z
+		COMMENT Returns true if the bounding box is inside all 6 clipping planes, otherwise returns false.
+		ARG 0 par1AxisAlignedBB
+	METHOD func_78547_a setPosition (DDD)V
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5

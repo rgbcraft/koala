@@ -1,2 +1,20 @@
 CLASS net/minecraft/world/gen/structure/ComponentStrongholdPrison
 	FIELD field_75017_a doorType Lnet/minecraft/world/gen/structure/EnumDoor;
+	METHOD func_74861_a buildComponent (Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V
+		COMMENT Initiates construction of the Structure Component picked, at the current Location of StructGen
+		ARG 0 par1StructureComponent
+		ARG 1 par2List
+		ARG 2 par3Random
+	METHOD func_75016_a findValidPlacement (Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/ComponentStrongholdPrison;
+		ARG 0 par0List
+		ARG 1 par1Random
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+	METHOD func_74875_a addComponentParts (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3StructureBoundingBox

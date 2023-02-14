@@ -1,3 +1,23 @@
 CLASS net/minecraft/world/gen/structure/StructureNetherBridgePieces
 	FIELD field_78742_a primaryComponents [Lnet/minecraft/world/gen/structure/StructureNetherBridgePieceWeight;
 	FIELD field_78741_b secondaryComponents [Lnet/minecraft/world/gen/structure/StructureNetherBridgePieceWeight;
+	METHOD func_78738_b createNextComponentRandom (Lnet/minecraft/world/gen/structure/StructureNetherBridgePieceWeight;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/ComponentNetherBridgePiece;
+		ARG 0 par0StructureNetherBridgePieceWeight
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_78740_a createNextComponent (Lnet/minecraft/world/gen/structure/StructureNetherBridgePieceWeight;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/ComponentNetherBridgePiece;
+		ARG 0 par0StructureNetherBridgePieceWeight
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_78739_a getPrimaryComponents ()[Lnet/minecraft/world/gen/structure/StructureNetherBridgePieceWeight;
+	METHOD func_78737_b getSecondaryComponents ()[Lnet/minecraft/world/gen/structure/StructureNetherBridgePieceWeight;

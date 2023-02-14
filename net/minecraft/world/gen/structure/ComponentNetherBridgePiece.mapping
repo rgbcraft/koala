@@ -1,1 +1,51 @@
 CLASS net/minecraft/world/gen/structure/ComponentNetherBridgePiece
+	METHOD func_74960_a getTotalWeight (Ljava/util/List;)I
+		ARG 0 par1List
+	METHOD func_74959_a getNextComponent (Lnet/minecraft/world/gen/structure/ComponentNetherBridgeStartPiece;Ljava/util/List;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/ComponentNetherBridgePiece;
+		ARG 0 par1ComponentNetherBridgeStartPiece
+		ARG 1 par2List
+		ARG 2 par3List
+		ARG 3 par4Random
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_74962_a getNextComponent (Lnet/minecraft/world/gen/structure/ComponentNetherBridgeStartPiece;Ljava/util/List;Ljava/util/Random;IIIIIZ)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Finds a random component to tack on to the bridge. Or builds the end.
+		ARG 0 par1ComponentNetherBridgeStartPiece
+		ARG 1 par2List
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_74963_a getNextComponentNormal (Lnet/minecraft/world/gen/structure/ComponentNetherBridgeStartPiece;Ljava/util/List;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Gets the next component in any cardinal direction
+		ARG 0 par1ComponentNetherBridgeStartPiece
+		ARG 1 par2List
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_74961_b getNextComponentX (Lnet/minecraft/world/gen/structure/ComponentNetherBridgeStartPiece;Ljava/util/List;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Gets the next component in the +/- X direction
+		ARG 0 par1ComponentNetherBridgeStartPiece
+		ARG 1 par2List
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_74965_c getNextComponentZ (Lnet/minecraft/world/gen/structure/ComponentNetherBridgeStartPiece;Ljava/util/List;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Gets the next component in the +/- Z direction
+		ARG 0 par1ComponentNetherBridgeStartPiece
+		ARG 1 par2List
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_74964_a isAboveGround (Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT Checks if the bounding box's minY is > 10
+		ARG 0 par0StructureBoundingBox

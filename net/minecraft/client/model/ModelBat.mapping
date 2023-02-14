@@ -1,7 +1,23 @@
 CLASS net/minecraft/client/model/ModelBat
 	FIELD field_82895_a batHead Lnet/minecraft/client/model/ModelRenderer;
 	FIELD field_82893_b batBody Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The body box of the bat model.
 	FIELD field_82894_c batRightWing Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The inner right wing box of the bat model.
 	FIELD field_82891_d batLeftWing Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The inner left wing box of the bat model.
 	FIELD field_82892_e batOuterRightWing Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The outer right wing box of the bat model.
 	FIELD field_82890_f batOuterLeftWing Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The outer left wing box of the bat model.
+	METHOD func_82889_a getBatSize ()I
+		COMMENT not actually sure this is size, is not used as of now, but the model would be recreated if the value changed and it seems a good match for a bats size
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7

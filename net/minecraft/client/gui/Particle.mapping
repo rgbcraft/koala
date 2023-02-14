@@ -18,3 +18,7 @@ CLASS net/minecraft/client/gui/Particle
 	FIELD field_78083_p prevTintGreen D
 	FIELD field_78082_q prevTintBlue D
 	FIELD field_78081_r prevTintAlpha D
+	METHOD func_78063_a update (Lnet/minecraft/client/gui/GuiParticle;)V
+		ARG 0 par1GuiParticle
+	METHOD func_78062_a preUpdate ()V
+	METHOD func_78064_b setDead ()V

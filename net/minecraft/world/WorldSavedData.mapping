@@ -1,3 +1,18 @@
 CLASS net/minecraft/world/WorldSavedData
 	FIELD field_76190_i mapName Ljava/lang/String;
+		COMMENT The name of the map data nbt
 	FIELD field_76189_a dirty Z
+		COMMENT Whether this MapDataBase needs saving to disk.
+	METHOD func_76184_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT reads in data from the NBTTagCompound into this MapDataBase
+		ARG 0 par1NBTTagCompound
+	METHOD func_76187_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT write data to NBTTagCompound from this MapDataBase, similar to Entities and TileEntities
+		ARG 0 par1NBTTagCompound
+	METHOD func_76185_a markDirty ()V
+		COMMENT Marks this MapDataBase dirty, to be saved to disk when the level next saves.
+	METHOD func_76186_a setDirty (Z)V
+		COMMENT Sets the dirty state of this MapDataBase, whether it needs saving to disk.
+		ARG 0 par1
+	METHOD func_76188_b isDirty ()Z
+		COMMENT Whether this MapDataBase needs saving to disk.

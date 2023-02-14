@@ -1,2 +1,6 @@
 CLASS net/minecraft/item/ItemSpade
 	FIELD field_77866_c blocksEffectiveAgainst [Lnet/minecraft/block/Block;
+		COMMENT an array of the blocks this spade is effective against
+	METHOD func_77641_a canHarvestBlock (Lnet/minecraft/block/Block;)Z
+		COMMENT Returns if the item (tool) can harvest results from the block type.
+		ARG 0 par1Block

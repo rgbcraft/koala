@@ -1,2 +1,35 @@
 CLASS net/minecraft/block/BlockSapling
 	FIELD field_72270_a WOOD_TYPES [Ljava/lang/String;
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72269_c growTree (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Attempts to grow a sapling into a tree
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_72268_e isSameSapling (Lnet/minecraft/world/World;IIII)Z
+		COMMENT Determines if the same sapling is present at the given location.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71899_b damageDropped (I)I
+		COMMENT Determines the damage on the item the block drops. Used in cloth and wood.
+		ARG 0 par1
+	METHOD func_71879_a getSubBlocks (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V
+		COMMENT returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+		ARG 0 par1
+		ARG 1 par2CreativeTabs
+		ARG 2 par3List

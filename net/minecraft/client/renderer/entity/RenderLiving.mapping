@@ -1,3 +1,87 @@
 CLASS net/minecraft/client/renderer/entity/RenderLiving
 	FIELD field_77045_g mainModel Lnet/minecraft/client/model/ModelBase;
 	FIELD field_77046_h renderPassModel Lnet/minecraft/client/model/ModelBase;
+		COMMENT The model to be used during the render passes.
+	METHOD func_77042_a setRenderPassModel (Lnet/minecraft/client/model/ModelBase;)V
+		COMMENT Sets the model to be used in the current render pass (the first render pass is done after the primary model is rendered) Args: model
+		ARG 0 par1ModelBase
+	METHOD func_77034_a interpolateRotation (FFF)F
+		COMMENT Returns a rotation angle that is inbetween two other rotation angles. par1 and par2 are the angles between which to interpolate, par3 is probably a float between 0.0 and 1.0 that tells us where "between" the two angles we are. Example: par1 = 30, par2 = 50, par3 = 0.5, then return = 40
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77031_a doRenderLiving (Lnet/minecraft/entity/EntityLiving;DDDFF)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77036_a renderModel (Lnet/minecraft/entity/EntityLiving;FFFFFF)V
+		COMMENT Renders the model in RenderLiving
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_77039_a renderLivingAt (Lnet/minecraft/entity/EntityLiving;DDD)V
+		COMMENT Sets a simple glTranslate on a LivingEntity.
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+	METHOD func_77043_a rotateCorpse (Lnet/minecraft/entity/EntityLiving;FFF)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_77040_d renderSwingProgress (Lnet/minecraft/entity/EntityLiving;F)F
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_77044_a handleRotationFloat (Lnet/minecraft/entity/EntityLiving;F)F
+		COMMENT Defines what float the third param in setRotationAngles of ModelBase is
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_77029_c renderEquippedItems (Lnet/minecraft/entity/EntityLiving;F)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_85093_e renderArrowsStuckInEntity (Lnet/minecraft/entity/EntityLiving;F)V
+		COMMENT renders arrows the Entity has been attacked with, attached to it
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_77035_b inheritRenderPass (Lnet/minecraft/entity/EntityLiving;IF)I
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77032_a shouldRenderPass (Lnet/minecraft/entity/EntityLiving;IF)I
+		COMMENT Queries whether should render the specified pass or not.
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77037_a getDeathMaxRotation (Lnet/minecraft/entity/EntityLiving;)F
+		ARG 0 par1EntityLiving
+	METHOD func_77030_a getColorMultiplier (Lnet/minecraft/entity/EntityLiving;FF)I
+		COMMENT Returns an ARGB int color back. Args: entityLiving, lightBrightness, partialTickTime
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77041_b preRenderCallback (Lnet/minecraft/entity/EntityLiving;F)V
+		COMMENT Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args: entityLiving, partialTickTime
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_77033_b passSpecialRender (Lnet/minecraft/entity/EntityLiving;DDD)V
+		COMMENT Passes the specialRender and renders it
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+	METHOD func_77038_a renderLivingLabel (Lnet/minecraft/entity/EntityLiving;Ljava/lang/String;DDDI)V
+		COMMENT Draws the debug or playername text above a living
+		ARG 0 par1EntityLiving
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+		ARG 5 par9

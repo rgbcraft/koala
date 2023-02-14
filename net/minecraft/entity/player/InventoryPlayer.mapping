@@ -1,8 +1,117 @@
 CLASS net/minecraft/entity/player/InventoryPlayer
 	FIELD field_70462_a mainInventory [Lnet/minecraft/item/ItemStack;
+		COMMENT An array of 36 item stacks indicating the main player inventory (including the visible bar).
 	FIELD field_70460_b armorInventory [Lnet/minecraft/item/ItemStack;
+		COMMENT An array of 4 item stacks containing the currently worn armor pieces.
 	FIELD field_70461_c currentItem I
+		COMMENT The index of the currently held item (0-8).
 	FIELD field_70456_f currentItemStack Lnet/minecraft/item/ItemStack;
+		COMMENT The current ItemStack.
 	FIELD field_70458_d player Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT The player whose inventory this is.
 	FIELD field_70457_g itemStack Lnet/minecraft/item/ItemStack;
 	FIELD field_70459_e inventoryChanged Z
+		COMMENT Set true whenever the inventory changes. Nothing sets it false so you will have to write your own code to check it and reset the value.
+	METHOD func_70448_g getCurrentItem ()Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the item stack currently held by the player.
+	METHOD func_70451_h getHotbarSize ()I
+		COMMENT Get the size of the player hotbar inventory
+	METHOD func_70446_h getInventorySlotContainItem (I)I
+		COMMENT Returns a slot index in main inventory containing a specific itemID
+		ARG 0 par1
+	METHOD func_70434_c getInventorySlotContainItemAndDamage (II)I
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70432_d storeItemStack (Lnet/minecraft/item/ItemStack;)I
+		COMMENT stores an itemstack in the users inventory
+		ARG 0 par1ItemStack
+	METHOD func_70447_i getFirstEmptyStack ()I
+		COMMENT Returns the first item stack that is empty.
+	METHOD func_70433_a setCurrentItem (IIZZ)V
+		COMMENT Sets a specific itemID as the current item being held (only if it exists on the hotbar)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_70453_c changeCurrentItem (I)V
+		COMMENT Switch the current item to the next one or the previous one
+		ARG 0 par1
+	METHOD func_82347_b clearInventory (II)I
+		COMMENT Clear this player's inventory, using the specified ID and metadata as filters or -1 for no filter.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70452_e storePartialItemStack (Lnet/minecraft/item/ItemStack;)I
+		COMMENT This function stores as many items of an ItemStack as possible in a matching slot and returns the quantity of left over items.
+		ARG 0 par1ItemStack
+	METHOD func_70429_k decrementAnimations ()V
+		COMMENT Decrement the number of animations remaining. Only called on client side. This is used to handle the animation of receiving a block.
+	METHOD func_70435_d consumeInventoryItem (I)Z
+		COMMENT removed one item of specified itemID from inventory (if it is in a stack, the stack size will reduce with 1)
+		ARG 0 par1
+	METHOD func_70450_e hasItem (I)Z
+		COMMENT Get if a specifiied item id is inside the inventory.
+		ARG 0 par1
+	METHOD func_70441_a addItemStackToInventory (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Adds the item stack to the inventory, returns false if it is impossible.
+		ARG 0 par1ItemStack
+	METHOD func_70298_a decrStackSize (II)Lnet/minecraft/item/ItemStack;
+		COMMENT Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a new stack.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70304_b getStackInSlotOnClosing (I)Lnet/minecraft/item/ItemStack;
+		COMMENT When some containers are closed they call this on each slot, then drop whatever it returns as an EntityItem - like when you close a workbench GUI.
+		ARG 0 par1
+	METHOD func_70299_a setInventorySlotContents (ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_70438_a getStrVsBlock (Lnet/minecraft/block/Block;)F
+		COMMENT Gets the strength of the current item (tool) against the specified block, 1.0f if not holding anything.
+		ARG 0 par1Block
+	METHOD func_70442_a writeToNBT (Lnet/minecraft/nbt/NBTTagList;)Lnet/minecraft/nbt/NBTTagList;
+		COMMENT Writes the inventory out as a list of compound tags. This is where the slot indices are used (+100 for armor, +80 for crafting).
+		ARG 0 par1NBTTagList
+	METHOD func_70443_b readFromNBT (Lnet/minecraft/nbt/NBTTagList;)V
+		COMMENT Reads from the given tag list and fills the slots in the inventory with the correct items.
+		ARG 0 par1NBTTagList
+	METHOD func_70302_i_ getSizeInventory ()I
+		COMMENT Returns the number of slots in the inventory.
+	METHOD func_70301_a getStackInSlot (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the stack in slot i
+		ARG 0 par1
+	METHOD func_70303_b getInvName ()Ljava/lang/String;
+		COMMENT Returns the name of the inventory.
+	METHOD func_70297_j_ getInventoryStackLimit ()I
+		COMMENT Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't this more of a set than a get?*
+	METHOD func_70444_a getDamageVsEntity (Lnet/minecraft/entity/Entity;)I
+		COMMENT Return damage vs an entity done by the current held weapon, or 1 if nothing is held
+		ARG 0 par1Entity
+	METHOD func_70454_b canHarvestBlock (Lnet/minecraft/block/Block;)Z
+		COMMENT Returns whether the current item (tool) can harvest from the specified block (actually get a result).
+		ARG 0 par1Block
+	METHOD func_70440_f armorItemInSlot (I)Lnet/minecraft/item/ItemStack;
+		COMMENT returns a player armor item (as itemstack) contained in specified armor slot.
+		ARG 0 par1
+	METHOD func_70430_l getTotalArmorValue ()I
+		COMMENT Based on the damage values and maximum damage values of each armor item, returns the current armor value.
+	METHOD func_70449_g damageArmor (I)V
+		COMMENT Damages armor in each slot by the specified amount.
+		ARG 0 par1
+	METHOD func_70436_m dropAllItems ()V
+		COMMENT Drop all armor and main inventory items.
+	METHOD func_70296_d onInventoryChanged ()V
+		COMMENT Called when an the contents of an Inventory change, usually
+	METHOD func_70437_b setItemStack (Lnet/minecraft/item/ItemStack;)V
+		ARG 0 par1ItemStack
+	METHOD func_70445_o getItemStack ()Lnet/minecraft/item/ItemStack;
+	METHOD func_70300_a isUseableByPlayer (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Do not make give this method the name canInteractWith because it clashes with Container
+		ARG 0 par1EntityPlayer
+	METHOD func_70431_c hasItemStack (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Returns true if the specified ItemStack exists in the inventory.
+		ARG 0 par1ItemStack
+	METHOD func_70295_k_ openChest ()V
+	METHOD func_70305_f closeChest ()V
+	METHOD func_70455_b copyInventory (Lnet/minecraft/entity/player/InventoryPlayer;)V
+		COMMENT Copy the ItemStack contents from another InventoryPlayer instance
+		ARG 0 par1InventoryPlayer

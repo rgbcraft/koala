@@ -1,3 +1,33 @@
 CLASS net/minecraft/client/multiplayer/GuiConnecting
 	FIELD field_74259_a clientHandler Lnet/minecraft/client/multiplayer/NetClientHandler;
+		COMMENT A reference to the NetClientHandler.
 	FIELD field_74258_b cancelled Z
+		COMMENT True if the connection attempt has been cancelled.
+	METHOD func_74255_a spawnNewServerThread (Ljava/lang/String;I)V
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.
+	METHOD func_73869_a keyTyped (CI)V
+		COMMENT Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74252_a setNetClientHandler (Lnet/minecraft/client/multiplayer/GuiConnecting;Lnet/minecraft/client/multiplayer/NetClientHandler;)Lnet/minecraft/client/multiplayer/NetClientHandler;
+		COMMENT Sets the NetClientHandler.
+		ARG 0 par0GuiConnecting
+		ARG 1 par1NetClientHandler
+	METHOD func_74257_b isCancelled (Lnet/minecraft/client/multiplayer/GuiConnecting;)Z
+		ARG 0 par0GuiConnecting
+	METHOD func_74253_d getNetClientHandler (Lnet/minecraft/client/multiplayer/GuiConnecting;)Lnet/minecraft/client/multiplayer/NetClientHandler;
+		COMMENT Gets the NetClientHandler.
+		ARG 0 par0GuiConnecting

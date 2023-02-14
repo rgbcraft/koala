@@ -1,2 +1,12 @@
 CLASS net/minecraft/client/particle/EntitySnowShovelFX
 	FIELD field_70588_a snowDigParticleScale F
+	METHOD func_70539_a renderParticle (Lnet/minecraft/client/renderer/Tessellator;FFFFFF)V
+		ARG 0 par1Tessellator
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.

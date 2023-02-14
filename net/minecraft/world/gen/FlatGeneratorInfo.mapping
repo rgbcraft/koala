@@ -1,3 +1,17 @@
 CLASS net/minecraft/world/gen/FlatGeneratorInfo
 	FIELD field_82655_a flatLayers Ljava/util/List;
+		COMMENT List of layers on this preset.
 	FIELD field_82653_b worldFeatures Ljava/util/Map;
+		COMMENT List of world features enabled on this preset.
+	METHOD func_82648_a getBiome ()I
+		COMMENT Return the biome used on this preset.
+	METHOD func_82647_a setBiome (I)V
+		COMMENT Set the biome used on this preset.
+		ARG 0 par1
+	METHOD func_82644_b getWorldFeatures ()Ljava/util/Map;
+		COMMENT Return the list of world features enabled on this preset.
+	METHOD func_82650_c getFlatLayers ()Ljava/util/List;
+		COMMENT Return the list of layers on this preset.
+	METHOD func_82651_a createFlatGeneratorFromString (Ljava/lang/String;)Lnet/minecraft/world/gen/FlatGeneratorInfo;
+		ARG 0 par0Str
+	METHOD func_82649_e getDefaultFlatGenerator ()Lnet/minecraft/world/gen/FlatGeneratorInfo;

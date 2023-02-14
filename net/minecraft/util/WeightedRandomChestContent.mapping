@@ -1,4 +1,19 @@
 CLASS net/minecraft/util/WeightedRandomChestContent
 	FIELD field_76297_b theItemId Lnet/minecraft/item/ItemStack;
+		COMMENT The Item/Block ID to generate in the Chest.
 	FIELD field_76295_d theMinimumChanceToGenerateItem I
+		COMMENT The minimum chance of item generating.
 	FIELD field_76296_e theMaximumChanceToGenerateItem I
+		COMMENT The maximum chance of item generating.
+	METHOD func_76293_a generateChestContents (Ljava/util/Random;[Lnet/minecraft/util/WeightedRandomChestContent;Lnet/minecraft/tileentity/TileEntityChest;I)V
+		COMMENT Generates the Chest contents.
+		ARG 0 par0Random
+		ARG 1 par1ArrayOfWeightedRandomChestContent
+		ARG 2 par2TileEntityChest
+		ARG 3 par3
+	METHOD func_76294_a generateDispenserContents (Ljava/util/Random;[Lnet/minecraft/util/WeightedRandomChestContent;Lnet/minecraft/tileentity/TileEntityDispenser;I)V
+		COMMENT Generates the Dispenser contents.
+		ARG 0 par0Random
+		ARG 1 par1ArrayOfWeightedRandomChestContent
+		ARG 2 par2TileEntityDispenser
+		ARG 3 par3

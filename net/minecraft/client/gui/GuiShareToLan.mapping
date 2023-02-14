@@ -1,6 +1,19 @@
 CLASS net/minecraft/client/gui/GuiShareToLan
 	FIELD field_74092_a parentScreen Lnet/minecraft/client/gui/GuiScreen;
+		COMMENT A reference to the screen object that created this. Used for navigating between screens.
 	FIELD field_74090_b buttonAllowCommandsToggle Lnet/minecraft/client/gui/GuiButton;
 	FIELD field_74091_c buttonGameMode Lnet/minecraft/client/gui/GuiButton;
 	FIELD field_74089_d gameMode Ljava/lang/String;
+		COMMENT The currently selected game mode. One of 'survival', 'creative', or 'adventure'
 	FIELD field_74093_m allowCommands Z
+		COMMENT True if 'Allow Cheats' is currently enabled
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

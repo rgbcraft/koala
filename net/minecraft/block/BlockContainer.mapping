@@ -1,1 +1,26 @@
 CLASS net/minecraft/block/BlockContainer
+	METHOD func_71861_g onBlockAdded (Lnet/minecraft/world/World;III)V
+		COMMENT Called whenever the block is added into the world. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71852_a breakBlock (Lnet/minecraft/world/World;IIIII)V
+		COMMENT ejects contained items into the world, and notifies neighbours of an update, as appropriate
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72274_a createNewTileEntity (Lnet/minecraft/world/World;)Lnet/minecraft/tileentity/TileEntity;
+		COMMENT Returns a new instance of a block's tile entity class. Called on placing the block.
+		ARG 0 par1World
+	METHOD func_71883_b onBlockEventReceived (Lnet/minecraft/world/World;IIIII)V
+		COMMENT Called when the block receives a BlockEvent - see World.addBlockEvent. By default, passes it on to the tile entity at this location. Args: world, x, y, z, blockID, EventID, event parameter
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6

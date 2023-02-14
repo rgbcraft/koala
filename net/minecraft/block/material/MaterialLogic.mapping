@@ -1,1 +1,6 @@
 CLASS net/minecraft/block/material/MaterialLogic
+	METHOD func_76220_a isSolid ()Z
+	METHOD func_76228_b getCanBlockGrass ()Z
+		COMMENT Will prevent grass from growing on dirt underneath and kill any grass below it if it returns true
+	METHOD func_76230_c blocksMovement ()Z
+		COMMENT Returns if this material is considered solid or not

@@ -3,4 +3,18 @@ CLASS net/minecraft/entity/ai/EntityAIMate
 	FIELD field_75394_a theWorld Lnet/minecraft/world/World;
 	FIELD field_75391_e targetMate Lnet/minecraft/entity/passive/EntityAnimal;
 	FIELD field_75392_b spawnBabyDelay I
+		COMMENT Delay preventing a baby from spawning immediately when two mate-able animals find each other.
 	FIELD field_75393_c moveSpeed F
+		COMMENT The speed the creature moves at during mating behavior.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task
+	METHOD func_75389_f getNearbyMate ()Lnet/minecraft/entity/passive/EntityAnimal;
+		COMMENT Loops through nearby animals and finds another animal of the same type that can be mated with. Returns the first valid mate found.
+	METHOD func_75388_i spawnBaby ()V
+		COMMENT Spawns a baby animal of the same type.

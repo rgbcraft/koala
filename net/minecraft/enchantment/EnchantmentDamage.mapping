@@ -1,6 +1,28 @@
 CLASS net/minecraft/enchantment/EnchantmentDamage
 	FIELD field_77359_A protectionName [Ljava/lang/String;
+		COMMENT Holds the name to be translated of each protection type.
 	FIELD field_77360_B baseEnchantability [I
+		COMMENT Holds the base factor of enchantability needed to be able to use the enchant.
 	FIELD field_77362_C levelEnchantability [I
+		COMMENT Holds how much each level increased the enchantability factor to be able to use this enchant.
 	FIELD field_77358_D thresholdEnchantability [I
+		COMMENT Used on the formula of base enchantability, this is the 'window' factor of values to be able to use thing enchant.
 	FIELD field_77361_a damageType I
+		COMMENT Defines the type of damage of the enchantment, 0 = all, 1 = undead, 3 = arthropods
+	METHOD func_77321_a getMinEnchantability (I)I
+		COMMENT Returns the minimal value of enchantability needed on the enchantment level passed.
+		ARG 0 par1
+	METHOD func_77317_b getMaxEnchantability (I)I
+		COMMENT Returns the maximum value of enchantability nedded on the enchantment level passed.
+		ARG 0 par1
+	METHOD func_77325_b getMaxLevel ()I
+		COMMENT Returns the maximum level that the enchantment can have.
+	METHOD func_77323_a calcModifierLiving (ILnet/minecraft/entity/EntityLiving;)I
+		COMMENT Calculates de (magic) damage done by the enchantment on a living entity based on level and entity passed.
+		ARG 0 par1
+		ARG 1 par2EntityLiving
+	METHOD func_77320_a getName ()Ljava/lang/String;
+		COMMENT Return the name of key in translation table of this enchantment.
+	METHOD func_77326_a canApplyTogether (Lnet/minecraft/enchantment/Enchantment;)Z
+		COMMENT Determines if the enchantment passed can be applyied together with this enchantment.
+		ARG 0 par1Enchantment

@@ -1,2 +1,96 @@
 CLASS net/minecraft/block/BlockRail
 	FIELD field_72186_a isPowered Z
+		COMMENT Power related rails have this field at true.
+	METHOD func_72180_d_ isRailBlockAt (Lnet/minecraft/world/World;III)Z
+		COMMENT Returns true if the block at the coordinates of world passed is a valid rail block (current is rail, powered or detector).
+		ARG 0 par0World
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+	METHOD func_72184_d isRailBlock (I)Z
+		COMMENT Return true if the parameter is a blockID for a valid rail block (current is rail, powered or detector).
+		ARG 0 par0
+	METHOD func_72183_n isPowered ()Z
+		COMMENT Returns true if the block is power related rail.
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71878_a collisionRayTrace (Lnet/minecraft/world/World;IIILnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/MovingObjectPosition;
+		COMMENT Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Vec3
+		ARG 5 par6Vec3
+	METHOD func_71902_a setBlockBoundsBasedOnState (Lnet/minecraft/world/IBlockAccess;III)V
+		COMMENT Updates the blocks bounds based on its current state. Args: world, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_71930_b canPlaceBlockAt (Lnet/minecraft/world/World;III)Z
+		COMMENT Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71861_g onBlockAdded (Lnet/minecraft/world/World;III)V
+		COMMENT Called whenever the block is added into the world. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72181_a refreshTrackShape (Lnet/minecraft/world/World;IIIZ)V
+		COMMENT Completely recalculates the track shape based on neighboring tracks
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72182_a isNeighborRailPowered (Lnet/minecraft/world/World;IIIIZI)Z
+		COMMENT Powered minecart rail is conductive like wire, so check for powered neighbors
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_72185_a isRailPassingPower (Lnet/minecraft/world/World;IIIZII)Z
+		COMMENT Returns true if the specified rail is passing power to its neighbor
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_71915_e getMobilityFlag ()I
+		COMMENT Returns the mobility information of the block, 0 = free, 1 = can't push but can move over, 2 = total immobility and stop pistons
+	METHOD func_72179_a isPoweredBlockRail (Lnet/minecraft/block/BlockRail;)Z
+		COMMENT Return true if the blocks passed is a power related rail.
+		ARG 0 par0BlockRail

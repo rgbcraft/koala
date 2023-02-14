@@ -1,2 +1,61 @@
 CLASS net/minecraft/entity/boss/EntityWither
 	FIELD field_82219_bJ attackEntitySelector Lnet/minecraft/command/IEntitySelector;
+		COMMENT Selector used to determine the entities a wither boss should attack.
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70073_O getTexture ()Ljava/lang/String;
+		COMMENT Returns the texture's file path as a String.
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70619_bc updateAITasks ()V
+	METHOD func_70110_aj setInWeb ()V
+		COMMENT Sets the Entity inside a web block.
+	METHOD func_70658_aO getTotalArmorValue ()I
+		COMMENT Returns the current armor value as determined by a call to InventoryPlayer.getTotalArmorValue
+	METHOD func_82196_d attackEntityWithRangedAttack (Lnet/minecraft/entity/EntityLiving;)V
+		COMMENT Attack the specified entity using a ranged attack.
+		ARG 0 par1EntityLiving
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70623_bb despawnEntity ()V
+		COMMENT Makes the entity despawn if requirements are reached
+	METHOD func_70070_b getBrightnessForRender (F)I
+		ARG 0 par1
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70968_i getDragonHealth ()I
+		COMMENT Returns the health points of the dragon.
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70690_d addPotionEffect (Lnet/minecraft/potion/PotionEffect;)V
+		COMMENT adds a PotionEffect to the entity
+		ARG 0 par1PotionEffect
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_82203_t getWatchedTargetId (I)I
+		COMMENT Returns the target entity ID if present, or -1 if not @param par1 The target offset, should be from 0-2
+		ARG 0 par1
+	METHOD func_82205_o isArmored ()Z
+		COMMENT Returns whether the wither is armored with its boss armor or not by checking whether its health is below half of its maximum.
+	METHOD func_70668_bt getCreatureAttribute ()Lnet/minecraft/entity/EnumCreatureAttribute;
+		COMMENT Get this Entity's EnumCreatureAttribute

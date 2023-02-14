@@ -1,8 +1,67 @@
 CLASS net/minecraft/client/gui/inventory/GuiContainerCreative
 	FIELD field_74242_o inventory Lnet/minecraft/inventory/InventoryBasic;
 	FIELD field_74241_p selectedTabIndex I
+		COMMENT Currently selected creative inventory tab index.
 	FIELD field_74240_q currentScroll F
+		COMMENT Amount scrolled in Creative mode inventory (0 = top, 1 = bottom)
 	FIELD field_74239_r isScrolling Z
+		COMMENT True if the scrollbar is being dragged
 	FIELD field_74238_s wasClicking Z
+		COMMENT True if the left mouse button was held down last time drawScreen was called.
 	FIELD field_74237_t searchField Lnet/minecraft/client/gui/GuiTextField;
 	FIELD field_74236_u backupContainerSlots Ljava/util/List;
+		COMMENT Used to back up the ContainerCreative's inventory slots before filling it with the player's inventory slots for the inventory tab.
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.
+	METHOD func_74191_a handleMouseClick (Lnet/minecraft/inventory/Slot;III)V
+		ARG 0 par1Slot
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73874_b onGuiClosed ()V
+		COMMENT Called when the screen is unloaded. Used to disable keyboard repeat events
+	METHOD func_73869_a keyTyped (CI)V
+		COMMENT Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74228_j updateCreativeSearch ()V
+	METHOD func_74189_g drawGuiContainerForegroundLayer (II)V
+		COMMENT Draw the foreground layer for the GuiContainer (everything in front of the items)
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73864_a mouseClicked (III)V
+		COMMENT Called when the mouse is clicked.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74226_k needsScrollBars ()Z
+		COMMENT returns (if you are not on the inventoryTab) and (the flag isn't set) and( you have more than 1 page of items)
+	METHOD func_74227_b setCurrentCreativeTab (Lnet/minecraft/creativetab/CreativeTabs;)V
+		ARG 0 par1CreativeTabs
+	METHOD func_73867_d handleMouseInput ()V
+		COMMENT Handles mouse input.
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74185_a drawGuiContainerBackgroundLayer (FII)V
+		COMMENT Draw the background layer for the GuiContainer (everything behind the items)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74231_b renderCreativeInventoryHoveringText (Lnet/minecraft/creativetab/CreativeTabs;II)Z
+		COMMENT Renders the creative inventory hovering text if mouse is over it. Returns true if did render or false otherwise. Params: current creative tab to be checked, current mouse x position, current mouse y position.
+		ARG 0 par1CreativeTabs
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74233_a renderCreativeTab (Lnet/minecraft/creativetab/CreativeTabs;)V
+		COMMENT Renders passed creative inventory tab into the screen.
+		ARG 0 par1CreativeTabs
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_74229_i getInventory ()Lnet/minecraft/inventory/InventoryBasic;
+		COMMENT Returns the creative inventory

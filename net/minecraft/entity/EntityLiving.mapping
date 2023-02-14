@@ -1,76 +1,439 @@
 CLASS net/minecraft/entity/EntityLiving
 	FIELD field_82177_b enchantmentProbability [F
+		COMMENT An array of probabilities that determines whether a random enchantment should be added to the held item. Indexed by difficulty.
 	FIELD field_82178_c armorEnchantmentProbability [F
+		COMMENT Probability to get enchanted armor
 	FIELD field_82176_d armorProbability [F
+		COMMENT Probability to get armor
 	FIELD field_82181_as pickUpLootProability [F
+		COMMENT Probability to pick up loot
 	FIELD field_70771_an maxHurtResistantTime I
 	FIELD field_70761_aq renderYawOffset F
 	FIELD field_70760_ar prevRenderYawOffset F
 	FIELD field_70759_as rotationYawHead F
+		COMMENT Entity head rotation yaw
 	FIELD field_70758_at prevRotationYawHead F
+		COMMENT Entity head rotation yaw at previous tick
 	FIELD field_70750_az texture Ljava/lang/String;
+		COMMENT the path for the texture of this entityLiving
 	FIELD field_70742_aC entityType Ljava/lang/String;
+		COMMENT a string holding the type of entity it is currently only implemented in entityPlayer(as 'humanoid')
 	FIELD field_70744_aE scoreValue I
+		COMMENT The score value of the Mob, the amount of points the mob is worth.
 	FIELD field_70746_aG landMovementFactor F
+		COMMENT A factor used to determine how far this entity will move each tick if it is walking on land. Adjusted by speed, and slipperiness of the current block.
 	FIELD field_70747_aH jumpMovementFactor F
+		COMMENT A factor used to determine how far this entity will move each tick if it is jumping or falling.
 	FIELD field_70732_aI prevSwingProgress F
 	FIELD field_70733_aJ swingProgress F
 	FIELD field_70734_aK health I
 	FIELD field_70735_aL prevHealth I
 	FIELD field_70736_aM carryoverDamage I
+		COMMENT in each step in the damage calculations, this is set to the 'carryover' that would result if someone was damaged .25 hearts (for example), and added to the damage in the next step
 	FIELD field_70757_a livingSoundTime I
+		COMMENT Number of ticks since this EntityLiving last produced its sound
 	FIELD field_70737_aN hurtTime I
+		COMMENT The amount of time remaining this entity should act 'hurt'. (Visual appearance of red tint)
 	FIELD field_70738_aO maxHurtTime I
+		COMMENT What the hurt time was max set to last.
 	FIELD field_70739_aP attackedAtYaw F
+		COMMENT The yaw at which this entity was last attacked from.
 	FIELD field_70725_aQ deathTime I
+		COMMENT The amount of time remaining this entity should act 'dead', i.e. have a corpse in the world.
 	FIELD field_70724_aR attackTime I
 	FIELD field_70727_aS prevCameraPitch F
 	FIELD field_70726_aT cameraPitch F
 	FIELD field_70729_aU dead Z
+		COMMENT This gets set on entity death, but never used. Looks like a duplicate of isDead
 	FIELD field_70728_aV experienceValue I
+		COMMENT The experience points the Entity gives.
 	FIELD field_70722_aY prevLegYaw F
 	FIELD field_70721_aZ legYaw F
 	FIELD field_70754_ba legSwing F
+		COMMENT Only relevant when legYaw is not 0(the entity is moving). Influences where in its swing legs and arms currently are.
 	FIELD field_70717_bb attackingPlayer Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT The most recent player that has attacked this entity
 	FIELD field_70718_bc recentlyHit I
+		COMMENT Set to 60 when hit by the player or the player's wolf, then decrements. Used to determine whether the entity should drop items on death.
 	FIELD field_70755_b entityLivingToAttack Lnet/minecraft/entity/EntityLiving;
+		COMMENT is only being set, has no uses as of MC 1.1
 	FIELD field_70756_c revengeTimer I
 	FIELD field_70751_d lastAttackingEntity Lnet/minecraft/entity/EntityLiving;
 	FIELD field_70720_be arrowHitTimer I
 	FIELD field_70713_bf activePotionsMap Ljava/util/HashMap;
 	FIELD field_70752_e potionsNeedUpdate Z
+		COMMENT Whether the DataWatcher needs to be updated with the active potions
 	FIELD field_70749_g lookHelper Lnet/minecraft/entity/ai/EntityLookHelper;
 	FIELD field_70765_h moveHelper Lnet/minecraft/entity/ai/EntityMoveHelper;
 	FIELD field_70767_i jumpHelper Lnet/minecraft/entity/ai/EntityJumpHelper;
+		COMMENT Entity jumping helper
 	FIELD field_70762_j bodyHelper Lnet/minecraft/entity/EntityBodyHelper;
 	FIELD field_70699_by navigator Lnet/minecraft/pathfinding/PathNavigate;
 	FIELD field_70714_bg tasks Lnet/minecraft/entity/ai/EntityAITasks;
 	FIELD field_70715_bh targetTasks Lnet/minecraft/entity/ai/EntityAITasks;
 	FIELD field_70696_bz attackTarget Lnet/minecraft/entity/EntityLiving;
+		COMMENT The active target the Task system uses for tracking
 	FIELD field_70723_bA senses Lnet/minecraft/entity/ai/EntitySenses;
 	FIELD field_70774_bB AIMoveSpeed F
 	FIELD field_70775_bC homePosition Lnet/minecraft/util/ChunkCoordinates;
 	FIELD field_70772_bD maximumHomeDistance F
+		COMMENT If -1 there is no maximum distance
 	FIELD field_82182_bS equipment [Lnet/minecraft/item/ItemStack;
+		COMMENT Equipment (armor and held item) for this entity.
 	FIELD field_82174_bp equipmentDropChances [F
+		COMMENT Chances for each equipment piece from dropping when this entity dies.
 	FIELD field_82175_bq isSwingInProgress Z
+		COMMENT Whether an arm swing is currently in progress.
 	FIELD field_82173_br swingProgressInt I
 	FIELD field_82172_bs canPickUpLoot Z
+		COMMENT Whether this entity can pick up items from the ground.
 	FIELD field_82179_bU persistenceRequired Z
+		COMMENT Whether this entity should NOT despawn.
 	FIELD field_70716_bi newPosRotationIncrements I
+		COMMENT The number of updates over which the new position and rotation are to be applied to the entity.
 	FIELD field_70709_bj newPosX D
+		COMMENT The new X position to be applied to the entity.
 	FIELD field_70710_bk newPosY D
+		COMMENT The new Y position to be applied to the entity.
 	FIELD field_70711_bl newPosZ D
+		COMMENT The new Z position to be applied to the entity.
 	FIELD field_70712_bm newRotationYaw D
+		COMMENT The new yaw rotation to be applied to the entity.
 	FIELD field_70705_bn newRotationPitch D
+		COMMENT The new yaw rotation to be applied to the entity.
 	FIELD field_70707_bp lastDamage I
+		COMMENT Amount of damage taken in last hit, in half-hearts
 	FIELD field_70708_bq entityAge I
+		COMMENT Holds the living entity age, used to control the despawn.
 	FIELD field_70702_br moveStrafing F
 	FIELD field_70701_bs moveForward F
 	FIELD field_70704_bt randomYawVelocity F
 	FIELD field_70703_bu isJumping Z
+		COMMENT used to check whether entity is jumping.
 	FIELD field_70698_bv defaultPitch F
 	FIELD field_70697_bw moveSpeed F
 	FIELD field_70773_bE jumpTicks I
+		COMMENT Number of ticks since last jump
 	FIELD field_70776_bF currentTarget Lnet/minecraft/entity/Entity;
+		COMMENT This entity's current target.
 	FIELD field_70700_bx numTicksToChaseTarget I
+		COMMENT How long to keep a specific target entity
+	METHOD func_70671_ap getLookHelper ()Lnet/minecraft/entity/ai/EntityLookHelper;
+	METHOD func_70605_aq getMoveHelper ()Lnet/minecraft/entity/ai/EntityMoveHelper;
+	METHOD func_70683_ar getJumpHelper ()Lnet/minecraft/entity/ai/EntityJumpHelper;
+	METHOD func_70661_as getNavigator ()Lnet/minecraft/pathfinding/PathNavigate;
+	METHOD func_70635_at getEntitySenses ()Lnet/minecraft/entity/ai/EntitySenses;
+		COMMENT returns the EntitySenses Object for the EntityLiving
+	METHOD func_70681_au getRNG ()Ljava/util/Random;
+	METHOD func_70643_av getAITarget ()Lnet/minecraft/entity/EntityLiving;
+	METHOD func_70680_aw getLastAttackingEntity ()Lnet/minecraft/entity/EntityLiving;
+	METHOD func_70607_j setLastAttackingEntity (Lnet/minecraft/entity/Entity;)V
+		ARG 0 par1Entity
+	METHOD func_70654_ax getAge ()I
+	METHOD func_70079_am setRotationYawHead ()F
+	METHOD func_70034_d setHeadRotationYaw (F)V
+		COMMENT Sets the head's yaw rotation of the entity.
+		ARG 0 par1
+	METHOD func_70689_ay getAIMoveSpeed ()F
+		COMMENT the movespeed used for the new AI system
+	METHOD func_70659_e setAIMoveSpeed (F)V
+		COMMENT set the movespeed used for the new AI system
+		ARG 0 par1
+	METHOD func_70652_k attackEntityAsMob (Lnet/minecraft/entity/Entity;)Z
+		ARG 0 par1Entity
+	METHOD func_70638_az getAttackTarget ()Lnet/minecraft/entity/EntityLiving;
+		COMMENT Gets the active target the Task system uses for tracking
+	METHOD func_70624_b setAttackTarget (Lnet/minecraft/entity/EntityLiving;)V
+		COMMENT Sets the active target the Task system uses for tracking
+		ARG 0 par1EntityLiving
+	METHOD func_70686_a canAttackClass (Ljava/lang/Class;)Z
+		COMMENT Returns true if this entity can attack entities of the specified class.
+		ARG 0 par1Class
+	METHOD func_70615_aA eatGrassBonus ()V
+		COMMENT This function applies the benefits of growing back wool and faster growing up to the acting entity. (This function is used in the AIEatGrass)
+	METHOD func_70064_a updateFallState (DZ)V
+		COMMENT Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround
+		ARG 0 par1
+		ARG 1 par3
+	METHOD func_70611_aB isWithinHomeDistanceCurrentPosition ()Z
+		COMMENT Returns true if entity is within home distance from current position
+	METHOD func_70649_d isWithinHomeDistance (III)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70598_b setHomeArea (IIII)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_70602_aC getHomePosition ()Lnet/minecraft/util/ChunkCoordinates;
+	METHOD func_70640_aD getMaximumHomeDistance ()F
+	METHOD func_70677_aE detachHome ()V
+	METHOD func_70622_aF hasHome ()Z
+	METHOD func_70604_c setRevengeTarget (Lnet/minecraft/entity/EntityLiving;)V
+		ARG 0 par1EntityLiving
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70685_l canEntityBeSeen (Lnet/minecraft/entity/Entity;)Z
+		COMMENT returns true if the entity provided in the argument can be seen. (Raytrace)
+		ARG 0 par1Entity
+	METHOD func_70073_O getTexture ()Ljava/lang/String;
+		COMMENT Returns the texture's file path as a String.
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70104_M canBePushed ()Z
+		COMMENT Returns true if this entity should push and be pushed by other entities when colliding.
+	METHOD func_70047_e getEyeHeight ()F
+	METHOD func_70627_aG getTalkInterval ()I
+		COMMENT Get number of ticks, at least during which the living entity will be silent.
+	METHOD func_70642_aH playLivingSound ()V
+		COMMENT Plays living's sound at its position
+	METHOD func_70030_z onEntityUpdate ()V
+		COMMENT Gets called every tick from main Entity class
+	METHOD func_70609_aI onDeathUpdate ()V
+		COMMENT handles entity death timer, experience orb and particle creation
+	METHOD func_70682_h decreaseAirSupply (I)I
+		COMMENT Decrements the entity's air supply when underwater
+		ARG 0 par1
+	METHOD func_70693_a getExperiencePoints (Lnet/minecraft/entity/player/EntityPlayer;)I
+		COMMENT Get the experience points the entity currently has.
+		ARG 0 par1EntityPlayer
+	METHOD func_70684_aJ isPlayer ()Z
+		COMMENT Only use is to identify if class is an instance of player for experience dropping
+	METHOD func_70656_aK spawnExplosionParticle ()V
+		COMMENT Spawns an explosion particle around the Entity's location
+	METHOD func_70098_U updateRidden ()V
+		COMMENT Handles updating while being ridden by an entity
+	METHOD func_70056_a setPositionAndRotation2 (DDDFFI)V
+		COMMENT Sets the position and rotation. Only difference from the other one is no bounding on the rotation. Args: posX, posY, posZ, yaw, pitch
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70691_i heal (I)V
+		COMMENT Heal living entity (param: amount of half-hearts)
+		ARG 0 par1
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70630_aN getHealth ()I
+	METHOD func_70606_j setEntityHealth (I)V
+		ARG 0 par1
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70647_i getSoundPitch ()F
+		COMMENT Gets the pitch of living sounds in living entities.
+	METHOD func_70057_ab performHurtAnimation ()V
+		COMMENT Setups the entity to do the hurt animation. Only used by packets in multiplayer.
+	METHOD func_70658_aO getTotalArmorValue ()I
+		COMMENT Returns the current armor value as determined by a call to InventoryPlayer.getTotalArmorValue
+	METHOD func_70675_k damageArmor (I)V
+		ARG 0 par1
+	METHOD func_70655_b applyArmorCalculations (Lnet/minecraft/util/DamageSource;I)I
+		COMMENT Reduces damage, depending on armor
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70672_c applyPotionDamageCalculations (Lnet/minecraft/util/DamageSource;I)I
+		COMMENT Reduces damage, depending on potions
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70665_d damageEntity (Lnet/minecraft/util/DamageSource;I)V
+		COMMENT Deals damage to the entity. If its a EntityPlayer then will take damage from the armor first and then health second with the reduced value. Args: damageAmount
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70599_aP getSoundVolume ()F
+		COMMENT Returns the volume for the sounds this mob makes.
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70653_a knockBack (Lnet/minecraft/entity/Entity;IDD)V
+		COMMENT knocks back this entity
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par5
+	METHOD func_70645_a onDeath (Lnet/minecraft/util/DamageSource;)V
+		COMMENT Called when the mob's health reaches 0.
+		ARG 0 par1DamageSource
+	METHOD func_70600_l dropRareDrop (I)V
+		ARG 0 par1
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70612_e moveEntityWithHeading (FF)V
+		COMMENT Moves the entity based on the specified heading.  Args: strafe, forward
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70617_f_ isOnLadder ()Z
+		COMMENT returns true if this entity is by a ladder, false otherwise
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70089_S isEntityAlive ()Z
+		COMMENT Checks whether target entity is alive.
+	METHOD func_70648_aU canBreatheUnderwater ()Z
+	METHOD func_70657_f setMoveForward (F)V
+		ARG 0 par1
+	METHOD func_70637_d setJumping (Z)V
+		ARG 0 par1
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_82167_n collideWithEntity (Lnet/minecraft/entity/Entity;)V
+		ARG 0 par1Entity
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70613_aW isClientWorld ()Z
+		COMMENT Returns whether the entity is in a local (client) world
+	METHOD func_70610_aX isMovementBlocked ()Z
+		COMMENT Dead and sleeping entities cannot move
+	METHOD func_70632_aY isBlocking ()Z
+	METHOD func_70664_aZ jump ()V
+		COMMENT Causes this entity to do an upwards motion (jumping).
+	METHOD func_70692_ba canDespawn ()Z
+		COMMENT Determines if an entity can be despawned, used on idle far away entities
+	METHOD func_70623_bb despawnEntity ()V
+		COMMENT Makes the entity despawn if requirements are reached
+	METHOD func_70619_bc updateAITasks ()V
+	METHOD func_70629_bd updateAITick ()V
+		COMMENT main AI tick function, replaces updateEntityActionState
+	METHOD func_70626_be updateEntityActionState ()V
+	METHOD func_82168_bl updateArmSwingProgress ()V
+		COMMENT Updates the arm swing progress counters and animation progress
+	METHOD func_70646_bf getVerticalFaceSpeed ()I
+		COMMENT The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
+	METHOD func_70625_a faceEntity (Lnet/minecraft/entity/Entity;FF)V
+		COMMENT Changes pitch and yaw so that the entity calling the function is facing the entity provided as an argument.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70663_b updateRotation (FFF)F
+		COMMENT Arguments: current rotation, intended rotation, max increment.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70601_bi getCanSpawnHere ()Z
+		COMMENT Checks if the entity's current position is a valid location to spawn this entity.
+	METHOD func_70076_C kill ()V
+		COMMENT sets the dead flag. Used when you fall off the bottom of the world.
+	METHOD func_70678_g getSwingProgress (F)F
+		COMMENT Returns where in the swing animation the living entity is (from 0 to 1).  Args: partialTickTime
+		ARG 0 par1
+	METHOD func_70666_h getPosition (F)Lnet/minecraft/util/Vec3;
+		COMMENT interpolated position vector
+		ARG 0 par1
+	METHOD func_70040_Z getLookVec ()Lnet/minecraft/util/Vec3;
+		COMMENT returns a (normalized) vector of where this entity is looking
+	METHOD func_70676_i getLook (F)Lnet/minecraft/util/Vec3;
+		COMMENT interpolated look vector
+		ARG 0 par1
+	METHOD func_70603_bj getRenderSizeModifier ()F
+		COMMENT Returns render size modifier
+	METHOD func_70614_a rayTrace (DF)Lnet/minecraft/util/MovingObjectPosition;
+		COMMENT Performs a ray trace for the distance specified and using the partial tick time. Args: distance, partialTickTime
+		ARG 0 par1
+		ARG 1 par3
+	METHOD func_70641_bl getMaxSpawnedInChunk ()I
+		COMMENT Will return how many at most can spawn in a chunk at once.
+	METHOD func_70103_a handleHealthUpdate (B)V
+		ARG 0 par1
+	METHOD func_70608_bn isPlayerSleeping ()Z
+		COMMENT Returns whether player is sleeping or not
+	METHOD func_70620_b getItemIcon (Lnet/minecraft/item/ItemStack;I)I
+		COMMENT Gets the Icon Index of the item currently held
+		ARG 0 par1ItemStack
+		ARG 1 par2
+	METHOD func_70679_bo updatePotionEffects ()V
+	METHOD func_70674_bp clearActivePotions ()V
+	METHOD func_70651_bq getActivePotionEffects ()Ljava/util/Collection;
+	METHOD func_82165_m isPotionActive (I)Z
+		ARG 0 par1
+	METHOD func_70644_a isPotionActive (Lnet/minecraft/potion/Potion;)Z
+		ARG 0 par1Potion
+	METHOD func_70660_b getActivePotionEffect (Lnet/minecraft/potion/Potion;)Lnet/minecraft/potion/PotionEffect;
+		COMMENT returns the PotionEffect for the supplied Potion if it is active, null otherwise.
+		ARG 0 par1Potion
+	METHOD func_70690_d addPotionEffect (Lnet/minecraft/potion/PotionEffect;)V
+		COMMENT adds a PotionEffect to the entity
+		ARG 0 par1PotionEffect
+	METHOD func_70687_e isPotionApplicable (Lnet/minecraft/potion/PotionEffect;)Z
+		ARG 0 par1PotionEffect
+	METHOD func_70662_br isEntityUndead ()Z
+		COMMENT Returns true if this entity is undead.
+	METHOD func_70618_n removePotionEffectClient (I)V
+		COMMENT Remove the speified potion effect from this entity.
+		ARG 0 par1
+	METHOD func_82170_o removePotionEffect (I)V
+		COMMENT Remove the specified potion effect from this entity.
+		ARG 0 par1
+	METHOD func_70670_a onNewPotionEffect (Lnet/minecraft/potion/PotionEffect;)V
+		ARG 0 par1PotionEffect
+	METHOD func_70695_b onChangedPotionEffect (Lnet/minecraft/potion/PotionEffect;)V
+		ARG 0 par1PotionEffect
+	METHOD func_70688_c onFinishedPotionEffect (Lnet/minecraft/potion/PotionEffect;)V
+		ARG 0 par1PotionEffect
+	METHOD func_70616_bs getSpeedModifier ()F
+		COMMENT This method returns a value to be applied directly to entity speed, this factor is less than 1 when a slowdown potion effect is applied, more than 1 when a haste potion effect is applied and 2 for fleeing entities.
+	METHOD func_70634_a setPositionAndUpdate (DDD)V
+		COMMENT Move the entity to the coordinates informed, but keep yaw/pitch values.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70631_g_ isChild ()Z
+		COMMENT If Animal, checks if the age timer is negative
+	METHOD func_70668_bt getCreatureAttribute ()Lnet/minecraft/entity/EnumCreatureAttribute;
+		COMMENT Get this Entity's EnumCreatureAttribute
+	METHOD func_70669_a renderBrokenItemStack (Lnet/minecraft/item/ItemStack;)V
+		COMMENT Renders broken item particles using the given ItemStack
+		ARG 0 par1ItemStack
+	METHOD func_70694_bm getHeldItem ()Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the item that this EntityLiving is holding, if any.
+	METHOD func_71124_b getCurrentItemOrArmor (I)Lnet/minecraft/item/ItemStack;
+		COMMENT 0 = item, 1-n is armor
+		ARG 0 par1
+	METHOD func_82169_q getCurrentArmor (I)Lnet/minecraft/item/ItemStack;
+		ARG 0 par1
+	METHOD func_70062_b setCurrentItemOrArmor (ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sets the held item, or an armor slot. Slot 0 is held item. Slot 1-4 is armor. Params: Item, slot
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_70035_c getLastActiveItems ()[Lnet/minecraft/item/ItemStack;
+	METHOD func_82160_b dropEquipment (ZI)V
+		COMMENT Drop the equipment for this entity.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71001_a onItemPickup (Lnet/minecraft/entity/Entity;I)V
+		COMMENT Called whenever an item is picked up from walking over it. Args: pickedUpEntity, stackSize
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_82161_a getArmorItemForSlot (II)Lnet/minecraft/item/Item;
+		COMMENT Params: Armor slot, Item tier
+		ARG 0 par0
+		ARG 1 par1
+	METHOD func_82163_bD initCreature ()V
+		COMMENT Initialize this creature.
+	METHOD func_82166_i getArmSwingAnimationEnd ()I
+		COMMENT Returns an integer indicating the end point of the swing animation, used by {@link #swingProgress} to provide a progress indicator. Takes dig speed enchantments into account.
+	METHOD func_71038_i swingItem ()V
+		COMMENT Swings the item the player is holding.
+	METHOD func_82171_bF canBeSteered ()Z
+		COMMENT returns true if all the conditions for steering the entity are met. For pigs, this is true if it is being ridden by a player and the player is holding a carrot-on-a-stick
+	METHOD func_85035_bI getArrowCountInEntity ()I
+		COMMENT counts the amount of arrows stuck in the entity. getting hit by arrows increases this, used in rendering
+	METHOD func_85034_r setArrowCountInEntity (I)V
+		COMMENT sets the amount of arrows stuck in the entity. used for rendering those
+		ARG 0 par1

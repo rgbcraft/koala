@@ -1,1 +1,8 @@
 CLASS net/minecraft/entity/IProjectile
+	METHOD func_70186_c setThrowableHeading (DDDFF)V
+		COMMENT Similar to setArrowHeading, it's point the throwable entity to a x, y, z direction.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8

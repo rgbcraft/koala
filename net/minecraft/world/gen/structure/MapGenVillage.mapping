@@ -1,3 +1,11 @@
 CLASS net/minecraft/world/gen/structure/MapGenVillage
 	FIELD field_75055_e villageSpawnBiomes Ljava/util/List;
+		COMMENT A list of all the biomes villages can spawn in.
 	FIELD field_75054_f terrainType I
+		COMMENT World terrain type, 0 for normal, 1 for flat map
+	METHOD func_75047_a canSpawnStructureAtCoords (II)Z
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75049_b getStructureStart (II)Lnet/minecraft/world/gen/structure/StructureStart;
+		ARG 0 par1
+		ARG 1 par2

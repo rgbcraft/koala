@@ -1,7 +1,23 @@
 CLASS net/minecraft/network/packet/Packet102WindowClick
 	FIELD field_73444_a window_Id I
+		COMMENT The id of the window which was clicked. 0 for player inventory.
 	FIELD field_73442_b inventorySlot I
+		COMMENT The clicked slot (-999 is outside of inventory)
 	FIELD field_73443_c mouseClick I
+		COMMENT 1 when right-clicking and otherwise 0
 	FIELD field_73440_d action S
+		COMMENT A unique number for the action, used for transaction handling
 	FIELD field_73441_e itemStack Lnet/minecraft/item/ItemStack;
+		COMMENT Item stack for inventory
 	FIELD field_73439_f holdingShift I
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).

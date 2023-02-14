@@ -1,5 +1,13 @@
 CLASS net/minecraft/util/IntHashMapEntry
 	FIELD field_76035_a hashEntry I
+		COMMENT The hash code of this entry
 	FIELD field_76033_b valueEntry Ljava/lang/Object;
+		COMMENT The object stored in this entry
 	FIELD field_76034_c nextEntry Lnet/minecraft/util/IntHashMapEntry;
+		COMMENT The next entry in this slot
 	FIELD field_76032_d slotHash I
+		COMMENT The id of the hash slot computed from the hash
+	METHOD func_76031_a getHash ()I
+		COMMENT Returns the hash code for this entry
+	METHOD func_76030_b getValue ()Ljava/lang/Object;
+		COMMENT Returns the object stored in this entry

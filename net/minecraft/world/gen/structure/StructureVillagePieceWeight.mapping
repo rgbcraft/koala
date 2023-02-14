@@ -1,5 +1,9 @@
 CLASS net/minecraft/world/gen/structure/StructureVillagePieceWeight
 	FIELD field_75090_a villagePieceClass Ljava/lang/Class;
+		COMMENT The Class object for the represantation of this village piece.
 	FIELD field_75088_b villagePieceWeight I
 	FIELD field_75089_c villagePiecesSpawned I
 	FIELD field_75087_d villagePiecesLimit I
+	METHOD func_75085_a canSpawnMoreVillagePiecesOfType (I)Z
+		ARG 0 par1
+	METHOD func_75086_a canSpawnMoreVillagePieces ()Z

@@ -1,7 +1,55 @@
 CLASS net/minecraft/server/integrated/IntegratedServer
 	FIELD field_71349_l mc Lnet/minecraft/client/Minecraft;
+		COMMENT The Minecraft instance.
 	FIELD field_71350_m theWorldSettings Lnet/minecraft/world/WorldSettings;
 	FIELD field_71347_n theServerListeningThread Lnet/minecraft/server/integrated/IntegratedServerListenThread;
+		COMMENT Instance of IntegratedServerListenThread.
 	FIELD field_71348_o isGamePaused Z
 	FIELD field_71346_p isPublic Z
 	FIELD field_71345_q lanServerPing Lnet/minecraft/client/multiplayer/ThreadLanServerPing;
+	METHOD func_71247_a loadAllWorlds (Ljava/lang/String;Ljava/lang/String;JLnet/minecraft/world/WorldType;Ljava/lang/String;)V
+		ARG 0 par1Str
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par5WorldType
+		ARG 4 par6Str
+	METHOD func_71197_b startServer ()Z
+		COMMENT Initialises the server and starts it.
+	METHOD func_71217_p tick ()V
+		COMMENT Main function called by run() every loop.
+	METHOD func_71225_e canStructuresSpawn ()Z
+	METHOD func_71265_f getGameType ()Lnet/minecraft/world/EnumGameType;
+	METHOD func_71232_g getDifficulty ()I
+		COMMENT Defaults to "1" (Easy) for the dedicated server, defaults to "2" (Normal) on the client.
+	METHOD func_71199_h isHardcore ()Z
+		COMMENT Defaults to false.
+	METHOD func_71238_n getDataDirectory ()Ljava/io/File;
+	METHOD func_71262_S isDedicatedServer ()Z
+	METHOD func_71343_a getServerListeningThread ()Lnet/minecraft/server/integrated/IntegratedServerListenThread;
+		COMMENT Gets the IntergratedServerListenThread.
+	METHOD func_71228_a finalTick (Lnet/minecraft/crash/CrashReport;)V
+		COMMENT Called on exit from the main run() loop.
+		ARG 0 par1CrashReport
+	METHOD func_71230_b addServerInfoToCrashReport (Lnet/minecraft/crash/CrashReport;)Lnet/minecraft/crash/CrashReport;
+		COMMENT Adds the server info, including from theWorldServer, to the crash report.
+		ARG 0 par1CrashReport
+	METHOD func_70000_a addServerStatsToSnooper (Lnet/minecraft/profiler/PlayerUsageSnooper;)V
+		ARG 0 par1PlayerUsageSnooper
+	METHOD func_70002_Q isSnooperEnabled ()Z
+		COMMENT Returns whether snooping is enabled or not.
+	METHOD func_71206_a shareToLAN (Lnet/minecraft/world/EnumGameType;Z)Ljava/lang/String;
+		COMMENT On dedicated does nothing. On integrated, sets commandsAllowedForAll, gameType and allows external connections.
+		ARG 0 par1EnumGameType
+		ARG 1 par2
+	METHOD func_71260_j stopServer ()V
+		COMMENT Saves all necessary data as preparation for stopping the server.
+	METHOD func_71263_m initiateShutdown ()V
+		COMMENT Sets the serverRunning variable to false, in order to get the server to shut down.
+	METHOD func_71344_c getPublic ()Z
+		COMMENT Returns true if this integrated server is open to LAN
+	METHOD func_71235_a setGameType (Lnet/minecraft/world/EnumGameType;)V
+		COMMENT Sets the game type for all worlds.
+		ARG 0 par1EnumGameType
+	METHOD func_82356_Z isCommandBlockEnabled ()Z
+		COMMENT Return whether command blocks are enabled.
+	METHOD func_71212_ac getNetworkThread ()Lnet/minecraft/network/NetworkListenThread;

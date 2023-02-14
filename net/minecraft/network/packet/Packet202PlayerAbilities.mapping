@@ -1,7 +1,48 @@
 CLASS net/minecraft/network/packet/Packet202PlayerAbilities
 	FIELD field_73362_a disableDamage Z
+		COMMENT Disables player damage.
 	FIELD field_73360_b isFlying Z
+		COMMENT Indicates whether the player is flying or not.
 	FIELD field_73361_c allowFlying Z
+		COMMENT Whether or not to allow the player to fly when they double jump.
 	FIELD field_73358_d isCreativeMode Z
+		COMMENT Used to determine if creative mode is enabled, and therefore if items should be depleted on usage
 	FIELD field_73359_e flySpeed F
 	FIELD field_73357_f walkSpeed F
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).
+	METHOD func_73352_d getDisableDamage ()Z
+	METHOD func_73353_a setDisableDamage (Z)V
+		COMMENT Sets whether damage is disabled or not.
+		ARG 0 par1
+	METHOD func_73350_f getFlying ()Z
+	METHOD func_73349_b setFlying (Z)V
+		COMMENT Sets whether we're currently flying or not.
+		ARG 0 par1
+	METHOD func_73348_g getAllowFlying ()Z
+	METHOD func_73354_c setAllowFlying (Z)V
+		ARG 0 par1
+	METHOD func_73346_h isCreativeMode ()Z
+	METHOD func_73356_d setCreativeMode (Z)V
+		ARG 0 par1
+	METHOD func_73347_i getFlySpeed ()F
+	METHOD func_73351_a setFlySpeed (F)V
+		COMMENT Sets the flying speed.
+		ARG 0 par1
+	METHOD func_73355_b setWalkSpeed (F)V
+		COMMENT Sets the walking speed.
+		ARG 0 par1
+	METHOD func_73278_e isRealPacket ()Z
+		COMMENT only false for the abstract Packet class, all real packets return true
+	METHOD func_73268_a containsSameEntityIDAs (Lnet/minecraft/network/packet/Packet;)Z
+		COMMENT eg return packet30entity.entityId == entityId; WARNING : will throw if you compare a packet to a different packet class
+		ARG 0 par1Packet

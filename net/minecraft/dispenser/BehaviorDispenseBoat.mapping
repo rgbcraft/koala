@@ -1,3 +1,12 @@
 CLASS net/minecraft/dispenser/BehaviorDispenseBoat
 	FIELD field_82495_c defaultItemDispenseBehavior Lnet/minecraft/dispenser/BehaviorDefaultDispenseItem;
+		COMMENT Reference to the BehaviorDefaultDispenseItem object.
 	FIELD field_82494_b mcServer Lnet/minecraft/server/MinecraftServer;
+		COMMENT Reference to the MinecraftServer object.
+	METHOD func_82487_b dispenseStack (Lnet/minecraft/dispenser/IBlockSource;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;
+		COMMENT Dispense the specified stack, play the dispense sound and spawn particles.
+		ARG 0 par1IBlockSource
+		ARG 1 par2ItemStack
+	METHOD func_82485_a playDispenseSound (Lnet/minecraft/dispenser/IBlockSource;)V
+		COMMENT Play the dispense sound from the specified block.
+		ARG 0 par1IBlockSource

@@ -1,3 +1,7 @@
 CLASS net/minecraft/village/VillageSiege
 	FIELD field_75537_a worldObj Lnet/minecraft/world/World;
 	FIELD field_75531_f theVillage Lnet/minecraft/village/Village;
+		COMMENT Instance of Village.
+	METHOD func_75528_a tick ()V
+		COMMENT Runs a single tick for the village siege
+	METHOD func_75530_c spawnZombie ()Z

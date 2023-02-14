@@ -1,19 +1,79 @@
 CLASS net/minecraft/client/gui/GuiMultiplayer
 	FIELD field_74027_a threadsPending I
+		COMMENT Number of outstanding ThreadPollServers threads
 	FIELD field_74023_b lock Ljava/lang/Object;
+		COMMENT Lock object for use with synchronized()
 	FIELD field_74025_c parentScreen Lnet/minecraft/client/gui/GuiScreen;
+		COMMENT A reference to the screen object that created this. Used for navigating between screens.
 	FIELD field_74022_d serverSlotContainer Lnet/minecraft/client/gui/GuiSlotServer;
+		COMMENT Slot container for the server list
 	FIELD field_74030_m internetServerList Lnet/minecraft/client/multiplayer/ServerList;
 	FIELD field_74028_n selectedServer I
+		COMMENT Index of the currently selected server
 	FIELD field_74029_o buttonEdit Lnet/minecraft/client/gui/GuiButton;
+		COMMENT The 'Edit' button
 	FIELD field_74038_p buttonSelect Lnet/minecraft/client/gui/GuiButton;
+		COMMENT The 'Join Server' button
 	FIELD field_74037_q buttonDelete Lnet/minecraft/client/gui/GuiButton;
+		COMMENT The 'Delete' button
 	FIELD field_74036_r deleteClicked Z
+		COMMENT The 'Delete' button was clicked
 	FIELD field_74035_s addClicked Z
+		COMMENT The 'Add server' button was clicked
 	FIELD field_74034_t editClicked Z
+		COMMENT The 'Edit' button was clicked
 	FIELD field_74033_u directClicked Z
+		COMMENT The 'Direct Connect' button was clicked
 	FIELD field_74032_v lagTooltip Ljava/lang/String;
+		COMMENT This GUI's lag tooltip text or null if no lag icon is being hovered.
 	FIELD field_74031_w theServerData Lnet/minecraft/client/multiplayer/ServerData;
+		COMMENT Instance of ServerData.
 	FIELD field_74041_x localNetworkServerList Lnet/minecraft/client/multiplayer/LanServerList;
 	FIELD field_74040_y localServerFindThread Lnet/minecraft/client/multiplayer/ThreadLanServerFind;
 	FIELD field_74026_B listofLanServers Ljava/util/List;
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_74016_g initGuiControls ()V
+		COMMENT Populate the GuiScreen controlList
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.
+	METHOD func_73874_b onGuiClosed ()V
+		COMMENT Called when the screen is unloaded. Used to disable keyboard repeat events
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73878_a confirmClicked (ZI)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73869_a keyTyped (CI)V
+		COMMENT Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74004_a joinServer (I)V
+		COMMENT Join server by slot index
+		ARG 0 par1
+	METHOD func_74002_a connectToServer (Lnet/minecraft/client/multiplayer/ServerData;)V
+		ARG 0 par1ServerData
+	METHOD func_74006_a getInternetServerList (Lnet/minecraft/client/gui/GuiMultiplayer;)Lnet/minecraft/client/multiplayer/ServerList;
+		ARG 0 par0GuiMultiplayer
+	METHOD func_74003_b getListOfLanServers (Lnet/minecraft/client/gui/GuiMultiplayer;)Ljava/util/List;
+		ARG 0 par0GuiMultiplayer
+	METHOD func_74020_c getSelectedServer (Lnet/minecraft/client/gui/GuiMultiplayer;)I
+		ARG 0 par0GuiMultiplayer
+	METHOD func_74015_a getAndSetSelectedServer (Lnet/minecraft/client/gui/GuiMultiplayer;I)I
+		ARG 0 par0GuiMultiplayer
+		ARG 1 par1
+	METHOD func_74014_d getButtonSelect (Lnet/minecraft/client/gui/GuiMultiplayer;)Lnet/minecraft/client/gui/GuiButton;
+		COMMENT Return buttonSelect GuiButton
+		ARG 0 par0GuiMultiplayer
+	METHOD func_74005_e getButtonEdit (Lnet/minecraft/client/gui/GuiMultiplayer;)Lnet/minecraft/client/gui/GuiButton;
+		COMMENT Return buttonEdit GuiButton
+		ARG 0 par0GuiMultiplayer
+	METHOD func_74019_f getButtonDelete (Lnet/minecraft/client/gui/GuiMultiplayer;)Lnet/minecraft/client/gui/GuiButton;
+		COMMENT Return buttonDelete GuiButton
+		ARG 0 par0GuiMultiplayer

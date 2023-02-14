@@ -1,1 +1,8 @@
 CLASS net/minecraft/entity/monster/EntityCaveSpider
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70840_n spiderScaleAmount ()F
+		COMMENT How large the spider should be scaled.
+	METHOD func_70652_k attackEntityAsMob (Lnet/minecraft/entity/Entity;)Z
+		ARG 0 par1Entity
+	METHOD func_82163_bD initCreature ()V
+		COMMENT Initialize this creature.

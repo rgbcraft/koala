@@ -15,5 +15,28 @@ CLASS net/minecraft/creativetab/CreativeTabs
 	FIELD field_78033_n tabIndex I
 	FIELD field_78034_o tabLabel Ljava/lang/String;
 	FIELD field_78043_p backgroundImageName Ljava/lang/String;
+		COMMENT Texture to use.
 	FIELD field_78042_q hasScrollbar Z
 	FIELD field_78041_r drawTitle Z
+		COMMENT Whether to draw the title in the foreground of the creative GUI
+	METHOD func_78021_a getTabIndex ()I
+	METHOD func_78013_b getTabLabel ()Ljava/lang/String;
+	METHOD func_78024_c getTranslatedTabLabel ()Ljava/lang/String;
+		COMMENT Gets the translated Label.
+	METHOD func_78016_d getTabIconItem ()Lnet/minecraft/item/Item;
+	METHOD func_78012_e getTabIconItemIndex ()I
+		COMMENT the itemID for the item to be displayed on the tab
+	METHOD func_78015_f getBackgroundImageName ()Ljava/lang/String;
+	METHOD func_78025_a setBackgroundImageName (Ljava/lang/String;)Lnet/minecraft/creativetab/CreativeTabs;
+		ARG 0 par1Str
+	METHOD func_78019_g drawInForegroundOfTab ()Z
+	METHOD func_78014_h setNoTitle ()Lnet/minecraft/creativetab/CreativeTabs;
+	METHOD func_78017_i shouldHidePlayerInventory ()Z
+	METHOD func_78022_j setNoScrollbar ()Lnet/minecraft/creativetab/CreativeTabs;
+	METHOD func_78020_k getTabColumn ()I
+		COMMENT returns index % 6
+	METHOD func_78023_l isTabInFirstRow ()Z
+		COMMENT returns tabIndex < 6
+	METHOD func_78018_a displayAllReleventItems (Ljava/util/List;)V
+		COMMENT only shows items which have tabToDisplayOn == this
+		ARG 0 par1List

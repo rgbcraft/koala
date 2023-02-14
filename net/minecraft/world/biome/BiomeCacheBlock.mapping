@@ -1,8 +1,19 @@
 CLASS net/minecraft/world/biome/BiomeCacheBlock
 	FIELD field_76892_a temperatureValues [F
+		COMMENT An array of chunk temperatures saved by this cache.
 	FIELD field_76890_b rainfallValues [F
+		COMMENT An array of chunk rainfall values saved by this cache.
 	FIELD field_76891_c biomes [Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT The array of biome types stored in this BiomeCacheBlock.
 	FIELD field_76888_d xPosition I
+		COMMENT The x coordinate of the BiomeCacheBlock.
 	FIELD field_76889_e zPosition I
+		COMMENT The z coordinate of the BiomeCacheBlock.
 	FIELD field_76886_f lastAccessTime J
+		COMMENT The last time this BiomeCacheBlock was accessed, in milliseconds.
 	FIELD field_76887_g theBiomeCache Lnet/minecraft/world/biome/BiomeCache;
+		COMMENT The BiomeCache object that contains this BiomeCacheBlock
+	METHOD func_76885_a getBiomeGenAt (II)Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Returns the BiomeGenBase related to the x, z position from the cache block.
+		ARG 0 par1
+		ARG 1 par2

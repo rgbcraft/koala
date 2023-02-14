@@ -1,1 +1,4 @@
 CLASS net/minecraft/client/texturepacks/TexturePackFolder
+	METHOD func_77532_a getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+		COMMENT Gives a texture resource as InputStream.
+		ARG 0 par1Str

@@ -1,3 +1,18 @@
 CLASS net/minecraft/world/Teleporter
 	FIELD field_85192_a worldServerInstance Lnet/minecraft/world/WorldServer;
 	FIELD field_77187_a random Ljava/util/Random;
+		COMMENT A private Random() function in Teleporter
+	METHOD func_77185_a placeInPortal (Lnet/minecraft/entity/Entity;DDDF)V
+		COMMENT Place an entity in a nearby portal, creating one if necessary.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_77184_b placeInExistingPortal (Lnet/minecraft/entity/Entity;DDDF)Z
+		COMMENT Place an entity in a nearby portal which already exists.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8

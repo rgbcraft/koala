@@ -1,19 +1,75 @@
 CLASS net/minecraft/client/gui/GuiSlot
 	FIELD field_77233_a mc Lnet/minecraft/client/Minecraft;
 	FIELD field_77228_g width I
+		COMMENT The width of the GuiScreen. Affects the container rendering, but not the overlays.
 	FIELD field_77240_h height I
+		COMMENT The height of the GuiScreen. Affects the container rendering, but not the overlays or the scrolling.
 	FIELD field_77231_b top I
+		COMMENT The top of the slot container. Affects the overlays and scrolling.
 	FIELD field_77232_c bottom I
+		COMMENT The bottom of the slot container. Affects the overlays and scrolling.
 	FIELD field_77241_i right I
 	FIELD field_77238_j left I
 	FIELD field_77229_d slotHeight I
+		COMMENT The height of a slot.
 	FIELD field_77239_k scrollUpButtonID I
+		COMMENT button id of the button used to scroll up
 	FIELD field_77236_l scrollDownButtonID I
+		COMMENT the buttonID of the button used to scroll down
 	FIELD field_77230_e mouseX I
+		COMMENT X axis position of the mouse
 	FIELD field_77227_f mouseY I
+		COMMENT Y axis position of the mouse
 	FIELD field_77237_m initialClickY F
+		COMMENT where the mouse was in the window when you first clicked to scroll
 	FIELD field_77234_n scrollMultiplier F
+		COMMENT what to multiply the amount you moved your mouse by(used for slowing down scrolling when over the items and no on scroll bar)
 	FIELD field_77235_o amountScrolled F
+		COMMENT how far down this slot has been scrolled
 	FIELD field_77246_p selectedElement I
+		COMMENT the element in the list that was selected
 	FIELD field_77245_q lastClicked J
+		COMMENT the time when this button was last clicked.
 	FIELD field_77244_r showSelectionBox Z
+		COMMENT true if a selected element in this gui will show an outline box
+	METHOD func_77216_a setShowSelectionBox (Z)V
+		ARG 0 par1
+	METHOD func_77217_a getSize ()I
+		COMMENT Gets the size of the current slot list.
+	METHOD func_77213_a elementClicked (IZ)V
+		COMMENT the element in the slot that was clicked, boolean for wether it was double clicked or not
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_77218_a isSelected (I)Z
+		COMMENT returns true if the element passed in is currently selected
+		ARG 0 par1
+	METHOD func_77212_b getContentHeight ()I
+		COMMENT return the height of the content being scrolled
+	METHOD func_77221_c drawBackground ()V
+	METHOD func_77214_a drawSlot (IIIILnet/minecraft/client/renderer/Tessellator;)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Tessellator
+	METHOD func_77220_a registerScrollButtons (Ljava/util/List;II)V
+		COMMENT Registers the IDs that can be used for the scrollbar's buttons.
+		ARG 0 par1List
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77226_h bindAmountScrolled ()V
+		COMMENT stop the thing from scrolling out of bounds
+	METHOD func_77219_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		ARG 0 par1GuiButton
+	METHOD func_77211_a drawScreen (IIF)V
+		COMMENT draws the slot to the screen, pass in mouse's current x and y and partial ticks
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77225_g getScrollBarX ()I
+	METHOD func_77206_b overlayBackground (IIII)V
+		COMMENT Overlays the background to hide scrolled items
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

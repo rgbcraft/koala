@@ -1,2 +1,7 @@
 CLASS net/minecraft/dispenser/BehaviorMobEggDispense
 	FIELD field_74270_a mcServer Lnet/minecraft/server/MinecraftServer;
+		COMMENT Reference to the MinecraftServer object.
+	METHOD func_82487_b dispenseStack (Lnet/minecraft/dispenser/IBlockSource;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;
+		COMMENT Dispense the specified stack, play the dispense sound and spawn particles.
+		ARG 0 par1IBlockSource
+		ARG 1 par2ItemStack

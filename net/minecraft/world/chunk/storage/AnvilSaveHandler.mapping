@@ -1,1 +1,10 @@
 CLASS net/minecraft/world/chunk/storage/AnvilSaveHandler
+	METHOD func_75763_a getChunkLoader (Lnet/minecraft/world/WorldProvider;)Lnet/minecraft/world/chunk/storage/IChunkLoader;
+		COMMENT Returns the chunk loader with the provided world provider
+		ARG 0 par1WorldProvider
+	METHOD func_75755_a saveWorldInfoWithPlayer (Lnet/minecraft/world/storage/WorldInfo;Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Saves the given World Info with the given NBTTagCompound as the Player.
+		ARG 0 par1WorldInfo
+		ARG 1 par2NBTTagCompound
+	METHOD func_75759_a flush ()V
+		COMMENT Called to flush all changes to disk, waiting for them to complete.

@@ -1,6 +1,37 @@
 CLASS net/minecraft/network/packet/Packet55BlockDestroy
 	FIELD field_73329_a entityId I
+		COMMENT Entity breaking the block
 	FIELD field_73327_b posX I
+		COMMENT X posiiton of the block
 	FIELD field_73328_c posY I
+		COMMENT Y position of the block
 	FIELD field_73325_d posZ I
+		COMMENT Z position of the block
 	FIELD field_73326_e destroyedStage I
+		COMMENT How far destroyed this block is
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).
+	METHOD func_73322_d getEntityId ()I
+		COMMENT Gets the ID of the entity breaking the block
+	METHOD func_73321_f getPosX ()I
+		COMMENT Gets the X position of the block
+	METHOD func_73324_g getPosY ()I
+		COMMENT Gets the Y position of the block
+	METHOD func_73320_h getPosZ ()I
+		COMMENT Gets the Z position of the block
+	METHOD func_73323_i getDestroyedStage ()I
+		COMMENT Gets how far destroyed this block is
+	METHOD func_73278_e isRealPacket ()Z
+		COMMENT only false for the abstract Packet class, all real packets return true
+	METHOD func_73268_a containsSameEntityIDAs (Lnet/minecraft/network/packet/Packet;)Z
+		COMMENT eg return packet30entity.entityId == entityId; WARNING : will throw if you compare a packet to a different packet class
+		ARG 0 par1Packet

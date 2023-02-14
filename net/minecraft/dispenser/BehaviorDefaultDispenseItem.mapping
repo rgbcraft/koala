@@ -1,1 +1,16 @@
 CLASS net/minecraft/dispenser/BehaviorDefaultDispenseItem
+	METHOD func_82482_a dispense (Lnet/minecraft/dispenser/IBlockSource;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;
+		COMMENT Dispenses the specified ItemStack from a dispenser.
+		ARG 0 par1IBlockSource
+		ARG 1 par2ItemStack
+	METHOD func_82487_b dispenseStack (Lnet/minecraft/dispenser/IBlockSource;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;
+		COMMENT Dispense the specified stack, play the dispense sound and spawn particles.
+		ARG 0 par1IBlockSource
+		ARG 1 par2ItemStack
+	METHOD func_82485_a playDispenseSound (Lnet/minecraft/dispenser/IBlockSource;)V
+		COMMENT Play the dispense sound from the specified block.
+		ARG 0 par1IBlockSource
+	METHOD func_82489_a spawnDispenseParticles (Lnet/minecraft/dispenser/IBlockSource;Lnet/minecraft/util/EnumFacing;)V
+		COMMENT Order clients to display dispense particles from the specified block and facing.
+		ARG 0 par1IBlockSource
+		ARG 1 par2EnumFacing

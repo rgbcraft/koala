@@ -1,2 +1,35 @@
 CLASS net/minecraft/world/gen/structure/MapGenStructure
 	FIELD field_75053_d structureMap Ljava/util/Map;
+		COMMENT Used to store a list of all structures that have been recursively generated. Used so that during recursive generation, the structure generator can avoid generating structures that intersect ones that have already been placed.
+	METHOD func_75037_a recursiveGenerate (Lnet/minecraft/world/World;IIII[B)V
+		COMMENT Recursively called by generate() (func_75036_a) and optionally by itself.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6ArrayOfByte
+	METHOD func_75051_a generateStructuresInChunk (Lnet/minecraft/world/World;Ljava/util/Random;II)Z
+		COMMENT Generates structures in specified chunk next to existing structures. Does *not* generate StructureStarts.
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_75048_a hasStructureAt (III)Z
+		COMMENT Returns true if the structure generator has generated a structure located at the given position tuple.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75050_a getNearestInstance (Lnet/minecraft/world/World;III)Lnet/minecraft/world/ChunkPosition;
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_75052_o_ getCoordList ()Ljava/util/List;
+		COMMENT Returns a list of other locations at which the structure generation has been run, or null if not relevant to this structure generator.
+	METHOD func_75047_a canSpawnStructureAtCoords (II)Z
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75049_b getStructureStart (II)Lnet/minecraft/world/gen/structure/StructureStart;
+		ARG 0 par1
+		ARG 1 par2

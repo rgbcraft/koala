@@ -1,1 +1,3 @@
 CLASS net/minecraft/block/StepSoundSand
+	METHOD func_72676_a getBreakSound ()Ljava/lang/String;
+		COMMENT Used when a block breaks, EXA: Player break, Shep eating grass, etc..

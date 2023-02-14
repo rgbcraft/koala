@@ -1,1 +1,4 @@
 CLASS net/minecraft/item/ItemPiston
+	METHOD func_77647_b getMetadata (I)I
+		COMMENT Returns the metadata of the block which this Item (ItemBlock) can place
+		ARG 0 par1

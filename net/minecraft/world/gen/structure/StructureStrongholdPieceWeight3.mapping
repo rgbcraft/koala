@@ -1,1 +1,3 @@
 CLASS net/minecraft/world/gen/structure/StructureStrongholdPieceWeight3
+	METHOD func_75189_a canSpawnMoreStructuresOfType (I)Z
+		ARG 0 par1

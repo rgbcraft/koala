@@ -2,3 +2,11 @@ CLASS net/minecraft/block/StepSound
 	FIELD field_72681_a stepSoundName Ljava/lang/String;
 	FIELD field_72679_b stepSoundVolume F
 	FIELD field_72680_c stepSoundPitch F
+	METHOD func_72677_b getVolume ()F
+	METHOD func_72678_c getPitch ()F
+	METHOD func_72676_a getBreakSound ()Ljava/lang/String;
+		COMMENT Used when a block breaks, EXA: Player break, Shep eating grass, etc..
+	METHOD func_72675_d getStepSound ()Ljava/lang/String;
+		COMMENT Used when a entity walks over, or otherwise interacts with the block.
+	METHOD func_82593_b getPlaceSound ()Ljava/lang/String;
+		COMMENT Used when a player places a block.

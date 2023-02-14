@@ -1,1 +1,48 @@
 CLASS net/minecraft/entity/monster/EntitySpider
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70042_X getMountedYOffset ()D
+		COMMENT Returns the Y offset from the entity's position for any entity riding this one.
+	METHOD func_70782_k findPlayerToAttack ()Lnet/minecraft/entity/Entity;
+		COMMENT Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking (Animals, Spiders at day, peaceful PigZombies).
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70036_a playStepSound (IIII)V
+		COMMENT Plays step sound at given x, y, z for the entity
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_70785_a attackEntity (Lnet/minecraft/entity/Entity;F)V
+		COMMENT Basic mob attack. Default to touch of death in EntityCreature. Overridden by each mob to define their attack.
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70617_f_ isOnLadder ()Z
+		COMMENT returns true if this entity is by a ladder, false otherwise
+	METHOD func_70110_aj setInWeb ()V
+		COMMENT Sets the Entity inside a web block.
+	METHOD func_70840_n spiderScaleAmount ()F
+		COMMENT How large the spider should be scaled.
+	METHOD func_70668_bt getCreatureAttribute ()Lnet/minecraft/entity/EnumCreatureAttribute;
+		COMMENT Get this Entity's EnumCreatureAttribute
+	METHOD func_70687_e isPotionApplicable (Lnet/minecraft/potion/PotionEffect;)Z
+		ARG 0 par1PotionEffect
+	METHOD func_70841_p isBesideClimbableBlock ()Z
+		COMMENT Returns true if the WatchableObject (Byte) is 0x01 otherwise returns false. The WatchableObject is updated using setBesideClimableBlock.
+	METHOD func_70839_e setBesideClimbableBlock (Z)V
+		COMMENT Updates the WatchableObject (Byte) created in entityInit(), setting it to 0x01 if par1 is true or 0x00 if it is false.
+		ARG 0 par1
+	METHOD func_82163_bD initCreature ()V
+		COMMENT Initialize this creature.

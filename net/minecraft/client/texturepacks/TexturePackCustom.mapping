@@ -1,2 +1,11 @@
 CLASS net/minecraft/client/texturepacks/TexturePackCustom
 	FIELD field_77550_e texturePackZipFile Ljava/util/zip/ZipFile;
+		COMMENT ZipFile object used to access the texture pack file's contents.
+	METHOD func_77533_a deleteTexturePack (Lnet/minecraft/client/renderer/RenderEngine;)V
+		COMMENT Delete the OpenGL texture id of the pack's thumbnail image, and close the zip file in case of TexturePackCustom.
+		ARG 0 par1RenderEngine
+	METHOD func_77532_a getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+		COMMENT Gives a texture resource as InputStream.
+		ARG 0 par1Str
+	METHOD func_77549_g openTexturePackFile ()V
+		COMMENT Open the texture pack's file and initialize texturePackZipFile

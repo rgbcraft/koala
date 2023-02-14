@@ -1,28 +1,47 @@
 CLASS net/minecraft/server/MinecraftServer
 	FIELD field_71306_a logger Ljava/util/logging/Logger;
+		COMMENT The logging system.
 	FIELD field_71309_l mcServer Lnet/minecraft/server/MinecraftServer;
+		COMMENT Instance of Minecraft Server.
 	FIELD field_71310_m anvilConverterForAnvilFile Lnet/minecraft/world/storage/ISaveFormat;
 	FIELD field_71307_n usageSnooper Lnet/minecraft/profiler/PlayerUsageSnooper;
+		COMMENT The PlayerUsageSnooper instance.
 	FIELD field_71308_o anvilFile Ljava/io/File;
 	FIELD field_71322_p tickables Ljava/util/List;
+		COMMENT Collection of objects to update every tick. Type: List<IUpdatePlayerListBox>
 	FIELD field_71321_q commandManager Lnet/minecraft/command/ICommandManager;
 	FIELD field_71304_b theProfiler Lnet/minecraft/profiler/Profiler;
 	FIELD field_71320_r hostname Ljava/lang/String;
+		COMMENT The server's hostname.
 	FIELD field_71319_s serverPort I
+		COMMENT The server's port.
 	FIELD field_71305_c worldServers [Lnet/minecraft/world/WorldServer;
+		COMMENT The server world instances.
 	FIELD field_71318_t serverConfigManager Lnet/minecraft/server/management/ServerConfigurationManager;
+		COMMENT The ServerConfigurationManager instance.
 	FIELD field_71317_u serverRunning Z
+		COMMENT Indicates whether the server is running or not. Set to false to initiate a shutdown.
 	FIELD field_71316_v serverStopped Z
+		COMMENT Indicates to other classes that the server is safely stopped.
 	FIELD field_71315_w tickCounter I
+		COMMENT Incremented every tick.
 	FIELD field_71302_d currentTask Ljava/lang/String;
+		COMMENT The task the server is currently working on(and will output on outputPercentRemaining).
 	FIELD field_71303_e percentDone I
+		COMMENT The percentage of the current task finished so far.
 	FIELD field_71325_x onlineMode Z
+		COMMENT True if the server is in online mode.
 	FIELD field_71324_y canSpawnAnimals Z
+		COMMENT True if the server has animals turned on.
 	FIELD field_71323_z canSpawnNPCs Z
 	FIELD field_71284_A pvpEnabled Z
+		COMMENT Indicates whether PvP is active on the server or not.
 	FIELD field_71285_B allowFlight Z
+		COMMENT Determines if flight is allowed or not.
 	FIELD field_71286_C motd Ljava/lang/String;
+		COMMENT The server MOTD string.
 	FIELD field_71280_D buildLimit I
+		COMMENT Maximum build height.
 	FIELD field_71281_E lastSentPacketID J
 	FIELD field_71282_F lastSentPacketSize J
 	FIELD field_71283_G lastReceivedID J
@@ -33,15 +52,223 @@ CLASS net/minecraft/server/MinecraftServer
 	FIELD field_71314_i receivedPacketSizeArray [J
 	FIELD field_71311_j tickTimeArray [J
 	FIELD field_71312_k timeOfLastDimensionTick [J
+		COMMENT Stats are [dimension][tick%100] system.nanoTime is stored.
 	FIELD field_71292_I serverKeyPair Ljava/security/KeyPair;
 	FIELD field_71293_J serverOwner Ljava/lang/String;
+		COMMENT Username of the server owner (for integrated servers)
 	FIELD field_71294_K folderName Ljava/lang/String;
 	FIELD field_71287_L worldName Ljava/lang/String;
 	FIELD field_71288_M isDemo Z
 	FIELD field_71289_N enableBonusChest Z
 	FIELD field_71290_O worldIsBeingDeleted Z
+		COMMENT If true, there is no need to save chunks or stop the server, because that is already being done.
 	FIELD field_71297_P texturePack Ljava/lang/String;
 	FIELD field_71296_Q serverIsRunning Z
 	FIELD field_71299_R timeOfLastWarning J
+		COMMENT Set when warned for "Can't keep up", which triggers again after 15 seconds.
 	FIELD field_71298_S userMessage Ljava/lang/String;
 	FIELD field_71295_T startProfiling Z
+	METHOD func_82355_al registerDispenseBehaviors ()V
+		COMMENT Register all dispense behaviors.
+	METHOD func_71197_b startServer ()Z
+		COMMENT Initialises the server and starts it.
+	METHOD func_71237_c convertMapIfNeeded (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_71192_d setUserMessage (Ljava/lang/String;)V
+		COMMENT Typically "menu.convertingLevel", "menu.loadingLevel" or others.
+		ARG 0 par1Str
+	METHOD func_71195_b_ getUserMessage ()Ljava/lang/String;
+	METHOD func_71247_a loadAllWorlds (Ljava/lang/String;Ljava/lang/String;JLnet/minecraft/world/WorldType;Ljava/lang/String;)V
+		ARG 0 par1Str
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par5WorldType
+		ARG 4 par6Str
+	METHOD func_71222_d initialWorldChunkLoad ()V
+	METHOD func_71225_e canStructuresSpawn ()Z
+	METHOD func_71265_f getGameType ()Lnet/minecraft/world/EnumGameType;
+	METHOD func_71232_g getDifficulty ()I
+		COMMENT Defaults to "1" (Easy) for the dedicated server, defaults to "2" (Normal) on the client.
+	METHOD func_71199_h isHardcore ()Z
+		COMMENT Defaults to false.
+	METHOD func_71216_a_ outputPercentRemaining (Ljava/lang/String;I)V
+		COMMENT Used to display a percent remaining given text and the percentage.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_71243_i clearCurrentTask ()V
+		COMMENT Set current task to null and set its percentage to 0.
+	METHOD func_71267_a saveAllWorlds (Z)V
+		COMMENT par1 indicates if a log message should be output.
+		ARG 0 par1
+	METHOD func_71260_j stopServer ()V
+		COMMENT Saves all necessary data as preparation for stopping the server.
+	METHOD func_71211_k getServerHostname ()Ljava/lang/String;
+		COMMENT "getHostname" is already taken, but both return the hostname.
+	METHOD func_71189_e setHostname (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_71278_l isServerRunning ()Z
+	METHOD func_71263_m initiateShutdown ()V
+		COMMENT Sets the serverRunning variable to false, in order to get the server to shut down.
+	METHOD func_71238_n getDataDirectory ()Ljava/io/File;
+	METHOD func_71228_a finalTick (Lnet/minecraft/crash/CrashReport;)V
+		COMMENT Called on exit from the main run() loop.
+		ARG 0 par1CrashReport
+	METHOD func_71240_o systemExitNow ()V
+		COMMENT Directly calls System.exit(0), instantly killing the program.
+	METHOD func_71217_p tick ()V
+		COMMENT Main function called by run() every loop.
+	METHOD func_71190_q updateTimeLightAndEntities ()V
+	METHOD func_71255_r getAllowNether ()Z
+	METHOD func_71256_s startServerThread ()V
+	METHOD func_71209_f getFile (Ljava/lang/String;)Ljava/io/File;
+		COMMENT Returns a File object from the specified string.
+		ARG 0 par1Str
+	METHOD func_71244_g logInfo (Ljava/lang/String;)V
+		COMMENT Logs the message with a level of INFO.
+		ARG 0 par1Str
+	METHOD func_71236_h logWarning (Ljava/lang/String;)V
+		COMMENT Logs the message with a level of WARN.
+		ARG 0 par1Str
+	METHOD func_71218_a worldServerForDimension (I)Lnet/minecraft/world/WorldServer;
+		COMMENT Gets the worldServer by the given dimension.
+		ARG 0 par1
+	METHOD func_71277_t getHostname ()Ljava/lang/String;
+		COMMENT Returns the server's hostname.
+	METHOD func_71234_u getPort ()I
+		COMMENT Never used, but "getServerPort" is already taken.
+	METHOD func_71274_v getServerMOTD ()Ljava/lang/String;
+		COMMENT Returns the server message of the day
+	METHOD func_71249_w getMinecraftVersion ()Ljava/lang/String;
+		COMMENT Returns the server's Minecraft version as string.
+	METHOD func_71233_x getCurrentPlayerCount ()I
+		COMMENT Returns the number of players currently on the server.
+	METHOD func_71275_y getMaxPlayers ()I
+		COMMENT Returns the maximum number of players allowed on the server.
+	METHOD func_71213_z getAllUsernames ()[Ljava/lang/String;
+		COMMENT Returns an array of the usernames of all the connected players.
+	METHOD func_71258_A getPlugins ()Ljava/lang/String;
+		COMMENT Used by RCon's Query in the form of "MajorServerMod 1.2.3: MyPlugin 1.3; AnotherPlugin 2.1; AndSoForth 1.0".
+	METHOD func_71252_i executeCommand (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 par1Str
+	METHOD func_71239_B isDebuggingEnabled ()Z
+		COMMENT Returns true if debugging is enabled, false otherwise.
+	METHOD func_71201_j logSevere (Ljava/lang/String;)V
+		COMMENT Logs the error message with a level of SEVERE.
+		ARG 0 par1Str
+	METHOD func_71198_k logDebug (Ljava/lang/String;)V
+		COMMENT If isDebuggingEnabled(), logs the message with a level of INFO.
+		ARG 0 par1Str
+	METHOD func_71230_b addServerInfoToCrashReport (Lnet/minecraft/crash/CrashReport;)Lnet/minecraft/crash/CrashReport;
+		COMMENT Adds the server info, including from theWorldServer, to the crash report.
+		ARG 0 par1CrashReport
+	METHOD func_71248_a getPossibleCompletions (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Ljava/util/List;
+		COMMENT If par2Str begins with /, then it searches for commands, otherwise it returns players.
+		ARG 0 par1ICommandSender
+		ARG 1 par2Str
+	METHOD func_71276_C getServer ()Lnet/minecraft/server/MinecraftServer;
+		COMMENT Gets mcServer.
+	METHOD func_70005_c_ getCommandSenderName ()Ljava/lang/String;
+		COMMENT Gets the name of this command sender (usually username, but possibly "Rcon")
+	METHOD func_70006_a sendChatToPlayer (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_70003_b canCommandSenderUseCommand (ILjava/lang/String;)Z
+		COMMENT Returns true if the command sender is allowed to use the given command.
+		ARG 0 par1
+		ARG 1 par2Str
+	METHOD func_70004_a translateString (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+		COMMENT Translates and formats the given string key with the given arguments.
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfObj
+	METHOD func_71187_D getCommandManager ()Lnet/minecraft/command/ICommandManager;
+	METHOD func_71250_E getKeyPair ()Ljava/security/KeyPair;
+		COMMENT Gets KeyPair instanced in MinecraftServer.
+	METHOD func_71215_F getServerPort ()I
+		COMMENT Gets serverPort.
+	METHOD func_71208_b setServerPort (I)V
+		ARG 0 par1
+	METHOD func_71214_G getServerOwner ()Ljava/lang/String;
+		COMMENT Returns the username of the server owner (for integrated servers)
+	METHOD func_71224_l setServerOwner (Ljava/lang/String;)V
+		COMMENT Sets the username of the owner of this server (in the case of an integrated server)
+		ARG 0 par1Str
+	METHOD func_71264_H isSinglePlayer ()Z
+	METHOD func_71270_I getFolderName ()Ljava/lang/String;
+	METHOD func_71261_m setFolderName (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_71246_n setWorldName (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_71221_J getWorldName ()Ljava/lang/String;
+	METHOD func_71253_a setKeyPair (Ljava/security/KeyPair;)V
+		ARG 0 par1KeyPair
+	METHOD func_71226_c setDifficultyForAllWorlds (I)V
+		ARG 0 par1
+	METHOD func_71193_K allowSpawnMonsters ()Z
+	METHOD func_71242_L isDemo ()Z
+		COMMENT Gets whether this is a demo or not.
+	METHOD func_71204_b setDemo (Z)V
+		COMMENT Sets whether this is a demo or not.
+		ARG 0 par1
+	METHOD func_71194_c canCreateBonusChest (Z)V
+		ARG 0 par1
+	METHOD func_71254_M getActiveAnvilConverter ()Lnet/minecraft/world/storage/ISaveFormat;
+	METHOD func_71272_O deleteWorldAndStopServer ()V
+		COMMENT WARNING : directly calls  getActiveAnvilConverter().deleteWorldDirectory(theWorldServer[0].getSaveHandler().getSaveDirectoryName());
+	METHOD func_71202_P getTexturePack ()Ljava/lang/String;
+	METHOD func_71269_o setTexturePack (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_70000_a addServerStatsToSnooper (Lnet/minecraft/profiler/PlayerUsageSnooper;)V
+		ARG 0 par1PlayerUsageSnooper
+	METHOD func_70001_b addServerTypeToSnooper (Lnet/minecraft/profiler/PlayerUsageSnooper;)V
+		ARG 0 par1PlayerUsageSnooper
+	METHOD func_70002_Q isSnooperEnabled ()Z
+		COMMENT Returns whether snooping is enabled or not.
+	METHOD func_71227_R textureSize ()I
+		COMMENT This is checked to be 16 upon receiving the packet, otherwise the packet is ignored.
+	METHOD func_71262_S isDedicatedServer ()Z
+	METHOD func_71266_T isServerInOnlineMode ()Z
+	METHOD func_71229_d setOnlineMode (Z)V
+		ARG 0 par1
+	METHOD func_71268_U getCanSpawnAnimals ()Z
+	METHOD func_71251_e setCanSpawnAnimals (Z)V
+		ARG 0 par1
+	METHOD func_71220_V getCanSpawnNPCs ()Z
+	METHOD func_71257_f setCanSpawnNPCs (Z)V
+		ARG 0 par1
+	METHOD func_71219_W isPVPEnabled ()Z
+	METHOD func_71188_g setAllowPvp (Z)V
+		ARG 0 par1
+	METHOD func_71231_X isFlightAllowed ()Z
+	METHOD func_71245_h setAllowFlight (Z)V
+		ARG 0 par1
+	METHOD func_82356_Z isCommandBlockEnabled ()Z
+		COMMENT Return whether command blocks are enabled.
+	METHOD func_71273_Y getMOTD ()Ljava/lang/String;
+	METHOD func_71205_p setMOTD (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_71207_Z getBuildLimit ()I
+	METHOD func_71191_d setBuildLimit (I)V
+		ARG 0 par1
+	METHOD func_71241_aa isServerStopped ()Z
+	METHOD func_71203_ab getConfigurationManager ()Lnet/minecraft/server/management/ServerConfigurationManager;
+	METHOD func_71210_a setConfigurationManager (Lnet/minecraft/server/management/ServerConfigurationManager;)V
+		ARG 0 par1ServerConfigurationManager
+	METHOD func_71235_a setGameType (Lnet/minecraft/world/EnumGameType;)V
+		COMMENT Sets the game type for all worlds.
+		ARG 0 par1EnumGameType
+	METHOD func_71212_ac getNetworkThread ()Lnet/minecraft/network/NetworkListenThread;
+	METHOD func_71200_ad serverIsInRunLoop ()Z
+	METHOD func_71279_ae getGuiEnabled ()Z
+	METHOD func_71206_a shareToLAN (Lnet/minecraft/world/EnumGameType;Z)Ljava/lang/String;
+		COMMENT On dedicated does nothing. On integrated, sets commandsAllowedForAll, gameType and allows external connections.
+		ARG 0 par1EnumGameType
+		ARG 1 par2
+	METHOD func_71259_af getTickCounter ()I
+	METHOD func_71223_ag enableProfiling ()V
+	METHOD func_80003_ah getPlayerUsageSnooper ()Lnet/minecraft/profiler/PlayerUsageSnooper;
+	METHOD func_82114_b getPlayerCoordinates ()Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT Return the position for this command sender.
+	METHOD func_82357_ak getSpawnProtectionSize ()I
+		COMMENT Return the spawn protection area's size.
+	METHOD func_71196_a getServerConfigurationManager (Lnet/minecraft/server/MinecraftServer;)Lnet/minecraft/server/management/ServerConfigurationManager;
+		COMMENT Gets the current player count, maximum player count, and player entity list.
+		ARG 0 par0MinecraftServer

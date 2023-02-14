@@ -1,2 +1,5 @@
 CLASS net/minecraft/util/ReportedException
 	FIELD field_71576_a theReportedExceptionCrashReport Lnet/minecraft/crash/CrashReport;
+		COMMENT Instance of CrashReport.
+	METHOD func_71575_a getCrashReport ()Lnet/minecraft/crash/CrashReport;
+		COMMENT Gets the CrashReport wrapped by this exception.

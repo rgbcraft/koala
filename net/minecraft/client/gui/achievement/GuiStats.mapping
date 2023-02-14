@@ -2,8 +2,113 @@ CLASS net/minecraft/client/gui/achievement/GuiStats
 	FIELD field_74152_c renderItem Lnet/minecraft/client/renderer/entity/RenderItem;
 	FIELD field_74154_a parentGui Lnet/minecraft/client/gui/GuiScreen;
 	FIELD field_74151_b statsTitle Ljava/lang/String;
+		COMMENT The title of the stats screen.
 	FIELD field_74150_d slotGeneral Lnet/minecraft/client/gui/achievement/GuiSlotStatsGeneral;
+		COMMENT The slot for general stats.
 	FIELD field_74157_m slotItem Lnet/minecraft/client/gui/achievement/GuiSlotStatsItem;
+		COMMENT The slot for item stats.
 	FIELD field_74155_n slotBlock Lnet/minecraft/client/gui/achievement/GuiSlotStatsBlock;
+		COMMENT The slot for block stats.
 	FIELD field_74156_o statFileWriter Lnet/minecraft/stats/StatFileWriter;
 	FIELD field_74153_p selectedSlot Lnet/minecraft/client/gui/GuiSlot;
+		COMMENT The currently-selected slot.
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_74143_g addHeaderButtons ()V
+		COMMENT Creates the buttons that appear at the top of the Stats GUI.
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74137_c drawItemSprite (III)V
+		COMMENT Draws the item sprite on top of the background sprite.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74142_b drawButtonBackground (II)V
+		COMMENT Draws a gray box that serves as a button background.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74138_c drawSprite (IIII)V
+		COMMENT Draws a sprite from /gui/slot.png.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_74130_a getMinecraft (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/Minecraft;
+		ARG 0 par0GuiStats
+	METHOD func_74145_b getFontRenderer1 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74127_c getStatsFileWriter (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/stats/StatFileWriter;
+		ARG 0 par0GuiStats
+	METHOD func_74132_d getFontRenderer2 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74128_e getFontRenderer3 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74139_f getMinecraft1 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/Minecraft;
+		COMMENT exactly the same as 27141
+		ARG 0 par0GuiStats
+	METHOD func_74134_a drawSprite (Lnet/minecraft/client/gui/achievement/GuiStats;IIII)V
+		COMMENT Draws a sprite from /gui/slot.png.
+		ARG 0 par0GuiStats
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_74133_g getMinecraft2 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/Minecraft;
+		COMMENT exactly the same as 27141 and 27143
+		ARG 0 par0GuiStats
+	METHOD func_74129_h getFontRenderer4 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74146_i getFontRenderer5 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74135_j getFontRenderer6 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74148_k getFontRenderer7 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74147_l getFontRenderer8 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74149_a drawGradientRect (Lnet/minecraft/client/gui/achievement/GuiStats;IIIIII)V
+		ARG 0 par0GuiStats
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+	METHOD func_74141_m getFontRenderer9 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74140_n getFontRenderer10 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74136_b drawGradientRect1 (Lnet/minecraft/client/gui/achievement/GuiStats;IIIIII)V
+		COMMENT exactly the same as 27129
+		ARG 0 par0GuiStats
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+	METHOD func_74144_o getFontRenderer11 (Lnet/minecraft/client/gui/achievement/GuiStats;)Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT there are 11 identical methods like this
+		ARG 0 par0GuiStats
+	METHOD func_74131_a drawItemSprite (Lnet/minecraft/client/gui/achievement/GuiStats;III)V
+		COMMENT Draws the item sprite on top of the background sprite.
+		ARG 0 par0GuiStats
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3

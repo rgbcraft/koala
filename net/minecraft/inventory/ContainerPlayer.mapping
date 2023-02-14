@@ -1,5 +1,19 @@
 CLASS net/minecraft/inventory/ContainerPlayer
 	FIELD field_75181_e craftMatrix Lnet/minecraft/inventory/InventoryCrafting;
+		COMMENT The crafting matrix inventory.
 	FIELD field_75179_f craftResult Lnet/minecraft/inventory/IInventory;
 	FIELD field_75180_g isLocalWorld Z
+		COMMENT Determines if inventory manipulation should be handled.
 	FIELD field_82862_h thePlayer Lnet/minecraft/entity/player/EntityPlayer;
+	METHOD func_75130_a onCraftMatrixChanged (Lnet/minecraft/inventory/IInventory;)V
+		COMMENT Callback for when the crafting matrix is changed.
+		ARG 0 par1IInventory
+	METHOD func_75134_a onCraftGuiClosed (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Callback for when the crafting gui is closed.
+		ARG 0 par1EntityPlayer
+	METHOD func_75145_c canInteractWith (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 par1EntityPlayer
+	METHOD func_82846_b transferStackInSlot (Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;
+		COMMENT Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2

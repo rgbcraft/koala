@@ -1,3 +1,11 @@
 CLASS net/minecraft/client/multiplayer/ServerAddress
 	FIELD field_78866_a ipAddress Ljava/lang/String;
 	FIELD field_78865_b serverPort I
+	METHOD func_78861_a getIP ()Ljava/lang/String;
+	METHOD func_78864_b getPort ()I
+	METHOD func_78863_b getServerAddress (Ljava/lang/String;)[Ljava/lang/String;
+		COMMENT Returns a server's address and port for the specified hostname, looking up the SRV record if possible
+		ARG 0 par0Str
+	METHOD func_78862_a parseIntWithDefault (Ljava/lang/String;I)I
+		ARG 0 par0Str
+		ARG 1 par1

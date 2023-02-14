@@ -1,6 +1,10 @@
 CLASS net/minecraft/world/gen/structure/ComponentVillageStartPiece
 	FIELD field_74929_a worldChunkMngr Lnet/minecraft/world/biome/WorldChunkManager;
 	FIELD field_74927_b inDesert Z
+		COMMENT Boolean that determines if the village is in a desert or not.
 	FIELD field_74928_c terrainType I
+		COMMENT World terrain type, 0 for normal, 1 for flap map
 	FIELD field_74926_d structVillagePieceWeight Lnet/minecraft/world/gen/structure/StructureVillagePieceWeight;
 	FIELD field_74931_h structureVillageWeightedPieceList Ljava/util/ArrayList;
+		COMMENT Contains List of all spawnable Structure Piece Weights. If no more Pieces of a type can be spawned, they are removed from this list
+	METHOD func_74925_d getWorldChunkManager ()Lnet/minecraft/world/biome/WorldChunkManager;

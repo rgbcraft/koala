@@ -1,1 +1,138 @@
 CLASS net/minecraft/block/BlockFluid
+	METHOD func_71918_c getBlocksMovement (Lnet/minecraft/world/IBlockAccess;III)Z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71933_m getBlockColor ()I
+	METHOD func_71920_b colorMultiplier (Lnet/minecraft/world/IBlockAccess;III)I
+		COMMENT Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called when first determining what to render.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72199_d getFluidHeightPercent (I)F
+		COMMENT Returns the percentage of the fluid block that is air, based on the given flow decay of the fluid.
+		ARG 0 par0
+	METHOD func_71851_a getBlockTextureFromSide (I)I
+		COMMENT Returns the block texture based on the side being looked at.  Args: side
+		ARG 0 par1
+	METHOD func_72198_f_ getFlowDecay (Lnet/minecraft/world/World;III)I
+		COMMENT Returns the amount of fluid decay at the coordinates, or -1 if the block at the coordinates is not the same material as the fluid.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72203_d getEffectiveFlowDecay (Lnet/minecraft/world/IBlockAccess;III)I
+		COMMENT Returns the flow decay but converts values indicating falling liquid (values >=8) to their effective source block value of zero.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71886_c renderAsNormalBlock ()Z
+		COMMENT If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71913_a canCollideCheck (IZ)Z
+		COMMENT Returns whether this block is collideable based on the arguments passed in Args: blockMetaData, unknownFlag
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71924_d isBlockSolid (Lnet/minecraft/world/IBlockAccess;IIII)Z
+		COMMENT Returns Returns true if the given side of this block type should be rendered (if it's solid or not), if the adjacent block is at the given coordinates. Args: blockAccess, x, y, z, side
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71877_c shouldSideBeRendered (Lnet/minecraft/world/IBlockAccess;IIII)Z
+		COMMENT Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_72202_i getFlowVector (Lnet/minecraft/world/IBlockAccess;III)Lnet/minecraft/util/Vec3;
+		COMMENT Returns a vector indicating the direction and intensity of fluid flow.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71901_a velocityToAddToEntity (Lnet/minecraft/world/World;IIILnet/minecraft/entity/Entity;Lnet/minecraft/util/Vec3;)V
+		COMMENT Can add to the passed in vector for a movement vector to be applied to the entity. Args: x, y, z, entity, vec3d
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Entity
+		ARG 5 par6Vec3
+	METHOD func_71859_p_ tickRate ()I
+		COMMENT How many world ticks before ticking
+	METHOD func_71874_e getMixedBrightnessForBlock (Lnet/minecraft/world/IBlockAccess;III)I
+		COMMENT Goes straight to getLightBrightnessForSkyBlocks for Blocks, does some fancy computing for Fluids
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71870_f getBlockBrightness (Lnet/minecraft/world/IBlockAccess;III)F
+		COMMENT How bright to render this block based on the light its receiving. Args: iBlockAccess, x, y, z
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71856_s_ getRenderBlockPass ()I
+		COMMENT Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
+	METHOD func_71862_a randomDisplayTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT A randomly called display update to be able to add particles or other items for display
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_72204_a getFlowDirection (Lnet/minecraft/world/IBlockAccess;IIILnet/minecraft/block/material/Material;)D
+		COMMENT the sin and cos of this number determine the surface gradient of the flowing block.
+		ARG 0 par0IBlockAccess
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4Material
+	METHOD func_71861_g onBlockAdded (Lnet/minecraft/world/World;III)V
+		COMMENT Called whenever the block is added into the world. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72200_l checkForHarden (Lnet/minecraft/world/World;III)V
+		COMMENT Forces lava to check to see if it is colliding with water, and then decide what it should harden to.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72201_j triggerLavaMixEffects (Lnet/minecraft/world/World;III)V
+		COMMENT Creates fizzing sound and smoke. Used when lava flows over block or mixes with water.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

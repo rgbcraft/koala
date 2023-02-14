@@ -1,5 +1,38 @@
 CLASS net/minecraft/entity/EntityCreature
 	FIELD field_70786_d pathToEntity Lnet/minecraft/pathfinding/PathEntity;
 	FIELD field_70789_a entityToAttack Lnet/minecraft/entity/Entity;
+		COMMENT The Entity this EntityCreature is set to attack.
 	FIELD field_70787_b hasAttacked Z
+		COMMENT returns true if a creature has attacked recently only used for creepers and skeletons
 	FIELD field_70788_c fleeingTick I
+		COMMENT Used to make a creature speed up and wander away when hit.
+	METHOD func_70780_i isMovementCeased ()Z
+		COMMENT Disables a mob's ability to move on its own while true.
+	METHOD func_70626_be updateEntityActionState ()V
+	METHOD func_70779_j updateWanderPath ()V
+		COMMENT Time remaining during which the Animal is sped up and flees.
+	METHOD func_70785_a attackEntity (Lnet/minecraft/entity/Entity;F)V
+		COMMENT Basic mob attack. Default to touch of death in EntityCreature. Overridden by each mob to define their attack.
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_70783_a getBlockPathWeight (III)F
+		COMMENT Takes a coordinate in and returns a weight to determine how likely this creature will try to path to the block. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70782_k findPlayerToAttack ()Lnet/minecraft/entity/Entity;
+		COMMENT Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking (Animals, Spiders at day, peaceful PigZombies).
+	METHOD func_70601_bi getCanSpawnHere ()Z
+		COMMENT Checks if the entity's current position is a valid location to spawn this entity.
+	METHOD func_70781_l hasPath ()Z
+		COMMENT Returns true if entity has a path to follow
+	METHOD func_70778_a setPathToEntity (Lnet/minecraft/pathfinding/PathEntity;)V
+		COMMENT sets the Entities walk path in EntityCreature
+		ARG 0 par1PathEntity
+	METHOD func_70777_m getEntityToAttack ()Lnet/minecraft/entity/Entity;
+		COMMENT Returns current entities target
+	METHOD func_70784_b setTarget (Lnet/minecraft/entity/Entity;)V
+		COMMENT Sets the entity which is to be attacked.
+		ARG 0 par1Entity
+	METHOD func_70616_bs getSpeedModifier ()F
+		COMMENT This method returns a value to be applied directly to entity speed, this factor is less than 1 when a slowdown potion effect is applied, more than 1 when a haste potion effect is applied and 2 for fleeing entities.

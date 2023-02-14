@@ -1,2 +1,18 @@
 CLASS net/minecraft/entity/projectile/EntityPotion
 	FIELD field_70197_d potionDamage Lnet/minecraft/item/ItemStack;
+		COMMENT The damage value of the thrown potion that this EntityPotion represents.
+	METHOD func_70185_h getGravityVelocity ()F
+		COMMENT Gets the amount of gravity to apply to the thrown entity with each tick.
+	METHOD func_82340_a setPotionDamage (I)V
+		ARG 0 par1
+	METHOD func_70196_i getPotionDamage ()I
+		COMMENT Returns the damage value of the thrown potion that this EntityPotion represents.
+	METHOD func_70184_a onImpact (Lnet/minecraft/util/MovingObjectPosition;)V
+		COMMENT Called when this EntityThrowable hits a block or entity.
+		ARG 0 par1MovingObjectPosition
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound

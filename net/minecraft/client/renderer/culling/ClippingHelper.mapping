@@ -3,3 +3,11 @@ CLASS net/minecraft/client/renderer/culling/ClippingHelper
 	FIELD field_78555_b projectionMatrix [F
 	FIELD field_78556_c modelviewMatrix [F
 	FIELD field_78554_d clippingMatrix [F
+	METHOD func_78553_b isBoxInFrustum (DDDDDD)Z
+		COMMENT Returns true if the box is inside all 6 clipping planes, otherwise returns false.
+		ARG 0 par11
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+		ARG 5 par9

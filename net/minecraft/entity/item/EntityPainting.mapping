@@ -1,2 +1,10 @@
 CLASS net/minecraft/entity/item/EntityPainting
 	FIELD field_70522_e art Lnet/minecraft/util/EnumArt;
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_82331_h dropItemStack ()V
+		COMMENT Drop the item currently on this item frame.

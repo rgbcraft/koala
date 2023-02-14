@@ -2,6 +2,15 @@ CLASS net/minecraft/entity/ai/EntityAIMoveThroughVillage
 	FIELD field_75420_a theEntity Lnet/minecraft/entity/EntityCreature;
 	FIELD field_75418_b movementSpeed F
 	FIELD field_75419_c entityPathNavigate Lnet/minecraft/pathfinding/PathEntity;
+		COMMENT The PathNavigate of our entity.
 	FIELD field_75416_d doorInfo Lnet/minecraft/village/VillageDoorInfo;
 	FIELD field_75417_e isNocturnal Z
 	FIELD field_75415_f doorList Ljava/util/List;
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task

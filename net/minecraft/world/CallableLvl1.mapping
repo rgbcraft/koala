@@ -1,2 +1,4 @@
 CLASS net/minecraft/world/CallableLvl1
 	FIELD field_77485_a theWorld Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
+	METHOD func_77484_a getWorldEntitiesAsString ()Ljava/lang/String;

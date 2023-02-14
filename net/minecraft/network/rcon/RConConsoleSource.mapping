@@ -1,3 +1,21 @@
 CLASS net/minecraft/network/rcon/RConConsoleSource
 	FIELD field_70010_a consoleBuffer Lnet/minecraft/network/rcon/RConConsoleSource;
+		COMMENT only ever used by MinecraftServer.executeCommand
 	FIELD field_70009_b chatBuffer Ljava/lang/StringBuffer;
+	METHOD func_70007_b resetLog ()V
+		COMMENT Clears the RCon log
+	METHOD func_70008_c getChatBuffer ()Ljava/lang/String;
+	METHOD func_70005_c_ getCommandSenderName ()Ljava/lang/String;
+		COMMENT Gets the name of this command sender (usually username, but possibly "Rcon")
+	METHOD func_70006_a sendChatToPlayer (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_70003_b canCommandSenderUseCommand (ILjava/lang/String;)Z
+		COMMENT Returns true if the command sender is allowed to use the given command.
+		ARG 0 par1
+		ARG 1 par2Str
+	METHOD func_70004_a translateString (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+		COMMENT Translates and formats the given string key with the given arguments.
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfObj
+	METHOD func_82114_b getPlayerCoordinates ()Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT Return the position for this command sender.

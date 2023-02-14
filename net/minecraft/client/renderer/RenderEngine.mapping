@@ -1,13 +1,78 @@
 CLASS net/minecraft/client/renderer/RenderEngine
 	FIELD field_78362_c textureMap Ljava/util/HashMap;
 	FIELD field_78359_d textureContentsMap Ljava/util/HashMap;
+		COMMENT Texture contents map (key: texture name, value: int[] contents)
 	FIELD field_78360_e textureNameToImageMap Lnet/minecraft/util/IntHashMap;
+		COMMENT A mapping from GL texture names (integers) to BufferedImage instances
 	FIELD field_78357_f singleIntBuffer Ljava/nio/IntBuffer;
+		COMMENT An IntBuffer storing 1 int used as scratch space in RenderEngine
 	FIELD field_78358_g imageData Ljava/nio/ByteBuffer;
+		COMMENT Stores the image data for the texture.
 	FIELD field_78367_h textureList Ljava/util/List;
 	FIELD field_78368_i urlToImageDataMap Ljava/util/Map;
+		COMMENT A mapping from image URLs to ThreadDownloadImageData instances
 	FIELD field_78365_j options Lnet/minecraft/client/settings/GameSettings;
+		COMMENT Reference to the GameSettings object
 	FIELD field_78363_a clampTexture Z
+		COMMENT Flag set when a texture should not be repeated
 	FIELD field_78361_b blurTexture Z
+		COMMENT Flag set when a texture should use blurry resizing
 	FIELD field_78366_k texturePack Lnet/minecraft/client/texturepacks/TexturePackList;
+		COMMENT Texture pack
 	FIELD field_78364_l missingTextureImage Ljava/awt/image/BufferedImage;
+		COMMENT Missing texture image
+	METHOD func_78346_a getTextureContents (Ljava/lang/String;)[I
+		ARG 0 par1Str
+	METHOD func_78348_b getImageContentsAndAllocate (Ljava/awt/image/BufferedImage;)[I
+		ARG 0 par1BufferedImage
+	METHOD func_78340_a getImageContents (Ljava/awt/image/BufferedImage;[I)[I
+		ARG 0 par1BufferedImage
+		ARG 1 par2ArrayOfInteger
+	METHOD func_78341_b getTexture (Ljava/lang/String;)I
+		ARG 0 par1Str
+	METHOD func_78354_c unwrapImageByColumns (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
+		COMMENT Takes an image with multiple 16-pixel-wide columns and creates a new 16-pixel-wide image where the columns are stacked vertically
+		ARG 0 par1BufferedImage
+	METHOD func_78353_a allocateAndSetupTexture (Ljava/awt/image/BufferedImage;)I
+		COMMENT Copy the supplied image onto a newly-allocated OpenGL texture, returning the allocated texture name
+		ARG 0 par1BufferedImage
+	METHOD func_78351_a setupTexture (Ljava/awt/image/BufferedImage;I)V
+		COMMENT Copy the supplied image onto the specified OpenGL texture
+		ARG 0 par1BufferedImage
+		ARG 1 par2
+	METHOD func_78349_a createTextureFromBytes ([IIII)V
+		ARG 0 par1ArrayOfInteger
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78344_a deleteTexture (I)V
+		COMMENT Deletes a single GL texture
+		ARG 0 par1
+	METHOD func_78350_a getTextureForDownloadableImage (Ljava/lang/String;Ljava/lang/String;)I
+		COMMENT Takes a URL of a downloadable image and the name of the local image to be used as a fallback.  If the image has been downloaded, returns the GL texture of the downloaded image, otherwise returns the GL texture of the fallback image.
+		ARG 0 par1Str
+		ARG 1 par2Str
+	METHOD func_82773_c hasImageData (Ljava/lang/String;)Z
+		COMMENT Checks if urlToImageDataMap has image data for the given key
+		ARG 0 par1Str
+	METHOD func_78356_a obtainImageData (Ljava/lang/String;Lnet/minecraft/client/renderer/IImageBuffer;)Lnet/minecraft/client/renderer/ThreadDownloadImageData;
+		COMMENT Return a ThreadDownloadImageData instance for the given URL.  If it does not already exist, it is created and uses the passed ImageBuffer.  If it does, its reference count is incremented.
+		ARG 0 par1Str
+		ARG 1 par2IImageBuffer
+	METHOD func_78347_c releaseImageData (Ljava/lang/String;)V
+		COMMENT Decrements the reference count for a given URL, deleting the image data if the reference count hits 0
+		ARG 0 par1Str
+	METHOD func_78355_a registerTextureFX (Lnet/minecraft/client/renderer/texturefx/TextureFX;)V
+		ARG 0 par1TextureFX
+	METHOD func_78343_a updateDynamicTextures ()V
+	METHOD func_82772_a updateDynamicTexture (Lnet/minecraft/client/renderer/texturefx/TextureFX;I)I
+		COMMENT Updates a single dynamic texture
+		ARG 0 par1TextureFX
+		ARG 1 par2
+	METHOD func_78352_b refreshTextures ()V
+		COMMENT Call setupTexture on all currently-loaded textures again to account for changes in rendering options
+	METHOD func_78345_a readTextureImage (Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;
+		COMMENT Returns a BufferedImage read off the provided input stream.  Args: inputStream
+		ARG 0 par1InputStream
+	METHOD func_78342_b bindTexture (I)V
+		ARG 0 par1

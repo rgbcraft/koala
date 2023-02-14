@@ -1,11 +1,23 @@
 CLASS net/minecraft/stats/StatBase
 	FIELD field_75975_e statId I
+		COMMENT The Stat ID
 	FIELD field_75978_a statName Ljava/lang/String;
+		COMMENT The Stat name
 	FIELD field_75972_f isIndependent Z
 	FIELD field_75973_g statGuid Ljava/lang/String;
+		COMMENT Holds the GUID of the stat.
 	FIELD field_75976_b type Lnet/minecraft/stats/IStatType;
 	FIELD field_75977_c numberFormat Ljava/text/NumberFormat;
 	FIELD field_75980_h simpleStatType Lnet/minecraft/stats/IStatType;
 	FIELD field_75974_d decimalFormat Ljava/text/DecimalFormat;
 	FIELD field_75981_i timeStatType Lnet/minecraft/stats/IStatType;
 	FIELD field_75979_j distanceStatType Lnet/minecraft/stats/IStatType;
+	METHOD func_75966_h initIndependentStat ()Lnet/minecraft/stats/StatBase;
+		COMMENT Initializes the current stat as independent (i.e., lacking prerequisites for being updated) and returns the current instance.
+	METHOD func_75971_g registerStat ()Lnet/minecraft/stats/StatBase;
+		COMMENT Register the stat into StatList.
+	METHOD func_75967_d isAchievement ()Z
+		COMMENT Returns whether or not the StatBase-derived class is a statistic (running counter) or an achievement (one-shot).
+	METHOD func_75970_i getName ()Ljava/lang/String;
+	METHOD func_75965_j getNumberFormat ()Ljava/text/NumberFormat;
+	METHOD func_75969_k getDecimalFormat ()Ljava/text/DecimalFormat;

@@ -7,3 +7,22 @@ CLASS net/minecraft/village/VillageDoorInfo
 	FIELD field_75475_f lastActivityTimestamp I
 	FIELD field_75476_g isDetachedFromVillageFlag Z
 	FIELD field_75482_h doorOpeningRestrictionCounter I
+	METHOD func_75474_b getDistanceSquared (III)I
+		COMMENT Returns the squared distance between this door and the given coordinate.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75469_c getInsideDistanceSquare (III)I
+		COMMENT Get the square of the distance from a location 2 blocks away from the door considered 'inside' and the given arguments
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75471_a getInsidePosX ()I
+	METHOD func_75473_b getInsidePosY ()I
+	METHOD func_75472_c getInsidePosZ ()I
+	METHOD func_75467_a isInside (II)Z
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75466_d resetDoorOpeningRestrictionCounter ()V
+	METHOD func_75470_e incrementDoorOpeningRestrictionCounter ()V
+	METHOD func_75468_f getDoorOpeningRestrictionCounter ()I

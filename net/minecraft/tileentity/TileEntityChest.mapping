@@ -1,11 +1,63 @@
 CLASS net/minecraft/tileentity/TileEntityChest
 	FIELD field_70428_i chestContents [Lnet/minecraft/item/ItemStack;
 	FIELD field_70425_a adjacentChestChecked Z
+		COMMENT Determines if the check for adjacent chests has taken place.
 	FIELD field_70423_b adjacentChestZNeg Lnet/minecraft/tileentity/TileEntityChest;
+		COMMENT Contains the chest tile located adjacent to this one (if any)
 	FIELD field_70424_c adjacentChestXPos Lnet/minecraft/tileentity/TileEntityChest;
+		COMMENT Contains the chest tile located adjacent to this one (if any)
 	FIELD field_70421_d adjacentChestXNeg Lnet/minecraft/tileentity/TileEntityChest;
+		COMMENT Contains the chest tile located adjacent to this one (if any)
 	FIELD field_70422_e adjacentChestZPosition Lnet/minecraft/tileentity/TileEntityChest;
+		COMMENT Contains the chest tile located adjacent to this one (if any)
 	FIELD field_70419_f lidAngle F
+		COMMENT The current angle of the lid (between 0 and 1)
 	FIELD field_70420_g prevLidAngle F
+		COMMENT The angle of the lid last tick
 	FIELD field_70427_h numUsingPlayers I
+		COMMENT The number of players currently using this chest
 	FIELD field_70426_j ticksSinceSync I
+		COMMENT Server sync counter (once per 20 ticks)
+	METHOD func_70302_i_ getSizeInventory ()I
+		COMMENT Returns the number of slots in the inventory.
+	METHOD func_70301_a getStackInSlot (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the stack in slot i
+		ARG 0 par1
+	METHOD func_70298_a decrStackSize (II)Lnet/minecraft/item/ItemStack;
+		COMMENT Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a new stack.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70304_b getStackInSlotOnClosing (I)Lnet/minecraft/item/ItemStack;
+		COMMENT When some containers are closed they call this on each slot, then drop whatever it returns as an EntityItem - like when you close a workbench GUI.
+		ARG 0 par1
+	METHOD func_70299_a setInventorySlotContents (ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_70303_b getInvName ()Ljava/lang/String;
+		COMMENT Returns the name of the inventory.
+	METHOD func_70307_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads a tile entity from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70310_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes a tile entity to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70297_j_ getInventoryStackLimit ()I
+		COMMENT Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't this more of a set than a get?*
+	METHOD func_70300_a isUseableByPlayer (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Do not make give this method the name canInteractWith because it clashes with Container
+		ARG 0 par1EntityPlayer
+	METHOD func_70321_h updateContainingBlockInfo ()V
+		COMMENT Causes the TileEntity to reset all it's cached values for it's container block, blockID, metaData and in the case of chests, the adjcacent chest check
+	METHOD func_70418_i checkForAdjacentChests ()V
+		COMMENT Performs the check for adjacent chests to determine if this chest is double or not.
+	METHOD func_70316_g updateEntity ()V
+		COMMENT Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
+	METHOD func_70315_b receiveClientEvent (II)V
+		COMMENT Called when a client event is received with the event number and argument, see World.sendClientEvent
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70295_k_ openChest ()V
+	METHOD func_70305_f closeChest ()V
+	METHOD func_70313_j invalidate ()V
+		COMMENT invalidates a tile entity

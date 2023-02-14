@@ -1,2 +1,30 @@
 CLASS net/minecraft/block/BlockWorkbench
+	METHOD func_71851_a getBlockTextureFromSide (I)I
+		COMMENT Returns the block texture based on the side being looked at.  Args: side
+		ARG 0 par1
+	METHOD func_71903_a onBlockActivated (Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;IFFF)Z
+		COMMENT Called upon block activation (right click on the block.)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityPlayer
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
 CLASS net/minecraft/block/BlockWorkbench
+	METHOD func_71851_a getBlockTextureFromSide (I)I
+		COMMENT Returns the block texture based on the side being looked at.  Args: side
+		ARG 0 par1
+	METHOD func_71903_a onBlockActivated (Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;IFFF)Z
+		COMMENT Called upon block activation (right click on the block.)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5EntityPlayer
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9

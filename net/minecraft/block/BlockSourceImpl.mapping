@@ -3,3 +3,10 @@ CLASS net/minecraft/block/BlockSourceImpl
 	FIELD field_82625_b xPos I
 	FIELD field_82626_c yPos I
 	FIELD field_82624_d zPos I
+	METHOD func_82618_k getWorld ()Lnet/minecraft/world/World;
+	METHOD func_82615_a getX ()D
+	METHOD func_82617_b getY ()D
+	METHOD func_82616_c getZ ()D
+	METHOD func_82623_d getXInt ()I
+	METHOD func_82622_e getYInt ()I
+	METHOD func_82621_f getZInt ()I

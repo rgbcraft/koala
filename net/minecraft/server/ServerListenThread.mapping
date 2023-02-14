@@ -2,8 +2,16 @@ CLASS net/minecraft/server/ServerListenThread
 	FIELD field_71777_a logger Ljava/util/logging/Logger;
 	FIELD field_71775_b pendingConnections Ljava/util/List;
 	FIELD field_71776_c recentConnections Ljava/util/HashMap;
+		COMMENT This map stores a list of InetAddresses and the last time which they connected at
 	FIELD field_71773_d connectionCounter I
 	FIELD field_71774_e myServerSocket Ljava/net/ServerSocket;
 	FIELD field_71771_f myNetworkListenThread Lnet/minecraft/network/NetworkListenThread;
 	FIELD field_71772_g myServerAddress Ljava/net/InetAddress;
 	FIELD field_71778_h myPort I
+	METHOD func_71766_a processPendingConnections ()V
+	METHOD func_71764_a addPendingConnection (Lnet/minecraft/network/NetLoginHandler;)V
+		ARG 0 par1NetLoginHandler
+	METHOD func_71770_b isLocalHost (Ljava/net/InetAddress;)Z
+		ARG 0 par0InetAddress
+	METHOD func_71767_c getInetAddress ()Ljava/net/InetAddress;
+	METHOD func_71765_d getMyPort ()I

@@ -1,5 +1,60 @@
 CLASS net/minecraft/tileentity/TileEntityFurnace
 	FIELD field_70404_d furnaceItemStacks [Lnet/minecraft/item/ItemStack;
+		COMMENT The ItemStacks that hold the items currently being used in the furnace
 	FIELD field_70407_a furnaceBurnTime I
+		COMMENT The number of ticks that the furnace will keep burning
 	FIELD field_70405_b currentItemBurnTime I
+		COMMENT The number of ticks that a fresh copy of the currently-burning item would keep the furnace burning for
 	FIELD field_70406_c furnaceCookTime I
+		COMMENT The number of ticks that the current item has been cooking for
+	METHOD func_70302_i_ getSizeInventory ()I
+		COMMENT Returns the number of slots in the inventory.
+	METHOD func_70301_a getStackInSlot (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the stack in slot i
+		ARG 0 par1
+	METHOD func_70298_a decrStackSize (II)Lnet/minecraft/item/ItemStack;
+		COMMENT Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a new stack.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70304_b getStackInSlotOnClosing (I)Lnet/minecraft/item/ItemStack;
+		COMMENT When some containers are closed they call this on each slot, then drop whatever it returns as an EntityItem - like when you close a workbench GUI.
+		ARG 0 par1
+	METHOD func_70299_a setInventorySlotContents (ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_70303_b getInvName ()Ljava/lang/String;
+		COMMENT Returns the name of the inventory.
+	METHOD func_70307_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads a tile entity from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70310_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes a tile entity to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70297_j_ getInventoryStackLimit ()I
+		COMMENT Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't this more of a set than a get?*
+	METHOD func_70397_c getCookProgressScaled (I)I
+		COMMENT Returns an integer between 0 and the passed value representing how close the current item is to being completely cooked
+		ARG 0 par1
+	METHOD func_70403_d getBurnTimeRemainingScaled (I)I
+		COMMENT Returns an integer between 0 and the passed value representing how much burn time is left on the current fuel item, where 0 means that the item is exhausted and the passed value means that the item is fresh
+		ARG 0 par1
+	METHOD func_70400_i isBurning ()Z
+		COMMENT Returns true if the furnace is currently burning
+	METHOD func_70316_g updateEntity ()V
+		COMMENT Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
+	METHOD func_70402_r canSmelt ()Z
+		COMMENT Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.
+	METHOD func_70399_k smeltItem ()V
+		COMMENT Turn one item from the furnace source stack into the appropriate smelted item in the furnace result stack
+	METHOD func_70398_a getItemBurnTime (Lnet/minecraft/item/ItemStack;)I
+		COMMENT Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't fuel
+		ARG 0 par0ItemStack
+	METHOD func_70401_b isItemFuel (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Return true if item is a fuel source (getItemBurnTime() > 0).
+		ARG 0 par0ItemStack
+	METHOD func_70300_a isUseableByPlayer (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Do not make give this method the name canInteractWith because it clashes with Container
+		ARG 0 par1EntityPlayer
+	METHOD func_70295_k_ openChest ()V
+	METHOD func_70305_f closeChest ()V

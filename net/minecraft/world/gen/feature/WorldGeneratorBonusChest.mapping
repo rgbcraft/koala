@@ -1,3 +1,11 @@
 CLASS net/minecraft/world/gen/feature/WorldGeneratorBonusChest
 	FIELD field_76546_a theBonusChestGenerator [Lnet/minecraft/util/WeightedRandomChestContent;
+		COMMENT Instance of WeightedRandomChestContent what will randomly generate items into the Bonus Chest.
 	FIELD field_76545_b itemsToGenerateInBonusChest I
+		COMMENT Value of this int will determine how much items gonna generate in Bonus Chest.
+	METHOD func_76484_a generate (Lnet/minecraft/world/World;Ljava/util/Random;III)Z
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

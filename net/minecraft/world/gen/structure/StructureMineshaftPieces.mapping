@@ -1,2 +1,29 @@
 CLASS net/minecraft/world/gen/structure/StructureMineshaftPieces
 	FIELD field_78818_a mineshaftChestContents [Lnet/minecraft/util/WeightedRandomChestContent;
+		COMMENT List of contents that can generate in Mineshafts.
+	METHOD func_78815_a getRandomComponent (Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;
+		ARG 0 par0List
+		ARG 1 par1Random
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+	METHOD func_78817_b getNextMineShaftComponent (Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;
+		ARG 0 par0StructureComponent
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_78814_a getNextComponent (Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;
+		ARG 0 par0StructureComponent
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7

@@ -1,2 +1,49 @@
 CLASS net/minecraft/client/gui/Gui
 	FIELD field_73735_i zLevel F
+	METHOD func_73730_a drawHorizontalLine (IIII)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73728_b drawVerticalLine (IIII)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73734_a drawRect (IIIII)V
+		COMMENT Draws a solid color rectangle with the specified coordinates and color. Args: x1, y1, x2, y2, color
+		ARG 0 par0
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_73733_a drawGradientRect (IIIIII)V
+		COMMENT Draws a rectangle with a vertical gradient between the specified colors.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_73732_a drawCenteredString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+		COMMENT Renders the specified text to the screen, center-aligned.
+		ARG 0 par1FontRenderer
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_73731_b drawString (Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+		COMMENT Renders the specified text to the screen.
+		ARG 0 par1FontRenderer
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_73729_b drawTexturedModalRect (IIIIII)V
+		COMMENT Draws a textured rectangle at the stored z-value. Args: x, y, u, v, width, height
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6

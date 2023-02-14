@@ -1,10 +1,17 @@
 CLASS net/minecraft/tileentity/TileEntityEnchantmentTable
 	FIELD field_70378_a tickCount I
+		COMMENT Used by the render to make the book 'bounce'
 	FIELD field_70375_b pageFlip F
+		COMMENT Value used for determining how the page flip should look.
 	FIELD field_70377_c pageFlipPrev F
+		COMMENT The last tick's pageFlip value.
 	FIELD field_70371_f bookSpread F
+		COMMENT The amount that the book is open.
 	FIELD field_70372_g bookSpreadPrev F
+		COMMENT The amount that the book is open.
 	FIELD field_70380_h bookRotation2 F
 	FIELD field_70381_i bookRotationPrev F
 	FIELD field_70379_j bookRotation F
 	FIELD field_70376_r rand Ljava/util/Random;
+	METHOD func_70316_g updateEntity ()V
+		COMMENT Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.

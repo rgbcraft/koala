@@ -1,3 +1,33 @@
 CLASS net/minecraft/nbt/NBTBase
 	FIELD field_82578_b NBTTypes [Ljava/lang/String;
 	FIELD field_74741_a name Ljava/lang/String;
+		COMMENT The UTF string key used to lookup values.
+	METHOD func_74734_a write (Ljava/io/DataOutput;)V
+		COMMENT Write the actual data contents of the tag, implemented in NBT extension classes
+		ARG 0 par1DataOutput
+	METHOD func_74735_a load (Ljava/io/DataInput;)V
+		COMMENT Read the actual data contents of the tag, implemented in NBT extension classes
+		ARG 0 par1DataInput
+	METHOD func_74732_a getId ()B
+		COMMENT Gets the type byte for the tag.
+	METHOD func_74738_o setName (Ljava/lang/String;)Lnet/minecraft/nbt/NBTBase;
+		COMMENT Sets the name for this tag and returns this for convenience.
+		ARG 0 par1Str
+	METHOD func_74740_e getName ()Ljava/lang/String;
+		COMMENT Gets the name corresponding to the tag, or an empty string if none set.
+	METHOD func_74739_b readNamedTag (Ljava/io/DataInput;)Lnet/minecraft/nbt/NBTBase;
+		COMMENT Reads and returns a tag from the given DataInput, or the End tag if no tag could be read.
+		ARG 0 par0DataInput
+	METHOD func_74731_a writeNamedTag (Lnet/minecraft/nbt/NBTBase;Ljava/io/DataOutput;)V
+		COMMENT Writes the specified tag to the given DataOutput, writing the type byte, the UTF string key and then calling the tag to write its data.
+		ARG 0 par0NBTBase
+		ARG 1 par1DataOutput
+	METHOD func_74733_a newTag (BLjava/lang/String;)Lnet/minecraft/nbt/NBTBase;
+		COMMENT Creates and returns a new tag of the specified type, or null if invalid.
+		ARG 0 par0
+		ARG 1 par1Str
+	METHOD func_74736_a getTagName (B)Ljava/lang/String;
+		COMMENT Returns the string name of a tag with the specified type, or 'UNKNOWN' if invalid.
+		ARG 0 par0
+	METHOD func_74737_b copy ()Lnet/minecraft/nbt/NBTBase;
+		COMMENT Creates a clone of the tag.

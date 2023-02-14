@@ -1,2 +1,65 @@
 CLASS net/minecraft/command/CommandBase
 	FIELD field_71533_a theAdmin Lnet/minecraft/command/IAdminCommand;
+	METHOD func_82362_a getRequiredPermissionLevel ()I
+		COMMENT Return the required permission level for this command.
+	METHOD func_71518_a getCommandUsage (Lnet/minecraft/command/ICommandSender;)Ljava/lang/String;
+		ARG 0 par1ICommandSender
+	METHOD func_71514_a getCommandAliases ()Ljava/util/List;
+	METHOD func_71519_b canCommandSenderUseCommand (Lnet/minecraft/command/ICommandSender;)Z
+		COMMENT Returns true if the given command sender is allowed to use this command.
+		ARG 0 par1ICommandSender
+	METHOD func_71516_a addTabCompletionOptions (Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;
+		COMMENT Adds the strings available in this command to the given list of tab completion options.
+		ARG 0 par1ICommandSender
+		ARG 1 par2ArrayOfStr
+	METHOD func_71526_a parseInt (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)I
+		COMMENT Parses an int from the given string.
+		ARG 0 par0ICommandSender
+		ARG 1 par1Str
+	METHOD func_71528_a parseIntWithMin (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;I)I
+		COMMENT Parses an int from the given sring with a specified minimum.
+		ARG 0 par0ICommandSender
+		ARG 1 par1Str
+		ARG 2 par2
+	METHOD func_71532_a parseIntBounded (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;II)I
+		COMMENT Parses an int from the given string within a specified bound.
+		ARG 0 par0ICommandSender
+		ARG 1 par1Str
+		ARG 2 par2
+		ARG 3 par3
+	METHOD func_71521_c getCommandSenderAsPlayer (Lnet/minecraft/command/ICommandSender;)Lnet/minecraft/entity/player/EntityPlayerMP;
+		COMMENT Returns the given ICommandSender as a EntityPlayer or throw an exception.
+		ARG 0 par0ICommandSender
+	METHOD func_71527_a joinNiceString ([Ljava/lang/Object;)Ljava/lang/String;
+		COMMENT Joins the given string array into a "x, y, and z" seperated string.
+		ARG 0 par0ArrayOfObj
+	METHOD func_71523_a doesStringStartWith (Ljava/lang/String;Ljava/lang/String;)Z
+		COMMENT Returns true if the given substring is exactly equal to the start of the given string (case insensitive).
+		ARG 0 par0Str
+		ARG 1 par1Str
+	METHOD func_71530_a getListOfStringsMatchingLastWord ([Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+		COMMENT Returns a List of strings (chosen from the given strings) which the last word in the given string array is a beginning-match for. (Tab completion).
+		ARG 0 par0ArrayOfStr
+		ARG 1 par1ArrayOfStr
+	METHOD func_71531_a getListOfStringsFromIterableMatchingLastWord ([Ljava/lang/String;Ljava/lang/Iterable;)Ljava/util/List;
+		COMMENT Returns a List of strings (chosen from the given string iterable) which the last word in the given string array is a beginning-match for. (Tab completion).
+		ARG 0 par0ArrayOfStr
+		ARG 1 par1Iterable
+	METHOD func_82358_a isUsernameIndex (I)Z
+		COMMENT Return whether the specified command parameter index is a username parameter.
+		ARG 0 par1
+	METHOD func_71522_a notifyAdmins (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;Ljava/lang/Object;)V
+		ARG 0 par0ICommandSender
+		ARG 1 par1Str
+		ARG 2 par2ArrayOfObj
+	METHOD func_71524_a notifyAdmins (Lnet/minecraft/command/ICommandSender;ILjava/lang/String;Ljava/lang/Object;)V
+		ARG 0 par0ICommandSender
+		ARG 1 par1
+		ARG 2 par2Str
+		ARG 3 par3ArrayOfObj
+	METHOD func_71529_a setAdminCommander (Lnet/minecraft/command/IAdminCommand;)V
+		COMMENT Sets the static IAdminCommander.
+		ARG 0 par0IAdminCommand
+	METHOD func_71525_a compareNameTo (Lnet/minecraft/command/ICommand;)I
+		COMMENT Compares the name of this command to the name of the given command.
+		ARG 0 par1ICommand

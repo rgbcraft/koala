@@ -1,2 +1,17 @@
 CLASS net/minecraft/client/renderer/entity/RenderCreeper
 	FIELD field_77064_a creeperModel Lnet/minecraft/client/model/ModelBase;
+		COMMENT The creeper model.
+	METHOD func_77060_a updateCreeperScale (Lnet/minecraft/entity/monster/EntityCreeper;F)V
+		COMMENT Updates creeper scale in prerender callback
+		ARG 0 par1EntityCreeper
+		ARG 1 par2
+	METHOD func_77063_a updateCreeperColorMultiplier (Lnet/minecraft/entity/monster/EntityCreeper;FF)I
+		COMMENT Updates color multiplier based on creeper state called by getColorMultiplier
+		ARG 0 par1EntityCreeper
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77062_a renderCreeperPassModel (Lnet/minecraft/entity/monster/EntityCreeper;IF)I
+		COMMENT A method used to render a creeper's powered form as a pass model.
+		ARG 0 par1EntityCreeper
+		ARG 1 par2
+		ARG 2 par3

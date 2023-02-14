@@ -2,8 +2,33 @@ CLASS net/minecraft/entity/item/EntityFallingSand
 	FIELD field_70287_a blockID I
 	FIELD field_70285_b metadata I
 	FIELD field_70286_c fallTime I
+		COMMENT How long the block has been falling for.
 	FIELD field_70284_d shouldDropItem Z
 	FIELD field_82157_e isBreakingAnvil Z
 	FIELD field_82155_f isAnvil Z
 	FIELD field_82156_g fallHurtMax I
+		COMMENT Maximum amount of damage dealt to entities hit by falling block
 	FIELD field_82158_h fallHurtAmount F
+		COMMENT Actual damage dealt to entities hit by falling block
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_70283_d getWorld ()Lnet/minecraft/world/World;
+	METHOD func_82154_e setIsAnvil (Z)V
+		ARG 0 par1
+	METHOD func_90999_ad canRenderOnFire ()Z
+		COMMENT Return whether this entity should be rendered as on fire.

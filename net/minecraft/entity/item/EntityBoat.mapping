@@ -8,3 +8,64 @@ CLASS net/minecraft/entity/item/EntityBoat
 	FIELD field_70282_i velocityX D
 	FIELD field_70280_j velocityY D
 	FIELD field_70278_an velocityZ D
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70114_g getCollisionBox (Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a boundingBox used to collide the entity with other entities and blocks. This enables the entity to be pushable on contact, like boats or minecarts.
+		ARG 0 par1Entity
+	METHOD func_70046_E getBoundingBox ()Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT returns the bounding box for this entity
+	METHOD func_70104_M canBePushed ()Z
+		COMMENT Returns true if this entity should push and be pushed by other entities when colliding.
+	METHOD func_70042_X getMountedYOffset ()D
+		COMMENT Returns the Y offset from the entity's position for any entity riding this one.
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70057_ab performHurtAnimation ()V
+		COMMENT Setups the entity to do the hurt animation. Only used by packets in multiplayer.
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70056_a setPositionAndRotation2 (DDDFFI)V
+		COMMENT Sets the position and rotation. Only difference from the other one is no bounding on the rotation. Args: posX, posY, posZ, yaw, pitch
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_70016_h setVelocity (DDD)V
+		COMMENT Sets the velocity to the args. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70043_V updateRiderPosition ()V
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer
+	METHOD func_70266_a setDamageTaken (I)V
+		COMMENT Sets the damage taken from the last hit.
+		ARG 0 par1
+	METHOD func_70271_g getDamageTaken ()I
+		COMMENT Gets the damage taken from the last hit.
+	METHOD func_70265_b setTimeSinceHit (I)V
+		COMMENT Sets the time to count down from since the last time entity was hit.
+		ARG 0 par1
+	METHOD func_70268_h getTimeSinceHit ()I
+		COMMENT Gets the time since the last hit.
+	METHOD func_70269_c setForwardDirection (I)V
+		COMMENT Sets the forward direction of the entity.
+		ARG 0 par1
+	METHOD func_70267_i getForwardDirection ()I
+		COMMENT Gets the forward direction of the entity.

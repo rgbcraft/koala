@@ -1,1 +1,8 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntityBeaconRenderer
+	METHOD func_82398_a renderTileEntityBeaconAt (Lnet/minecraft/tileentity/TileEntityBeacon;DDDF)V
+		COMMENT Render a beacon tile entity.
+		ARG 0 par1TileEntityBeacon
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8

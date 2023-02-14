@@ -1,2 +1,47 @@
 CLASS net/minecraft/block/BlockSand
 	FIELD field_72192_a fallInstantly Z
+		COMMENT Do blocks fall instantly to where they stop or do they fall over time
+	METHOD func_71861_g onBlockAdded (Lnet/minecraft/world/World;III)V
+		COMMENT Called whenever the block is added into the world. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71863_a onNeighborBlockChange (Lnet/minecraft/world/World;IIII)V
+		COMMENT Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor blockID
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_72190_l tryToFall (Lnet/minecraft/world/World;III)V
+		COMMENT If there is space to fall below will start this block falling
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_82520_a onStartFalling (Lnet/minecraft/entity/item/EntityFallingSand;)V
+		COMMENT Called when the falling block entity for this block is created
+		ARG 0 par1EntityFallingSand
+	METHOD func_71859_p_ tickRate ()I
+		COMMENT How many world ticks before ticking
+	METHOD func_72191_e_ canFallBelow (Lnet/minecraft/world/World;III)Z
+		COMMENT Checks to see if the sand can fall into the block below it
+		ARG 0 par0World
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+	METHOD func_82519_a_ onFinishFalling (Lnet/minecraft/world/World;IIII)V
+		COMMENT Called when the falling block entity for this block hits the ground and turns back into a block
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

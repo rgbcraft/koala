@@ -1,2 +1,4 @@
 CLASS net/minecraft/entity/ai/EntityAITargetNonTamed
 	FIELD field_75310_g theTameable Lnet/minecraft/entity/passive/EntityTameable;
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.

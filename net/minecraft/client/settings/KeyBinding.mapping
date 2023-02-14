@@ -4,4 +4,14 @@ CLASS net/minecraft/client/settings/KeyBinding
 	FIELD field_74515_c keyDescription Ljava/lang/String;
 	FIELD field_74512_d keyCode I
 	FIELD field_74513_e pressed Z
+		COMMENT because _303 wanted me to call it that(Caironater)
 	FIELD field_74511_f pressTime I
+	METHOD func_74507_a onTick (I)V
+		ARG 0 par0
+	METHOD func_74510_a setKeyBindState (IZ)V
+		ARG 0 par0
+		ARG 1 par1
+	METHOD func_74506_a unPressAllKeys ()V
+	METHOD func_74508_b resetKeyBindingArrayAndHash ()V
+	METHOD func_74509_c isPressed ()Z
+	METHOD func_74505_d unpressKey ()V

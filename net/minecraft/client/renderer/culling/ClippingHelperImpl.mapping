@@ -2,3 +2,10 @@ CLASS net/minecraft/client/renderer/culling/ClippingHelperImpl
 	FIELD field_78563_e instance Lnet/minecraft/client/renderer/culling/ClippingHelperImpl;
 	FIELD field_78561_f projectionMatrixBuffer Ljava/nio/FloatBuffer;
 	FIELD field_78562_g modelviewMatrixBuffer Ljava/nio/FloatBuffer;
+	METHOD func_78558_a getInstance ()Lnet/minecraft/client/renderer/culling/ClippingHelper;
+		COMMENT Initialises the ClippingHelper object then returns an instance of it.
+	METHOD func_78559_a normalize ([FI)V
+		COMMENT Normalize the frustum.
+		ARG 0 par1ArrayOfFloat
+		ARG 1 par2
+	METHOD func_78560_b init ()V

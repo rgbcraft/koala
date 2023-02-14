@@ -1,2 +1,19 @@
 CLASS net/minecraft/world/chunk/storage/RegionFileCache
 	FIELD field_76553_a regionsByFilename Ljava/util/Map;
+		COMMENT A map containing Files as keys and RegionFiles as values
+	METHOD func_76550_a createOrLoadRegionFile (Ljava/io/File;II)Lnet/minecraft/world/chunk/storage/RegionFile;
+		ARG 0 par0File
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_76551_a clearRegionFileReferences ()V
+		COMMENT Saves the current Chunk Map Cache
+	METHOD func_76549_c getChunkInputStream (Ljava/io/File;II)Ljava/io/DataInputStream;
+		COMMENT Returns an input stream for the specified chunk. Args: worldDir, chunkX, chunkZ
+		ARG 0 par0File
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_76552_d getChunkOutputStream (Ljava/io/File;II)Ljava/io/DataOutputStream;
+		COMMENT Returns an output stream for the specified chunk. Args: worldDir, chunkX, chunkZ
+		ARG 0 par0File
+		ARG 1 par1
+		ARG 2 par2

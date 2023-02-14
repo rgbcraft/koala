@@ -1,1 +1,4 @@
 CLASS net/minecraft/world/biome/BiomeGenForest
+	METHOD func_76740_a getRandomWorldGenForTrees (Ljava/util/Random;)Lnet/minecraft/world/gen/feature/WorldGenerator;
+		COMMENT Gets a WorldGen appropriate for this biome.
+		ARG 0 par1Random

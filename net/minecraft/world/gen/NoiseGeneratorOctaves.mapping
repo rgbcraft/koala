@@ -1,3 +1,26 @@
 CLASS net/minecraft/world/gen/NoiseGeneratorOctaves
 	FIELD field_76307_a generatorCollection [Lnet/minecraft/world/gen/NoiseGeneratorPerlin;
+		COMMENT Collection of noise generation functions.  Output is combined to produce different octaves of noise.
 	FIELD field_76306_b octaves I
+	METHOD func_76304_a generateNoiseOctaves ([DIIIIIIDDD)[D
+		COMMENT pars:(par2,3,4=noiseOffset ; so that adjacent noise segments connect) (pars5,6,7=x,y,zArraySize),(pars8,10,12 = x,y,z noiseScale)
+		ARG 0 par10
+		ARG 1 par12
+		ARG 2 par1ArrayOfDouble
+		ARG 3 par2
+		ARG 4 par3
+		ARG 5 par4
+		ARG 6 par5
+		ARG 7 par6
+		ARG 8 par7
+		ARG 9 par8
+	METHOD func_76305_a generateNoiseOctaves ([DIIIIDDD)[D
+		COMMENT Bouncer function to the main one with some default arguments.
+		ARG 0 par10
+		ARG 1 par1ArrayOfDouble
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par8

@@ -1,3 +1,7 @@
 CLASS net/minecraft/entity/ai/EntityAIOwnerHurtByTarget
 	FIELD field_75316_a theDefendingTameable Lnet/minecraft/entity/passive/EntityTameable;
 	FIELD field_75315_b theOwnerAttacker Lnet/minecraft/entity/EntityLiving;
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task

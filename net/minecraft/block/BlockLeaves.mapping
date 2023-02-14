@@ -1,4 +1,87 @@
 CLASS net/minecraft/block/BlockLeaves
 	FIELD field_72134_cr baseIndexInPNG I
+		COMMENT The base index in terrain.png corresponding to the fancy version of the leaf texture. This is stored so we can switch the displayed version between fancy and fast graphics (fast is this index + 1).
 	FIELD field_72136_a LEAF_TYPES [Ljava/lang/String;
 	FIELD field_72135_b adjacentTreeBlocks [I
+	METHOD func_71933_m getBlockColor ()I
+	METHOD func_71889_f_ getRenderColor (I)I
+		COMMENT Returns the color this block should be rendered. Used by leaves.
+		ARG 0 par1
+	METHOD func_71920_b colorMultiplier (Lnet/minecraft/world/IBlockAccess;III)I
+		COMMENT Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called when first determining what to render.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71852_a breakBlock (Lnet/minecraft/world/World;IIIII)V
+		COMMENT ejects contained items into the world, and notifies neighbours of an update, as appropriate
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_71862_a randomDisplayTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT A randomly called display update to be able to add particles or other items for display
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_72132_l removeLeaves (Lnet/minecraft/world/World;III)V
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71925_a quantityDropped (Ljava/util/Random;)I
+		COMMENT Returns the quantity of items to drop on block destruction.
+		ARG 0 par1Random
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_71914_a dropBlockAsItemWithChance (Lnet/minecraft/world/World;IIIIFI)V
+		COMMENT Drops the block items with a specified chance of dropping the specified items
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_71893_a harvestBlock (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;IIII)V
+		COMMENT Called when the player destroys a block with an item that can harvest it. (i, j, k) are the coordinates of the block and l is the block's subtype/damage.
+		ARG 0 par1World
+		ARG 1 par2EntityPlayer
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_71899_b damageDropped (I)I
+		COMMENT Determines the damage on the item the block drops. Used in cloth and wood.
+		ARG 0 par1
+	METHOD func_71926_d isOpaqueCube ()Z
+		COMMENT Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72133_a setGraphicsLevel (Z)V
+		COMMENT Pass true to draw this block using fancy graphics, or false for fast graphics.
+		ARG 0 par1
+	METHOD func_71879_a getSubBlocks (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V
+		COMMENT returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+		ARG 0 par1
+		ARG 1 par2CreativeTabs
+		ARG 2 par3List
+	METHOD func_71880_c_ createStackedBlock (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null.
+		ARG 0 par1

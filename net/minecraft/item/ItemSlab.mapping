@@ -1,4 +1,35 @@
 CLASS net/minecraft/item/ItemSlab
 	FIELD field_77891_a isFullBlock Z
 	FIELD field_77889_b theHalfSlab Lnet/minecraft/block/BlockHalfSlab;
+		COMMENT Instance of BlockHalfSlab.
 	FIELD field_77890_c theHalfSlab2 Lnet/minecraft/block/BlockHalfSlab;
+		COMMENT Instance of BlockHalfSlab.
+	METHOD func_77617_a getIconFromDamage (I)I
+		COMMENT Gets an icon index based on an item's damage value
+		ARG 0 par1
+	METHOD func_77647_b getMetadata (I)I
+		COMMENT Returns the metadata of the block which this Item (ItemBlock) can place
+		ARG 0 par1
+	METHOD func_77667_c getItemNameIS (Lnet/minecraft/item/ItemStack;)Ljava/lang/String;
+		ARG 0 par1ItemStack
+	METHOD func_77648_a onItemUse (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z
+		COMMENT Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS
+		ARG 0 par10
+		ARG 1 par1ItemStack
+		ARG 2 par2EntityPlayer
+		ARG 3 par3World
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+		ARG 8 par8
+		ARG 9 par9
+	METHOD func_77884_a canPlaceItemBlockOnSide (Lnet/minecraft/world/World;IIIILnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Returns true if the given ItemBlock can be placed on the given side of the given block position.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6EntityPlayer
+		ARG 6 par7ItemStack

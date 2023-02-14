@@ -1,6 +1,29 @@
 CLASS net/minecraft/village/MerchantRecipe
 	FIELD field_77403_a itemToBuy Lnet/minecraft/item/ItemStack;
+		COMMENT Item the Villager buys.
 	FIELD field_77401_b secondItemToBuy Lnet/minecraft/item/ItemStack;
+		COMMENT Second Item the Villager buys.
 	FIELD field_77402_c itemToSell Lnet/minecraft/item/ItemStack;
+		COMMENT Item the Villager sells.
 	FIELD field_77400_d toolUses I
+		COMMENT Saves how much has been tool used when put into to slot to be enchanted.
 	FIELD field_82786_e maxTradeUses I
+		COMMENT Maximum times this trade can be used.
+	METHOD func_77394_a getItemToBuy ()Lnet/minecraft/item/ItemStack;
+		COMMENT Gets the itemToBuy.
+	METHOD func_77396_b getSecondItemToBuy ()Lnet/minecraft/item/ItemStack;
+		COMMENT Gets secondItemToBuy.
+	METHOD func_77398_c hasSecondItemToBuy ()Z
+		COMMENT Gets if Villager has secondItemToBuy.
+	METHOD func_77397_d getItemToSell ()Lnet/minecraft/item/ItemStack;
+		COMMENT Gets itemToSell.
+	METHOD func_77393_a hasSameIDsAs (Lnet/minecraft/village/MerchantRecipe;)Z
+		COMMENT checks if both the first and second ItemToBuy IDs are the same
+		ARG 0 par1MerchantRecipe
+	METHOD func_77391_b hasSameItemsAs (Lnet/minecraft/village/MerchantRecipe;)Z
+		COMMENT checks first and second ItemToBuy ID's and count. Calls hasSameIDs
+		ARG 0 par1MerchantRecipe
+	METHOD func_77399_f incrementToolUses ()V
+	METHOD func_77390_a readFromTags (Lnet/minecraft/nbt/NBTTagCompound;)V
+		ARG 0 par1NBTTagCompound
+	METHOD func_77395_g writeToTags ()Lnet/minecraft/nbt/NBTTagCompound;

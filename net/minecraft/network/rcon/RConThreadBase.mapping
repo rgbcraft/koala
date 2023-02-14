@@ -1,6 +1,48 @@
 CLASS net/minecraft/network/rcon/RConThreadBase
 	FIELD field_72619_a running Z
+		COMMENT True if the Thread is running, false otherwise
 	FIELD field_72617_b server Lnet/minecraft/network/rcon/IServer;
+		COMMENT Reference to the IServer object.
 	FIELD field_72618_c rconThread Ljava/lang/Thread;
+		COMMENT Thread for this runnable class
 	FIELD field_72616_e socketList Ljava/util/List;
+		COMMENT A list of registered DatagramSockets
 	FIELD field_72614_f serverSocketList Ljava/util/List;
+		COMMENT A list of registered ServerSockets
+	METHOD func_72602_a startThread ()V
+		COMMENT Creates a new Thread object from this class and starts running
+	METHOD func_72613_c isRunning ()Z
+		COMMENT Returns true if the Thread is running, false otherwise
+	METHOD func_72607_a logDebug (Ljava/lang/String;)V
+		COMMENT Log debug message
+		ARG 0 par1Str
+	METHOD func_72609_b logInfo (Ljava/lang/String;)V
+		COMMENT Log information message
+		ARG 0 par1Str
+	METHOD func_72606_c logWarning (Ljava/lang/String;)V
+		COMMENT Log warning message
+		ARG 0 par1Str
+	METHOD func_72610_d logSevere (Ljava/lang/String;)V
+		COMMENT Log severe error message
+		ARG 0 par1Str
+	METHOD func_72603_d getNumberOfPlayers ()I
+		COMMENT Returns the number of players on the server
+	METHOD func_72601_a registerSocket (Ljava/net/DatagramSocket;)V
+		COMMENT Registers a DatagramSocket with this thread
+		ARG 0 par1DatagramSocket
+	METHOD func_72604_a closeSocket (Ljava/net/DatagramSocket;Z)Z
+		COMMENT Closes the specified DatagramSocket
+		ARG 0 par1DatagramSocket
+		ARG 1 par2
+	METHOD func_72608_b closeServerSocket (Ljava/net/ServerSocket;)Z
+		COMMENT Closes the specified ServerSocket
+		ARG 0 par1ServerSocket
+	METHOD func_72605_a closeServerSocket_do (Ljava/net/ServerSocket;Z)Z
+		COMMENT Closes the specified ServerSocket
+		ARG 0 par1ServerSocket
+		ARG 1 par2
+	METHOD func_72611_e closeAllSockets ()V
+		COMMENT Closes all of the opened sockets
+	METHOD func_72612_a closeAllSockets_do (Z)V
+		COMMENT Closes all of the opened sockets
+		ARG 0 par1

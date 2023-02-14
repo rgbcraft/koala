@@ -1,3 +1,39 @@
 CLASS net/minecraft/world/SpawnerAnimals
 	FIELD field_77193_b eligibleChunksForSpawning Ljava/util/HashMap;
+		COMMENT The 17x17 area around the player where mobs can spawn
 	FIELD field_77194_a nightSpawnEntities [Ljava/lang/Class;
+		COMMENT An array of entity classes that spawn at night.
+	METHOD func_77189_a getRandomSpawningPointInChunk (Lnet/minecraft/world/World;II)Lnet/minecraft/world/ChunkPosition;
+		COMMENT Given a chunk, find a random position in it.
+		ARG 0 par0World
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_77192_a findChunksForSpawning (Lnet/minecraft/world/WorldServer;ZZZ)I
+		COMMENT adds all chunks within the spawn radius of the players to eligibleChunksForSpawning. pars: the world, hostileCreatures, passiveCreatures. returns number of eligible chunks.
+		ARG 0 par0WorldServer
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+	METHOD func_77190_a canCreatureTypeSpawnAtLocation (Lnet/minecraft/entity/EnumCreatureType;Lnet/minecraft/world/World;III)Z
+		COMMENT Returns whether or not the specified creature type can spawn at the specified location.
+		ARG 0 par0EnumCreatureType
+		ARG 1 par1World
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_77188_a creatureSpecificInit (Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/world/World;FFF)V
+		COMMENT determines if a skeleton spawns on a spider, and if a sheep is a different color
+		ARG 0 par0EntityLiving
+		ARG 1 par1World
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_77191_a performWorldGenSpawning (Lnet/minecraft/world/World;Lnet/minecraft/world/biome/BiomeGenBase;IIIILjava/util/Random;)V
+		COMMENT Called during chunk generation to spawn initial creatures.
+		ARG 0 par0World
+		ARG 1 par1BiomeGenBase
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6Random

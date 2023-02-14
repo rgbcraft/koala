@@ -1,1 +1,22 @@
 CLASS net/minecraft/util/HttpUtil
+	METHOD func_76179_a buildPostString (Ljava/util/Map;)Ljava/lang/String;
+		COMMENT Builds an encoded HTTP POST content string from a string map
+		ARG 0 par0Map
+	METHOD func_76183_a sendPost (Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;
+		COMMENT Sends a HTTP POST request to the given URL with data from a map
+		ARG 0 par0URL
+		ARG 1 par1Map
+		ARG 2 par2
+	METHOD func_76180_a sendPost (Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;
+		COMMENT Sends a HTTP POST request to the given URL with data from a string
+		ARG 0 par0URL
+		ARG 1 par1Str
+		ARG 2 par2
+	METHOD func_76182_a downloadTexturePack (Ljava/io/File;Ljava/lang/String;Lnet/minecraft/util/IDownloadSuccess;Ljava/util/Map;ILnet/minecraft/util/IProgressUpdate;)V
+		COMMENT The downloader for texturepacks stored in the server.
+		ARG 0 par0File
+		ARG 1 par1Str
+		ARG 2 par2IDownloadSuccess
+		ARG 3 par3Map
+		ARG 4 par4
+		ARG 5 par5IProgressUpdate

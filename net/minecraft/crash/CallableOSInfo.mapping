@@ -1,2 +1,4 @@
 CLASS net/minecraft/crash/CallableOSInfo
 	FIELD field_71496_a theCrashReport Lnet/minecraft/crash/CrashReport;
+		COMMENT Reference to the CrashReport object.
+	METHOD func_71495_a getOsAsString ()Ljava/lang/String;

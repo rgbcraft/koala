@@ -1,27 +1,80 @@
 CLASS net/minecraft/enchantment/Enchantment
 	FIELD field_77331_b enchantmentsList [Lnet/minecraft/enchantment/Enchantment;
 	FIELD field_77332_c protection Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Converts environmental damage to armour damage
 	FIELD field_77329_d fireProtection Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Protection against fire
 	FIELD field_77330_e featherFalling Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Less fall damage
 	FIELD field_77327_f blastProtection Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Protection against explosions
 	FIELD field_77328_g projectileProtection Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Protection against projectile entities (e.g. arrows)
 	FIELD field_77340_h respiration Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Decreases the rate of air loss underwater; increases time between damage while suffocating
 	FIELD field_77341_i aquaAffinity Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Increases underwater mining rate
 	FIELD field_77338_j sharpness Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Extra damage to mobs
 	FIELD field_77339_k smite Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Extra damage to zombies, zombie pigmen and skeletons
 	FIELD field_77336_l baneOfArthropods Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Extra damage to spiders, cave spiders and silverfish
 	FIELD field_77337_m knockback Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Knocks mob and players backwards upon hit
 	FIELD field_77334_n fireAspect Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Lights mobs on fire
 	FIELD field_77335_o looting Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Mobs have a chance to drop more loot
 	FIELD field_77349_p efficiency Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Faster resource gathering while in use
 	FIELD field_77348_q silkTouch Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Blocks mined will drop themselves, even if it should drop something else (e.g. stone will drop stone, not cobblestone)
 	FIELD field_77347_r unbreaking Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Sometimes, the tool's durability will not be spent when the tool is used
 	FIELD field_77346_s fortune Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Can multiply the drop rate of items from blocks
 	FIELD field_77345_t power Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Power enchantment for bows, add's extra damage to arrows.
 	FIELD field_77344_u punch Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Knockback enchantments for bows, the arrows will knockback the target when hit.
 	FIELD field_77343_v flame Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Flame enchantment for bows. Arrows fired by the bow will be on fire. Any target hit will also set on fire.
 	FIELD field_77342_w infinity Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Infinity enchantment for bows. The bow will not consume arrows anymore, but will still required at least one arrow on inventory use the bow.
 	FIELD field_77352_x effectId I
 	FIELD field_77333_a weight I
 	FIELD field_77351_y type Lnet/minecraft/enchantment/EnumEnchantmentType;
+		COMMENT The EnumEnchantmentType given to this Enchantment.
 	FIELD field_77350_z name Ljava/lang/String;
+		COMMENT Used in localisation and stats.
+	METHOD func_77324_c getWeight ()I
+	METHOD func_77319_d getMinLevel ()I
+		COMMENT Returns the minimum level that the enchantment can have.
+	METHOD func_77325_b getMaxLevel ()I
+		COMMENT Returns the maximum level that the enchantment can have.
+	METHOD func_77321_a getMinEnchantability (I)I
+		COMMENT Returns the minimal value of enchantability needed on the enchantment level passed.
+		ARG 0 par1
+	METHOD func_77317_b getMaxEnchantability (I)I
+		COMMENT Returns the maximum value of enchantability nedded on the enchantment level passed.
+		ARG 0 par1
+	METHOD func_77318_a calcModifierDamage (ILnet/minecraft/util/DamageSource;)I
+		COMMENT Calculates de damage protection of the enchantment based on level and damage source passed.
+		ARG 0 par1
+		ARG 1 par2DamageSource
+	METHOD func_77323_a calcModifierLiving (ILnet/minecraft/entity/EntityLiving;)I
+		COMMENT Calculates de (magic) damage done by the enchantment on a living entity based on level and entity passed.
+		ARG 0 par1
+		ARG 1 par2EntityLiving
+	METHOD func_77326_a canApplyTogether (Lnet/minecraft/enchantment/Enchantment;)Z
+		COMMENT Determines if the enchantment passed can be applyied together with this enchantment.
+		ARG 0 par1Enchantment
+	METHOD func_77322_b setName (Ljava/lang/String;)Lnet/minecraft/enchantment/Enchantment;
+		COMMENT Sets the enchantment name
+		ARG 0 par1Str
+	METHOD func_77320_a getName ()Ljava/lang/String;
+		COMMENT Return the name of key in translation table of this enchantment.
+	METHOD func_77316_c getTranslatedName (I)Ljava/lang/String;
+		COMMENT Returns the correct traslated name of the enchantment and the level in roman numbers.
+		ARG 0 par1

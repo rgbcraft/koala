@@ -1,3 +1,6 @@
 CLASS net/minecraft/client/renderer/texturefx/TexturePortalFX
 	FIELD field_76853_g portalTickCounter I
+		COMMENT Portal tick counter
 	FIELD field_76854_h portalTextureData [B
+		COMMENT Portal texture data
+	METHOD func_76846_a onTick ()V

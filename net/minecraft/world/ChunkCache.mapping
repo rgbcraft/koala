@@ -3,4 +3,101 @@ CLASS net/minecraft/world/ChunkCache
 	FIELD field_72816_b chunkZ I
 	FIELD field_72817_c chunkArray [Lnet/minecraft/world/chunk/Chunk;
 	FIELD field_72814_d hasExtendedLevels Z
+		COMMENT set by !chunk.getAreLevelsEmpty
 	FIELD field_72815_e worldObj Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
+	METHOD func_72806_N extendedLevelsInChunkCache ()Z
+		COMMENT set by !chunk.getAreLevelsEmpty
+	METHOD func_72798_a getBlockId (III)I
+		COMMENT Returns the block ID at coords x,y,z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72796_p getBlockTileEntity (III)Lnet/minecraft/tileentity/TileEntity;
+		COMMENT Returns the TileEntity associated with a given block in X,Y,Z coordinates, or null if no TileEntity exists
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72808_j getBrightness (IIII)F
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72802_i getLightBrightnessForSkyBlocks (IIII)I
+		COMMENT Any Light rendered on a 1.8 Block goes through here
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72801_o getLightBrightness (III)F
+		COMMENT Returns how bright the block is shown as which is the block's light value looked up in a lookup table (light values aren't linear for brightness). Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72811_b getLightValue (III)I
+		COMMENT Gets the light value of the specified block coords. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72813_a getLightValueExt (IIIZ)I
+		COMMENT Get light value with flag
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72805_g getBlockMetadata (III)I
+		COMMENT Returns the block metadata at coords x,y,z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72803_f getBlockMaterial (III)Lnet/minecraft/block/material/Material;
+		COMMENT Returns the block's material.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72807_a getBiomeGenForCoords (II)Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Gets the biome for a given set of x/z coordinates
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72804_r isBlockOpaqueCube (III)Z
+		COMMENT Returns true if the block at the specified coordinates is an opaque cube. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72809_s isBlockNormalCube (III)Z
+		COMMENT Indicate if a material is a normal solid opaque cube.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72797_t doesBlockHaveSolidTopSurface (III)Z
+		COMMENT Returns true if the block at the given coordinate has a solid (buildable) top surface.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_82732_R getWorldVec3Pool ()Lnet/minecraft/util/Vec3Pool;
+		COMMENT Return the Vec3Pool object for this world.
+	METHOD func_72799_c isAirBlock (III)Z
+		COMMENT Returns true if the block at the specified coordinates is empty
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72810_a getSkyBlockTypeBrightness (Lnet/minecraft/world/EnumSkyBlock;III)I
+		COMMENT Brightness for SkyBlock.Sky is clear white and (through color computing it is assumed) DEPENDENT ON DAYTIME. Brightness for SkyBlock.Block is yellowish and independent.
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72812_b getSpecialBlockBrightness (Lnet/minecraft/world/EnumSkyBlock;III)I
+		COMMENT is only used on stairs and tilled fields
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72800_K getHeight ()I
+		COMMENT Returns current world height.
+	METHOD func_72879_k isBlockProvidingPowerTo (IIII)Z
+		COMMENT Is this block powering in the specified direction Args: x, y, z, direction
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

@@ -1,7 +1,27 @@
 CLASS net/minecraft/util/AABBPool
 	FIELD field_72306_a maxNumCleans I
+		COMMENT Maximum number of times the pool can be "cleaned" before the list is shrunk
 	FIELD field_72304_b numEntriesToRemove I
+		COMMENT Number of Pool entries to remove when cleanPool is called maxNumCleans times.
 	FIELD field_72305_c listAABB Ljava/util/List;
+		COMMENT List of AABB stored in this Pool
 	FIELD field_72302_d nextPoolIndex I
+		COMMENT Next index to use when adding a Pool Entry.
 	FIELD field_72303_e maxPoolIndex I
+		COMMENT Largest index reached by this Pool (can be reset to 0 upon calling cleanPool)
 	FIELD field_72301_f numCleans I
+		COMMENT Number of times this Pool has been cleaned
+	METHOD func_72299_a addOrModifyAABBInPool (DDDDDD)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Adds a AABB to the pool, or if there is an available AABB, updates an existing AABB entry to specified coordinates
+		ARG 0 par11
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7
+		ARG 5 par9
+	METHOD func_72298_a cleanPool ()V
+		COMMENT Marks the pool as "empty", starting over when adding new entries. If this is called maxNumCleans times, the list size is reduced
+	METHOD func_72300_b clearPool ()V
+		COMMENT Clears the AABBPool
+	METHOD func_83013_c getlistAABBsize ()I
+	METHOD func_83012_d getnextPoolIndex ()I

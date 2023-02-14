@@ -1,3 +1,6 @@
 CLASS net/minecraft/client/multiplayer/LanServerList
 	FIELD field_77555_b listOfLanServers Ljava/util/ArrayList;
 	FIELD field_77556_a wasUpdated Z
+	METHOD func_77553_a getWasUpdated ()Z
+	METHOD func_77552_b setWasNotUpdated ()V
+	METHOD func_77554_c getLanServers ()Ljava/util/List;

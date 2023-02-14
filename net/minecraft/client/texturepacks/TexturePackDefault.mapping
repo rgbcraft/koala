@@ -1,1 +1,3 @@
 CLASS net/minecraft/client/texturepacks/TexturePackDefault
+	METHOD func_77540_a loadDescription ()V
+		COMMENT Load texture pack description from /pack.txt file in the texture pack

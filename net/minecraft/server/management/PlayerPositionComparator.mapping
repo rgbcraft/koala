@@ -1,2 +1,6 @@
 CLASS net/minecraft/server/management/PlayerPositionComparator
 	FIELD field_82548_a theChunkCoordinates Lnet/minecraft/util/ChunkCoordinates;
+	METHOD func_82547_a comparePlayers (Lnet/minecraft/entity/player/EntityPlayerMP;Lnet/minecraft/entity/player/EntityPlayerMP;)I
+		COMMENT Compare the position of two players.
+		ARG 0 par1EntityPlayerMP
+		ARG 1 par2EntityPlayerMP

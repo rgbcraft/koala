@@ -1,7 +1,22 @@
 CLASS net/minecraft/network/rcon/RConThreadQueryAuth
 	FIELD field_72598_b timestamp J
+		COMMENT The creation timestamp for this auth
 	FIELD field_72599_c randomChallenge I
+		COMMENT A random challenge
 	FIELD field_72596_d requestId [B
+		COMMENT A client-provided request ID associated with this query
 	FIELD field_72597_e challengeValue [B
+		COMMENT A unique string of bytes used to verify client auth
 	FIELD field_72595_f requestIdAsString Ljava/lang/String;
+		COMMENT The request ID stored as a String
 	FIELD field_72600_a queryThread Lnet/minecraft/network/rcon/RConThreadQuery;
+		COMMENT The RConThreadQuery that this is probably an inner class of
+	METHOD func_72593_a hasExpired (J)Ljava/lang/Boolean;
+		COMMENT Returns true if the auth's creation timestamp is less than the given time, otherwise false
+		ARG 0 par1
+	METHOD func_72592_a getRandomChallenge ()I
+		COMMENT Returns the random challenge number assigned to this auth
+	METHOD func_72594_b getChallengeValue ()[B
+		COMMENT Returns the auth challenge value
+	METHOD func_72591_c getRequestId ()[B
+		COMMENT Returns the request ID provided by the client.

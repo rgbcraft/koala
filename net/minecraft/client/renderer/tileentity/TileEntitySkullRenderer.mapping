@@ -1,2 +1,12 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntitySkullRenderer
 	FIELD field_82397_a skullRenderer Lnet/minecraft/client/renderer/tileentity/TileEntitySkullRenderer;
+	METHOD func_82394_a renderTileEntitySkullAt (Lnet/minecraft/tileentity/TileEntitySkull;DDDF)V
+		COMMENT Render a skull tile entity.
+		ARG 0 par1TileEntitySkull
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_76893_a setTileEntityRenderer (Lnet/minecraft/client/renderer/tileentity/TileEntityRenderer;)V
+		COMMENT Associate a TileEntityRenderer with this TileEntitySpecialRenderer
+		ARG 0 par1TileEntityRenderer

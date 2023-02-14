@@ -1,4 +1,26 @@
 CLASS net/minecraft/util/ThreadDownloadResources
 	FIELD field_74579_a resourcesFolder Ljava/io/File;
+		COMMENT The folder to store the resources in.
 	FIELD field_74577_b mc Lnet/minecraft/client/Minecraft;
+		COMMENT A reference to the Minecraft object.
 	FIELD field_74578_c closing Z
+		COMMENT Set to true when Minecraft is closing down.
+	METHOD func_74573_a reloadResources ()V
+		COMMENT Reloads the resource folder and passes the resources to Minecraft to install.
+	METHOD func_74576_a loadResource (Ljava/io/File;Ljava/lang/String;)V
+		COMMENT Loads a resource and passes it to Minecraft to install.
+		ARG 0 par1File
+		ARG 1 par2Str
+	METHOD func_74575_a downloadAndInstallResource (Ljava/net/URL;Ljava/lang/String;JI)V
+		COMMENT Downloads the resource and saves it to disk then installs it.
+		ARG 0 par1URL
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par5
+	METHOD func_74572_a downloadResource (Ljava/net/URL;Ljava/io/File;J)V
+		COMMENT Downloads the resource and saves it to disk.
+		ARG 0 par1URL
+		ARG 1 par2File
+		ARG 2 par3
+	METHOD func_74574_b closeMinecraft ()V
+		COMMENT Called when Minecraft is closing down.

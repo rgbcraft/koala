@@ -1,1 +1,12 @@
 CLASS net/minecraft/client/renderer/entity/RenderPig
+	METHOD func_77099_a renderSaddledPig (Lnet/minecraft/entity/passive/EntityPig;IF)I
+		ARG 0 par1EntityPig
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77098_a renderLivingPig (Lnet/minecraft/entity/passive/EntityPig;DDDFF)V
+		ARG 0 par1EntityPig
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9

@@ -1,5 +1,40 @@
 CLASS net/minecraft/crash/CrashReport
 	FIELD field_71513_a description Ljava/lang/String;
+		COMMENT Description of the crash report.
 	FIELD field_71511_b cause Ljava/lang/Throwable;
+		COMMENT The Throwable that is the "cause" for this crash and Crash Report.
 	FIELD field_71512_c crashReportSections Ljava/util/List;
+		COMMENT Holds the keys and values of all crash report sections.
 	FIELD field_71510_d crashReportFile Ljava/io/File;
+		COMMENT File of crash report.
+	METHOD func_71504_g populateEnvironment ()V
+		COMMENT Populates this crash report with initial information about the running server and operating system / java environment
+	METHOD func_71501_a getDescription ()Ljava/lang/String;
+		COMMENT Returns the description of the Crash Report.
+	METHOD func_71505_b getCrashCause ()Ljava/lang/Throwable;
+		COMMENT Returns the Throwable object that is the cause for the crash and Crash Report.
+	METHOD func_71506_a getSectionsInStringBuilder (Ljava/lang/StringBuilder;)V
+		COMMENT Gets the various sections of the crash report into the given StringBuilder
+		ARG 0 par1StringBuilder
+	METHOD func_71498_d getCauseStackTraceOrString ()Ljava/lang/String;
+		COMMENT Gets the stack trace of the Throwable that caused this crash report, or if that fails, the cause .toString().
+	METHOD func_71502_e getCompleteReport ()Ljava/lang/String;
+		COMMENT Gets the complete report with headers, stack trace, and different sections as a string.
+	METHOD func_71497_f getFile ()Ljava/io/File;
+		COMMENT Gets the file this crash report is saved into.
+	METHOD func_71508_a saveToFile (Ljava/io/File;)Z
+		COMMENT Saves the complete crash report to the given File.
+		ARG 0 par1File
+	METHOD func_85058_a makeCategory (Ljava/lang/String;)Lnet/minecraft/crash/CrashReportCategory;
+		COMMENT Creates a CrashReportCategory
+		ARG 0 par1Str
+	METHOD func_85057_a makeCategoryDepth (Ljava/lang/String;I)Lnet/minecraft/crash/CrashReportCategory;
+		COMMENT Creates a CrashReportCategory for the given stack trace depth
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_71503_h getWittyComment ()Ljava/lang/String;
+		COMMENT Gets a random witty comment for inclusion in this CrashReport
+	METHOD func_85055_a makeCrashReport (Ljava/lang/Throwable;Ljava/lang/String;)Lnet/minecraft/crash/CrashReport;
+		COMMENT Creates a crash report for the exception
+		ARG 0 par0Throwable
+		ARG 1 par1Str

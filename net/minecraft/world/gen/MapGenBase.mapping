@@ -1,4 +1,21 @@
 CLASS net/minecraft/world/gen/MapGenBase
 	FIELD field_75040_a range I
+		COMMENT The number of Chunks to gen-check in any given direction.
 	FIELD field_75038_b rand Ljava/util/Random;
+		COMMENT The RNG used by the MapGen classes.
 	FIELD field_75039_c worldObj Lnet/minecraft/world/World;
+		COMMENT This world object.
+	METHOD func_75036_a generate (Lnet/minecraft/world/chunk/IChunkProvider;Lnet/minecraft/world/World;II[B)V
+		ARG 0 par1IChunkProvider
+		ARG 1 par2World
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5ArrayOfByte
+	METHOD func_75037_a recursiveGenerate (Lnet/minecraft/world/World;IIII[B)V
+		COMMENT Recursively called by generate() (func_75036_a) and optionally by itself.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6ArrayOfByte

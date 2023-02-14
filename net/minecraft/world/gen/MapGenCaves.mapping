@@ -1,1 +1,33 @@
 CLASS net/minecraft/world/gen/MapGenCaves
+	METHOD func_75041_a generateLargeCaveNode (JII[BDDD)V
+		COMMENT Generates a larger initial cave node than usual. Called 25% of the time.
+		ARG 0 par10
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5ArrayOfByte
+		ARG 5 par6
+		ARG 6 par8
+	METHOD func_75042_a generateCaveNode (JII[BDDDFFFIID)V
+		COMMENT Generates a node in the current cave system recursion tree.
+		ARG 0 par10
+		ARG 1 par12
+		ARG 2 par13
+		ARG 3 par14
+		ARG 4 par15
+		ARG 5 par16
+		ARG 6 par17
+		ARG 7 par1
+		ARG 8 par3
+		ARG 9 par4
+		ARG 10 par5ArrayOfByte
+		ARG 11 par6
+		ARG 12 par8
+	METHOD func_75037_a recursiveGenerate (Lnet/minecraft/world/World;IIII[B)V
+		COMMENT Recursively called by generate() (func_75036_a) and optionally by itself.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6ArrayOfByte

@@ -1,1 +1,34 @@
 CLASS net/minecraft/block/BlockGrass
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71895_b getBlockTexture (Lnet/minecraft/world/IBlockAccess;IIII)I
+		COMMENT Retrieves the block texture to use based on the display side. Args: iBlockAccess, x, y, z, side
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_71933_m getBlockColor ()I
+	METHOD func_71889_f_ getRenderColor (I)I
+		COMMENT Returns the color this block should be rendered. Used by leaves.
+		ARG 0 par1
+	METHOD func_71920_b colorMultiplier (Lnet/minecraft/world/IBlockAccess;III)I
+		COMMENT Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called when first determining what to render.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3

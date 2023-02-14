@@ -1,4 +1,12 @@
 CLASS net/minecraft/util/EnchantmentNameParts
 	FIELD field_78061_a instance Lnet/minecraft/util/EnchantmentNameParts;
+		COMMENT The static instance of this class.
 	FIELD field_78059_b rand Ljava/util/Random;
+		COMMENT The RNG used to generate enchant names.
 	FIELD field_78060_c wordList [Ljava/lang/String;
+		COMMENT List of words used to generate an enchant name.
+	METHOD func_78057_a generateRandomEnchantName ()Ljava/lang/String;
+		COMMENT Generates a random enchant name.
+	METHOD func_78058_a setRandSeed (J)V
+		COMMENT Sets the seed for the enchant name RNG.
+		ARG 0 par1

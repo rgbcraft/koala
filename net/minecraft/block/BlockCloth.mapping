@@ -1,1 +1,19 @@
 CLASS net/minecraft/block/BlockCloth
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71899_b damageDropped (I)I
+		COMMENT Determines the damage on the item the block drops. Used in cloth and wood.
+		ARG 0 par1
+	METHOD func_72238_e_ getBlockFromDye (I)I
+		COMMENT Takes a dye damage value and returns the block damage value to match
+		ARG 0 par0
+	METHOD func_72239_d getDyeFromBlock (I)I
+		COMMENT Takes a block damage value and returns the dye damage value to match
+		ARG 0 par0
+	METHOD func_71879_a getSubBlocks (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V
+		COMMENT returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+		ARG 0 par1
+		ARG 1 par2CreativeTabs
+		ARG 2 par3List

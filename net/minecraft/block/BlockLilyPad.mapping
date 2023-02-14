@@ -1,1 +1,37 @@
 CLASS net/minecraft/block/BlockLilyPad
+	METHOD func_71857_b getRenderType ()I
+		COMMENT The type of render function that is called for this block
+	METHOD func_71871_a addCollidingBlockToList (Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V
+		COMMENT if the specified block is in the given AABB, add its collision bounding box to the given list
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5AxisAlignedBB
+		ARG 5 par6List
+		ARG 6 par7Entity
+	METHOD func_71872_e getCollisionBoundingBoxFromPool (Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71933_m getBlockColor ()I
+	METHOD func_71889_f_ getRenderColor (I)I
+		COMMENT Returns the color this block should be rendered. Used by leaves.
+		ARG 0 par1
+	METHOD func_71920_b colorMultiplier (Lnet/minecraft/world/IBlockAccess;III)I
+		COMMENT Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called when first determining what to render.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72263_d_ canThisPlantGrowOnThisBlockID (I)Z
+		COMMENT Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
+		ARG 0 par1
+	METHOD func_71854_d canBlockStay (Lnet/minecraft/world/World;III)Z
+		COMMENT Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

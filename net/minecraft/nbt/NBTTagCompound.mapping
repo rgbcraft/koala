@@ -1,2 +1,118 @@
 CLASS net/minecraft/nbt/NBTTagCompound
 	FIELD field_74784_a tagMap Ljava/util/Map;
+		COMMENT The key-value pairs for the tag. Each key is a UTF string, each value is a tag.
+	METHOD func_74734_a write (Ljava/io/DataOutput;)V
+		COMMENT Write the actual data contents of the tag, implemented in NBT extension classes
+		ARG 0 par1DataOutput
+	METHOD func_74735_a load (Ljava/io/DataInput;)V
+		COMMENT Read the actual data contents of the tag, implemented in NBT extension classes
+		ARG 0 par1DataInput
+	METHOD func_74758_c getTags ()Ljava/util/Collection;
+		COMMENT Returns all the values in the tagMap HashMap.
+	METHOD func_74732_a getId ()B
+		COMMENT Gets the type byte for the tag.
+	METHOD func_74782_a setTag (Ljava/lang/String;Lnet/minecraft/nbt/NBTBase;)V
+		COMMENT Stores the given tag into the map with the given string key. This is mostly used to store tag lists.
+		ARG 0 par1Str
+		ARG 1 par2NBTBase
+	METHOD func_74774_a setByte (Ljava/lang/String;B)V
+		COMMENT Stores a new NBTTagByte with the given byte value into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_74777_a setShort (Ljava/lang/String;S)V
+		COMMENT Stores a new NBTTagShort with the given short value into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_74768_a setInteger (Ljava/lang/String;I)V
+		COMMENT Stores a new NBTTagInt with the given integer value into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_74772_a setLong (Ljava/lang/String;J)V
+		COMMENT Stores a new NBTTagLong with the given long value into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_74776_a setFloat (Ljava/lang/String;F)V
+		COMMENT Stores a new NBTTagFloat with the given float value into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_74780_a setDouble (Ljava/lang/String;D)V
+		COMMENT Stores a new NBTTagDouble with the given double value into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_74778_a setString (Ljava/lang/String;Ljava/lang/String;)V
+		COMMENT Stores a new NBTTagString with the given string value into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2Str
+	METHOD func_74773_a setByteArray (Ljava/lang/String;[B)V
+		COMMENT Stores a new NBTTagByteArray with the given array as data into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfByte
+	METHOD func_74783_a setIntArray (Ljava/lang/String;[I)V
+		COMMENT Stores a new NBTTagIntArray with the given array as data into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfInteger
+	METHOD func_74766_a setCompoundTag (Ljava/lang/String;Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Stores the given NBTTagCompound into the map with the given string key.
+		ARG 0 par1Str
+		ARG 1 par2NBTTagCompound
+	METHOD func_74757_a setBoolean (Ljava/lang/String;Z)V
+		COMMENT Stores the given boolean value as a NBTTagByte, storing 1 for true and 0 for false, using the given string key.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_74781_a getTag (Ljava/lang/String;)Lnet/minecraft/nbt/NBTBase;
+		COMMENT gets a generic tag with the specified name
+		ARG 0 par1Str
+	METHOD func_74764_b hasKey (Ljava/lang/String;)Z
+		COMMENT Returns whether the given string has been previously stored as a key in the map.
+		ARG 0 par1Str
+	METHOD func_74771_c getByte (Ljava/lang/String;)B
+		COMMENT Retrieves a byte value using the specified key, or 0 if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74765_d getShort (Ljava/lang/String;)S
+		COMMENT Retrieves a short value using the specified key, or 0 if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74762_e getInteger (Ljava/lang/String;)I
+		COMMENT Retrieves an integer value using the specified key, or 0 if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74763_f getLong (Ljava/lang/String;)J
+		COMMENT Retrieves a long value using the specified key, or 0 if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74760_g getFloat (Ljava/lang/String;)F
+		COMMENT Retrieves a float value using the specified key, or 0 if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74769_h getDouble (Ljava/lang/String;)D
+		COMMENT Retrieves a double value using the specified key, or 0 if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74779_i getString (Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Retrieves a string value using the specified key, or an empty string if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74770_j getByteArray (Ljava/lang/String;)[B
+		COMMENT Retrieves a byte array using the specified key, or a zero-length array if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74759_k getIntArray (Ljava/lang/String;)[I
+		COMMENT Retrieves an int array using the specified key, or a zero-length array if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74775_l getCompoundTag (Ljava/lang/String;)Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Retrieves a NBTTagCompound subtag matching the specified key, or a new empty NBTTagCompound if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74761_m getTagList (Ljava/lang/String;)Lnet/minecraft/nbt/NBTTagList;
+		COMMENT Retrieves a NBTTagList subtag matching the specified key, or a new empty NBTTagList if no such key was stored.
+		ARG 0 par1Str
+	METHOD func_74767_n getBoolean (Ljava/lang/String;)Z
+		COMMENT Retrieves a boolean value using the specified key, or false if no such key was stored. This uses the getByte method.
+		ARG 0 par1Str
+	METHOD func_82580_o removeTag (Ljava/lang/String;)V
+		COMMENT Remove the specified tag.
+		ARG 0 par1Str
+	METHOD func_82582_d hasNoTags ()Z
+		COMMENT Return whether this compound has no tags.
+	METHOD func_82581_a createCrashReport (Ljava/lang/String;ILjava/lang/ClassCastException;)Lnet/minecraft/crash/CrashReport;
+		COMMENT Create a crash report which indicates a NBT read error.
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3ClassCastException
+	METHOD func_74737_b copy ()Lnet/minecraft/nbt/NBTBase;
+		COMMENT Creates a clone of the tag.
+	METHOD func_82579_a getTagMap (Lnet/minecraft/nbt/NBTTagCompound;)Ljava/util/Map;
+		COMMENT Return the tag map for this compound.
+		ARG 0 par0NBTTagCompound

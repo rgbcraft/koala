@@ -1,1 +1,20 @@
 CLASS net/minecraft/entity/projectile/EntityWitherSkull
+	METHOD func_82341_c getMotionFactor ()F
+		COMMENT Return the motion factor for this projectile. The factor is multiplied by the original motion.
+	METHOD func_70027_ad isBurning ()Z
+		COMMENT Returns true if the entity is on fire. Used by render to add the fire effect on rendering.
+	METHOD func_70227_a onImpact (Lnet/minecraft/util/MovingObjectPosition;)V
+		COMMENT Called when this EntityFireball hits a block or entity.
+		ARG 0 par1MovingObjectPosition
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70088_a entityInit ()V
+	METHOD func_82342_d isInvulnerable ()Z
+		COMMENT Return whether this skull comes from an invulnerable (aura) wither boss.
+	METHOD func_82343_e setInvulnerable (Z)V
+		COMMENT Set whether this skull comes from an invulnerable (aura) wither boss.
+		ARG 0 par1

@@ -1,2 +1,37 @@
 CLASS net/minecraft/world/demo/DemoWorldManager
 	FIELD field_73103_d demoTimeExpired Z
+	METHOD func_73075_a updateBlockRemoving ()V
+	METHOD func_73101_e sendDemoReminder ()V
+		COMMENT Sends a message to the player reminding them that this is the demo version
+	METHOD func_73074_a onBlockClicked (IIII)V
+		COMMENT if not creative, it calls destroyBlockInWorldPartially untill the block is broken first. par4 is the specific side. tryHarvestBlock can also be the result of this call
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73082_a uncheckedTryHarvestBlock (III)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73084_b tryHarvestBlock (III)Z
+		COMMENT Attempts to harvest a block at the given coordinate
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73085_a tryUseItem (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Attempts to right-click use an item by the given EntityPlayer in the given World
+		ARG 0 par1EntityPlayer
+		ARG 1 par2World
+		ARG 2 par3ItemStack
+	METHOD func_73078_a activateBlockOrUseItem (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;IIIIFFF)Z
+		COMMENT Activate the clicked on block, otherwise use the held item. Args: player, world, itemStack, x, y, z, side, xOffset, yOffset, zOffset
+		ARG 0 par10
+		ARG 1 par1EntityPlayer
+		ARG 2 par2World
+		ARG 3 par3ItemStack
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+		ARG 8 par8
+		ARG 9 par9

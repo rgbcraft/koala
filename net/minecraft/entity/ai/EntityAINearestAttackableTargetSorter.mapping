@@ -1,3 +1,6 @@
 CLASS net/minecraft/entity/ai/EntityAINearestAttackableTargetSorter
 	FIELD field_75459_b theEntity Lnet/minecraft/entity/Entity;
 	FIELD field_75460_a parent Lnet/minecraft/entity/ai/EntityAINearestAttackableTarget;
+	METHOD func_75458_a compareDistanceSq (Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;)I
+		ARG 0 par1Entity
+		ARG 1 par2Entity

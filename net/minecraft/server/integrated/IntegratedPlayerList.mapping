@@ -1,2 +1,14 @@
 CLASS net/minecraft/server/integrated/IntegratedPlayerList
 	FIELD field_72416_e tagsForLastWrittenPlayer Lnet/minecraft/nbt/NBTTagCompound;
+	METHOD func_72391_b writePlayerData (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT also stores the NBTTags if this is an intergratedPlayerList
+		ARG 0 par1EntityPlayerMP
+	METHOD func_72399_a allowUserToConnect (Ljava/net/SocketAddress;Ljava/lang/String;)Ljava/lang/String;
+		COMMENT checks ban-lists, then white-lists, then space for the server. Returns null on success, or an error message
+		ARG 0 par1SocketAddress
+		ARG 1 par2Str
+	METHOD func_72415_s getIntegratedServer ()Lnet/minecraft/server/integrated/IntegratedServer;
+		COMMENT get the associated Integrated Server
+	METHOD func_72378_q getTagsFromLastWrite ()Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT gets the tags created in the last writePlayerData call
+	METHOD func_72365_p getServerInstance ()Lnet/minecraft/server/MinecraftServer;

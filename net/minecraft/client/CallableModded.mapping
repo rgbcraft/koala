@@ -1,2 +1,5 @@
 CLASS net/minecraft/client/CallableModded
 	FIELD field_74500_a mc Lnet/minecraft/client/Minecraft;
+		COMMENT Reference to the Minecraft object.
+	METHOD func_74499_a getClientProfilerEnabled ()Ljava/lang/String;
+		COMMENT Gets if Client Profiler (aka Snooper) is enabled.

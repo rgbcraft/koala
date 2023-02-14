@@ -7,3 +7,63 @@ CLASS net/minecraft/server/dedicated/DedicatedServer
 	FIELD field_71337_q gameType Lnet/minecraft/world/EnumGameType;
 	FIELD field_71336_r networkThread Lnet/minecraft/network/NetworkListenThread;
 	FIELD field_71335_s guiIsEnabled Z
+	METHOD func_71197_b startServer ()Z
+		COMMENT Initialises the server and starts it.
+	METHOD func_71225_e canStructuresSpawn ()Z
+	METHOD func_71265_f getGameType ()Lnet/minecraft/world/EnumGameType;
+	METHOD func_71232_g getDifficulty ()I
+		COMMENT Defaults to "1" (Easy) for the dedicated server, defaults to "2" (Normal) on the client.
+	METHOD func_71199_h isHardcore ()Z
+		COMMENT Defaults to false.
+	METHOD func_71228_a finalTick (Lnet/minecraft/crash/CrashReport;)V
+		COMMENT Called on exit from the main run() loop.
+		ARG 0 par1CrashReport
+	METHOD func_71230_b addServerInfoToCrashReport (Lnet/minecraft/crash/CrashReport;)Lnet/minecraft/crash/CrashReport;
+		COMMENT Adds the server info, including from theWorldServer, to the crash report.
+		ARG 0 par1CrashReport
+	METHOD func_71240_o systemExitNow ()V
+		COMMENT Directly calls System.exit(0), instantly killing the program.
+	METHOD func_71190_q updateTimeLightAndEntities ()V
+	METHOD func_71255_r getAllowNether ()Z
+	METHOD func_71193_K allowSpawnMonsters ()Z
+	METHOD func_70000_a addServerStatsToSnooper (Lnet/minecraft/profiler/PlayerUsageSnooper;)V
+		ARG 0 par1PlayerUsageSnooper
+	METHOD func_70002_Q isSnooperEnabled ()Z
+		COMMENT Returns whether snooping is enabled or not.
+	METHOD func_71331_a addPendingCommand (Ljava/lang/String;Lnet/minecraft/command/ICommandSender;)V
+		ARG 0 par1Str
+		ARG 1 par2ICommandSender
+	METHOD func_71333_ah executePendingCommands ()V
+	METHOD func_71262_S isDedicatedServer ()Z
+	METHOD func_71334_ai getDedicatedPlayerList ()Lnet/minecraft/server/dedicated/DedicatedPlayerList;
+	METHOD func_71212_ac getNetworkThread ()Lnet/minecraft/network/NetworkListenThread;
+	METHOD func_71327_a getIntProperty (Ljava/lang/String;I)I
+		COMMENT Gets an integer property. If it does not exist, set it to the specified value.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_71330_a getStringProperty (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Gets a string property. If it does not exist, set it to the specified value.
+		ARG 0 par1Str
+		ARG 1 par2Str
+	METHOD func_71332_a getBooleanProperty (Ljava/lang/String;Z)Z
+		COMMENT Gets a boolean property. If it does not exist, set it to the specified value.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_71328_a setProperty (Ljava/lang/String;Ljava/lang/Object;)V
+		COMMENT Saves an Object with the given property name.
+		ARG 0 par1Str
+		ARG 1 par2Obj
+	METHOD func_71326_a saveProperties ()V
+		COMMENT Saves all of the server properties to the properties file.
+	METHOD func_71329_c getSettingsFilename ()Ljava/lang/String;
+		COMMENT Returns the filename where server properties are stored
+	METHOD func_71279_ae getGuiEnabled ()Z
+	METHOD func_71206_a shareToLAN (Lnet/minecraft/world/EnumGameType;Z)Ljava/lang/String;
+		COMMENT On dedicated does nothing. On integrated, sets commandsAllowedForAll, gameType and allows external connections.
+		ARG 0 par1EnumGameType
+		ARG 1 par2
+	METHOD func_82356_Z isCommandBlockEnabled ()Z
+		COMMENT Return whether command blocks are enabled.
+	METHOD func_82357_ak getSpawnProtectionSize ()I
+		COMMENT Return the spawn protection area's size.
+	METHOD func_71203_ab getConfigurationManager ()Lnet/minecraft/server/management/ServerConfigurationManager;

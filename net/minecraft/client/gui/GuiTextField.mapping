@@ -1,19 +1,114 @@
 CLASS net/minecraft/client/gui/GuiTextField
 	FIELD field_73815_a fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT Have the font renderer from GuiScreen to render the textbox text into the screen.
 	FIELD field_73813_b xPos I
 	FIELD field_73814_c yPos I
 	FIELD field_73811_d width I
+		COMMENT The width of this text field.
 	FIELD field_73812_e height I
 	FIELD field_73809_f text Ljava/lang/String;
+		COMMENT Have the current text beign edited on the textbox.
 	FIELD field_73810_g maxStringLength I
 	FIELD field_73822_h cursorCounter I
 	FIELD field_73820_j enableBackgroundDrawing Z
 	FIELD field_73821_k canLoseFocus Z
+		COMMENT if true the textbox can lose focus by clicking elsewhere on the screen
 	FIELD field_73818_l isFocused Z
+		COMMENT If this value is true along isEnabled, keyTyped will process the keys.
 	FIELD field_73819_m isEnabled Z
+		COMMENT If this value is true along isFocused, keyTyped will process the keys.
 	FIELD field_73816_n lineScrollOffset I
+		COMMENT The current character index that should be used as start of the rendered text.
 	FIELD field_73817_o cursorPosition I
 	FIELD field_73826_p selectionEnd I
+		COMMENT other selection position, maybe the same as the cursor
 	FIELD field_73825_q enabledColor I
 	FIELD field_73824_r disabledColor I
 	FIELD field_73823_s visible Z
+		COMMENT True if this textbox is visible
+	METHOD func_73780_a updateCursorCounter ()V
+		COMMENT Increments the cursor counter
+	METHOD func_73782_a setText (Ljava/lang/String;)V
+		COMMENT Sets the text of the textbox.
+		ARG 0 par1Str
+	METHOD func_73781_b getText ()Ljava/lang/String;
+		COMMENT Returns the text beign edited on the textbox.
+	METHOD func_73807_c getSelectedtext ()Ljava/lang/String;
+		COMMENT @return returns the text between the cursor and selectionEnd
+	METHOD func_73792_b writeText (Ljava/lang/String;)V
+		COMMENT replaces selected text, or inserts text at the position on the cursor
+		ARG 0 par1Str
+	METHOD func_73779_a deleteWords (I)V
+		COMMENT Deletes the specified number of words starting at the cursor position. Negative numbers will delete words left of the cursor.
+		ARG 0 par1
+	METHOD func_73777_b deleteFromCursor (I)V
+		COMMENT delete the selected text, otherwsie deletes characters from either side of the cursor. params: delete num
+		ARG 0 par1
+	METHOD func_73788_c getNthWordFromCursor (I)I
+		COMMENT see @getNthNextWordFromPos() params: N, position
+		ARG 0 par1
+	METHOD func_73785_a getNthWordFromPos (II)I
+		COMMENT gets the position of the nth word. N may be negative, then it looks backwards. params: N, position
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73784_d moveCursorBy (I)V
+		COMMENT Moves the text cursor by a specified number of characters and clears the selection
+		ARG 0 par1
+	METHOD func_73791_e setCursorPosition (I)V
+		COMMENT sets the position of the cursor to the provided index
+		ARG 0 par1
+	METHOD func_73797_d setCursorPositionZero ()V
+		COMMENT sets the cursors position to the beginning
+	METHOD func_73803_e setCursorPositionEnd ()V
+		COMMENT sets the cursors position to after the text
+	METHOD func_73802_a textboxKeyTyped (CI)Z
+		COMMENT Call this method from you GuiScreen to process the keys into textbox.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73793_a mouseClicked (III)V
+		COMMENT Args: x, y, buttonClicked
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73795_f drawTextBox ()V
+		COMMENT Draws the textbox
+	METHOD func_73789_c drawCursorVertical (IIII)V
+		COMMENT draws the vertical line cursor in the textbox
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73804_f setMaxStringLength (I)V
+		ARG 0 par1
+	METHOD func_73808_g getMaxStringLength ()I
+		COMMENT returns the maximum number of character that can be contained in this textbox
+	METHOD func_73799_h getCursorPosition ()I
+		COMMENT returns the current position of the cursor
+	METHOD func_73783_i getEnableBackgroundDrawing ()Z
+		COMMENT get enable drawing background and outline
+	METHOD func_73786_a setEnableBackgroundDrawing (Z)V
+		COMMENT enable drawing background and outline
+		ARG 0 par1
+	METHOD func_73794_g setTextColor (I)V
+		COMMENT Sets the text colour for this textbox (disabled text will not use this colour)
+		ARG 0 par1
+	METHOD func_73796_b setFocused (Z)V
+		COMMENT setter for the focused field
+		ARG 0 par1
+	METHOD func_73806_l isFocused ()Z
+		COMMENT getter for the focused field
+	METHOD func_73787_n getSelectionEnd ()I
+		COMMENT the side of the selection that is not the cursor, maye be the same as the cursor
+	METHOD func_73801_o getWidth ()I
+		COMMENT returns the width of the textbox depending on if the the box is enabled
+	METHOD func_73800_i setSelectionPos (I)V
+		COMMENT Sets the position of the selection anchor (i.e. position the selection was started at)
+		ARG 0 par1
+	METHOD func_73805_d setCanLoseFocus (Z)V
+		COMMENT if true the textbox can lose focus by clicking elsewhere on the screen
+		ARG 0 par1
+	METHOD func_73778_q getVisible ()Z
+		COMMENT @return {@code true} if this textbox is visible
+	METHOD func_73790_e setVisible (Z)V
+		COMMENT Sets whether or not this textbox is visible
+		ARG 0 par1

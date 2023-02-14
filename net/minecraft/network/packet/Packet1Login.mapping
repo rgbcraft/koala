@@ -1,9 +1,25 @@
 CLASS net/minecraft/network/packet/Packet1Login
 	FIELD field_73561_a clientEntityId I
+		COMMENT The player's entity ID
 	FIELD field_73559_b terrainType Lnet/minecraft/world/WorldType;
 	FIELD field_73560_c hardcoreMode Z
 	FIELD field_73557_d gameType Lnet/minecraft/world/EnumGameType;
 	FIELD field_73558_e dimension I
+		COMMENT -1: The Nether, 0: The Overworld, 1: The End
 	FIELD field_73555_f difficultySetting B
+		COMMENT The difficulty setting byte.
 	FIELD field_73556_g worldHeight B
+		COMMENT Defaults to 128
 	FIELD field_73562_h maxPlayers B
+		COMMENT The maximum players.
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).

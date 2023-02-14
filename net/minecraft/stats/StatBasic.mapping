@@ -1,1 +1,3 @@
 CLASS net/minecraft/stats/StatBasic
+	METHOD func_75971_g registerStat ()Lnet/minecraft/stats/StatBase;
+		COMMENT Register the stat into StatList.

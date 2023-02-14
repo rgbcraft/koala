@@ -1,1 +1,6 @@
 CLASS net/minecraft/entity/item/EntityExpBottle
+	METHOD func_70185_h getGravityVelocity ()F
+		COMMENT Gets the amount of gravity to apply to the thrown entity with each tick.
+	METHOD func_70184_a onImpact (Lnet/minecraft/util/MovingObjectPosition;)V
+		COMMENT Called when this EntityThrowable hits a block or entity.
+		ARG 0 par1MovingObjectPosition

@@ -1,2 +1,25 @@
 CLASS net/minecraft/world/GameRules
 	FIELD field_82771_a theGameRules Ljava/util/TreeMap;
+	METHOD func_82769_a addGameRule (Ljava/lang/String;Ljava/lang/String;)V
+		COMMENT Define a game rule and its default value.
+		ARG 0 par1Str
+		ARG 1 par2Str
+	METHOD func_82764_b setOrCreateGameRule (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 0 par1Str
+		ARG 1 par2Str
+	METHOD func_82767_a getGameRuleStringValue (Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Gets the string Game Rule value.
+		ARG 0 par1Str
+	METHOD func_82766_b getGameRuleBooleanValue (Ljava/lang/String;)Z
+		COMMENT Gets the boolean Game Rule value.
+		ARG 0 par1Str
+	METHOD func_82770_a writeGameRulesToNBT ()Lnet/minecraft/nbt/NBTTagCompound;
+		COMMENT Return the defined game rules as NBT.
+	METHOD func_82768_a readGameRulesFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Set defined game rules from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_82763_b getRules ()[Ljava/lang/String;
+		COMMENT Return the defined game rules.
+	METHOD func_82765_e hasRule (Ljava/lang/String;)Z
+		COMMENT Return whether the specified game rule is defined.
+		ARG 0 par1Str

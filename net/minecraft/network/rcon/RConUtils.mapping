@@ -1,2 +1,25 @@
 CLASS net/minecraft/network/rcon/RConUtils
 	FIELD field_72666_a hexDigits [C
+		COMMENT Translation array of decimal to hex digits
+	METHOD func_72661_a getBytesAsString ([BII)Ljava/lang/String;
+		COMMENT Read a null-terminated string from the given byte array
+		ARG 0 par0ArrayOfByte
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_72662_b getRemainingBytesAsLEInt ([BI)I
+		COMMENT Read 4 bytes from the
+		ARG 0 par0ArrayOfByte
+		ARG 1 par1
+	METHOD func_72665_b getBytesAsLEInt ([BII)I
+		COMMENT Read 4 bytes from the given array in little-endian format and return them as an int
+		ARG 0 par0ArrayOfByte
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_72664_c getBytesAsBEint ([BII)I
+		COMMENT Read 4 bytes from the given array in big-endian format and return them as an int
+		ARG 0 par0ArrayOfByte
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_72663_a getByteAsHexString (B)Ljava/lang/String;
+		COMMENT Returns a String representation of the byte in hexadecimal format
+		ARG 0 par0

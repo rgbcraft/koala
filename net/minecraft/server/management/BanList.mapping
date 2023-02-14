@@ -2,3 +2,22 @@ CLASS net/minecraft/server/management/BanList
 	FIELD field_73715_a theBanList Lnet/minecraft/server/management/LowerStringMap;
 	FIELD field_73713_b fileName Ljava/io/File;
 	FIELD field_73714_c listActive Z
+		COMMENT set to true if not singlePlayer
+	METHOD func_73710_b isListActive ()Z
+	METHOD func_73708_a setListActive (Z)V
+		ARG 0 par1
+	METHOD func_73712_c getBannedList ()Ljava/util/Map;
+		COMMENT removes expired Bans before returning
+	METHOD func_73704_a isBanned (Ljava/lang/String;)Z
+		ARG 0 par1Str
+	METHOD func_73706_a put (Lnet/minecraft/server/management/BanEntry;)V
+		ARG 0 par1BanEntry
+	METHOD func_73709_b remove (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_73705_d removeExpiredBans ()V
+	METHOD func_73707_e loadBanList ()V
+		COMMENT Loads the ban list from the file (adds every entry, does not clear the current list).
+	METHOD func_73711_f saveToFileWithHeader ()V
+	METHOD func_73703_b saveToFile (Z)V
+		COMMENT par1: include header
+		ARG 0 par1

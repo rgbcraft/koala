@@ -1,4 +1,7 @@
 CLASS net/minecraft/client/multiplayer/ThreadLanServerFind
 	FIELD field_77500_a localServerList Lnet/minecraft/client/multiplayer/LanServerList;
+		COMMENT The LanServerList
 	FIELD field_77498_b broadcastAddress Ljava/net/InetAddress;
+		COMMENT InetAddress for 224.0.2.60
 	FIELD field_77499_c socket Ljava/net/MulticastSocket;
+		COMMENT The socket we're using to receive packets on.

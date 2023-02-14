@@ -1,9 +1,37 @@
 CLASS net/minecraft/profiler/PlayerUsageSnooper
 	FIELD field_76482_a dataMap Ljava/util/Map;
+		COMMENT String map for report data
 	FIELD field_76480_b uniqueID Ljava/lang/String;
 	FIELD field_76481_c serverUrl Ljava/net/URL;
+		COMMENT URL of the server to send the report to
 	FIELD field_76478_d playerStatsCollector Lnet/minecraft/profiler/IPlayerUsage;
 	FIELD field_76479_e threadTrigger Ljava/util/Timer;
+		COMMENT set to fire the snooperThread every 15 mins
 	FIELD field_76476_f syncLock Ljava/lang/Object;
 	FIELD field_76477_g isRunning Z
 	FIELD field_76483_h selfCounter I
+		COMMENT incremented on every getSelfCounterFor
+	METHOD func_76463_a startSnooper ()V
+		COMMENT Note issuing start multiple times is not an error.
+	METHOD func_76464_f addBaseDataToSnooper ()V
+	METHOD func_76467_g addJvmArgsToSnooper ()V
+	METHOD func_76471_b addMemoryStatsToSnooper ()V
+	METHOD func_76472_a addData (Ljava/lang/String;Ljava/lang/Object;)V
+		COMMENT Adds information to the report
+		ARG 0 par1Str
+		ARG 1 par2Obj
+	METHOD func_76465_c getCurrentStats ()Ljava/util/Map;
+	METHOD func_76468_d isSnooperRunning ()Z
+	METHOD func_76470_e stopSnooper ()V
+	METHOD func_80006_f getUniqueID ()Ljava/lang/String;
+	METHOD func_76473_a getStatsCollectorFor (Lnet/minecraft/profiler/PlayerUsageSnooper;)Lnet/minecraft/profiler/IPlayerUsage;
+		ARG 0 par0PlayerUsageSnooper
+	METHOD func_76474_b getSyncLockFor (Lnet/minecraft/profiler/PlayerUsageSnooper;)Ljava/lang/Object;
+		ARG 0 par0PlayerUsageSnooper
+	METHOD func_76469_c getDataMapFor (Lnet/minecraft/profiler/PlayerUsageSnooper;)Ljava/util/Map;
+		ARG 0 par0PlayerUsageSnooper
+	METHOD func_76466_d getSelfCounterFor (Lnet/minecraft/profiler/PlayerUsageSnooper;)I
+		COMMENT returns a value indicating how many times this function has been run on the snooper
+		ARG 0 par0PlayerUsageSnooper
+	METHOD func_76475_e getServerUrlFor (Lnet/minecraft/profiler/PlayerUsageSnooper;)Ljava/net/URL;
+		ARG 0 par0PlayerUsageSnooper

@@ -4,3 +4,9 @@ CLASS net/minecraft/entity/ai/EntityAIPanic
 	FIELD field_75266_c randPosX D
 	FIELD field_75263_d randPosY D
 	FIELD field_75264_e randPosZ D
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing

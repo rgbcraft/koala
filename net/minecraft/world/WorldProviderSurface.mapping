@@ -1,2 +1,6 @@
 CLASS net/minecraft/world/WorldProviderSurface
+	METHOD func_80007_l getDimensionName ()Ljava/lang/String;
+		COMMENT Returns the dimension's name, e.g. "The End", "Nether", or "Overworld".
 CLASS net/minecraft/world/WorldProviderSurface
+	METHOD func_80007_l getDimensionName ()Ljava/lang/String;
+		COMMENT Returns the dimension's name, e.g. "The End", "Nether", or "Overworld".

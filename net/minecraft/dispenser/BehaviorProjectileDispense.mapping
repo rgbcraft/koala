@@ -1,1 +1,12 @@
 CLASS net/minecraft/dispenser/BehaviorProjectileDispense
+	METHOD func_82487_b dispenseStack (Lnet/minecraft/dispenser/IBlockSource;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;
+		COMMENT Dispense the specified stack, play the dispense sound and spawn particles.
+		ARG 0 par1IBlockSource
+		ARG 1 par2ItemStack
+	METHOD func_82485_a playDispenseSound (Lnet/minecraft/dispenser/IBlockSource;)V
+		COMMENT Play the dispense sound from the specified block.
+		ARG 0 par1IBlockSource
+	METHOD func_82499_a getProjectileEntity (Lnet/minecraft/world/World;Lnet/minecraft/dispenser/IPosition;)Lnet/minecraft/entity/IProjectile;
+		COMMENT Return the projectile entity spawned by this dispense behavior.
+		ARG 0 par1World
+		ARG 1 par2IPosition

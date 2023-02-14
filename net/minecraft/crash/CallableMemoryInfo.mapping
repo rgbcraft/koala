@@ -1,2 +1,5 @@
 CLASS net/minecraft/crash/CallableMemoryInfo
 	FIELD field_71486_a theCrashReport Lnet/minecraft/crash/CrashReport;
+		COMMENT Reference to the CrashReport object.
+	METHOD func_71485_a getMemoryInfoAsString ()Ljava/lang/String;
+		COMMENT Returns the memory information as a String.  Includes the Free Memory in bytes and MB, Total Memory in bytes and MB, and Max Memory in Bytes and MB.

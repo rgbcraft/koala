@@ -2,3 +2,7 @@ CLASS net/minecraft/client/model/TexturedQuad
 	FIELD field_78239_a vertexPositions [Lnet/minecraft/client/model/PositionTextureVertex;
 	FIELD field_78237_b nVertices I
 	FIELD field_78238_c invertNormal Z
+	METHOD func_78235_a flipFace ()V
+	METHOD func_78236_a draw (Lnet/minecraft/client/renderer/Tessellator;F)V
+		ARG 0 par1Tessellator
+		ARG 1 par2

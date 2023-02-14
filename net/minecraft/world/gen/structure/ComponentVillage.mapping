@@ -1,3 +1,75 @@
 CLASS net/minecraft/world/gen/structure/ComponentVillage
 	FIELD field_74896_a villagersSpawned I
+		COMMENT The number of villagers that have been spawned in this component.
 	FIELD field_74897_k startPiece Lnet/minecraft/world/gen/structure/ComponentVillageStartPiece;
+		COMMENT The starting piece of the village.
+	METHOD func_74891_a getNextComponentNN (Lnet/minecraft/world/gen/structure/ComponentVillageStartPiece;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Gets the next village component, with the bounding box shifted -1 in the X and Z direction.
+		ARG 0 par1ComponentVillageStartPiece
+		ARG 1 par2List
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_74894_b getNextComponentPP (Lnet/minecraft/world/gen/structure/ComponentVillageStartPiece;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT Gets the next village component, with the bounding box shifted +1 in the X and Z direction.
+		ARG 0 par1ComponentVillageStartPiece
+		ARG 1 par2List
+		ARG 2 par3Random
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_74889_b getAverageGroundLevel (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)I
+		COMMENT Discover the y coordinate that will serve as the ground level of the supplied BoundingBox. (A median of all the levels in the BB's horizontal rectangle).
+		ARG 0 par1World
+		ARG 1 par2StructureBoundingBox
+	METHOD func_74895_a canVillageGoDeeper (Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		ARG 0 par0StructureBoundingBox
+	METHOD func_74893_a spawnVillagers (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIII)V
+		COMMENT Spawns a number of villagers in this component. Parameters: world, component bounding box, x offset, y offset, z offset, number of villagers
+		ARG 0 par1World
+		ARG 1 par2StructureBoundingBox
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_74888_b getVillagerType (I)I
+		COMMENT Returns the villager type to spawn in this component, based on the number of villagers already spawned.
+		ARG 0 par1
+	METHOD func_74890_d getBiomeSpecificBlock (II)I
+		COMMENT Gets the replacement block for the current biome
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74892_e getBiomeSpecificBlockMetadata (II)I
+		COMMENT Gets the replacement block metadata for the current biome
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74864_a placeBlockAtCurrentPosition (Lnet/minecraft/world/World;IIIIILnet/minecraft/world/gen/structure/StructureBoundingBox;)V
+		COMMENT current Position depends on currently set Coordinates mode, is computed here
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7StructureBoundingBox
+	METHOD func_74884_a fillWithBlocks (Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIIIIIZ)V
+		COMMENT arguments: (World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, int placeBlockId, int replaceBlockId, boolean alwaysreplace)
+		ARG 0 par10
+		ARG 1 par11
+		ARG 2 par1World
+		ARG 3 par2StructureBoundingBox
+		ARG 4 par3
+		ARG 5 par4
+		ARG 6 par5
+		ARG 7 par6
+		ARG 8 par7
+		ARG 9 par8
+		ARG 10 par9
+	METHOD func_74870_b fillCurrentPositionBlocksDownwards (Lnet/minecraft/world/World;IIIIILnet/minecraft/world/gen/structure/StructureBoundingBox;)V
+		COMMENT Overwrites air and liquids from selected position downwards, stops at hitting anything else.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7StructureBoundingBox

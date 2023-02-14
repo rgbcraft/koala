@@ -2,3 +2,17 @@ CLASS net/minecraft/network/packet/Packet253ServerAuthData
 	FIELD field_73381_a serverId Ljava/lang/String;
 	FIELD field_73379_b publicKey Ljava/security/PublicKey;
 	FIELD field_73380_c verifyToken [B
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).
+	METHOD func_73377_d getServerId ()Ljava/lang/String;
+	METHOD func_73376_f getPublicKey ()Ljava/security/PublicKey;
+	METHOD func_73378_g getVerifyToken ()[B

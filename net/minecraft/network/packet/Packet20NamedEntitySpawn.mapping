@@ -1,10 +1,29 @@
 CLASS net/minecraft/network/packet/Packet20NamedEntitySpawn
 	FIELD field_73516_a entityId I
+		COMMENT The entity ID, in this case it's the player ID.
 	FIELD field_73514_b name Ljava/lang/String;
+		COMMENT The player's name.
 	FIELD field_73515_c xPosition I
+		COMMENT The player's X position.
 	FIELD field_73512_d yPosition I
+		COMMENT The player's Y position.
 	FIELD field_73513_e zPosition I
+		COMMENT The player's Z position.
 	FIELD field_73510_f rotation B
+		COMMENT The player's rotation.
 	FIELD field_73511_g pitch B
+		COMMENT The player's pitch.
 	FIELD field_73518_h currentItem I
+		COMMENT The current item the player is holding.
 	FIELD field_73519_i metadata Lnet/minecraft/entity/DataWatcher;
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).

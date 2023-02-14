@@ -1,9 +1,94 @@
 CLASS net/minecraft/world/chunk/storage/ExtendedBlockStorage
 	FIELD field_76684_a yBase I
+		COMMENT Contains the bottom-most Y block represented by this ExtendedBlockStorage. Typically a multiple of 16.
 	FIELD field_76682_b blockRefCount I
+		COMMENT A total count of the number of non-air blocks in this block storage's Chunk.
 	FIELD field_76683_c tickRefCount I
+		COMMENT Contains the number of blocks in this block storage's parent chunk that require random ticking. Used to cull the Chunk from random tick updates for performance reasons.
 	FIELD field_76680_d blockLSBArray [B
+		COMMENT Contains the least significant 8 bits of each block ID belonging to this block storage's parent Chunk.
 	FIELD field_76681_e blockMSBArray Lnet/minecraft/world/chunk/NibbleArray;
+		COMMENT Contains the most significant 4 bits of each block ID belonging to this block storage's parent Chunk.
 	FIELD field_76678_f blockMetadataArray Lnet/minecraft/world/chunk/NibbleArray;
+		COMMENT Stores the metadata associated with blocks in this ExtendedBlockStorage.
 	FIELD field_76679_g blocklightArray Lnet/minecraft/world/chunk/NibbleArray;
+		COMMENT The NibbleArray containing a block of Block-light data.
 	FIELD field_76685_h skylightArray Lnet/minecraft/world/chunk/NibbleArray;
+		COMMENT The NibbleArray containing a block of Sky-light data.
+	METHOD func_76656_a getExtBlockID (III)I
+		COMMENT Returns the extended block ID for a location in a chunk, merged from a byte array and a NibbleArray to form a full 12-bit block ID.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76655_a setExtBlockID (IIII)V
+		COMMENT Sets the extended block ID for a location in a chunk, splitting bits 11..8 into a NibbleArray and bits 7..0 into a byte array. Also performs reference counting to determine whether or not to broadly cull this Chunk from the random-update tick list.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76665_b getExtBlockMetadata (III)I
+		COMMENT Returns the metadata associated with the block at the given coordinates in this ExtendedBlockStorage.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76654_b setExtBlockMetadata (IIII)V
+		COMMENT Sets the metadata of the Block at the given coordinates in this ExtendedBlockStorage to the given metadata.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76663_a isEmpty ()Z
+		COMMENT Returns whether or not this block storage's Chunk is fully empty, based on its internal reference count.
+	METHOD func_76675_b getNeedsRandomTick ()Z
+		COMMENT Returns whether or not this block storage's Chunk will require random ticking, used to avoid looping through random block ticks when there are no blocks that would randomly tick.
+	METHOD func_76662_d getYLocation ()I
+		COMMENT Returns the Y location of this ExtendedBlockStorage.
+	METHOD func_76657_c setExtSkylightValue (IIII)V
+		COMMENT Sets the saved Sky-light value in the extended block storage structure.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76670_c getExtSkylightValue (III)I
+		COMMENT Gets the saved Sky-light value in the extended block storage structure.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76677_d setExtBlocklightValue (IIII)V
+		COMMENT Sets the saved Block-light value in the extended block storage structure.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76674_d getExtBlocklightValue (III)I
+		COMMENT Gets the saved Block-light value in the extended block storage structure.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_76672_e removeInvalidBlocks ()V
+	METHOD func_76658_g getBlockLSBArray ()[B
+	METHOD func_76676_h clearMSBArray ()V
+	METHOD func_76660_i getBlockMSBArray ()Lnet/minecraft/world/chunk/NibbleArray;
+		COMMENT Returns the block ID MSB (bits 11..8) array for this storage array's Chunk.
+	METHOD func_76669_j getMetadataArray ()Lnet/minecraft/world/chunk/NibbleArray;
+	METHOD func_76661_k getBlocklightArray ()Lnet/minecraft/world/chunk/NibbleArray;
+		COMMENT Returns the NibbleArray instance containing Block-light data.
+	METHOD func_76671_l getSkylightArray ()Lnet/minecraft/world/chunk/NibbleArray;
+		COMMENT Returns the NibbleArray instance containing Sky-light data.
+	METHOD func_76664_a setBlockLSBArray ([B)V
+		COMMENT Sets the array of block ID least significant bits for this ExtendedBlockStorage.
+		ARG 0 par1ArrayOfByte
+	METHOD func_76673_a setBlockMSBArray (Lnet/minecraft/world/chunk/NibbleArray;)V
+		COMMENT Sets the array of blockID most significant bits (blockMSBArray) for this ExtendedBlockStorage.
+		ARG 0 par1NibbleArray
+	METHOD func_76668_b setBlockMetadataArray (Lnet/minecraft/world/chunk/NibbleArray;)V
+		COMMENT Sets the NibbleArray of block metadata (blockMetadataArray) for this ExtendedBlockStorage.
+		ARG 0 par1NibbleArray
+	METHOD func_76659_c setBlocklightArray (Lnet/minecraft/world/chunk/NibbleArray;)V
+		COMMENT Sets the NibbleArray instance used for Block-light values in this particular storage block.
+		ARG 0 par1NibbleArray
+	METHOD func_76666_d setSkylightArray (Lnet/minecraft/world/chunk/NibbleArray;)V
+		COMMENT Sets the NibbleArray instance used for Sky-light values in this particular storage block.
+		ARG 0 par1NibbleArray
+	METHOD func_76667_m createBlockMSBArray ()Lnet/minecraft/world/chunk/NibbleArray;
+		COMMENT Called by a Chunk to initialize the MSB array if getBlockMSBArray returns null. Returns the newly-created NibbleArray instance.

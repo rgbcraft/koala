@@ -1,7 +1,9 @@
 CLASS net/minecraft/entity/item/SoundUpdaterMinecart
 	FIELD field_82477_a theSoundManager Lnet/minecraft/client/audio/SoundManager;
 	FIELD field_82475_b theMinecart Lnet/minecraft/entity/item/EntityMinecart;
+		COMMENT Minecart which sound is being updated.
 	FIELD field_82476_c thePlayer Lnet/minecraft/client/entity/EntityPlayerSP;
+		COMMENT The player that is getting the minecart sound updates.
 	FIELD field_82473_d playerSPRidingMinecart Z
 	FIELD field_82474_e minecartIsDead Z
 	FIELD field_82471_f minecartIsMoving Z
@@ -10,3 +12,5 @@ CLASS net/minecraft/entity/item/SoundUpdaterMinecart
 	FIELD field_82481_i minecartMoveSoundVolume F
 	FIELD field_82478_j minecartRideSoundVolume F
 	FIELD field_82479_k minecartSpeed D
+	METHOD func_73660_a update ()V
+		COMMENT Updates the JList with a new model.

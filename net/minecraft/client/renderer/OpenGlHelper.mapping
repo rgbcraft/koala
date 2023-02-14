@@ -1,4 +1,20 @@
 CLASS net/minecraft/client/renderer/OpenGlHelper
 	FIELD field_77478_a defaultTexUnit I
+		COMMENT An OpenGL constant corresponding to GL_TEXTURE0, used when setting data pertaining to auxiliary OpenGL texture units.
 	FIELD field_77476_b lightmapTexUnit I
+		COMMENT An OpenGL constant corresponding to GL_TEXTURE1, used when setting data pertaining to auxiliary OpenGL texture units.
 	FIELD field_77477_c useMultitextureARB Z
+		COMMENT True if the renderer supports multitextures and the OpenGL version != 1.3
+	METHOD func_77474_a initializeTextures ()V
+		COMMENT Initializes the texture constants to be used when rendering lightmap values
+	METHOD func_77473_a setActiveTexture (I)V
+		COMMENT Sets the current lightmap texture to the specified OpenGL constant
+		ARG 0 par0
+	METHOD func_77472_b setClientActiveTexture (I)V
+		COMMENT Sets the current lightmap texture to the specified OpenGL constant
+		ARG 0 par0
+	METHOD func_77475_a setLightmapTextureCoords (IFF)V
+		COMMENT Sets the current coordinates of the given lightmap texture
+		ARG 0 par0
+		ARG 1 par1
+		ARG 2 par2

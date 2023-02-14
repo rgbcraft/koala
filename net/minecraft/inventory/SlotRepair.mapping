@@ -4,3 +4,13 @@ CLASS net/minecraft/inventory/SlotRepair
 	FIELD field_82874_c blockPosY I
 	FIELD field_82871_d blockPosZ I
 	FIELD field_82872_e anvil Lnet/minecraft/inventory/ContainerRepair;
+		COMMENT The anvil this slot belongs to.
+	METHOD func_75214_a isItemValid (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Check if the stack is a valid item for this slot. Always true beside for the armor slots.
+		ARG 0 par1ItemStack
+	METHOD func_82869_a canTakeStack (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Return whether this slot's stack can be taken from this slot.
+		ARG 0 par1EntityPlayer
+	METHOD func_82870_a onPickupFromSlot (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;)V
+		ARG 0 par1EntityPlayer
+		ARG 1 par2ItemStack

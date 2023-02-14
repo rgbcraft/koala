@@ -1,1 +1,37 @@
 CLASS net/minecraft/world/chunk/storage/AnvilSaveConverter
+	METHOD func_75799_b getSaveList ()Ljava/util/List;
+	METHOD func_75812_c getSaveVersion ()I
+	METHOD func_75800_d flushCache ()V
+	METHOD func_75804_a getSaveLoader (Ljava/lang/String;Z)Lnet/minecraft/world/storage/ISaveHandler;
+		COMMENT Returns back a loader for the specified save directory
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_75801_b isOldMapFormat (Ljava/lang/String;)Z
+		COMMENT Checks if the save directory uses the old map format
+		ARG 0 par1Str
+	METHOD func_75805_a convertMapFormat (Ljava/lang/String;Lnet/minecraft/util/IProgressUpdate;)Z
+		COMMENT Converts the specified map to the new map format. Args: worldName, loadingScreen
+		ARG 0 par1Str
+		ARG 1 par2IProgressUpdate
+	METHOD func_75809_f createFile (Ljava/lang/String;)V
+		COMMENT par: filename for the level.dat_mcr backup
+		ARG 0 par1Str
+	METHOD func_75813_a convertFile (Ljava/io/File;Ljava/lang/Iterable;Lnet/minecraft/world/biome/WorldChunkManager;IILnet/minecraft/util/IProgressUpdate;)V
+		ARG 0 par1File
+		ARG 1 par2Iterable
+		ARG 2 par3WorldChunkManager
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6IProgressUpdate
+	METHOD func_75811_a convertChunks (Ljava/io/File;Ljava/io/File;Lnet/minecraft/world/biome/WorldChunkManager;IILnet/minecraft/util/IProgressUpdate;)V
+		COMMENT copies a 32x32 chunk set from par2File to par1File, via AnvilConverterData
+		ARG 0 par1File
+		ARG 1 par2File
+		ARG 2 par3WorldChunkManager
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6IProgressUpdate
+	METHOD func_75810_a addRegionFilesToCollection (Ljava/io/File;Ljava/util/Collection;)V
+		COMMENT filters the files in the par1 directory, and adds them to the par2 collections
+		ARG 0 par1File
+		ARG 1 par2Collection

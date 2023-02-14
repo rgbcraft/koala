@@ -1,2 +1,6 @@
 CLASS net/minecraft/server/management/LowerStringMap
 	FIELD field_76117_a internalMap Ljava/util/Map;
+	METHOD func_76116_a putLower (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+		COMMENT a map already defines a general put
+		ARG 0 par1Str
+		ARG 1 par2Obj

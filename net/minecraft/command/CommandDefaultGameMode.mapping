@@ -1,1 +1,9 @@
 CLASS net/minecraft/command/CommandDefaultGameMode
+	METHOD func_71517_b getCommandName ()Ljava/lang/String;
+	METHOD func_71518_a getCommandUsage (Lnet/minecraft/command/ICommandSender;)Ljava/lang/String;
+		ARG 0 par1ICommandSender
+	METHOD func_71515_b processCommand (Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V
+		ARG 0 par1ICommandSender
+		ARG 1 par2ArrayOfStr
+	METHOD func_71541_a setGameType (Lnet/minecraft/world/EnumGameType;)V
+		ARG 0 par1EnumGameType

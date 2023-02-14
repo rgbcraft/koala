@@ -1,1 +1,9 @@
 CLASS net/minecraft/enchantment/EnchantmentArrowFire
+	METHOD func_77321_a getMinEnchantability (I)I
+		COMMENT Returns the minimal value of enchantability needed on the enchantment level passed.
+		ARG 0 par1
+	METHOD func_77317_b getMaxEnchantability (I)I
+		COMMENT Returns the maximum value of enchantability nedded on the enchantment level passed.
+		ARG 0 par1
+	METHOD func_77325_b getMaxLevel ()I
+		COMMENT Returns the maximum level that the enchantment can have.

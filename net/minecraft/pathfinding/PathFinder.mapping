@@ -1,9 +1,73 @@
 CLASS net/minecraft/pathfinding/PathFinder
 	FIELD field_75868_a worldMap Lnet/minecraft/world/IBlockAccess;
+		COMMENT Used to find obstacles
 	FIELD field_75866_b path Lnet/minecraft/pathfinding/Path;
+		COMMENT The path being generated
 	FIELD field_75867_c pointMap Lnet/minecraft/util/IntHashMap;
+		COMMENT The points in the path
 	FIELD field_75864_d pathOptions [Lnet/minecraft/pathfinding/PathPoint;
+		COMMENT Selection of path points to add to the path
 	FIELD field_75865_e isWoddenDoorAllowed Z
+		COMMENT should the PathFinder go through wodden door blocks
 	FIELD field_75862_f isMovementBlockAllowed Z
+		COMMENT should the PathFinder disregard BlockMovement type materials in its path
 	FIELD field_75863_g isPathingInWater Z
 	FIELD field_75869_h canEntityDrown Z
+		COMMENT tells the FathFinder to not stop pathing underwater
+	METHOD func_75856_a createEntityPathTo (Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;F)Lnet/minecraft/pathfinding/PathEntity;
+		COMMENT Creates a path from one entity to another within a minimum distance
+		ARG 0 par1Entity
+		ARG 1 par2Entity
+		ARG 2 par3
+	METHOD func_75859_a createEntityPathTo (Lnet/minecraft/entity/Entity;IIIF)Lnet/minecraft/pathfinding/PathEntity;
+		COMMENT Creates a path from an entity to a specified location within a minimum distance
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_75857_a createEntityPathTo (Lnet/minecraft/entity/Entity;DDDF)Lnet/minecraft/pathfinding/PathEntity;
+		COMMENT Internal implementation of creating a path from an entity to a point
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_75861_a addToPath (Lnet/minecraft/entity/Entity;Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;F)Lnet/minecraft/pathfinding/PathEntity;
+		COMMENT Adds a path from start to end and returns the whole path (args: unused, start, end, unused, maxDistance)
+		ARG 0 par1Entity
+		ARG 1 par2PathPoint
+		ARG 2 par3PathPoint
+		ARG 3 par4PathPoint
+		ARG 4 par5
+	METHOD func_75860_b findPathOptions (Lnet/minecraft/entity/Entity;Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;F)I
+		COMMENT populates pathOptions with available points and returns the number of options found (args: unused1, currentPoint, unused2, targetPoint, maxDistance)
+		ARG 0 par1Entity
+		ARG 1 par2PathPoint
+		ARG 2 par3PathPoint
+		ARG 3 par4PathPoint
+		ARG 4 par5
+	METHOD func_75858_a getSafePoint (Lnet/minecraft/entity/Entity;IIILnet/minecraft/pathfinding/PathPoint;I)Lnet/minecraft/pathfinding/PathPoint;
+		COMMENT Returns a point that the entity can safely move to
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5PathPoint
+		ARG 5 par6
+	METHOD func_75854_a openPoint (III)Lnet/minecraft/pathfinding/PathPoint;
+		COMMENT Returns a mapped point or creates and adds one
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75855_a getVerticalOffset (Lnet/minecraft/entity/Entity;IIILnet/minecraft/pathfinding/PathPoint;)I
+		COMMENT Checks if an entity collides with blocks at a position. Returns 1 if clear, 0 for colliding with any solid block, -1 for water(if avoiding water) but otherwise clear, -2 for lava, -3 for fence, -4 for closed trapdoor, 2 if otherwise clear except for open trapdoor or water(if not avoiding)
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5PathPoint
+	METHOD func_75853_a createEntityPath (Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;)Lnet/minecraft/pathfinding/PathEntity;
+		COMMENT Returns a new PathEntity for a given start and end point
+		ARG 0 par1PathPoint
+		ARG 1 par2PathPoint

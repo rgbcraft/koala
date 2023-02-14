@@ -1,13 +1,99 @@
 CLASS net/minecraft/village/Village
 	FIELD field_75586_a worldObj Lnet/minecraft/world/World;
 	FIELD field_75584_b villageDoorInfoList Ljava/util/List;
+		COMMENT list of VillageDoorInfo objects
 	FIELD field_75585_c centerHelper Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT This is the sum of all door coordinates and used to calculate the actual village center by dividing by the number of doors.
 	FIELD field_75582_d center Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT This is the actual village center.
 	FIELD field_75583_e villageRadius I
 	FIELD field_75580_f lastAddDoorTimestamp I
 	FIELD field_75581_g tickCounter I
 	FIELD field_75588_h numVillagers I
 	FIELD field_82694_i noBreedTicks I
+		COMMENT Timestamp of tick count when villager last bred
 	FIELD field_82693_j playerReputation Ljava/util/TreeMap;
+		COMMENT List of player reputations with this village
 	FIELD field_75589_i villageAgressors Ljava/util/List;
 	FIELD field_75587_j numIronGolems I
+	METHOD func_75560_a tick (I)V
+		COMMENT Called periodically by VillageCollection
+		ARG 0 par1
+	METHOD func_75559_a tryGetIronGolemSpawningLocation (IIIIII)Lnet/minecraft/util/Vec3;
+		COMMENT Tries up to 10 times to get a valid spawning location before eventually failing and returning null.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_75563_b isValidIronGolemSpawningLocation (IIIIII)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_75579_h updateNumIronGolems ()V
+	METHOD func_75572_i updateNumVillagers ()V
+	METHOD func_75577_a getCenter ()Lnet/minecraft/util/ChunkCoordinates;
+	METHOD func_75568_b getVillageRadius ()I
+	METHOD func_75567_c getNumVillageDoors ()I
+		COMMENT Actually get num village door info entries, but that boils down to number of doors. Called by EntityAIVillagerMate and VillageSiege
+	METHOD func_75561_d getTicksSinceLastDoorAdding ()I
+	METHOD func_75562_e getNumVillagers ()I
+	METHOD func_75570_a isInRange (III)Z
+		COMMENT Returns true, if the given coordinates are within the bounding box of the village.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75558_f getVillageDoorInfoList ()Ljava/util/List;
+		COMMENT called only by class EntityAIMoveThroughVillage
+	METHOD func_75564_b findNearestDoor (III)Lnet/minecraft/village/VillageDoorInfo;
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75569_c findNearestDoorUnrestricted (III)Lnet/minecraft/village/VillageDoorInfo;
+		COMMENT Find a door suitable for shelter. If there are more doors in a distance of 16 blocks, then the least restricted one (i.e. the one protecting the lowest number of villagers) of them is chosen, else the nearest one regardless of restriction.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75578_e getVillageDoorAt (III)Lnet/minecraft/village/VillageDoorInfo;
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75576_a addVillageDoorInfo (Lnet/minecraft/village/VillageDoorInfo;)V
+		ARG 0 par1VillageDoorInfo
+	METHOD func_75566_g isAnnihilated ()Z
+		COMMENT Returns true, if there is not a single village door left. Called by VillageCollection
+	METHOD func_75575_a addOrRenewAgressor (Lnet/minecraft/entity/EntityLiving;)V
+		ARG 0 par1EntityLiving
+	METHOD func_75571_b findNearestVillageAggressor (Lnet/minecraft/entity/EntityLiving;)Lnet/minecraft/entity/EntityLiving;
+		ARG 0 par1EntityLiving
+	METHOD func_75565_j removeDeadAndOldAgressors ()V
+	METHOD func_75557_k removeDeadAndOutOfRangeDoors ()V
+	METHOD func_75574_f isBlockDoor (III)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75573_l updateVillageRadiusAndCenter ()V
+	METHOD func_82684_a getReputationForPlayer (Ljava/lang/String;)I
+		COMMENT Return the village reputation for a player
+		ARG 0 par1Str
+	METHOD func_82688_a setReputationForPlayer (Ljava/lang/String;I)I
+		COMMENT Set the village reputation for a player.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_82687_d isPlayerReputationTooLow (Ljava/lang/String;)Z
+		COMMENT Return whether this player has a too low reputation with this village.
+		ARG 0 par1Str
+	METHOD func_82690_a readVillageDataFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Read this village's data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_82689_b writeVillageDataToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Write this village's data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_82692_h endMatingSeason ()V
+		COMMENT Prevent villager breeding for a fixed interval of time
+	METHOD func_82686_i isMatingSeason ()Z
+		COMMENT Return whether villagers mating refractory period has passed

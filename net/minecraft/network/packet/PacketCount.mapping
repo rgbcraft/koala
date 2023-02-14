@@ -1,5 +1,12 @@
 CLASS net/minecraft/network/packet/PacketCount
 	FIELD field_76122_a allowCounting Z
+		COMMENT If false, countPacket does nothing
 	FIELD field_76120_b packetCountForID Ljava/util/Map;
+		COMMENT A count of the total number of each packet sent grouped by IDs.
 	FIELD field_76121_c sizeCountForID Ljava/util/Map;
+		COMMENT A count of the total size of each packet sent grouped by IDs.
 	FIELD field_76119_d lock Ljava/lang/Object;
+		COMMENT Used to make threads queue to add packets
+	METHOD func_76118_a countPacket (IJ)V
+		ARG 0 par0
+		ARG 1 par1

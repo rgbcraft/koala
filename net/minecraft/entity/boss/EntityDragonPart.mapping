@@ -1,3 +1,21 @@
 CLASS net/minecraft/entity/boss/EntityDragonPart
 	FIELD field_70259_a entityDragonObj Lnet/minecraft/entity/IEntityMultiPart;
+		COMMENT The dragon entity this dragon part belongs to
 	FIELD field_70258_b name Ljava/lang/String;
+		COMMENT The name of the Dragon Part
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70028_i isEntityEqual (Lnet/minecraft/entity/Entity;)Z
+		COMMENT Returns true if Entity argument is equal to this Entity
+		ARG 0 par1Entity

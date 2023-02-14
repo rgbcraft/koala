@@ -1,6 +1,25 @@
 CLASS net/minecraft/profiler/Profiler
 	FIELD field_76325_b sectionList Ljava/util/List;
+		COMMENT List of parent sections
 	FIELD field_76326_c timestampList Ljava/util/List;
+		COMMENT List of timestamps (System.nanoTime)
 	FIELD field_76327_a profilingEnabled Z
+		COMMENT Flag profiling enabled
 	FIELD field_76323_d profilingSection Ljava/lang/String;
+		COMMENT Current profiling section
 	FIELD field_76324_e profilingMap Ljava/util/Map;
+		COMMENT Profiling map
+	METHOD func_76317_a clearProfiling ()V
+		COMMENT Clear profiling.
+	METHOD func_76320_a startSection (Ljava/lang/String;)V
+		COMMENT Start section
+		ARG 0 par1Str
+	METHOD func_76319_b endSection ()V
+		COMMENT End section
+	METHOD func_76321_b getProfilingData (Ljava/lang/String;)Ljava/util/List;
+		COMMENT Get profiling data
+		ARG 0 par1Str
+	METHOD func_76318_c endStartSection (Ljava/lang/String;)V
+		COMMENT End current section and start a new section
+		ARG 0 par1Str
+	METHOD func_76322_c getNameOfLastSection ()Ljava/lang/String;

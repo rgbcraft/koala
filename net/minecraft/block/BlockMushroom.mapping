@@ -1,1 +1,30 @@
 CLASS net/minecraft/block/BlockMushroom
+	METHOD func_71847_b updateTick (Lnet/minecraft/world/World;IIILjava/util/Random;)V
+		COMMENT Ticks the block if it's been scheduled
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random
+	METHOD func_71930_b canPlaceBlockAt (Lnet/minecraft/world/World;III)Z
+		COMMENT Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72263_d_ canThisPlantGrowOnThisBlockID (I)Z
+		COMMENT Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
+		ARG 0 par1
+	METHOD func_71854_d canBlockStay (Lnet/minecraft/world/World;III)Z
+		COMMENT Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72271_c fertilizeMushroom (Lnet/minecraft/world/World;IIILjava/util/Random;)Z
+		COMMENT Fertilize the mushroom.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Random

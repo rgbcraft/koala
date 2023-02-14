@@ -1,3 +1,25 @@
 CLASS net/minecraft/world/gen/structure/StructureStart
 	FIELD field_75075_a components Ljava/util/LinkedList;
+		COMMENT List of all StructureComponents that are part of this structure
 	FIELD field_75074_b boundingBox Lnet/minecraft/world/gen/structure/StructureBoundingBox;
+	METHOD func_75071_a getBoundingBox ()Lnet/minecraft/world/gen/structure/StructureBoundingBox;
+	METHOD func_75073_b getComponents ()Ljava/util/LinkedList;
+	METHOD func_75068_a generateStructure (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)V
+		COMMENT Keeps iterating Structure Pieces and spawning them until the checks tell it to stop
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3StructureBoundingBox
+	METHOD func_75072_c updateBoundingBox ()V
+		COMMENT Calculates total bounding box based on components' bounding boxes and saves it to boundingBox
+	METHOD func_75067_a markAvailableHeight (Lnet/minecraft/world/World;Ljava/util/Random;I)V
+		COMMENT offsets the structure Bounding Boxes up to a certain height, typically 63 - 10
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_75070_a setRandomHeight (Lnet/minecraft/world/World;Ljava/util/Random;II)V
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_75069_d isSizeableStructure ()Z
+		COMMENT currently only defined for Villages, returns true if Village has more than 2 non-road components

@@ -1,1 +1,8 @@
 CLASS net/minecraft/client/renderer/entity/RenderWolf
+	METHOD func_77057_a getTailRotation (Lnet/minecraft/entity/passive/EntityWolf;F)F
+		ARG 0 par1EntityWolf
+		ARG 1 par2
+	METHOD func_77044_a handleRotationFloat (Lnet/minecraft/entity/EntityLiving;F)F
+		COMMENT Defines what float the third param in setRotationAngles of ModelBase is
+		ARG 0 par1EntityLiving
+		ARG 1 par2

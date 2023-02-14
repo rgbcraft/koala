@@ -1,12 +1,16 @@
 CLASS net/minecraft/entity/item/EntityMinecart
 	FIELD field_70501_d cargoItems [Lnet/minecraft/item/ItemStack;
+		COMMENT Array of item stacks stored in minecart (for storage minecarts).
 	FIELD field_70502_e fuel I
 	FIELD field_70499_f isInReverse Z
 	FIELD field_70505_a minecartType I
+		COMMENT The type of minecart, 2 for powered, 1 for storage.
 	FIELD field_70503_b pushX D
 	FIELD field_70504_c pushZ D
 	FIELD field_70500_g matrix [I
+		COMMENT Minecart rotational logic matrix
 	FIELD field_70510_h turnProgress I
+		COMMENT appears to be the progress of the turn
 	FIELD field_70511_i minecartX D
 	FIELD field_70509_j minecartY D
 	FIELD field_70514_an minecartZ D
@@ -15,3 +19,103 @@ CLASS net/minecraft/entity/item/EntityMinecart
 	FIELD field_70508_aq velocityX D
 	FIELD field_70507_ar velocityY D
 	FIELD field_70506_as velocityZ D
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70114_g getCollisionBox (Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a boundingBox used to collide the entity with other entities and blocks. This enables the entity to be pushable on contact, like boats or minecarts.
+		ARG 0 par1Entity
+	METHOD func_70046_E getBoundingBox ()Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT returns the bounding box for this entity
+	METHOD func_70104_M canBePushed ()Z
+		COMMENT Returns true if this entity should push and be pushed by other entities when colliding.
+	METHOD func_70042_X getMountedYOffset ()D
+		COMMENT Returns the Y offset from the entity's position for any entity riding this one.
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70057_ab performHurtAnimation ()V
+		COMMENT Setups the entity to do the hurt animation. Only used by packets in multiplayer.
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70106_y setDead ()V
+		COMMENT Will get destroyed next tick.
+	METHOD func_71027_c travelToDimension (I)V
+		COMMENT Teleports the entity to another dimension. Params: Dimension number to teleport to
+		ARG 0 par1
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_70108_f applyEntityCollision (Lnet/minecraft/entity/Entity;)V
+		COMMENT Applies a velocity to each of the entities pushing them away from each other. Args: entity
+		ARG 0 par1Entity
+	METHOD func_70302_i_ getSizeInventory ()I
+		COMMENT Returns the number of slots in the inventory.
+	METHOD func_70301_a getStackInSlot (I)Lnet/minecraft/item/ItemStack;
+		COMMENT Returns the stack in slot i
+		ARG 0 par1
+	METHOD func_70298_a decrStackSize (II)Lnet/minecraft/item/ItemStack;
+		COMMENT Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a new stack.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70304_b getStackInSlotOnClosing (I)Lnet/minecraft/item/ItemStack;
+		COMMENT When some containers are closed they call this on each slot, then drop whatever it returns as an EntityItem - like when you close a workbench GUI.
+		ARG 0 par1
+	METHOD func_70299_a setInventorySlotContents (ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_70303_b getInvName ()Ljava/lang/String;
+		COMMENT Returns the name of the inventory.
+	METHOD func_70297_j_ getInventoryStackLimit ()I
+		COMMENT Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't this more of a set than a get?*
+	METHOD func_70296_d onInventoryChanged ()V
+		COMMENT Called when an the contents of an Inventory change, usually
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer
+	METHOD func_70056_a setPositionAndRotation2 (DDDFFI)V
+		COMMENT Sets the position and rotation. Only difference from the other one is no bounding on the rotation. Args: posX, posY, posZ, yaw, pitch
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_70016_h setVelocity (DDD)V
+		COMMENT Sets the velocity to the args. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70300_a isUseableByPlayer (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Do not make give this method the name canInteractWith because it clashes with Container
+		ARG 0 par1EntityPlayer
+	METHOD func_70490_h isMinecartPowered ()Z
+		COMMENT Is this minecart powered (Fuel > 0)
+	METHOD func_70498_d setMinecartPowered (Z)V
+		COMMENT Set if this minecart is powered (Fuel > 0)
+		ARG 0 par1
+	METHOD func_70295_k_ openChest ()V
+	METHOD func_70305_f closeChest ()V
+	METHOD func_70492_c setDamage (I)V
+		COMMENT Sets the current amount of damage the minecart has taken. Decreases over time. The cart breaks when this is over 40.
+		ARG 0 par1
+	METHOD func_70491_i getDamage ()I
+		COMMENT Gets the current amount of damage the minecart has taken. Decreases over time. The cart breaks when this is over 40.
+	METHOD func_70497_h setRollingAmplitude (I)V
+		COMMENT Sets the rolling amplitude the cart rolls while being attacked.
+		ARG 0 par1
+	METHOD func_70496_j getRollingAmplitude ()I
+		COMMENT Gets the rolling amplitude the cart rolls while being attacked.
+	METHOD func_70494_i setRollingDirection (I)V
+		COMMENT Sets the rolling direction the cart rolls while being attacked. Can be 1 or -1.
+		ARG 0 par1
+	METHOD func_70493_k getRollingDirection ()I
+		COMMENT Gets the rolling direction the cart rolls while being attacked. Can be 1 or -1.

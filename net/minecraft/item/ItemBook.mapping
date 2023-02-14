@@ -1,1 +1,6 @@
 CLASS net/minecraft/item/ItemBook
+	METHOD func_77616_k isItemTool (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Checks isDamagable and if it cannot be stacked
+		ARG 0 par1ItemStack
+	METHOD func_77619_b getItemEnchantability ()I
+		COMMENT Return the enchantability factor of the item, most of the time is based on material.

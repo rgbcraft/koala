@@ -1,1 +1,25 @@
 CLASS net/minecraft/util/WeightedRandom
+	METHOD func_76272_a getTotalWeight (Ljava/util/Collection;)I
+		COMMENT Returns the total weight of all items in a collection.
+		ARG 0 par0Collection
+	METHOD func_76273_a getRandomItem (Ljava/util/Random;Ljava/util/Collection;I)Lnet/minecraft/util/WeightedRandomItem;
+		COMMENT Returns a random choice from the input items, with a total weight value.
+		ARG 0 par0Random
+		ARG 1 par1Collection
+		ARG 2 par2
+	METHOD func_76271_a getRandomItem (Ljava/util/Random;Ljava/util/Collection;)Lnet/minecraft/util/WeightedRandomItem;
+		COMMENT Returns a random choice from the input items.
+		ARG 0 par0Random
+		ARG 1 par1Collection
+	METHOD func_76270_a getTotalWeight ([Lnet/minecraft/util/WeightedRandomItem;)I
+		COMMENT Returns the total weight of all items in a array.
+		ARG 0 par0ArrayOfWeightedRandomItem
+	METHOD func_76269_a getRandomItem (Ljava/util/Random;[Lnet/minecraft/util/WeightedRandomItem;I)Lnet/minecraft/util/WeightedRandomItem;
+		COMMENT Returns a random choice from the input array of items, with a total weight value.
+		ARG 0 par0Random
+		ARG 1 par1ArrayOfWeightedRandomItem
+		ARG 2 par2
+	METHOD func_76274_a getRandomItem (Ljava/util/Random;[Lnet/minecraft/util/WeightedRandomItem;)Lnet/minecraft/util/WeightedRandomItem;
+		COMMENT Returns a random choice from the input items.
+		ARG 0 par0Random
+		ARG 1 par1ArrayOfWeightedRandomItem

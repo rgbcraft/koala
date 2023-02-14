@@ -1,4 +1,6 @@
 CLASS net/minecraft/network/ThreadLoginVerifier
 	FIELD field_72590_a loginHandler Lnet/minecraft/network/NetLoginHandler;
+		COMMENT The login handler that spawned this thread.
 CLASS net/minecraft/network/ThreadLoginVerifier
 	FIELD field_72590_a loginHandler Lnet/minecraft/network/NetLoginHandler;
+		COMMENT The login handler that spawned this thread.

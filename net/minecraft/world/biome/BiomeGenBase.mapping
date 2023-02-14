@@ -1,5 +1,6 @@
 CLASS net/minecraft/world/biome/BiomeGenBase
 	FIELD field_76773_a biomeList [Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT An array of all the biomes, indexed by biome id.
 	FIELD field_76771_b ocean Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_76772_c plains Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_76769_d desert Lnet/minecraft/world/biome/BiomeGenBase;
@@ -10,6 +11,7 @@ CLASS net/minecraft/world/biome/BiomeGenBase
 	FIELD field_76781_i river Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_76778_j hell Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_76779_k sky Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Is the biome used for sky world.
 	FIELD field_76776_l frozenOcean Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_76777_m frozenRiver Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_76774_n icePlains Lnet/minecraft/world/biome/BiomeGenBase;
@@ -17,29 +19,108 @@ CLASS net/minecraft/world/biome/BiomeGenBase
 	FIELD field_76789_p mushroomIsland Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_76788_q mushroomIslandShore Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_76787_r beach Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Beach biome.
 	FIELD field_76786_s desertHills Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Desert Hills biome.
 	FIELD field_76785_t forestHills Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Forest Hills biome.
 	FIELD field_76784_u taigaHills Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Taiga Hills biome.
 	FIELD field_76783_v extremeHillsEdge Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Extreme Hills Edge biome.
 	FIELD field_76782_w jungle Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Jungle biome identifier
 	FIELD field_76792_x jungleHills Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_76791_y biomeName Ljava/lang/String;
 	FIELD field_76790_z color I
 	FIELD field_76752_A topBlock B
+		COMMENT The block expected to be on the top of this biome
 	FIELD field_76753_B fillerBlock B
+		COMMENT The block to fill spots in when not on the top
 	FIELD field_76748_D minHeight F
+		COMMENT The minimum height of this biome. Default 0.1.
 	FIELD field_76749_E maxHeight F
+		COMMENT The maximum height of this biome. Default 0.3.
 	FIELD field_76750_F temperature F
+		COMMENT The temperature of this biome.
 	FIELD field_76751_G rainfall F
+		COMMENT The rainfall in this biome.
 	FIELD field_76759_H waterColorMultiplier I
+		COMMENT Color tint applied to water depending on biome
 	FIELD field_76760_I theBiomeDecorator Lnet/minecraft/world/biome/BiomeDecorator;
+		COMMENT The biome decorator.
 	FIELD field_76761_J spawnableMonsterList Ljava/util/List;
+		COMMENT Holds the classes of IMobs (hostile mobs) that can be spawned in the biome.
 	FIELD field_76762_K spawnableCreatureList Ljava/util/List;
+		COMMENT Holds the classes of any creature that can be spawned in the biome as friendly creature.
 	FIELD field_76755_L spawnableWaterCreatureList Ljava/util/List;
+		COMMENT Holds the classes of any aquatic creature that can be spawned in the water of the biome.
 	FIELD field_76766_R enableSnow Z
+		COMMENT Set to true if snow is enabled for this biome.
 	FIELD field_76765_S enableRain Z
+		COMMENT Is true (default) if the biome support rain (desert and nether can't have rain)
 	FIELD field_76756_M biomeID I
+		COMMENT The id number to this biome, and its index in the biomeList array.
 	FIELD field_76757_N worldGeneratorTrees Lnet/minecraft/world/gen/feature/WorldGenTrees;
+		COMMENT The tree generator.
 	FIELD field_76758_O worldGeneratorBigTree Lnet/minecraft/world/gen/feature/WorldGenBigTree;
+		COMMENT The big tree generator.
 	FIELD field_76764_P worldGeneratorForest Lnet/minecraft/world/gen/feature/WorldGenForest;
+		COMMENT The forest generator.
 	FIELD field_76763_Q worldGeneratorSwamp Lnet/minecraft/world/gen/feature/WorldGenSwamp;
+		COMMENT The swamp tree generator.
+	METHOD func_76729_a createBiomeDecorator ()Lnet/minecraft/world/biome/BiomeDecorator;
+		COMMENT Allocate a new BiomeDecorator for this BiomeGenBase
+	METHOD func_76732_a setTemperatureRainfall (FF)Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Sets the temperature and rainfall of this biome.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76725_b setMinMaxHeight (FF)Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Sets the minimum and maximum height of this biome. Seems to go from -2.0 to 2.0.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76745_m setDisableRain ()Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Disable the rain for the biome.
+	METHOD func_76740_a getRandomWorldGenForTrees (Ljava/util/Random;)Lnet/minecraft/world/gen/feature/WorldGenerator;
+		COMMENT Gets a WorldGen appropriate for this biome.
+		ARG 0 par1Random
+	METHOD func_76730_b getRandomWorldGenForGrass (Ljava/util/Random;)Lnet/minecraft/world/gen/feature/WorldGenerator;
+		COMMENT Gets a WorldGen appropriate for this biome.
+		ARG 0 par1Random
+	METHOD func_76742_b setEnableSnow ()Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT sets enableSnow to true during biome initialization. returns BiomeGenBase.
+	METHOD func_76735_a setBiomeName (Ljava/lang/String;)Lnet/minecraft/world/biome/BiomeGenBase;
+		ARG 0 par1Str
+	METHOD func_76739_b setColor (I)Lnet/minecraft/world/biome/BiomeGenBase;
+		ARG 0 par1
+	METHOD func_76731_a getSkyColorByTemp (F)I
+		COMMENT takes temperature, returns color
+		ARG 0 par1
+	METHOD func_76747_a getSpawnableList (Lnet/minecraft/entity/EnumCreatureType;)Ljava/util/List;
+		COMMENT Returns the correspondent list of the EnumCreatureType informed.
+		ARG 0 par1EnumCreatureType
+	METHOD func_76746_c getEnableSnow ()Z
+		COMMENT Returns true if the biome have snowfall instead a normal rain.
+	METHOD func_76738_d canSpawnLightningBolt ()Z
+		COMMENT Return true if the biome supports lightning bolt spawn, either by have the bolts enabled and have rain enabled.
+	METHOD func_76736_e isHighHumidity ()Z
+		COMMENT Checks to see if the rainfall level of the biome is extremely high
+	METHOD func_76741_f getSpawningChance ()F
+		COMMENT returns the chance a creature has to spawn.
+	METHOD func_76744_g getIntRainfall ()I
+		COMMENT Gets an integer representation of this biome's rainfall
+	METHOD func_76734_h getIntTemperature ()I
+		COMMENT Gets an integer representation of this biome's temperature
+	METHOD func_76727_i getFloatRainfall ()F
+		COMMENT Gets a floating point representation of this biome's rainfall
+	METHOD func_76743_j getFloatTemperature ()F
+		COMMENT Gets a floating point representation of this biome's temperature
+	METHOD func_76728_a decorate (Lnet/minecraft/world/World;Ljava/util/Random;II)V
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76737_k getBiomeGrassColor ()I
+		COMMENT Provides the basic grass color based on the biome temperature and rainfall
+	METHOD func_76726_l getBiomeFoliageColor ()I
+		COMMENT Provides the basic foliage color based on the biome temperature and rainfall

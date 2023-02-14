@@ -1,8 +1,63 @@
 CLASS net/minecraft/client/gui/GuiMainMenu
 	FIELD field_73976_a rand Ljava/util/Random;
+		COMMENT The RNG used by the Main Menu Screen.
 	FIELD field_73974_b updateCounter F
+		COMMENT Counts the number of screen updates.
 	FIELD field_73975_c splashText Ljava/lang/String;
+		COMMENT The splash message.
 	FIELD field_73973_d buttonResetDemo Lnet/minecraft/client/gui/GuiButton;
 	FIELD field_73979_m panoramaTimer I
+		COMMENT Timer used to rotate the panorama, increases every tick.
 	FIELD field_73977_n viewportTexture I
+		COMMENT Texture allocated for the current viewport of the main menu's panorama background.
 	FIELD field_73978_o titlePanoramaPaths [Ljava/lang/String;
+		COMMENT An array of all the paths to the panorama pictures.
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.
+	METHOD func_73868_f doesGuiPauseGame ()Z
+		COMMENT Returns true if this GUI should pause the game when it is displayed in single-player
+	METHOD func_73869_a keyTyped (CI)V
+		COMMENT Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73969_a addSingleplayerMultiplayerButtons (IILnet/minecraft/util/StringTranslate;)V
+		COMMENT Adds Singleplayer and Multiplayer buttons on Main Menu for players who have bought the game.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3StringTranslate
+	METHOD func_73972_b addDemoButtons (IILnet/minecraft/util/StringTranslate;)V
+		COMMENT Adds Demo buttons on Main Menu for players who are playing Demo.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3StringTranslate
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73878_a confirmClicked (ZI)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73970_b drawPanorama (IIF)V
+		COMMENT Draws the main menu panorama
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73968_a rotateAndBlurSkybox (F)V
+		COMMENT Rotate and blurs the skybox view in the main menu
+		ARG 0 par1
+	METHOD func_73971_c renderSkybox (IIF)V
+		COMMENT Renders the skybox in the main menu
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73864_a mouseClicked (III)V
+		COMMENT Called when the mouse is clicked.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

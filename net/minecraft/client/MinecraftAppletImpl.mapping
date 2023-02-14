@@ -1,2 +1,7 @@
 CLASS net/minecraft/client/MinecraftAppletImpl
 	FIELD field_71478_O mainFrame Lnet/minecraft/client/MinecraftApplet;
+		COMMENT Reference to the main frame, in this case, the applet window itself.
+	METHOD func_71406_c displayCrashReportInternal (Lnet/minecraft/crash/CrashReport;)V
+		ARG 0 par1CrashReport
+	METHOD func_71384_a startGame ()V
+		COMMENT Starts the game: initializes the canvas, the title, the settings, etcetera.

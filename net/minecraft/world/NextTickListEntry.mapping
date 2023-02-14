@@ -1,8 +1,21 @@
 CLASS net/minecraft/world/NextTickListEntry
 	FIELD field_77177_f nextTickEntryID J
+		COMMENT The id number for the next tick entry
 	FIELD field_77183_a xCoord I
+		COMMENT X position this tick is occuring at
 	FIELD field_77181_b yCoord I
+		COMMENT Y position this tick is occuring at
 	FIELD field_77182_c zCoord I
+		COMMENT Z position this tick is occuring at
 	FIELD field_77179_d blockID I
+		COMMENT blockID of the scheduled tick (ensures when the tick occurs its still for this block)
 	FIELD field_77180_e scheduledTime J
+		COMMENT Time this tick is scheduled to occur at
 	FIELD field_77178_g tickEntryID J
+		COMMENT The id of the tick entry
+	METHOD func_77176_a setScheduledTime (J)Lnet/minecraft/world/NextTickListEntry;
+		COMMENT Sets the scheduled time for this tick entry
+		ARG 0 par1
+	METHOD func_77175_a comparer (Lnet/minecraft/world/NextTickListEntry;)I
+		COMMENT Compares this tick entry to another tick entry for sorting purposes. Compared first based on the scheduled time and second based on tickEntryID.
+		ARG 0 par1NextTickListEntry

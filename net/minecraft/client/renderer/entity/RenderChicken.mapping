@@ -1,1 +1,15 @@
 CLASS net/minecraft/client/renderer/entity/RenderChicken
+	METHOD func_77065_a renderChicken (Lnet/minecraft/entity/passive/EntityChicken;DDDFF)V
+		ARG 0 par1EntityChicken
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77066_a getWingRotation (Lnet/minecraft/entity/passive/EntityChicken;F)F
+		ARG 0 par1EntityChicken
+		ARG 1 par2
+	METHOD func_77044_a handleRotationFloat (Lnet/minecraft/entity/EntityLiving;F)F
+		COMMENT Defines what float the third param in setRotationAngles of ModelBase is
+		ARG 0 par1EntityLiving
+		ARG 1 par2

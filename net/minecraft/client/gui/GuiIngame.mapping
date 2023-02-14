@@ -3,8 +3,46 @@ CLASS net/minecraft/client/gui/GuiIngame
 	FIELD field_73842_c rand Ljava/util/Random;
 	FIELD field_73839_d mc Lnet/minecraft/client/Minecraft;
 	FIELD field_73840_e persistantChatGUI Lnet/minecraft/client/gui/GuiNewChat;
+		COMMENT ChatGUI instance that retains all previous chat data
 	FIELD field_73837_f updateCounter I
 	FIELD field_73838_g recordPlaying Ljava/lang/String;
+		COMMENT The string specifying which record music is playing
 	FIELD field_73845_h recordPlayingUpFor I
+		COMMENT How many ticks the record playing message will be displayed
 	FIELD field_73844_j recordIsPlaying Z
 	FIELD field_73843_a prevVignetteBrightness F
+		COMMENT Previous frame vignette brightness (slowly changes by 1% each frame)
+	METHOD func_73830_a renderGameOverlay (FZII)V
+		COMMENT Render the ingame overlay with quick icon bar, ...
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73828_d renderBossHealth ()V
+		COMMENT Renders dragon's (boss) health on the HUD
+	METHOD func_73836_a renderPumpkinBlur (II)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73829_a renderVignette (FII)V
+		COMMENT Renders the vignette. Args: vignetteBrightness, width, height
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73835_b renderPortalOverlay (FII)V
+		COMMENT Renders the portal overlay. Args: portalStrength, width, height
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73832_a renderInventorySlot (IIIF)V
+		COMMENT Renders the specified item of the inventory slot at the specified location. Args: slot, x, y, partialTick
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73831_a updateTick ()V
+		COMMENT The update tick for the ingame UI
+	METHOD func_73833_a setRecordPlayingMessage (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_73827_b getChatGUI ()Lnet/minecraft/client/gui/GuiNewChat;
+		COMMENT returns a pointer to the persistant Chat GUI, containing all previous chat messages and such
+	METHOD func_73834_c getUpdateCounter ()I

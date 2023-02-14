@@ -3,3 +3,59 @@ CLASS net/minecraft/client/renderer/entity/RenderPlayer
 	FIELD field_77108_b modelArmorChestplate Lnet/minecraft/client/model/ModelBiped;
 	FIELD field_77111_i modelArmor Lnet/minecraft/client/model/ModelBiped;
 	FIELD field_77110_j armorFilenamePrefix [Ljava/lang/String;
+	METHOD func_77107_a setArmorModel (Lnet/minecraft/entity/player/EntityPlayer;IF)I
+		COMMENT Set the specified armor model as the player model. Args: player, armorSlot, partialTick
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_77101_a renderPlayer (Lnet/minecraft/entity/player/EntityPlayer;DDDFF)V
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77103_a renderName (Lnet/minecraft/entity/player/EntityPlayer;DDD)V
+		COMMENT Used to render a player's name above their head
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+	METHOD func_77100_a renderSpecials (Lnet/minecraft/entity/player/EntityPlayer;F)V
+		COMMENT Method for adding special render rules
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_77104_b renderPlayerScale (Lnet/minecraft/entity/player/EntityPlayer;F)V
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_77105_b renderPlayerSleep (Lnet/minecraft/entity/player/EntityPlayer;DDD)V
+		COMMENT Renders player with sleeping offset if sleeping
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+	METHOD func_77102_a rotatePlayer (Lnet/minecraft/entity/player/EntityPlayer;FFF)V
+		COMMENT Rotates the player if the player is sleeping. This method is called in rotateCorpse.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_77033_b passSpecialRender (Lnet/minecraft/entity/EntityLiving;DDD)V
+		COMMENT Passes the specialRender and renders it
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+	METHOD func_77041_b preRenderCallback (Lnet/minecraft/entity/EntityLiving;F)V
+		COMMENT Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args: entityLiving, partialTickTime
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_77029_c renderEquippedItems (Lnet/minecraft/entity/EntityLiving;F)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_77039_a renderLivingAt (Lnet/minecraft/entity/EntityLiving;DDD)V
+		COMMENT Sets a simple glTranslate on a LivingEntity.
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6

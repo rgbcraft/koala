@@ -2,11 +2,57 @@ CLASS net/minecraft/client/entity/EntityClientPlayerMP
 	FIELD field_71174_a sendQueue Lnet/minecraft/client/multiplayer/NetClientHandler;
 	FIELD field_71179_j oldPosX D
 	FIELD field_71177_cg oldMinY D
+		COMMENT Old Minimum Y of the bounding box
 	FIELD field_71178_ch oldPosY D
 	FIELD field_71175_ci oldPosZ D
 	FIELD field_71176_cj oldRotationYaw F
 	FIELD field_71172_ck oldRotationPitch F
 	FIELD field_71173_cl wasOnGround Z
+		COMMENT Check if was on ground last update
 	FIELD field_71170_cm shouldStopSneaking Z
+		COMMENT should the player stop sneaking?
 	FIELD field_71171_cn wasSneaking Z
 	FIELD field_71169_cp hasSetHealth Z
+		COMMENT has the client player's health been set?
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70691_i heal (I)V
+		COMMENT Heal living entity (param: amount of half-hearts)
+		ARG 0 par1
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_71166_b sendMotionUpdates ()V
+		COMMENT Send updated motion and position information to the server
+	METHOD func_71040_bB dropOneItem (Z)Lnet/minecraft/entity/item/EntityItem;
+		COMMENT Called when player presses the drop item key
+		ARG 0 par1
+	METHOD func_71012_a joinEntityItemWithWorld (Lnet/minecraft/entity/item/EntityItem;)V
+		COMMENT Joins the passed in entity item with the world. Args: entityItem
+		ARG 0 par1EntityItem
+	METHOD func_71165_d sendChatMessage (Ljava/lang/String;)V
+		COMMENT Sends a chat message from the player. Args: chatMessage
+		ARG 0 par1Str
+	METHOD func_71038_i swingItem ()V
+		COMMENT Swings the item the player is holding.
+	METHOD func_71004_bE respawnPlayer ()V
+	METHOD func_70665_d damageEntity (Lnet/minecraft/util/DamageSource;I)V
+		COMMENT Deals damage to the entity. If its a EntityPlayer then will take damage from the armor first and then health second with the reduced value. Args: damageAmount
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_71053_j closeScreen ()V
+		COMMENT sets current screen to null (used on escape buttons of GUIs)
+	METHOD func_71150_b setHealth (I)V
+		COMMENT Updates health locally.
+		ARG 0 par1
+	METHOD func_71064_a addStat (Lnet/minecraft/stats/StatBase;I)V
+		COMMENT Adds a value to a statistic field.
+		ARG 0 par1StatBase
+		ARG 1 par2
+	METHOD func_71167_b incrementStat (Lnet/minecraft/stats/StatBase;I)V
+		COMMENT Used by NetClientHandler.handleStatistic
+		ARG 0 par1StatBase
+		ARG 1 par2
+	METHOD func_71016_p sendPlayerAbilities ()V
+		COMMENT Sends the player's abilities to the server (if there is one).

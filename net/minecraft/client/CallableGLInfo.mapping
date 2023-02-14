@@ -1,2 +1,4 @@
 CLASS net/minecraft/client/CallableGLInfo
 	FIELD field_79002_a mc Lnet/minecraft/client/Minecraft;
+		COMMENT The Minecraft instance.
+	METHOD func_79001_a getTexturePack ()Ljava/lang/String;

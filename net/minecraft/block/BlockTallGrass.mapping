@@ -1,1 +1,43 @@
 CLASS net/minecraft/block/BlockTallGrass
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_71933_m getBlockColor ()I
+	METHOD func_71889_f_ getRenderColor (I)I
+		COMMENT Returns the color this block should be rendered. Used by leaves.
+		ARG 0 par1
+	METHOD func_71920_b colorMultiplier (Lnet/minecraft/world/IBlockAccess;III)I
+		COMMENT Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called when first determining what to render.
+		ARG 0 par1IBlockAccess
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71885_a idDropped (ILjava/util/Random;I)I
+		COMMENT Returns the ID of the items to drop on destruction.
+		ARG 0 par1
+		ARG 1 par2Random
+		ARG 2 par3
+	METHOD func_71910_a quantityDroppedWithBonus (ILjava/util/Random;)I
+		COMMENT Returns the usual quantity dropped by the block plus a bonus of 1 to 'i' (inclusive).
+		ARG 0 par1
+		ARG 1 par2Random
+	METHOD func_71893_a harvestBlock (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;IIII)V
+		COMMENT Called when the player destroys a block with an item that can harvest it. (i, j, k) are the coordinates of the block and l is the block's subtype/damage.
+		ARG 0 par1World
+		ARG 1 par2EntityPlayer
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_71873_h getDamageValue (Lnet/minecraft/world/World;III)I
+		COMMENT Get the block's damage value (for use with pick block).
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_71879_a getSubBlocks (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V
+		COMMENT returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+		ARG 0 par1
+		ARG 1 par2CreativeTabs
+		ARG 2 par3List

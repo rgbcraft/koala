@@ -1,5 +1,26 @@
 CLASS net/minecraft/world/storage/MapStorage
 	FIELD field_75751_a saveHandler Lnet/minecraft/world/storage/ISaveHandler;
 	FIELD field_75749_b loadedDataMap Ljava/util/Map;
+		COMMENT Map of item data String id to loaded MapDataBases
 	FIELD field_75750_c loadedDataList Ljava/util/List;
+		COMMENT List of loaded MapDataBases.
 	FIELD field_75748_d idCounts Ljava/util/Map;
+		COMMENT Map of MapDataBase id String prefixes ('map' etc) to max known unique Short id (the 0 part etc) for that prefix
+	METHOD func_75742_a loadData (Ljava/lang/Class;Ljava/lang/String;)Lnet/minecraft/world/WorldSavedData;
+		COMMENT Loads an existing MapDataBase corresponding to the given String id from disk, instantiating the given Class, or returns null if none such file exists. args: Class to instantiate, String dataid
+		ARG 0 par1Class
+		ARG 1 par2Str
+	METHOD func_75745_a setData (Ljava/lang/String;Lnet/minecraft/world/WorldSavedData;)V
+		COMMENT Assigns the given String id to the given MapDataBase, removing any existing ones of the same id.
+		ARG 0 par1Str
+		ARG 1 par2WorldSavedData
+	METHOD func_75744_a saveAllData ()V
+		COMMENT Saves all dirty loaded MapDataBases to disk.
+	METHOD func_75747_a saveData (Lnet/minecraft/world/WorldSavedData;)V
+		COMMENT Saves the given MapDataBase to disk.
+		ARG 0 par1WorldSavedData
+	METHOD func_75746_b loadIdCounts ()V
+		COMMENT Loads the idCounts Map from the 'idcounts' file.
+	METHOD func_75743_a getUniqueDataId (Ljava/lang/String;)I
+		COMMENT Returns an unique new data id for the given prefix and saves the idCounts map to the 'idcounts' file.
+		ARG 0 par1Str

@@ -1,1 +1,12 @@
 CLASS net/minecraft/enchantment/EnchantmentLootBonus
+	METHOD func_77321_a getMinEnchantability (I)I
+		COMMENT Returns the minimal value of enchantability needed on the enchantment level passed.
+		ARG 0 par1
+	METHOD func_77317_b getMaxEnchantability (I)I
+		COMMENT Returns the maximum value of enchantability nedded on the enchantment level passed.
+		ARG 0 par1
+	METHOD func_77325_b getMaxLevel ()I
+		COMMENT Returns the maximum level that the enchantment can have.
+	METHOD func_77326_a canApplyTogether (Lnet/minecraft/enchantment/Enchantment;)Z
+		COMMENT Determines if the enchantment passed can be applyied together with this enchantment.
+		ARG 0 par1Enchantment

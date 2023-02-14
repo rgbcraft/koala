@@ -3,58 +3,93 @@ CLASS net/minecraft/entity/Entity
 	FIELD field_70157_k entityId I
 	FIELD field_70155_l renderDistanceWeight D
 	FIELD field_70156_m preventEntitySpawning Z
+		COMMENT Blocks entities from spawning when they do their AABB check to make sure the spot is clear of entities that can prevent spawning.
 	FIELD field_70153_n riddenByEntity Lnet/minecraft/entity/Entity;
+		COMMENT The entity that is riding this entity
 	FIELD field_70154_o ridingEntity Lnet/minecraft/entity/Entity;
+		COMMENT The entity we are currently riding
 	FIELD field_70170_p worldObj Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
 	FIELD field_70169_q prevPosX D
 	FIELD field_70167_r prevPosY D
 	FIELD field_70166_s prevPosZ D
 	FIELD field_70165_t posX D
+		COMMENT Entity position X
 	FIELD field_70163_u posY D
+		COMMENT Entity position Y
 	FIELD field_70161_v posZ D
+		COMMENT Entity position Z
 	FIELD field_70159_w motionX D
+		COMMENT Entity motion X
 	FIELD field_70181_x motionY D
+		COMMENT Entity motion Y
 	FIELD field_70179_y motionZ D
+		COMMENT Entity motion Z
 	FIELD field_70177_z rotationYaw F
+		COMMENT Entity rotation Yaw
 	FIELD field_70125_A rotationPitch F
+		COMMENT Entity rotation Pitch
 	FIELD field_70126_B prevRotationYaw F
 	FIELD field_70127_C prevRotationPitch F
 	FIELD field_70121_D boundingBox Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Axis aligned bounding box.
 	FIELD field_70122_E onGround Z
 	FIELD field_70123_F isCollidedHorizontally Z
+		COMMENT True if after a move this entity has collided with something on X- or Z-axis
 	FIELD field_70124_G isCollidedVertically Z
+		COMMENT True if after a move this entity has collided with something on Y-axis
 	FIELD field_70132_H isCollided Z
+		COMMENT True if after a move this entity has collided with something either vertically or horizontally
 	FIELD field_70133_I velocityChanged Z
 	FIELD field_70134_J isInWeb Z
 	FIELD field_70128_L isDead Z
+		COMMENT Gets set by setDead, so this must be the flag whether an Entity is dead (inactive may be better term)
 	FIELD field_70129_M yOffset F
 	FIELD field_70130_N width F
+		COMMENT How wide this entity is considered to be
 	FIELD field_70131_O height F
+		COMMENT How high this entity is considered to be
 	FIELD field_70141_P prevDistanceWalkedModified F
+		COMMENT The previous ticks distance walked multiplied by 0.6
 	FIELD field_70140_Q distanceWalkedModified F
+		COMMENT The distance walked multiplied by 0.6
 	FIELD field_70143_R fallDistance F
 	FIELD field_70150_b nextStepDistance I
+		COMMENT The distance that has to be exceeded in order to triger a new step sound and an onEntityWalking event on a block
 	FIELD field_70142_S lastTickPosX D
+		COMMENT The entity's X coordinate at the previous tick, used to calculate position during rendering routines
 	FIELD field_70137_T lastTickPosY D
+		COMMENT The entity's Y coordinate at the previous tick, used to calculate position during rendering routines
 	FIELD field_70136_U lastTickPosZ D
+		COMMENT The entity's Z coordinate at the previous tick, used to calculate position during rendering routines
 	FIELD field_70139_V ySize F
 	FIELD field_70138_W stepHeight F
+		COMMENT How high this entity can step up when running into a block to try to get over it (currently make note the entity will always step up this amount and not just the amount needed)
 	FIELD field_70145_X noClip Z
+		COMMENT Whether this entity won't clip with collision or not (make note it won't disable gravity)
 	FIELD field_70144_Y entityCollisionReduction F
+		COMMENT Reduces the velocity applied by entity collisions by the specified percent.
 	FIELD field_70146_Z rand Ljava/util/Random;
 	FIELD field_70173_aa ticksExisted I
+		COMMENT How many ticks has this entity had ran since being alive
 	FIELD field_70174_ab fireResistance I
+		COMMENT The amount of ticks you have to stand inside of fire before be set on fire
 	FIELD field_70151_c fire I
 	FIELD field_70171_ac inWater Z
+		COMMENT Whether this entity is currently inside of water (if it handles water movement that is)
 	FIELD field_70172_ad hurtResistantTime I
+		COMMENT Remaining time an entity will be "immune" to further damage after being hurt.
 	FIELD field_70148_d firstUpdate Z
 	FIELD field_70120_cr skinUrl Ljava/lang/String;
+		COMMENT downloadable location of player's skin
 	FIELD field_70119_cs cloakUrl Ljava/lang/String;
+		COMMENT downloadable location of player's cloak
 	FIELD field_70178_ae isImmuneToFire Z
 	FIELD field_70180_af dataWatcher Lnet/minecraft/entity/DataWatcher;
 	FIELD field_70149_e entityRiderPitchDelta D
 	FIELD field_70147_f entityRiderYawDelta D
 	FIELD field_70175_ag addedToChunk Z
+		COMMENT Has this entity been added to the chunk its within
 	FIELD field_70176_ah chunkCoordX I
 	FIELD field_70162_ai chunkCoordY I
 	FIELD field_70164_aj chunkCoordZ I
@@ -62,10 +97,335 @@ CLASS net/minecraft/entity/Entity
 	FIELD field_70117_cu serverPosY I
 	FIELD field_70116_cv serverPosZ I
 	FIELD field_70158_ak ignoreFrustumCheck Z
+		COMMENT Render entity even if it is outside the camera frustum. Only true in EntityFish for now. Used in RenderGlobal: render if ignoreFrustumCheck or in frustum.
 	FIELD field_70160_al isAirBorne Z
 	FIELD field_71088_bW timeUntilPortal I
 	FIELD field_71087_bX inPortal Z
+		COMMENT Whether the entity is inside a Portal
 	FIELD field_82153_h timeInPortal I
 	FIELD field_71093_bK dimension I
+		COMMENT Which dimension the player is in (-1 = the Nether, 0 = normal world)
 	FIELD field_83001_bt invulnerable Z
 	FIELD field_70168_am myEntitySize Lnet/minecraft/entity/EnumEntitySize;
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70096_w getDataWatcher ()Lnet/minecraft/entity/DataWatcher;
+	METHOD func_70065_x preparePlayerToSpawn ()V
+		COMMENT Keeps moving the entity up so it isn't colliding with blocks and other requirements for this entity to be spawned (only actually used on players though its also on Entity)
+	METHOD func_70106_y setDead ()V
+		COMMENT Will get destroyed next tick.
+	METHOD func_70105_a setSize (FF)V
+		COMMENT Sets the width and height of the entity. Args: width, height
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70101_b setRotation (FF)V
+		COMMENT Sets the rotation of the entity
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70107_b setPosition (DDD)V
+		COMMENT Sets the x,y,z of the entity from the given parameters. Also seems to set up a bounding box.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70082_c setAngles (FF)V
+		COMMENT Adds par1*0.15 to the entity's yaw, and *subtracts* par2*0.15 from the pitch. Clamps pitch from -90 to 90. Both arguments in degrees.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70030_z onEntityUpdate ()V
+		COMMENT Gets called every tick from main Entity class
+	METHOD func_82145_z getMaxInPortalTime ()I
+		COMMENT Return the amount of time this entity should stay in a portal before being transported.
+	METHOD func_70044_A setOnFireFromLava ()V
+		COMMENT Called whenever the entity is walking inside of lava.
+	METHOD func_70015_d setFire (I)V
+		COMMENT Sets entity to burn for x amount of seconds, cannot lower amount of existing fire.
+		ARG 0 par1
+	METHOD func_70066_B extinguish ()V
+		COMMENT Removes fire from entity.
+	METHOD func_70076_C kill ()V
+		COMMENT sets the dead flag. Used when you fall off the bottom of the world.
+	METHOD func_70038_c isOffsetPositionInLiquid (DDD)Z
+		COMMENT Checks if the offset position from the entity's current position is inside of liquid. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70091_d moveEntity (DDD)V
+		COMMENT Tries to moves the entity by the passed in displacement. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70017_D doBlockCollisions ()V
+		COMMENT Checks for block collisions, and calls the associated onBlockCollided method for the collided block.
+	METHOD func_70036_a playStepSound (IIII)V
+		COMMENT Plays step sound at given x, y, z for the entity
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_85030_a playSound (Ljava/lang/String;FF)V
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_70064_a updateFallState (DZ)V
+		COMMENT Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround
+		ARG 0 par1
+		ARG 1 par3
+	METHOD func_70046_E getBoundingBox ()Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT returns the bounding box for this entity
+	METHOD func_70081_e dealFireDamage (I)V
+		COMMENT Will deal the specified amount of damage to the entity if the entity isn't immune to fire damage. Args: amountDamage
+		ARG 0 par1
+	METHOD func_70045_F isImmuneToFire ()Z
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70026_G isWet ()Z
+		COMMENT Checks if this entity is either in water or on an open air block in rain (used in wolves).
+	METHOD func_70090_H isInWater ()Z
+		COMMENT Checks if this entity is inside water (if inWater field is true as a result of handleWaterMovement() returning true)
+	METHOD func_70072_I handleWaterMovement ()Z
+		COMMENT Returns if this entity is in water and will end up adding the waters velocity to the entity
+	METHOD func_70055_a isInsideOfMaterial (Lnet/minecraft/block/material/Material;)Z
+		COMMENT Checks if the current block the entity is within of the specified material type
+		ARG 0 par1Material
+	METHOD func_70047_e getEyeHeight ()F
+	METHOD func_70058_J handleLavaMovement ()Z
+		COMMENT Whether or not the current entity is in lava
+	METHOD func_70060_a moveFlying (FFF)V
+		COMMENT Used in both water and by flying objects
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70070_b getBrightnessForRender (F)I
+		ARG 0 par1
+	METHOD func_70013_c getBrightness (F)F
+		COMMENT Gets how bright this entity is.
+		ARG 0 par1
+	METHOD func_70029_a setWorld (Lnet/minecraft/world/World;)V
+		COMMENT Sets the reference to the World object.
+		ARG 0 par1World
+	METHOD func_70080_a setPositionAndRotation (DDDFF)V
+		COMMENT Sets the entity's position and rotation. Args: posX, posY, posZ, yaw, pitch
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+	METHOD func_70012_b setLocationAndAngles (DDDFF)V
+		COMMENT Sets the location and Yaw/Pitch of an entity in the world
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+	METHOD func_70032_d getDistanceToEntity (Lnet/minecraft/entity/Entity;)F
+		COMMENT Returns the distance to the entity. Args: entity
+		ARG 0 par1Entity
+	METHOD func_70092_e getDistanceSq (DDD)D
+		COMMENT Gets the squared distance to the position. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70011_f getDistance (DDD)D
+		COMMENT Gets the distance to the position. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70068_e getDistanceSqToEntity (Lnet/minecraft/entity/Entity;)D
+		COMMENT Returns the squared distance to the entity. Args: entity
+		ARG 0 par1Entity
+	METHOD func_70100_b_ onCollideWithPlayer (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Called by a player entity when they collide with an entity
+		ARG 0 par1EntityPlayer
+	METHOD func_70108_f applyEntityCollision (Lnet/minecraft/entity/Entity;)V
+		COMMENT Applies a velocity to each of the entities pushing them away from each other. Args: entity
+		ARG 0 par1Entity
+	METHOD func_70024_g addVelocity (DDD)V
+		COMMENT Adds to the current velocity of the entity. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70018_K setBeenAttacked ()V
+		COMMENT Sets that this entity has been attacked.
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70104_M canBePushed ()Z
+		COMMENT Returns true if this entity should push and be pushed by other entities when colliding.
+	METHOD func_70084_c addToPlayerScore (Lnet/minecraft/entity/Entity;I)V
+		COMMENT Adds a value to the player score. Currently not actually used and the entity passed in does nothing. Args: entity, scoreToAdd
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_70102_a isInRangeToRenderVec3D (Lnet/minecraft/util/Vec3;)Z
+		COMMENT Checks using a Vec3d to determine if this entity is within range of that vector to be rendered. Args: vec3D
+		ARG 0 par1Vec3
+	METHOD func_70112_a isInRangeToRenderDist (D)Z
+		COMMENT Checks if the entity is in range to render by using the past in distance and comparing it to its average edge length * 64 * renderDistanceWeight Args: distance
+		ARG 0 par1
+	METHOD func_70073_O getTexture ()Ljava/lang/String;
+		COMMENT Returns the texture's file path as a String.
+	METHOD func_70039_c addEntityID (Lnet/minecraft/nbt/NBTTagCompound;)Z
+		COMMENT adds the ID of this entity to the NBT given
+		ARG 0 par1NBTTagCompound
+	METHOD func_70109_d writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Save the entity to NBT (calls an abstract helper method to write extra data)
+		ARG 0 par1NBTTagCompound
+	METHOD func_70020_e readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads the entity from NBT (calls an abstract helper method to read specialized data)
+		ARG 0 par1NBTTagCompound
+	METHOD func_70022_Q getEntityString ()Ljava/lang/String;
+		COMMENT Returns the string that identifies this Entity's class
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70087_a newDoubleNBTList (D)Lnet/minecraft/nbt/NBTTagList;
+		COMMENT creates a NBT list from the array of doubles passed to this function
+		ARG 0 par1ArrayOfDouble
+	METHOD func_70049_a newFloatNBTList (F)Lnet/minecraft/nbt/NBTTagList;
+		COMMENT Returns a new NBTTagList filled with the specified floats
+		ARG 0 par1ArrayOfFloat
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_70025_b dropItem (II)Lnet/minecraft/entity/item/EntityItem;
+		COMMENT Drops an item stack at the entity's position. Args: itemID, count
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70054_a dropItemWithOffset (IIF)Lnet/minecraft/entity/item/EntityItem;
+		COMMENT Drops an item stack with a specified y offset. Args: itemID, count, yOffset
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_70099_a entityDropItem (Lnet/minecraft/item/ItemStack;F)Lnet/minecraft/entity/item/EntityItem;
+		COMMENT Drops an item at the position of the entity.
+		ARG 0 par1ItemStack
+		ARG 1 par2
+	METHOD func_70089_S isEntityAlive ()Z
+		COMMENT Checks whether target entity is alive.
+	METHOD func_70094_T isEntityInsideOpaqueBlock ()Z
+		COMMENT Checks if this entity is inside of an opaque block
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer
+	METHOD func_70114_g getCollisionBox (Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/AxisAlignedBB;
+		COMMENT Returns a boundingBox used to collide the entity with other entities and blocks. This enables the entity to be pushable on contact, like boats or minecarts.
+		ARG 0 par1Entity
+	METHOD func_70098_U updateRidden ()V
+		COMMENT Handles updating while being ridden by an entity
+	METHOD func_70043_V updateRiderPosition ()V
+	METHOD func_70033_W getYOffset ()D
+		COMMENT Returns the Y Offset of this entity.
+	METHOD func_70042_X getMountedYOffset ()D
+		COMMENT Returns the Y offset from the entity's position for any entity riding this one.
+	METHOD func_70078_a mountEntity (Lnet/minecraft/entity/Entity;)V
+		COMMENT Called when a player mounts an entity. e.g. mounts a pig, mounts a boat.
+		ARG 0 par1Entity
+	METHOD func_70061_h unmountEntity (Lnet/minecraft/entity/Entity;)V
+		COMMENT Called when a player unounts an entity.
+		ARG 0 par1Entity
+	METHOD func_70056_a setPositionAndRotation2 (DDDFFI)V
+		COMMENT Sets the position and rotation. Only difference from the other one is no bounding on the rotation. Args: posX, posY, posZ, yaw, pitch
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_70111_Y getCollisionBorderSize ()F
+	METHOD func_70040_Z getLookVec ()Lnet/minecraft/util/Vec3;
+		COMMENT returns a (normalized) vector of where this entity is looking
+	METHOD func_70063_aa setInPortal ()V
+		COMMENT Called by portal blocks when an entity is within it.
+	METHOD func_82147_ab getPortalCooldown ()I
+		COMMENT Return the amount of cooldown before this entity can use a portal again.
+	METHOD func_70016_h setVelocity (DDD)V
+		COMMENT Sets the velocity to the args. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70103_a handleHealthUpdate (B)V
+		ARG 0 par1
+	METHOD func_70057_ab performHurtAnimation ()V
+		COMMENT Setups the entity to do the hurt animation. Only used by packets in multiplayer.
+	METHOD func_70059_ac updateCloak ()V
+	METHOD func_70035_c getLastActiveItems ()[Lnet/minecraft/item/ItemStack;
+	METHOD func_70062_b setCurrentItemOrArmor (ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sets the held item, or an armor slot. Slot 0 is held item. Slot 1-4 is armor. Params: Item, slot
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_70027_ad isBurning ()Z
+		COMMENT Returns true if the entity is on fire. Used by render to add the fire effect on rendering.
+	METHOD func_70115_ae isRiding ()Z
+		COMMENT Returns true if the entity is riding another entity, used by render to rotate the legs to be in 'sit' position for players.
+	METHOD func_70093_af isSneaking ()Z
+		COMMENT Returns if this entity is sneaking.
+	METHOD func_70095_a setSneaking (Z)V
+		COMMENT Sets the sneaking flag.
+		ARG 0 par1
+	METHOD func_70051_ag isSprinting ()Z
+		COMMENT Get if the Entity is sprinting.
+	METHOD func_70031_b setSprinting (Z)V
+		COMMENT Set sprinting switch for Entity.
+		ARG 0 par1
+	METHOD func_82150_aj getHasActivePotion ()Z
+	METHOD func_82142_c setHasActivePotion (Z)V
+		ARG 0 par1
+	METHOD func_70113_ah isEating ()Z
+	METHOD func_70019_c setEating (Z)V
+		ARG 0 par1
+	METHOD func_70083_f getFlag (I)Z
+		COMMENT Returns true if the flag is active for the entity. Known flags: 0) is burning; 1) is sneaking; 2) is riding something; 3) is sprinting; 4) is eating
+		ARG 0 par1
+	METHOD func_70052_a setFlag (IZ)V
+		COMMENT Enable or disable a entity flag, see getEntityFlag to read the know flags.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70086_ai getAir ()I
+	METHOD func_70050_g setAir (I)V
+		ARG 0 par1
+	METHOD func_70077_a onStruckByLightning (Lnet/minecraft/entity/effect/EntityLightningBolt;)V
+		COMMENT Called when a lightning bolt hits the entity.
+		ARG 0 par1EntityLightningBolt
+	METHOD func_70074_a onKillEntity (Lnet/minecraft/entity/EntityLiving;)V
+		COMMENT This method gets called when the entity kills another one.
+		ARG 0 par1EntityLiving
+	METHOD func_70048_i pushOutOfBlocks (DDD)Z
+		COMMENT Adds velocity to push the entity out of blocks at the specified x, y, z position Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70110_aj setInWeb ()V
+		COMMENT Sets the Entity inside a web block.
+	METHOD func_70023_ak getEntityName ()Ljava/lang/String;
+		COMMENT Gets the username of the entity.
+	METHOD func_70021_al getParts ()[Lnet/minecraft/entity/Entity;
+		COMMENT Return the Entity parts making up this Entity (currently only for dragons)
+	METHOD func_70028_i isEntityEqual (Lnet/minecraft/entity/Entity;)Z
+		COMMENT Returns true if Entity argument is equal to this Entity
+		ARG 0 par1Entity
+	METHOD func_70079_am setRotationYawHead ()F
+	METHOD func_70034_d setHeadRotationYaw (F)V
+		COMMENT Sets the head's yaw rotation of the entity.
+		ARG 0 par1
+	METHOD func_70075_an canAttackWithItem ()Z
+		COMMENT If returns false, the item will not inflict any damage against entities.
+	METHOD func_85032_ar isEntityInvulnerable ()Z
+		COMMENT Return whether this entity is invulnerable to damage.
+	METHOD func_82141_a copyDataFrom (Lnet/minecraft/entity/Entity;Z)V
+		COMMENT Copies important data from another entity to this entity. Used when teleporting entities between worlds, as this actually deletes the teleporting entity and re-creates it on the other side. Params: Entity to copy from, unused (always true)
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_71027_c travelToDimension (I)V
+		COMMENT Teleports the entity to another dimension. Params: Dimension number to teleport to
+		ARG 0 par1
+	METHOD func_82144_au doesEntityNotTriggerPressurePlate ()Z
+		COMMENT Return whether this entity should NOT trigger a pressure plate or a tripwire.
+	METHOD func_90999_ad canRenderOnFire ()Z
+		COMMENT Return whether this entity should be rendered as on fire.

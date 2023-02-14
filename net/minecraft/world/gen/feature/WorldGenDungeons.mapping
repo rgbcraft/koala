@@ -1,1 +1,13 @@
 CLASS net/minecraft/world/gen/feature/WorldGenDungeons
+	METHOD func_76484_a generate (Lnet/minecraft/world/World;Ljava/util/Random;III)Z
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76544_a pickCheckLootItem (Ljava/util/Random;)Lnet/minecraft/item/ItemStack;
+		COMMENT Picks potentially a random item to add to a dungeon chest.
+		ARG 0 par1Random
+	METHOD func_76543_b pickMobSpawner (Ljava/util/Random;)Ljava/lang/String;
+		COMMENT Randomly decides which spawner to use in a dungeon
+		ARG 0 par1Random

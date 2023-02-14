@@ -1,4 +1,11 @@
 CLASS net/minecraft/entity/ai/EntitySenses
 	FIELD field_75526_a entityObj Lnet/minecraft/entity/EntityLiving;
 	FIELD field_75524_b seenEntities Ljava/util/List;
+		COMMENT Cache of entities which we can see
 	FIELD field_75525_c unseenEntities Ljava/util/List;
+		COMMENT Cache of entities which we cannot see
+	METHOD func_75523_a clearSensingCache ()V
+		COMMENT Clears canSeeCachePositive and canSeeCacheNegative.
+	METHOD func_75522_a canSee (Lnet/minecraft/entity/Entity;)Z
+		COMMENT Checks, whether 'our' entity can see the entity given as argument (true) or not (false), caching the result.
+		ARG 0 par1Entity

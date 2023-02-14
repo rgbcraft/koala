@@ -1,15 +1,76 @@
 CLASS net/minecraft/client/gui/GuiSelectWorld
 	FIELD field_74076_c dateFormatter Ljava/text/DateFormat;
+		COMMENT simple date formater
 	FIELD field_74077_a parentScreen Lnet/minecraft/client/gui/GuiScreen;
+		COMMENT A reference to the screen object that created this. Used for navigating between screens.
 	FIELD field_74075_b screenTitle Ljava/lang/String;
+		COMMENT The title string that is displayed in the top-center of the screen.
 	FIELD field_74074_d selected Z
+		COMMENT True if a world has been selected.
 	FIELD field_74080_m selectedWorld I
+		COMMENT the currently selected world
 	FIELD field_74078_n saveList Ljava/util/List;
+		COMMENT The save list for the world selection screen
 	FIELD field_74079_o worldSlotContainer Lnet/minecraft/client/gui/GuiWorldSlot;
 	FIELD field_74087_p localizedWorldText Ljava/lang/String;
+		COMMENT E.g. World, Welt, Monde, Mundo
 	FIELD field_74086_q localizedMustConvertText Ljava/lang/String;
 	FIELD field_74085_r localizedGameModeText [Ljava/lang/String;
+		COMMENT The game mode text that is displayed with each world on the world selection list.
 	FIELD field_74084_s deleting Z
+		COMMENT set to true if you arein the process of deleteing a world/save
 	FIELD field_74083_t buttonRename Lnet/minecraft/client/gui/GuiButton;
+		COMMENT the rename button in the world selection gui
 	FIELD field_74082_u buttonSelect Lnet/minecraft/client/gui/GuiButton;
+		COMMENT the select button in the world selection gui
 	FIELD field_74081_v buttonDelete Lnet/minecraft/client/gui/GuiButton;
+		COMMENT the delete button in the world selection gui
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_74073_h loadSaves ()V
+		COMMENT loads the saves
+	METHOD func_74069_a getSaveFileName (I)Ljava/lang/String;
+		COMMENT returns the file name of the specified save number
+		ARG 0 par1
+	METHOD func_74063_d getSaveName (I)Ljava/lang/String;
+		COMMENT returns the name of the saved game
+		ARG 0 par1
+	METHOD func_74065_g initButtons ()V
+		COMMENT intilize the buttons for this GUI
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_74064_e selectWorld (I)V
+		COMMENT Gets the selected world.
+		ARG 0 par1
+	METHOD func_73878_a confirmClicked (ZI)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74061_a getDeleteWorldScreen (Lnet/minecraft/client/gui/GuiScreen;Ljava/lang/String;I)Lnet/minecraft/client/gui/GuiYesNo;
+		COMMENT Gets a GuiYesNo screen with the warning, buttons, etc.
+		ARG 0 par0GuiScreen
+		ARG 1 par1Str
+		ARG 2 par2
+	METHOD func_74068_a getSize (Lnet/minecraft/client/gui/GuiSelectWorld;)Ljava/util/List;
+		ARG 0 par0GuiSelectWorld
+	METHOD func_74072_a onElementSelected (Lnet/minecraft/client/gui/GuiSelectWorld;I)I
+		COMMENT called whenever an element in this gui is selected
+		ARG 0 par0GuiSelectWorld
+		ARG 1 par1
+	METHOD func_74062_b getSelectedWorld (Lnet/minecraft/client/gui/GuiSelectWorld;)I
+		COMMENT returns the world currently selected
+		ARG 0 par0GuiSelectWorld
+	METHOD func_74070_c getSelectButton (Lnet/minecraft/client/gui/GuiSelectWorld;)Lnet/minecraft/client/gui/GuiButton;
+		COMMENT returns the select button
+		ARG 0 par0GuiSelectWorld
+	METHOD func_74059_d getRenameButton (Lnet/minecraft/client/gui/GuiSelectWorld;)Lnet/minecraft/client/gui/GuiButton;
+		COMMENT returns the rename button
+		ARG 0 par0GuiSelectWorld
+	METHOD func_74071_e getDeleteButton (Lnet/minecraft/client/gui/GuiSelectWorld;)Lnet/minecraft/client/gui/GuiButton;
+		COMMENT returns the delete button
+		ARG 0 par0GuiSelectWorld

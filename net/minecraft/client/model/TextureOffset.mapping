@@ -1,3 +1,5 @@
 CLASS net/minecraft/client/model/TextureOffset
 	FIELD field_78783_a textureOffsetX I
+		COMMENT The x coordinate offset of the texture
 	FIELD field_78782_b textureOffsetY I
+		COMMENT The y coordinate offset of the texture

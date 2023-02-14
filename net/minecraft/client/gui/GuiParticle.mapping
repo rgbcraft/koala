@@ -1,3 +1,6 @@
 CLASS net/minecraft/client/gui/GuiParticle
 	FIELD field_73776_a particles Ljava/util/List;
 	FIELD field_73775_b mc Lnet/minecraft/client/Minecraft;
+	METHOD func_73774_a update ()V
+	METHOD func_73773_a draw (F)V
+		ARG 0 par1

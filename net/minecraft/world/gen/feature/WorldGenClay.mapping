@@ -1,3 +1,11 @@
 CLASS net/minecraft/world/gen/feature/WorldGenClay
 	FIELD field_76518_a clayBlockId I
+		COMMENT The block ID for clay.
 	FIELD field_76517_b numberOfBlocks I
+		COMMENT The number of blocks to generate.
+	METHOD func_76484_a generate (Lnet/minecraft/world/World;Ljava/util/Random;III)Z
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

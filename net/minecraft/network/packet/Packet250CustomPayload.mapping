@@ -1,4 +1,18 @@
 CLASS net/minecraft/network/packet/Packet250CustomPayload
 	FIELD field_73630_a channel Ljava/lang/String;
+		COMMENT Name of the 'channel' used to send data
 	FIELD field_73628_b length I
+		COMMENT Length of the data to be read
 	FIELD field_73629_c data [B
+		COMMENT Any data
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).

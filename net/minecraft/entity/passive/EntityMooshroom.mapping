@@ -1,1 +1,12 @@
 CLASS net/minecraft/entity/passive/EntityMooshroom
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer
+	METHOD func_70879_a spawnBabyAnimal (Lnet/minecraft/entity/EntityAgeable;)Lnet/minecraft/entity/passive/EntityMooshroom;
+		COMMENT This function is used when two same-species animals in 'love mode' breed to generate the new baby animal.
+		ARG 0 par1EntityAgeable
+	METHOD func_70879_a spawnBabyAnimal (Lnet/minecraft/entity/EntityAgeable;)Lnet/minecraft/entity/passive/EntityCow;
+		COMMENT This function is used when two same-species animals in 'love mode' breed to generate the new baby animal.
+		ARG 0 par1EntityAgeable
+	METHOD func_90011_a createChild (Lnet/minecraft/entity/EntityAgeable;)Lnet/minecraft/entity/EntityAgeable;
+		ARG 0 par1EntityAgeable

@@ -1,8 +1,21 @@
 CLASS net/minecraft/entity/player/PlayerCapabilities
 	FIELD field_75102_a disableDamage Z
+		COMMENT Disables player damage.
 	FIELD field_75100_b isFlying Z
+		COMMENT Sets/indicates whether the player is flying.
 	FIELD field_75101_c allowFlying Z
+		COMMENT whether or not to allow the player to fly when they double jump.
 	FIELD field_75098_d isCreativeMode Z
+		COMMENT Used to determine if creative mode is enabled, and therefore if items should be depleted on usage
 	FIELD field_75099_e allowEdit Z
+		COMMENT Indicates whether the player is allowed to modify the surroundings
 	FIELD field_75096_f flySpeed F
 	FIELD field_75097_g walkSpeed F
+	METHOD func_75091_a writeCapabilitiesToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		ARG 0 par1NBTTagCompound
+	METHOD func_75095_b readCapabilitiesFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		ARG 0 par1NBTTagCompound
+	METHOD func_75093_a getFlySpeed ()F
+	METHOD func_75092_a setFlySpeed (F)V
+		ARG 0 par1
+	METHOD func_75094_b getWalkSpeed ()F

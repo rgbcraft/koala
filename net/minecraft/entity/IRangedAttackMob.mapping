@@ -1,1 +1,4 @@
 CLASS net/minecraft/entity/IRangedAttackMob
+	METHOD func_82196_d attackEntityWithRangedAttack (Lnet/minecraft/entity/EntityLiving;)V
+		COMMENT Attack the specified entity using a ranged attack.
+		ARG 0 par1EntityLiving

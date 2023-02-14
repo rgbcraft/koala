@@ -4,3 +4,8 @@ CLASS net/minecraft/client/gui/ScaledResolution
 	FIELD field_78332_c scaledWidthD D
 	FIELD field_78329_d scaledHeightD D
 	FIELD field_78330_e scaleFactor I
+	METHOD func_78326_a getScaledWidth ()I
+	METHOD func_78328_b getScaledHeight ()I
+	METHOD func_78327_c getScaledWidth_double ()D
+	METHOD func_78324_d getScaledHeight_double ()D
+	METHOD func_78325_e getScaleFactor ()I

@@ -1,7 +1,23 @@
 CLASS net/minecraft/client/gui/GuiYesNo
 	FIELD field_73942_a parentScreen Lnet/minecraft/client/gui/GuiScreen;
+		COMMENT A reference to the screen object that created this. Used for navigating between screens.
 	FIELD field_73940_b message1 Ljava/lang/String;
+		COMMENT First line of text.
 	FIELD field_73944_m message2 Ljava/lang/String;
+		COMMENT Second line of text.
 	FIELD field_73941_c buttonText1 Ljava/lang/String;
+		COMMENT The text shown for the first button in GuiYesNo
 	FIELD field_73939_d buttonText2 Ljava/lang/String;
+		COMMENT The text shown for the second button in GuiYesNo
 	FIELD field_73943_n worldNumber I
+		COMMENT World number to be deleted.
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

@@ -1,5 +1,22 @@
 CLASS net/minecraft/world/gen/feature/WorldGenTrees
 	FIELD field_76533_a minTreeHeight I
+		COMMENT The minimum height of a generated tree.
 	FIELD field_76531_b vinesGrow Z
+		COMMENT True if this tree should grow Vines.
 	FIELD field_76532_c metaWood I
+		COMMENT The metadata value of the wood to use in tree generation.
 	FIELD field_76530_d metaLeaves I
+		COMMENT The metadata value of the leaves to use in tree generation.
+	METHOD func_76484_a generate (Lnet/minecraft/world/World;Ljava/util/Random;III)Z
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76529_b growVines (Lnet/minecraft/world/World;IIII)V
+		COMMENT Grows vines downward from the given block for a given length. Args: World, x, starty, z, vine-length
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

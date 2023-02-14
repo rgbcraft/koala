@@ -1,2 +1,9 @@
 CLASS net/minecraft/block/TileEntityRecordPlayer
 	FIELD field_70417_a record Lnet/minecraft/item/ItemStack;
+		COMMENT ID of record which is in Jukebox
+	METHOD func_70307_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads a tile entity from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70310_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes a tile entity to NBT.
+		ARG 0 par1NBTTagCompound

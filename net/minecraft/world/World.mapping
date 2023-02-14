@@ -1,42 +1,855 @@
 CLASS net/minecraft/world/World
 	FIELD field_72999_e scheduledUpdatesAreImmediate Z
+		COMMENT boolean; if true updates scheduled by scheduleBlockUpdate happen immediately
 	FIELD field_72996_f loadedEntityList Ljava/util/List;
+		COMMENT A list of all Entities in all currently-loaded chunks
 	FIELD field_72997_g unloadedEntityList Ljava/util/List;
 	FIELD field_73009_h loadedTileEntityList Ljava/util/List;
+		COMMENT A list of all TileEntities in all currently-loaded chunks
 	FIELD field_73002_a addedTileEntityList Ljava/util/List;
 	FIELD field_73000_b entityRemoval Ljava/util/List;
+		COMMENT Entities marked for removal.
 	FIELD field_73010_i playerEntities Ljava/util/List;
+		COMMENT Array list of players in the world.
 	FIELD field_73007_j weatherEffects Ljava/util/List;
+		COMMENT a list of all the lightning entities
 	FIELD field_73001_c cloudColour J
 	FIELD field_73008_k skylightSubtracted I
+		COMMENT How much light is subtracted from full daylight
 	FIELD field_73005_l updateLCG I
+		COMMENT Contains the current Linear Congruential Generator seed for block updates. Used with an A value of 3 and a C value of 0x3c6ef35f, producing a highly planar series of values ill-suited for choosing random blocks in a 16x128x16 field.
 	FIELD field_73006_m DIST_HASH_MAGIC I
+		COMMENT magic number used to generate fast random numbers for 3d distribution within a chunk
 	FIELD field_73003_n prevRainingStrength F
 	FIELD field_73004_o rainingStrength F
 	FIELD field_73018_p prevThunderingStrength F
 	FIELD field_73017_q thunderingStrength F
 	FIELD field_73016_r lastLightningBolt I
+		COMMENT Set to 2 whenever a lightning bolt is generated in SSP. Decrements if > 0 in updateWeather(). Value appears to be unused.
 	FIELD field_73014_t editingBlocks Z
+		COMMENT true while the world is editing blocks
 	FIELD field_73013_u difficultySetting I
+		COMMENT Option > Difficulty setting (0 - 3)
 	FIELD field_73012_v rand Ljava/util/Random;
+		COMMENT RNG for World.
 	FIELD field_73011_w provider Lnet/minecraft/world/WorldProvider;
+		COMMENT The WorldProvider instance that World uses.
 	FIELD field_73021_x worldAccesses Ljava/util/List;
 	FIELD field_73020_y chunkProvider Lnet/minecraft/world/chunk/IChunkProvider;
+		COMMENT Handles chunk operations and caching
 	FIELD field_73019_z saveHandler Lnet/minecraft/world/storage/ISaveHandler;
 	FIELD field_72986_A worldInfo Lnet/minecraft/world/storage/WorldInfo;
+		COMMENT holds information about a world (size on disk, time, spawn point, seed, ...)
 	FIELD field_72987_B findingSpawnPoint Z
+		COMMENT Boolean that is set to true when trying to find a spawn point
 	FIELD field_72988_C mapStorage Lnet/minecraft/world/storage/MapStorage;
 	FIELD field_72982_D villageCollectionObj Lnet/minecraft/village/VillageCollection;
 	FIELD field_72983_E villageSiegeObj Lnet/minecraft/village/VillageSiege;
 	FIELD field_72984_F theProfiler Lnet/minecraft/profiler/Profiler;
 	FIELD field_82741_K vecPool Lnet/minecraft/util/Vec3Pool;
+		COMMENT The world-local pool of vectors
 	FIELD field_83016_L theCalendar Ljava/util/Calendar;
 	FIELD field_72998_d collidingBoundingBoxes Ljava/util/ArrayList;
 	FIELD field_72989_L scanningTileEntities Z
 	FIELD field_72985_G spawnHostileMobs Z
+		COMMENT indicates if enemies are spawned or not
 	FIELD field_72992_H spawnPeacefulMobs Z
+		COMMENT A flag indicating whether we should spawn peaceful mobs.
 	FIELD field_72993_I activeChunkSet Ljava/util/Set;
+		COMMENT Positions to update
 	FIELD field_72990_M ambientTickCountdown I
+		COMMENT number of ticks until the next random ambients play
 	FIELD field_72994_J lightUpdateBlockList [I
+		COMMENT is a temporary list of blocks and light values used when updating light levels. Holds up to 32x32x32 blocks (the maximum influence of a light source.) Every element is a packed bit value: 0000000000LLLLzzzzzzyyyyyyxxxxxx. The 4-bit L is a light level used when darkening blocks. 6-bit numbers x, y and z represent the block's offset from the original block, plus 32 (i.e. value of 31 would mean a -1 offset
 	FIELD field_72991_N entitiesWithinAABBExcludingEntity Ljava/util/List;
+		COMMENT entities within AxisAlignedBB excluding one, set and returned in getEntitiesWithinAABBExcludingEntity(Entity var1, AxisAlignedBB var2)
 	FIELD field_72995_K isRemote Z
+		COMMENT This is set to true for client worlds, and false for server worlds.
+	METHOD func_72807_a getBiomeGenForCoords (II)Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT Gets the biome for a given set of x/z coordinates
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72959_q getWorldChunkManager ()Lnet/minecraft/world/biome/WorldChunkManager;
+	METHOD func_72970_h createChunkProvider ()Lnet/minecraft/world/chunk/IChunkProvider;
+		COMMENT Creates the chunk provider for this world. Called in the constructor. Retrieves provider from worldProvider?
+	METHOD func_72963_a initialize (Lnet/minecraft/world/WorldSettings;)V
+		ARG 0 par1WorldSettings
+	METHOD func_72974_f setSpawnLocation ()V
+		COMMENT Sets a new spawn location by finding an uncovered block at a random (x,z) location in the chunk.
+	METHOD func_72922_b getFirstUncoveredBlock (II)I
+		COMMENT Returns the block ID of the first block at this (x,z) location with air above it, searching from sea level upwards.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72798_a getBlockId (III)I
+		COMMENT Returns the block ID at coords x,y,z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72952_b getBlockLightOpacity (III)I
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72799_c isAirBlock (III)Z
+		COMMENT Returns true if the block at the specified coordinates is empty
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72927_d blockHasTileEntity (III)Z
+		COMMENT Checks if a block at a given position should have a tile entity.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_85175_e blockGetRenderType (III)I
+		COMMENT Returns the render type of the block at the given coordinate.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72899_e blockExists (III)Z
+		COMMENT Returns whether a block exists at world coordinates x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72873_a doChunksNearChunkExist (IIII)Z
+		COMMENT Checks if any of the chunks within distance (argument 4) blocks of the given block exist
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72904_c checkChunksExist (IIIIII)Z
+		COMMENT Checks between a min and max all the chunks inbetween actually exist. Args: minX, minY, minZ, maxX, maxY, maxZ
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72916_c chunkExists (II)Z
+		COMMENT Returns whether a chunk exists at chunk coordinates x, y
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72938_d getChunkFromBlockCoords (II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT Returns a chunk looked up by block coordinates. Args: x, z
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72964_e getChunkFromChunkCoords (II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT Returns back a chunk looked up by chunk coordinates Args: x, y
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72961_c setBlockAndMetadata (IIIII)Z
+		COMMENT Sets the block ID and metadata of a block in global coordinates
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72930_a setBlockAndMetadataWithUpdate (IIIIIZ)Z
+		COMMENT Sets the block ID and metadata of a block, optionally marking it as needing update. Args: X,Y,Z, blockID, metadata, needsUpdate
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72822_b setBlock (IIII)Z
+		COMMENT Sets the block to the specified blockID at the block coordinates Args x, y, z, blockID
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72803_f getBlockMaterial (III)Lnet/minecraft/block/material/Material;
+		COMMENT Returns the block's material.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72805_g getBlockMetadata (III)I
+		COMMENT Returns the block metadata at coords x,y,z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72921_c setBlockMetadataWithNotify (IIII)V
+		COMMENT Sets the blocks metadata and if set will then notify blocks that this block changed. Args: x, y, z, metadata
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72881_d setBlockMetadata (IIII)Z
+		COMMENT Set the metadata of a block in global coordinates
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72859_e setBlockWithNotify (IIII)Z
+		COMMENT Sets a block and notifies relevant systems with the block change  Args: x, y, z, blockID
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72832_d setBlockAndMetadataWithNotify (IIIII)Z
+		COMMENT Sets the block ID and metadata, then notifies neighboring blocks of the change Params: x, y, z, BlockID, Metadata
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72845_h markBlockForUpdate (III)V
+		COMMENT On the client, re-renders the block. On the server, sends the block to the client (which will re-render it), including the tile entity description packet if applicable. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72851_f notifyBlockChange (IIII)V
+		COMMENT The block type change and need to notify other systems  Args: x, y, z, blockID
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72975_g markBlocksDirtyVertical (IIII)V
+		COMMENT marks a vertical line of blocks as dirty
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72862_i markBlockForRenderUpdate2 (III)V
+		COMMENT On the client, re-renders this block. On the server, does nothing. Appears to be redundant.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72909_d markBlockRangeForRenderUpdate (IIIIII)V
+		COMMENT On the client, re-renders all blocks in this range, inclusive. On the server, does nothing. Args: min x, min y, min z, max x, max y, max z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72898_h notifyBlocksOfNeighborChange (IIII)V
+		COMMENT Notifies neighboring blocks that this specified block changed  Args: x, y, z, blockID
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72821_m notifyBlockOfNeighborChange (IIII)V
+		COMMENT Notifies a block that one of its neighbor change to the specified type Args: x, y, z, blockID
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72937_j canBlockSeeTheSky (III)Z
+		COMMENT Checks if the specified block is able to see the sky
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72883_k getFullBlockLightValue (III)I
+		COMMENT Does the same as getBlockLightValue_do but without checking if its not a normal block
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72957_l getBlockLightValue (III)I
+		COMMENT Gets the light value of a block location
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72849_a getBlockLightValue_do (IIIZ)I
+		COMMENT Gets the light value of a block location. This is the actual function that gets the value and has a bool flag that indicates if its a half step block to get the maximum light value of a direct neighboring block (left, right, forward, back, and up)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72976_f getHeightValue (II)I
+		COMMENT Returns the y coordinate with a block in it at this x, z coordinate
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72925_a getSkyBlockTypeBrightness (Lnet/minecraft/world/EnumSkyBlock;III)I
+		COMMENT Brightness for SkyBlock.Sky is clear white and (through color computing it is assumed) DEPENDENT ON DAYTIME. Brightness for SkyBlock.Block is yellowish and independent.
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72972_b getSavedLightValue (Lnet/minecraft/world/EnumSkyBlock;III)I
+		COMMENT Returns saved light value without taking into account the time of day.  Either looks in the sky light map or block light map based on the enumSkyBlock arg.
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72915_b setLightValue (Lnet/minecraft/world/EnumSkyBlock;IIII)V
+		COMMENT Sets the light value either into the sky map or block map depending on if enumSkyBlock is set to sky or block. Args: enumSkyBlock, x, y, z, lightValue
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72902_n markBlockForRenderUpdate (III)V
+		COMMENT On the client, re-renders this block. On the server, does nothing. Used for lighting updates.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72802_i getLightBrightnessForSkyBlocks (IIII)I
+		COMMENT Any Light rendered on a 1.8 Block goes through here
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72808_j getBrightness (IIII)F
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72801_o getLightBrightness (III)F
+		COMMENT Returns how bright the block is shown as which is the block's light value looked up in a lookup table (light values aren't linear for brightness). Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72935_r isDaytime ()Z
+		COMMENT Checks whether its daytime by seeing if the light subtracted from the skylight is less than 4
+	METHOD func_72933_a rayTraceBlocks (Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/MovingObjectPosition;
+		COMMENT ray traces all blocks, including non-collideable ones
+		ARG 0 par1Vec3
+		ARG 1 par2Vec3
+	METHOD func_72901_a rayTraceBlocks_do (Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;Z)Lnet/minecraft/util/MovingObjectPosition;
+		ARG 0 par1Vec3
+		ARG 1 par2Vec3
+		ARG 2 par3
+	METHOD func_72831_a rayTraceBlocks_do_do (Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;ZZ)Lnet/minecraft/util/MovingObjectPosition;
+		ARG 0 par1Vec3
+		ARG 1 par2Vec3
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72956_a playSoundAtEntity (Lnet/minecraft/entity/Entity;Ljava/lang/String;FF)V
+		COMMENT Plays a sound at the entity's position. Args: entity, sound, volume (relative to 1.0), and frequency (or pitch, also relative to 1.0).
+		ARG 0 par1Entity
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_85173_a playSoundToNearExcept (Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;FF)V
+		COMMENT Plays sound to all near players except the player reference given
+		ARG 0 par1EntityPlayer
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72908_a playSoundEffect (DDDLjava/lang/String;FF)V
+		COMMENT Play a sound effect. Many many parameters for this function. Not sure what they do, but a classic call is : (double)i + 0.5D, (double)j + 0.5D, (double)k + 0.5D, 'random.door_open', 1.0F, world.rand.nextFloat() * 0.1F + 0.9F with i,j,k position of the block.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7Str
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_72980_b playSound (DDDLjava/lang/String;FFZ)V
+		COMMENT par8 is loudness, all pars passed to minecraftInstance.sndManager.playSound
+		ARG 0 par10
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par5
+		ARG 4 par7Str
+		ARG 5 par8
+		ARG 6 par9
+	METHOD func_72934_a playRecord (Ljava/lang/String;III)V
+		COMMENT Plays a record at the specified coordinates of the specified name. Args: recordName, x, y, z
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72869_a spawnParticle (Ljava/lang/String;DDDDDD)V
+		COMMENT Spawns a particle.  Args particleName, x, y, z, velX, velY, velZ
+		ARG 0 par10
+		ARG 1 par12
+		ARG 2 par1Str
+		ARG 3 par2
+		ARG 4 par4
+		ARG 5 par6
+		ARG 6 par8
+	METHOD func_72942_c addWeatherEffect (Lnet/minecraft/entity/Entity;)Z
+		COMMENT adds a lightning bolt to the list of lightning bolts in this world.
+		ARG 0 par1Entity
+	METHOD func_72838_d spawnEntityInWorld (Lnet/minecraft/entity/Entity;)Z
+		COMMENT Called to place all entities as part of a world
+		ARG 0 par1Entity
+	METHOD func_72923_a obtainEntitySkin (Lnet/minecraft/entity/Entity;)V
+		COMMENT Start the skin for this entity downloading, if necessary, and increment its reference counter
+		ARG 0 par1Entity
+	METHOD func_72847_b releaseEntitySkin (Lnet/minecraft/entity/Entity;)V
+		COMMENT Decrement the reference counter for this entity's skin image data
+		ARG 0 par1Entity
+	METHOD func_72900_e removeEntity (Lnet/minecraft/entity/Entity;)V
+		COMMENT Schedule the entity for removal during the next tick. Marks the entity dead in anticipation.
+		ARG 0 par1Entity
+	METHOD func_72973_f removePlayerEntityDangerously (Lnet/minecraft/entity/Entity;)V
+		COMMENT Do NOT use this method to remove normal entities- use normal removeEntity
+		ARG 0 par1Entity
+	METHOD func_72954_a addWorldAccess (Lnet/minecraft/world/IWorldAccess;)V
+		COMMENT Adds a IWorldAccess to the list of worldAccesses
+		ARG 0 par1IWorldAccess
+	METHOD func_72848_b removeWorldAccess (Lnet/minecraft/world/IWorldAccess;)V
+		COMMENT Removes a worldAccess from the worldAccesses object
+		ARG 0 par1IWorldAccess
+	METHOD func_72945_a getCollidingBoundingBoxes (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;)Ljava/util/List;
+		COMMENT Returns a list of bounding boxes that collide with aabb excluding the passed in entity's collision. Args: entity, aabb
+		ARG 0 par1Entity
+		ARG 1 par2AxisAlignedBB
+	METHOD func_72840_a getAllCollidingBoundingBoxes (Lnet/minecraft/util/AxisAlignedBB;)Ljava/util/List;
+		COMMENT calculates and returns a list of colliding bounding boxes within a given AABB
+		ARG 0 par1AxisAlignedBB
+	METHOD func_72967_a calculateSkylightSubtracted (F)I
+		COMMENT Returns the amount of skylight subtracted for the current time
+		ARG 0 par1
+	METHOD func_72971_b getSunBrightness (F)F
+		COMMENT Returns the sun brightness - checks time of day, rain and thunder
+		ARG 0 par1
+	METHOD func_72833_a getSkyColor (Lnet/minecraft/entity/Entity;F)Lnet/minecraft/util/Vec3;
+		COMMENT Calculates the color for the skybox
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_72826_c getCelestialAngle (F)F
+		COMMENT calls calculateCelestialAngle
+		ARG 0 par1
+	METHOD func_72853_d getMoonPhase (F)I
+		ARG 0 par1
+	METHOD func_72929_e getCelestialAngleRadians (F)F
+		COMMENT Return getCelestialAngle()*2*PI
+		ARG 0 par1
+	METHOD func_72824_f drawClouds (F)Lnet/minecraft/util/Vec3;
+		ARG 0 par1
+	METHOD func_72948_g getFogColor (F)Lnet/minecraft/util/Vec3;
+		COMMENT Returns vector(ish) with R/G/B for fog
+		ARG 0 par1
+	METHOD func_72874_g getPrecipitationHeight (II)I
+		COMMENT Gets the height to which rain/snow will fall. Calculates it if not already stored.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72825_h getTopSolidOrLiquidBlock (II)I
+		COMMENT Finds the highest block on the x, z coordinate that is solid and returns its y coord. Args x, z
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72880_h getStarBrightness (F)F
+		COMMENT How bright are stars in the sky
+		ARG 0 par1
+	METHOD func_72836_a scheduleBlockUpdate (IIIII)V
+		COMMENT Schedules a tick to a block with a delay (Most commonly the tick rate)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72892_b scheduleBlockUpdateFromLoad (IIIII)V
+		COMMENT Schedules a block update from the saved information in a chunk. Called when the chunk is loaded.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72939_s updateEntities ()V
+		COMMENT Updates (and cleans up) entities and tile entities
+	METHOD func_72852_a addTileEntity (Ljava/util/Collection;)V
+		ARG 0 par1Collection
+	METHOD func_72870_g updateEntity (Lnet/minecraft/entity/Entity;)V
+		COMMENT Will update the entity in the world if the chunk the entity is in is currently loaded. Args: entity
+		ARG 0 par1Entity
+	METHOD func_72866_a updateEntityWithOptionalForce (Lnet/minecraft/entity/Entity;Z)V
+		COMMENT Will update the entity in the world if the chunk the entity is in is currently loaded or its forced to update. Args: entity, forceUpdate
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_72855_b checkIfAABBIsClear (Lnet/minecraft/util/AxisAlignedBB;)Z
+		COMMENT Returns true if there are no solid, live entities in the specified AxisAlignedBB
+		ARG 0 par1AxisAlignedBB
+	METHOD func_72917_a checkIfAABBIsClearExcludingEntity (Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/entity/Entity;)Z
+		COMMENT Returns true if there are no solid, live entities in the specified AxisAlignedBB, excluding the given entity
+		ARG 0 par1AxisAlignedBB
+		ARG 1 par2Entity
+	METHOD func_72829_c isAABBNonEmpty (Lnet/minecraft/util/AxisAlignedBB;)Z
+		COMMENT Returns true if there are any blocks in the region constrained by an AxisAlignedBB
+		ARG 0 par1AxisAlignedBB
+	METHOD func_72953_d isAnyLiquid (Lnet/minecraft/util/AxisAlignedBB;)Z
+		COMMENT Returns if any of the blocks within the aabb are liquids. Args: aabb
+		ARG 0 par1AxisAlignedBB
+	METHOD func_72978_e isBoundingBoxBurning (Lnet/minecraft/util/AxisAlignedBB;)Z
+		COMMENT Returns whether or not the given bounding box is on fire or not
+		ARG 0 par1AxisAlignedBB
+	METHOD func_72918_a handleMaterialAcceleration (Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/block/material/Material;Lnet/minecraft/entity/Entity;)Z
+		COMMENT handles the acceleration of an object whilst in water. Not sure if it is used elsewhere.
+		ARG 0 par1AxisAlignedBB
+		ARG 1 par2Material
+		ARG 2 par3Entity
+	METHOD func_72875_a isMaterialInBB (Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/block/material/Material;)Z
+		COMMENT Returns true if the given bounding box contains the given material
+		ARG 0 par1AxisAlignedBB
+		ARG 1 par2Material
+	METHOD func_72830_b isAABBInMaterial (Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/block/material/Material;)Z
+		COMMENT checks if the given AABB is in the material given. Used while swimming.
+		ARG 0 par1AxisAlignedBB
+		ARG 1 par2Material
+	METHOD func_72876_a createExplosion (Lnet/minecraft/entity/Entity;DDDFZ)Lnet/minecraft/world/Explosion;
+		COMMENT Creates an explosion. Args: entity, x, y, z, strength
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_72885_a newExplosion (Lnet/minecraft/entity/Entity;DDDFZZ)Lnet/minecraft/world/Explosion;
+		COMMENT returns a new explosion. Does initiation (at time of writing Explosion is not finished)
+		ARG 0 par10
+		ARG 1 par1Entity
+		ARG 2 par2
+		ARG 3 par4
+		ARG 4 par6
+		ARG 5 par8
+		ARG 6 par9
+	METHOD func_72842_a getBlockDensity (Lnet/minecraft/util/Vec3;Lnet/minecraft/util/AxisAlignedBB;)F
+		COMMENT Gets the percentage of real blocks within within a bounding box, along a specified vector.
+		ARG 0 par1Vec3
+		ARG 1 par2AxisAlignedBB
+	METHOD func_72886_a extinguishFire (Lnet/minecraft/entity/player/EntityPlayer;IIII)Z
+		COMMENT If the block in the given direction of the given coordinate is fire, extinguish it. Args: Player, X,Y,Z, blockDirection
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72981_t getDebugLoadedEntities ()Ljava/lang/String;
+		COMMENT This string is 'All: (number of loaded entities)' Viewable by press ing F3
+	METHOD func_72827_u getProviderName ()Ljava/lang/String;
+		COMMENT Returns the name of the current chunk provider, by calling chunkprovider.makeString()
+	METHOD func_72796_p getBlockTileEntity (III)Lnet/minecraft/tileentity/TileEntity;
+		COMMENT Returns the TileEntity associated with a given block in X,Y,Z coordinates, or null if no TileEntity exists
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72837_a setBlockTileEntity (IIILnet/minecraft/tileentity/TileEntity;)V
+		COMMENT Sets the TileEntity for a given block in X, Y, Z coordinates
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4TileEntity
+	METHOD func_72932_q removeBlockTileEntity (III)V
+		COMMENT Removes the TileEntity for a given block in X,Y,Z coordinates
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72928_a markTileEntityForDespawn (Lnet/minecraft/tileentity/TileEntity;)V
+		COMMENT adds tile entity to despawn list (renamed from markEntityForDespawn)
+		ARG 0 par1TileEntity
+	METHOD func_72804_r isBlockOpaqueCube (III)Z
+		COMMENT Returns true if the block at the specified coordinates is an opaque cube. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72809_s isBlockNormalCube (III)Z
+		COMMENT Indicate if a material is a normal solid opaque cube.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72797_t doesBlockHaveSolidTopSurface (III)Z
+		COMMENT Returns true if the block at the given coordinate has a solid (buildable) top surface.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72887_b isBlockNormalCubeDefault (IIIZ)Z
+		COMMENT Checks if the block is a solid, normal cube. If the chunk does not exist, or is not loaded, it returns the boolean parameter.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72966_v calculateInitialSkylight ()V
+		COMMENT Called on construction of the World class to setup the initial skylight values
+	METHOD func_72891_a setAllowedSpawnTypes (ZZ)V
+		COMMENT Set which types of mobs are allowed to spawn (peaceful vs hostile).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72835_b tick ()V
+		COMMENT Runs a single tick for the world
+	METHOD func_72947_a calculateInitialWeather ()V
+		COMMENT Called from World constructor to set rainingStrength and thunderingStrength
+	METHOD func_72979_l updateWeather ()V
+		COMMENT Updates all weather states.
+	METHOD func_72913_w toggleRain ()V
+	METHOD func_72903_x setActivePlayerChunksAndCheckLight ()V
+	METHOD func_72941_a moodSoundAndLightCheck (IILnet/minecraft/world/chunk/Chunk;)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3Chunk
+	METHOD func_72893_g tickBlocksAndAmbiance ()V
+		COMMENT plays random cave ambient sounds and runs updateTick on random blocks within each chunk in the vacinity of a player
+	METHOD func_72884_u isBlockFreezable (III)Z
+		COMMENT checks to see if a given block is both water and is cold enough to freeze
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72850_v isBlockFreezableNaturally (III)Z
+		COMMENT checks to see if a given block is both water and has at least one immediately adjacent non-water block
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72834_c canBlockFreeze (IIIZ)Z
+		COMMENT checks to see if a given block is both water, and cold enough to freeze - if the par4 boolean is set, this will only return true if there is a non-water block immediately adjacent to the specified block
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72858_w canSnowAt (III)Z
+		COMMENT Tests whether or not snow can be placed at a given location
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72969_x updateAllLightTypes (III)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72949_a computeSkyLightValue (IIIIII)I
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72895_f computeBlockLightValue (IIIIII)I
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72936_c updateLightByType (Lnet/minecraft/world/EnumSkyBlock;III)V
+		ARG 0 par1EnumSkyBlock
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72955_a tickUpdates (Z)Z
+		COMMENT Runs through the list of updates to run and ticks them
+		ARG 0 par1
+	METHOD func_72920_a getPendingBlockUpdates (Lnet/minecraft/world/chunk/Chunk;Z)Ljava/util/List;
+		ARG 0 par1Chunk
+		ARG 1 par2
+	METHOD func_72839_b getEntitiesWithinAABBExcludingEntity (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;)Ljava/util/List;
+		COMMENT Will get all entities within the specified AABB excluding the one passed into it. Args: entityToExclude, aabb
+		ARG 0 par1Entity
+		ARG 1 par2AxisAlignedBB
+	METHOD func_72872_a getEntitiesWithinAABB (Ljava/lang/Class;Lnet/minecraft/util/AxisAlignedBB;)Ljava/util/List;
+		COMMENT Returns all entities of the specified class type which intersect with the AABB. Args: entityClass, aabb
+		ARG 0 par1Class
+		ARG 1 par2AxisAlignedBB
+	METHOD func_82733_a selectEntitiesWithinAABB (Ljava/lang/Class;Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/command/IEntitySelector;)Ljava/util/List;
+		ARG 0 par1Class
+		ARG 1 par2AxisAlignedBB
+		ARG 2 par3IEntitySelector
+	METHOD func_72857_a findNearestEntityWithinAABB (Ljava/lang/Class;Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/entity/Entity;)Lnet/minecraft/entity/Entity;
+		ARG 0 par1Class
+		ARG 1 par2AxisAlignedBB
+		ARG 2 par3Entity
+	METHOD func_73045_a getEntityByID (I)Lnet/minecraft/entity/Entity;
+		COMMENT Returns the Entity with the given ID, or null if it doesn't exist in this World.
+		ARG 0 par1
+	METHOD func_72910_y getLoadedEntityList ()Ljava/util/List;
+		COMMENT Accessor for world Loaded Entity List
+	METHOD func_72944_b updateTileEntityChunkAndDoNothing (IIILnet/minecraft/tileentity/TileEntity;)V
+		COMMENT marks the chunk that contains this tilentity as modified and then calls worldAccesses.doNothingWithTileEntity
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4TileEntity
+	METHOD func_72907_a countEntities (Ljava/lang/Class;)I
+		COMMENT Counts how many entities of an entity class exist in the world. Args: entityClass
+		ARG 0 par1Class
+	METHOD func_72868_a addLoadedEntities (Ljava/util/List;)V
+		COMMENT adds entities to the loaded entities list, and loads thier skins.
+		ARG 0 par1List
+	METHOD func_72828_b unloadEntities (Ljava/util/List;)V
+		COMMENT Adds a list of entities to be unloaded on the next pass of World.updateEntities()
+		ARG 0 par1List
+	METHOD func_72931_a canPlaceEntityOnSide (IIIIZILnet/minecraft/entity/Entity;)Z
+		COMMENT Returns true if the given Entity can be placed on the given side of the given block position.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7Entity
+	METHOD func_72865_a getPathEntityToEntity (Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;FZZZZ)Lnet/minecraft/pathfinding/PathEntity;
+		ARG 0 par1Entity
+		ARG 1 par2Entity
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_72844_a getEntityPathToXYZ (Lnet/minecraft/entity/Entity;IIIFZZZZ)Lnet/minecraft/pathfinding/PathEntity;
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+		ARG 7 par8
+		ARG 8 par9
+	METHOD func_72879_k isBlockProvidingPowerTo (IIII)Z
+		COMMENT Is this block powering in the specified direction Args: x, y, z, direction
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72871_y isBlockGettingPowered (III)Z
+		COMMENT Whether one of the neighboring blocks is putting power into this block. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72878_l isBlockIndirectlyProvidingPowerTo (IIII)Z
+		COMMENT Is a block next to you getting powered (if its an attachable block) or is it providing power directly to you.  Args: x, y, z, direction
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72864_z isBlockIndirectlyGettingPowered (III)Z
+		COMMENT Used to see if one of the blocks next to you or your block is getting power from a neighboring block. Used by items like TNT or Doors so they don't have redstone going straight into them.  Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72890_a getClosestPlayerToEntity (Lnet/minecraft/entity/Entity;D)Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT Gets the closest player to the entity within the specified distance (if distance is less than 0 then ignored). Args: entity, dist
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_72977_a getClosestPlayer (DDDD)Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT Gets the closest player to the point within the specified distance (distance can be set to less than 0 to not limit the distance). Args: x, y, z, dist
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+	METHOD func_72856_b getClosestVulnerablePlayerToEntity (Lnet/minecraft/entity/Entity;D)Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT Returns the closest vulnerable player to this entity within the given radius, or null if none is found
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_72846_b getClosestVulnerablePlayer (DDDD)Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT Returns the closest vulnerable player within the given radius, or null if none is found.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+	METHOD func_72924_a getPlayerEntityByName (Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT Find a player by name in this world.
+		ARG 0 par1Str
+	METHOD func_72882_A sendQuittingDisconnectingPacket ()V
+		COMMENT If on MP, sends a quitting packet.
+	METHOD func_72906_B checkSessionLock ()V
+		COMMENT Checks whether the session lock file was modified by another process
+	METHOD func_72905_C getSeed ()J
+		COMMENT Retrieve the world seed from level.dat
+	METHOD func_82737_E getTotalWorldTime ()J
+	METHOD func_72820_D getWorldTime ()J
+	METHOD func_72877_b setWorldTime (J)V
+		COMMENT Sets the world time.
+		ARG 0 par1
+	METHOD func_72861_E getSpawnPoint ()Lnet/minecraft/util/ChunkCoordinates;
+		COMMENT Returns the coordinates of the spawn point
+	METHOD func_72950_A setSpawnLocation (III)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72897_h joinEntityInSurroundings (Lnet/minecraft/entity/Entity;)V
+		COMMENT spwans an entity and loads surrounding chunks
+		ARG 0 par1Entity
+	METHOD func_72962_a canMineBlock (Lnet/minecraft/entity/player/EntityPlayer;III)Z
+		COMMENT Called when checking if a certain block can be mined or not. The 'spawn safe zone' check is located here.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72960_a setEntityState (Lnet/minecraft/entity/Entity;B)V
+		COMMENT sends a Packet 38 (Entity Status) to all tracked players of that entity
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_72863_F getChunkProvider ()Lnet/minecraft/world/chunk/IChunkProvider;
+		COMMENT gets the IChunkProvider this world uses.
+	METHOD func_72965_b addBlockEvent (IIIIII)V
+		COMMENT Adds a block event with the given Args to the blockEventCache. During the next tick(), the block specified will have its onBlockEvent handler called with the given parameters. Args: X,Y,Z, BlockID, EventID, EventParameter
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72860_G getSaveHandler ()Lnet/minecraft/world/storage/ISaveHandler;
+		COMMENT Returns this world's current save handler
+	METHOD func_72912_H getWorldInfo ()Lnet/minecraft/world/storage/WorldInfo;
+		COMMENT Gets the World's WorldInfo instance
+	METHOD func_82736_K getGameRules ()Lnet/minecraft/world/GameRules;
+		COMMENT Gets the GameRules instance.
+	METHOD func_72854_c updateAllPlayersSleepingFlag ()V
+		COMMENT Updates the flag that indicates whether or not all players in the world are sleeping.
+	METHOD func_72819_i getWeightedThunderStrength (F)F
+		ARG 0 par1
+	METHOD func_72867_j getRainStrength (F)F
+		COMMENT Not sure about this actually. Reverting this one myself.
+		ARG 0 par1
+	METHOD func_72894_k setRainStrength (F)V
+		ARG 0 par1
+	METHOD func_72911_I isThundering ()Z
+		COMMENT Returns true if the current thunder strength (weighted with the rain strength) is greater than 0.9
+	METHOD func_72896_J isRaining ()Z
+		COMMENT Returns true if the current rain strength is greater than 0.2
+	METHOD func_72951_B canLightningStrikeAt (III)Z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72958_C isBlockHighHumidity (III)Z
+		COMMENT Checks to see if the biome rainfall values for a given x,y,z coordinate set are extremely high
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72823_a setItemData (Ljava/lang/String;Lnet/minecraft/world/WorldSavedData;)V
+		COMMENT Assigns the given String id to the given MapDataBase using the MapStorage, removing any existing ones of the same id.
+		ARG 0 par1Str
+		ARG 1 par2WorldSavedData
+	METHOD func_72943_a loadItemData (Ljava/lang/Class;Ljava/lang/String;)Lnet/minecraft/world/WorldSavedData;
+		COMMENT Loads an existing MapDataBase corresponding to the given String id from disk using the MapStorage, instantiating the given Class, or returns null if none such file exists. args: Class to instantiate, String dataid
+		ARG 0 par1Class
+		ARG 1 par2Str
+	METHOD func_72841_b getUniqueDataId (Ljava/lang/String;)I
+		COMMENT Returns an unique new data id from the MapStorage for the given prefix and saves the idCounts map to the 'idcounts' file.
+		ARG 0 par1Str
+	METHOD func_72926_e playAuxSFX (IIIII)V
+		COMMENT See description for func_72706_a.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72889_a playAuxSFXAtEntity (Lnet/minecraft/entity/player/EntityPlayer;IIIII)V
+		COMMENT See description for playAuxSFX.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72800_K getHeight ()I
+		COMMENT Returns current world height.
+	METHOD func_72940_L getActualHeight ()I
+		COMMENT Returns current world height.
+	METHOD func_72843_D setRandomSeed (III)Ljava/util/Random;
+		COMMENT puts the World Random seed to a specific state dependant on the inputs
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72946_b findClosestStructure (Ljava/lang/String;III)Lnet/minecraft/world/ChunkPosition;
+		COMMENT Returns the location of the closest structure of the specified type. If not found returns null.
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72806_N extendedLevelsInChunkCache ()Z
+		COMMENT set by !chunk.getAreLevelsEmpty
+	METHOD func_72919_O getHorizon ()D
+		COMMENT Returns horizon height for use in rendering the sky.
+	METHOD func_72914_a addWorldInfoToCrashReport (Lnet/minecraft/crash/CrashReport;)Lnet/minecraft/crash/CrashReportCategory;
+		COMMENT Adds some basic stats of the world to the given crash report.
+		ARG 0 par1CrashReport
+	METHOD func_72888_f destroyBlockInWorldPartially (IIIII)V
+		COMMENT Starts (or continues) destroying a block with given ID at the given coordinates for the given partially destroyed value
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_82732_R getWorldVec3Pool ()Lnet/minecraft/util/Vec3Pool;
+		COMMENT Return the Vec3Pool object for this world.
+	METHOD func_83015_S getCurrentDate ()Ljava/util/Calendar;
+		COMMENT returns a calendar object containing the current date

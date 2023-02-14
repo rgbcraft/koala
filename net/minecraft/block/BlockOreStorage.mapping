@@ -1,1 +1,4 @@
 CLASS net/minecraft/block/BlockOreStorage
+	METHOD func_71851_a getBlockTextureFromSide (I)I
+		COMMENT Returns the block texture based on the side being looked at.  Args: side
+		ARG 0 par1

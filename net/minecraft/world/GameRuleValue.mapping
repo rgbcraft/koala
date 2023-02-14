@@ -3,3 +3,10 @@ CLASS net/minecraft/world/GameRuleValue
 	FIELD field_82760_b valueBoolean Z
 	FIELD field_82761_c valueInteger I
 	FIELD field_82759_d valueDouble D
+	METHOD func_82757_a setValue (Ljava/lang/String;)V
+		COMMENT Set this game rule value.
+		ARG 0 par1Str
+	METHOD func_82756_a getGameRuleStringValue ()Ljava/lang/String;
+		COMMENT Gets the GameRule's value as String.
+	METHOD func_82758_b getGameRuleBooleanValue ()Z
+		COMMENT Gets the GameRule's value as boolean.

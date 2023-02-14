@@ -1,3 +1,40 @@
 CLASS net/minecraft/entity/monster/EntityBlaze
 	FIELD field_70847_d heightOffset F
+		COMMENT Random offset used in floating behaviour
 	FIELD field_70848_e heightOffsetUpdateTime I
+		COMMENT ticks until heightOffset is randomized
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70070_b getBrightnessForRender (F)I
+		ARG 0 par1
+	METHOD func_70013_c getBrightness (F)F
+		COMMENT Gets how bright this entity is.
+		ARG 0 par1
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70785_a attackEntity (Lnet/minecraft/entity/Entity;F)V
+		COMMENT Basic mob attack. Default to touch of death in EntityCreature. Overridden by each mob to define their attack.
+		ARG 0 par1Entity
+		ARG 1 par2
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70027_ad isBurning ()Z
+		COMMENT Returns true if the entity is on fire. Used by render to add the fire effect on rendering.
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70814_o isValidLightLevel ()Z
+		COMMENT Checks to make sure the light is not too bright where the mob is spawning
+	METHOD func_82193_c getAttackStrength (Lnet/minecraft/entity/Entity;)I
+		COMMENT Returns the amount of damage a mob should deal.
+		ARG 0 par1Entity

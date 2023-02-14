@@ -1,3 +1,8 @@
 CLASS net/minecraft/stats/AchievementMap
 	FIELD field_75964_a instance Lnet/minecraft/stats/AchievementMap;
+		COMMENT Holds the singleton instance of AchievementMap.
 	FIELD field_75963_b guidMap Ljava/util/Map;
+		COMMENT Maps a achievement id with it's unique GUID.
+	METHOD func_75962_a getGuid (I)Ljava/lang/String;
+		COMMENT Returns the unique GUID of a achievement id.
+		ARG 0 par0

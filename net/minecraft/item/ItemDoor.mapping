@@ -1,4 +1,42 @@
 CLASS net/minecraft/item/ItemDoor
 	FIELD field_77870_a doorMaterial Lnet/minecraft/block/material/Material;
+	METHOD func_77648_a onItemUse (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z
+		COMMENT Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS
+		ARG 0 par10
+		ARG 1 par1ItemStack
+		ARG 2 par2EntityPlayer
+		ARG 3 par3World
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+		ARG 8 par8
+		ARG 9 par9
+	METHOD func_77869_a placeDoorBlock (Lnet/minecraft/world/World;IIIILnet/minecraft/block/Block;)V
+		ARG 0 par0World
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5Block
 CLASS net/minecraft/item/ItemDoor
 	FIELD field_77870_a doorMaterial Lnet/minecraft/block/material/Material;
+	METHOD func_77648_a onItemUse (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z
+		COMMENT Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS
+		ARG 0 par10
+		ARG 1 par1ItemStack
+		ARG 2 par2EntityPlayer
+		ARG 3 par3World
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+		ARG 8 par8
+		ARG 9 par9
+	METHOD func_77869_a placeDoorBlock (Lnet/minecraft/world/World;IIIILnet/minecraft/block/Block;)V
+		ARG 0 par0World
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5Block

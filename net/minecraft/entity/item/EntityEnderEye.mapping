@@ -1,6 +1,39 @@
 CLASS net/minecraft/entity/item/EntityEnderEye
 	FIELD field_70224_b targetX D
+		COMMENT 'x' location the eye should float towards.
 	FIELD field_70225_c targetY D
+		COMMENT 'y' location the eye should float towards.
 	FIELD field_70222_d targetZ D
+		COMMENT 'z' location the eye should float towards.
 	FIELD field_70223_e despawnTimer I
 	FIELD field_70221_f shatterOrDrop Z
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70112_a isInRangeToRenderDist (D)Z
+		COMMENT Checks if the entity is in range to render by using the past in distance and comparing it to its average edge length * 64 * renderDistanceWeight Args: distance
+		ARG 0 par1
+	METHOD func_70220_a moveTowards (DID)V
+		COMMENT The location the eye should float/move towards. Currently used for moving towards the nearest stronghold. Args: strongholdX, strongholdY, strongholdZ
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par4
+	METHOD func_70016_h setVelocity (DDD)V
+		COMMENT Sets the velocity to the args. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_70013_c getBrightness (F)F
+		COMMENT Gets how bright this entity is.
+		ARG 0 par1
+	METHOD func_70070_b getBrightnessForRender (F)I
+		ARG 0 par1
+	METHOD func_70075_an canAttackWithItem ()Z
+		COMMENT If returns false, the item will not inflict any damage against entities.

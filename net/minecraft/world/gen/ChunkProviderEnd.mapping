@@ -8,8 +8,72 @@ CLASS net/minecraft/world/gen/ChunkProviderEnd
 	FIELD field_73200_m endWorld Lnet/minecraft/world/World;
 	FIELD field_73197_n densities [D
 	FIELD field_73198_o biomesForGeneration [Lnet/minecraft/world/biome/BiomeGenBase;
+		COMMENT The biomes that are used to generate the chunk
 	FIELD field_73195_c noiseData1 [D
 	FIELD field_73192_d noiseData2 [D
 	FIELD field_73193_e noiseData3 [D
 	FIELD field_73190_f noiseData4 [D
 	FIELD field_73191_g noiseData5 [D
+	METHOD func_73189_a generateTerrain (II[B[Lnet/minecraft/world/biome/BiomeGenBase;)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3ArrayOfByte
+		ARG 3 par4ArrayOfBiomeGenBase
+	METHOD func_73188_b replaceBlocksForBiome (II[B[Lnet/minecraft/world/biome/BiomeGenBase;)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3ArrayOfByte
+		ARG 3 par4ArrayOfBiomeGenBase
+	METHOD func_73158_c loadChunk (II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT loads or generates the chunk at the chunk location specified
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73154_d provideChunk (II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT Will return back a chunk, if it doesn't exist and its not a MP client it will generates all the blocks for the specified chunk from the map seed and chunk seed
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73187_a initializeNoiseField ([DIIIIII)[D
+		COMMENT generates a subset of the level's terrain data. Takes 7 arguments: the [empty] noise array, the position, and the size.
+		ARG 0 par1ArrayOfDouble
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_73149_a chunkExists (II)Z
+		COMMENT Checks to see if a chunk exists at x, y
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73153_a populate (Lnet/minecraft/world/chunk/IChunkProvider;II)V
+		COMMENT Populates chunk with ores etc etc
+		ARG 0 par1IChunkProvider
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73151_a saveChunks (ZLnet/minecraft/util/IProgressUpdate;)Z
+		COMMENT Two modes of operation: if passed true, save all Chunks in one go.  If passed false, save up to two chunks.  Return true if all chunks have been saved.
+		ARG 0 par1
+		ARG 1 par2IProgressUpdate
+	METHOD func_73156_b unload100OldestChunks ()Z
+		COMMENT Unloads the 100 oldest chunks from memory, due to a bug with chunkSet.add() never being called it thinks the list is always empty and will not remove any chunks.
+	METHOD func_73157_c canSave ()Z
+		COMMENT Returns if the IChunkProvider supports saving.
+	METHOD func_73148_d makeString ()Ljava/lang/String;
+		COMMENT Converts the instance data to a readable string.
+	METHOD func_73155_a getPossibleCreatures (Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;
+		COMMENT Returns a list of creatures of the specified type that can spawn at the given location.
+		ARG 0 par1EnumCreatureType
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73150_a findClosestStructure (Lnet/minecraft/world/World;Ljava/lang/String;III)Lnet/minecraft/world/ChunkPosition;
+		COMMENT Returns the location of the closest structure of the specified type. If not found returns null.
+		ARG 0 par1World
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_73152_e getLoadedChunkCount ()I
+	METHOD func_82695_e recreateStructures (II)V
+		ARG 0 par1
+		ARG 1 par2

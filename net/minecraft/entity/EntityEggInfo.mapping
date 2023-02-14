@@ -1,4 +1,7 @@
 CLASS net/minecraft/entity/EntityEggInfo
 	FIELD field_75613_a spawnedID I
+		COMMENT The entityID of the spawned mob
 	FIELD field_75611_b primaryColor I
+		COMMENT Base color of the egg
 	FIELD field_75612_c secondaryColor I
+		COMMENT Color of the egg spots

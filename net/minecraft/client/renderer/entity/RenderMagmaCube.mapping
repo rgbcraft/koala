@@ -1,1 +1,11 @@
 CLASS net/minecraft/client/renderer/entity/RenderMagmaCube
+	METHOD func_77119_a renderMagmaCube (Lnet/minecraft/entity/monster/EntityMagmaCube;DDDFF)V
+		ARG 0 par1EntityMagmaCube
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77118_a scaleMagmaCube (Lnet/minecraft/entity/monster/EntityMagmaCube;F)V
+		ARG 0 par1EntityMagmaCube
+		ARG 1 par2

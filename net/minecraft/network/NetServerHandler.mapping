@@ -1,11 +1,18 @@
 CLASS net/minecraft/network/NetServerHandler
 	FIELD field_72577_a logger Ljava/util/logging/Logger;
+		COMMENT The logging system.
 	FIELD field_72575_b netManager Lnet/minecraft/network/INetworkManager;
+		COMMENT The underlying network manager for this server handler.
 	FIELD field_72576_c connectionClosed Z
+		COMMENT This is set to true whenever a player disconnects from the server.
 	FIELD field_72573_d mcServer Lnet/minecraft/server/MinecraftServer;
+		COMMENT Reference to the MinecraftServer object.
 	FIELD field_72574_e playerEntity Lnet/minecraft/entity/player/EntityPlayerMP;
+		COMMENT Reference to the EntityPlayerMP object.
 	FIELD field_72571_f currentTicks I
+		COMMENT incremented each tick
 	FIELD field_72572_g ticksForFloatKick I
+		COMMENT player is kicked if they float for over 80 ticks without flying enabled
 	FIELD field_72585_i keepAliveRandomID I
 	FIELD field_72582_j keepAliveTimeSent J
 	FIELD field_72583_k randomGenerator Ljava/util/Random;
@@ -13,6 +20,89 @@ CLASS net/minecraft/network/NetServerHandler
 	FIELD field_72581_m chatSpamThresholdCount I
 	FIELD field_72578_n creativeItemCreationSpamThresholdTally I
 	FIELD field_72579_o lastPosX D
+		COMMENT The last known x position for this connection.
 	FIELD field_72589_p lastPosY D
+		COMMENT The last known y position for this connection.
 	FIELD field_72588_q lastPosZ D
+		COMMENT The last known z position for this connection.
 	FIELD field_72587_r hasMoved Z
+		COMMENT is true when the player has moved since his last movement packet
+	METHOD func_72570_d networkTick ()V
+		COMMENT run once each game tick
+	METHOD func_72565_c kickPlayerFromServer (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_72498_a handleFlying (Lnet/minecraft/network/packet/Packet10Flying;)V
+		ARG 0 par1Packet10Flying
+	METHOD func_72569_a setPlayerLocation (DDDFF)V
+		COMMENT Moves the player to the specified destination and rotation
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+	METHOD func_72510_a handleBlockDig (Lnet/minecraft/network/packet/Packet14BlockDig;)V
+		ARG 0 par1Packet14BlockDig
+	METHOD func_72472_a handlePlace (Lnet/minecraft/network/packet/Packet15Place;)V
+		ARG 0 par1Packet15Place
+	METHOD func_72515_a handleErrorMessage (Ljava/lang/String;[Ljava/lang/Object;)V
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfObj
+	METHOD func_72509_a unexpectedPacket (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT Default handler called for packets that don't have their own handlers in NetClientHandler; currentlly does nothing.
+		ARG 0 par1Packet
+	METHOD func_72567_b sendPacketToPlayer (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT addToSendQueue. if it is a chat packet, check before sending it
+		ARG 0 par1Packet
+	METHOD func_72502_a handleBlockItemSwitch (Lnet/minecraft/network/packet/Packet16BlockItemSwitch;)V
+		ARG 0 par1Packet16BlockItemSwitch
+	METHOD func_72481_a handleChat (Lnet/minecraft/network/packet/Packet3Chat;)V
+		ARG 0 par1Packet3Chat
+	METHOD func_72566_d handleSlashCommand (Ljava/lang/String;)V
+		COMMENT Processes a / command
+		ARG 0 par1Str
+	METHOD func_72524_a handleAnimation (Lnet/minecraft/network/packet/Packet18Animation;)V
+		ARG 0 par1Packet18Animation
+	METHOD func_72473_a handleEntityAction (Lnet/minecraft/network/packet/Packet19EntityAction;)V
+		COMMENT runs registerPacket on the given Packet19EntityAction
+		ARG 0 par1Packet19EntityAction
+	METHOD func_72492_a handleKickDisconnect (Lnet/minecraft/network/packet/Packet255KickDisconnect;)V
+		ARG 0 par1Packet255KickDisconnect
+	METHOD func_72568_e packetSize ()I
+		COMMENT returns 0 for memoryMapped connections
+	METHOD func_72507_a handleUseEntity (Lnet/minecraft/network/packet/Packet7UseEntity;)V
+		ARG 0 par1Packet7UseEntity
+	METHOD func_72458_a handleClientCommand (Lnet/minecraft/network/packet/Packet205ClientCommand;)V
+		ARG 0 par1Packet205ClientCommand
+	METHOD func_72469_b canProcessPacketsAsync ()Z
+		COMMENT If this returns false, all packets will be queued for the main thread to handle, even if they would otherwise be processed asynchronously. Used to avoid processing packets on the client before the world has been downloaded (which happens on the main thread)
+	METHOD func_72483_a handleRespawn (Lnet/minecraft/network/packet/Packet9Respawn;)V
+		COMMENT respawns the player
+		ARG 0 par1Packet9Respawn
+	METHOD func_72474_a handleCloseWindow (Lnet/minecraft/network/packet/Packet101CloseWindow;)V
+		ARG 0 par1Packet101CloseWindow
+	METHOD func_72523_a handleWindowClick (Lnet/minecraft/network/packet/Packet102WindowClick;)V
+		ARG 0 par1Packet102WindowClick
+	METHOD func_72479_a handleEnchantItem (Lnet/minecraft/network/packet/Packet108EnchantItem;)V
+		ARG 0 par1Packet108EnchantItem
+	METHOD func_72464_a handleCreativeSetSlot (Lnet/minecraft/network/packet/Packet107CreativeSetSlot;)V
+		COMMENT Handle a creative slot packet.
+		ARG 0 par1Packet107CreativeSetSlot
+	METHOD func_72476_a handleTransaction (Lnet/minecraft/network/packet/Packet106Transaction;)V
+		ARG 0 par1Packet106Transaction
+	METHOD func_72487_a handleUpdateSign (Lnet/minecraft/network/packet/Packet130UpdateSign;)V
+		COMMENT Updates Client side signs
+		ARG 0 par1Packet130UpdateSign
+	METHOD func_72477_a handleKeepAlive (Lnet/minecraft/network/packet/Packet0KeepAlive;)V
+		COMMENT Handle a keep alive packet.
+		ARG 0 par1Packet0KeepAlive
+	METHOD func_72489_a isServerHandler ()Z
+		COMMENT determine if it is a server handler
+	METHOD func_72471_a handlePlayerAbilities (Lnet/minecraft/network/packet/Packet202PlayerAbilities;)V
+		COMMENT Handle a player abilities packet.
+		ARG 0 par1Packet202PlayerAbilities
+	METHOD func_72461_a handleAutoComplete (Lnet/minecraft/network/packet/Packet203AutoComplete;)V
+		ARG 0 par1Packet203AutoComplete
+	METHOD func_72504_a handleClientInfo (Lnet/minecraft/network/packet/Packet204ClientInfo;)V
+		ARG 0 par1Packet204ClientInfo
+	METHOD func_72501_a handleCustomPayload (Lnet/minecraft/network/packet/Packet250CustomPayload;)V
+		ARG 0 par1Packet250CustomPayload

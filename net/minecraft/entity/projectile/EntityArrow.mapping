@@ -6,9 +6,61 @@ CLASS net/minecraft/entity/projectile/EntityArrow
 	FIELD field_70253_h inData I
 	FIELD field_70254_i inGround Z
 	FIELD field_70251_a canBePickedUp I
+		COMMENT 1 if the player can pick up the arrow
 	FIELD field_70249_b arrowShake I
+		COMMENT Seems to be some sort of timer for animating an arrow.
 	FIELD field_70250_c shootingEntity Lnet/minecraft/entity/Entity;
+		COMMENT The owner of this arrow.
 	FIELD field_70252_j ticksInGround I
 	FIELD field_70257_an ticksInAir I
 	FIELD field_70255_ao damage D
 	FIELD field_70256_ap knockbackStrength I
+		COMMENT The amount of knockback an arrow applies when it hits a mob.
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70186_c setThrowableHeading (DDDFF)V
+		COMMENT Similar to setArrowHeading, it's point the throwable entity to a x, y, z direction.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+	METHOD func_70056_a setPositionAndRotation2 (DDDFFI)V
+		COMMENT Sets the position and rotation. Only difference from the other one is no bounding on the rotation. Args: posX, posY, posZ, yaw, pitch
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_70016_h setVelocity (DDD)V
+		COMMENT Sets the velocity to the args. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70100_b_ onCollideWithPlayer (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Called by a player entity when they collide with an entity
+		ARG 0 par1EntityPlayer
+	METHOD func_70041_e_ canTriggerWalking ()Z
+		COMMENT returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_70239_b setDamage (D)V
+		ARG 0 par1
+	METHOD func_70242_d getDamage ()D
+	METHOD func_70240_a setKnockbackStrength (I)V
+		COMMENT Sets the amount of knockback the arrow applies when it hits a mob.
+		ARG 0 par1
+	METHOD func_70075_an canAttackWithItem ()Z
+		COMMENT If returns false, the item will not inflict any damage against entities.
+	METHOD func_70243_d setIsCritical (Z)V
+		COMMENT Whether the arrow has a stream of critical hit particles flying behind it.
+		ARG 0 par1
+	METHOD func_70241_g getIsCritical ()Z
+		COMMENT Whether the arrow has a stream of critical hit particles flying behind it.

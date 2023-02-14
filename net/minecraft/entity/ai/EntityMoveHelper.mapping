@@ -1,7 +1,23 @@
 CLASS net/minecraft/entity/ai/EntityMoveHelper
 	FIELD field_75648_a entity Lnet/minecraft/entity/EntityLiving;
+		COMMENT The EntityLiving that is being moved
 	FIELD field_75646_b posX D
 	FIELD field_75647_c posY D
 	FIELD field_75644_d posZ D
 	FIELD field_75645_e speed F
+		COMMENT The speed at which the entity should move
 	FIELD field_75643_f update Z
+	METHOD func_75640_a isUpdating ()Z
+	METHOD func_75638_b getSpeed ()F
+	METHOD func_75642_a setMoveTo (DDDF)V
+		COMMENT Sets the speed and location to move to
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+	METHOD func_75641_c onUpdateMoveHelper ()V
+	METHOD func_75639_a limitAngle (FFF)F
+		COMMENT Limits the given angle to a upper and lower limit.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

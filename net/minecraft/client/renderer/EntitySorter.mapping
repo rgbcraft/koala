@@ -1,4 +1,11 @@
 CLASS net/minecraft/client/renderer/EntitySorter
 	FIELD field_78949_a entityPosX D
+		COMMENT Entity position X
 	FIELD field_78947_b entityPosY D
+		COMMENT Entity position Y
 	FIELD field_78948_c entityPosZ D
+		COMMENT Entity position Z
+	METHOD func_78946_a sortByDistanceToEntity (Lnet/minecraft/client/renderer/WorldRenderer;Lnet/minecraft/client/renderer/WorldRenderer;)I
+		COMMENT Sorts the two world renderers according to their distance to a given entity.
+		ARG 0 par1WorldRenderer
+		ARG 1 par2WorldRenderer

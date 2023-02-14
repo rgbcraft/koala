@@ -1,15 +1,57 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntityRenderer
 	FIELD field_76966_m specialRendererMap Ljava/util/Map;
+		COMMENT A mapping of TileEntitySpecialRenderers used for each TileEntity that has one
 	FIELD field_76963_a instance Lnet/minecraft/client/renderer/tileentity/TileEntityRenderer;
+		COMMENT The static instance of TileEntityRenderer
 	FIELD field_76964_n fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT The FontRenderer instance used by the TileEntityRenderer
 	FIELD field_76961_b staticPlayerX D
+		COMMENT The player's current X position (same as playerX)
 	FIELD field_76962_c staticPlayerY D
+		COMMENT The player's current Y position (same as playerY)
 	FIELD field_76959_d staticPlayerZ D
+		COMMENT The player's current Z position (same as playerZ)
 	FIELD field_76960_e renderEngine Lnet/minecraft/client/renderer/RenderEngine;
+		COMMENT The RenderEngine instance used by the TileEntityRenderer
 	FIELD field_76957_f worldObj Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
 	FIELD field_76958_g entityLivingPlayer Lnet/minecraft/entity/EntityLiving;
 	FIELD field_76969_h playerYaw F
 	FIELD field_76970_i playerPitch F
 	FIELD field_76967_j playerX D
+		COMMENT The player's X position in this rendering context
 	FIELD field_76968_k playerY D
+		COMMENT The player's Y position in this rendering context
 	FIELD field_76965_l playerZ D
+		COMMENT The player's Z position in this rendering context
+	METHOD func_76951_a getSpecialRendererForClass (Ljava/lang/Class;)Lnet/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer;
+		COMMENT Returns the TileEntitySpecialRenderer used to render this TileEntity class, or null if it has no special renderer
+		ARG 0 par1Class
+	METHOD func_76952_a hasSpecialRenderer (Lnet/minecraft/tileentity/TileEntity;)Z
+		COMMENT Returns true if this TileEntity instance has a TileEntitySpecialRenderer associated with it, false otherwise.
+		ARG 0 par1TileEntity
+	METHOD func_76956_b getSpecialRendererForEntity (Lnet/minecraft/tileentity/TileEntity;)Lnet/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer;
+		COMMENT Returns the TileEntitySpecialRenderer used to render this TileEntity instance, or null if it has no special renderer
+		ARG 0 par1TileEntity
+	METHOD func_76953_a cacheActiveRenderInfo (Lnet/minecraft/world/World;Lnet/minecraft/client/renderer/RenderEngine;Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/entity/EntityLiving;F)V
+		COMMENT Caches several render-related references, including the active World, RenderEngine, FontRenderer, and the camera-bound EntityLiving's interpolated pitch, yaw and position. Args: world, renderengine, fontrenderer, entityliving, partialTickTime
+		ARG 0 par1World
+		ARG 1 par2RenderEngine
+		ARG 2 par3FontRenderer
+		ARG 3 par4EntityLiving
+		ARG 4 par5
+	METHOD func_76950_a renderTileEntity (Lnet/minecraft/tileentity/TileEntity;F)V
+		COMMENT Render this TileEntity at its current position from the player
+		ARG 0 par1TileEntity
+		ARG 1 par2
+	METHOD func_76949_a renderTileEntityAt (Lnet/minecraft/tileentity/TileEntity;DDDF)V
+		COMMENT Render this TileEntity at a given set of coordinates
+		ARG 0 par1TileEntity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_76955_a setWorld (Lnet/minecraft/world/World;)V
+		COMMENT Sets the world used by all TileEntitySpecialRender instances and notifies them of this change.
+		ARG 0 par1World
+	METHOD func_76954_a getFontRenderer ()Lnet/minecraft/client/gui/FontRenderer;

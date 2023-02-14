@@ -1,1 +1,15 @@
 CLASS net/minecraft/item/ItemEnchantedBook
+	METHOD func_77636_d hasEffect (Lnet/minecraft/item/ItemStack;)Z
+		ARG 0 par1ItemStack
+	METHOD func_77616_k isItemTool (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Checks isDamagable and if it cannot be stacked
+		ARG 0 par1ItemStack
+	METHOD func_77613_e getRarity (Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumRarity;
+		COMMENT Return an item rarity from EnumRarity
+		ARG 0 par1ItemStack
+	METHOD func_77624_a addInformation (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V
+		COMMENT allows items to add custom lines of information to the mouseover description
+		ARG 0 par1ItemStack
+		ARG 1 par2EntityPlayer
+		ARG 2 par3List
+		ARG 3 par4

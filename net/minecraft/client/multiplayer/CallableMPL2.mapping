@@ -1,2 +1,5 @@
 CLASS net/minecraft/client/multiplayer/CallableMPL2
 	FIELD field_78835_a theWorldClient Lnet/minecraft/client/multiplayer/WorldClient;
+		COMMENT Reference to the WorldClient object.
+	METHOD func_78834_a getEntitySpawnQueueCountAndList ()Ljava/lang/String;
+		COMMENT Returns the size and contents of the entity spawn queue.

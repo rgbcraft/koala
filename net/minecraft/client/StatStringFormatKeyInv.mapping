@@ -1,2 +1,6 @@
 CLASS net/minecraft/client/StatStringFormatKeyInv
 	FIELD field_74536_a mc Lnet/minecraft/client/Minecraft;
+		COMMENT Minecraft instance
+	METHOD func_74535_a formatString (Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Formats the strings based on 'IStatStringFormat' interface.
+		ARG 0 par1Str

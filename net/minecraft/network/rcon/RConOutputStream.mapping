@@ -1,3 +1,21 @@
 CLASS net/minecraft/network/rcon/RConOutputStream
 	FIELD field_72674_a byteArrayOutput Ljava/io/ByteArrayOutputStream;
+		COMMENT Output stream
 	FIELD field_72673_b output Ljava/io/DataOutputStream;
+		COMMENT ByteArrayOutputStream wrapper
+	METHOD func_72670_a writeByteArray ([B)V
+		COMMENT Writes the given byte array to the output stream
+		ARG 0 par1ArrayOfByte
+	METHOD func_72671_a writeString (Ljava/lang/String;)V
+		COMMENT Writes the given String to the output stream
+		ARG 0 par1Str
+	METHOD func_72667_a writeInt (I)V
+		COMMENT Writes the given int to the output stream
+		ARG 0 par1
+	METHOD func_72668_a writeShort (S)V
+		COMMENT Writes the given short to the output stream
+		ARG 0 par1
+	METHOD func_72672_a toByteArray ()[B
+		COMMENT Returns the contents of the output stream as a byte array
+	METHOD func_72669_b reset ()V
+		COMMENT Resets the byte array output.

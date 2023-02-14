@@ -1,2 +1,4 @@
 CLASS net/minecraft/world/ColorizerWater
 	FIELD field_76915_a waterBuffer [I
+	METHOD func_76914_a setWaterBiomeColorizer ([I)V
+		ARG 0 par0ArrayOfInteger

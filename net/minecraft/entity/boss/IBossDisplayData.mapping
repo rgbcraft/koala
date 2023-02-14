@@ -1,1 +1,6 @@
 CLASS net/minecraft/entity/boss/IBossDisplayData
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70968_i getDragonHealth ()I
+		COMMENT Returns the health points of the dragon.
+	METHOD func_70023_ak getEntityName ()Ljava/lang/String;
+		COMMENT Gets the username of the entity.

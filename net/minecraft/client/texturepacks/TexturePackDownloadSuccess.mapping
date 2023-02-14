@@ -1,2 +1,4 @@
 CLASS net/minecraft/client/texturepacks/TexturePackDownloadSuccess
 	FIELD field_76171_a texturePacks Lnet/minecraft/client/texturepacks/TexturePackList;
+	METHOD func_76170_a onSuccess (Ljava/io/File;)V
+		ARG 0 par1File

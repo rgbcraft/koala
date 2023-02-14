@@ -1,1 +1,2 @@
 CLASS net/minecraft/dispenser/ILocation
+	METHOD func_82618_k getWorld ()Lnet/minecraft/world/World;

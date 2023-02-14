@@ -1,14 +1,98 @@
 CLASS net/minecraft/entity/EntityList
 	FIELD field_75625_b stringToClassMapping Ljava/util/Map;
+		COMMENT Provides a mapping between entity classes and a string
 	FIELD field_75626_c classToStringMapping Ljava/util/Map;
+		COMMENT Provides a mapping between a string and an entity classes
 	FIELD field_75623_d IDtoClassMapping Ljava/util/Map;
+		COMMENT provides a mapping between an entityID and an Entity Class
 	FIELD field_75624_e classToIDMapping Ljava/util/Map;
+		COMMENT provides a mapping between an Entity Class and an entity ID
 	FIELD field_75622_f stringToIDMapping Ljava/util/Map;
+		COMMENT Maps entity names to their numeric identifiers
 	FIELD field_75627_a entityEggs Ljava/util/HashMap;
+		COMMENT This is a HashMap of the Creative Entity Eggs/Spawners.
+	METHOD func_75618_a addMapping (Ljava/lang/Class;Ljava/lang/String;I)V
+		COMMENT adds a mapping between Entity classes and both a string representation and an ID
+		ARG 0 par0Class
+		ARG 1 par1Str
+		ARG 2 par2
+	METHOD func_75614_a addMapping (Ljava/lang/Class;Ljava/lang/String;III)V
+		COMMENT Adds a entity mapping with egg info.
+		ARG 0 par0Class
+		ARG 1 par1Str
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_75620_a createEntityByName (Ljava/lang/String;Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;
+		COMMENT Create a new instance of an entity in the world by using the entity name.
+		ARG 0 par0Str
+		ARG 1 par1World
+	METHOD func_75615_a createEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;
+		COMMENT create a new instance of an entity from NBT store
+		ARG 0 par0NBTTagCompound
+		ARG 1 par1World
+	METHOD func_75616_a createEntityByID (ILnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;
+		COMMENT Create a new instance of an entity in the world by using an entity ID.
+		ARG 0 par0
+		ARG 1 par1World
+	METHOD func_75619_a getEntityID (Lnet/minecraft/entity/Entity;)I
+		COMMENT gets the entityID of a specific entity
+		ARG 0 par0Entity
+	METHOD func_90035_a getClassFromID (I)Ljava/lang/Class;
+		COMMENT Return the class assigned to this entity ID.
+		ARG 0 par0
+	METHOD func_75621_b getEntityString (Lnet/minecraft/entity/Entity;)Ljava/lang/String;
+		COMMENT Gets the string representation of a specific entity.
+		ARG 0 par0Entity
+	METHOD func_75617_a getStringFromID (I)Ljava/lang/String;
+		COMMENT Finds the class using IDtoClassMapping and classToStringMapping
+		ARG 0 par0
 CLASS net/minecraft/entity/EntityList
 	FIELD field_75625_b stringToClassMapping Ljava/util/Map;
+		COMMENT Provides a mapping between entity classes and a string
 	FIELD field_75626_c classToStringMapping Ljava/util/Map;
+		COMMENT Provides a mapping between a string and an entity classes
 	FIELD field_75623_d IDtoClassMapping Ljava/util/Map;
+		COMMENT provides a mapping between an entityID and an Entity Class
 	FIELD field_75624_e classToIDMapping Ljava/util/Map;
+		COMMENT provides a mapping between an Entity Class and an entity ID
 	FIELD field_75622_f stringToIDMapping Ljava/util/Map;
+		COMMENT Maps entity names to their numeric identifiers
 	FIELD field_75627_a entityEggs Ljava/util/HashMap;
+		COMMENT This is a HashMap of the Creative Entity Eggs/Spawners.
+	METHOD func_75618_a addMapping (Ljava/lang/Class;Ljava/lang/String;I)V
+		COMMENT adds a mapping between Entity classes and both a string representation and an ID
+		ARG 0 par0Class
+		ARG 1 par1Str
+		ARG 2 par2
+	METHOD func_75614_a addMapping (Ljava/lang/Class;Ljava/lang/String;III)V
+		COMMENT Adds a entity mapping with egg info.
+		ARG 0 par0Class
+		ARG 1 par1Str
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_75620_a createEntityByName (Ljava/lang/String;Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;
+		COMMENT Create a new instance of an entity in the world by using the entity name.
+		ARG 0 par0Str
+		ARG 1 par1World
+	METHOD func_75615_a createEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;
+		COMMENT create a new instance of an entity from NBT store
+		ARG 0 par0NBTTagCompound
+		ARG 1 par1World
+	METHOD func_75616_a createEntityByID (ILnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;
+		COMMENT Create a new instance of an entity in the world by using an entity ID.
+		ARG 0 par0
+		ARG 1 par1World
+	METHOD func_75619_a getEntityID (Lnet/minecraft/entity/Entity;)I
+		COMMENT gets the entityID of a specific entity
+		ARG 0 par0Entity
+	METHOD func_90035_a getClassFromID (I)Ljava/lang/Class;
+		COMMENT Return the class assigned to this entity ID.
+		ARG 0 par0
+	METHOD func_75621_b getEntityString (Lnet/minecraft/entity/Entity;)Ljava/lang/String;
+		COMMENT Gets the string representation of a specific entity.
+		ARG 0 par0Entity
+	METHOD func_75617_a getStringFromID (I)Ljava/lang/String;
+		COMMENT Finds the class using IDtoClassMapping and classToStringMapping
+		ARG 0 par0

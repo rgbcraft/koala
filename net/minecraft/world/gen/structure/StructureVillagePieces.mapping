@@ -1,1 +1,52 @@
 CLASS net/minecraft/world/gen/structure/StructureVillagePieces
+	METHOD func_75084_a getStructureVillageWeightedPieceList (Ljava/util/Random;I)Ljava/util/ArrayList;
+		ARG 0 par0Random
+		ARG 1 par1
+	METHOD func_75081_c getNextVillageComponent (Lnet/minecraft/world/gen/structure/ComponentVillageStartPiece;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/ComponentVillage;
+		COMMENT attempts to find a next Village Component to be spawned
+		ARG 0 par0ComponentVillageStartPiece
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_75077_d getNextVillageStructureComponent (Lnet/minecraft/world/gen/structure/ComponentVillageStartPiece;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT attempts to find a next Structure Component to be spawned, private Village function
+		ARG 0 par0ComponentVillageStartPiece
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_75080_e getNextComponentVillagePath (Lnet/minecraft/world/gen/structure/ComponentVillageStartPiece;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;
+		ARG 0 par0ComponentVillageStartPiece
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_75078_a getNextStructureComponent (Lnet/minecraft/world/gen/structure/ComponentVillageStartPiece;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;
+		COMMENT attempts to find a next Structure Component to be spawned
+		ARG 0 par0ComponentVillageStartPiece
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+	METHOD func_75082_b getNextStructureComponentVillagePath (Lnet/minecraft/world/gen/structure/ComponentVillageStartPiece;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;
+		ARG 0 par0ComponentVillageStartPiece
+		ARG 1 par1List
+		ARG 2 par2Random
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7

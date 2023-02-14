@@ -1,2 +1,21 @@
 CLASS net/minecraft/item/ItemHangingEntity
 	FIELD field_82811_a hangingEntityClass Ljava/lang/Class;
+	METHOD func_77648_a onItemUse (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z
+		COMMENT Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS
+		ARG 0 par10
+		ARG 1 par1ItemStack
+		ARG 2 par2EntityPlayer
+		ARG 3 par3World
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+		ARG 8 par8
+		ARG 9 par9
+	METHOD func_82810_a createHangingEntity (Lnet/minecraft/world/World;IIII)Lnet/minecraft/entity/EntityHanging;
+		COMMENT Create the hanging entity associated to this item.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

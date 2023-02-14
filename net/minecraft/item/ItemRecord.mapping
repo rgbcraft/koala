@@ -1,3 +1,31 @@
 CLASS net/minecraft/item/ItemRecord
 	FIELD field_90044_b records Ljava/util/Map;
+		COMMENT List of all record items and their names.
 	FIELD field_77837_a recordName Ljava/lang/String;
+		COMMENT The name of the record.
+	METHOD func_77648_a onItemUse (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z
+		COMMENT Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS
+		ARG 0 par10
+		ARG 1 par1ItemStack
+		ARG 2 par2EntityPlayer
+		ARG 3 par3World
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+		ARG 8 par8
+		ARG 9 par9
+	METHOD func_77624_a addInformation (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V
+		COMMENT allows items to add custom lines of information to the mouseover description
+		ARG 0 par1ItemStack
+		ARG 1 par2EntityPlayer
+		ARG 2 par3List
+		ARG 3 par4
+	METHOD func_90043_g getRecordTitle ()Ljava/lang/String;
+		COMMENT Return the title for this record.
+	METHOD func_77613_e getRarity (Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumRarity;
+		COMMENT Return an item rarity from EnumRarity
+		ARG 0 par1ItemStack
+	METHOD func_90042_d getRecord (Ljava/lang/String;)Lnet/minecraft/item/ItemRecord;
+		COMMENT Return the record item corresponding to the given name.
+		ARG 0 par0Str

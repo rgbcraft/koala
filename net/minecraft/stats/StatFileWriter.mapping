@@ -1,2 +1,21 @@
 CLASS net/minecraft/stats/StatFileWriter
 	FIELD field_77454_d statsSyncher Lnet/minecraft/stats/StatsSyncher;
+	METHOD func_77450_a readStat (Lnet/minecraft/stats/StatBase;I)V
+		ARG 0 par1StatBase
+		ARG 1 par2
+	METHOD func_77451_a writeStatToMap (Ljava/util/Map;Lnet/minecraft/stats/StatBase;I)V
+		ARG 0 par1Map
+		ARG 1 par2StatBase
+		ARG 2 par3
+	METHOD func_77447_a writeStats (Ljava/util/Map;)V
+		COMMENT write a whole Map of stats to the statmap
+		ARG 0 par1Map
+	METHOD func_77443_a hasAchievementUnlocked (Lnet/minecraft/stats/Achievement;)Z
+		COMMENT Returns true if the achievement has been unlocked.
+		ARG 0 par1Achievement
+	METHOD func_77442_b canUnlockAchievement (Lnet/minecraft/stats/Achievement;)Z
+		COMMENT Returns true if the parent has been unlocked, or there is no parent
+		ARG 0 par1Achievement
+	METHOD func_77444_a writeStat (Lnet/minecraft/stats/StatBase;)I
+		ARG 0 par1StatBase
+	METHOD func_77446_d syncStats ()V

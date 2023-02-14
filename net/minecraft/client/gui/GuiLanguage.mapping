@@ -1,6 +1,29 @@
 CLASS net/minecraft/client/gui/GuiLanguage
 	FIELD field_74047_a parentGui Lnet/minecraft/client/gui/GuiScreen;
+		COMMENT This GUI's parent GUI.
 	FIELD field_74045_b updateTimer I
+		COMMENT Timer used to update texture packs, decreases every tick and is reset to 20 and updates texture packs upon reaching 0.
 	FIELD field_74046_c languageList Lnet/minecraft/client/gui/GuiSlotLanguage;
+		COMMENT This GUI's language list.
 	FIELD field_74044_d theGameSettings Lnet/minecraft/client/settings/GameSettings;
+		COMMENT For saving the user's language selection to disk.
 	FIELD field_74048_m doneButton Lnet/minecraft/client/gui/GuiSmallButton;
+		COMMENT This GUI's 'Done' button.
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.
+	METHOD func_74043_a getGameSettings (Lnet/minecraft/client/gui/GuiLanguage;)Lnet/minecraft/client/settings/GameSettings;
+		COMMENT Gets the relevant instance of GameSettings. Synthetic method for use in GuiSlotLanguage
+		ARG 0 par0GuiLanguage
+	METHOD func_74042_b getDoneButton (Lnet/minecraft/client/gui/GuiLanguage;)Lnet/minecraft/client/gui/GuiSmallButton;
+		COMMENT Returns the private doneButton field.
+		ARG 0 par0GuiLanguage

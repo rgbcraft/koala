@@ -1,2 +1,8 @@
 CLASS net/minecraft/inventory/ContainerDispenser
 	FIELD field_75182_e tileEntityDispenser Lnet/minecraft/tileentity/TileEntityDispenser;
+	METHOD func_75145_c canInteractWith (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 par1EntityPlayer
+	METHOD func_82846_b transferStackInSlot (Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;
+		COMMENT Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2

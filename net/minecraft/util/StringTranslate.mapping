@@ -1,6 +1,31 @@
 CLASS net/minecraft/util/StringTranslate
 	FIELD field_74817_a instance Lnet/minecraft/util/StringTranslate;
+		COMMENT Is the private singleton instance of StringTranslate.
 	FIELD field_74815_b translateTable Ljava/util/Properties;
+		COMMENT Contains all key/value pairs to be translated - is loaded from '/lang/en_US.lang' when the StringTranslate is created.
 	FIELD field_74816_c languageList Ljava/util/TreeMap;
 	FIELD field_74813_d currentLanguage Ljava/lang/String;
 	FIELD field_74814_e isUnicode Z
+	METHOD func_74808_a getInstance ()Lnet/minecraft/util/StringTranslate;
+		COMMENT Return the StringTranslate singleton instance
+	METHOD func_74807_e loadLanguageList ()V
+	METHOD func_74806_b getLanguageList ()Ljava/util/TreeMap;
+	METHOD func_74812_a loadLanguage (Ljava/util/Properties;Ljava/lang/String;)V
+		ARG 0 par1Properties
+		ARG 1 par2Str
+	METHOD func_74810_a setLanguage (Ljava/lang/String;)V
+		ARG 0 par1Str
+	METHOD func_74811_c getCurrentLanguage ()Ljava/lang/String;
+	METHOD func_74804_d isUnicode ()Z
+	METHOD func_74805_b translateKey (Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Translate a key to current language.
+		ARG 0 par1Str
+	METHOD func_74803_a translateKeyFormat (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+		COMMENT Translate a key to current language applying String.format()
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfObj
+	METHOD func_74809_c translateNamedKey (Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Translate a key with a extra '.name' at end added, is used by blocks and items.
+		ARG 0 par1Str
+	METHOD func_74802_e isBidirectional (Ljava/lang/String;)Z
+		ARG 0 par0Str

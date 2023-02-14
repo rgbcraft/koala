@@ -1,2 +1,58 @@
 CLASS net/minecraft/entity/passive/EntityPig
 	FIELD field_82184_d aiControlledByPlayer Lnet/minecraft/entity/ai/EntityAIControlledByPlayer;
+		COMMENT AI task for player control.
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70619_bc updateAITasks ()V
+	METHOD func_82171_bF canBeSteered ()Z
+		COMMENT returns true if all the conditions for steering the entity are met. For pigs, this is true if it is being ridden by a player and the player is holding a carrot-on-a-stick
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70036_a playStepSound (IIII)V
+		COMMENT Plays step sound at given x, y, z for the entity
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_70085_c interact (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		ARG 0 par1EntityPlayer
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70901_n getSaddled ()Z
+		COMMENT Returns true if the pig is saddled.
+	METHOD func_70900_e setSaddled (Z)V
+		COMMENT Set or remove the saddle of the pig.
+		ARG 0 par1
+	METHOD func_70077_a onStruckByLightning (Lnet/minecraft/entity/effect/EntityLightningBolt;)V
+		COMMENT Called when a lightning bolt hits the entity.
+		ARG 0 par1EntityLightningBolt
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70879_a spawnBabyAnimal (Lnet/minecraft/entity/EntityAgeable;)Lnet/minecraft/entity/passive/EntityPig;
+		COMMENT This function is used when two same-species animals in 'love mode' breed to generate the new baby animal.
+		ARG 0 par1EntityAgeable
+	METHOD func_70877_b isBreedingItem (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on the animal type)
+		ARG 0 par1ItemStack
+	METHOD func_82183_n getAIControlledByPlayer ()Lnet/minecraft/entity/ai/EntityAIControlledByPlayer;
+		COMMENT Return the AI task for player control.
+	METHOD func_90011_a createChild (Lnet/minecraft/entity/EntityAgeable;)Lnet/minecraft/entity/EntityAgeable;
+		ARG 0 par1EntityAgeable

@@ -1,8 +1,15 @@
 CLASS net/minecraft/util/MovingObjectPosition
 	FIELD field_72313_a typeOfHit Lnet/minecraft/util/EnumMovingObjectType;
+		COMMENT What type of ray trace hit was this? 0 = block, 1 = entity
 	FIELD field_72311_b blockX I
+		COMMENT x coordinate of the block ray traced against
 	FIELD field_72312_c blockY I
+		COMMENT y coordinate of the block ray traced against
 	FIELD field_72309_d blockZ I
+		COMMENT z coordinate of the block ray traced against
 	FIELD field_72310_e sideHit I
+		COMMENT Which side was hit. If its -1 then it went the full length of the ray trace. Bottom = 0, Top = 1, East = 2, West = 3, North = 4, South = 5.
 	FIELD field_72307_f hitVec Lnet/minecraft/util/Vec3;
+		COMMENT The vector position of the hit
 	FIELD field_72308_g entityHit Lnet/minecraft/entity/Entity;
+		COMMENT The hit entity

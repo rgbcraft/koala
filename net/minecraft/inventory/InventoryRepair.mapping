@@ -1,2 +1,5 @@
 CLASS net/minecraft/inventory/InventoryRepair
 	FIELD field_82346_a theContainer Lnet/minecraft/inventory/ContainerRepair;
+		COMMENT Container of this anvil's block.
+	METHOD func_70296_d onInventoryChanged ()V
+		COMMENT Called when an the contents of an Inventory change, usually

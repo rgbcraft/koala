@@ -1,2 +1,83 @@
 CLASS net/minecraft/util/MathHelper
 	FIELD field_76144_a SIN_TABLE [F
+		COMMENT A table of sin values computed from 0 (inclusive) to 2*pi (exclusive), with steps of 2*PI / 65536.
+	METHOD func_76126_a sin (F)F
+		COMMENT sin looked up in a table
+		ARG 0 par0
+	METHOD func_76134_b cos (F)F
+		COMMENT cos looked up in the sin table with the appropriate offset
+		ARG 0 par0
+	METHOD func_76129_c sqrt_float (F)F
+		ARG 0 par0
+	METHOD func_76133_a sqrt_double (D)F
+		ARG 0 par0
+	METHOD func_76141_d floor_float (F)I
+		COMMENT Returns the greatest integer less than or equal to the float argument
+		ARG 0 par0
+	METHOD func_76140_b truncateDoubleToInt (D)I
+		COMMENT returns par0 cast as an int, and no greater than Integer.MAX_VALUE-1024
+		ARG 0 par0
+	METHOD func_76128_c floor_double (D)I
+		COMMENT Returns the greatest integer less than or equal to the double argument
+		ARG 0 par0
+	METHOD func_76124_d floor_double_long (D)J
+		COMMENT Long version of floor_double
+		ARG 0 par0
+	METHOD func_76135_e abs (F)F
+		ARG 0 par0
+	METHOD func_76130_a abs_int (I)I
+		ARG 0 par0
+	METHOD func_76123_f ceiling_float_int (F)I
+		ARG 0 par0
+	METHOD func_76143_f ceiling_double_int (D)I
+		ARG 0 par0
+	METHOD func_76125_a clamp_int (III)I
+		COMMENT Returns the value of the first parameter, clamped to be within the lower and upper limits given by the second and third parameters.
+		ARG 0 par0
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_76131_a clamp_float (FFF)F
+		COMMENT Returns the value of the first parameter, clamped to be within the lower and upper limits given by the second and third parameters
+		ARG 0 par0
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_76132_a abs_max (DD)D
+		COMMENT Maximum of the absolute value of two numbers.
+		ARG 0 par0
+		ARG 1 par2
+	METHOD func_76137_a bucketInt (II)I
+		COMMENT Buckets an integer with specifed bucket sizes.  Args: i, bucketSize
+		ARG 0 par0
+		ARG 1 par1
+	METHOD func_76139_a stringNullOrLengthZero (Ljava/lang/String;)Z
+		COMMENT Tests if a string is null or of length zero
+		ARG 0 par0Str
+	METHOD func_76136_a getRandomIntegerInRange (Ljava/util/Random;II)I
+		ARG 0 par0Random
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_82716_a getRandomDoubleInRange (Ljava/util/Random;DD)D
+		ARG 0 par0Random
+		ARG 1 par1
+		ARG 2 par3
+	METHOD func_76127_a average ([J)D
+		ARG 0 par0ArrayOfLong
+	METHOD func_76142_g wrapAngleTo180_float (F)F
+		COMMENT the angle is reduced to an angle between -180 and +180 by mod, and a 360 check
+		ARG 0 par0
+	METHOD func_76138_g wrapAngleTo180_double (D)D
+		COMMENT the angle is reduced to an angle between -180 and +180 by mod, and a 360 check
+		ARG 0 par0
+	METHOD func_82715_a parseIntWithDefault (Ljava/lang/String;I)I
+		COMMENT parses the string as integer or returns the second parameter if it fails
+		ARG 0 par0Str
+		ARG 1 par1
+	METHOD func_82714_a parseIntWithDefaultAndMax (Ljava/lang/String;II)I
+		COMMENT parses the string as integer or returns the second parameter if it fails. this value is capped to par2
+		ARG 0 par0Str
+		ARG 1 par1
+		ARG 2 par2
+	METHOD func_82712_a parseDoubleWithDefault (Ljava/lang/String;D)D
+		COMMENT parses the string as double or returns the second parameter if it fails.
+		ARG 0 par0Str
+		ARG 1 par1

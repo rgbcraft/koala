@@ -1,1 +1,18 @@
 CLASS net/minecraft/block/BlockPotato
+	METHOD func_71858_a getBlockTextureFromSideAndMetadata (II)I
+		COMMENT From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_82532_h getSeedItem ()I
+		COMMENT Generate a seed ItemStack for this crop.
+	METHOD func_82533_j getCropItem ()I
+		COMMENT Generate a crop produce ItemStack for this crop.
+	METHOD func_71914_a dropBlockAsItemWithChance (Lnet/minecraft/world/World;IIIIFI)V
+		COMMENT Drops the block items with a specified chance of dropping the specified items
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7

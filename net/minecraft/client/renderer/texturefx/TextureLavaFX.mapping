@@ -1,1 +1,2 @@
 CLASS net/minecraft/client/renderer/texturefx/TextureLavaFX
+	METHOD func_76846_a onTick ()V

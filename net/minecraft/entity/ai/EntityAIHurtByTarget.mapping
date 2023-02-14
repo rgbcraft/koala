@@ -1,2 +1,11 @@
 CLASS net/minecraft/entity/ai/EntityAIHurtByTarget
 	FIELD field_75311_b entityPathNavigate Lnet/minecraft/entity/EntityLiving;
+		COMMENT The PathNavigate of our entity.
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task

@@ -1,1 +1,11 @@
 CLASS net/minecraft/item/ItemAppleGold
+	METHOD func_77636_d hasEffect (Lnet/minecraft/item/ItemStack;)Z
+		ARG 0 par1ItemStack
+	METHOD func_77613_e getRarity (Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/EnumRarity;
+		COMMENT Return an item rarity from EnumRarity
+		ARG 0 par1ItemStack
+	METHOD func_77633_a getSubItems (ILnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V
+		COMMENT returns a list of items with the same ID, but different meta (eg: dye returns 16 items)
+		ARG 0 par1
+		ARG 1 par2CreativeTabs
+		ARG 2 par3List

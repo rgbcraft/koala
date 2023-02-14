@@ -1,1 +1,7 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntityMobSpawnerRenderer
+	METHOD func_76905_a renderTileEntityMobSpawner (Lnet/minecraft/tileentity/TileEntityMobSpawner;DDDF)V
+		ARG 0 par1TileEntityMobSpawner
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8

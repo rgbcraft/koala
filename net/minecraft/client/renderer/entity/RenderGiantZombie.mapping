@@ -1,2 +1,7 @@
 CLASS net/minecraft/client/renderer/entity/RenderGiantZombie
 	FIELD field_77073_a scale F
+		COMMENT Scale of the model to use
+	METHOD func_77072_a preRenderScale (Lnet/minecraft/entity/monster/EntityGiantZombie;F)V
+		COMMENT Applies the scale to the transform matrix
+		ARG 0 par1EntityGiantZombie
+		ARG 1 par2

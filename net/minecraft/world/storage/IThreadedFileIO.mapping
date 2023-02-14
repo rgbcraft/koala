@@ -1,1 +1,3 @@
 CLASS net/minecraft/world/storage/IThreadedFileIO
+	METHOD func_75814_c writeNextIO ()Z
+		COMMENT Returns a boolean stating if the write was unsuccessful.

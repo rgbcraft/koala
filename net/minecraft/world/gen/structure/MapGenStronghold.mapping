@@ -1,4 +1,13 @@
 CLASS net/minecraft/world/gen/structure/MapGenStronghold
 	FIELD field_75058_e allowedBiomeGenBases [Lnet/minecraft/world/biome/BiomeGenBase;
 	FIELD field_75056_f ranBiomeCheck Z
+		COMMENT is spawned false and set true once the defined BiomeGenBases were compared with the present ones
 	FIELD field_75057_g structureCoords [Lnet/minecraft/world/ChunkCoordIntPair;
+	METHOD func_75047_a canSpawnStructureAtCoords (II)Z
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75052_o_ getCoordList ()Ljava/util/List;
+		COMMENT Returns a list of other locations at which the structure generation has been run, or null if not relevant to this structure generator.
+	METHOD func_75049_b getStructureStart (II)Lnet/minecraft/world/gen/structure/StructureStart;
+		ARG 0 par1
+		ARG 1 par2

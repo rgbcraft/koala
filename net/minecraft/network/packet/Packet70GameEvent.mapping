@@ -1,4 +1,18 @@
 CLASS net/minecraft/network/packet/Packet70GameEvent
 	FIELD field_73620_a clientMessage [Ljava/lang/String;
+		COMMENT The client prints clientMessage[eventType] to chat when this packet is received.
 	FIELD field_73618_b eventType I
+		COMMENT 0: Invalid bed, 1: Rain starts, 2: Rain stops, 3: Game mode changed.
 	FIELD field_73619_c gameMode I
+		COMMENT When reason==3, the game mode to set.  See EnumGameType for a list of values.
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).

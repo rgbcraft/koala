@@ -2,6 +2,7 @@ CLASS net/minecraft/entity/EntityTrackerEntry
 	FIELD field_73132_a myEntity Lnet/minecraft/entity/Entity;
 	FIELD field_73130_b blocksDistanceThreshold I
 	FIELD field_73131_c updateFrequency I
+		COMMENT check for sync when ticks % updateFrequency==0
 	FIELD field_73128_d lastScaledXPosition I
 	FIELD field_73129_e lastScaledYPosition I
 	FIELD field_73126_f lastScaledZPosition I
@@ -16,8 +17,32 @@ CLASS net/minecraft/entity/EntityTrackerEntry
 	FIELD field_73146_q posY D
 	FIELD field_73145_r posZ D
 	FIELD field_73144_s isDataInitialized Z
+		COMMENT set to true on first sendLocationToClients
 	FIELD field_73143_t sendVelocityUpdates Z
 	FIELD field_73142_u ticksSinceLastForcedTeleport I
+		COMMENT every 400 ticks a  full teleport packet is sent, rather than just a "move me +x" command, so that position remains fully synced.
 	FIELD field_73141_v ridingEntity Z
 	FIELD field_73133_n playerEntitiesUpdated Z
 	FIELD field_73134_o trackedPlayers Ljava/util/Set;
+	METHOD func_73122_a sendLocationToAllClients (Ljava/util/List;)V
+		COMMENT also sends velocity, rotation, and riding info.
+		ARG 0 par1List
+	METHOD func_73120_a sendPacketToAllTrackingPlayers (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT if this is a player, then it is not informed
+		ARG 0 par1Packet
+	METHOD func_73116_b sendPacketToAllAssociatedPlayers (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT if this is a player, then it recieves the message also
+		ARG 0 par1Packet
+	METHOD func_73119_a informAllAssociatedPlayersOfItemDestruction ()V
+	METHOD func_73118_a removeFromWatchingList (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		ARG 0 par1EntityPlayerMP
+	METHOD func_73117_b tryStartWachingThis (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		COMMENT if the player is more than the distance threshold (typically 64) then the player is removed instead
+		ARG 0 par1EntityPlayerMP
+	METHOD func_73121_d isPlayerWatchingThisChunk (Lnet/minecraft/entity/player/EntityPlayerMP;)Z
+		ARG 0 par1EntityPlayerMP
+	METHOD func_73125_b sendEventsToPlayers (Ljava/util/List;)V
+		ARG 0 par1List
+	METHOD func_73124_b getPacketForThisEntity ()Lnet/minecraft/network/packet/Packet;
+	METHOD func_73123_c removePlayerFromTracker (Lnet/minecraft/entity/player/EntityPlayerMP;)V
+		ARG 0 par1EntityPlayerMP

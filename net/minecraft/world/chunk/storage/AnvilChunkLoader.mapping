@@ -3,3 +3,39 @@ CLASS net/minecraft/world/chunk/storage/AnvilChunkLoader
 	FIELD field_75826_b pendingAnvilChunksCoordinates Ljava/util/Set;
 	FIELD field_75827_c syncLockObject Ljava/lang/Object;
 	FIELD field_75825_d chunkSaveLocation Ljava/io/File;
+		COMMENT Save directory for chunks using the Anvil format
+	METHOD func_75815_a loadChunk (Lnet/minecraft/world/World;II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT Loads the specified(XZ) chunk into the specified world.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_75822_a checkedReadChunkFromNBT (Lnet/minecraft/world/World;IILnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT Wraps readChunkFromNBT. Checks the coordinates and several NBT tags.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4NBTTagCompound
+	METHOD func_75816_a saveChunk (Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V
+		ARG 0 par1World
+		ARG 1 par2Chunk
+	METHOD func_75814_c writeNextIO ()Z
+		COMMENT Returns a boolean stating if the write was unsuccessful.
+	METHOD func_75821_a writeChunkNBTTags (Lnet/minecraft/world/chunk/storage/AnvilChunkLoaderPending;)V
+		ARG 0 par1AnvilChunkLoaderPending
+	METHOD func_75819_b saveExtraChunkData (Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V
+		COMMENT Save extra data associated with this Chunk not normally saved during autosave, only during chunk unload.  Currently unused.
+		ARG 0 par1World
+		ARG 1 par2Chunk
+	METHOD func_75817_a chunkTick ()V
+		COMMENT Called every World.tick()
+	METHOD func_75818_b saveExtraData ()V
+		COMMENT Save extra data not associated with any Chunk.  Not saved during autosave, only during world unload.  Currently unused.
+	METHOD func_75820_a writeChunkToNBT (Lnet/minecraft/world/chunk/Chunk;Lnet/minecraft/world/World;Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes the Chunk passed as an argument to the NBTTagCompound also passed, using the World argument to retrieve the Chunk's last update time.
+		ARG 0 par1Chunk
+		ARG 1 par2World
+		ARG 2 par3NBTTagCompound
+	METHOD func_75823_a readChunkFromNBT (Lnet/minecraft/world/World;Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT Reads the data stored in the passed NBTTagCompound and creates a Chunk with that data in the passed World. Returns the created Chunk.
+		ARG 0 par1World
+		ARG 1 par2NBTTagCompound

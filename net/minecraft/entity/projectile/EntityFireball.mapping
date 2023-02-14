@@ -10,3 +10,33 @@ CLASS net/minecraft/entity/projectile/EntityFireball
 	FIELD field_70232_b accelerationX D
 	FIELD field_70233_c accelerationY D
 	FIELD field_70230_d accelerationZ D
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70112_a isInRangeToRenderDist (D)Z
+		COMMENT Checks if the entity is in range to render by using the past in distance and comparing it to its average edge length * 64 * renderDistanceWeight Args: distance
+		ARG 0 par1
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_82341_c getMotionFactor ()F
+		COMMENT Return the motion factor for this projectile. The factor is multiplied by the original motion.
+	METHOD func_70227_a onImpact (Lnet/minecraft/util/MovingObjectPosition;)V
+		COMMENT Called when this EntityFireball hits a block or entity.
+		ARG 0 par1MovingObjectPosition
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70067_L canBeCollidedWith ()Z
+		COMMENT Returns true if other Entities should be prevented from moving through this Entity.
+	METHOD func_70111_Y getCollisionBorderSize ()F
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70053_R getShadowSize ()F
+	METHOD func_70013_c getBrightness (F)F
+		COMMENT Gets how bright this entity is.
+		ARG 0 par1
+	METHOD func_70070_b getBrightnessForRender (F)I
+		ARG 0 par1

@@ -1,56 +1,169 @@
 CLASS net/minecraft/client/renderer/EntityRenderer
 	FIELD field_78517_a anaglyphEnable Z
 	FIELD field_78515_b anaglyphField I
+		COMMENT Anaglyph field (0=R, 1=GB)
 	FIELD field_78531_r mc Lnet/minecraft/client/Minecraft;
+		COMMENT A reference to the Minecraft object.
 	FIELD field_78530_s farPlaneDistance F
 	FIELD field_78516_c itemRenderer Lnet/minecraft/client/renderer/ItemRenderer;
 	FIELD field_78529_t rendererUpdateCount I
+		COMMENT Entity renderer update count
 	FIELD field_78528_u pointedEntity Lnet/minecraft/entity/Entity;
+		COMMENT Pointed entity
 	FIELD field_78527_v mouseFilterXAxis Lnet/minecraft/util/MouseFilter;
 	FIELD field_78526_w mouseFilterYAxis Lnet/minecraft/util/MouseFilter;
 	FIELD field_78541_x mouseFilterDummy1 Lnet/minecraft/util/MouseFilter;
+		COMMENT Mouse filter dummy 1
 	FIELD field_78540_y mouseFilterDummy2 Lnet/minecraft/util/MouseFilter;
+		COMMENT Mouse filter dummy 2
 	FIELD field_78538_z mouseFilterDummy3 Lnet/minecraft/util/MouseFilter;
+		COMMENT Mouse filter dummy 3
 	FIELD field_78489_A mouseFilterDummy4 Lnet/minecraft/util/MouseFilter;
+		COMMENT Mouse filter dummy 4
 	FIELD field_78490_B thirdPersonDistance F
 	FIELD field_78491_C thirdPersonDistanceTemp F
+		COMMENT Third person distance temp
 	FIELD field_78485_D debugCamYaw F
 	FIELD field_78486_E prevDebugCamYaw F
 	FIELD field_78487_F debugCamPitch F
 	FIELD field_78488_G prevDebugCamPitch F
 	FIELD field_78496_H smoothCamYaw F
+		COMMENT Smooth cam yaw
 	FIELD field_78497_I smoothCamPitch F
+		COMMENT Smooth cam pitch
 	FIELD field_78498_J smoothCamFilterX F
+		COMMENT Smooth cam filter X
 	FIELD field_78499_K smoothCamFilterY F
+		COMMENT Smooth cam filter Y
 	FIELD field_78492_L smoothCamPartialTicks F
+		COMMENT Smooth cam partial ticks
 	FIELD field_78493_M debugCamFOV F
 	FIELD field_78494_N prevDebugCamFOV F
 	FIELD field_78495_O camRoll F
 	FIELD field_78505_P prevCamRoll F
 	FIELD field_78513_d lightmapTexture I
+		COMMENT The texture id of the blocklight/skylight texture used for lighting effects
 	FIELD field_78504_Q lightmapColors [I
+		COMMENT Colors computed in updateLightmap() and loaded into the lightmap emptyTexture
 	FIELD field_78507_R fovModifierHand F
+		COMMENT FOV modifier hand
 	FIELD field_78506_S fovModifierHandPrev F
+		COMMENT FOV modifier hand prev
 	FIELD field_78501_T fovMultiplierTemp F
+		COMMENT FOV multiplier temp
 	FIELD field_78500_U cloudFog Z
+		COMMENT Cloud fog mode
 	FIELD field_78503_V cameraZoom D
 	FIELD field_78502_W cameraYaw D
 	FIELD field_78509_X cameraPitch D
 	FIELD field_78508_Y prevFrameTime J
+		COMMENT Previous frame time in milliseconds
 	FIELD field_78510_Z renderEndNanoTime J
+		COMMENT End time of last render (ns)
 	FIELD field_78536_aa lightmapUpdateNeeded Z
+		COMMENT Is set, updateCameraAndRender() calls updateLightmap(); set by updateTorchFlicker()
 	FIELD field_78514_e torchFlickerX F
+		COMMENT Torch flicker X
 	FIELD field_78511_f torchFlickerDX F
+		COMMENT Torch flicker DX
 	FIELD field_78512_g torchFlickerY F
+		COMMENT Torch flicker Y
 	FIELD field_78524_h torchFlickerDY F
+		COMMENT Torch flicker DY
 	FIELD field_78537_ab random Ljava/util/Random;
 	FIELD field_78534_ac rainSoundCounter I
+		COMMENT Rain sound counter
 	FIELD field_78525_i rainXCoords [F
+		COMMENT Rain X coords
 	FIELD field_78522_j rainYCoords [F
+		COMMENT Rain Y coords
 	FIELD field_78521_m fogColorBuffer Ljava/nio/FloatBuffer;
+		COMMENT Fog color buffer
 	FIELD field_78518_n fogColorRed F
+		COMMENT red component of the fog color
 	FIELD field_78519_o fogColorGreen F
+		COMMENT green component of the fog color
 	FIELD field_78533_p fogColorBlue F
+		COMMENT blue component of the fog color
 	FIELD field_78535_ad fogColor2 F
+		COMMENT Fog color 2
 	FIELD field_78539_ae fogColor1 F
+		COMMENT Fog color 1
 	FIELD field_78532_q debugViewDirection I
+		COMMENT Debug view direction (0=OFF, 1=Front, 2=Right, 3=Back, 4=Left, 5=TiltLeft, 6=TiltRight)
+	METHOD func_78464_a updateRenderer ()V
+		COMMENT Updates the entity renderer
+	METHOD func_78473_a getMouseOver (F)V
+		COMMENT Finds what block or object the mouse is over at the specified partial tick time. Args: partialTickTime
+		ARG 0 par1
+	METHOD func_78477_e updateFovModifierHand ()V
+		COMMENT Update FOV modifier hand
+	METHOD func_78481_a getFOVModifier (FZ)F
+		COMMENT Changes the field of view of the player depending on if they are underwater or not
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_78482_e hurtCameraEffect (F)V
+		ARG 0 par1
+	METHOD func_78475_f setupViewBobbing (F)V
+		COMMENT Setups all the GL settings for view bobbing. Args: partialTickTime
+		ARG 0 par1
+	METHOD func_78467_g orientCamera (F)V
+		COMMENT sets up player's eye (or camera in third person mode)
+		ARG 0 par1
+	METHOD func_78479_a setupCameraTransform (FI)V
+		COMMENT sets up projection, view effects, camera position/rotation
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_78476_b renderHand (FI)V
+		COMMENT Render player hand
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_78483_a disableLightmap (D)V
+		COMMENT Disable secondary texture unit used by lightmap
+		ARG 0 par1
+	METHOD func_78463_b enableLightmap (D)V
+		COMMENT Enable lightmap in secondary texture unit
+		ARG 0 par1
+	METHOD func_78470_f updateTorchFlicker ()V
+		COMMENT Recompute a random value that is applied to block color in updateLightmap()
+	METHOD func_78472_g updateLightmap (F)V
+		ARG 0 par1
+	METHOD func_82830_a getNightVisionBrightness (Lnet/minecraft/entity/player/EntityPlayer;F)F
+		COMMENT Gets the night vision brightness
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_78480_b updateCameraAndRender (F)V
+		COMMENT Will update any inputs that effect the camera angle (mouse) and then render the world and GUI
+		ARG 0 par1
+	METHOD func_78471_a renderWorld (FJ)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_82829_a renderCloudsCheck (Lnet/minecraft/client/renderer/RenderGlobal;F)V
+		COMMENT Render clouds if enabled
+		ARG 0 par1RenderGlobal
+		ARG 1 par2
+	METHOD func_78484_h addRainParticles ()V
+	METHOD func_78474_d renderRainSnow (F)V
+		COMMENT Render rain and snow
+		ARG 0 par1
+	METHOD func_78478_c setupOverlayRendering ()V
+		COMMENT Setup orthogonal projection for rendering GUI screen overlays
+	METHOD func_78466_h updateFogColor (F)V
+		COMMENT calculates fog and calls glClearColor
+		ARG 0 par1
+	METHOD func_78468_a setupFog (IF)V
+		COMMENT Sets up the fog to be rendered. If the arg passed in is -1 the fog starts at 0 and goes to 80% of far plane distance and is used for sky rendering.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_78469_a setFogColorBuffer (FFFF)Ljava/nio/FloatBuffer;
+		COMMENT Update and return fogColorBuffer with the RGBA values passed as arguments
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78465_a performanceToFps (I)I
+		COMMENT Converts performance value (0-2) to FPS (35-200)
+		ARG 0 par0
+	METHOD func_90030_a getRendererMinecraft (Lnet/minecraft/client/renderer/EntityRenderer;)Lnet/minecraft/client/Minecraft;
+		COMMENT Get minecraft reference from the EntityRenderer
+		ARG 0 par0EntityRenderer

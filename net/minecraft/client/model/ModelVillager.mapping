@@ -1,6 +1,29 @@
 CLASS net/minecraft/client/model/ModelVillager
 	FIELD field_78191_a villagerHead Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The head box of the VillagerModel
 	FIELD field_78189_b villagerBody Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The body of the VillagerModel
 	FIELD field_78190_c villagerArms Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The arms of the VillagerModel
 	FIELD field_78187_d rightVillagerLeg Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The right leg of the VillagerModel
 	FIELD field_78188_e leftVillagerLeg Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The left leg of the VillagerModel
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78087_a setRotationAngles (FFFFFFLnet/minecraft/entity/Entity;)V
+		COMMENT Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs can swing at most.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7Entity

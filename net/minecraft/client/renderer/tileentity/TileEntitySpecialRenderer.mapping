@@ -1,2 +1,23 @@
 CLASS net/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer
 	FIELD field_76898_b tileEntityRenderer Lnet/minecraft/client/renderer/tileentity/TileEntityRenderer;
+		COMMENT The TileEntityRenderer instance associated with this TileEntitySpecialRenderer
+	METHOD func_76894_a renderTileEntityAt (Lnet/minecraft/tileentity/TileEntity;DDDF)V
+		ARG 0 par1TileEntity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_76897_a bindTextureByName (Ljava/lang/String;)V
+		COMMENT Binds a texture to the renderEngine given a filename from the JAR.
+		ARG 0 par1Str
+	METHOD func_82392_a bindTextureByURL (Ljava/lang/String;Ljava/lang/String;)V
+		COMMENT Binds a texture that Minecraft will attempt to load from the given URL.  (arguments: url, localFallback)
+		ARG 0 par1Str
+		ARG 1 par2Str
+	METHOD func_76893_a setTileEntityRenderer (Lnet/minecraft/client/renderer/tileentity/TileEntityRenderer;)V
+		COMMENT Associate a TileEntityRenderer with this TileEntitySpecialRenderer
+		ARG 0 par1TileEntityRenderer
+	METHOD func_76896_a onWorldChange (Lnet/minecraft/world/World;)V
+		COMMENT Called when the ingame world being rendered changes (e.g. on world -> nether travel) due to using one renderer per tile entity type, rather than instance
+		ARG 0 par1World
+	METHOD func_76895_b getFontRenderer ()Lnet/minecraft/client/gui/FontRenderer;

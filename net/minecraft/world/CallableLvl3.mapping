@@ -1,2 +1,5 @@
 CLASS net/minecraft/world/CallableLvl3
 	FIELD field_77440_a theWorld Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
+	METHOD func_77439_a getChunkProvider ()Ljava/lang/String;
+		COMMENT Returns the result of the ChunkProvider's makeString

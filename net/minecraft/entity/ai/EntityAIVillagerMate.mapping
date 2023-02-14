@@ -4,3 +4,15 @@ CLASS net/minecraft/entity/ai/EntityAIVillagerMate
 	FIELD field_75448_d worldObj Lnet/minecraft/world/World;
 	FIELD field_75449_e matingTimeout I
 	FIELD field_75452_a villageObj Lnet/minecraft/village/Village;
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task
+	METHOD func_75446_f checkSufficientDoorsPresentForNewVillager ()Z
+	METHOD func_75447_i giveBirth ()V

@@ -2,7 +2,39 @@ CLASS net/minecraft/client/model/ModelBase
 	FIELD field_78095_p onGround F
 	FIELD field_78093_q isRiding Z
 	FIELD field_78092_r boxList Ljava/util/List;
+		COMMENT This is a list of all the boxes (ModelRenderer.class) in the current model.
 	FIELD field_78091_s isChild Z
 	FIELD field_78094_a modelTextureMap Ljava/util/Map;
+		COMMENT A mapping for all texture offsets
 	FIELD field_78090_t textureWidth I
 	FIELD field_78089_u textureHeight I
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78087_a setRotationAngles (FFFFFFLnet/minecraft/entity/Entity;)V
+		COMMENT Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs can swing at most.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7Entity
+	METHOD func_78086_a setLivingAnimations (Lnet/minecraft/entity/EntityLiving;FFF)V
+		COMMENT Used for easily adding entity-dependent animations. The second and third float params here are the same second and third as in the setRotationAngles method.
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78085_a setTextureOffset (Ljava/lang/String;II)V
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_78084_a getTextureOffset (Ljava/lang/String;)Lnet/minecraft/client/model/TextureOffset;
+		ARG 0 par1Str

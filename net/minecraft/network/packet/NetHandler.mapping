@@ -1,1 +1,169 @@
 CLASS net/minecraft/network/packet/NetHandler
+	METHOD func_72489_a isServerHandler ()Z
+		COMMENT determine if it is a server handler
+	METHOD func_72463_a handleMapChunk (Lnet/minecraft/network/packet/Packet51MapChunk;)V
+		COMMENT Handle Packet51MapChunk (full chunk update of blocks, metadata, light levels, and optionally biome data)
+		ARG 0 par1Packet51MapChunk
+	METHOD func_72509_a unexpectedPacket (Lnet/minecraft/network/packet/Packet;)V
+		COMMENT Default handler called for packets that don't have their own handlers in NetClientHandler; currentlly does nothing.
+		ARG 0 par1Packet
+	METHOD func_72515_a handleErrorMessage (Ljava/lang/String;[Ljava/lang/Object;)V
+		ARG 0 par1Str
+		ARG 1 par2ArrayOfObj
+	METHOD func_72492_a handleKickDisconnect (Lnet/minecraft/network/packet/Packet255KickDisconnect;)V
+		ARG 0 par1Packet255KickDisconnect
+	METHOD func_72455_a handleLogin (Lnet/minecraft/network/packet/Packet1Login;)V
+		ARG 0 par1Packet1Login
+	METHOD func_72498_a handleFlying (Lnet/minecraft/network/packet/Packet10Flying;)V
+		ARG 0 par1Packet10Flying
+	METHOD func_72496_a handleMultiBlockChange (Lnet/minecraft/network/packet/Packet52MultiBlockChange;)V
+		ARG 0 par1Packet52MultiBlockChange
+	METHOD func_72510_a handleBlockDig (Lnet/minecraft/network/packet/Packet14BlockDig;)V
+		ARG 0 par1Packet14BlockDig
+	METHOD func_72456_a handleBlockChange (Lnet/minecraft/network/packet/Packet53BlockChange;)V
+		ARG 0 par1Packet53BlockChange
+	METHOD func_72518_a handleNamedEntitySpawn (Lnet/minecraft/network/packet/Packet20NamedEntitySpawn;)V
+		ARG 0 par1Packet20NamedEntitySpawn
+	METHOD func_72482_a handleEntity (Lnet/minecraft/network/packet/Packet30Entity;)V
+		ARG 0 par1Packet30Entity
+	METHOD func_72512_a handleEntityTeleport (Lnet/minecraft/network/packet/Packet34EntityTeleport;)V
+		ARG 0 par1Packet34EntityTeleport
+	METHOD func_72472_a handlePlace (Lnet/minecraft/network/packet/Packet15Place;)V
+		ARG 0 par1Packet15Place
+	METHOD func_72502_a handleBlockItemSwitch (Lnet/minecraft/network/packet/Packet16BlockItemSwitch;)V
+		ARG 0 par1Packet16BlockItemSwitch
+	METHOD func_72491_a handleDestroyEntity (Lnet/minecraft/network/packet/Packet29DestroyEntity;)V
+		ARG 0 par1Packet29DestroyEntity
+	METHOD func_72475_a handleCollect (Lnet/minecraft/network/packet/Packet22Collect;)V
+		ARG 0 par1Packet22Collect
+	METHOD func_72481_a handleChat (Lnet/minecraft/network/packet/Packet3Chat;)V
+		ARG 0 par1Packet3Chat
+	METHOD func_72511_a handleVehicleSpawn (Lnet/minecraft/network/packet/Packet23VehicleSpawn;)V
+		ARG 0 par1Packet23VehicleSpawn
+	METHOD func_72524_a handleAnimation (Lnet/minecraft/network/packet/Packet18Animation;)V
+		ARG 0 par1Packet18Animation
+	METHOD func_72473_a handleEntityAction (Lnet/minecraft/network/packet/Packet19EntityAction;)V
+		COMMENT runs registerPacket on the given Packet19EntityAction
+		ARG 0 par1Packet19EntityAction
+	METHOD func_72500_a handleClientProtocol (Lnet/minecraft/network/packet/Packet2ClientProtocol;)V
+		ARG 0 par1Packet2ClientProtocol
+	METHOD func_72470_a handleServerAuthData (Lnet/minecraft/network/packet/Packet253ServerAuthData;)V
+		ARG 0 par1Packet253ServerAuthData
+	METHOD func_72513_a handleSharedKey (Lnet/minecraft/network/packet/Packet252SharedKey;)V
+		ARG 0 par1Packet252SharedKey
+	METHOD func_72519_a handleMobSpawn (Lnet/minecraft/network/packet/Packet24MobSpawn;)V
+		ARG 0 par1Packet24MobSpawn
+	METHOD func_72497_a handleUpdateTime (Lnet/minecraft/network/packet/Packet4UpdateTime;)V
+		ARG 0 par1Packet4UpdateTime
+	METHOD func_72466_a handleSpawnPosition (Lnet/minecraft/network/packet/Packet6SpawnPosition;)V
+		ARG 0 par1Packet6SpawnPosition
+	METHOD func_72520_a handleEntityVelocity (Lnet/minecraft/network/packet/Packet28EntityVelocity;)V
+		COMMENT Packet handler
+		ARG 0 par1Packet28EntityVelocity
+	METHOD func_72493_a handleEntityMetadata (Lnet/minecraft/network/packet/Packet40EntityMetadata;)V
+		COMMENT Packet handler
+		ARG 0 par1Packet40EntityMetadata
+	METHOD func_72484_a handleAttachEntity (Lnet/minecraft/network/packet/Packet39AttachEntity;)V
+		COMMENT Packet handler
+		ARG 0 par1Packet39AttachEntity
+	METHOD func_72507_a handleUseEntity (Lnet/minecraft/network/packet/Packet7UseEntity;)V
+		ARG 0 par1Packet7UseEntity
+	METHOD func_72485_a handleEntityStatus (Lnet/minecraft/network/packet/Packet38EntityStatus;)V
+		COMMENT Packet handler
+		ARG 0 par1Packet38EntityStatus
+	METHOD func_72521_a handleUpdateHealth (Lnet/minecraft/network/packet/Packet8UpdateHealth;)V
+		COMMENT Recieves player health from the server and then proceeds to set it locally on the client.
+		ARG 0 par1Packet8UpdateHealth
+	METHOD func_72483_a handleRespawn (Lnet/minecraft/network/packet/Packet9Respawn;)V
+		COMMENT respawns the player
+		ARG 0 par1Packet9Respawn
+	METHOD func_72499_a handleExplosion (Lnet/minecraft/network/packet/Packet60Explosion;)V
+		ARG 0 par1Packet60Explosion
+	METHOD func_72516_a handleOpenWindow (Lnet/minecraft/network/packet/Packet100OpenWindow;)V
+		ARG 0 par1Packet100OpenWindow
+	METHOD func_72474_a handleCloseWindow (Lnet/minecraft/network/packet/Packet101CloseWindow;)V
+		ARG 0 par1Packet101CloseWindow
+	METHOD func_72523_a handleWindowClick (Lnet/minecraft/network/packet/Packet102WindowClick;)V
+		ARG 0 par1Packet102WindowClick
+	METHOD func_72490_a handleSetSlot (Lnet/minecraft/network/packet/Packet103SetSlot;)V
+		ARG 0 par1Packet103SetSlot
+	METHOD func_72486_a handleWindowItems (Lnet/minecraft/network/packet/Packet104WindowItems;)V
+		ARG 0 par1Packet104WindowItems
+	METHOD func_72487_a handleUpdateSign (Lnet/minecraft/network/packet/Packet130UpdateSign;)V
+		COMMENT Updates Client side signs
+		ARG 0 par1Packet130UpdateSign
+	METHOD func_72505_a handleUpdateProgressbar (Lnet/minecraft/network/packet/Packet105UpdateProgressbar;)V
+		ARG 0 par1Packet105UpdateProgressbar
+	METHOD func_72506_a handlePlayerInventory (Lnet/minecraft/network/packet/Packet5PlayerInventory;)V
+		ARG 0 par1Packet5PlayerInventory
+	METHOD func_72476_a handleTransaction (Lnet/minecraft/network/packet/Packet106Transaction;)V
+		ARG 0 par1Packet106Transaction
+	METHOD func_72495_a handleEntityPainting (Lnet/minecraft/network/packet/Packet25EntityPainting;)V
+		COMMENT Packet handler
+		ARG 0 par1Packet25EntityPainting
+	METHOD func_72454_a handleBlockEvent (Lnet/minecraft/network/packet/Packet54PlayNoteBlock;)V
+		ARG 0 par1Packet54PlayNoteBlock
+	METHOD func_72517_a handleStatistic (Lnet/minecraft/network/packet/Packet200Statistic;)V
+		COMMENT Increment player statistics
+		ARG 0 par1Packet200Statistic
+	METHOD func_72460_a handleSleep (Lnet/minecraft/network/packet/Packet17Sleep;)V
+		ARG 0 par1Packet17Sleep
+	METHOD func_72488_a handleGameEvent (Lnet/minecraft/network/packet/Packet70GameEvent;)V
+		ARG 0 par1Packet70GameEvent
+	METHOD func_72508_a handleWeather (Lnet/minecraft/network/packet/Packet71Weather;)V
+		COMMENT Handles weather packet
+		ARG 0 par1Packet71Weather
+	METHOD func_72494_a handleMapData (Lnet/minecraft/network/packet/Packet131MapData;)V
+		COMMENT Contains logic for handling packets containing arbitrary unique item data. Currently this is only for maps.
+		ARG 0 par1Packet131MapData
+	METHOD func_72462_a handleDoorChange (Lnet/minecraft/network/packet/Packet61DoorChange;)V
+		ARG 0 par1Packet61DoorChange
+	METHOD func_72467_a handleServerPing (Lnet/minecraft/network/packet/Packet254ServerPing;)V
+		COMMENT Handle a server ping packet.
+		ARG 0 par1Packet254ServerPing
+	METHOD func_72503_a handleEntityEffect (Lnet/minecraft/network/packet/Packet41EntityEffect;)V
+		COMMENT Handle an entity effect packet.
+		ARG 0 par1Packet41EntityEffect
+	METHOD func_72452_a handleRemoveEntityEffect (Lnet/minecraft/network/packet/Packet42RemoveEntityEffect;)V
+		COMMENT Handle a remove entity effect packet.
+		ARG 0 par1Packet42RemoveEntityEffect
+	METHOD func_72480_a handlePlayerInfo (Lnet/minecraft/network/packet/Packet201PlayerInfo;)V
+		COMMENT Handle a player information packet.
+		ARG 0 par1Packet201PlayerInfo
+	METHOD func_72477_a handleKeepAlive (Lnet/minecraft/network/packet/Packet0KeepAlive;)V
+		COMMENT Handle a keep alive packet.
+		ARG 0 par1Packet0KeepAlive
+	METHOD func_72522_a handleExperience (Lnet/minecraft/network/packet/Packet43Experience;)V
+		COMMENT Handle an experience packet.
+		ARG 0 par1Packet43Experience
+	METHOD func_72464_a handleCreativeSetSlot (Lnet/minecraft/network/packet/Packet107CreativeSetSlot;)V
+		COMMENT Handle a creative slot packet.
+		ARG 0 par1Packet107CreativeSetSlot
+	METHOD func_72514_a handleEntityExpOrb (Lnet/minecraft/network/packet/Packet26EntityExpOrb;)V
+		COMMENT Handle a entity experience orb packet.
+		ARG 0 par1Packet26EntityExpOrb
+	METHOD func_72479_a handleEnchantItem (Lnet/minecraft/network/packet/Packet108EnchantItem;)V
+		ARG 0 par1Packet108EnchantItem
+	METHOD func_72501_a handleCustomPayload (Lnet/minecraft/network/packet/Packet250CustomPayload;)V
+		ARG 0 par1Packet250CustomPayload
+	METHOD func_72478_a handleEntityHeadRotation (Lnet/minecraft/network/packet/Packet35EntityHeadRotation;)V
+		ARG 0 par1Packet35EntityHeadRotation
+	METHOD func_72468_a handleTileEntityData (Lnet/minecraft/network/packet/Packet132TileEntityData;)V
+		ARG 0 par1Packet132TileEntityData
+	METHOD func_72471_a handlePlayerAbilities (Lnet/minecraft/network/packet/Packet202PlayerAbilities;)V
+		COMMENT Handle a player abilities packet.
+		ARG 0 par1Packet202PlayerAbilities
+	METHOD func_72461_a handleAutoComplete (Lnet/minecraft/network/packet/Packet203AutoComplete;)V
+		ARG 0 par1Packet203AutoComplete
+	METHOD func_72504_a handleClientInfo (Lnet/minecraft/network/packet/Packet204ClientInfo;)V
+		ARG 0 par1Packet204ClientInfo
+	METHOD func_72457_a handleLevelSound (Lnet/minecraft/network/packet/Packet62LevelSound;)V
+		ARG 0 par1Packet62LevelSound
+	METHOD func_72465_a handleBlockDestroy (Lnet/minecraft/network/packet/Packet55BlockDestroy;)V
+		ARG 0 par1Packet55BlockDestroy
+	METHOD func_72458_a handleClientCommand (Lnet/minecraft/network/packet/Packet205ClientCommand;)V
+		ARG 0 par1Packet205ClientCommand
+	METHOD func_72453_a handleMapChunks (Lnet/minecraft/network/packet/Packet56MapChunks;)V
+		ARG 0 par1Packet56MapChunks
+	METHOD func_72469_b canProcessPacketsAsync ()Z
+		COMMENT If this returns false, all packets will be queued for the main thread to handle, even if they would otherwise be processed asynchronously. Used to avoid processing packets on the client before the world has been downloaded (which happens on the main thread)

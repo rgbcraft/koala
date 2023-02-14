@@ -1,2 +1,6 @@
 CLASS net/minecraft/util/MD5String
 	FIELD field_75900_a salt Ljava/lang/String;
+		COMMENT The salt prepended to the string to be hashed
+	METHOD func_75899_a getMD5String (Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Gets the MD5 string
+		ARG 0 par1Str

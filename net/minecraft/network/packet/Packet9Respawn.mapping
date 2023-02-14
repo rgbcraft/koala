@@ -1,6 +1,19 @@
 CLASS net/minecraft/network/packet/Packet9Respawn
 	FIELD field_73373_a respawnDimension I
 	FIELD field_73371_b difficulty I
+		COMMENT The difficulty setting. 0 through 3 for peaceful, easy, normal, hard. The client always sends 1.
 	FIELD field_73372_c worldHeight I
+		COMMENT Defaults to 128
 	FIELD field_73369_d gameType Lnet/minecraft/world/EnumGameType;
 	FIELD field_73370_e terrainType Lnet/minecraft/world/WorldType;
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).

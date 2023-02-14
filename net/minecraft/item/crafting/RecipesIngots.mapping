@@ -1,2 +1,5 @@
 CLASS net/minecraft/item/crafting/RecipesIngots
 	FIELD field_77591_a recipeItems [Ljava/lang/Object;
+	METHOD func_77590_a addRecipes (Lnet/minecraft/item/crafting/CraftingManager;)V
+		COMMENT Adds the ingot recipes to the CraftingManager.
+		ARG 0 par1CraftingManager

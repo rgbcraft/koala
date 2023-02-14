@@ -1,1 +1,13 @@
 CLASS net/minecraft/command/ICommandManager
+	METHOD func_71556_a executeCommand (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)V
+		ARG 0 par1ICommandSender
+		ARG 1 par2Str
+	METHOD func_71558_b getPossibleCommands (Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Ljava/util/List;
+		COMMENT Performs a "begins with" string match on each token in par2. Only returns commands that par1 can use.
+		ARG 0 par1ICommandSender
+		ARG 1 par2Str
+	METHOD func_71557_a getPossibleCommands (Lnet/minecraft/command/ICommandSender;)Ljava/util/List;
+		COMMENT returns all commands that the commandSender can use
+		ARG 0 par1ICommandSender
+	METHOD func_71555_a getCommands ()Ljava/util/Map;
+		COMMENT returns a map of string to commads. All commands are returned, not just ones which someone has permission to use.

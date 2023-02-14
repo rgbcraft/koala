@@ -1,3 +1,14 @@
 CLASS net/minecraft/entity/ai/EntityAIFollowParent
 	FIELD field_75348_a childAnimal Lnet/minecraft/entity/passive/EntityAnimal;
+		COMMENT The child that is following its parent.
 	FIELD field_75346_b parentAnimal Lnet/minecraft/entity/passive/EntityAnimal;
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task

@@ -1,2 +1,19 @@
 CLASS net/minecraft/client/gui/GuiSnooperList
 	FIELD field_77255_a snooperGui Lnet/minecraft/client/gui/GuiSnooper;
+	METHOD func_77217_a getSize ()I
+		COMMENT Gets the size of the current slot list.
+	METHOD func_77213_a elementClicked (IZ)V
+		COMMENT the element in the slot that was clicked, boolean for wether it was double clicked or not
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_77218_a isSelected (I)Z
+		COMMENT returns true if the element passed in is currently selected
+		ARG 0 par1
+	METHOD func_77221_c drawBackground ()V
+	METHOD func_77214_a drawSlot (IIIILnet/minecraft/client/renderer/Tessellator;)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5Tessellator
+	METHOD func_77225_g getScrollBarX ()I

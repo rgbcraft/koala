@@ -4,3 +4,72 @@ CLASS net/minecraft/client/renderer/entity/Render
 	FIELD field_76988_d renderBlocks Lnet/minecraft/client/renderer/RenderBlocks;
 	FIELD field_76989_e shadowSize F
 	FIELD field_76987_f shadowOpaque F
+		COMMENT Determines the darkness of the object's shadow. Higher value makes a darker shadow.
+	METHOD func_76986_a doRender (Lnet/minecraft/entity/Entity;DDDFF)V
+		COMMENT Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_76985_a loadTexture (Ljava/lang/String;)V
+		COMMENT loads the specified texture
+		ARG 0 par1Str
+	METHOD func_76984_a loadDownloadableImageTexture (Ljava/lang/String;Ljava/lang/String;)Z
+		COMMENT loads the specified downloadable texture or alternative built in texture
+		ARG 0 par1Str
+		ARG 1 par2Str
+	METHOD func_76977_a renderEntityOnFire (Lnet/minecraft/entity/Entity;DDDF)V
+		COMMENT Renders fire on top of the entity. Args: entity, x, y, z, partialTickTime
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+	METHOD func_76975_c renderShadow (Lnet/minecraft/entity/Entity;DDDFF)V
+		COMMENT Renders the entity shadows at the position, shadow alpha and partialTickTime. Args: entity, x, y, z, shadowAlpha, partialTickTime
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_76982_b getWorldFromRenderManager ()Lnet/minecraft/world/World;
+		COMMENT Returns the render manager's world object
+	METHOD func_76981_a renderShadowOnBlock (Lnet/minecraft/block/Block;DDDIIIFFDDD)V
+		COMMENT Renders a shadow projected down onto the specified block. Brightness of the block plus how far away on the Y axis determines the alpha of the shadow.  Args: block, centerX, centerY, centerZ, blockX, blockY, blockZ, baseAlpha, shadowSize, xOffset, yOffset, zOffset
+		ARG 0 par10
+		ARG 1 par11
+		ARG 2 par12
+		ARG 3 par13
+		ARG 4 par15
+		ARG 5 par17
+		ARG 6 par1Block
+		ARG 7 par2
+		ARG 8 par4
+		ARG 9 par6
+		ARG 10 par8
+		ARG 11 par9
+	METHOD func_76978_a renderOffsetAABB (Lnet/minecraft/util/AxisAlignedBB;DDD)V
+		COMMENT Renders a white box with the bounds of the AABB translated by the offset. Args: aabb, x, y, z
+		ARG 0 par0AxisAlignedBB
+		ARG 1 par1
+		ARG 2 par3
+		ARG 3 par5
+	METHOD func_76980_a renderAABB (Lnet/minecraft/util/AxisAlignedBB;)V
+		COMMENT Adds to the tesselator a box using the aabb for the bounds. Args: aabb
+		ARG 0 par0AxisAlignedBB
+	METHOD func_76976_a setRenderManager (Lnet/minecraft/client/renderer/entity/RenderManager;)V
+		COMMENT Sets the RenderManager.
+		ARG 0 par1RenderManager
+	METHOD func_76979_b doRenderShadowAndFire (Lnet/minecraft/entity/Entity;DDDFF)V
+		COMMENT Renders the entity's shadow and fire (if its on fire). Args: entity, x, y, z, yaw, partialTickTime
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_76983_a getFontRendererFromRenderManager ()Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT Returns the font renderer from the set render manager

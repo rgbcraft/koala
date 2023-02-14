@@ -1,5 +1,59 @@
 CLASS net/minecraft/entity/monster/EntityIronGolem
 	FIELD field_70858_e homeCheckTimer I
+		COMMENT deincrements, and a distance-to-home check is done at 0
 	FIELD field_70857_d villageObj Lnet/minecraft/village/Village;
 	FIELD field_70855_f attackTimer I
 	FIELD field_70856_g holdRoseTick I
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70650_aV isAIEnabled ()Z
+		COMMENT Returns true if the newer Entity AI code should be run
+	METHOD func_70629_bd updateAITick ()V
+		COMMENT main AI tick function, replaces updateEntityActionState
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70682_h decreaseAirSupply (I)I
+		COMMENT Decrements the entity's air supply when underwater
+		ARG 0 par1
+	METHOD func_82167_n collideWithEntity (Lnet/minecraft/entity/Entity;)V
+		ARG 0 par1Entity
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70686_a canAttackClass (Ljava/lang/Class;)Z
+		COMMENT Returns true if this entity can attack entities of the specified class.
+		ARG 0 par1Class
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70652_k attackEntityAsMob (Lnet/minecraft/entity/Entity;)Z
+		ARG 0 par1Entity
+	METHOD func_70103_a handleHealthUpdate (B)V
+		ARG 0 par1
+	METHOD func_70852_n getVillage ()Lnet/minecraft/village/Village;
+	METHOD func_70854_o getAttackTimer ()I
+	METHOD func_70851_e setHoldingRose (Z)V
+		ARG 0 par1
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70036_a playStepSound (IIII)V
+		COMMENT Plays step sound at given x, y, z for the entity
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70853_p getHoldRoseTick ()I
+	METHOD func_70850_q isPlayerCreated ()Z
+	METHOD func_70849_f setPlayerCreated (Z)V
+		ARG 0 par1
+	METHOD func_70645_a onDeath (Lnet/minecraft/util/DamageSource;)V
+		COMMENT Called when the mob's health reaches 0.
+		ARG 0 par1DamageSource

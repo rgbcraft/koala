@@ -1,4 +1,82 @@
 CLASS net/minecraft/enchantment/EnchantmentHelper
 	FIELD field_77522_a enchantmentRand Ljava/util/Random;
+		COMMENT Is the random seed of enchantment effects.
 	FIELD field_77520_b enchantmentModifierDamage Lnet/minecraft/enchantment/EnchantmentModifierDamage;
+		COMMENT Used to calculate the extra armor of enchantments on armors equipped on player.
 	FIELD field_77521_c enchantmentModifierLiving Lnet/minecraft/enchantment/EnchantmentModifierLiving;
+		COMMENT Used to calculate the (magic) extra damage done by enchantments on current equipped item of player.
+	METHOD func_77506_a getEnchantmentLevel (ILnet/minecraft/item/ItemStack;)I
+		COMMENT Returns the level of enchantment on the ItemStack passed.
+		ARG 0 par0
+		ARG 1 par1ItemStack
+	METHOD func_82781_a getEnchantments (Lnet/minecraft/item/ItemStack;)Ljava/util/Map;
+		COMMENT Return the enchantments for the specified stack.
+		ARG 0 par0ItemStack
+	METHOD func_82782_a setEnchantments (Ljava/util/Map;Lnet/minecraft/item/ItemStack;)V
+		COMMENT Set the enchantments for the specified stack.
+		ARG 0 par0Map
+		ARG 1 par1ItemStack
+	METHOD func_77511_a getMaxEnchantmentLevel (I[Lnet/minecraft/item/ItemStack;)I
+		COMMENT Returns the biggest level of the enchantment on the array of ItemStack passed.
+		ARG 0 par0
+		ARG 1 par1ArrayOfItemStack
+	METHOD func_77518_a applyEnchantmentModifier (Lnet/minecraft/enchantment/IEnchantmentModifier;Lnet/minecraft/item/ItemStack;)V
+		COMMENT Executes the enchantment modifier on the ItemStack passed.
+		ARG 0 par0IEnchantmentModifier
+		ARG 1 par1ItemStack
+	METHOD func_77516_a applyEnchantmentModifierArray (Lnet/minecraft/enchantment/IEnchantmentModifier;[Lnet/minecraft/item/ItemStack;)V
+		COMMENT Executes the enchantment modifier on the array of ItemStack passed.
+		ARG 0 par0IEnchantmentModifier
+		ARG 1 par1ArrayOfItemStack
+	METHOD func_77508_a getEnchantmentModifierDamage ([Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/DamageSource;)I
+		COMMENT Returns the modifier of protection enchantments on armors equipped on player.
+		ARG 0 par0ArrayOfItemStack
+		ARG 1 par1DamageSource
+	METHOD func_77512_a getEnchantmentModifierLiving (Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/entity/EntityLiving;)I
+		COMMENT Return the (magic) extra damage of the enchantments on player equipped item.
+		ARG 0 par0EntityLiving
+		ARG 1 par1EntityLiving
+	METHOD func_77507_b getKnockbackModifier (Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/entity/EntityLiving;)I
+		COMMENT Returns the knockback value of enchantments on equipped player item.
+		ARG 0 par0EntityLiving
+		ARG 1 par1EntityLiving
+	METHOD func_90036_a getFireAspectModifier (Lnet/minecraft/entity/EntityLiving;)I
+		ARG 0 par0EntityLiving
+	METHOD func_77501_a getRespiration (Lnet/minecraft/entity/EntityLiving;)I
+		COMMENT Returns the 'Water Breathing' modifier of enchantments on player equipped armors.
+		ARG 0 par0EntityLiving
+	METHOD func_77509_b getEfficiencyModifier (Lnet/minecraft/entity/EntityLiving;)I
+		COMMENT Return the extra efficiency of tools based on enchantments on equipped player item.
+		ARG 0 par0EntityLiving
+	METHOD func_77502_d getSilkTouchModifier (Lnet/minecraft/entity/EntityLiving;)Z
+		COMMENT Returns the silk touch status of enchantments on current equipped item of player.
+		ARG 0 par0EntityLiving
+	METHOD func_77517_e getFortuneModifier (Lnet/minecraft/entity/EntityLiving;)I
+		COMMENT Returns the fortune enchantment modifier of the current equipped item of player.
+		ARG 0 par0EntityLiving
+	METHOD func_77519_f getLootingModifier (Lnet/minecraft/entity/EntityLiving;)I
+		COMMENT Returns the looting enchantment modifier of the current equipped item of player.
+		ARG 0 par0EntityLiving
+	METHOD func_77510_g getAquaAffinityModifier (Lnet/minecraft/entity/EntityLiving;)Z
+		COMMENT Returns the aqua affinity status of enchantments on current equipped item of player.
+		ARG 0 par0EntityLiving
+	METHOD func_77514_a calcItemStackEnchantability (Ljava/util/Random;IILnet/minecraft/item/ItemStack;)I
+		COMMENT Returns the enchantability of itemstack, it's uses a singular formula for each index (2nd parameter: 0, 1 and 2), cutting to the max enchantability power of the table (3rd parameter)
+		ARG 0 par0Random
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3ItemStack
+	METHOD func_77504_a addRandomEnchantment (Ljava/util/Random;Lnet/minecraft/item/ItemStack;I)Lnet/minecraft/item/ItemStack;
+		COMMENT Adds a random enchantment to the specified item. Args: random, itemStack, enchantabilityLevel
+		ARG 0 par0Random
+		ARG 1 par1ItemStack
+		ARG 2 par2
+	METHOD func_77513_b buildEnchantmentList (Ljava/util/Random;Lnet/minecraft/item/ItemStack;I)Ljava/util/List;
+		COMMENT Create a list of random EnchantmentData (enchantments) that can be added together to the ItemStack, the 3rd parameter is the total enchantability level.
+		ARG 0 par0Random
+		ARG 1 par1ItemStack
+		ARG 2 par2
+	METHOD func_77505_b mapEnchantmentData (ILnet/minecraft/item/ItemStack;)Ljava/util/Map;
+		COMMENT Creates a 'Map' of EnchantmentData (enchantments) possible to add on the ItemStack and the enchantability level passed.
+		ARG 0 par0
+		ARG 1 par1ItemStack

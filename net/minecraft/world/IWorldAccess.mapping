@@ -1,1 +1,78 @@
 CLASS net/minecraft/world/IWorldAccess
+	METHOD func_72710_a markBlockForUpdate (III)V
+		COMMENT On the client, re-renders the block. On the server, sends the block to the client (which will re-render it), including the tile entity description packet if applicable. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72711_b markBlockForRenderUpdate (III)V
+		COMMENT On the client, re-renders this block. On the server, does nothing. Used for lighting updates.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72707_a markBlockRangeForRenderUpdate (IIIIII)V
+		COMMENT On the client, re-renders all blocks in this range, inclusive. On the server, does nothing. Args: min x, min y, min z, max x, max y, max z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72704_a playSound (Ljava/lang/String;DDDFF)V
+		COMMENT Plays the specified sound. Arg: soundName, x, y, z, volume, pitch
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_85102_a playSoundToNearExcept (Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;DDDFF)V
+		COMMENT Plays sound to all near players except the player reference given
+		ARG 0 par10
+		ARG 1 par1EntityPlayer
+		ARG 2 par2Str
+		ARG 3 par3
+		ARG 4 par5
+		ARG 5 par7
+		ARG 6 par9
+	METHOD func_72708_a spawnParticle (Ljava/lang/String;DDDDDD)V
+		COMMENT Spawns a particle. Arg: particleType, x, y, z, velX, velY, velZ
+		ARG 0 par10
+		ARG 1 par12
+		ARG 2 par1Str
+		ARG 3 par2
+		ARG 4 par4
+		ARG 5 par6
+		ARG 6 par8
+	METHOD func_72703_a obtainEntitySkin (Lnet/minecraft/entity/Entity;)V
+		COMMENT Start the skin for this entity downloading, if necessary, and increment its reference counter
+		ARG 0 par1Entity
+	METHOD func_72709_b releaseEntitySkin (Lnet/minecraft/entity/Entity;)V
+		COMMENT Decrement the reference counter for this entity's skin image data
+		ARG 0 par1Entity
+	METHOD func_72702_a playRecord (Ljava/lang/String;III)V
+		COMMENT Plays the specified record. Arg: recordName, x, y, z
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_82746_a broadcastSound (IIIII)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72706_a playAuxSFX (Lnet/minecraft/entity/player/EntityPlayer;IIIII)V
+		COMMENT Plays a pre-canned sound effect along with potentially auxiliary data-driven one-shot behaviour (particles, etc).
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72705_a destroyBlockPartially (IIIII)V
+		COMMENT Starts (or continues) destroying a block with given ID at the given coordinates for the given partially destroyed value
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

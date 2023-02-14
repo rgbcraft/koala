@@ -1,2 +1,3 @@
 CLASS net/minecraft/command/CommandException
 	FIELD field_74845_a errorObjects [Ljava/lang/Object;
+	METHOD func_74844_a getErrorOjbects ()[Ljava/lang/Object;

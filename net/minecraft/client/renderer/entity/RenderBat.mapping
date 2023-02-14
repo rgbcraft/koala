@@ -1,2 +1,3 @@
 CLASS net/minecraft/client/renderer/entity/RenderBat
 	FIELD field_82446_a renderedBatSize I
+		COMMENT not actually sure this is size, is not used as of now, but the model would be recreated if the value changed and it seems a good match for a bats size

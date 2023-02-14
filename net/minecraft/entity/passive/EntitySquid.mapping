@@ -1,7 +1,35 @@
 CLASS net/minecraft/entity/passive/EntitySquid
 	FIELD field_70866_j tentacleAngle F
+		COMMENT angle of the tentacles in radians
 	FIELD field_70865_by lastTentacleAngle F
+		COMMENT the last calculated angle of the tentacles in radians
 	FIELD field_70863_bz randomMotionSpeed F
 	FIELD field_70872_bC randomMotionVecX F
 	FIELD field_70869_bD randomMotionVecY F
 	FIELD field_70870_bE randomMotionVecZ F
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70599_aP getSoundVolume ()F
+		COMMENT Returns the volume for the sounds this mob makes.
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70090_H isInWater ()Z
+		COMMENT Checks if this entity is inside water (if inWater field is true as a result of handleWaterMovement() returning true)
+	METHOD func_70636_d onLivingUpdate ()V
+		COMMENT Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD func_70612_e moveEntityWithHeading (FF)V
+		COMMENT Moves the entity based on the specified heading.  Args: strafe, forward
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70626_be updateEntityActionState ()V
+	METHOD func_70601_bi getCanSpawnHere ()Z
+		COMMENT Checks if the entity's current position is a valid location to spawn this entity.

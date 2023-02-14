@@ -1,3 +1,13 @@
 CLASS net/minecraft/world/ChunkCoordIntPair
 	FIELD field_77276_a chunkXPos I
+		COMMENT The X position of this Chunk Coordinate Pair
 	FIELD field_77275_b chunkZPos I
+		COMMENT The Z position of this Chunk Coordinate Pair
+	METHOD func_77272_a chunkXZ2Int (II)J
+		COMMENT converts a chunk coordinate pair to an integer (suitable for hashing)
+		ARG 0 par0
+		ARG 1 par1
+	METHOD func_77273_a getCenterXPos ()I
+	METHOD func_77274_b getCenterZPosition ()I
+	METHOD func_77271_a getChunkPosition (I)Lnet/minecraft/world/ChunkPosition;
+		ARG 0 par1

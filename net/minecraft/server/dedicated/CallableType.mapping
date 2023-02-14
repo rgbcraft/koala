@@ -1,2 +1,4 @@
 CLASS net/minecraft/server/dedicated/CallableType
 	FIELD field_71743_a theDecitatedServer Lnet/minecraft/server/dedicated/DedicatedServer;
+		COMMENT Reference to the DecitatedServer object.
+	METHOD func_71742_a getType ()Ljava/lang/String;

@@ -1,9 +1,25 @@
 CLASS net/minecraft/world/storage/SaveFormatComparator
 	FIELD field_75797_a fileName Ljava/lang/String;
+		COMMENT the file name of this save
 	FIELD field_75795_b displayName Ljava/lang/String;
+		COMMENT the displayed name of this save file
 	FIELD field_75796_c lastTimePlayed J
 	FIELD field_75793_d sizeOnDisk J
 	FIELD field_75794_e requiresConversion Z
 	FIELD field_75791_f theEnumGameType Lnet/minecraft/world/EnumGameType;
+		COMMENT Instance of EnumGameType.
 	FIELD field_75792_g hardcore Z
 	FIELD field_75798_h cheatsEnabled Z
+	METHOD func_75786_a getFileName ()Ljava/lang/String;
+		COMMENT return the file name
+	METHOD func_75788_b getDisplayName ()Ljava/lang/String;
+		COMMENT return the display name of the save
+	METHOD func_75785_d requiresConversion ()Z
+	METHOD func_75784_e getLastTimePlayed ()J
+	METHOD func_75787_a compareTo (Lnet/minecraft/world/storage/SaveFormatComparator;)I
+		ARG 0 par1SaveFormatComparator
+	METHOD func_75790_f getEnumGameType ()Lnet/minecraft/world/EnumGameType;
+		COMMENT Gets the EnumGameType.
+	METHOD func_75789_g isHardcoreModeEnabled ()Z
+	METHOD func_75783_h getCheatsEnabled ()Z
+		COMMENT @return {@code true} if cheats are enabled for this world

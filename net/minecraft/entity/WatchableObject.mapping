@@ -1,5 +1,18 @@
 CLASS net/minecraft/entity/WatchableObject
 	FIELD field_75678_a objectType I
 	FIELD field_75676_b dataValueId I
+		COMMENT id of max 31
 	FIELD field_75677_c watchedObject Ljava/lang/Object;
 	FIELD field_75675_d watched Z
+	METHOD func_75672_a getDataValueId ()I
+	METHOD func_75673_a setObject (Ljava/lang/Object;)V
+		ARG 0 par1Obj
+	METHOD func_75669_b getObject ()Ljava/lang/Object;
+	METHOD func_75674_c getObjectType ()I
+	METHOD func_75670_d isWatched ()Z
+	METHOD func_75671_a setWatched (Z)V
+		ARG 0 par1
+	METHOD func_82711_a setWatchableObjectWatched (Lnet/minecraft/entity/WatchableObject;Z)Z
+		COMMENT Set whether the specified watchable object is being watched.
+		ARG 0 par0WatchableObject
+		ARG 1 par1

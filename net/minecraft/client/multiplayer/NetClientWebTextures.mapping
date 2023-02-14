@@ -1,3 +1,8 @@
 CLASS net/minecraft/client/multiplayer/NetClientWebTextures
 	FIELD field_74244_a texturePackName Ljava/lang/String;
+		COMMENT The Texture Pack's name.
 	FIELD field_74243_b netClientHandlerWebTextures Lnet/minecraft/client/multiplayer/NetClientHandler;
+		COMMENT Initialises Web Textures?
+	METHOD func_73878_a confirmClicked (ZI)V
+		ARG 0 par1
+		ARG 1 par2

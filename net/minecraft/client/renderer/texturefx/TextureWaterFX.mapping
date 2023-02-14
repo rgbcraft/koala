@@ -1,6 +1,11 @@
 CLASS net/minecraft/client/renderer/texturefx/TextureWaterFX
 	FIELD field_76855_g red [F
+		COMMENT red RGB value for water texture
 	FIELD field_76858_h green [F
+		COMMENT green RGB value for water texture
 	FIELD field_76859_i blue [F
+		COMMENT blue RGB value for water texture
 	FIELD field_76856_j alpha [F
+		COMMENT alpha RGB value for water texture
 	FIELD field_76857_k tickCounter I
+	METHOD func_76846_a onTick ()V

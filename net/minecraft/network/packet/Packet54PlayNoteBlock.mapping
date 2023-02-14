@@ -3,5 +3,19 @@ CLASS net/minecraft/network/packet/Packet54PlayNoteBlock
 	FIELD field_73338_b yLocation I
 	FIELD field_73339_c zLocation I
 	FIELD field_73336_d instrumentType I
+		COMMENT 1=Double Bass, 2=Snare Drum, 3=Clicks / Sticks, 4=Bass Drum, 5=Harp
 	FIELD field_73337_e pitch I
+		COMMENT The pitch of the note (between 0-24 inclusive where 0 is the lowest and 24 is the highest).
 	FIELD field_73335_f blockId I
+		COMMENT The block ID this action is set for.
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).

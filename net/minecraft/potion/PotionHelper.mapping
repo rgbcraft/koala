@@ -11,4 +11,44 @@ CLASS net/minecraft/potion/PotionHelper
 	FIELD field_77930_k gunpowderEffect Ljava/lang/String;
 	FIELD field_77927_l potionRequirements Ljava/util/HashMap;
 	FIELD field_77928_m potionAmplifiers Ljava/util/HashMap;
+		COMMENT Potion effect amplifier map
 	FIELD field_77926_o potionPrefixes [Ljava/lang/String;
+		COMMENT An array of possible potion prefix names, as translation IDs.
+	METHOD func_77914_a checkFlag (II)Z
+		COMMENT Is the bit given set to 1?
+		ARG 0 par0
+		ARG 1 par1
+	METHOD func_77910_c isFlagSet (II)I
+		COMMENT Returns 1 if the flag is set, 0 if it is not set.
+		ARG 0 par0
+		ARG 1 par1
+	METHOD func_77916_d isFlagUnset (II)I
+		COMMENT Returns 0 if the flag is set, 1 if it is not set.
+		ARG 0 par0
+		ARG 1 par1
+	METHOD func_77911_a calcPotionLiquidColor (Ljava/util/Collection;)I
+		COMMENT Given a {@link Collection}<{@link PotionEffect}> will return an Integer color.
+		ARG 0 par0Collection
+	METHOD func_77907_h countSetFlags (I)I
+		COMMENT Count the number of bits in an integer set to ON.
+		ARG 0 par0
+	METHOD func_77912_a parsePotionEffects (Ljava/lang/String;III)I
+		ARG 0 par0Str
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+	METHOD func_77917_b getPotionEffects (IZ)Ljava/util/List;
+		COMMENT Returns a list of effects for the specified potion damage value.
+		ARG 0 par0
+		ARG 1 par1
+	METHOD func_77906_a brewBitOperations (IIZZZ)I
+		COMMENT Does bit operations for brewPotionData, given data, the index of the bit being operated upon, whether the bit will be removed, whether the bit will be toggled (NOT), or whether the data field will be set to 0 if the bit is not present.
+		ARG 0 par0
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+	METHOD func_77913_a applyIngredient (ILjava/lang/String;)I
+		COMMENT Generate a data value for a potion, given its previous data value and the encoded string of new effects it will receive
+		ARG 0 par0
+		ARG 1 par1Str

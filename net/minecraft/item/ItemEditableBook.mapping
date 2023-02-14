@@ -1,1 +1,20 @@
 CLASS net/minecraft/item/ItemEditableBook
+	METHOD func_77828_a validBookTagContents (Lnet/minecraft/nbt/NBTTagCompound;)Z
+		ARG 0 par0NBTTagCompound
+	METHOD func_77628_j getItemDisplayName (Lnet/minecraft/item/ItemStack;)Ljava/lang/String;
+		ARG 0 par1ItemStack
+	METHOD func_77624_a addInformation (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V
+		COMMENT allows items to add custom lines of information to the mouseover description
+		ARG 0 par1ItemStack
+		ARG 1 par2EntityPlayer
+		ARG 2 par3List
+		ARG 3 par4
+	METHOD func_77659_a onItemRightClick (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		COMMENT Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer
+	METHOD func_77651_p getShareTag ()Z
+		COMMENT If this function returns true (or the item is damageable), the ItemStack's NBT tag will be sent to the client.
+	METHOD func_77636_d hasEffect (Lnet/minecraft/item/ItemStack;)Z
+		ARG 0 par1ItemStack

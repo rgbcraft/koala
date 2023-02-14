@@ -1,10 +1,74 @@
 CLASS net/minecraft/client/gui/GuiScreen
 	FIELD field_90017_e isMacOs Z
 	FIELD field_73882_e mc Lnet/minecraft/client/Minecraft;
+		COMMENT Reference to the Minecraft object.
 	FIELD field_73880_f width I
+		COMMENT The width of the screen object.
 	FIELD field_73881_g height I
+		COMMENT The height of the screen object.
 	FIELD field_73887_h controlList Ljava/util/List;
+		COMMENT A list of all the controls added to this container.
 	FIELD field_73885_j allowUserInput Z
 	FIELD field_73886_k fontRenderer Lnet/minecraft/client/gui/FontRenderer;
+		COMMENT The FontRenderer used by GuiScreen
 	FIELD field_73884_l guiParticles Lnet/minecraft/client/gui/GuiParticle;
 	FIELD field_73883_a selectedButton Lnet/minecraft/client/gui/GuiButton;
+		COMMENT The button that was just pressed.
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73869_a keyTyped (CI)V
+		COMMENT Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73870_l getClipboardString ()Ljava/lang/String;
+		COMMENT Returns a string stored in the system clipboard.
+	METHOD func_73865_d setClipboardString (Ljava/lang/String;)V
+		COMMENT store a string in the system clipboard
+		ARG 0 par0Str
+	METHOD func_73864_a mouseClicked (III)V
+		COMMENT Called when the mouse is clicked.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73879_b mouseMovedOrUp (III)V
+		COMMENT Called when the mouse is moved or a mouse button is released.  Signature: (mouseX, mouseY, which) which==-1 is mouseMove, which==0 or which==1 is mouseUp
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73875_a actionPerformed (Lnet/minecraft/client/gui/GuiButton;)V
+		COMMENT Fired when a control is clicked. This is the equivalent of ActionListener.actionPerformed(ActionEvent e).
+		ARG 0 par1GuiButton
+	METHOD func_73872_a setWorldAndResolution (Lnet/minecraft/client/Minecraft;II)V
+		COMMENT Causes the screen to lay out its subcomponents again. This is the equivalent of the Java call Container.validate()
+		ARG 0 par1Minecraft
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73862_m handleInput ()V
+		COMMENT Delegates mouse and keyboard input.
+	METHOD func_73867_d handleMouseInput ()V
+		COMMENT Handles mouse input.
+	METHOD func_73860_n handleKeyboardInput ()V
+		COMMENT Handles keyboard input.
+	METHOD func_73876_c updateScreen ()V
+		COMMENT Called from the main game loop to update the screen.
+	METHOD func_73874_b onGuiClosed ()V
+		COMMENT Called when the screen is unloaded. Used to disable keyboard repeat events
+	METHOD func_73873_v_ drawDefaultBackground ()V
+		COMMENT Draws either a gradient over the background screen (when it exists) or a flat gradient over background.png
+	METHOD func_73859_b drawWorldBackground (I)V
+		ARG 0 par1
+	METHOD func_73871_c drawBackground (I)V
+		COMMENT Draws the background (i is always 0 as of 1.2.2)
+		ARG 0 par1
+	METHOD func_73868_f doesGuiPauseGame ()Z
+		COMMENT Returns true if this GUI should pause the game when it is displayed in single-player
+	METHOD func_73878_a confirmClicked (ZI)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73861_o isCtrlKeyDown ()Z
+	METHOD func_73877_p isShiftKeyDown ()Z

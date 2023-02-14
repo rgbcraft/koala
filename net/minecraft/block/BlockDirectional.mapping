@@ -1,1 +1,4 @@
 CLASS net/minecraft/block/BlockDirectional
+	METHOD func_72217_d getDirection (I)I
+		COMMENT Returns the orentation value from the specified metadata
+		ARG 0 par0

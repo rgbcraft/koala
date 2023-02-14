@@ -1,7 +1,30 @@
 CLASS net/minecraft/entity/ai/EntityAIOcelotSit
 	FIELD field_75406_a theOcelot Lnet/minecraft/entity/passive/EntityOcelot;
 	FIELD field_75405_c currentTick I
+		COMMENT Tracks for how long the task has been executing
 	FIELD field_75403_e maxSittingTicks I
+		COMMENT For how long the Ocelot should be sitting
 	FIELD field_75400_f sitableBlockX I
+		COMMENT X Coordinate of a nearby sitable block
 	FIELD field_75401_g sitableBlockY I
+		COMMENT Y Coordinate of a nearby sitable block
 	FIELD field_75407_h sitableBlockZ I
+		COMMENT Z Coordinate of a nearby sitable block
+	METHOD func_75250_a shouldExecute ()Z
+		COMMENT Returns whether the EntityAIBase should begin execution.
+	METHOD func_75253_b continueExecuting ()Z
+		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	METHOD func_75249_e startExecuting ()V
+		COMMENT Execute a one shot task or start executing a continuous task
+	METHOD func_75251_c resetTask ()V
+		COMMENT Resets the task
+	METHOD func_75246_d updateTask ()V
+		COMMENT Updates the task
+	METHOD func_75399_f getNearbySitableBlockDistance ()Z
+		COMMENT Searches for a block to sit on within a 8 block range, returns 0 if none found
+	METHOD func_75398_a isSittableBlock (Lnet/minecraft/world/World;III)Z
+		COMMENT Determines whether the Ocelot wants to sit on the block at given coordinate
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

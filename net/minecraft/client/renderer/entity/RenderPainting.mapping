@@ -1,1 +1,8 @@
 CLASS net/minecraft/client/renderer/entity/RenderPainting
+	METHOD func_77009_a renderThePainting (Lnet/minecraft/entity/item/EntityPainting;DDDFF)V
+		ARG 0 par1EntityPainting
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9

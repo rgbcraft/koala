@@ -1,2 +1,10 @@
 CLASS net/minecraft/world/gen/structure/ComponentVillageChurch
 	FIELD field_74920_a averageGroundLevel I
+	METHOD func_74875_a addComponentParts (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3StructureBoundingBox
+	METHOD func_74888_b getVillagerType (I)I
+		COMMENT Returns the villager type to spawn in this component, based on the number of villagers already spawned.
+		ARG 0 par1

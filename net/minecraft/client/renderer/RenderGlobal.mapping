@@ -2,6 +2,7 @@ CLASS net/minecraft/client/renderer/RenderGlobal
 	FIELD field_72762_a tileEntities Ljava/util/List;
 	FIELD field_72769_h theWorld Lnet/minecraft/client/multiplayer/WorldClient;
 	FIELD field_72770_i renderEngine Lnet/minecraft/client/renderer/RenderEngine;
+		COMMENT The RenderEngine instance used by RenderGlobal
 	FIELD field_72767_j worldRenderersToUpdate Ljava/util/List;
 	FIELD field_72768_k sortedWorldRenderers [Lnet/minecraft/client/renderer/WorldRenderer;
 	FIELD field_72765_l worldRenderers [Lnet/minecraft/client/renderer/WorldRenderer;
@@ -9,38 +10,250 @@ CLASS net/minecraft/client/renderer/RenderGlobal
 	FIELD field_72763_n renderChunksTall I
 	FIELD field_72764_o renderChunksDeep I
 	FIELD field_72778_p glRenderListBase I
+		COMMENT OpenGL render lists base
 	FIELD field_72777_q mc Lnet/minecraft/client/Minecraft;
+		COMMENT A reference to the Minecraft object.
 	FIELD field_72776_r globalRenderBlocks Lnet/minecraft/client/renderer/RenderBlocks;
+		COMMENT Global render blocks
 	FIELD field_72775_s glOcclusionQueryBase Ljava/nio/IntBuffer;
+		COMMENT OpenGL occlusion query base
 	FIELD field_72774_t occlusionEnabled Z
+		COMMENT Is occlusion testing enabled
 	FIELD field_72773_u cloudTickCounter I
+		COMMENT counts the cloud render updates. Used with mod to stagger some updates
 	FIELD field_72772_v starGLCallList I
+		COMMENT The star GL Call list
 	FIELD field_72771_w glSkyList I
+		COMMENT OpenGL sky list
 	FIELD field_72781_x glSkyList2 I
+		COMMENT OpenGL sky list 2
 	FIELD field_72780_y minBlockX I
+		COMMENT Minimum block X
 	FIELD field_72779_z minBlockY I
+		COMMENT Minimum block Y
 	FIELD field_72741_A minBlockZ I
+		COMMENT Minimum block Z
 	FIELD field_72742_B maxBlockX I
+		COMMENT Maximum block X
 	FIELD field_72743_C maxBlockY I
+		COMMENT Maximum block Y
 	FIELD field_72737_D maxBlockZ I
+		COMMENT Maximum block Z
 	FIELD field_72738_E damagedBlocks Ljava/util/Map;
+		COMMENT Stores blocks currently being broken. Key is entity ID of the thing doing the breaking. Value is a DestroyBlockProgress
 	FIELD field_72739_F renderDistance I
 	FIELD field_72740_G renderEntitiesStartupCounter I
+		COMMENT Render entities startup counter (init value=2)
 	FIELD field_72748_H countEntitiesTotal I
+		COMMENT Count entities total
 	FIELD field_72749_I countEntitiesRendered I
+		COMMENT Count entities rendered
 	FIELD field_72750_J countEntitiesHidden I
+		COMMENT Count entities hidden
 	FIELD field_72760_b dummyBuf50k [I
+		COMMENT Dummy buffer (50k) not used
 	FIELD field_72761_c occlusionResult Ljava/nio/IntBuffer;
+		COMMENT Occlusion query result
 	FIELD field_72751_K renderersLoaded I
+		COMMENT How many renderers are loaded this frame that try to be rendered
 	FIELD field_72744_L renderersBeingClipped I
+		COMMENT How many renderers are being clipped by the frustrum this frame
 	FIELD field_72745_M renderersBeingOccluded I
+		COMMENT How many renderers are being occluded this frame
 	FIELD field_72746_N renderersBeingRendered I
+		COMMENT How many renderers are actually being rendered this frame
 	FIELD field_72747_O renderersSkippingRenderPass I
+		COMMENT How many renderers are skipping rendering due to not having a render pass this frame
 	FIELD field_72753_P dummyRenderInt I
+		COMMENT Dummy render int
 	FIELD field_72752_Q worldRenderersCheckIndex I
+		COMMENT World renderers check index
 	FIELD field_72755_R glRenderLists Ljava/util/List;
+		COMMENT List of OpenGL lists for the current render pass
 	FIELD field_72754_S allRenderLists [Lnet/minecraft/client/renderer/RenderList;
+		COMMENT All render lists (fixed length 4)
 	FIELD field_72758_d prevSortX D
+		COMMENT Previous x position when the renderers were sorted. (Once the distance moves more than 4 units they will be resorted)
 	FIELD field_72759_e prevSortY D
+		COMMENT Previous y position when the renderers were sorted. (Once the distance moves more than 4 units they will be resorted)
 	FIELD field_72756_f prevSortZ D
+		COMMENT Previous Z position when the renderers were sorted. (Once the distance moves more than 4 units they will be resorted)
 	FIELD field_72757_g frustumCheckOffset I
+		COMMENT The offset used to determine if a renderer is one of the sixteenth that are being updated this frame
+	METHOD func_72730_g renderStars ()V
+	METHOD func_72732_a setWorldAndLoadRenderers (Lnet/minecraft/client/multiplayer/WorldClient;)V
+		COMMENT set null to clear
+		ARG 0 par1WorldClient
+	METHOD func_72712_a loadRenderers ()V
+		COMMENT Loads all the renderers and sets up the basic settings usage
+	METHOD func_72713_a renderEntities (Lnet/minecraft/util/Vec3;Lnet/minecraft/client/renderer/culling/ICamera;F)V
+		COMMENT Renders all entities within range and within the frustrum. Args: pos, frustrum, partialTickTime
+		ARG 0 par1Vec3
+		ARG 1 par2ICamera
+		ARG 2 par3
+	METHOD func_72735_c getDebugInfoRenders ()Ljava/lang/String;
+		COMMENT Gets the render info for use on the Debug screen
+	METHOD func_72723_d getDebugInfoEntities ()Ljava/lang/String;
+		COMMENT Gets the entities info for use on the Debug screen
+	METHOD func_72722_c markRenderersForNewPosition (III)V
+		COMMENT Goes through all the renderers setting new positions on them and those that have their position changed are adding to be updated
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72719_a sortAndRender (Lnet/minecraft/entity/EntityLiving;ID)I
+		COMMENT Sorts all renderers based on the passed in entity. Args: entityLiving, renderPass, partialTickTime
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72720_a checkOcclusionQueryResult (II)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72724_a renderSortedRenderers (IIID)I
+		COMMENT Renders the sorted renders for the specified render pass. Args: startRenderer, numRenderers, renderPass, partialTickTime
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72733_a renderAllRenderLists (ID)V
+		COMMENT Render all render lists
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_72734_e updateClouds ()V
+	METHOD func_72714_a renderSky (F)V
+		COMMENT Renders the sky with the partial tick time. Args: partialTickTime
+		ARG 0 par1
+	METHOD func_72718_b renderClouds (F)V
+		ARG 0 par1
+	METHOD func_72721_a hasCloudFog (DDDF)Z
+		COMMENT Checks if the given position is to be rendered with cloud fog
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+	METHOD func_72736_c renderCloudsFancy (F)V
+		COMMENT Renders the 3d fancy clouds
+		ARG 0 par1
+	METHOD func_72716_a updateRenderers (Lnet/minecraft/entity/EntityLiving;Z)Z
+		COMMENT Updates some of the renderers sorted by distance from the player
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_72727_a drawBlockBreaking (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/MovingObjectPosition;ILnet/minecraft/item/ItemStack;F)V
+		ARG 0 par1EntityPlayer
+		ARG 1 par2MovingObjectPosition
+		ARG 2 par3
+		ARG 3 par4ItemStack
+		ARG 4 par5
+	METHOD func_72717_a drawBlockDamageTexture (Lnet/minecraft/client/renderer/Tessellator;Lnet/minecraft/entity/player/EntityPlayer;F)V
+		ARG 0 par1Tessellator
+		ARG 1 par2EntityPlayer
+		ARG 2 par3
+	METHOD func_72731_b drawSelectionBox (Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/MovingObjectPosition;ILnet/minecraft/item/ItemStack;F)V
+		COMMENT Draws the selection box for the player. Args: entityPlayer, rayTraceHit, i, itemStack, partialTickTime
+		ARG 0 par1EntityPlayer
+		ARG 1 par2MovingObjectPosition
+		ARG 2 par3
+		ARG 3 par4ItemStack
+		ARG 4 par5
+	METHOD func_72715_a drawOutlinedBoundingBox (Lnet/minecraft/util/AxisAlignedBB;)V
+		COMMENT Draws lines for the edges of the bounding box.
+		ARG 0 par1AxisAlignedBB
+	METHOD func_72725_b markBlocksForUpdate (IIIIII)V
+		COMMENT Marks the blocks in the given range for update
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72710_a markBlockForUpdate (III)V
+		COMMENT On the client, re-renders the block. On the server, sends the block to the client (which will re-render it), including the tile entity description packet if applicable. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72711_b markBlockForRenderUpdate (III)V
+		COMMENT On the client, re-renders this block. On the server, does nothing. Used for lighting updates.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_72707_a markBlockRangeForRenderUpdate (IIIIII)V
+		COMMENT On the client, re-renders all blocks in this range, inclusive. On the server, does nothing. Args: min x, min y, min z, max x, max y, max z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72729_a clipRenderersByFrustum (Lnet/minecraft/client/renderer/culling/ICamera;F)V
+		COMMENT Checks all renderers that previously weren't in the frustum and 1/16th of those that previously were in the frustum for frustum clipping Args: frustum, partialTickTime
+		ARG 0 par1ICamera
+		ARG 1 par2
+	METHOD func_72702_a playRecord (Ljava/lang/String;III)V
+		COMMENT Plays the specified record. Arg: recordName, x, y, z
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_72704_a playSound (Ljava/lang/String;DDDFF)V
+		COMMENT Plays the specified sound. Arg: soundName, x, y, z, volume, pitch
+		ARG 0 par1Str
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_85102_a playSoundToNearExcept (Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;DDDFF)V
+		COMMENT Plays sound to all near players except the player reference given
+		ARG 0 par10
+		ARG 1 par1EntityPlayer
+		ARG 2 par2Str
+		ARG 3 par3
+		ARG 4 par5
+		ARG 5 par7
+		ARG 6 par9
+	METHOD func_72708_a spawnParticle (Ljava/lang/String;DDDDDD)V
+		COMMENT Spawns a particle. Arg: particleType, x, y, z, velX, velY, velZ
+		ARG 0 par10
+		ARG 1 par12
+		ARG 2 par1Str
+		ARG 3 par2
+		ARG 4 par4
+		ARG 5 par6
+		ARG 6 par8
+	METHOD func_72726_b doSpawnParticle (Ljava/lang/String;DDDDDD)Lnet/minecraft/client/particle/EntityFX;
+		COMMENT Spawns a particle. Arg: particleType, x, y, z, velX, velY, velZ
+		ARG 0 par10
+		ARG 1 par12
+		ARG 2 par1Str
+		ARG 3 par2
+		ARG 4 par4
+		ARG 5 par6
+		ARG 6 par8
+	METHOD func_72703_a obtainEntitySkin (Lnet/minecraft/entity/Entity;)V
+		COMMENT Start the skin for this entity downloading, if necessary, and increment its reference counter
+		ARG 0 par1Entity
+	METHOD func_72709_b releaseEntitySkin (Lnet/minecraft/entity/Entity;)V
+		COMMENT Decrement the reference counter for this entity's skin image data
+		ARG 0 par1Entity
+	METHOD func_72728_f deleteAllDisplayLists ()V
+		COMMENT Deletes all display lists
+	METHOD func_82746_a broadcastSound (IIIII)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_72706_a playAuxSFX (Lnet/minecraft/entity/player/EntityPlayer;IIIII)V
+		COMMENT Plays a pre-canned sound effect along with potentially auxiliary data-driven one-shot behaviour (particles, etc).
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+	METHOD func_72705_a destroyBlockPartially (IIIII)V
+		COMMENT Starts (or continues) destroying a block with given ID at the given coordinates for the given partially destroyed value
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

@@ -1,2 +1,4 @@
 CLASS net/minecraft/client/CallableTickingScreenName
 	FIELD field_74421_a mc Lnet/minecraft/client/Minecraft;
+		COMMENT Reference to the Minecraft object.
+	METHOD func_74420_a getLWJGLVersion ()Ljava/lang/String;

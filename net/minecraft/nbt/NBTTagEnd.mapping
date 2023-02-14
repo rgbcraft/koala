@@ -1,1 +1,11 @@
 CLASS net/minecraft/nbt/NBTTagEnd
+	METHOD func_74735_a load (Ljava/io/DataInput;)V
+		COMMENT Read the actual data contents of the tag, implemented in NBT extension classes
+		ARG 0 par1DataInput
+	METHOD func_74734_a write (Ljava/io/DataOutput;)V
+		COMMENT Write the actual data contents of the tag, implemented in NBT extension classes
+		ARG 0 par1DataOutput
+	METHOD func_74732_a getId ()B
+		COMMENT Gets the type byte for the tag.
+	METHOD func_74737_b copy ()Lnet/minecraft/nbt/NBTBase;
+		COMMENT Creates a clone of the tag.

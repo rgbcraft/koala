@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/ChunkPosition
 	FIELD field_76930_a x I
+		COMMENT The x coordinate of this ChunkPosition
 	FIELD field_76928_b y I
+		COMMENT The y coordinate of this ChunkPosition
 	FIELD field_76929_c z I
+		COMMENT The z coordinate of this ChunkPosition

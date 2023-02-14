@@ -1,7 +1,79 @@
 CLASS net/minecraft/inventory/Container
 	FIELD field_75153_a inventoryItemStacks Ljava/util/List;
+		COMMENT the list of all items(stacks) for the corresponding slot
 	FIELD field_75151_b inventorySlots Ljava/util/List;
+		COMMENT the list of all slots in the inventory
 	FIELD field_75152_c windowId I
 	FIELD field_75150_e transactionID S
 	FIELD field_75149_d crafters Ljava/util/List;
+		COMMENT list of all people that need to be notified when this craftinventory changes
 	FIELD field_75148_f playerList Ljava/util/Set;
+	METHOD func_75146_a addSlotToContainer (Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;
+		COMMENT the slot is assumed empty
+		ARG 0 par1Slot
+	METHOD func_75132_a addCraftingToCrafters (Lnet/minecraft/inventory/ICrafting;)V
+		ARG 0 par1ICrafting
+	METHOD func_82847_b removeCraftingFromCrafters (Lnet/minecraft/inventory/ICrafting;)V
+		COMMENT Remove this crafting listener from the listener list.
+		ARG 0 par1ICrafting
+	METHOD func_75138_a getInventory ()Ljava/util/List;
+		COMMENT returns a list if itemStacks, for each slot.
+	METHOD func_75142_b detectAndSendChanges ()V
+		COMMENT Looks for changes made in the container, sends them to every listener.
+	METHOD func_75140_a enchantItem (Lnet/minecraft/entity/player/EntityPlayer;I)Z
+		COMMENT enchants the item on the table using the specified slot; also deducts XP from player
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_75147_a getSlotFromInventory (Lnet/minecraft/inventory/IInventory;I)Lnet/minecraft/inventory/Slot;
+		ARG 0 par1IInventory
+		ARG 1 par2
+	METHOD func_75139_a getSlot (I)Lnet/minecraft/inventory/Slot;
+		ARG 0 par1
+	METHOD func_82846_b transferStackInSlot (Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;
+		COMMENT Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_75144_a slotClick (IIILnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4EntityPlayer
+	METHOD func_75133_b retrySlotClick (IIZLnet/minecraft/entity/player/EntityPlayer;)V
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4EntityPlayer
+	METHOD func_75134_a onCraftGuiClosed (Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Callback for when the crafting gui is closed.
+		ARG 0 par1EntityPlayer
+	METHOD func_75130_a onCraftMatrixChanged (Lnet/minecraft/inventory/IInventory;)V
+		COMMENT Callback for when the crafting matrix is changed.
+		ARG 0 par1IInventory
+	METHOD func_75141_a putStackInSlot (ILnet/minecraft/item/ItemStack;)V
+		COMMENT args: slotID, itemStack to put in slot
+		ARG 0 par1
+		ARG 1 par2ItemStack
+	METHOD func_75131_a putStacksInSlots ([Lnet/minecraft/item/ItemStack;)V
+		COMMENT places itemstacks in first x slots, x being aitemstack.lenght
+		ARG 0 par1ArrayOfItemStack
+	METHOD func_75137_b updateProgressBar (II)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75136_a getNextTransactionID (Lnet/minecraft/entity/player/InventoryPlayer;)S
+		COMMENT Gets a unique transaction ID. Parameter is unused.
+		ARG 0 par1InventoryPlayer
+	METHOD func_75129_b isPlayerNotUsingContainer (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		COMMENT NotUsing because adding a player twice is an error
+		ARG 0 par1EntityPlayer
+	METHOD func_75128_a setPlayerIsPresent (Lnet/minecraft/entity/player/EntityPlayer;Z)V
+		COMMENT adds or removes the player from the container based on par2
+		ARG 0 par1EntityPlayer
+		ARG 1 par2
+	METHOD func_75145_c canInteractWith (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 par1EntityPlayer
+	METHOD func_75135_a mergeItemStack (Lnet/minecraft/item/ItemStack;IIZ)Z
+		COMMENT merges provided ItemStack with the first avaliable one in the container/player inventory
+		ARG 0 par1ItemStack
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4

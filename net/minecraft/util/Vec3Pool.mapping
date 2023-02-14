@@ -2,6 +2,16 @@ CLASS net/minecraft/util/Vec3Pool
 	FIELD field_72351_a truncateArrayResetThreshold I
 	FIELD field_72349_b minimumSize I
 	FIELD field_72350_c vec3Cache Ljava/util/List;
+		COMMENT items at and above nextFreeSpace are assumed to be available
 	FIELD field_72347_d nextFreeSpace I
 	FIELD field_72348_e maximumSizeSinceLastTruncation I
 	FIELD field_72346_f resetCount I
+	METHOD func_72345_a getVecFromPool (DDD)Lnet/minecraft/util/Vec3;
+		COMMENT extends the pool if all vecs are currently "out"
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_72343_a clear ()V
+		COMMENT Will truncate the array everyN clears to the maximum size observed since the last truncation.
+	METHOD func_72344_b clearAndFreeCache ()V
+	METHOD func_82591_c getPoolSize ()I

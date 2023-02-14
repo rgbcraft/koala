@@ -1,4 +1,18 @@
 CLASS net/minecraft/inventory/ContainerBrewingStand
 	FIELD field_75188_e tileBrewingStand Lnet/minecraft/tileentity/TileEntityBrewingStand;
 	FIELD field_75186_f theSlot Lnet/minecraft/inventory/Slot;
+		COMMENT Instance of Slot.
 	FIELD field_75187_g brewTime I
+	METHOD func_75132_a addCraftingToCrafters (Lnet/minecraft/inventory/ICrafting;)V
+		ARG 0 par1ICrafting
+	METHOD func_75142_b detectAndSendChanges ()V
+		COMMENT Looks for changes made in the container, sends them to every listener.
+	METHOD func_75137_b updateProgressBar (II)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_75145_c canInteractWith (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 par1EntityPlayer
+	METHOD func_82846_b transferStackInSlot (Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;
+		COMMENT Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
+		ARG 0 par1EntityPlayer
+		ARG 1 par2

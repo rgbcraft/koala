@@ -1,4 +1,27 @@
 CLASS net/minecraft/server/dedicated/PropertyManager
 	FIELD field_73674_a logger Ljava/util/logging/Logger;
+		COMMENT Reference to the logger.
 	FIELD field_73672_b properties Ljava/util/Properties;
 	FIELD field_73673_c associatedFile Ljava/io/File;
+	METHOD func_73666_a logMessageAndSave ()V
+		COMMENT logs an info message then calls saveSettingsToFile Yes this appears to be a potential stack overflow - these 2 functions call each other repeatdly if an exception occurs.
+	METHOD func_73668_b saveProperties ()V
+		COMMENT Writes the properties to the properties file.
+	METHOD func_73665_c getPropertiesFile ()Ljava/io/File;
+		COMMENT Returns this PropertyManager's file object used for property saving.
+	METHOD func_73671_a getProperty (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+		COMMENT Gets a property. If it does not exist, set it to the specified value.
+		ARG 0 par1Str
+		ARG 1 par2Str
+	METHOD func_73669_a getIntProperty (Ljava/lang/String;I)I
+		COMMENT Gets an integer property. If it does not exist, set it to the specified value.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_73670_a getBooleanProperty (Ljava/lang/String;Z)Z
+		COMMENT Gets a boolean property. If it does not exist, set it to the specified value.
+		ARG 0 par1Str
+		ARG 1 par2
+	METHOD func_73667_a setProperty (Ljava/lang/String;Ljava/lang/Object;)V
+		COMMENT Saves an Object with the given property name.
+		ARG 0 par1Str
+		ARG 1 par2Obj

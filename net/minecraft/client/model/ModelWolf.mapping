@@ -1,9 +1,41 @@
 CLASS net/minecraft/client/model/ModelWolf
 	FIELD field_78185_a wolfHeadMain Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT main box for the wolf head
 	FIELD field_78183_b wolfBody Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The wolf's body
 	FIELD field_78184_c wolfLeg1 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Wolf'se first leg
 	FIELD field_78181_d wolfLeg2 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Wolf's second leg
 	FIELD field_78182_e wolfLeg3 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Wolf's third leg
 	FIELD field_78179_f wolfLeg4 Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT Wolf's fourth leg
 	FIELD field_78180_g wolfTail Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The wolf's tail
 	FIELD field_78186_h wolfMane Lnet/minecraft/client/model/ModelRenderer;
+		COMMENT The wolf's mane
+	METHOD func_78088_a render (Lnet/minecraft/entity/Entity;FFFFFF)V
+		COMMENT Sets the models various rotation angles then renders the model.
+		ARG 0 par1Entity
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7
+	METHOD func_78086_a setLivingAnimations (Lnet/minecraft/entity/EntityLiving;FFF)V
+		COMMENT Used for easily adding entity-dependent animations. The second and third float params here are the same second and third as in the setRotationAngles method.
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78087_a setRotationAngles (FFFFFFLnet/minecraft/entity/Entity;)V
+		COMMENT Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs can swing at most.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6
+		ARG 6 par7Entity

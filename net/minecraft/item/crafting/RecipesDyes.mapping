@@ -1,1 +1,4 @@
 CLASS net/minecraft/item/crafting/RecipesDyes
+	METHOD func_77607_a addRecipes (Lnet/minecraft/item/crafting/CraftingManager;)V
+		COMMENT Adds the dye recipes to the CraftingManager.
+		ARG 0 par1CraftingManager

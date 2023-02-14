@@ -1,7 +1,58 @@
 CLASS net/minecraft/world/gen/structure/StructureBoundingBox
 	FIELD field_78897_a minX I
+		COMMENT The first x coordinate of a bounding box.
 	FIELD field_78895_b minY I
+		COMMENT The first y coordinate of a bounding box.
 	FIELD field_78896_c minZ I
+		COMMENT The first z coordinate of a bounding box.
 	FIELD field_78893_d maxX I
+		COMMENT The second x coordinate of a bounding box.
 	FIELD field_78894_e maxY I
+		COMMENT The second y coordinate of a bounding box.
 	FIELD field_78892_f maxZ I
+		COMMENT The second z coordinate of a bounding box.
+	METHOD func_78887_a getNewBoundingBox ()Lnet/minecraft/world/gen/structure/StructureBoundingBox;
+		COMMENT returns a new StructureBoundingBox with MAX values
+	METHOD func_78889_a getComponentToAddBoundingBox (IIIIIIIIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;
+		COMMENT used to project a possible new component Bounding Box - to check if it would cut anything already spawned
+		ARG 0 par0
+		ARG 1 par1
+		ARG 2 par2
+		ARG 3 par3
+		ARG 4 par4
+		ARG 5 par5
+		ARG 6 par6
+		ARG 7 par7
+		ARG 8 par8
+		ARG 9 par9
+	METHOD func_78884_a intersectsWith (Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z
+		COMMENT Returns whether the given bounding box intersects with this one. Args: structureboundingbox
+		ARG 0 par1StructureBoundingBox
+	METHOD func_78885_a intersectsWith (IIII)Z
+		COMMENT Discover if a coordinate is inside the bounding box area.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_78888_b expandTo (Lnet/minecraft/world/gen/structure/StructureBoundingBox;)V
+		COMMENT Expands a bounding box's dimensions to include the supplied bounding box.
+		ARG 0 par1StructureBoundingBox
+	METHOD func_78886_a offset (III)V
+		COMMENT Offsets the current bounding box by the specified coordinates. Args: x, y, z
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_78890_b isVecInside (III)Z
+		COMMENT Returns true if block is inside bounding box
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_78883_b getXSize ()I
+		COMMENT Returns width of a bounding box
+	METHOD func_78882_c getYSize ()I
+		COMMENT Returns height of a bounding box
+	METHOD func_78880_d getZSize ()I
+		COMMENT Returns length of a bounding box
+	METHOD func_78881_e getCenterX ()I
+	METHOD func_78879_f getCenterY ()I
+	METHOD func_78891_g getCenterZ ()I

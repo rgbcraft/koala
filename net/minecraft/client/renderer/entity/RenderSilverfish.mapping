@@ -1,1 +1,17 @@
 CLASS net/minecraft/client/renderer/entity/RenderSilverfish
+	METHOD func_77089_a getSilverfishDeathRotation (Lnet/minecraft/entity/monster/EntitySilverfish;)F
+		COMMENT Return the silverfish's maximum death rotation.
+		ARG 0 par1EntitySilverfish
+	METHOD func_77088_a renderSilverfish (Lnet/minecraft/entity/monster/EntitySilverfish;DDDFF)V
+		COMMENT Renders the silverfish.
+		ARG 0 par1EntitySilverfish
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9
+	METHOD func_77087_a shouldSilverfishRenderPass (Lnet/minecraft/entity/monster/EntitySilverfish;IF)I
+		COMMENT Disallows the silverfish to render the renderPassModel.
+		ARG 0 par1EntitySilverfish
+		ARG 1 par2
+		ARG 2 par3

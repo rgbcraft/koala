@@ -1,1 +1,20 @@
 CLASS net/minecraft/client/texturepacks/ITexturePack
+	METHOD func_77533_a deleteTexturePack (Lnet/minecraft/client/renderer/RenderEngine;)V
+		COMMENT Delete the OpenGL texture id of the pack's thumbnail image, and close the zip file in case of TexturePackCustom.
+		ARG 0 par1RenderEngine
+	METHOD func_77535_b bindThumbnailTexture (Lnet/minecraft/client/renderer/RenderEngine;)V
+		COMMENT Bind the texture id of the pack's thumbnail image, loading it if necessary.
+		ARG 0 par1RenderEngine
+	METHOD func_77532_a getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+		COMMENT Gives a texture resource as InputStream.
+		ARG 0 par1Str
+	METHOD func_77536_b getTexturePackID ()Ljava/lang/String;
+		COMMENT Get the texture pack ID
+	METHOD func_77538_c getTexturePackFileName ()Ljava/lang/String;
+		COMMENT Get the file name of the texture pack, or Default if not from a custom texture pack
+	METHOD func_77531_d getFirstDescriptionLine ()Ljava/lang/String;
+		COMMENT Get the first line of the texture pack description (read from the pack.txt file)
+	METHOD func_77537_e getSecondDescriptionLine ()Ljava/lang/String;
+		COMMENT Get the second line of the texture pack description (read from the pack.txt file)
+	METHOD func_77534_f getTexturePackResolution ()I
+		COMMENT Return the texture pack's resolution (16 by default). Used only by PlayerUsageSnooper. Presumably meant to be overriden by HD texture mods.

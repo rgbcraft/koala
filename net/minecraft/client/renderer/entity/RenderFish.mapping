@@ -1,1 +1,9 @@
 CLASS net/minecraft/client/renderer/entity/RenderFish
+	METHOD func_77000_a doRenderFishHook (Lnet/minecraft/entity/projectile/EntityFishHook;DDDFF)V
+		COMMENT Actually renders the fishing line and hook
+		ARG 0 par1EntityFishHook
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9

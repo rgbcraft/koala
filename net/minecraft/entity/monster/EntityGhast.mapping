@@ -5,6 +5,47 @@ CLASS net/minecraft/entity/monster/EntityGhast
 	FIELD field_70793_d waypointZ D
 	FIELD field_70792_g targetedEntity Lnet/minecraft/entity/Entity;
 	FIELD field_70798_h aggroCooldown I
+		COMMENT Cooldown time between target loss and new target aquirement.
 	FIELD field_70794_e prevAttackCounter I
 	FIELD field_70791_f attackCounter I
 	FIELD field_92014_j explosionStrength I
+		COMMENT The explosion radius of spawned fireballs.
+	METHOD func_70097_a attackEntityFrom (Lnet/minecraft/util/DamageSource;I)Z
+		COMMENT Called when the entity is attacked.
+		ARG 0 par1DamageSource
+		ARG 1 par2
+	METHOD func_70088_a entityInit ()V
+	METHOD func_70667_aM getMaxHealth ()I
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.
+	METHOD func_70626_be updateEntityActionState ()V
+	METHOD func_70790_a isCourseTraversable (DDDD)Z
+		COMMENT True if the ghast has an unobstructed line of travel to the waypoint.
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+		ARG 3 par7
+	METHOD func_70639_aQ getLivingSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes while it's alive.
+	METHOD func_70621_aR getHurtSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes when it is hurt.
+	METHOD func_70673_aS getDeathSound ()Ljava/lang/String;
+		COMMENT Returns the sound this mob makes on death.
+	METHOD func_70633_aT getDropItemId ()I
+		COMMENT Returns the item ID for the item the mob drops on death.
+	METHOD func_70628_a dropFewItems (ZI)V
+		COMMENT Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70599_aP getSoundVolume ()F
+		COMMENT Returns the volume for the sounds this mob makes.
+	METHOD func_70601_bi getCanSpawnHere ()Z
+		COMMENT Checks if the entity's current position is a valid location to spawn this entity.
+	METHOD func_70641_bl getMaxSpawnedInChunk ()I
+		COMMENT Will return how many at most can spawn in a chunk at once.
+	METHOD func_70014_b writeEntityToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to write subclass entity data to NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70037_a readEntityFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
+		ARG 0 par1NBTTagCompound

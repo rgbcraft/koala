@@ -1,2 +1,11 @@
 CLASS net/minecraft/client/renderer/entity/RenderBoat
 	FIELD field_76998_a modelBoat Lnet/minecraft/client/model/ModelBase;
+		COMMENT instance of ModelBoat for rendering
+	METHOD func_76997_a renderBoat (Lnet/minecraft/entity/item/EntityBoat;DDDFF)V
+		COMMENT The render method used in RenderBoat that renders the boat model.
+		ARG 0 par1EntityBoat
+		ARG 1 par2
+		ARG 2 par4
+		ARG 3 par6
+		ARG 4 par8
+		ARG 5 par9

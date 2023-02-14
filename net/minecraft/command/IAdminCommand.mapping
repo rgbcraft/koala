@@ -1,1 +1,7 @@
 CLASS net/minecraft/command/IAdminCommand
+	METHOD func_71563_a notifyAdmins (Lnet/minecraft/command/ICommandSender;ILjava/lang/String;Ljava/lang/Object;)V
+		COMMENT Sends a message to the admins of the server from a given CommandSender with the given resource string and given extra srings. If the int par2 is even or zero, the original sender is also notified.
+		ARG 0 par1ICommandSender
+		ARG 1 par2
+		ARG 2 par3Str
+		ARG 3 par4ArrayOfObj

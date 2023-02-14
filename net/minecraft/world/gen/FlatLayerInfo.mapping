@@ -1,5 +1,19 @@
 CLASS net/minecraft/world/gen/FlatLayerInfo
 	FIELD field_82664_a layerCount I
+		COMMENT Amount of layers for this set of layers.
 	FIELD field_82662_b layerFillBlock I
+		COMMENT Block type used on this set of layers.
 	FIELD field_82663_c layerFillBlockMeta I
+		COMMENT Block metadata used on this set of laeyrs.
 	FIELD field_82661_d layerMinimumY I
+	METHOD func_82657_a getLayerCount ()I
+		COMMENT Return the amount of layers for this set of layers.
+	METHOD func_82659_b getFillBlock ()I
+		COMMENT Return the block type used on this set of layers.
+	METHOD func_82658_c getFillBlockMeta ()I
+		COMMENT Return the block metadata used on this set of layers.
+	METHOD func_82656_d getMinY ()I
+		COMMENT Return the minimum Y coordinate for this layer, set during generation.
+	METHOD func_82660_d setMinY (I)V
+		COMMENT Set the minimum Y coordinate for this layer.
+		ARG 0 par1

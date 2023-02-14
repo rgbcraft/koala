@@ -1,4 +1,7 @@
 CLASS net/minecraft/client/renderer/ThreadDownloadImage
 	FIELD field_78458_a location Ljava/lang/String;
+		COMMENT The URL of the image to download.
 	FIELD field_78456_b buffer Lnet/minecraft/client/renderer/IImageBuffer;
+		COMMENT The image buffer to use.
 	FIELD field_78457_c imageData Lnet/minecraft/client/renderer/ThreadDownloadImageData;
+		COMMENT The image data.

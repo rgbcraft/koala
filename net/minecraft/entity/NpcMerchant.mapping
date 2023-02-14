@@ -1,4 +1,16 @@
 CLASS net/minecraft/entity/NpcMerchant
 	FIELD field_70937_a theMerchantInventory Lnet/minecraft/inventory/InventoryMerchant;
+		COMMENT Instance of Merchants Inventory.
 	FIELD field_70935_b customer Lnet/minecraft/entity/player/EntityPlayer;
+		COMMENT This merchant's current player customer.
 	FIELD field_70936_c recipeList Lnet/minecraft/village/MerchantRecipeList;
+		COMMENT The MerchantRecipeList instance.
+	METHOD func_70931_l_ getCustomer ()Lnet/minecraft/entity/player/EntityPlayer;
+	METHOD func_70932_a_ setCustomer (Lnet/minecraft/entity/player/EntityPlayer;)V
+		ARG 0 par1EntityPlayer
+	METHOD func_70934_b getRecipes (Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/village/MerchantRecipeList;
+		ARG 0 par1EntityPlayer
+	METHOD func_70930_a setRecipes (Lnet/minecraft/village/MerchantRecipeList;)V
+		ARG 0 par1MerchantRecipeList
+	METHOD func_70933_a useRecipe (Lnet/minecraft/village/MerchantRecipe;)V
+		ARG 0 par1MerchantRecipe

@@ -1,2 +1,29 @@
 CLASS net/minecraft/world/gen/feature/WorldGenerator
 	FIELD field_76488_a doBlockNotify Z
+		COMMENT Sets wither or not the generator should notify blocks of blocks it changes. When the world is first generated, this is false, when saplings grow, this is true.
+	METHOD func_76484_a generate (Lnet/minecraft/world/World;Ljava/util/Random;III)Z
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76487_a setScale (DDD)V
+		COMMENT Rescales the generator settings, only used in WorldGenBigTree
+		ARG 0 par1
+		ARG 1 par3
+		ARG 2 par5
+	METHOD func_76486_a setBlock (Lnet/minecraft/world/World;IIII)V
+		COMMENT Sets the block without metadata in the world, notifying neighbors if enabled.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_76485_a setBlockAndMetadata (Lnet/minecraft/world/World;IIIII)V
+		COMMENT Sets the block in the world, notifying neighbors if enabled.
+		ARG 0 par1World
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+		ARG 5 par6

@@ -1,6 +1,54 @@
 CLASS net/minecraft/util/LongHashMap
 	FIELD field_76169_a hashArray [Lnet/minecraft/util/LongHashMapEntry;
+		COMMENT the array of all elements in the hash
 	FIELD field_76167_b numHashElements I
+		COMMENT the number of elements in the hash array
 	FIELD field_76168_c capacity I
+		COMMENT the maximum amount of elements in the hash (probably 3/4 the size due to meh hashing function)
 	FIELD field_76165_d percentUseable F
+		COMMENT percent of the hasharray that can be used without hash colliding probably
 	FIELD field_76166_e modCount I
+		COMMENT count of times elements have been added/removed
+	METHOD func_76155_g getHashedKey (J)I
+		COMMENT returns the hashed key given the original key
+		ARG 0 par0
+	METHOD func_76157_a hash (I)I
+		COMMENT the hash function
+		ARG 0 par0
+	METHOD func_76158_a getHashIndex (II)I
+		COMMENT gets the index in the hash given the array length and the hashed key
+		ARG 0 par0
+		ARG 1 par1
+	METHOD func_76162_a getNumHashElements ()I
+	METHOD func_76164_a getValueByKey (J)Ljava/lang/Object;
+		COMMENT get the value from the map given the key
+		ARG 0 par1
+	METHOD func_76161_b containsItem (J)Z
+		ARG 0 par1
+	METHOD func_76160_c getEntry (J)Lnet/minecraft/util/LongHashMapEntry;
+		ARG 0 par1
+	METHOD func_76163_a add (JLjava/lang/Object;)V
+		COMMENT Add a key-value pair.
+		ARG 0 par1
+		ARG 1 par3Obj
+	METHOD func_76153_b resizeTable (I)V
+		COMMENT resizes the table
+		ARG 0 par1
+	METHOD func_76154_a copyHashTableTo ([Lnet/minecraft/util/LongHashMapEntry;)V
+		COMMENT copies the hash table to the specified array
+		ARG 0 par1ArrayOfLongHashMapEntry
+	METHOD func_76159_d remove (J)Ljava/lang/Object;
+		COMMENT calls the removeKey method and returns removed object
+		ARG 0 par1
+	METHOD func_76152_e removeKey (J)Lnet/minecraft/util/LongHashMapEntry;
+		COMMENT removes the key from the hash linked list
+		ARG 0 par1
+	METHOD func_76156_a createKey (IJLjava/lang/Object;I)V
+		COMMENT creates the key in the hash table
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par4Obj
+		ARG 3 par5
+	METHOD func_76151_f getHashCode (J)I
+		COMMENT public method to get the hashed key(hashCode)
+		ARG 0 par0

@@ -2,3 +2,13 @@ CLASS net/minecraft/client/gui/inventory/GuiChest
 	FIELD field_74220_o upperChestInventory Lnet/minecraft/inventory/IInventory;
 	FIELD field_74219_p lowerChestInventory Lnet/minecraft/inventory/IInventory;
 	FIELD field_74218_q inventoryRows I
+		COMMENT window height is calculated with this values, the more rows, the heigher
+	METHOD func_74189_g drawGuiContainerForegroundLayer (II)V
+		COMMENT Draw the foreground layer for the GuiContainer (everything in front of the items)
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_74185_a drawGuiContainerBackgroundLayer (FII)V
+		COMMENT Draw the background layer for the GuiContainer (everything behind the items)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3

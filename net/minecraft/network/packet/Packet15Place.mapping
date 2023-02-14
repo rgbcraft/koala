@@ -3,7 +3,33 @@ CLASS net/minecraft/network/packet/Packet15Place
 	FIELD field_73413_b yPosition I
 	FIELD field_73414_c zPosition I
 	FIELD field_73411_d direction I
+		COMMENT The offset to use for block/item placement.
 	FIELD field_73412_e itemStack Lnet/minecraft/item/ItemStack;
 	FIELD field_73409_f xOffset F
+		COMMENT The offset from xPosition where the actual click took place
 	FIELD field_73410_g yOffset F
+		COMMENT The offset from yPosition where the actual click took place
 	FIELD field_73416_h zOffset F
+		COMMENT The offset from zPosition where the actual click took place
+	METHOD func_73267_a readPacketData (Ljava/io/DataInputStream;)V
+		COMMENT Abstract. Reads the raw packet data from the data stream.
+		ARG 0 par1DataInputStream
+	METHOD func_73273_a writePacketData (Ljava/io/DataOutputStream;)V
+		COMMENT Abstract. Writes the raw packet data to the data stream.
+		ARG 0 par1DataOutputStream
+	METHOD func_73279_a processPacket (Lnet/minecraft/network/packet/NetHandler;)V
+		COMMENT Passes this Packet on to the NetHandler for processing.
+		ARG 0 par1NetHandler
+	METHOD func_73284_a getPacketSize ()I
+		COMMENT Abstract. Return the size of the packet (not counting the header).
+	METHOD func_73403_d getXPosition ()I
+	METHOD func_73402_f getYPosition ()I
+	METHOD func_73407_g getZPosition ()I
+	METHOD func_73401_h getDirection ()I
+	METHOD func_73405_i getItemStack ()Lnet/minecraft/item/ItemStack;
+	METHOD func_73406_j getXOffset ()F
+		COMMENT Returns the offset from xPosition where the actual click took place
+	METHOD func_73404_l getYOffset ()F
+		COMMENT Returns the offset from yPosition where the actual click took place
+	METHOD func_73408_m getZOffset ()F
+		COMMENT Returns the offset from zPosition where the actual click took place

@@ -1,1 +1,34 @@
 CLASS net/minecraft/item/ItemMap
+	METHOD func_77874_a getMPMapData (SLnet/minecraft/world/World;)Lnet/minecraft/world/storage/MapData;
+		ARG 0 par0
+		ARG 1 par1World
+	METHOD func_77873_a getMapData (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;)Lnet/minecraft/world/storage/MapData;
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+	METHOD func_77872_a updateMapData (Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;Lnet/minecraft/world/storage/MapData;)V
+		ARG 0 par1World
+		ARG 1 par2Entity
+		ARG 2 par3MapData
+	METHOD func_77663_a onUpdate (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;IZ)V
+		COMMENT Called each tick as long the item is on a player inventory. Uses by maps to check if is on a player hand and update it's contents.
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3Entity
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_77871_c createMapDataPacket (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/network/packet/Packet;
+		COMMENT returns null if no update is to be sent
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer
+	METHOD func_77622_d onCreated (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)V
+		COMMENT Called when item is crafted/smelted. Used only by maps so far.
+		ARG 0 par1ItemStack
+		ARG 1 par2World
+		ARG 2 par3EntityPlayer
+	METHOD func_77624_a addInformation (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V
+		COMMENT allows items to add custom lines of information to the mouseover description
+		ARG 0 par1ItemStack
+		ARG 1 par2EntityPlayer
+		ARG 2 par3List
+		ARG 3 par4

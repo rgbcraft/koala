@@ -1,1 +1,8 @@
 CLASS net/minecraft/client/particle/EntityEnchantmentTableParticleFX
+	METHOD func_70070_b getBrightnessForRender (F)I
+		ARG 0 par1
+	METHOD func_70013_c getBrightness (F)F
+		COMMENT Gets how bright this entity is.
+		ARG 0 par1
+	METHOD func_70071_h_ onUpdate ()V
+		COMMENT Called to update the entity's position/logic.

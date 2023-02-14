@@ -1,5 +1,6 @@
 CLASS net/minecraft/potion/Potion
 	FIELD field_76425_a potionTypes [Lnet/minecraft/potion/Potion;
+		COMMENT The array of potion types.
 	FIELD field_76424_c moveSpeed Lnet/minecraft/potion/Potion;
 	FIELD field_76421_d moveSlowdown Lnet/minecraft/potion/Potion;
 	FIELD field_76422_e digSpeed Lnet/minecraft/potion/Potion;
@@ -10,20 +11,75 @@ CLASS net/minecraft/potion/Potion
 	FIELD field_76430_j jump Lnet/minecraft/potion/Potion;
 	FIELD field_76431_k confusion Lnet/minecraft/potion/Potion;
 	FIELD field_76428_l regeneration Lnet/minecraft/potion/Potion;
+		COMMENT The regeneration Potion object.
 	FIELD field_76429_m resistance Lnet/minecraft/potion/Potion;
 	FIELD field_76426_n fireResistance Lnet/minecraft/potion/Potion;
+		COMMENT The fire resistance Potion object.
 	FIELD field_76427_o waterBreathing Lnet/minecraft/potion/Potion;
+		COMMENT The water breathing Potion object.
 	FIELD field_76441_p invisibility Lnet/minecraft/potion/Potion;
+		COMMENT The invisibility Potion object.
 	FIELD field_76440_q blindness Lnet/minecraft/potion/Potion;
+		COMMENT The blindness Potion object.
 	FIELD field_76439_r nightVision Lnet/minecraft/potion/Potion;
+		COMMENT The night vision Potion object.
 	FIELD field_76438_s hunger Lnet/minecraft/potion/Potion;
+		COMMENT The hunger Potion object.
 	FIELD field_76437_t weakness Lnet/minecraft/potion/Potion;
+		COMMENT The weakness Potion object.
 	FIELD field_76436_u poison Lnet/minecraft/potion/Potion;
+		COMMENT The poison Potion object.
 	FIELD field_82731_v wither Lnet/minecraft/potion/Potion;
+		COMMENT The wither Potion object.
 	FIELD field_76415_H id I
+		COMMENT The Id of a Potion object.
 	FIELD field_76416_I name Ljava/lang/String;
+		COMMENT The name of the Potion.
 	FIELD field_76417_J statusIconIndex I
+		COMMENT The index for the icon displayed when the potion effect is active.
 	FIELD field_76418_K isBadEffect Z
+		COMMENT This field indicated if the effect is 'bad' - negative - for the entity.
 	FIELD field_76412_L effectiveness D
 	FIELD field_76413_M usable Z
 	FIELD field_76414_N liquidColor I
+		COMMENT Is the color of the liquid for this potion.
+	METHOD func_76399_b setIconIndex (II)Lnet/minecraft/potion/Potion;
+		COMMENT Sets the index for the icon displayed in the player's inventory when the status is active.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76396_c getId ()I
+		COMMENT returns the ID of the potion
+	METHOD func_76394_a performEffect (Lnet/minecraft/entity/EntityLiving;I)V
+		ARG 0 par1EntityLiving
+		ARG 1 par2
+	METHOD func_76402_a affectEntity (Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/entity/EntityLiving;ID)V
+		COMMENT Hits the provided entity with this potion's instant effect.
+		ARG 0 par1EntityLiving
+		ARG 1 par2EntityLiving
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_76403_b isInstant ()Z
+		COMMENT Returns true if the potion has an instant effect instead of a continuous one (eg Harming)
+	METHOD func_76397_a isReady (II)Z
+		COMMENT checks if Potion effect is ready to be applied this tick.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76390_b setPotionName (Ljava/lang/String;)Lnet/minecraft/potion/Potion;
+		COMMENT Set the potion name.
+		ARG 0 par1Str
+	METHOD func_76393_a getName ()Ljava/lang/String;
+		COMMENT returns the name of the potion
+	METHOD func_76400_d hasStatusIcon ()Z
+		COMMENT Returns true if the potion has a associated status icon to display in then inventory when active.
+	METHOD func_76392_e getStatusIconIndex ()I
+		COMMENT Returns the index for the icon to display when the potion is active.
+	METHOD func_76398_f isBadEffect ()Z
+		COMMENT This method returns true if the potion effect is bad - negative - for the entity.
+	METHOD func_76389_a getDurationString (Lnet/minecraft/potion/PotionEffect;)Ljava/lang/String;
+		ARG 0 par0PotionEffect
+	METHOD func_76404_a setEffectiveness (D)Lnet/minecraft/potion/Potion;
+		ARG 0 par1
+	METHOD func_76388_g getEffectiveness ()D
+	METHOD func_76395_i isUsable ()Z
+	METHOD func_76401_j getLiquidColor ()I
+		COMMENT Returns the color of the potion liquid.

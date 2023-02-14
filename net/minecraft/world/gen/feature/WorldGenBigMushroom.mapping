@@ -1,2 +1,9 @@
 CLASS net/minecraft/world/gen/feature/WorldGenBigMushroom
 	FIELD field_76523_a mushroomType I
+		COMMENT The mushroom type. 0 for brown, 1 for red.
+	METHOD func_76484_a generate (Lnet/minecraft/world/World;Ljava/util/Random;III)Z
+		ARG 0 par1World
+		ARG 1 par2Random
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5

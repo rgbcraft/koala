@@ -1,3 +1,12 @@
 CLASS net/minecraft/inventory/SlotArmor
 	FIELD field_75236_a armorType I
+		COMMENT The armor type that can be placed on that slot, it uses the same values of armorType field on ItemArmor.
 	FIELD field_75235_b parent Lnet/minecraft/inventory/ContainerPlayer;
+		COMMENT The parent class of this clot, ContainerPlayer, SlotArmor is a Anon inner class.
+	METHOD func_75219_a getSlotStackLimit ()I
+		COMMENT Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(), but 1 in the case of armor slots)
+	METHOD func_75214_a isItemValid (Lnet/minecraft/item/ItemStack;)Z
+		COMMENT Check if the stack is a valid item for this slot. Always true beside for the armor slots.
+		ARG 0 par1ItemStack
+	METHOD func_75212_b getBackgroundIconIndex ()I
+		COMMENT Returns the icon index on items.png that is used as background image of the slot.

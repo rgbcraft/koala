@@ -1,3 +1,28 @@
 CLASS net/minecraft/server/dedicated/DedicatedPlayerList
 	FIELD field_72423_e opsList Ljava/io/File;
 	FIELD field_72422_f whiteList Ljava/io/File;
+	METHOD func_72371_a setWhiteListEnabled (Z)V
+		ARG 0 par1
+	METHOD func_72386_b addOp (Ljava/lang/String;)V
+		COMMENT This adds a username to the ops list, then saves the op list
+		ARG 0 par1Str
+	METHOD func_72360_c removeOp (Ljava/lang/String;)V
+		COMMENT This removes a username from the ops list, then saves the op list
+		ARG 0 par1Str
+	METHOD func_72379_i removeFromWhitelist (Ljava/lang/String;)V
+		COMMENT Remove the specified player from the whitelist.
+		ARG 0 par1Str
+	METHOD func_72359_h addToWhiteList (Ljava/lang/String;)V
+		COMMENT Add the specified player to the white list.
+		ARG 0 par1Str
+	METHOD func_72362_j loadWhiteList ()V
+		COMMENT Either does nothing, or calls readWhiteList.
+	METHOD func_72417_t loadOpsList ()V
+	METHOD func_72419_u saveOpsList ()V
+	METHOD func_72418_v readWhiteList ()V
+	METHOD func_72421_w saveWhiteList ()V
+	METHOD func_72370_d isAllowedToLogin (Ljava/lang/String;)Z
+		COMMENT Determine if the player is allowed to connect based on current server settings.
+		ARG 0 par1Str
+	METHOD func_72420_s getDedicatedServerInstance ()Lnet/minecraft/server/dedicated/DedicatedServer;
+	METHOD func_72365_p getServerInstance ()Lnet/minecraft/server/MinecraftServer;

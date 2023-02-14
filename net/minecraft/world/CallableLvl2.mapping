@@ -1,2 +1,5 @@
 CLASS net/minecraft/world/CallableLvl2
 	FIELD field_77405_a theWorld Lnet/minecraft/world/World;
+		COMMENT Reference to the World object.
+	METHOD func_77404_a getPlayerEntities ()Ljava/lang/String;
+		COMMENT Returns the size and contents of the player entity list.

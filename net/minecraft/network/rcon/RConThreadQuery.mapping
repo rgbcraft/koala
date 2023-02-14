@@ -1,16 +1,59 @@
 CLASS net/minecraft/network/rcon/RConThreadQuery
 	FIELD field_72629_g lastAuthCheckTime J
+		COMMENT The time of the last client auth check
 	FIELD field_72636_h queryPort I
+		COMMENT The RCon query port
 	FIELD field_72637_i serverPort I
+		COMMENT Port the server is running on
 	FIELD field_72634_j maxPlayers I
+		COMMENT The maximum number of players allowed on the server
 	FIELD field_72635_k serverMotd Ljava/lang/String;
+		COMMENT The current server message of the day
 	FIELD field_72632_l worldName Ljava/lang/String;
+		COMMENT The name of the currently loaded world
 	FIELD field_72633_m querySocket Ljava/net/DatagramSocket;
+		COMMENT The remote socket querying the server
 	FIELD field_72630_n buffer [B
+		COMMENT A buffer for incoming DatagramPackets
 	FIELD field_72631_o incomingPacket Ljava/net/DatagramPacket;
+		COMMENT Storage for incoming DatagramPackets
 	FIELD field_72643_q queryHostname Ljava/lang/String;
+		COMMENT The hostname of this query server
 	FIELD field_72642_r serverHostname Ljava/lang/String;
+		COMMENT The hostname of the running server
 	FIELD field_72641_s queryClients Ljava/util/Map;
+		COMMENT A map of SocketAddress objects to RConThreadQueryAuth objects
 	FIELD field_72640_t time J
+		COMMENT The time that this RConThreadQuery was constructed, from (new Date()).getTime()
 	FIELD field_72639_u output Lnet/minecraft/network/rcon/RConOutputStream;
+		COMMENT The RConQuery output stream
 	FIELD field_72638_v lastQueryResponseTime J
+		COMMENT The time of the last query response sent
+	METHOD func_72620_a sendResponsePacket ([BLjava/net/DatagramPacket;)V
+		COMMENT Sends a byte array as a DatagramPacket response to the client who sent the given DatagramPacket
+		ARG 0 par1ArrayOfByte
+		ARG 1 par2DatagramPacket
+	METHOD func_72621_a parseIncomingPacket (Ljava/net/DatagramPacket;)Z
+		COMMENT Parses an incoming DatagramPacket, returning true if the packet was valid
+		ARG 0 par1DatagramPacket
+	METHOD func_72624_b createQueryResponse (Ljava/net/DatagramPacket;)[B
+		COMMENT Creates a query response as a byte array for the specified query DatagramPacket
+		ARG 0 par1DatagramPacket
+	METHOD func_72625_a getRequestID (Ljava/net/SocketAddress;)[B
+		COMMENT Returns the request ID provided by the authorized client
+		ARG 0 par1SocketAddress
+	METHOD func_72627_c verifyClientAuth (Ljava/net/DatagramPacket;)Ljava/lang/Boolean;
+		COMMENT Returns true if the client has a valid auth, otherwise false
+		ARG 0 par1DatagramPacket
+	METHOD func_72622_d sendAuthChallenge (Ljava/net/DatagramPacket;)V
+		COMMENT Sends an auth challenge DatagramPacket to the client and adds the client to the queryClients map
+		ARG 0 par1DatagramPacket
+	METHOD func_72628_f cleanQueryClientsMap ()V
+		COMMENT Removes all clients whose auth is no longer valid
+	METHOD func_72602_a startThread ()V
+		COMMENT Creates a new Thread object from this class and starts running
+	METHOD func_72623_a stopWithException (Ljava/lang/Exception;)V
+		COMMENT Stops the query server and reports the given Exception
+		ARG 0 par1Exception
+	METHOD func_72626_g initQuerySystem ()Z
+		COMMENT Initializes the query system by binding it to a port

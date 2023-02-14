@@ -1,2 +1,7 @@
 CLASS net/minecraft/inventory/SlotEnchantmentTable
 	FIELD field_70484_a container Lnet/minecraft/inventory/ContainerEnchantment;
+		COMMENT The brewing stand this slot belongs to.
+	METHOD func_70297_j_ getInventoryStackLimit ()I
+		COMMENT Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't this more of a set than a get?*
+	METHOD func_70296_d onInventoryChanged ()V
+		COMMENT Called when an the contents of an Inventory change, usually

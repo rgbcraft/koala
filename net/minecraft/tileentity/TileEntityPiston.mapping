@@ -2,8 +2,41 @@ CLASS net/minecraft/tileentity/TileEntityPiston
 	FIELD field_70348_a storedBlockID I
 	FIELD field_70346_b storedMetadata I
 	FIELD field_70347_c storedOrientation I
+		COMMENT the side the front of the piston is on
 	FIELD field_70344_d extending Z
+		COMMENT if this piston is extending or not
 	FIELD field_70345_e shouldHeadBeRendered Z
 	FIELD field_70342_f progress F
 	FIELD field_70343_g lastProgress F
+		COMMENT the progress in (de)extending
 	FIELD field_70349_h pushedObjects Ljava/util/List;
+	METHOD func_70340_a getStoredBlockID ()I
+	METHOD func_70322_n getBlockMetadata ()I
+		COMMENT Returns block data at the location of this entity (client-only).
+	METHOD func_70341_b isExtending ()Z
+		COMMENT Returns true if a piston is extending
+	METHOD func_70336_c getPistonOrientation ()I
+		COMMENT Returns the orientation of the piston as an int
+	METHOD func_70338_f shouldRenderHead ()Z
+	METHOD func_70333_a getProgress (F)F
+		COMMENT Get interpolated progress value (between lastProgress and progress) given the fractional time between ticks as an argument.
+		ARG 0 par1
+	METHOD func_70337_b getOffsetX (F)F
+		ARG 0 par1
+	METHOD func_70334_c getOffsetY (F)F
+		ARG 0 par1
+	METHOD func_70332_d getOffsetZ (F)F
+		ARG 0 par1
+	METHOD func_70335_a updatePushedObjects (FF)V
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70339_i clearPistonTileEntity ()V
+		COMMENT removes a pistons tile entity (and if the piston is moving, stops it)
+	METHOD func_70316_g updateEntity ()V
+		COMMENT Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
+	METHOD func_70307_a readFromNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Reads a tile entity from NBT.
+		ARG 0 par1NBTTagCompound
+	METHOD func_70310_b writeToNBT (Lnet/minecraft/nbt/NBTTagCompound;)V
+		COMMENT Writes a tile entity to NBT.
+		ARG 0 par1NBTTagCompound

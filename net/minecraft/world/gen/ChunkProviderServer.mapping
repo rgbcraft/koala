@@ -1,9 +1,71 @@
 CLASS net/minecraft/world/gen/ChunkProviderServer
 	FIELD field_73248_b chunksToUnload Ljava/util/Set;
+		COMMENT used by unload100OldestChunks to iterate the loadedChunkHashMap for unload (underlying assumption, first in, first out)
 	FIELD field_73249_c defaultEmptyChunk Lnet/minecraft/world/chunk/Chunk;
 	FIELD field_73246_d currentChunkProvider Lnet/minecraft/world/chunk/IChunkProvider;
 	FIELD field_73247_e currentChunkLoader Lnet/minecraft/world/chunk/storage/IChunkLoader;
 	FIELD field_73250_a loadChunkOnProvideRequest Z
+		COMMENT if this is false, the defaultEmptyChunk will be returned by the provider
 	FIELD field_73244_f loadedChunkHashMap Lnet/minecraft/util/LongHashMap;
 	FIELD field_73245_g loadedChunks Ljava/util/List;
 	FIELD field_73251_h worldObj Lnet/minecraft/world/WorldServer;
+	METHOD func_73149_a chunkExists (II)Z
+		COMMENT Checks to see if a chunk exists at x, y
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73241_b unloadChunksIfNotNearSpawn (II)V
+		COMMENT marks chunk for unload by "unload100OldestChunks"  if there is no spawn point, or if the center of the chunk is outside 200 blocks (x or z) of the spawn
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73240_a unloadAllChunks ()V
+		COMMENT marks all chunks for unload, ignoring those near the spawn
+	METHOD func_73158_c loadChunk (II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT loads or generates the chunk at the chunk location specified
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73154_d provideChunk (II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT Will return back a chunk, if it doesn't exist and its not a MP client it will generates all the blocks for the specified chunk from the map seed and chunk seed
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73239_e safeLoadChunk (II)Lnet/minecraft/world/chunk/Chunk;
+		COMMENT used by loadChunk, but catches any exceptions if the load fails.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73243_a safeSaveExtraChunkData (Lnet/minecraft/world/chunk/Chunk;)V
+		COMMENT used by saveChunks, but catches any exceptions if the save fails.
+		ARG 0 par1Chunk
+	METHOD func_73242_b safeSaveChunk (Lnet/minecraft/world/chunk/Chunk;)V
+		COMMENT used by saveChunks, but catches any exceptions if the save fails.
+		ARG 0 par1Chunk
+	METHOD func_73153_a populate (Lnet/minecraft/world/chunk/IChunkProvider;II)V
+		COMMENT Populates chunk with ores etc etc
+		ARG 0 par1IChunkProvider
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73151_a saveChunks (ZLnet/minecraft/util/IProgressUpdate;)Z
+		COMMENT Two modes of operation: if passed true, save all Chunks in one go.  If passed false, save up to two chunks.  Return true if all chunks have been saved.
+		ARG 0 par1
+		ARG 1 par2IProgressUpdate
+	METHOD func_73156_b unload100OldestChunks ()Z
+		COMMENT Unloads the 100 oldest chunks from memory, due to a bug with chunkSet.add() never being called it thinks the list is always empty and will not remove any chunks.
+	METHOD func_73157_c canSave ()Z
+		COMMENT Returns if the IChunkProvider supports saving.
+	METHOD func_73148_d makeString ()Ljava/lang/String;
+		COMMENT Converts the instance data to a readable string.
+	METHOD func_73155_a getPossibleCreatures (Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;
+		COMMENT Returns a list of creatures of the specified type that can spawn at the given location.
+		ARG 0 par1EnumCreatureType
+		ARG 1 par2
+		ARG 2 par3
+		ARG 3 par4
+	METHOD func_73150_a findClosestStructure (Lnet/minecraft/world/World;Ljava/lang/String;III)Lnet/minecraft/world/ChunkPosition;
+		COMMENT Returns the location of the closest structure of the specified type. If not found returns null.
+		ARG 0 par1World
+		ARG 1 par2Str
+		ARG 2 par3
+		ARG 3 par4
+		ARG 4 par5
+	METHOD func_73152_e getLoadedChunkCount ()I
+	METHOD func_82695_e recreateStructures (II)V
+		ARG 0 par1
+		ARG 1 par2

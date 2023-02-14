@@ -1,3 +1,43 @@
 CLASS net/minecraft/client/gui/GuiRepair
 	FIELD field_82327_o repairContainer Lnet/minecraft/inventory/ContainerRepair;
 	FIELD field_82326_p itemNameField Lnet/minecraft/client/gui/GuiTextField;
+	METHOD func_73866_w_ initGui ()V
+		COMMENT Adds the buttons (and other controls) to the screen in question.
+	METHOD func_73874_b onGuiClosed ()V
+		COMMENT Called when the screen is unloaded. Used to disable keyboard repeat events
+	METHOD func_74189_g drawGuiContainerForegroundLayer (II)V
+		COMMENT Draw the foreground layer for the GuiContainer (everything in front of the items)
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73869_a keyTyped (CI)V
+		COMMENT Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_73864_a mouseClicked (III)V
+		COMMENT Called when the mouse is clicked.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_73863_a drawScreen (IIF)V
+		COMMENT Draws the screen and all the components in it.
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_74185_a drawGuiContainerBackgroundLayer (FII)V
+		COMMENT Draw the background layer for the GuiContainer (everything behind the items)
+		ARG 0 par1
+		ARG 1 par2
+		ARG 2 par3
+	METHOD func_71110_a sendContainerAndContentsToPlayer (Lnet/minecraft/inventory/Container;Ljava/util/List;)V
+		ARG 0 par1Container
+		ARG 1 par2List
+	METHOD func_71111_a sendSlotContents (Lnet/minecraft/inventory/Container;ILnet/minecraft/item/ItemStack;)V
+		COMMENT Sends the contents of an inventory slot to the client-side Container. This doesn't have to match the actual contents of that slot. Args: Container, slot number, slot contents
+		ARG 0 par1Container
+		ARG 1 par2
+		ARG 2 par3ItemStack
+	METHOD func_71112_a sendProgressBarUpdate (Lnet/minecraft/inventory/Container;II)V
+		COMMENT Sends two ints to the client-side Container. Used for furnace burning time, smelting progress, brewing progress, and enchanting level. Normally the first int identifies which variable to update, and the second contains the new value. Both are truncated to shorts in non-local SMP.
+		ARG 0 par1Container
+		ARG 1 par2
+		ARG 2 par3

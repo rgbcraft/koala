@@ -1,1 +1,29 @@
 CLASS net/minecraft/world/WorldProviderHell
+	METHOD func_76572_b registerWorldChunkManager ()V
+		COMMENT creates a new world chunk manager for WorldProvider
+	METHOD func_76562_b getFogColor (FF)Lnet/minecraft/util/Vec3;
+		COMMENT Return Vec3D with biome specific fog color
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76556_a generateLightBrightnessTable ()V
+		COMMENT Creates the light to brightness table
+	METHOD func_76555_c createChunkGenerator ()Lnet/minecraft/world/chunk/IChunkProvider;
+		COMMENT Returns a new chunk provider which generates chunks for this world
+	METHOD func_76569_d isSurfaceWorld ()Z
+		COMMENT Returns 'true' if in the "main surface world", but 'false' if in the Nether or End dimensions.
+	METHOD func_76566_a canCoordinateBeSpawn (II)Z
+		COMMENT Will check if the x, z position specified is alright to be set as the map spawn point
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_76563_a calculateCelestialAngle (JF)F
+		COMMENT Calculates the angle of sun and moon in the sky relative to a specified time (usually worldTime)
+		ARG 0 par1
+		ARG 1 par3
+	METHOD func_76567_e canRespawnHere ()Z
+		COMMENT True if the player can respawn in this dimension (true = overworld, false = nether).
+	METHOD func_76568_b doesXZShowFog (II)Z
+		COMMENT Returns true if the given X,Z coordinate should show environmental fog.
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_80007_l getDimensionName ()Ljava/lang/String;
+		COMMENT Returns the dimension's name, e.g. "The End", "Nether", or "Overworld".

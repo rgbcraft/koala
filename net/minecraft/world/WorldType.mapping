@@ -1,11 +1,40 @@
 CLASS net/minecraft/world/WorldType
 	FIELD field_77139_a worldTypes [Lnet/minecraft/world/WorldType;
+		COMMENT List of world types.
 	FIELD field_77137_b DEFAULT Lnet/minecraft/world/WorldType;
+		COMMENT Default world type.
 	FIELD field_77138_c FLAT Lnet/minecraft/world/WorldType;
+		COMMENT Flat world type.
 	FIELD field_77135_d LARGE_BIOMES Lnet/minecraft/world/WorldType;
+		COMMENT Large Biome world Type.
 	FIELD field_77136_e DEFAULT_1_1 Lnet/minecraft/world/WorldType;
+		COMMENT Default (1.1) world type.
 	FIELD field_82748_f worldTypeId I
+		COMMENT ID for this world type.
 	FIELD field_77133_f worldType Ljava/lang/String;
+		COMMENT 'default' or 'flat'
 	FIELD field_77134_g generatorVersion I
+		COMMENT The int version of the ChunkProvider that generated this world.
 	FIELD field_77140_h canBeCreated Z
+		COMMENT Whether this world type can be generated. Normally true; set to false for out-of-date generator versions.
 	FIELD field_77141_i isWorldTypeVersioned Z
+		COMMENT Whether this WorldType has a version or not.
+	METHOD func_77127_a getWorldTypeName ()Ljava/lang/String;
+	METHOD func_77128_b getTranslateName ()Ljava/lang/String;
+		COMMENT Gets the translation key for the name of this world type.
+	METHOD func_77131_c getGeneratorVersion ()I
+		COMMENT Returns generatorVersion.
+	METHOD func_77132_a getWorldTypeForGeneratorVersion (I)Lnet/minecraft/world/WorldType;
+		ARG 0 par1
+	METHOD func_77124_a setCanBeCreated (Z)Lnet/minecraft/world/WorldType;
+		COMMENT Sets canBeCreated to the provided value, and returns this.
+		ARG 0 par1
+	METHOD func_77126_d getCanBeCreated ()Z
+		COMMENT Gets whether this WorldType can be used to generate a new world.
+	METHOD func_77129_f setVersioned ()Lnet/minecraft/world/WorldType;
+		COMMENT Flags this world type as having an associated version.
+	METHOD func_77125_e isVersioned ()Z
+		COMMENT Returns true if this world Type has a version associated with it.
+	METHOD func_77130_a parseWorldType (Ljava/lang/String;)Lnet/minecraft/world/WorldType;
+		ARG 0 par0Str
+	METHOD func_82747_f getWorldTypeID ()I

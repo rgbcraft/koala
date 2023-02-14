@@ -1,1 +1,14 @@
 CLASS net/minecraft/entity/EntityFlying
+	METHOD func_70069_a fall (F)V
+		COMMENT Called when the mob is falling. Calculates and applies fall damage.
+		ARG 0 par1
+	METHOD func_70064_a updateFallState (DZ)V
+		COMMENT Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround
+		ARG 0 par1
+		ARG 1 par3
+	METHOD func_70612_e moveEntityWithHeading (FF)V
+		COMMENT Moves the entity based on the specified heading.  Args: strafe, forward
+		ARG 0 par1
+		ARG 1 par2
+	METHOD func_70617_f_ isOnLadder ()Z
+		COMMENT returns true if this entity is by a ladder, false otherwise

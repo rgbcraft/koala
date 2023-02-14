@@ -1,1 +1,3 @@
 CLASS net/minecraft/item/ItemSimpleFoiled
+	METHOD func_77636_d hasEffect (Lnet/minecraft/item/ItemStack;)Z
+		ARG 0 par1ItemStack

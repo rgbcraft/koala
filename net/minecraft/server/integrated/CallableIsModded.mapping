@@ -1,2 +1,5 @@
 CLASS net/minecraft/server/integrated/CallableIsModded
 	FIELD field_76972_a theIntegratedServer Lnet/minecraft/server/integrated/IntegratedServer;
+		COMMENT Reference to the IntegratedServer object.
+	METHOD func_76971_a getMinecraftIsModded ()Ljava/lang/String;
+		COMMENT Gets if your Minecraft is Modded.

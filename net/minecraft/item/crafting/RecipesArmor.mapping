@@ -1,3 +1,6 @@
 CLASS net/minecraft/item/crafting/RecipesArmor
 	FIELD field_77611_a recipePatterns [Ljava/lang/String;
 	FIELD field_77610_b recipeItems [Ljava/lang/Object;
+	METHOD func_77609_a addRecipes (Lnet/minecraft/item/crafting/CraftingManager;)V
+		COMMENT Adds the armor recipes to the CraftingManager.
+		ARG 0 par1CraftingManager

@@ -1,4 +1,12 @@
 CLASS net/minecraft/client/renderer/ChestItemRenderHelper
 	FIELD field_78545_a instance Lnet/minecraft/client/renderer/ChestItemRenderHelper;
+		COMMENT The static instance of ChestItemRenderHelper.
 	FIELD field_78543_b theChest Lnet/minecraft/tileentity/TileEntityChest;
+		COMMENT Instance of Chest's Tile Entity.
 	FIELD field_78544_c theEnderChest Lnet/minecraft/tileentity/TileEntityEnderChest;
+		COMMENT Instance of Ender Chest's Tile Entity.
+	METHOD func_78542_a renderChest (Lnet/minecraft/block/Block;IF)V
+		COMMENT Renders a chest at 0,0,0 - used for item rendering
+		ARG 0 par1Block
+		ARG 1 par2
+		ARG 2 par3

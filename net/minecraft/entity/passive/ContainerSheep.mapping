@@ -1,1 +1,3 @@
 CLASS net/minecraft/entity/passive/ContainerSheep
+	METHOD func_75145_c canInteractWith (Lnet/minecraft/entity/player/EntityPlayer;)Z
+		ARG 0 par1EntityPlayer
